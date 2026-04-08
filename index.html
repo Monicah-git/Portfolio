@@ -1,833 +1,183 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Monicah Mburu — LinkedIn & Portfolio Guide</title>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<title>Monicah Mburu — Portfolio</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
 <style>
-*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-:root{
-  --bg:#faf8f5;--bg2:#f4f0eb;--bg3:#ede8e1;--card:#ffffff;--card2:#f7f4ef;
-  --green:#b87b5a;--green2:#a06a4a;--green-dim:#f5ede6;--green-text:#8c5a3c;
-  --border:rgba(139,107,85,0.15);--border-green:rgba(184,123,90,0.3);
-  --text:#2d2520;--text2:#6b5a4e;--text3:#a89080;
-  --amber:#c4955a;--amber-dim:rgba(196,149,90,0.1);--amber-border:rgba(196,149,90,0.3);
-  --serif:'Playfair Display',Georgia,serif;--body:'Inter',system-ui,sans-serif;
-  --radius:14px;--radius-sm:8px;
+body{
+  margin:0;
+  font-family:'Inter',sans-serif;
+  background:#faf8f5;
+  color:#2d2520;
 }
-html{scroll-behavior:smooth}
-body{font-family:var(--body);background:var(--bg);color:var(--text);font-size:16px;line-height:1.7;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+nav{
+  position:fixed;top:0;left:0;right:0;
+  background:#fff;
+  display:flex;gap:1rem;
+  padding:1rem 2rem;
+  border-bottom:1px solid #eee;
+}
+nav a{ text-decoration:none;color:#555;font-size:0.9rem }
+nav a.active{ color:#000;font-weight:600 }
 
-/* NAV */
-nav{position:fixed;top:0;left:0;right:0;z-index:1000;background:rgba(250,248,245,0.94);backdrop-filter:blur(20px);border-bottom:1px solid var(--border);height:60px;display:flex;align-items:center;padding:0 2rem;gap:0.5rem}
-.nav-logo{font-family:var(--serif);font-weight:800;font-size:1rem;color:var(--green);text-decoration:none;margin-right:auto}
-.nav-tabs{display:flex;gap:0.2rem}
-.nav-tab{background:none;border:none;color:var(--text2);font-family:var(--body);font-size:0.78rem;padding:0.38rem 0.8rem;border-radius:100px;cursor:pointer;transition:all 0.2s;text-decoration:none;display:inline-block}
-.nav-tab:hover{color:var(--text);background:var(--card)}
-.nav-tab.active{color:#fff;background:var(--green);font-weight:500}
-.nav-cta{background:var(--green);color:#fff;font-family:var(--body);font-size:0.76rem;font-weight:600;padding:0.42rem 1rem;border-radius:100px;text-decoration:none;transition:opacity 0.2s;white-space:nowrap}
-.nav-cta:hover{opacity:0.85}
-
-/* PAGES */
-.page{display:none;min-height:100vh;padding-top:60px;position:relative;z-index:1}
+.page{display:none;padding:100px 2rem;max-width:1000px;margin:auto}
 .page.active{display:block}
-.section{padding:4rem 2rem;max-width:1100px;margin:0 auto}
-.section-label{display:inline-block;font-size:0.7rem;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;color:var(--green);margin-bottom:0.75rem}
-h1{font-family:var(--serif);font-size:clamp(2.4rem,5vw,3.6rem);font-weight:700;line-height:1.1;letter-spacing:-0.01em;color:var(--text)}
-h2{font-family:var(--serif);font-size:clamp(1.7rem,3.5vw,2.4rem);font-weight:600;letter-spacing:-0.01em;line-height:1.2;color:var(--text)}
-h3{font-family:var(--serif);font-size:1.15rem;font-weight:600;color:var(--text)}
 
-/* BUTTONS */
-.btn-green{background:var(--green);color:#fff;font-family:var(--body);font-size:0.88rem;font-weight:600;padding:0.8rem 1.75rem;border-radius:100px;text-decoration:none;transition:opacity 0.2s;display:inline-block}
-.btn-green:hover{opacity:0.85}
-.btn-outline{border:1px solid var(--border);color:var(--text2);font-size:0.88rem;padding:0.8rem 1.75rem;border-radius:100px;text-decoration:none;transition:all 0.2s;display:inline-block}
-.btn-outline:hover{border-color:var(--green);color:var(--green)}
+h1,h2{font-family:'Playfair Display',serif}
 
-/* ══ HOME ══ */
-.home-hero{padding:5rem 2rem 3rem;max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1fr 400px;gap:4rem;align-items:start}
-.home-badge{display:inline-flex;align-items:center;gap:0.5rem;background:var(--green-dim);border:1px solid var(--border-green);color:var(--green-text);font-size:0.72rem;font-weight:500;padding:0.35rem 0.85rem;border-radius:100px;letter-spacing:0.08em;text-transform:uppercase;margin-bottom:1.5rem}
-.badge-dot{width:6px;height:6px;border-radius:50%;background:var(--green);animation:pulse 2s infinite}
-@keyframes pulse{0%,100%{opacity:1}50%{opacity:0.4}}
-h1 .green{color:var(--green)}
-h1 .italic{font-style:italic;font-weight:400;color:var(--text2)}
-.hero-desc{font-size:1.05rem;color:var(--text2);margin:1.5rem 0 2rem;max-width:480px;font-weight:300;line-height:1.75}
-.hero-desc strong{color:var(--text);font-weight:500}
-.hero-actions{display:flex;gap:1rem;flex-wrap:wrap;margin-bottom:3rem}
-.hero-proof{display:flex;gap:2.5rem;flex-wrap:wrap}
-.proof-num{font-family:var(--serif);font-size:2rem;font-weight:800;color:var(--green);line-height:1}
-.proof-label{font-size:0.72rem;color:var(--text3);margin-top:0.2rem;line-height:1.4}
-
-/* VIDEO CARD */
-.video-card{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;position:sticky;top:80px}
-.video-placeholder{aspect-ratio:16/9;background:var(--card2);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1rem;cursor:pointer;position:relative}
-.video-placeholder::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at center,rgba(184,123,90,0.08) 0%,transparent 70%)}
-.play-btn{width:60px;height:60px;border-radius:50%;background:var(--green);display:flex;align-items:center;justify-content:center;transition:transform 0.2s;z-index:1}
-.play-btn:hover{transform:scale(1.08)}
-.play-btn svg{width:22px;height:22px;fill:#fff;margin-left:3px}
-.video-label{font-size:0.78rem;color:var(--text3);letter-spacing:0.04em;z-index:1}
-.video-meta{padding:1.25rem 1.5rem;border-top:1px solid var(--border)}
-.video-meta strong{color:var(--text);display:block;font-size:0.9rem;margin-bottom:0.25rem;font-family:var(--serif)}
-.video-meta p{font-size:0.78rem;color:var(--text2)}
-
-/* VALUE STRIP */
-.value-strip{background:var(--bg2);border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:1.25rem 2rem}
-.value-scroll{display:flex;gap:2.5rem;max-width:1100px;margin:0 auto;flex-wrap:wrap}
-.vi{display:flex;align-items:center;gap:0.6rem;font-size:0.8rem;color:var(--text2);white-space:nowrap}
-.vi .dot{color:var(--green);font-size:0.7rem}
-
-/* BRING GRID */
-.bring-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin-top:2.5rem}
-.bring-card{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:1.75rem;transition:border-color 0.2s,transform 0.2s}
-.bring-card:hover{border-color:var(--border-green);transform:translateY(-2px)}
-.bring-icon{font-size:1.5rem;margin-bottom:1rem;display:block}
-.bring-card h3{font-size:1.05rem;margin-bottom:0.5rem}
-.bring-card p{font-size:0.83rem;color:var(--text2);line-height:1.65}
-
-/* STATS ROW */
-.stats-row{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem;margin-top:2.5rem}
-.stat-card{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:1.5rem;text-align:center;transition:border-color 0.2s}
-.stat-card:hover{border-color:var(--border-green)}
-.stat-num{font-family:var(--serif);font-size:2.2rem;font-weight:800;color:var(--green);line-height:1}
-.stat-label{font-size:0.75rem;color:var(--text2);margin-top:0.4rem;line-height:1.4}
-.stat-source{font-size:0.65rem;color:var(--text3);margin-top:0.25rem}
-
-/* 90 DAY */
-.days-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-top:2.5rem}
-.day-card{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:2rem}
-.day-badge{display:inline-block;font-size:0.7rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;padding:0.3rem 0.75rem;border-radius:100px;margin-bottom:1.25rem}
-.d30{background:rgba(57,255,126,0.1);color:var(--green)}
-.d60{background:rgba(57,255,126,0.2);color:var(--green)}
-.d90{background:var(--green);color:#fff}
-.day-card h3{font-size:1.05rem;margin-bottom:0.75rem}
-.day-list{list-style:none;display:flex;flex-direction:column;gap:0.5rem}
-.day-list li{font-size:0.81rem;color:var(--text2);padding-left:1.2rem;position:relative;line-height:1.5}
-.day-list li::before{content:'→';position:absolute;left:0;color:var(--green);font-size:0.75rem}
-
-/* SCRIPT */
-.script-wrap{background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius);padding:2.5rem;margin-top:3rem}
-.script-wrap h3{font-size:1.1rem;margin-bottom:1.5rem;display:flex;align-items:center;gap:0.5rem}
-.script-tag{font-size:0.62rem;background:var(--green);color:#fff;padding:0.2rem 0.5rem;border-radius:4px;font-family:var(--body);font-weight:700;letter-spacing:0.05em}
-.script-block{margin-bottom:1.25rem}
-.script-cue{font-size:0.63rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--text3);margin-bottom:0.35rem}
-.script-line{font-size:0.88rem;color:var(--text2);font-weight:300;line-height:1.75;font-style:italic;padding-left:1rem;border-left:2px solid var(--border-green)}
-
-/* ══ ABOUT ══ */
-.about-intro{display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:start;margin-top:2.5rem}
-.about-text p{color:var(--text2);font-size:0.93rem;margin-bottom:1.2rem;font-weight:300;line-height:1.8}
-.about-text p strong{color:var(--text);font-weight:500}
-.about-text p em{color:var(--green);font-style:italic}
-.profile-card{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:2rem;margin-bottom:1.5rem}
-.profile-initials{width:60px;height:60px;border-radius:50%;background:var(--green-dim);border:2px solid var(--border-green);display:flex;align-items:center;justify-content:center;font-family:var(--serif);font-weight:800;font-size:1.1rem;color:var(--green);margin-bottom:1.25rem}
-.profile-name{font-family:var(--serif);font-size:1.15rem;font-weight:700;color:var(--text)}
-.profile-title{font-size:0.78rem;color:var(--green);margin:0.2rem 0 1.25rem}
-.pd{display:flex;align-items:center;gap:0.6rem;font-size:0.78rem;color:var(--text2);margin-bottom:0.45rem}
-.ww-card{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:1.75rem}
-.ww-item{font-size:0.82rem;color:var(--text2);padding-left:1rem;border-left:2px solid var(--border-green);margin-bottom:0.75rem;line-height:1.5}
-.ww-item:last-child{margin-bottom:0}
-
-/* TIMELINE */
-.timeline{display:flex;flex-direction:column}
-.tl-item{display:grid;grid-template-columns:150px 1fr;gap:2rem;padding:2rem 0;border-bottom:1px solid var(--border)}
-.tl-item:last-child{border-bottom:none}
-.tl-date{font-size:0.73rem;color:var(--text3);letter-spacing:0.03em;padding-top:0.2rem;font-weight:300}
-.tl-date strong{display:block;color:var(--text2);font-weight:500;font-size:0.78rem;margin-bottom:0.2rem}
-.tl-company{font-family:var(--serif);font-size:1rem;font-weight:700;color:var(--text);margin-bottom:0.2rem}
-.tl-role{font-size:0.75rem;color:var(--green);text-transform:uppercase;letter-spacing:0.08em;font-weight:600;margin-bottom:0.75rem}
-.tl-desc{font-size:0.83rem;color:var(--text2);line-height:1.7;font-weight:300}
-.tl-metrics{display:flex;flex-wrap:wrap;gap:0.5rem;margin-top:0.85rem}
-.metric-pill{display:inline-flex;align-items:center;gap:0.4rem;background:var(--green-dim);border:1px solid var(--border-green);color:var(--green);font-size:0.72rem;font-weight:500;padding:0.28rem 0.7rem;border-radius:100px}
-
-/* EDU + CERTS */
-.edu-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1rem;margin-top:2rem}
-.edu-card{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:1.75rem;transition:border-color 0.2s}
-.edu-card:hover{border-color:var(--border-green)}
-.edu-year{font-size:0.68rem;color:var(--text3);text-transform:uppercase;letter-spacing:0.08em;margin-bottom:0.4rem}
-.edu-degree{font-family:var(--serif);font-size:0.98rem;font-weight:700;color:var(--text);margin-bottom:0.2rem;line-height:1.3}
-.edu-school{font-size:0.78rem;color:var(--green)}
-.certs-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:0.85rem;margin-top:2rem}
-.cert-card{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:1.25rem 1rem;text-align:center;transition:all 0.2s;cursor:pointer}
-.cert-card:hover{border-color:var(--border-green);transform:translateY(-2px)}
-.cert-icon{font-size:1.6rem;margin-bottom:0.6rem;display:block}
-.cert-name{font-size:0.72rem;font-weight:500;color:var(--text);line-height:1.4;margin-bottom:0.25rem}
-.cert-issuer{font-size:0.64rem;color:var(--text3)}
-.cert-add{margin-top:0.6rem;font-size:0.6rem;color:var(--green);border:1px dashed var(--border-green);border-radius:5px;padding:0.3rem;background:var(--green-dim)}
-
-/* ══ SERVICES ══ */
-.services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem;margin-top:2.5rem}
-.svc-card{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:2rem;transition:all 0.2s;position:relative;overflow:hidden}
-.svc-card:hover{border-color:var(--border-green);transform:translateY(-3px)}
-.svc-card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:var(--green);transform:scaleX(0);transform-origin:left;transition:transform 0.3s}
-.svc-card:hover::before{transform:scaleX(1)}
-.svc-icon{width:48px;height:48px;border-radius:12px;background:var(--green-dim);border:1px solid var(--border-green);display:flex;align-items:center;justify-content:center;margin-bottom:1.25rem;font-size:1.3rem}
-.svc-card h3{font-size:1.08rem;margin-bottom:0.65rem}
-.svc-desc{font-size:0.82rem;color:var(--text2);line-height:1.65;margin-bottom:1.25rem}
-.svc-list{list-style:none;display:flex;flex-direction:column;gap:0.42rem}
-.svc-list li{font-size:0.77rem;color:var(--text2);padding-left:1.1rem;position:relative;line-height:1.5}
-.svc-list li::before{content:'✦';position:absolute;left:0;color:var(--green);font-size:0.52rem;top:0.42rem}
-
-/* TOOLS */
-.tools-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:1rem;margin-top:2rem}
-.tool-card{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:1.4rem 1rem;text-align:center;transition:all 0.2s}
-.tool-card:hover{border-color:var(--border-green);transform:translateY(-2px)}
-.tool-icon{font-size:1.9rem;margin-bottom:0.65rem;display:block}
-.tool-name{font-size:0.76rem;font-weight:500;color:var(--text);margin-bottom:0.18rem}
-.tool-use{font-size:0.65rem;color:var(--text3)}
-
-/* ══ PROJECTS ══ */
-.projects-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1.5rem;margin-top:2.5rem}
-.proj-card{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:2rem;transition:border-color 0.2s}
-.proj-card:hover{border-color:var(--border-green)}
-.proj-pill{display:inline-block;font-size:0.63rem;font-weight:600;text-transform:uppercase;letter-spacing:0.1em;padding:0.22rem 0.65rem;border-radius:100px;margin-bottom:1rem}
-.pill-g{background:var(--green-dim);color:var(--green);border:1px solid var(--border-green)}
-.pill-a{background:var(--amber-dim);color:var(--amber);border:1px solid var(--amber-border)}
-.proj-card h3{font-size:1.05rem;margin-bottom:0.7rem;line-height:1.3}
-.proj-card p{font-size:0.82rem;color:var(--text2);line-height:1.65;margin-bottom:1.2rem}
-.proj-result{border-radius:var(--radius-sm);padding:0.8rem 1rem;font-size:0.78rem;font-weight:500}
-.res-g{background:var(--green-dim);border:1px solid var(--border-green);color:var(--green)}
-.res-a{background:var(--amber-dim);border:1px solid var(--amber-border);color:var(--amber)}
-.proj-chips{display:flex;gap:0.35rem;flex-wrap:wrap;margin-top:0.85rem}
-.chip{font-size:0.65rem;color:var(--text3);background:var(--bg3);border:1px solid var(--border);border-radius:100px;padding:0.18rem 0.55rem}
-
-/* ══ LINKEDIN PAGE ══ */
-.li-page{padding:4rem 2rem;max-width:900px;margin:0 auto}
-.li-section{margin-bottom:3rem}
-.li-section-label{font-size:0.65rem;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:var(--text3);margin-bottom:0.5rem}
-.li-box{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:1.75rem 2rem;position:relative}
-.li-box:hover{border-color:var(--border-green)}
-.copy-btn{position:absolute;top:1rem;right:1rem;background:var(--bg3);border:1px solid var(--border);color:var(--text3);font-size:0.68rem;font-family:var(--body);padding:0.3rem 0.7rem;border-radius:6px;cursor:pointer;transition:all 0.2s}
-.copy-btn:hover{color:var(--green);border-color:var(--border-green)}
-.copy-btn.copied{color:var(--green);border-color:var(--border-green)}
-.li-content{font-size:0.88rem;color:var(--text2);line-height:1.8;font-weight:300;white-space:pre-wrap;padding-right:3rem}
-.li-note{background:var(--amber-dim);border:1px solid var(--amber-border);border-radius:var(--radius-sm);padding:0.85rem 1.1rem;font-size:0.78rem;color:var(--amber);margin-top:1rem;line-height:1.6}
-.li-char{font-size:0.68rem;color:var(--text3);margin-top:0.5rem;text-align:right}
-.job-entry{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:1.75rem 2rem;margin-bottom:1rem;position:relative}
-.job-entry:hover{border-color:var(--border-green)}
-.job-title{font-family:var(--serif);font-size:1rem;font-weight:700;color:var(--text);margin-bottom:0.15rem}
-.job-co{font-size:0.78rem;color:var(--green);margin-bottom:1rem;font-weight:500}
-.job-copy{font-size:0.85rem;color:var(--text2);line-height:1.8;font-weight:300;white-space:pre-wrap;padding-right:3rem}
-
-/* ══ CONTACT ══ */
-.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:3rem;margin-top:3rem}
-.contact-method{display:flex;align-items:center;gap:1rem;background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:1.25rem;text-decoration:none;transition:border-color 0.2s;margin-bottom:1rem}
-.contact-method:hover{border-color:var(--border-green)}
-.cm-icon{width:40px;height:40px;border-radius:10px;background:var(--green-dim);border:1px solid var(--border-green);display:flex;align-items:center;justify-content:center;font-size:1.1rem;flex-shrink:0}
-.cm-label{font-size:0.68rem;color:var(--text3);text-transform:uppercase;letter-spacing:0.08em}
-.cm-value{font-size:0.86rem;color:var(--text);font-weight:500;margin-top:0.1rem}
-.booking-card{background:var(--card);border:1px solid var(--border-green);border-radius:var(--radius);padding:2.5rem;text-align:center}
-.booking-card h3{font-size:1.25rem;margin-bottom:0.65rem}
-.booking-card p{font-size:0.83rem;color:var(--text2);margin-bottom:2rem;font-weight:300}
-.bstep{display:flex;gap:1rem;align-items:flex-start;margin-bottom:0.9rem;text-align:left}
-.bnum{width:22px;height:22px;border-radius:50%;background:var(--green);color:#fff;font-size:0.68rem;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:0.15rem}
-.bstep p{font-size:0.8rem;color:var(--text2);font-weight:300;margin:0}
-
-/* FOOTER */
-footer{border-top:1px solid var(--border);padding:1.75rem 2rem;display:flex;justify-content:space-between;align-items:center;max-width:1100px;margin:0 auto}
-footer p{font-size:0.73rem;color:var(--text3)}
-.footer-links{display:flex;gap:1.5rem}
-.footer-links a{font-size:0.73rem;color:var(--text3);text-decoration:none;transition:color 0.2s}
-.footer-links a:hover{color:var(--green)}
-
-@media(max-width:900px){
-  .home-hero{grid-template-columns:1fr}.video-card{display:none}
-  .bring-grid,.services-grid,.days-grid,.stats-row{grid-template-columns:1fr}
-  .about-intro{grid-template-columns:1fr;gap:2rem}
-  .tl-item{grid-template-columns:1fr}
-  .tools-grid{grid-template-columns:repeat(3,1fr)}
-  .projects-grid,.edu-grid,.contact-grid{grid-template-columns:1fr}
-  .certs-grid{grid-template-columns:repeat(2,1fr)}
-  .nav-tabs .nav-tab{font-size:0.68rem;padding:0.32rem 0.55rem}
+.card{
+  border:1px solid #eee;
+  padding:1.5rem;
+  border-radius:10px;
+  margin-bottom:1rem;
+  background:#fff;
 }
+
+.btn{
+  display:inline-block;
+  padding:0.7rem 1.2rem;
+  border-radius:30px;
+  text-decoration:none;
+  background:#b87b5a;
+  color:#fff;
+  margin-top:1rem;
+}
+.btn-outline{
+  border:1px solid #ccc;
+  color:#333;
+  background:none;
+}
+
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:1rem;
+}
+
 </style>
 </head>
+
 <body>
 
 <nav>
-  <a href="#" class="nav-logo">MM</a>
-  <div class="nav-tabs">
-    <a class="nav-tab" href="#/home">Home</a>
-    <a class="nav-tab" href="#/about">About</a>
-    <a class="nav-tab" href="#/services">Services</a>
-    <a class="nav-tab" href="#/projects">Projects</a>
-    <a class="nav-tab" href="#/linkedin">LinkedIn ✦</a>
-    <a class="nav-tab" href="#/contact">Contact</a>
-  </div>
-  <a href="https://calendly.com/monicahmburu/one-on-one" target="_blank" class="nav-cta">Book a call →</a>
+  <a href="#/home">Home</a>
+  <a href="#/about">About</a>
+  <a href="#/services">Services</a>
+  <a href="#/projects">Projects</a>
+  <a href="#/case-studies">Case Studies</a>
+  <a href="#/contact">Contact</a>
 </nav>
 
-<!-- ══════ HOME ══════ -->
+<!-- HOME -->
 <div id="page-home" class="page">
-  <div class="home-hero">
-    <div>
-      <div class="home-badge"><span class="badge-dot"></span> Open to new clients</div>
-      <h1>Your <span class="green">behind-the-scenes</span><br><span class="italic">business partner.</span></h1>
-      <p class="hero-desc">I help small business owners keep their <strong>books clean</strong>, their <strong>operations organized</strong>, and their <strong>data clear</strong> — so you can stop drowning in the admin and get back to actually running your business.</p>
-      <div class="hero-actions">
-        <a href="https://calendly.com/monicahmburu/one-on-one" target="_blank" class="btn-green">Book a free discovery call</a>
-        <a href="#/projects" class="btn-outline">See my work</a>
-      </div>
-      <div class="hero-proof">
-        <div><div class="proof-num">$500k+</div><div class="proof-label">investor interest<br>secured for clients</div></div>
-        <div><div class="proof-num">40%</div><div class="proof-label">faster report prep<br>at Aspire Lending</div></div>
-        <div><div class="proof-num">5</div><div class="proof-label">finance &amp; data<br>certifications</div></div>
-        <div><div class="proof-num">60%</div><div class="proof-label">fewer cash<br>discrepancies</div></div>
-      </div>
-    </div>
-    <div>
-      <div class="video-card">
-        <div class="video-placeholder">
-          <div class="play-btn"><svg viewBox="0 0 24 24"><path d="M5 3l14 9-14 9V3z"/></svg></div>
-          <div class="video-label">Watch my intro — 90 seconds</div>
-        </div>
-        <div class="video-meta">
-          <strong>Hi, I'm Monicah 👋</strong>
-          <p>How I can help your business in under 2 minutes.</p>
-        </div>
-      </div>
-    </div>
-  </div>
+  <h1>Your behind-the-scenes business partner.</h1>
+  <p>I help small businesses keep their books clean, operations organized, and data clear.</p>
 
-  <div class="value-strip">
-    <div class="value-scroll">
-      <div class="vi"><span class="dot">✦</span> Bookkeeping &amp; Reconciliations</div>
-      <div class="vi"><span class="dot">✦</span> Excel Dashboards &amp; Data Analysis</div>
-      <div class="vi"><span class="dot">✦</span> Executive Admin Support</div>
-      <div class="vi"><span class="dot">✦</span> Financial Modeling &amp; Reporting</div>
-      <div class="vi"><span class="dot">✦</span> CPA Foundation · Google Analytics · IBM Data Science</div>
-      <div class="vi"><span class="dot">✦</span> MSc Financial Engineering — WorldQuant University</div>
-    </div>
-  </div>
+  <a href="resume.pdf" target="_blank" class="btn-outline">View Resume</a>
+  <a href="#/case-studies" class="btn">See Case Studies</a>
 
-  <div class="section">
-    <span class="section-label">What I bring</span>
-    <h2>Three things I do that make<br>your business easier to run</h2>
-    <div class="bring-grid">
-      <div class="bring-card"><span class="bring-icon">📊</span><h3>I make your numbers make sense</h3><p>Reconciling accounts, cleaning books, building dashboards — I handle the numbers side so you always know exactly where your business stands.</p></div>
-      <div class="bring-card"><span class="bring-icon">🗂️</span><h3>I run your operations quietly</h3><p>Inbox cleared. Calendar managed. Meetings prepped. Processes documented. You won't have to chase me — I stay ahead so you can focus on growth.</p></div>
-      <div class="bring-card"><span class="bring-icon">📈</span><h3>I turn data into decisions</h3><p>I've built financial models that improved forecasting accuracy by 30% and helped businesses secure investor funding. I connect numbers to purpose.</p></div>
-    </div>
-  </div>
-
-  <div class="section" style="padding-top:0">
-    <span class="section-label">By the numbers</span>
-    <h2>Results from real roles</h2>
-    <div class="stats-row">
-      <div class="stat-card"><div class="stat-num">40%</div><div class="stat-label">reduction in late payments</div><div class="stat-source">Pitch Investors</div></div>
-      <div class="stat-card"><div class="stat-num">60%</div><div class="stat-label">fewer cash discrepancies</div><div class="stat-source">Pitch Investors</div></div>
-      <div class="stat-card"><div class="stat-num">30%</div><div class="stat-label">cash flow improvement</div><div class="stat-source">Target Mart</div></div>
-      <div class="stat-card"><div class="stat-num">20hrs</div><div class="stat-label">freed per week via process redesign</div><div class="stat-source">Aspire Lending</div></div>
-    </div>
-  </div>
-
-  <div class="section" style="padding-top:0">
-    <span class="section-label">What to expect</span>
-    <h2>Your first 90 days working with me</h2>
-    <div class="days-grid">
-      <div class="day-card"><span class="day-badge d30">Days 1–30</span><h3>Learn &amp; Set Up</h3>
-        <ul class="day-list">
-          <li>Deep dive into how your business works</li>
-          <li>Audit your books, inbox, and data setup</li>
-          <li>Build systems that fit how you actually work</li>
-          <li>Establish communication and reporting rhythm</li>
-          <li>First clean set of reconciled accounts delivered</li>
-        </ul>
-      </div>
-      <div class="day-card"><span class="day-badge d60">Days 31–60</span><h3>Build &amp; Streamline</h3>
-        <ul class="day-list">
-          <li>Build your first dashboard or financial report</li>
-          <li>Document your core business processes (SOPs)</li>
-          <li>Flag any financial risks or gaps early</li>
-          <li>Inbox under control, calendar running smoothly</li>
-          <li>Monthly summary delivered on time, every time</li>
-        </ul>
-      </div>
-      <div class="day-card"><span class="day-badge d90">Days 61–90</span><h3>Run Like Clockwork</h3>
-        <ul class="day-list">
-          <li>Fully autonomous — you just review, not manage</li>
-          <li>Clean books, clear data, organized operations</li>
-          <li>90-day review: what's working, what to adjust</li>
-          <li>Proposal for ongoing retainer or adjusted scope</li>
-          <li>You're back to building — not fighting the admin</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-
-  <div class="section" style="padding-top:0">
-    <div class="script-wrap">
-      <h3>📹 Intro Video Script <span class="script-tag">FOR YOUR REFERENCE</span></h3>
-      <div class="script-block"><div class="script-cue">Opening — 0:00</div><div class="script-line">"Hey! I'm Monicah — and if you're a small business owner who's tired of messy books, an overflowing inbox, or data you can't make sense of... this is for you."</div></div>
-      <div class="script-block"><div class="script-cue">Who you are — 0:15</div><div class="script-line">"I'm a bookkeeper, data analyst, and executive virtual assistant based in Nairobi. I have a background in economics and finance, I'm doing my Master's in Financial Engineering at WorldQuant University, and I hold five certifications — including Google Data Analytics and IBM Data Science. When I say I know numbers, I really mean it."</div></div>
-      <div class="script-block"><div class="script-cue">The problem — 0:35</div><div class="script-line">"Most small business owners I talk to have the same three problems. Their books are behind. Their inbox is chaos. And they have data — but no idea what it's telling them. That's exactly where I come in."</div></div>
-      <div class="script-block"><div class="script-cue">What you do — 0:50</div><div class="script-line">"I keep your accounts reconciled and your books clean every month. I manage your calendar, your inbox, and your day-to-day admin. And I build reports and dashboards that actually help you make decisions — not just pretty charts that sit in a folder."</div></div>
-      <div class="script-block"><div class="script-cue">Real proof — 1:05</div><div class="script-line">"I've helped businesses secure over $500k in investor interest. I redesigned a reporting process that freed up 20 hours a week. I reduced payment discrepancies by 60%. These aren't things I'm hoping to do — they're things I've already done."</div></div>
-      <div class="script-block"><div class="script-cue">Call to action — 1:20</div><div class="script-line">"Book a free 30-minute discovery call right here. We'll talk about your business, I'll tell you exactly how I can help, and we'll see if we're a good fit. No pressure — just an honest conversation."</div></div>
-      <div class="script-block"><div class="script-cue">Sign off — 1:35</div><div class="script-line">"I'm Monicah — and I'm here to make your business easier to run. See you soon!"</div></div>
-    </div>
+  <h2>Proof</h2>
+  <div class="grid">
+    <div class="card">$500k+ investor interest</div>
+    <div class="card">40% faster reporting</div>
+    <div class="card">60% fewer discrepancies</div>
   </div>
 </div>
 
-<!-- ══════ ABOUT ══════ -->
+<!-- ABOUT -->
 <div id="page-about" class="page">
-  <div class="section">
-    <span class="section-label">About me</span>
-    <div class="about-intro">
-      <div class="about-text">
-        <h2 style="margin-bottom:1.5rem">I'm Monicah — and I genuinely love this work.</h2>
-        <p>I studied Economics and Mathematics at Kenyatta University because I was fascinated by how numbers tell stories. That hasn't changed — it's actually grown into something I now do professionally every day.</p>
-        <p>At <strong>Pitch Investors</strong>, I was deep in the numbers for 10+ businesses at a time — building financial models, running DCF valuations, and translating complex data into investor proposals that non-technical audiences could actually act on. Those businesses <em>secured over $500k in investor interest.</em> That result still motivates me.</p>
-        <p>At <strong>Aspire Lending</strong>, I saw that senior staff were losing hours every week to slow manual reports. I redesigned the process without being asked — and cut report prep time by 40%, freeing over 20 hours per week. That's how I work: I notice what's not working and I fix it.</p>
-        <p>I've trained with <strong>Athena</strong> — one of the most rigorous executive VA programs globally — which gave me real foundations in how to support busy executives: not just completing tasks, but anticipating needs and thinking three steps ahead.</p>
-        <p>I'm currently doing my <strong>MSc in Financial Engineering at WorldQuant University</strong> — which deepens exactly what I bring to clients: quantitative thinking, financial modeling, and data-driven decision making.</p>
-        <p style="color:var(--text);font-weight:400">Outside of work, I care deeply about sustainable business and climate-conscious finance. I'm especially drawn to working with purpose-driven businesses.</p>
-      </div>
-      <div>
-        <div class="profile-card">
-          <div class="profile-initials">MM</div>
-          <div class="profile-name">Monicah Mburu</div>
-          <div class="profile-title">Data Analyst · Executive VA · Bookkeeper</div>
-          <div class="pd">📍 Nairobi, Kenya</div>
-          <div class="pd">🎓 BSc Economics &amp; Mathematics — Kenyatta University</div>
-          <div class="pd">📚 MSc Financial Engineering — WorldQuant University</div>
-          <div class="pd">✅ CPA Foundation Level (KASNEB)</div>
-          <div class="pd">🌿 Passionate about sustainable business</div>
-        </div>
-        <div class="ww-card">
-          <div style="font-size:0.68rem;color:var(--text3);text-transform:uppercase;letter-spacing:0.08em;margin-bottom:1rem">How I work</div>
-          <div class="ww-item">I flag problems before they become your problem.</div>
-          <div class="ww-item">I learn how your business works, not just your task list.</div>
-          <div class="ww-item">I notice the KSh 50 discrepancy. And I tell you.</div>
-          <div class="ww-item">I don't need micromanaging — I need a good brief.</div>
-        </div>
-      </div>
-    </div>
+  <h2>About Me</h2>
+  <p>I’m Monicah — a bookkeeper, data analyst, and executive VA based in Nairobi.</p>
+
+  <h3>Certificates</h3>
+  <div class="grid">
+    <div class="card" onclick="window.open('LINK_HERE')">Google Data Analytics</div>
+    <div class="card" onclick="window.open('LINK_HERE')">IBM Data Science</div>
+    <div class="card" onclick="window.open('LINK_HERE')">Intuit Bookkeeping</div>
   </div>
 
-  <div class="section" style="padding-top:0">
-    <span class="section-label">Experience</span>
-    <h2>Where I've done the work</h2>
-    <div class="timeline">
-      <div class="tl-item">
-        <div class="tl-date"><strong>Mar 2025 – Present</strong>Current · 1yr+</div>
-        <div>
-          <div class="tl-company">Aspire Lending Ltd.</div>
-          <div class="tl-role">Accounts Assistant &amp; Receptionist</div>
-          <div class="tl-desc">First point of contact for all clients — handling 3–5 calls daily and every walk-in. Drafting loan offer letters, organizing logbooks, and supporting lending operations. I noticed senior staff losing time to slow manual reports, so I redesigned the process unprompted — cutting report prep time by 40% and freeing over 20 hours per week. Also built a structured filing workflow for 900+ physical and digital loan files, making retrieval fast and audit-ready.</div>
-          <div class="tl-metrics">
-            <span class="metric-pill">📉 40% faster report prep</span>
-            <span class="metric-pill">⏱ 20hrs/week freed</span>
-            <span class="metric-pill">📁 900+ files organized</span>
-          </div>
-        </div>
-      </div>
-      <div class="tl-item">
-        <div class="tl-date"><strong>May–Sep 2024</strong>Accountant role</div>
-        <div>
-          <div class="tl-company">Pitch Investors</div>
-          <div class="tl-role">Accounts Payable &amp; Receivable Accountant</div>
-          <div class="tl-desc">Managed full AP/AR cycle — cutting late payments by 40% through better tracking and follow-up procedures. Handled petty cash with precision, reducing discrepancies by 60%. Streamlined payroll processing, cutting time spent by 20% while maintaining 100% on-time disbursements. Refined the invoicing system, reducing billing turnaround by 15% and improving cash flow velocity.</div>
-          <div class="tl-metrics">
-            <span class="metric-pill">📉 40% fewer late payments</span>
-            <span class="metric-pill">💰 60% fewer discrepancies</span>
-            <span class="metric-pill">⚡ 15% faster billing</span>
-          </div>
-        </div>
-      </div>
-      <div class="tl-item">
-        <div class="tl-date"><strong>Mar–Jun 2024</strong>Analyst role</div>
-        <div>
-          <div class="tl-company">Pitch Investors</div>
-          <div class="tl-role">Business Valuation &amp; Financial Modeling Analyst</div>
-          <div class="tl-desc">Conducted business valuations and built detailed financial models and forecasts for 10+ companies. Developed scenario-based forecasting that improved forecasting accuracy by 30%. Wrote and presented 10+ investor-ready business proposals and pitch decks for non-technical audiences — directly contributing to a 40% increase in investor engagement and helping clients secure $500k+ in investor interest.</div>
-          <div class="tl-metrics">
-            <span class="metric-pill">🏆 $500k+ investor interest</span>
-            <span class="metric-pill">📊 30% better forecast accuracy</span>
-            <span class="metric-pill">📈 40% more investor engagement</span>
-          </div>
-        </div>
-      </div>
-      <div class="tl-item">
-        <div class="tl-date"><strong>Jul–Dec 2023</strong>Finance intern</div>
-        <div>
-          <div class="tl-company">Target Mart Limited</div>
-          <div class="tl-role">Finance Intern</div>
-          <div class="tl-desc">Managed AP/AR, boosting cash flow by 30% through timely processing. Supported payroll data verification, improving accuracy and compliance by 20%. Prepared ageing reports that led to a 25% reduction in unpaid invoices. Assisted with withholding tax submissions — achieving 100% on-time filings. Monthly reports contributed data that influenced 80% of key management decisions.</div>
-          <div class="tl-metrics">
-            <span class="metric-pill">💵 30% cash flow boost</span>
-            <span class="metric-pill">📋 25% fewer unpaid invoices</span>
-            <span class="metric-pill">✅ 100% on-time tax filings</span>
-          </div>
-        </div>
-      </div>
-      <div class="tl-item">
-        <div class="tl-date"><strong>2024</strong>Training</div>
-        <div>
-          <div class="tl-company">Athena</div>
-          <div class="tl-role">Executive VA Training</div>
-          <div class="tl-desc">Completed executive virtual assistant training at Athena — one of the most rigorous EA programs globally. Trained in inbox management, calendar optimization, executive communication, SOP documentation, and proactive problem-solving for busy senior executives.</div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="section" style="padding-top:0">
-    <span class="section-label">Education</span>
-    <h2>Academic background</h2>
-    <div class="edu-grid">
-      <div class="edu-card"><div class="edu-year">2025 – 2028</div><div class="edu-degree">MSc Financial Engineering</div><div class="edu-school">WorldQuant University</div></div>
-      <div class="edu-card"><div class="edu-year">2019 – 2024</div><div class="edu-degree">Bachelor of Arts — Economics &amp; Mathematics</div><div class="edu-school">Kenyatta University</div></div>
-      <div class="edu-card"><div class="edu-year">Ongoing</div><div class="edu-degree">CPA Foundation Level</div><div class="edu-school">KASNEB</div></div>
-      <div class="edu-card"><div class="edu-year">2024</div><div class="edu-degree">ALX Virtual Assistant Certificate</div><div class="edu-school">ALX Africa</div></div>
-    </div>
-  </div>
-
-  <div class="section" style="padding-top:0">
-    <span class="section-label">Certifications</span>
-    <h2>Credentials</h2>
-    <div class="certs-grid">
-      <div class="cert-card"><span class="cert-icon">🔵</span><div class="cert-name">Google Data Analytics</div><div class="cert-issuer">Google / Coursera</div><div class="cert-add">Add link or image</div></div>
-      <div class="cert-card"><span class="cert-icon">🟦</span><div class="cert-name">IBM Data Science Practitioner</div><div class="cert-issuer">IBM SkillsBuild</div><div class="cert-add">Add link or image</div></div>
-      <div class="cert-card"><span class="cert-icon">🔴</span><div class="cert-name">Business Analytics with Excel</div><div class="cert-issuer">Johns Hopkins / Coursera</div><div class="cert-add">Add link or image</div></div>
-      <div class="cert-card"><span class="cert-icon">🟢</span><div class="cert-name">Intuit Bookkeeping Certification</div><div class="cert-issuer">Intuit</div><div class="cert-add">Add link or image</div></div>
-      <div class="cert-card"><span class="cert-icon">🏦</span><div class="cert-name">CFI Corporate Finance Foundations</div><div class="cert-issuer">CFI</div><div class="cert-add">Add link or image</div></div>
-    </div>
-  </div>
+  <a href="resume.pdf" target="_blank" class="btn">Download Resume</a>
 </div>
 
-<!-- ══════ SERVICES ══════ -->
+<!-- SERVICES -->
 <div id="page-services" class="page">
-  <div class="section">
-    <span class="section-label">Services</span>
-    <h2>Three ways I keep your<br>business running smoothly</h2>
-    <p style="color:var(--text2);font-size:0.93rem;margin-top:0.75rem;font-weight:300;max-width:520px">No travel management. No event planning. Just the work I'm genuinely good at — and that makes a measurable difference.</p>
-    <div class="services-grid">
-      <div class="svc-card"><div class="svc-icon">📒</div><h3>Bookkeeping &amp; Reconciliations</h3><p class="svc-desc">Clean, accurate books every month. You'll always know exactly where your money is — without spending your evenings on it.</p>
-        <ul class="svc-list">
-          <li>Monthly bookkeeping &amp; transaction categorization</li>
-          <li>Bank &amp; M-Pesa reconciliations</li>
-          <li>Accounts payable &amp; receivable</li>
-          <li>Profit &amp; Loss and Balance Sheet statements</li>
-          <li>Payroll processing &amp; compliance support</li>
-          <li>Tax preparation support &amp; on-time filings</li>
-        </ul>
-      </div>
-      <div class="svc-card"><div class="svc-icon">🗓️</div><h3>Executive Admin Support</h3><p class="svc-desc">Inbox handled, calendar organized, operations running — without you having to think about it. I stay ahead so you don't have to.</p>
-        <ul class="svc-list">
-          <li>Inbox management &amp; email triage</li>
-          <li>Calendar coordination &amp; scheduling</li>
-          <li>Meeting preparation &amp; follow-up notes</li>
-          <li>SOP documentation &amp; process writing</li>
-          <li>Research, data entry &amp; task management</li>
-          <li>Project coordination via Asana, Trello, Notion</li>
-        </ul>
-      </div>
-      <div class="svc-card"><div class="svc-icon">📊</div><h3>Data Analysis &amp; Reporting</h3><p class="svc-desc">Raw business data turned into clear reports and dashboards that help you make real decisions — not just pretty charts.</p>
-        <ul class="svc-list">
-          <li>Excel dashboards &amp; data cleaning</li>
-          <li>Business performance reports</li>
-          <li>Budget tracking &amp; variance analysis</li>
-          <li>Financial modeling &amp; scenario forecasting</li>
-          <li>KPI tracking &amp; visualization</li>
-          <li>Investor-ready reports &amp; pitch support</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-  <div class="section" style="padding-top:0">
-    <span class="section-label">Tools</span>
-    <h2>What I work with</h2>
-    <div class="tools-grid">
-      <div class="tool-card"><span class="tool-icon">📗</span><div class="tool-name">Microsoft Excel</div><div class="tool-use">Analysis · Dashboards · VBA</div></div>
-      <div class="tool-card"><span class="tool-icon">🟦</span><div class="tool-name">QuickBooks Online</div><div class="tool-use">Bookkeeping · Reports</div></div>
-      <div class="tool-card"><span class="tool-icon">🟢</span><div class="tool-name">Xero</div><div class="tool-use">Invoicing · Reconciliation</div></div>
-      <div class="tool-card"><span class="tool-icon">📘</span><div class="tool-name">Zoho Books</div><div class="tool-use">Accounting · Budgets</div></div>
-      <div class="tool-card"><span class="tool-icon">🪨</span><div class="tool-name">Sage</div><div class="tool-use">Financial management</div></div>
-      <div class="tool-card"><span class="tool-icon">📧</span><div class="tool-name">Google Workspace</div><div class="tool-use">Inbox · Calendar · Docs</div></div>
-      <div class="tool-card"><span class="tool-icon">🗒️</span><div class="tool-name">Notion</div><div class="tool-use">SOPs · Project tracking</div></div>
-      <div class="tool-card"><span class="tool-icon">📋</span><div class="tool-name">Trello / Asana</div><div class="tool-use">Task management</div></div>
-      <div class="tool-card"><span class="tool-icon">📊</span><div class="tool-name">Power BI</div><div class="tool-use">Dashboards · Reporting</div></div>
-      <div class="tool-card"><span class="tool-icon">🐍</span><div class="tool-name">Python (learning)</div><div class="tool-use">Data analysis · Automation</div></div>
-    </div>
+  <h2>Services</h2>
+  <div class="grid">
+    <div class="card">Bookkeeping & Reconciliation</div>
+    <div class="card">Executive Admin Support</div>
+    <div class="card">Data Analysis & Reporting</div>
   </div>
 </div>
 
-<!-- ══════ PROJECTS ══════ -->
+<!-- PROJECTS -->
 <div id="page-projects" class="page">
-  <div class="section">
-    <span class="section-label">Projects &amp; Work samples</span>
-    <h2>Real work. Real results.</h2>
-    <p style="color:var(--text2);font-size:0.93rem;margin-top:0.75rem;font-weight:300;max-width:560px">Some from real roles, others are detailed sample projects showing exactly what I'd do for your business.</p>
-    <div class="projects-grid">
-      <div class="proj-card"><span class="proj-pill pill-g">Financial Analysis — Real</span>
-        <h3>Investor Reports for 10+ Businesses — Pitch Investors</h3>
-        <p>Built financial models and investor-ready reports for 10+ companies — including DCF valuations, scenario forecasting, and variance analysis. Presented findings to non-technical investors in a way that was clear enough to act on.</p>
-        <div class="proj-result res-g">$500k+ in investor interest secured · 40% increase in investor engagement · 30% better forecast accuracy</div>
-        <div class="proj-chips"><span class="chip">Excel</span><span class="chip">Financial Modeling</span><span class="chip">DCF Valuation</span><span class="chip">Scenario Forecasting</span><span class="chip">PowerPoint</span></div>
-      </div>
-      <div class="proj-card"><span class="proj-pill pill-a">Bookkeeping — Sample</span>
-        <h3>Accounting System Demo — Techmate Solutions Ltd.</h3>
-        <p>Used a fictional computer sales company dataset to demonstrate proficiency across QuickBooks Online, Excel (with VBA Macros), and Xero simultaneously — recording transactions, managing inventory, generating P&amp;L and balance sheet reports, and automating invoicing across all three platforms.</p>
-        <div class="proj-result res-a">Demonstrates fluency across three accounting platforms using the same real-world dataset</div>
-        <div class="proj-chips"><span class="chip">QuickBooks</span><span class="chip">Xero</span><span class="chip">Excel VBA</span><span class="chip">Financial Statements</span></div>
-      </div>
-      <div class="proj-card"><span class="proj-pill pill-g">Data Analysis — Sample</span>
-        <h3>Portfolio Management Dashboard</h3>
-        <p>Built a financial tracking dashboard covering multiple projects simultaneously — including project timelines, budget vs. actual performance, risk profiling, and resource allocation. Includes DCF modeling, NPV/IRR analysis, and a one-page executive summary view.</p>
-        <div class="proj-result res-g">Real-time financial health view across a multi-project portfolio — decision-ready, not just data-heavy</div>
-        <div class="proj-chips"><span class="chip">Excel</span><span class="chip">Power BI</span><span class="chip">DCF</span><span class="chip">NPV/IRR</span><span class="chip">Variance Analysis</span></div>
-      </div>
-      <div class="proj-card"><span class="proj-pill pill-a">Operations — Sample</span>
-        <h3>Operations Setup for an Early-Stage Startup</h3>
-        <p>A founder was managing everything in their head — 400+ unread emails, no documented processes, no structure. Set up Google Workspace, wrote 8 core SOPs, built a Notion operating dashboard, and managed inbox and scheduling for 30 days.</p>
-        <div class="proj-result res-a">Founder reclaimed ~12 hours/week · Team onboarding time halved · Processes documented and repeatable</div>
-        <div class="proj-chips"><span class="chip">Google Workspace</span><span class="chip">Notion</span><span class="chip">SOP Writing</span><span class="chip">Calendar Mgmt</span></div>
-      </div>
-    </div>
+  <h2>Projects</h2>
+  <div class="grid">
+    <div class="card">Investor Reports — Pitch Investors</div>
+    <div class="card">Portfolio Dashboard</div>
   </div>
 </div>
 
-<!-- ══════ LINKEDIN ══════ -->
-<div id="page-linkedin" class="page">
-  <div class="li-page">
-    <span class="section-label">LinkedIn rewrite</span>
-    <h2 style="margin-bottom:0.5rem">Copy-paste ready.<br>Just update the fields.</h2>
-    <p style="color:var(--text2);font-size:0.9rem;font-weight:300;margin-top:0.75rem;margin-bottom:2.5rem;max-width:560px">Each section below is written in your voice — warm, direct, results-focused. Click "Copy" on any block and paste it straight into LinkedIn.</p>
+<!-- CASE STUDIES -->
+<div id="page-case-studies" class="page">
+  <h2>Case Studies</h2>
 
-    <!-- HEADLINE -->
-    <div class="li-section">
-      <div class="li-section-label">Headline (220 chars max)</div>
-      <div class="li-box">
-        <button class="copy-btn" onclick="copyText(this,'headline-text')">Copy</button>
-        <div class="li-content" id="headline-text">Executive VA · Data Analyst · Bookkeeper | I help small businesses run more smoothly — clean books, organized ops, and data that actually makes sense | CPA Foundation | Google Data Analytics | MSc Financial Engineering</div>
-        <div class="li-char" id="headline-count"></div>
-      </div>
-      <div class="li-note">💡 On LinkedIn, your headline appears everywhere — search results, connection requests, comments. Make every word count. This version leads with what you do, not just your title.</div>
-    </div>
-
-    <!-- ABOUT -->
-    <div class="li-section">
-      <div class="li-section-label">About / Summary section</div>
-      <div class="li-box">
-        <button class="copy-btn" onclick="copyText(this,'about-text')">Copy</button>
-        <div class="li-content" id="about-text">Hi, I'm Monicah — and I help small business owners stop drowning in the admin.
-
-I'm a bookkeeper, data analyst, and executive virtual assistant based in Nairobi. My background is in Economics and Mathematics (Kenyatta University), and I'm currently completing my MSc in Financial Engineering at WorldQuant University. I hold five certifications in finance and data — including Google Data Analytics, IBM Data Science Practitioner, and Intuit Bookkeeping.
-
-Here's what I actually do for clients:
-
-📒 Bookkeeping & Reconciliations — clean books every month, no chasing
-📊 Data Analysis & Reporting — dashboards and reports that help you make real decisions
-🗓️ Executive Admin Support — inbox cleared, calendar organized, operations running
-
-I'm not just here to tick off a task list. At Pitch Investors, I built financial models and investor reports for 10+ businesses — helping them secure $500k+ in investor interest. At Aspire Lending, I redesigned a reporting process that freed up 20 hours a week. At Target Mart, I improved cash flow by 30% and hit 100% on-time tax filings.
-
-I notice what's not working. I fix it before it becomes your problem. And I don't need micromanaging — just a good brief and clear goals.
-
-If you're a small business owner who wants clean finances, a clear picture of your numbers, and an operations partner who thinks ahead — let's talk.
-
-📩 <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="caa7a5a4a3a9aba2e4a7a8bfb8bf8ab0a5a2a5a7aba3a6e4a9a5a7">[email&#160;protected]</a>
-📅 Book a call: calendly.com/monicahmburu/one-on-one</div>
-      </div>
-      <div class="li-note">💡 LinkedIn's About section allows up to 2,600 characters. This version uses clean formatting that renders well on both desktop and mobile. The emoji bullets help it scan quickly — most people skim before they read.</div>
-    </div>
-
-    <!-- JOB ENTRIES -->
-    <div class="li-section">
-      <div class="li-section-label">Experience — Job descriptions</div>
-
-      <div class="job-entry">
-        <button class="copy-btn" onclick="copyText(this,'job1')">Copy</button>
-        <div class="job-title">Accounts Assistant &amp; Receptionist</div>
-        <div class="job-co">Aspire Lending Ltd. · Mar 2025 – Present · Nairobi</div>
-        <div class="job-copy" id="job1">First point of contact for all clients — managing 3–5 calls daily and supporting every walk-in through the lending process.
-
-Beyond the front desk, I identified inefficiencies in our reporting workflow and redesigned the process — cutting report preparation time by 40% and freeing over 20 hours per week for senior staff. I also built a structured filing system for 900+ physical and digital loan files, making retrieval fast, accurate, and audit-ready.
-
-Key results:
-→ 40% reduction in report preparation time
-→ 20+ hours per week freed through process redesign
-→ Filing system built for 900+ client loan records</div>
-      </div>
-
-      <div class="job-entry">
-        <button class="copy-btn" onclick="copyText(this,'job2')">Copy</button>
-        <div class="job-title">Accountant — Accounts Payable &amp; Receivable</div>
-        <div class="job-co">Pitch Investors · May – Sep 2024 · Nairobi</div>
-        <div class="job-copy" id="job2">Managed the full AP/AR cycle for a crowdfunding platform — tracking client billing, vendor payments, and petty cash across multiple accounts.
-
-Through improved tracking and follow-up procedures, I reduced late payments by 40% and cut petty cash discrepancies by 60%. I streamlined payroll processing (20% time reduction) and refined the invoicing system, reducing billing turnaround by 15% and improving cash flow velocity.
-
-Key results:
-→ 40% reduction in late payments
-→ 60% fewer petty cash discrepancies
-→ 20% faster payroll processing
-→ 15% faster billing turnaround</div>
-      </div>
-
-      <div class="job-entry">
-        <button class="copy-btn" onclick="copyText(this,'job3')">Copy</button>
-        <div class="job-title">Financial Analyst — Business Valuation &amp; Modeling</div>
-        <div class="job-co">Pitch Investors · Mar – Jun 2024 · Nairobi</div>
-        <div class="job-copy" id="job3">Conducted business valuations and built detailed financial models for 10+ companies looking to raise investor funding. Developed scenario-based forecasts and DCF models that improved forecasting accuracy by 30%.
-
-Wrote and presented 10+ investor-ready business proposals and pitch decks for non-technical audiences — directly contributing to a 40% increase in investor engagement and helping clients secure $500k+ in investor interest.
-
-Key results:
-→ $500k+ in investor interest secured for clients
-→ 40% increase in investor engagement
-→ 30% improvement in forecasting accuracy
-→ 10+ business proposals and pitch decks delivered</div>
-      </div>
-
-      <div class="job-entry">
-        <button class="copy-btn" onclick="copyText(this,'job4')">Copy</button>
-        <div class="job-title">Finance Intern</div>
-        <div class="job-co">Target Mart Limited · Jul – Dec 2023 · Nairobi</div>
-        <div class="job-copy" id="job4">Managed accounts receivable and payable, boosting cash flow by 30% through timely payment processing. Supported payroll data verification, improving accuracy and compliance by 20%.
-
-Prepared ageing reports that helped identify and recover overdue accounts — leading to a 25% reduction in unpaid invoices. Assisted with withholding tax submissions, achieving 100% on-time filings. Monthly reports I prepared contributed data that influenced 80% of key management decisions.
-
-Key results:
-→ 30% improvement in cash flow
-→ 25% reduction in unpaid invoices
-→ 100% on-time tax filing record
-→ 20% improvement in payroll compliance</div>
-      </div>
-    </div>
-
-    <!-- SKILLS -->
-    <div class="li-section">
-      <div class="li-section-label">Skills to add on LinkedIn (in order of priority)</div>
-      <div class="li-box">
-        <button class="copy-btn" onclick="copyText(this,'skills-text')">Copy</button>
-        <div class="li-content" id="skills-text">Financial Analysis · Bookkeeping · Data Analysis · Microsoft Excel · QuickBooks Online · Xero · Financial Modeling · Bank Reconciliation · Accounts Payable · Accounts Receivable · Business Valuation · Executive Virtual Assistance · Calendar Management · Inbox Management · SOP Documentation · Google Workspace · Notion · Trello · Power BI · Python · Zoho Books · Sage · Payroll Processing · Tax Compliance · Budget Analysis · Variance Analysis · DCF Valuation · Report Writing · Process Improvement · Quantitative Analytics</div>
-      </div>
-      <div class="li-note">💡 LinkedIn allows up to 50 skills. Add these in order — the first 3 shown on your profile are the most visible. Ask previous colleagues or managers to endorse the top ones: Financial Analysis, Bookkeeping, and Data Analysis.</div>
-    </div>
-
-    <!-- FEATURED SECTION -->
-    <div class="li-section">
-      <div class="li-section-label">Featured section — what to add</div>
-      <div class="li-box" style="padding:1.75rem 2rem">
-        <div style="display:flex;flex-direction:column;gap:1rem">
-          <div style="display:flex;gap:1rem;align-items:flex-start">
-            <div style="width:28px;height:28px;border-radius:50%;background:var(--green);color:#fff;font-size:0.7rem;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0">1</div>
-            <div><div style="font-size:0.85rem;color:var(--text);font-weight:500">Link to your portfolio website</div><div style="font-size:0.78rem;color:var(--text2);font-weight:300;margin-top:0.2rem">Once hosted on Tiiny.host or Netlify, add the URL here. This is the single most valuable thing on your Featured section.</div></div>
-          </div>
-          <div style="display:flex;gap:1rem;align-items:flex-start">
-            <div style="width:28px;height:28px;border-radius:50%;background:var(--green);color:#fff;font-size:0.7rem;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0">2</div>
-            <div><div style="font-size:0.85rem;color:var(--text);font-weight:500">Your Calendly booking link</div><div style="font-size:0.78rem;color:var(--text2);font-weight:300;margin-top:0.2rem">Add it as a featured link with the title "Book a free 30-min call" — removes friction for interested clients.</div></div>
-          </div>
-          <div style="display:flex;gap:1rem;align-items:flex-start">
-            <div style="width:28px;height:28px;border-radius:50%;background:var(--green);color:#fff;font-size:0.7rem;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0">3</div>
-            <div><div style="font-size:0.85rem;color:var(--text);font-weight:500">A project sample (PDF or Google Drive link)</div><div style="font-size:0.78rem;color:var(--text2);font-weight:300;margin-top:0.2rem">Even one clean dashboard screenshot or sample report as a PDF makes a huge difference. Canva can help you make it look polished.</div></div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- QUICK WINS -->
-    <div class="li-section">
-      <div class="li-section-label">Quick profile wins — do these today</div>
-      <div class="li-box" style="padding:1.75rem 2rem">
-        <div style="display:flex;flex-direction:column;gap:0.85rem">
-          <div style="font-size:0.83rem;color:var(--text2);padding-left:1.1rem;border-left:2px solid var(--border-green);line-height:1.5"><strong style="color:var(--text)">Profile photo:</strong> Clean background, good lighting, professional but warm. No selfies taken at an angle.</div>
-          <div style="font-size:0.83rem;color:var(--text2);padding-left:1.1rem;border-left:2px solid var(--border-green);line-height:1.5"><strong style="color:var(--text)">Banner image:</strong> Use Canva — make a simple dark banner with your name, title, and "Open to Work". Matches your portfolio aesthetic.</div>
-          <div style="font-size:0.83rem;color:var(--text2);padding-left:1.1rem;border-left:2px solid var(--border-green);line-height:1.5"><strong style="color:var(--text)">Open to Work settings:</strong> Set to "Freelance" and "Contract" — not just full-time employment. Specify: Data Analyst, Virtual Assistant, Bookkeeper, Financial Analyst.</div>
-          <div style="font-size:0.83rem;color:var(--text2);padding-left:1.1rem;border-left:2px solid var(--border-green);line-height:1.5"><strong style="color:var(--text)">Location:</strong> Set to "Nairobi Metropolitan Area" and tick "Remote" — this gets you seen by international clients.</div>
-          <div style="font-size:0.83rem;color:var(--text2);padding-left:1.1rem;border-left:2px solid var(--border-green);line-height:1.5"><strong style="color:var(--text)">Add all 5 certifications</strong> to the Licenses &amp; Certifications section with their Credly/Coursera verification links.</div>
-          <div style="font-size:0.83rem;color:var(--text2);padding-left:1.1rem;border-left:2px solid var(--border-green);line-height:1.5"><strong style="color:var(--text)">Post once a week:</strong> Share something small — a tip about Excel, a reconciliation mistake to avoid, a before/after of a dashboard. This gets you visible without being overwhelming.</div>
-        </div>
-      </div>
-    </div>
+  <div class="card">
+    <h3>Reporting Optimization — Aspire Lending</h3>
+    <p><strong>Problem:</strong> Manual reporting wasting hours</p>
+    <p><strong>Action:</strong> Redesigned workflow</p>
+    <p><strong>Result:</strong> 40% faster + 20hrs/week saved</p>
   </div>
+
+  <div class="card">
+    <h3>Investor Readiness — Pitch Investors</h3>
+    <p><strong>Problem:</strong> Poor financial presentation</p>
+    <p><strong>Action:</strong> Built financial models</p>
+    <p><strong>Result:</strong> $500k+ investor interest</p>
+  </div>
+
 </div>
 
-<!-- ══════ CONTACT ══════ -->
+<!-- CONTACT -->
 <div id="page-contact" class="page">
-  <div class="section">
-    <span class="section-label">Get in touch</span>
-    <h2 style="margin-bottom:0.5rem">Let's talk about<br>your business.</h2>
-    <p style="color:var(--text2);font-size:0.93rem;font-weight:300;margin-top:0.75rem;max-width:480px">The best first step is a free 30-minute discovery call. An honest conversation — no pitch, no pressure.</p>
-    <div class="contact-grid">
-      <div>
-        <a href="/cdn-cgi/l/email-protection#563b39383f35373e783b34232423162c393e393b373f3a7835393b" class="contact-method"><div class="cm-icon">📧</div><div><div class="cm-label">Email</div><div class="cm-value"><span class="__cf_email__" data-cfemail="771a18191e14161f591a15020502370d181f181a161e1b5914181a">[email&#160;protected]</span></div></div></a>
-        <a href="https://wa.me/254798498795" target="_blank" class="contact-method"><div class="cm-icon">💬</div><div><div class="cm-label">WhatsApp</div><div class="cm-value">+254 798 498 795</div></div></a>
-        <a href="https://www.linkedin.com/in/monicah-mburu-wambui/" target="_blank" class="contact-method"><div class="cm-icon">💼</div><div><div class="cm-label">LinkedIn</div><div class="cm-value">linkedin.com/in/monicah-mburu-wambui</div></div></a>
-        <div style="background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:1.5rem;margin-top:0.5rem">
-          <div style="font-size:0.68rem;color:var(--text3);text-transform:uppercase;letter-spacing:0.08em;margin-bottom:0.75rem">Good to know</div>
-          <div style="font-size:0.8rem;color:var(--text2);display:flex;flex-direction:column;gap:0.45rem;font-weight:300">
-            <div>⏱ Response within 24 hours</div>
-            <div>🌍 Remote — working with clients worldwide</div>
-            <div>📅 Discovery calls are always free</div>
-            <div>🤝 Retainer or project basis</div>
-          </div>
-        </div>
-      </div>
-      <div>
-        <div class="booking-card">
-          <h3>Book a free discovery call</h3>
-          <p>30 minutes. Just a real conversation about your business and whether I can help.</p>
-          <div class="booking-steps" style="margin-bottom:2rem">
-            <div class="bstep"><div class="bnum">1</div><p>Pick a time on Calendly</p></div>
-            <div class="bstep"><div class="bnum">2</div><p>I send a short prep form so I arrive ready</p></div>
-            <div class="bstep"><div class="bnum">3</div><p>We talk — you tell me about your business</p></div>
-            <div class="bstep"><div class="bnum">4</div><p>I send a clear proposal within 48 hours if we're a fit</p></div>
-          </div>
-          <a href="https://calendly.com/monicahmburu/one-on-one" target="_blank" class="btn-green" style="width:100%;text-align:center;display:block">Book your free call →</a>
-        </div>
-      </div>
-    </div>
+  <h2>Contact</h2>
+  <p>Book a free call or reach out directly.</p>
+
+  <h3>FAQ</h3>
+  <div class="card">
+    <strong>Do you work remotely?</strong>
+    <p>Yes — I work with clients globally.</p>
+  </div>
+
+  <div class="card">
+    <strong>How do we start?</strong>
+    <p>Book a call and I’ll send a proposal within 48 hours.</p>
   </div>
 </div>
-
-<footer>
-  <p>© 2025 Monicah Mburu · Nairobi, Kenya</p>
-  <div class="footer-links">
-    <a href="https://www.linkedin.com/in/monicah-mburu-wambui/" target="_blank">LinkedIn</a>
-    <a href="https://wa.me/254798498795" target="_blank">WhatsApp</a>
-    <a href="/cdn-cgi/l/email-protection#64090b0a0d07050c4a0906111611241e0b0c0b09050d084a070b09">Email</a>
-  </div>
-</footer>
 
 <script>
-const PAGES = ['home','about','services','projects','linkedin','contact'];
+const pages=['home','about','services','projects','case-studies','contact'];
 
-function router() {
-  const hash = location.hash.replace('#/','') || 'home';
-  const id = PAGES.includes(hash) ? hash : 'home';
-  document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
-  document.querySelectorAll('.nav-tab').forEach(t => t.classList.remove('active'));
-  const page = document.getElementById('page-' + id);
-  if (page) page.classList.add('active');
-  const tab = document.querySelector(`.nav-tab[href="#/${id}"]`);
-  if (tab) tab.classList.add('active');
-  window.scrollTo({top: 0, behavior: 'smooth'});
+function router(){
+  const hash=location.hash.replace('#/','')||'home';
+
+  document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
+  document.querySelectorAll('nav a').forEach(a=>a.classList.remove('active'));
+
+  document.getElementById('page-'+hash)?.classList.add('active');
+  document.querySelector(`nav a[href="#/${hash}"]`)?.classList.add('active');
 }
 
-window.addEventListener('hashchange', router);
-window.addEventListener('DOMContentLoaded', () => {
-  if (!location.hash || location.hash === '#') location.hash = '#/home';
+window.addEventListener('hashchange',router);
+window.addEventListener('load',()=>{
+  if(!location.hash) location.hash='#/home';
   router();
 });
-
-function copyText(btn, id){
-  const el = document.getElementById(id);
-  if(!el) return;
-  const text = el.innerText || el.textContent;
-  navigator.clipboard.writeText(text).then(()=>{
-    btn.textContent='Copied!';
-    btn.classList.add('copied');
-    setTimeout(()=>{btn.textContent='Copy';btn.classList.remove('copied')},2000);
-  }).catch(()=>{
-    const ta=document.createElement('textarea');
-    ta.value=text;document.body.appendChild(ta);ta.select();
-    document.execCommand('copy');document.body.removeChild(ta);
-    btn.textContent='Copied!';btn.classList.add('copied');
-    setTimeout(()=>{btn.textContent='Copy';btn.classList.remove('copied')},2000);
-  });
-}
 </script>
+
 </body>
 </html>

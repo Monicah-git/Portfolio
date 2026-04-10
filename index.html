@@ -356,7 +356,7 @@ h3{font-family:var(--serif);font-size:1.2rem;font-weight:500;color:var(--dark)}
 footer{border-top:1px solid var(--border);padding:1.75rem 2.5rem;display:flex;justify-content:space-between;align-items:center}
 footer p{font-size:0.7rem;color:var(--text3)}
 .footer-links{display:flex;gap:1.5rem}
-.footer-links a{font-size:0.75rem;color:var(--text3);text-decoration:none;transition:color 0.2s}
+.footer-links a{font-size:0.7rem;color:var(--text3);text-decoration:none;transition:color 0.2s}
 .footer-links a:hover{color:var(--ink)}
 
 /* RESPONSIVE */
@@ -398,6 +398,7 @@ footer p{font-size:0.7rem;color:var(--text3)}
     <li><a href="#" onclick="show('services')" data-page="services">Services</a></li>
     <li><a href="#" onclick="show('cases')" data-page="cases">Case Studies</a></li>
     <li><a href="#" onclick="show('portfolio')" data-page="portfolio">Portfolio</a></li>
+    
     <li><a href="#" onclick="show('contact')" data-page="contact">Contact</a></li>
   </ul>
   <a href="https://calendly.com/monicahmburu/one-on-one" target="_blank" class="nav-cta">Book a call</a>
@@ -406,12 +407,13 @@ footer p{font-size:0.7rem;color:var(--text3)}
   </button>
 </nav>
 <div class="mob-menu" id="mob">
-  <a href="#" onclick="show('home');closeMob();return false" data-page="home">Home</a>
-  <a href="#" onclick="show('about');closeMob();return false" data-page="about">About</a>
-  <a href="#" onclick="show('services');closeMob();return false" data-page="services">Services</a>
-  <a href="#" onclick="show('cases');closeMob();return false" data-page="cases">Case Studies</a>
-  <a href="#" onclick="show('portfolio');closeMob();return false" data-page="portfolio">Portfolio</a>
-  <a href="#" onclick="show('contact');closeMob();return false" data-page="contact">Contact</a>
+  <a href="#" onclick="show('home');closeMob()">Home</a>
+  <a href="#" onclick="show('about');closeMob()">About</a>
+  <a href="#" onclick="show('services');closeMob()">Services</a>
+  <a href="#" onclick="show('cases');closeMob()">Case Studies</a>
+  <a href="#" onclick="show('portfolio');closeMob()">Portfolio</a>
+  
+  <a href="#" onclick="show('contact');closeMob()">Contact</a>
   <a href="https://calendly.com/monicahmburu/one-on-one" target="_blank" class="mob-cta">Book a free call</a>
 </div>
 
@@ -574,6 +576,7 @@ footer p{font-size:0.7rem;color:var(--text3)}
         <p>I am currently completing my <strong>MSc in Financial Engineering at WorldQuant University</strong> and I hold five certifications in finance and data. So when I say I understand your numbers, I have the background to back that up.</p>
         <div style="display:flex;gap:0.75rem;margin-top:2rem;flex-wrap:wrap">
           <a href="https://calendly.com/monicahmburu/one-on-one" target="_blank" class="btn">Book a free call</a>
+          <a href="#" onclick="show('resume')" class="btn-ghost">View my resume</a>
         </div>
       </div>
       <div>
@@ -1047,6 +1050,8 @@ footer p{font-size:0.7rem;color:var(--text3)}
 </div><!-- /portfolio -->
 
 <!-- ==================== RESUME ==================== -->
+
+
 <!-- ==================== CONTACT ==================== -->
 <div id="page-contact" class="page">
   <div class="contact-hero">
@@ -1060,7 +1065,7 @@ footer p{font-size:0.7rem;color:var(--text3)}
     <div class="wrap">
       <div class="contact-grid">
         <div>
-          <a href="mailto:monicah.mburu@zohomail.com" class="c-method reveal"><div class="c-ico">📧</div><div><div class="c-lbl">Email</div><div class="c-val">monicah.mburu@zohomail.com</div></div></a>
+          <a href="mailto:monicah.mburu@zohomail.com" class="c-method reveal"><div class="c-ico">📧</div><div><div class="c-lbl">Email</div><div class="c-val"><span class="__cf_email__" data-cfemail="a8c5c7c6c1cbc9c086c5cadddadde8d2c7c0c7c5c9c1c486cbc7c5">[email&#160;protected]</span></div></div></a>
           <a href="https://wa.me/254798498795" target="_blank" class="c-method reveal"><div class="c-ico">💬</div><div><div class="c-lbl">WhatsApp</div><div class="c-val">+254 798 498 795</div></div></a>
           <a href="https://www.linkedin.com/in/monicah-mburu-wambui/" target="_blank" class="c-method reveal"><div class="c-ico">💼</div><div><div class="c-lbl">LinkedIn</div><div class="c-val">linkedin.com/in/monicah-mburu-wambui</div></div></a>
           <div class="good-to-know reveal">
@@ -1128,19 +1133,16 @@ function show(id, pushState = true){
   return false;
 }
 
-// Handle back/forward
 window.addEventListener('popstate', e => {
   const id = (e.state && e.state.page) || location.hash.replace('#','') || 'home';
   if(pages.includes(id)) show(id, false);
 });
 
-// Hash routing on load
 window.addEventListener('DOMContentLoaded',()=>{
   const hash = location.hash.replace('#','');
   const id = pages.includes(hash) ? hash : 'home';
   show(id, false);
   
-  // Add click listeners to all nav links
   document.querySelectorAll('.nav-links a[data-page]').forEach(link => {
     link.addEventListener('click', (e) => {
       e.preventDefault();
@@ -1149,7 +1151,6 @@ window.addEventListener('DOMContentLoaded',()=>{
     });
   });
   
-  // Add click listeners to all mobile menu links
   document.querySelectorAll('.mob-menu a[data-page]').forEach(link => {
     link.addEventListener('click', (e) => {
       e.preventDefault();
@@ -1159,12 +1160,24 @@ window.addEventListener('DOMContentLoaded',()=>{
   });
 });
 
-// NAV solid on scroll
 const nav = document.getElementById('nav');
 window.addEventListener('scroll',()=>{
   nav.classList.toggle('solid', window.scrollY > 30);
 });
 
-// Hamburger
 const ham = document.getElementById('ham');
-const mob = document
+const mob = document.getElementById('mob');
+ham.addEventListener('click',()=> mob.classList.toggle('open'));
+function closeMob(){ mob.classList.remove('open'); }
+
+function runReveal(){
+  const els = document.querySelectorAll('.page.active .reveal:not(.on)');
+  if(!els.length) return;
+  const obs = new IntersectionObserver(entries=>{
+    entries.forEach(e=>{
+      if(e.isIntersecting){ e.target.classList.add('on'); obs.unobserve(e.target); }
+    });
+  }, {threshold: 0.1});
+  els.forEach(el => obs.observe(el));
+}
+</script>

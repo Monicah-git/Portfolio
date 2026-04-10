@@ -385,6 +385,45 @@ footer p{font-size:0.7rem;color:var(--text3)}
   nav{padding:0 1.5rem}
   .mob-menu{padding:1.5rem}
 }
+
+/* MOBILE TOUCH OPTIMISATION */
+*, *::before, *::after { -webkit-tap-highlight-color: transparent; }
+.mob-link {
+  min-height: 52px !important;
+  display: flex !important;
+  align-items: center !important;
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+  cursor: pointer;
+  -webkit-user-select: none;
+  user-select: none;
+}
+.mob-cta {
+  min-height: 52px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  cursor: pointer;
+}
+.hamburger {
+  min-width: 48px !important;
+  min-height: 48px !important;
+  display: none;
+  align-items: center !important;
+  justify-content: center !important;
+}
+@media(max-width:900px){
+  .hamburger { display: flex !important; }
+}
+.btn, .btn-ghost, .btn-inv, .btn-ghost-inv, .nav-cta {
+  min-height: 48px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.cs-toggle { min-width: 44px; min-height: 44px; }
+.cs-header { min-height: 56px; }
+
 </style>
 </head>
 <body>
@@ -398,7 +437,7 @@ footer p{font-size:0.7rem;color:var(--text3)}
     <li><a href="#" onclick="show('services')" data-page="services">Services</a></li>
     <li><a href="#" onclick="show('cases')" data-page="cases">Case Studies</a></li>
     <li><a href="#" onclick="show('portfolio')" data-page="portfolio">Portfolio</a></li>
-    
+    <li><a href="#" onclick="show('resume')" data-page="resume">Resume</a></li>
     <li><a href="#" onclick="show('contact')" data-page="contact">Contact</a></li>
   </ul>
   <a href="https://calendly.com/monicahmburu/one-on-one" target="_blank" class="nav-cta">Book a call</a>
@@ -407,13 +446,13 @@ footer p{font-size:0.7rem;color:var(--text3)}
   </button>
 </nav>
 <div class="mob-menu" id="mob">
-  <a href="#" onclick="show('home');closeMob()">Home</a>
-  <a href="#" onclick="show('about');closeMob()">About</a>
-  <a href="#" onclick="show('services');closeMob()">Services</a>
-  <a href="#" onclick="show('cases');closeMob()">Case Studies</a>
-  <a href="#" onclick="show('portfolio');closeMob()">Portfolio</a>
-  
-  <a href="#" onclick="show('contact');closeMob()">Contact</a>
+  <a href="#" data-page="home" class="mob-link">Home</a>
+  <a href="#" data-page="about" class="mob-link">About</a>
+  <a href="#" data-page="services" class="mob-link">Services</a>
+  <a href="#" data-page="cases" class="mob-link">Case Studies</a>
+  <a href="#" data-page="portfolio" class="mob-link">Portfolio</a>
+  <a href="#" data-page="resume" class="mob-link">Resume</a>
+  <a href="#" data-page="contact" class="mob-link">Contact</a>
   <a href="https://calendly.com/monicahmburu/one-on-one" target="_blank" class="mob-cta">Book a free call</a>
 </div>
 
@@ -1050,7 +1089,110 @@ footer p{font-size:0.7rem;color:var(--text3)}
 </div><!-- /portfolio -->
 
 <!-- ==================== RESUME ==================== -->
-
+<div id="page-resume" class="page">
+  <div class="resume-hero">
+    <div class="wrap">
+      <span class="eyebrow">Resume</span>
+      <h1>Full professional<br><em>background.</em></h1>
+      <p class="sub">Everything a recruiter or client needs in one place. Download the PDF or read it here.</p>
+    </div>
+  </div>
+  <section>
+    <div class="wrap">
+      <div class="resume-layout">
+        <div class="resume-main">
+          <div class="r-section">
+            <div class="r-section-title">Professional Summary</div>
+            <p style="font-size:0.85rem;color:var(--text2);font-weight:300;line-height:1.85">Finance-fluent virtual assistant and data analyst with a background in Economics and Mathematics, five finance and data certifications, and hands-on experience in bookkeeping, financial modelling, executive admin and process improvement. I help small businesses and startups run more efficiently by cleaning up their finances, systematising their operations, and turning their data into something they can actually use. Currently completing an MSc in Financial Engineering at WorldQuant University.</p>
+          </div>
+          <div class="r-section">
+            <div class="r-section-title">Experience</div>
+            <div class="r-item">
+              <div class="r-title">Accounts Assistant and Receptionist</div>
+              <div class="r-sub">Aspire Lending Ltd.</div>
+              <div class="r-date">March 2025 to Present · Nairobi, Kenya</div>
+              <ul class="r-bullets">
+                <li>Redesigned manual reporting process without being asked, cutting prep time by 40% and freeing 20+ hours per week for senior staff</li>
+                <li>Built and maintained structured filing system for 900+ physical and digital loan files</li>
+                <li>Drafted loan offer letters, organised logbooks and managed client-facing communications</li>
+              </ul>
+            </div>
+            <div class="r-item">
+              <div class="r-title">Accounts Payable and Receivable Accountant</div>
+              <div class="r-sub">Pitch Investors</div>
+              <div class="r-date">May to September 2024 · Nairobi, Kenya</div>
+              <ul class="r-bullets">
+                <li>Reduced late payments by 40% through improved tracking and follow-up procedures</li>
+                <li>Cut petty cash discrepancies by 60% through tighter controls and daily reconciliation</li>
+                <li>Decreased billing turnaround by 15%, improving cash flow velocity</li>
+                <li>Streamlined payroll processing with 20% time reduction and 100% on-time disbursements</li>
+              </ul>
+            </div>
+            <div class="r-item">
+              <div class="r-title">Business Valuation and Financial Modelling Analyst</div>
+              <div class="r-sub">Pitch Investors</div>
+              <div class="r-date">March to June 2024 · Nairobi, Kenya</div>
+              <ul class="r-bullets">
+                <li>Built financial models and DCF valuations for 10+ companies seeking investor funding</li>
+                <li>Improved forecasting accuracy by 30% through scenario-based modelling</li>
+                <li>Wrote and presented 10+ investor-ready business proposals and pitch decks</li>
+                <li>Contributed to $500k+ in investor interest secured and 40% increase in investor engagement</li>
+              </ul>
+            </div>
+            <div class="r-item">
+              <div class="r-title">Finance Intern</div>
+              <div class="r-sub">Target Mart Limited</div>
+              <div class="r-date">July to December 2023 · Nairobi, Kenya</div>
+              <ul class="r-bullets">
+                <li>Improved cash flow by 30% through timely AP/AR processing</li>
+                <li>Reduced unpaid invoices by 25% through ageing report analysis and follow-up</li>
+                <li>Achieved 100% on-time withholding tax filings</li>
+                <li>Monthly reports influenced 80% of key management decisions</li>
+              </ul>
+            </div>
+            <div class="r-item">
+              <div class="r-title">Executive VA Training</div>
+              <div class="r-sub">Athena</div>
+              <div class="r-date">2024</div>
+              <p style="font-size:0.8rem;color:var(--text2);font-weight:300;line-height:1.65;margin-top:0.35rem">Completed training at one of the world's most rigorous executive VA programs. Inbox management, calendar optimisation, SOP documentation and proactive executive support.</p>
+            </div>
+          </div>
+          <div class="r-section">
+            <div class="r-section-title">Education</div>
+            <div class="r-item"><div class="r-title">MSc Financial Engineering</div><div class="r-sub">WorldQuant University</div><div class="r-date">July 2025 to July 2028 (in progress)</div></div>
+            <div class="r-item"><div class="r-title">Bachelor of Arts — Economics and Mathematics</div><div class="r-sub">Kenyatta University</div><div class="r-date">August 2019 to July 2024</div></div>
+            <div class="r-item"><div class="r-title">CPA Foundation Level</div><div class="r-sub">KASNEB</div><div class="r-date">Ongoing</div></div>
+          </div>
+          <div class="r-section">
+            <div class="r-section-title">Certifications</div>
+            <div class="r-item"><div class="r-title">Google Data Analytics Professional Certificate</div><div class="r-sub">Google / Coursera</div></div>
+            <div class="r-item"><div class="r-title">IBM Data Science Practitioner Certificate</div><div class="r-sub">IBM SkillsBuild</div></div>
+            <div class="r-item"><div class="r-title">Business Analytics with Excel: Elementary to Advanced</div><div class="r-sub">Johns Hopkins University / Coursera</div></div>
+            <div class="r-item"><div class="r-title">Intuit Bookkeeping Certification</div><div class="r-sub">Intuit</div></div>
+            <div class="r-item"><div class="r-title">CFI Corporate Finance Foundations</div><div class="r-sub">Corporate Finance Institute</div></div>
+          </div>
+          <div class="r-section">
+            <div class="r-section-title">Skills</div>
+            <div class="skill-tags">
+              <span class="skill-tag">Financial Analysis</span><span class="skill-tag">Bookkeeping</span><span class="skill-tag">Data Analysis</span><span class="skill-tag">Microsoft Excel</span><span class="skill-tag">QuickBooks Online</span><span class="skill-tag">Xero</span><span class="skill-tag">Zoho Books</span><span class="skill-tag">Sage</span><span class="skill-tag">Financial Modelling</span><span class="skill-tag">DCF Valuation</span><span class="skill-tag">Bank Reconciliation</span><span class="skill-tag">AP/AR Management</span><span class="skill-tag">Payroll Processing</span><span class="skill-tag">Tax Compliance</span><span class="skill-tag">Budget Analysis</span><span class="skill-tag">Variance Analysis</span><span class="skill-tag">Google Workspace</span><span class="skill-tag">Notion</span><span class="skill-tag">Trello / Asana</span><span class="skill-tag">SOP Documentation</span><span class="skill-tag">Workflow Automation</span><span class="skill-tag">Zapier / Make</span><span class="skill-tag">Power BI</span><span class="skill-tag">Python (learning)</span>
+            </div>
+          </div>
+        </div>
+        <div class="resume-sidebar">
+          <div class="dl-card reveal">
+            <div style="font-size:2rem;margin-bottom:0.65rem">📄</div>
+            <h3>Download PDF Resume</h3>
+            <p>The printable version, ready to send to any recruiter or client.</p>
+            <!-- UPDATE: Replace # with your Google Drive PDF link -->
+            <a href="#" target="_blank" class="btn">Download Resume</a>
+            <a href="https://calendly.com/monicahmburu/one-on-one" target="_blank" class="btn-ghost" style="margin-top:0.65rem">Book a call instead</a>
+            <div class="dl-note">A 30 minute call is usually more useful than a CV. Book one above, it is free and there is no obligation.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div><!-- /resume -->
 
 <!-- ==================== CONTACT ==================== -->
 <div id="page-contact" class="page">
@@ -1065,7 +1207,7 @@ footer p{font-size:0.7rem;color:var(--text3)}
     <div class="wrap">
       <div class="contact-grid">
         <div>
-          <a href="mailto:monicah.mburu@zohomail.com" class="c-method reveal"><div class="c-ico">📧</div><div><div class="c-lbl">Email</div><div class="c-val"><span class="__cf_email__" data-cfemail="a8c5c7c6c1cbc9c086c5cadddadde8d2c7c0c7c5c9c1c486cbc7c5">monicah.mburu@zohomail.com</span></div></div></a>
+          <a href="mailto:monicah.mburu@zohomail.com" class="c-method reveal"><div class="c-ico">📧</div><div><div class="c-lbl">Email</div><div class="c-val">monicah.mburu@zohomail.com</div></div></a>
           <a href="https://wa.me/254798498795" target="_blank" class="c-method reveal"><div class="c-ico">💬</div><div><div class="c-lbl">WhatsApp</div><div class="c-val">+254 798 498 795</div></div></a>
           <a href="https://www.linkedin.com/in/monicah-mburu-wambui/" target="_blank" class="c-method reveal"><div class="c-ico">💼</div><div><div class="c-lbl">LinkedIn</div><div class="c-val">linkedin.com/in/monicah-mburu-wambui</div></div></a>
           <div class="good-to-know reveal">
@@ -1096,7 +1238,7 @@ footer p{font-size:0.7rem;color:var(--text3)}
 
 <!-- FOOTER -->
 <footer>
-  <p>© 2026 Monicah Mburu · Nairobi, Kenya</p>
+  <p>© 2025 Monicah Mburu · Nairobi, Kenya</p>
   <div class="footer-links">
     <a href="https://www.linkedin.com/in/monicah-mburu-wambui/" target="_blank">LinkedIn</a>
     <a href="https://wa.me/254798498795" target="_blank">WhatsApp</a>
@@ -1105,79 +1247,96 @@ footer p{font-size:0.7rem;color:var(--text3)}
 </footer>
 
 <script>
-// PAGE NAVIGATION
-const pages = ['home','about','services','cases','portfolio','contact'];
+var pages = ['home','about','services','cases','portfolio','resume','contact'];
 
-function show(id, pushState = true){
-  pages.forEach(p => {
-    document.getElementById('page-'+p).classList.remove('active');
+function show(id, pushState){
+  if(pushState === undefined) pushState = true;
+  pages.forEach(function(p){
+    var el = document.getElementById('page-'+p);
+    if(el) el.classList.remove('active');
   });
-  document.querySelectorAll('.nav-links a').forEach(a => a.classList.remove('active'));
-  document.querySelectorAll('.mob-menu a').forEach(a => a.classList.remove('active'));
-  
-  const page = document.getElementById('page-'+id);
-  if(page){
-    page.classList.add('active');
-    window.scrollTo({top:0,behavior:'smooth'});
-    setTimeout(()=>runReveal(),100);
-  }
-  
-  const tab = document.querySelector(`.nav-links a[data-page="${id}"]`);
-  if(tab) tab.classList.add('active');
-  
-  const mobTab = document.querySelector(`.mob-menu a[data-page="${id}"]`);
-  if(mobTab) mobTab.classList.add('active');
-  
+  document.querySelectorAll('[data-page]').forEach(function(a){ a.classList.remove('active'); });
+  var page = document.getElementById('page-'+id);
+  if(page){ page.classList.add('active'); window.scrollTo(0,0); setTimeout(runReveal,80); }
+  document.querySelectorAll('[data-page="'+id+'"]').forEach(function(a){ a.classList.add('active'); });
   if(pushState) history.pushState({page:id},'','#'+id);
   closeMob();
   return false;
 }
 
-window.addEventListener('popstate', e => {
-  const id = (e.state && e.state.page) || location.hash.replace('#','') || 'home';
-  if(pages.includes(id)) show(id, false);
+window.addEventListener('popstate', function(e){
+  var id = (e.state&&e.state.page)||location.hash.replace('#','')||'home';
+  if(pages.indexOf(id)!==-1) show(id,false);
 });
 
-window.addEventListener('DOMContentLoaded',()=>{
-  const hash = location.hash.replace('#','');
-  const id = pages.includes(hash) ? hash : 'home';
-  show(id, false);
-  
-  document.querySelectorAll('.nav-links a[data-page]').forEach(link => {
-    link.addEventListener('click', (e) => {
-      e.preventDefault();
-      const pageId = link.getAttribute('data-page');
-      show(pageId, true);
-    });
+window.addEventListener('DOMContentLoaded', function(){
+  var hash = location.hash.replace('#','');
+  show((pages.indexOf(hash)!==-1)?hash:'home', false);
+
+  // Desktop nav
+  document.querySelectorAll('.nav-links a[data-page]').forEach(function(link){
+    link.addEventListener('click', function(e){ e.preventDefault(); show(link.getAttribute('data-page')); });
   });
-  
-  document.querySelectorAll('.mob-menu a[data-page]').forEach(link => {
-    link.addEventListener('click', (e) => {
-      e.preventDefault();
-      const pageId = link.getAttribute('data-page');
-      show(pageId, true);
-    });
+
+  // Mobile nav - click AND touchend for fast response
+  document.querySelectorAll('.mob-link').forEach(function(link){
+    link.addEventListener('click', function(e){ e.preventDefault(); e.stopPropagation(); show(link.getAttribute('data-page')); });
+    link.addEventListener('touchend', function(e){ e.preventDefault(); e.stopPropagation(); show(link.getAttribute('data-page')); },{passive:false});
+  });
+
+  // Inline onclick links (used in page content)
+  document.querySelectorAll('a[onclick]').forEach(function(link){
+    link.style.cursor = 'pointer';
   });
 });
 
-const nav = document.getElementById('nav');
-window.addEventListener('scroll',()=>{
-  nav.classList.toggle('solid', window.scrollY > 30);
-});
+window.addEventListener('scroll',function(){
+  var n=document.getElementById('nav');
+  if(n) n.classList.toggle('solid', window.scrollY > 30);
+},{passive:true});
 
-const ham = document.getElementById('ham');
-const mob = document.getElementById('mob');
-ham.addEventListener('click',()=> mob.classList.toggle('open'));
-function closeMob(){ mob.classList.remove('open'); }
+var ham = document.getElementById('ham');
+var mob = document.getElementById('mob');
+
+function closeMob(){
+  if(mob) mob.classList.remove('open');
+}
+
+if(ham && mob){
+  ham.addEventListener('click', function(e){
+    e.stopPropagation();
+    mob.classList.toggle('open');
+  });
+  document.addEventListener('touchstart', function(e){
+    if(mob.classList.contains('open') && !mob.contains(e.target) && !ham.contains(e.target)){
+      closeMob();
+    }
+  },{passive:true});
+  document.addEventListener('click', function(e){
+    if(mob.classList.contains('open') && !mob.contains(e.target) && !ham.contains(e.target)){
+      closeMob();
+    }
+  });
+}
 
 function runReveal(){
-  const els = document.querySelectorAll('.page.active .reveal:not(.on)');
+  var els = document.querySelectorAll('.page.active .reveal:not(.on)');
   if(!els.length) return;
-  const obs = new IntersectionObserver(entries=>{
-    entries.forEach(e=>{
+  var obs = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
       if(e.isIntersecting){ e.target.classList.add('on'); obs.unobserve(e.target); }
     });
-  }, {threshold: 0.1});
-  els.forEach(el => obs.observe(el));
+  },{threshold:0.08, rootMargin:'0px 0px -20px 0px'});
+  els.forEach(function(el){ obs.observe(el); });
+}
+
+function toggleCS(id){
+  var card = document.getElementById(id);
+  if(!card) return;
+  var isOpen = card.classList.contains('open');
+  document.querySelectorAll('.cs-card').forEach(function(c){ c.classList.remove('open'); });
+  if(!isOpen) card.classList.add('open');
 }
 </script>
+</body>
+</html>

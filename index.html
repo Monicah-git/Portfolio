@@ -1099,7 +1099,7 @@ footer p{font-size:0.7rem;color:var(--text3)}
   </div>
 </footer>
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+<script>
 // PAGE NAVIGATION
 const pages = ['home','about','services','cases','portfolio','contact'];
 
@@ -1167,16 +1167,4 @@ window.addEventListener('scroll',()=>{
 
 // Hamburger
 const ham = document.getElementById('ham');
-const mob = document.getElementById('mob');
-ham.addEventListener('click',()=> mob.classList.toggle('open'));
-function closeMob(){ 
-  if(mob) mob.classList.remove('open'); 
-}
-
-// Scroll reveal
-function runReveal(){
-  const els = document.querySelectorAll('.page.active .reveal:not(.on)');
-  if(!els.length) return;
-  const obs = new IntersectionObserver(entries=>{
-    entries.forEach(e=>{
-      if(e.isIntersecting){
+const mob = document

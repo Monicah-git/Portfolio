@@ -5,30 +5,58 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Monicah Mburu — Finance-Fluent Virtual Assistant</title>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+
+<!-- PAGE NAVIGATION — loaded in <head> so onclick handlers always work immediately -->
+<script>
+var pages = ['home','about','services','cases','portfolio','contact'];
+
+function show(id, pushState){
+  if(pushState === undefined) pushState = true;
+  pages.forEach(function(p){
+    var el = document.getElementById('page-'+p);
+    if(el) el.classList.remove('active');
+  });
+  document.querySelectorAll('[data-page]').forEach(function(a){ a.classList.remove('active'); });
+  var page = document.getElementById('page-'+id);
+  if(page){ page.classList.add('active'); window.scrollTo(0,0); setTimeout(runReveal,80); }
+  document.querySelectorAll('[data-page="'+id+'"]').forEach(function(a){ a.classList.add('active'); });
+  if(pushState) history.pushState({page:id},'','#'+id);
+  if(typeof closeMob === 'function') closeMob();
+  return false;
+}
+
+function runReveal(){
+  var els = document.querySelectorAll('.page.active .reveal:not(.on)');
+  if(!els.length) return;
+  var obs = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if(e.isIntersecting){ e.target.classList.add('on'); obs.unobserve(e.target); }
+    });
+  },{threshold:0.08, rootMargin:'0px 0px -20px 0px'});
+  els.forEach(function(el){ obs.observe(el); });
+}
+
+function toggleCS(id){
+  var card = document.getElementById(id);
+  if(!card) return;
+  var isOpen = card.classList.contains('open');
+  document.querySelectorAll('.cs-card').forEach(function(c){ c.classList.remove('open'); });
+  if(!isOpen) card.classList.add('open');
+}
+</script>
+
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 :root{
-  --cream:#faf8f4;
-  --warm:#f2ede4;
-  --warm2:#e8e0d3;
-  --dark:#1e1a15;
-  --dark2:#2a241c;
-  --ink:#8a6445;
-  --ink2:#b08060;
-  --ink-pale:#f0e8df;
-  --ink-border:rgba(138,100,69,0.22);
-  --text:#3a3028;
-  --text2:#7a6a5a;
-  --text3:#b0a090;
-  --border:rgba(58,48,40,0.1);
-  --serif:'Cormorant Garamond',Georgia,serif;
-  --sans:'DM Sans',system-ui,sans-serif;
+  --cream:#faf8f4;--warm:#f2ede4;--warm2:#e8e0d3;
+  --dark:#1e1a15;--dark2:#2a241c;
+  --ink:#8a6445;--ink2:#b08060;--ink-pale:#f0e8df;--ink-border:rgba(138,100,69,0.22);
+  --text:#3a3028;--text2:#7a6a5a;--text3:#b0a090;--border:rgba(58,48,40,0.1);
+  --serif:'Cormorant Garamond',Georgia,serif;--sans:'DM Sans',system-ui,sans-serif;
   --r:14px;--r-sm:8px;
 }
 html{scroll-behavior:smooth}
 body{font-family:var(--sans);background:var(--cream);color:var(--text);line-height:1.7;-webkit-font-smoothing:antialiased;overflow-x:hidden}
-
-/* ANIMATIONS */
 @keyframes fadeUp{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:translateY(0)}}
 @keyframes blink{0%,100%{opacity:1}50%{opacity:.3}}
 .reveal{opacity:0;transform:translateY(22px);transition:opacity 0.6s ease,transform 0.6s ease}
@@ -37,10 +65,10 @@ body{font-family:var(--sans);background:var(--cream);color:var(--text);line-heig
 /* NAV */
 nav{position:fixed;top:0;left:0;right:0;z-index:200;height:62px;display:flex;align-items:center;justify-content:space-between;padding:0 2.5rem;transition:background 0.3s,border-bottom 0.3s}
 nav.solid{background:rgba(250,248,244,0.97);backdrop-filter:blur(18px);border-bottom:1px solid var(--border)}
-.logo{font-family:var(--serif);font-size:1.15rem;font-weight:600;color:var(--dark);text-decoration:none}
+.logo{font-family:var(--serif);font-size:1.15rem;font-weight:600;color:var(--dark);text-decoration:none;cursor:pointer}
 .logo em{font-style:italic;color:var(--ink)}
 .nav-links{display:flex;gap:0.2rem;list-style:none}
-.nav-links a{font-size:0.77rem;color:var(--text2);text-decoration:none;padding:0.38rem 0.8rem;border-radius:100px;transition:all 0.2s;white-space:nowrap}
+.nav-links a{font-size:0.77rem;color:var(--text2);text-decoration:none;padding:0.38rem 0.8rem;border-radius:100px;transition:all 0.2s;white-space:nowrap;cursor:pointer}
 .nav-links a:hover,.nav-links a.active{color:var(--dark);background:var(--warm)}
 .nav-links a.active{font-weight:500}
 .nav-cta{background:var(--dark);color:var(--cream);font-family:var(--sans);font-size:0.76rem;font-weight:500;padding:0.42rem 1.1rem;border-radius:100px;text-decoration:none;transition:background 0.2s;white-space:nowrap}
@@ -49,7 +77,7 @@ nav.solid{background:rgba(250,248,244,0.97);backdrop-filter:blur(18px);border-bo
 .hamburger span{width:20px;height:1.5px;background:var(--dark);border-radius:2px;transition:all 0.3s;display:block}
 .mob-menu{display:none;position:fixed;top:62px;inset-x:0;background:rgba(250,248,244,0.98);backdrop-filter:blur(18px);border-bottom:1px solid var(--border);z-index:199;padding:1.5rem 2.5rem 2rem;flex-direction:column;gap:0.25rem}
 .mob-menu.open{display:flex}
-.mob-menu a{font-size:0.9rem;color:var(--text2);text-decoration:none;padding:0.65rem 0;border-bottom:1px solid var(--border);transition:color 0.2s}
+.mob-menu a{font-size:0.9rem;color:var(--text2);text-decoration:none;padding:0.65rem 0;border-bottom:1px solid var(--border);transition:color 0.2s;cursor:pointer}
 .mob-menu a:hover{color:var(--ink)}
 .mob-menu a:last-child{border:none}
 .mob-cta{margin-top:0.75rem;display:block;text-align:center;background:var(--dark);color:var(--cream)!important;padding:0.75rem!important;border-radius:100px;font-weight:500;border:none!important}
@@ -58,7 +86,6 @@ nav.solid{background:rgba(250,248,244,0.97);backdrop-filter:blur(18px);border-bo
 .page{display:none;padding-top:62px;min-height:100vh}
 .page.active{display:block}
 .wrap{max-width:1100px;margin:0 auto;padding:0 2.5rem}
-.wrap-sm{max-width:860px;margin:0 auto;padding:0 2.5rem}
 section{padding:5rem 0}
 .eyebrow{font-size:0.67rem;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:var(--ink);display:block;margin-bottom:0.85rem}
 h1{font-family:var(--serif);font-size:clamp(2.6rem,5.5vw,4.4rem);font-weight:500;line-height:1.08;letter-spacing:-0.01em;color:var(--dark)}
@@ -67,15 +94,12 @@ h2{font-family:var(--serif);font-size:clamp(1.9rem,3.5vw,2.8rem);font-weight:500
 h2 em{font-style:italic;color:var(--ink)}
 h3{font-family:var(--serif);font-size:1.2rem;font-weight:500;color:var(--dark)}
 .sub{font-size:0.95rem;color:var(--text2);font-weight:300;line-height:1.85;max-width:540px;margin-top:0.75rem}
-.btn{background:var(--dark);color:var(--cream);font-family:var(--sans);font-size:0.85rem;font-weight:500;padding:0.85rem 1.9rem;border-radius:100px;text-decoration:none;display:inline-block;transition:background 0.2s,transform 0.15s}
+.btn{background:var(--dark);color:var(--cream);font-family:var(--sans);font-size:0.85rem;font-weight:500;padding:0.85rem 1.9rem;border-radius:100px;text-decoration:none;display:inline-block;transition:background 0.2s,transform 0.15s;cursor:pointer}
 .btn:hover{background:var(--ink);transform:translateY(-1px)}
-.btn-ghost{border:1px solid var(--border);color:var(--text2);font-size:0.85rem;padding:0.85rem 1.9rem;border-radius:100px;text-decoration:none;display:inline-block;transition:all 0.2s;background:none}
+.btn-ghost{border:1px solid var(--border);color:var(--text2);font-size:0.85rem;padding:0.85rem 1.9rem;border-radius:100px;text-decoration:none;display:inline-block;transition:all 0.2s;background:none;cursor:pointer}
 .btn-ghost:hover{border-color:var(--ink);color:var(--ink)}
-.card{background:#fff;border:1px solid var(--border);border-radius:var(--r)}
 
-/* ==================== HOME PAGE ==================== */
-
-/* HERO */
+/* HOME */
 .hero-wrap{padding:5rem 2.5rem 4rem;max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1fr 400px;gap:5rem;align-items:center;min-height:calc(100vh - 62px)}
 .hero-badge{display:inline-flex;align-items:center;gap:0.5rem;background:var(--ink-pale);border:1px solid var(--ink-border);color:var(--ink);font-size:0.7rem;font-weight:500;padding:0.32rem 0.85rem;border-radius:100px;letter-spacing:0.07em;text-transform:uppercase;margin-bottom:1.75rem;animation:fadeUp 0.6s ease both}
 .hero-badge-dot{width:6px;height:6px;border-radius:50%;background:var(--ink);animation:blink 2s infinite}
@@ -86,8 +110,6 @@ h3{font-family:var(--serif);font-size:1.2rem;font-weight:500;color:var(--dark)}
 .hero-proof{display:flex;gap:2.5rem;margin-top:3rem;flex-wrap:wrap;animation:fadeUp 0.7s 0.4s ease both}
 .pnum{font-family:var(--serif);font-size:2.2rem;font-weight:600;color:var(--ink);line-height:1}
 .plbl{font-size:0.69rem;color:var(--text3);margin-top:0.2rem;line-height:1.45}
-
-/* HERO VIDEO */
 .hero-video-wrap{animation:fadeUp 0.8s 0.25s ease both}
 .video-outer{background:var(--dark2);border-radius:var(--r);overflow:hidden;border:1px solid rgba(255,255,255,0.06);box-shadow:0 20px 60px rgba(30,26,21,0.18)}
 .video-ph{aspect-ratio:9/16;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1rem;cursor:pointer;position:relative;overflow:hidden;max-height:460px}
@@ -101,14 +123,10 @@ h3{font-family:var(--serif);font-size:1.2rem;font-weight:500;color:var(--dark)}
 .video-meta-bar{padding:1rem 1.4rem;border-top:1px solid rgba(255,255,255,0.06)}
 .video-meta-bar p{font-size:0.74rem;color:rgba(255,255,255,0.35);font-weight:300}
 .video-meta-bar strong{color:rgba(255,255,255,0.7);font-weight:500}
-
-/* STRIP */
 .strip{background:var(--dark);padding:1.1rem 0;overflow:hidden}
 .strip-inner{display:flex;gap:3rem;max-width:1100px;margin:0 auto;padding:0 2.5rem;flex-wrap:wrap}
 .strip-item{display:flex;align-items:center;gap:0.5rem;font-size:0.76rem;color:rgba(255,255,255,0.45);white-space:nowrap}
 .strip-dot{width:4px;height:4px;border-radius:50%;background:var(--ink2)}
-
-/* PROBLEM */
 .problem-section{background:var(--dark);padding:6rem 0}
 .problem-grid{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.05);border-radius:var(--r);overflow:hidden;margin-top:3rem}
 .prob-item{padding:2.25rem;background:var(--dark2);transition:background 0.2s}
@@ -116,8 +134,6 @@ h3{font-family:var(--serif);font-size:1.2rem;font-weight:500;color:var(--dark)}
 .prob-n{font-family:var(--serif);font-size:3rem;font-weight:600;color:rgba(255,255,255,0.05);line-height:1;margin-bottom:0.5rem}
 .prob-item h3{font-size:0.9rem;font-weight:500;color:rgba(255,255,255,0.85);margin-bottom:0.5rem;font-family:var(--sans)}
 .prob-item p{font-size:0.8rem;color:rgba(255,255,255,0.38);line-height:1.75;font-weight:300}
-
-/* WHAT I DO */
 .wid-grid{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center;margin-top:3rem}
 .sol-cards{display:flex;flex-direction:column;gap:0.85rem}
 .sol-card{background:#fff;border:1px solid var(--border);border-radius:var(--r);padding:1.25rem 1.5rem;display:flex;align-items:flex-start;gap:1rem;transition:border-color 0.2s,transform 0.2s}
@@ -125,8 +141,6 @@ h3{font-family:var(--serif);font-size:1.2rem;font-weight:500;color:var(--dark)}
 .sol-ico{font-size:1.2rem;flex-shrink:0;margin-top:0.05rem}
 .sol-card h4{font-size:0.85rem;font-weight:500;color:var(--text);margin-bottom:0.18rem}
 .sol-card p{font-size:0.76rem;color:var(--text2);line-height:1.6;font-weight:300}
-
-/* SERVICES GRID */
 .svc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.15rem;margin-top:3rem}
 .svc-card{background:#fff;border:1px solid var(--border);border-radius:var(--r);padding:1.85rem;transition:all 0.25s;position:relative;overflow:hidden}
 .svc-card::after{content:'';position:absolute;bottom:0;left:0;right:0;height:2px;background:var(--ink);transform:scaleX(0);transform-origin:left;transition:transform 0.3s}
@@ -139,8 +153,6 @@ h3{font-family:var(--serif);font-size:1.2rem;font-weight:500;color:var(--dark)}
 .svc-list{list-style:none;display:flex;flex-direction:column;gap:0.35rem}
 .svc-list li{font-size:0.73rem;color:var(--text2);padding-left:0.95rem;position:relative;line-height:1.5}
 .svc-list li::before{content:'·';position:absolute;left:0;color:var(--ink);font-size:1rem;line-height:1.2}
-
-/* PROCESS */
 .process-row{display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin-top:3.5rem;position:relative}
 .process-row::before{content:'';position:absolute;top:27px;left:12%;right:12%;height:1px;background:var(--border)}
 .proc-step{text-align:center;padding:0 1rem;position:relative}
@@ -148,8 +160,6 @@ h3{font-family:var(--serif);font-size:1.2rem;font-weight:500;color:var(--dark)}
 .proc-step:hover .proc-circle{background:var(--ink);color:#fff;border-color:var(--ink)}
 .proc-step h3{font-size:0.88rem;font-weight:500;color:var(--dark);margin-bottom:0.45rem;font-family:var(--sans)}
 .proc-step p{font-size:0.75rem;color:var(--text2);line-height:1.65;font-weight:300}
-
-/* TESTIMONIALS */
 .testi-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.15rem;margin-top:3rem}
 .testi-card{background:#fff;border:1px solid var(--border);border-radius:var(--r);padding:1.85rem;display:flex;flex-direction:column}
 .stars{color:var(--ink);font-size:0.8rem;letter-spacing:0.1em;margin-bottom:1rem}
@@ -157,8 +167,6 @@ h3{font-family:var(--serif);font-size:1.2rem;font-weight:500;color:var(--dark)}
 .testi-div{width:28px;height:1px;background:var(--border);margin:1.1rem 0}
 .testi-name{font-size:0.8rem;font-weight:500;color:var(--text)}
 .testi-co{font-size:0.7rem;color:var(--text3)}
-
-/* HOME CTA */
 .home-cta{background:var(--dark);border-radius:20px;padding:4.5rem;text-align:center;margin:5rem auto;max-width:720px;position:relative;overflow:hidden}
 .home-cta::before{content:'';position:absolute;top:-60px;right:-60px;width:220px;height:220px;border-radius:50%;background:radial-gradient(circle,rgba(138,100,69,0.2),transparent 70%)}
 .home-cta .eyebrow{color:rgba(255,255,255,0.3)}
@@ -172,14 +180,12 @@ h3{font-family:var(--serif);font-size:1.2rem;font-weight:500;color:var(--dark)}
 .cta-contact{margin-top:1.5rem;font-size:0.74rem;color:rgba(255,255,255,0.28);position:relative;z-index:1}
 .cta-contact a{color:rgba(255,255,255,0.45);text-decoration:none}
 
-/* ==================== ABOUT PAGE ==================== */
+/* ABOUT */
 .about-hero{padding:5rem 0 4rem;background:var(--warm)}
 .about-hero-inner{display:grid;grid-template-columns:1fr 400px;gap:5rem;align-items:start;max-width:1100px;margin:0 auto;padding:0 2.5rem}
 .about-hero h1{margin-bottom:1.25rem}
 .about-hero p{font-size:0.95rem;color:var(--text2);font-weight:300;line-height:1.85;margin-bottom:1rem}
 .about-hero p strong{color:var(--text);font-weight:500}
-
-/* PHOTO SECTION */
 .photo-card{background:var(--dark2);border-radius:var(--r);overflow:hidden;border:1px solid rgba(255,255,255,0.06)}
 .photo-ph{aspect-ratio:3/4;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:0.75rem;background:linear-gradient(145deg,#2a241c,#1e1a15);position:relative}
 .photo-ph::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 50% 30%,rgba(138,100,69,0.12),transparent 60%)}
@@ -188,8 +194,6 @@ h3{font-family:var(--serif);font-size:1.2rem;font-weight:500;color:var(--dark)}
 .photo-ph-label strong{display:block;color:rgba(255,255,255,0.45);font-size:0.75rem;margin-bottom:0.2rem}
 .photo-meta{padding:1.1rem 1.3rem;border-top:1px solid rgba(255,255,255,0.06)}
 .photo-meta p{font-size:0.72rem;color:rgba(255,255,255,0.3)}
-
-/* PHOTO ROW - multiple small photos */
 .photo-row{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin-top:3rem}
 .photo-sm{background:var(--dark2);border-radius:var(--r);overflow:hidden;border:1px solid rgba(255,255,255,0.06);aspect-ratio:1}
 .photo-sm-inner{width:100%;height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:0.5rem;background:linear-gradient(145deg,#2a241c,#1e1a15);position:relative}
@@ -197,8 +201,6 @@ h3{font-family:var(--serif);font-size:1.2rem;font-weight:500;color:var(--dark)}
 .photo-sm-label{font-size:0.62rem;color:rgba(255,255,255,0.25);position:relative;z-index:1;text-align:center;padding:0 0.5rem;line-height:1.5}
 .photo-sm-icon{font-size:1.5rem;position:relative;z-index:1}
 .photo-add-btn{margin-top:0.5rem;font-size:0.6rem;color:var(--ink2);border:1px dashed rgba(138,100,69,0.35);border-radius:5px;padding:0.2rem 0.5rem;position:relative;z-index:1;background:rgba(138,100,69,0.08)}
-
-/* PERSONALITY */
 .personality-section{padding:5rem 0;background:var(--cream)}
 .personality-grid{display:grid;grid-template-columns:1fr 1fr;gap:3rem;margin-top:2.5rem;align-items:start}
 .personality-text p{font-size:0.92rem;color:var(--text2);line-height:1.85;font-weight:300;margin-bottom:1rem}
@@ -210,8 +212,6 @@ h3{font-family:var(--serif);font-size:1.2rem;font-weight:500;color:var(--dark)}
 .trait-num{font-family:var(--serif);font-size:1.5rem;font-weight:600;color:rgba(138,100,69,0.2);line-height:1;flex-shrink:0;width:2rem}
 .trait-text h4{font-size:0.85rem;font-weight:500;color:var(--text);margin-bottom:0.2rem}
 .trait-text p{font-size:0.76rem;color:var(--text2);line-height:1.6;font-weight:300}
-
-/* EXPERIENCE TIMELINE */
 .timeline-section{padding:5rem 0;background:var(--warm)}
 .tl-list{margin-top:2.5rem}
 .tl-row{display:grid;grid-template-columns:160px 1fr;gap:2.5rem;padding:2rem 0;border-bottom:1px solid var(--border)}
@@ -219,14 +219,11 @@ h3{font-family:var(--serif);font-size:1.2rem;font-weight:500;color:var(--dark)}
 .tl-date{padding-top:0.15rem}
 .tl-date strong{display:block;font-size:0.78rem;font-weight:500;color:var(--text2);margin-bottom:0.15rem}
 .tl-date span{font-size:0.68rem;color:var(--text3)}
-.tl-body{}
 .tl-co{font-family:var(--serif);font-size:1rem;font-weight:600;color:var(--dark);margin-bottom:0.15rem}
 .tl-role{font-size:0.72rem;color:var(--ink);text-transform:uppercase;letter-spacing:0.08em;font-weight:500;margin-bottom:0.65rem}
 .tl-desc{font-size:0.82rem;color:var(--text2);line-height:1.75;font-weight:300}
 .tl-pills{display:flex;flex-wrap:wrap;gap:0.35rem;margin-top:0.75rem}
 .pill{background:var(--ink-pale);border:1px solid var(--ink-border);color:var(--ink);font-size:0.67rem;font-weight:500;padding:0.2rem 0.6rem;border-radius:100px}
-
-/* EDU + CERTS */
 .edu-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1rem;margin-top:2rem}
 .edu-card{background:#fff;border:1px solid var(--border);border-radius:var(--r);padding:1.5rem;transition:border-color 0.2s}
 .edu-card:hover{border-color:var(--ink-border)}
@@ -241,7 +238,7 @@ h3{font-family:var(--serif);font-size:1.2rem;font-weight:500;color:var(--dark)}
 .cert-by{font-size:0.58rem;color:var(--text3)}
 .cert-add{margin-top:0.5rem;font-size:0.56rem;color:var(--ink);border:1px dashed var(--ink-border);border-radius:4px;padding:0.22rem;background:var(--ink-pale)}
 
-/* ==================== SERVICES PAGE ==================== */
+/* SERVICES */
 .svc-hero{padding:5rem 0 4rem;background:var(--warm)}
 .tools-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:0.85rem;margin-top:2rem}
 .tool-card{background:#fff;border:1px solid var(--border);border-radius:var(--r);padding:1.2rem 0.85rem;text-align:center;transition:all 0.2s}
@@ -250,7 +247,7 @@ h3{font-family:var(--serif);font-size:1.2rem;font-weight:500;color:var(--dark)}
 .tool-name{font-size:0.7rem;font-weight:500;color:var(--text);margin-bottom:0.12rem}
 .tool-cat{font-size:0.58rem;color:var(--text3)}
 
-/* ==================== CASE STUDIES PAGE ==================== */
+/* CASE STUDIES */
 .cs-hero{padding:5rem 0 4rem;background:var(--warm)}
 .cs-list{display:flex;flex-direction:column;gap:1.5rem;margin-top:3rem}
 .cs-card{background:#fff;border:1px solid var(--border);border-radius:var(--r);overflow:hidden;transition:border-color 0.2s}
@@ -279,7 +276,7 @@ h3{font-family:var(--serif);font-size:1.2rem;font-weight:500;color:var(--dark)}
 .result-pills{display:flex;flex-wrap:wrap;gap:0.35rem}
 .rpill{font-size:0.69rem;font-weight:500;color:var(--ink);background:#fff;border:1px solid var(--ink-border);padding:0.2rem 0.6rem;border-radius:100px}
 
-/* ==================== PORTFOLIO PAGE ==================== */
+/* PORTFOLIO */
 .port-hero{padding:5rem 0 4rem;background:var(--warm)}
 .port-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1.4rem;margin-top:3rem}
 .port-card{background:#fff;border:1px solid var(--border);border-radius:var(--r);overflow:hidden;transition:all 0.25s}
@@ -294,8 +291,6 @@ h3{font-family:var(--serif);font-size:1.2rem;font-weight:500;color:var(--dark)}
 .port-placeholder{border-style:dashed;opacity:0.7}
 .port-placeholder:hover{opacity:1}
 .port-hint{background:var(--ink-pale);border:1px dashed var(--ink-border);border-radius:var(--r-sm);padding:0.75rem 1rem;font-size:0.72rem;color:var(--ink);line-height:1.6;margin-top:0.85rem}
-
-/* CERT DARK */
 .cert-dark-wrap{background:var(--dark);border-radius:var(--r);padding:2.5rem;margin-top:3rem}
 .cert-dark-wrap .eyebrow{color:rgba(255,255,255,0.3);margin-bottom:0.65rem}
 .cert-dark-wrap h3{color:#fff;font-family:var(--serif);font-size:1.4rem;font-weight:500;margin-bottom:0.5rem}
@@ -308,35 +303,10 @@ h3{font-family:var(--serif);font-size:1.2rem;font-weight:500;color:var(--dark)}
 .cert-dark-by{font-size:0.56rem;color:rgba(255,255,255,0.28)}
 .cert-dark-add{margin-top:0.45rem;font-size:0.55rem;color:var(--ink2);border:1px dashed rgba(138,100,69,0.35);border-radius:4px;padding:0.2rem;background:rgba(138,100,69,0.08)}
 
-/* ==================== RESUME PAGE ==================== */
-.resume-hero{padding:5rem 0 3rem;background:var(--warm)}
-.resume-layout{display:grid;grid-template-columns:1fr 260px;gap:3.5rem;align-items:start;margin-top:3rem}
-.resume-main{}
-.resume-sidebar{}
-.dl-card{background:#fff;border:2px solid var(--ink-border);border-radius:var(--r);padding:1.75rem;text-align:center;position:sticky;top:82px}
-.dl-card h3{font-size:1rem;margin-bottom:0.45rem}
-.dl-card p{font-size:0.76rem;color:var(--text2);font-weight:300;line-height:1.65;margin-bottom:1.5rem}
-.dl-card .btn{width:100%;text-align:center;display:block;margin-bottom:0.65rem}
-.dl-card .btn-ghost{width:100%;text-align:center;display:block}
-.dl-note{margin-top:1.25rem;font-size:0.68rem;color:var(--text3);line-height:1.6}
-.r-section{margin-bottom:2.5rem}
-.r-section-title{font-size:0.62rem;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:var(--ink);border-bottom:1px solid var(--border);padding-bottom:0.45rem;margin-bottom:1.25rem}
-.r-item{margin-bottom:1.25rem;padding-bottom:1.25rem;border-bottom:1px solid var(--border)}
-.r-item:last-child{border:none;margin:0;padding:0}
-.r-title{font-family:var(--serif);font-size:0.95rem;font-weight:600;color:var(--dark);margin-bottom:0.1rem}
-.r-sub{font-size:0.73rem;color:var(--ink);font-weight:500;margin-bottom:0.1rem}
-.r-date{font-size:0.65rem;color:var(--text3);margin-bottom:0.55rem}
-.r-bullets{list-style:none;display:flex;flex-direction:column;gap:0.32rem}
-.r-bullets li{font-size:0.77rem;color:var(--text2);padding-left:0.9rem;position:relative;line-height:1.55;font-weight:300}
-.r-bullets li::before{content:'·';position:absolute;left:0;color:var(--ink);font-size:1rem;line-height:1.2}
-.skill-tags{display:flex;flex-wrap:wrap;gap:0.45rem;margin-top:0.65rem}
-.skill-tag{font-size:0.69rem;color:var(--ink);background:var(--ink-pale);border:1px solid var(--ink-border);border-radius:100px;padding:0.2rem 0.6rem}
-
-/* ==================== CONTACT PAGE ==================== */
+/* CONTACT */
 .contact-hero{padding:5rem 0 4rem;background:var(--warm)}
 .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:4rem;margin-top:3rem}
-.contact-methods{display:flex;flex-direction:column;gap:0.85rem}
-.c-method{display:flex;align-items:center;gap:1rem;background:#fff;border:1px solid var(--border);border-radius:var(--r);padding:1.1rem 1.3rem;text-decoration:none;transition:border-color 0.2s}
+.c-method{display:flex;align-items:center;gap:1rem;background:#fff;border:1px solid var(--border);border-radius:var(--r);padding:1.1rem 1.3rem;text-decoration:none;transition:border-color 0.2s;margin-bottom:0.85rem}
 .c-method:hover{border-color:var(--ink-border)}
 .c-ico{width:38px;height:38px;border-radius:9px;background:var(--ink-pale);border:1px solid var(--ink-border);display:flex;align-items:center;justify-content:center;font-size:1rem;flex-shrink:0}
 .c-lbl{font-size:0.63rem;color:var(--text3);text-transform:uppercase;letter-spacing:0.08em}
@@ -365,7 +335,7 @@ footer p{font-size:0.7rem;color:var(--text3)}
   .hero-video-wrap{display:none}
   .svc-grid,.testi-grid{grid-template-columns:1fr 1fr}
   .process-row{grid-template-columns:1fr 1fr;gap:2rem}.process-row::before{display:none}
-  .personality-grid,.cs-card.open .cs-body,.contact-grid,.resume-layout{grid-template-columns:1fr}
+  .personality-grid,.cs-card.open .cs-body,.contact-grid{grid-template-columns:1fr}
   .tools-grid,.cert-dark-grid{grid-template-columns:repeat(3,1fr)}
   .certs-grid{grid-template-columns:repeat(3,1fr)}
   .port-grid,.edu-grid{grid-template-columns:1fr}
@@ -373,7 +343,6 @@ footer p{font-size:0.7rem;color:var(--text3)}
   .problem-grid{grid-template-columns:1fr}
   .nav-links,.nav-cta{display:none}
   .hamburger{display:flex}
-  .resume-sidebar{position:static}
 }
 @media(max-width:580px){
   .svc-grid,.testi-grid,.tools-grid,.photo-row,.cert-dark-grid{grid-template-columns:1fr}
@@ -381,85 +350,53 @@ footer p{font-size:0.7rem;color:var(--text3)}
   .process-row{grid-template-columns:1fr}
   .hero-proof{gap:1.5rem}
   .home-cta{padding:3rem 2rem}
-  .wrap,.wrap-sm,.section-inner{padding:0 1.5rem}
+  .wrap{padding:0 1.5rem}
   nav{padding:0 1.5rem}
   .mob-menu{padding:1.5rem}
 }
 
-/* MOBILE TOUCH OPTIMISATION */
-*, *::before, *::after { -webkit-tap-highlight-color: transparent; }
-.mob-link {
-  min-height: 52px !important;
-  display: flex !important;
-  align-items: center !important;
-  padding-top: 0 !important;
-  padding-bottom: 0 !important;
-  cursor: pointer;
-  -webkit-user-select: none;
-  user-select: none;
-}
-.mob-cta {
-  min-height: 52px !important;
-  display: flex !important;
-  align-items: center !important;
-  justify-content: center !important;
-  cursor: pointer;
-}
-.hamburger {
-  min-width: 48px !important;
-  min-height: 48px !important;
-  display: none;
-  align-items: center !important;
-  justify-content: center !important;
-}
-@media(max-width:900px){
-  .hamburger { display: flex !important; }
-}
-.btn, .btn-ghost, .btn-inv, .btn-ghost-inv, .nav-cta {
-  min-height: 48px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-}
-.cs-toggle { min-width: 44px; min-height: 44px; }
-.cs-header { min-height: 56px; }
-
+/* MOBILE TOUCH */
+*,*::before,*::after{-webkit-tap-highlight-color:transparent}
+.mob-link{min-height:52px!important;display:flex!important;align-items:center!important;padding-top:0!important;padding-bottom:0!important;cursor:pointer;-webkit-user-select:none;user-select:none}
+.mob-cta{min-height:52px!important;display:flex!important;align-items:center!important;justify-content:center!important;cursor:pointer}
+.hamburger{min-width:48px!important;min-height:48px!important;display:none;align-items:center!important;justify-content:center!important}
+@media(max-width:900px){.hamburger{display:flex!important}}
+.btn,.btn-ghost,.btn-inv,.btn-ghost-inv,.nav-cta{min-height:48px;display:inline-flex;align-items:center;justify-content:center}
+.cs-toggle{min-width:44px;min-height:44px}
+.cs-header{min-height:56px}
 </style>
 </head>
 <body>
 
 <!-- NAV -->
 <nav id="nav">
-  <a href="#" onclick="show('home')" class="logo">Monicah<em>.</em></a>
+  <a href="javascript:void(0)" onclick="return show('home')" class="logo">Monicah<em>.</em></a>
   <ul class="nav-links">
-    <li><a href="#" onclick="show('home')" data-page="home">Home</a></li>
-    <li><a href="#" onclick="show('about')" data-page="about">About</a></li>
-    <li><a href="#" onclick="show('services')" data-page="services">Services</a></li>
-    <li><a href="#" onclick="show('cases')" data-page="cases">Case Studies</a></li>
-    <li><a href="#" onclick="show('portfolio')" data-page="portfolio">Portfolio</a></li>
-    <li><a href="#" onclick="show('resume')" data-page="resume">Resume</a></li>
-    <li><a href="#" onclick="show('contact')" data-page="contact">Contact</a></li>
+    <li><a href="javascript:void(0)" onclick="return show('home')" data-page="home">Home</a></li>
+    <li><a href="javascript:void(0)" onclick="return show('about')" data-page="about">About</a></li>
+    <li><a href="javascript:void(0)" onclick="return show('services')" data-page="services">Services</a></li>
+    <li><a href="javascript:void(0)" onclick="return show('cases')" data-page="cases">Case Studies</a></li>
+    <li><a href="javascript:void(0)" onclick="return show('portfolio')" data-page="portfolio">Portfolio</a></li>
+    <li><a href="javascript:void(0)" onclick="return show('contact')" data-page="contact">Contact</a></li>
   </ul>
   <a href="https://calendly.com/monicahmburu/one-on-one" target="_blank" class="nav-cta">Book a call</a>
   <button class="hamburger" id="ham" aria-label="Menu">
     <span></span><span></span><span></span>
   </button>
 </nav>
+
 <div class="mob-menu" id="mob">
-  <a href="#" data-page="home" class="mob-link">Home</a>
-  <a href="#" data-page="about" class="mob-link">About</a>
-  <a href="#" data-page="services" class="mob-link">Services</a>
-  <a href="#" data-page="cases" class="mob-link">Case Studies</a>
-  <a href="#" data-page="portfolio" class="mob-link">Portfolio</a>
-  <a href="#" data-page="resume" class="mob-link">Resume</a>
-  <a href="#" data-page="contact" class="mob-link">Contact</a>
+  <a href="javascript:void(0)" data-page="home" class="mob-link" onclick="return show('home')">Home</a>
+  <a href="javascript:void(0)" data-page="about" class="mob-link" onclick="return show('about')">About</a>
+  <a href="javascript:void(0)" data-page="services" class="mob-link" onclick="return show('services')">Services</a>
+  <a href="javascript:void(0)" data-page="cases" class="mob-link" onclick="return show('cases')">Case Studies</a>
+  <a href="javascript:void(0)" data-page="portfolio" class="mob-link" onclick="return show('portfolio')">Portfolio</a>
+  <a href="javascript:void(0)" data-page="contact" class="mob-link" onclick="return show('contact')">Contact</a>
   <a href="https://calendly.com/monicahmburu/one-on-one" target="_blank" class="mob-cta">Book a free call</a>
 </div>
 
-<!-- ==================== HOME ==================== -->
+<!-- HOME -->
 <div id="page-home" class="page active">
-
-  <!-- HERO -->
   <div class="hero-wrap">
     <div class="hero">
       <div class="hero-badge"><span class="hero-badge-dot"></span> Open to new clients</div>
@@ -467,7 +404,7 @@ footer p{font-size:0.7rem;color:var(--text3)}
       <p class="hero-sub">I'm a <strong>finance-fluent virtual assistant</strong> based in Nairobi. I get inside how your business runs, build the systems that keep it clean, and make sure your numbers are actually working for you.</p>
       <div class="hero-actions">
         <a href="https://calendly.com/monicahmburu/one-on-one" target="_blank" class="btn">Book a free discovery call</a>
-        <a href="#" onclick="show('cases')" class="btn-ghost">See case studies</a>
+        <a href="javascript:void(0)" onclick="return show('cases')" class="btn-ghost">See case studies</a>
       </div>
       <div class="hero-proof">
         <div><div class="pnum">$500k+</div><div class="plbl">investor interest<br>secured for clients</div></div>
@@ -479,17 +416,13 @@ footer p{font-size:0.7rem;color:var(--text3)}
     <div class="hero-video-wrap">
       <div class="video-outer">
         <!-- REPLACE THIS BLOCK WITH YOUR VIDEO EMBED -->
-        <!-- Example: <iframe src="https://www.youtube.com/embed/YOUR_ID" width="100%" height="100%" frameborder="0" allowfullscreen></iframe> -->
         <div class="video-ph">
           <div class="video-ph-ring">
-            <div class="video-ph-play">
-              <svg viewBox="0 0 24 24"><path d="M5 3l14 9-14 9V3z"/></svg>
-            </div>
+            <div class="video-ph-play"><svg viewBox="0 0 24 24"><path d="M5 3l14 9-14 9V3z"/></svg></div>
           </div>
           <div class="video-ph-text">Watch my intro</div>
           <div class="video-ph-sub">60 seconds · Add your video here</div>
         </div>
-        <!-- END VIDEO PLACEHOLDER -->
         <div class="video-meta-bar">
           <p><strong>Hi, I'm Monicah</strong> · Record a 60 second intro and paste the YouTube or Loom embed code above</p>
         </div>
@@ -507,7 +440,6 @@ footer p{font-size:0.7rem;color:var(--text3)}
     </div>
   </div>
 
-  <!-- PROBLEM -->
   <div class="problem-section">
     <div class="wrap">
       <span class="eyebrow reveal" style="color:rgba(255,255,255,0.3)">Does this sound familiar?</span>
@@ -522,7 +454,6 @@ footer p{font-size:0.7rem;color:var(--text3)}
     </div>
   </div>
 
-  <!-- WHAT I DO -->
   <section>
     <div class="wrap">
       <span class="eyebrow reveal">How I help</span>
@@ -532,7 +463,7 @@ footer p{font-size:0.7rem;color:var(--text3)}
           <p style="font-size:0.93rem;color:var(--text2);font-weight:300;line-height:1.85;margin-top:1rem;margin-bottom:1rem">I do not show up and start ticking off a task list. I learn how your business actually works and then I build the structures that let it run without constant attention from you.</p>
           <p style="font-size:0.93rem;color:var(--text2);font-weight:300;line-height:1.85;margin-bottom:1rem">Clean books you can trust. Reports you can make decisions from. Workflows that handle themselves. And a financial picture that is current, not three months stale.</p>
           <p style="font-size:0.93rem;color:var(--text2);font-weight:300;line-height:1.85;margin-bottom:1.75rem">I bring something most VAs do not: a background in finance, economics and data. I understand why the reconciliation matters, not just how to do it.</p>
-          <a href="#" onclick="show('services')" class="btn">See all services</a>
+          <a href="javascript:void(0)" onclick="return show('services')" class="btn">See all services</a>
         </div>
         <div class="sol-cards reveal">
           <div class="sol-card"><div class="sol-ico">📐</div><div><h4>Audit first, build second</h4><p>I map what is not working before touching anything, so we fix the right problems, not just the obvious ones.</p></div></div>
@@ -544,7 +475,6 @@ footer p{font-size:0.7rem;color:var(--text3)}
     </div>
   </section>
 
-  <!-- PROCESS -->
   <section style="background:var(--warm)">
     <div class="wrap">
       <span class="eyebrow reveal">How it works</span>
@@ -558,7 +488,6 @@ footer p{font-size:0.7rem;color:var(--text3)}
     </div>
   </section>
 
-  <!-- TESTIMONIALS -->
   <section>
     <div class="wrap">
       <span class="eyebrow reveal">What clients say</span>
@@ -586,7 +515,6 @@ footer p{font-size:0.7rem;color:var(--text3)}
     </div>
   </section>
 
-  <!-- CTA -->
   <section>
     <div class="wrap">
       <div class="home-cta reveal">
@@ -603,7 +531,7 @@ footer p{font-size:0.7rem;color:var(--text3)}
   </section>
 </div><!-- /home -->
 
-<!-- ==================== ABOUT ==================== -->
+<!-- ABOUT -->
 <div id="page-about" class="page">
   <div class="about-hero">
     <div class="about-hero-inner">
@@ -615,11 +543,10 @@ footer p{font-size:0.7rem;color:var(--text3)}
         <p>I am currently completing my <strong>MSc in Financial Engineering at WorldQuant University</strong> and I hold five certifications in finance and data. So when I say I understand your numbers, I have the background to back that up.</p>
         <div style="display:flex;gap:0.75rem;margin-top:2rem;flex-wrap:wrap">
           <a href="https://calendly.com/monicahmburu/one-on-one" target="_blank" class="btn">Book a free call</a>
-          <a href="#" onclick="show('resume')" class="btn-ghost">View my resume</a>
+          <a href="javascript:void(0)" onclick="return show('contact')" class="btn-ghost">Get in touch</a>
         </div>
       </div>
       <div>
-        <!-- MAIN PHOTO PLACEHOLDER -->
         <div class="photo-card">
           <div class="photo-ph">
             <div class="photo-initials">MM</div>
@@ -634,7 +561,6 @@ footer p{font-size:0.7rem;color:var(--text3)}
     </div>
   </div>
 
-  <!-- PERSONALITY -->
   <div class="personality-section">
     <div class="wrap">
       <span class="eyebrow reveal">Who I actually am</span>
@@ -655,8 +581,6 @@ footer p{font-size:0.7rem;color:var(--text3)}
           </div>
         </div>
       </div>
-
-      <!-- SMALL PHOTOS ROW -->
       <div style="margin-top:3.5rem">
         <span class="eyebrow" style="margin-bottom:1.25rem">A few photos</span>
         <div class="photo-row">
@@ -669,7 +593,6 @@ footer p{font-size:0.7rem;color:var(--text3)}
     </div>
   </div>
 
-  <!-- EXPERIENCE -->
   <div class="timeline-section">
     <div class="wrap">
       <span class="eyebrow reveal">Experience</span>
@@ -723,7 +646,6 @@ footer p{font-size:0.7rem;color:var(--text3)}
     </div>
   </div>
 
-  <!-- EDUCATION -->
   <section>
     <div class="wrap">
       <span class="eyebrow reveal">Education</span>
@@ -734,7 +656,6 @@ footer p{font-size:0.7rem;color:var(--text3)}
         <div class="edu-card reveal"><div class="edu-yr">Ongoing</div><div class="edu-deg">CPA Foundation Level</div><div class="edu-school">KASNEB</div></div>
         <div class="edu-card reveal"><div class="edu-yr">2024</div><div class="edu-deg">ALX Virtual Assistant Certificate</div><div class="edu-school">ALX Africa</div></div>
       </div>
-
       <div style="margin-top:3rem">
         <span class="eyebrow reveal">Certifications</span>
         <h2 class="reveal" style="font-size:1.6rem">Credentials that back the work</h2>
@@ -750,7 +671,7 @@ footer p{font-size:0.7rem;color:var(--text3)}
   </section>
 </div><!-- /about -->
 
-<!-- ==================== SERVICES ==================== -->
+<!-- SERVICES -->
 <div id="page-services" class="page">
   <div class="svc-hero">
     <div class="wrap">
@@ -762,85 +683,12 @@ footer p{font-size:0.7rem;color:var(--text3)}
   <section>
     <div class="wrap">
       <div class="svc-grid">
-        <div class="svc-card reveal">
-          <div class="svc-ico">📒</div>
-          <h3>Bookkeeping and Financial Support</h3>
-          <span class="svc-tag">Clean books every month</span>
-          <p>You will always know exactly where your money is, without spending your evenings on it.</p>
-          <ul class="svc-list">
-            <li>Monthly reconciliation and categorisation</li>
-            <li>Bank and M-Pesa reconciliations</li>
-            <li>Accounts payable and receivable</li>
-            <li>P&amp;L, Balance Sheet, cash flow statements</li>
-            <li>Payroll support and tax preparation</li>
-            <li>QuickBooks, Xero, Zoho, Sage</li>
-          </ul>
-        </div>
-        <div class="svc-card reveal">
-          <div class="svc-ico">📊</div>
-          <h3>Data Analysis and Reporting</h3>
-          <span class="svc-tag">Numbers that mean something</span>
-          <p>Dashboards and reports built from your actual data, clear enough to make decisions from, not just look at.</p>
-          <ul class="svc-list">
-            <li>Excel dashboards and data cleaning</li>
-            <li>Business performance reports</li>
-            <li>Budget tracking and variance analysis</li>
-            <li>Financial modelling and forecasting</li>
-            <li>Investor-ready reports and presentations</li>
-          </ul>
-        </div>
-        <div class="svc-card reveal">
-          <div class="svc-ico">⚡</div>
-          <h3>Automation and Workflow Systems</h3>
-          <span class="svc-tag">Tasks that run themselves</span>
-          <p>Any process done the same way every week is a candidate for automation. I find those and take them off your plate.</p>
-          <ul class="svc-list">
-            <li>Excel VBA macros and formula automation</li>
-            <li>Zapier and Make workflow builds</li>
-            <li>Google Workspace automation scripts</li>
-            <li>SOP documentation and process design</li>
-            <li>Scheduled reports and automated outputs</li>
-          </ul>
-        </div>
-        <div class="svc-card reveal">
-          <div class="svc-ico">🗓️</div>
-          <h3>Executive Admin and Operations</h3>
-          <span class="svc-tag">Your mornings back</span>
-          <p>Inbox managed, calendar organised, operations running without you thinking about it every day.</p>
-          <ul class="svc-list">
-            <li>Inbox management and email triage</li>
-            <li>Calendar coordination and scheduling</li>
-            <li>Meeting prep and follow-up notes</li>
-            <li>Research, data entry and task tracking</li>
-            <li>Project coordination via Notion, Trello, Asana</li>
-          </ul>
-        </div>
-        <div class="svc-card reveal">
-          <div class="svc-ico">🔍</div>
-          <h3>Lead Generation and Research</h3>
-          <span class="svc-tag">Qualified leads, organised</span>
-          <p>Targeted research and structured lead lists so your sales time goes on conversations, not finding people to have them with.</p>
-          <ul class="svc-list">
-            <li>Prospect research and list building</li>
-            <li>Market and competitor research</li>
-            <li>CRM data entry and cleaning</li>
-            <li>LinkedIn outreach support</li>
-            <li>Research reports and summaries</li>
-          </ul>
-        </div>
-        <div class="svc-card reveal">
-          <div class="svc-ico">🎨</div>
-          <h3>Basic Design Support</h3>
-          <span class="svc-tag">Deliverables that look the part</span>
-          <p>Reports, presentations and documents that look as good as the content inside them. Consistent, clean, and on-brand.</p>
-          <ul class="svc-list">
-            <li>Canva presentations and reports</li>
-            <li>Branded document templates</li>
-            <li>Data visualisation formatting</li>
-            <li>Pitch deck layout and design support</li>
-            <li>Social media graphics (basic)</li>
-          </ul>
-        </div>
+        <div class="svc-card reveal"><div class="svc-ico">📒</div><h3>Bookkeeping and Financial Support</h3><span class="svc-tag">Clean books every month</span><p>You will always know exactly where your money is, without spending your evenings on it.</p><ul class="svc-list"><li>Monthly reconciliation and categorisation</li><li>Bank and M-Pesa reconciliations</li><li>Accounts payable and receivable</li><li>P&amp;L, Balance Sheet, cash flow statements</li><li>Payroll support and tax preparation</li><li>QuickBooks, Xero, Zoho, Sage</li></ul></div>
+        <div class="svc-card reveal"><div class="svc-ico">📊</div><h3>Data Analysis and Reporting</h3><span class="svc-tag">Numbers that mean something</span><p>Dashboards and reports built from your actual data, clear enough to make decisions from, not just look at.</p><ul class="svc-list"><li>Excel dashboards and data cleaning</li><li>Business performance reports</li><li>Budget tracking and variance analysis</li><li>Financial modelling and forecasting</li><li>Investor-ready reports and presentations</li></ul></div>
+        <div class="svc-card reveal"><div class="svc-ico">⚡</div><h3>Automation and Workflow Systems</h3><span class="svc-tag">Tasks that run themselves</span><p>Any process done the same way every week is a candidate for automation. I find those and take them off your plate.</p><ul class="svc-list"><li>Excel VBA macros and formula automation</li><li>Zapier and Make workflow builds</li><li>Google Workspace automation scripts</li><li>SOP documentation and process design</li><li>Scheduled reports and automated outputs</li></ul></div>
+        <div class="svc-card reveal"><div class="svc-ico">🗓️</div><h3>Executive Admin and Operations</h3><span class="svc-tag">Your mornings back</span><p>Inbox managed, calendar organised, operations running without you thinking about it every day.</p><ul class="svc-list"><li>Inbox management and email triage</li><li>Calendar coordination and scheduling</li><li>Meeting prep and follow-up notes</li><li>Research, data entry and task tracking</li><li>Project coordination via Notion, Trello, Asana</li></ul></div>
+        <div class="svc-card reveal"><div class="svc-ico">🔍</div><h3>Lead Generation and Research</h3><span class="svc-tag">Qualified leads, organised</span><p>Targeted research and structured lead lists so your sales time goes on conversations, not finding people to have them with.</p><ul class="svc-list"><li>Prospect research and list building</li><li>Market and competitor research</li><li>CRM data entry and cleaning</li><li>LinkedIn outreach support</li><li>Research reports and summaries</li></ul></div>
+        <div class="svc-card reveal"><div class="svc-ico">🎨</div><h3>Basic Design Support</h3><span class="svc-tag">Deliverables that look the part</span><p>Reports, presentations and documents that look as good as the content inside them. Consistent, clean, and on-brand.</p><ul class="svc-list"><li>Canva presentations and reports</li><li>Branded document templates</li><li>Data visualisation formatting</li><li>Pitch deck layout and design support</li><li>Social media graphics (basic)</li></ul></div>
       </div>
     </div>
   </section>
@@ -871,7 +719,7 @@ footer p{font-size:0.7rem;color:var(--text3)}
   </section>
 </div><!-- /services -->
 
-<!-- ==================== CASE STUDIES ==================== -->
+<!-- CASE STUDIES -->
 <div id="page-cases" class="page">
   <div class="cs-hero">
     <div class="wrap">
@@ -883,7 +731,6 @@ footer p{font-size:0.7rem;color:var(--text3)}
   <section>
     <div class="wrap">
       <div class="cs-list">
-
         <div class="cs-card reveal" id="c1">
           <div class="cs-header" onclick="toggleCS('c1')">
             <div><span class="cs-tag tag-a">Financial Analysis</span><h3>Turning 10 companies' data into $500k in investor interest</h3></div>
@@ -909,7 +756,6 @@ footer p{font-size:0.7rem;color:var(--text3)}
             </div>
           </div>
         </div>
-
         <div class="cs-card reveal" id="c2">
           <div class="cs-header" onclick="toggleCS('c2')">
             <div><span class="cs-tag tag-b">Process Redesign</span><h3>Freeing 20 hours a week by fixing a report nobody asked me to fix</h3></div>
@@ -935,7 +781,6 @@ footer p{font-size:0.7rem;color:var(--text3)}
             </div>
           </div>
         </div>
-
         <div class="cs-card reveal" id="c3">
           <div class="cs-header" onclick="toggleCS('c3')">
             <div><span class="cs-tag tag-c">Bookkeeping</span><h3>Cutting payment discrepancies by 60% through tighter AP/AR controls</h3></div>
@@ -961,7 +806,6 @@ footer p{font-size:0.7rem;color:var(--text3)}
             </div>
           </div>
         </div>
-
         <div class="cs-card reveal" id="c4">
           <div class="cs-header" onclick="toggleCS('c4')">
             <div><span class="cs-tag tag-d">Admin and Ops</span><h3>Setting up a founder's operations from scratch with 400+ unread emails</h3></div>
@@ -987,7 +831,6 @@ footer p{font-size:0.7rem;color:var(--text3)}
             </div>
           </div>
         </div>
-
       </div>
       <div style="margin-top:3rem;text-align:center">
         <h3 class="reveal" style="font-family:var(--serif);font-size:1.5rem;font-weight:500;margin-bottom:0.65rem">Recognise your business in any of these?</h3>
@@ -998,7 +841,7 @@ footer p{font-size:0.7rem;color:var(--text3)}
   </section>
 </div><!-- /cases -->
 
-<!-- ==================== PORTFOLIO ==================== -->
+<!-- PORTFOLIO -->
 <div id="page-portfolio" class="page">
   <div class="port-hero">
     <div class="wrap">
@@ -1010,7 +853,6 @@ footer p{font-size:0.7rem;color:var(--text3)}
   <section>
     <div class="wrap">
       <div class="port-grid">
-
         <div class="port-card reveal">
           <div class="port-card-top">
             <div><span class="cs-tag tag-a" style="margin-bottom:0.5rem">Financial Modelling</span><h3>Accounting System Demo — Techmate Solutions</h3></div>
@@ -1019,12 +861,10 @@ footer p{font-size:0.7rem;color:var(--text3)}
           <div class="port-card-body">
             <p>A fictional computer sales company dataset used to demonstrate proficiency across QuickBooks Online, Excel with VBA, and Xero simultaneously. Includes transaction recording, inventory management, P&L and balance sheet generation, and automated invoicing across all three platforms.</p>
             <div class="cs-chips" style="margin-bottom:1rem"><span class="cs-chip">QuickBooks</span><span class="cs-chip">Xero</span><span class="cs-chip">Excel VBA</span><span class="cs-chip">Financial Statements</span></div>
-            <!-- UPDATE: Replace # with your Google Drive link -->
             <a href="#" target="_blank" class="port-link">View project file →</a>
-            <div class="port-hint">📌 Replace the link above with your Google Drive or Notion link. See the guide page for instructions.</div>
+            <div class="port-hint">📌 Replace the link above with your Google Drive or Notion link.</div>
           </div>
         </div>
-
         <div class="port-card reveal">
           <div class="port-card-top">
             <div><span class="cs-tag tag-b" style="margin-bottom:0.5rem">Data Analysis</span><h3>Portfolio Management Dashboard</h3></div>
@@ -1037,32 +877,28 @@ footer p{font-size:0.7rem;color:var(--text3)}
             <div class="port-hint">📌 Replace the link above with your Google Drive or Notion link.</div>
           </div>
         </div>
-
         <div class="port-card port-placeholder reveal">
           <div class="port-card-top" style="background:var(--warm2)">
             <div><span class="cs-tag tag-c" style="margin-bottom:0.5rem">Coming soon</span><h3 style="color:var(--text2)">Your next project goes here</h3></div>
             <div class="port-ico">📁</div>
           </div>
           <div class="port-card-body">
-            <p style="color:var(--text3)">Add a new project card by copying one of the blocks above and updating the title, description, tags, and link. Even a well-formatted PDF of a sample reconciliation or a screenshot of a dashboard is enough.</p>
+            <p style="color:var(--text3)">Add a new project card by copying one of the blocks above and updating the title, description, tags, and link. Even a well-formatted PDF of a sample reconciliation is enough.</p>
             <div class="port-hint">📌 Clients want to see your output, not a perfect project. Add what you have.</div>
           </div>
         </div>
-
         <div class="port-card port-placeholder reveal">
           <div class="port-card-top" style="background:var(--warm2)">
             <div><span class="cs-tag tag-d" style="margin-bottom:0.5rem">Coming soon</span><h3 style="color:var(--text2)">Your next project goes here</h3></div>
             <div class="port-ico">📁</div>
           </div>
           <div class="port-card-body">
-            <p style="color:var(--text3)">Upload your file to Google Drive, set it to "anyone with the link can view", then paste the link here. You can also link directly to a screenshot hosted on Imgur or a PDF on Dropbox.</p>
-            <div class="port-hint">📌 Tip: Host files on Google Drive, Dropbox or Notion. Keep file sizes under 10MB for fast loading.</div>
+            <p style="color:var(--text3)">Upload your file to Google Drive, set it to "anyone with the link can view", then paste the link here.</p>
+            <div class="port-hint">📌 Tip: Host files on Google Drive, Dropbox or Notion. Keep file sizes under 10MB.</div>
           </div>
         </div>
-
       </div>
 
-      <!-- CREDENTIALS -->
       <div class="cert-dark-wrap reveal">
         <span class="eyebrow">Credentials</span>
         <h3>Five certifications backing the work</h3>
@@ -1088,113 +924,7 @@ footer p{font-size:0.7rem;color:var(--text3)}
   </section>
 </div><!-- /portfolio -->
 
-<!-- ==================== RESUME ==================== -->
-<div id="page-resume" class="page">
-  <div class="resume-hero">
-    <div class="wrap">
-      <span class="eyebrow">Resume</span>
-      <h1>Full professional<br><em>background.</em></h1>
-      <p class="sub">Everything a recruiter or client needs in one place. Download the PDF or read it here.</p>
-    </div>
-  </div>
-  <section>
-    <div class="wrap">
-      <div class="resume-layout">
-        <div class="resume-main">
-          <div class="r-section">
-            <div class="r-section-title">Professional Summary</div>
-            <p style="font-size:0.85rem;color:var(--text2);font-weight:300;line-height:1.85">Finance-fluent virtual assistant and data analyst with a background in Economics and Mathematics, five finance and data certifications, and hands-on experience in bookkeeping, financial modelling, executive admin and process improvement. I help small businesses and startups run more efficiently by cleaning up their finances, systematising their operations, and turning their data into something they can actually use. Currently completing an MSc in Financial Engineering at WorldQuant University.</p>
-          </div>
-          <div class="r-section">
-            <div class="r-section-title">Experience</div>
-            <div class="r-item">
-              <div class="r-title">Accounts Assistant and Receptionist</div>
-              <div class="r-sub">Aspire Lending Ltd.</div>
-              <div class="r-date">March 2025 to Present · Nairobi, Kenya</div>
-              <ul class="r-bullets">
-                <li>Redesigned manual reporting process without being asked, cutting prep time by 40% and freeing 20+ hours per week for senior staff</li>
-                <li>Built and maintained structured filing system for 900+ physical and digital loan files</li>
-                <li>Drafted loan offer letters, organised logbooks and managed client-facing communications</li>
-              </ul>
-            </div>
-            <div class="r-item">
-              <div class="r-title">Accounts Payable and Receivable Accountant</div>
-              <div class="r-sub">Pitch Investors</div>
-              <div class="r-date">May to September 2024 · Nairobi, Kenya</div>
-              <ul class="r-bullets">
-                <li>Reduced late payments by 40% through improved tracking and follow-up procedures</li>
-                <li>Cut petty cash discrepancies by 60% through tighter controls and daily reconciliation</li>
-                <li>Decreased billing turnaround by 15%, improving cash flow velocity</li>
-                <li>Streamlined payroll processing with 20% time reduction and 100% on-time disbursements</li>
-              </ul>
-            </div>
-            <div class="r-item">
-              <div class="r-title">Business Valuation and Financial Modelling Analyst</div>
-              <div class="r-sub">Pitch Investors</div>
-              <div class="r-date">March to June 2024 · Nairobi, Kenya</div>
-              <ul class="r-bullets">
-                <li>Built financial models and DCF valuations for 10+ companies seeking investor funding</li>
-                <li>Improved forecasting accuracy by 30% through scenario-based modelling</li>
-                <li>Wrote and presented 10+ investor-ready business proposals and pitch decks</li>
-                <li>Contributed to $500k+ in investor interest secured and 40% increase in investor engagement</li>
-              </ul>
-            </div>
-            <div class="r-item">
-              <div class="r-title">Finance Intern</div>
-              <div class="r-sub">Target Mart Limited</div>
-              <div class="r-date">July to December 2023 · Nairobi, Kenya</div>
-              <ul class="r-bullets">
-                <li>Improved cash flow by 30% through timely AP/AR processing</li>
-                <li>Reduced unpaid invoices by 25% through ageing report analysis and follow-up</li>
-                <li>Achieved 100% on-time withholding tax filings</li>
-                <li>Monthly reports influenced 80% of key management decisions</li>
-              </ul>
-            </div>
-            <div class="r-item">
-              <div class="r-title">Executive VA Training</div>
-              <div class="r-sub">Athena</div>
-              <div class="r-date">2024</div>
-              <p style="font-size:0.8rem;color:var(--text2);font-weight:300;line-height:1.65;margin-top:0.35rem">Completed training at one of the world's most rigorous executive VA programs. Inbox management, calendar optimisation, SOP documentation and proactive executive support.</p>
-            </div>
-          </div>
-          <div class="r-section">
-            <div class="r-section-title">Education</div>
-            <div class="r-item"><div class="r-title">MSc Financial Engineering</div><div class="r-sub">WorldQuant University</div><div class="r-date">July 2025 to July 2028 (in progress)</div></div>
-            <div class="r-item"><div class="r-title">Bachelor of Arts — Economics and Mathematics</div><div class="r-sub">Kenyatta University</div><div class="r-date">August 2019 to July 2024</div></div>
-            <div class="r-item"><div class="r-title">CPA Foundation Level</div><div class="r-sub">KASNEB</div><div class="r-date">Ongoing</div></div>
-          </div>
-          <div class="r-section">
-            <div class="r-section-title">Certifications</div>
-            <div class="r-item"><div class="r-title">Google Data Analytics Professional Certificate</div><div class="r-sub">Google / Coursera</div></div>
-            <div class="r-item"><div class="r-title">IBM Data Science Practitioner Certificate</div><div class="r-sub">IBM SkillsBuild</div></div>
-            <div class="r-item"><div class="r-title">Business Analytics with Excel: Elementary to Advanced</div><div class="r-sub">Johns Hopkins University / Coursera</div></div>
-            <div class="r-item"><div class="r-title">Intuit Bookkeeping Certification</div><div class="r-sub">Intuit</div></div>
-            <div class="r-item"><div class="r-title">CFI Corporate Finance Foundations</div><div class="r-sub">Corporate Finance Institute</div></div>
-          </div>
-          <div class="r-section">
-            <div class="r-section-title">Skills</div>
-            <div class="skill-tags">
-              <span class="skill-tag">Financial Analysis</span><span class="skill-tag">Bookkeeping</span><span class="skill-tag">Data Analysis</span><span class="skill-tag">Microsoft Excel</span><span class="skill-tag">QuickBooks Online</span><span class="skill-tag">Xero</span><span class="skill-tag">Zoho Books</span><span class="skill-tag">Sage</span><span class="skill-tag">Financial Modelling</span><span class="skill-tag">DCF Valuation</span><span class="skill-tag">Bank Reconciliation</span><span class="skill-tag">AP/AR Management</span><span class="skill-tag">Payroll Processing</span><span class="skill-tag">Tax Compliance</span><span class="skill-tag">Budget Analysis</span><span class="skill-tag">Variance Analysis</span><span class="skill-tag">Google Workspace</span><span class="skill-tag">Notion</span><span class="skill-tag">Trello / Asana</span><span class="skill-tag">SOP Documentation</span><span class="skill-tag">Workflow Automation</span><span class="skill-tag">Zapier / Make</span><span class="skill-tag">Power BI</span><span class="skill-tag">Python (learning)</span>
-            </div>
-          </div>
-        </div>
-        <div class="resume-sidebar">
-          <div class="dl-card reveal">
-            <div style="font-size:2rem;margin-bottom:0.65rem">📄</div>
-            <h3>Download PDF Resume</h3>
-            <p>The printable version, ready to send to any recruiter or client.</p>
-            <!-- UPDATE: Replace # with your Google Drive PDF link -->
-            <a href="#" target="_blank" class="btn">Download Resume</a>
-            <a href="https://calendly.com/monicahmburu/one-on-one" target="_blank" class="btn-ghost" style="margin-top:0.65rem">Book a call instead</a>
-            <div class="dl-note">A 30 minute call is usually more useful than a CV. Book one above, it is free and there is no obligation.</div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-</div><!-- /resume -->
-
-<!-- ==================== CONTACT ==================== -->
+<!-- CONTACT -->
 <div id="page-contact" class="page">
   <div class="contact-hero">
     <div class="wrap">
@@ -1236,7 +966,6 @@ footer p{font-size:0.7rem;color:var(--text3)}
   </section>
 </div><!-- /contact -->
 
-<!-- FOOTER -->
 <footer>
   <p>© 2025 Monicah Mburu · Nairobi, Kenya</p>
   <div class="footer-links">
@@ -1247,54 +976,28 @@ footer p{font-size:0.7rem;color:var(--text3)}
 </footer>
 
 <script>
-var pages = ['home','about','services','cases','portfolio','resume','contact'];
-
-function show(id, pushState){
-  if(pushState === undefined) pushState = true;
-  pages.forEach(function(p){
-    var el = document.getElementById('page-'+p);
-    if(el) el.classList.remove('active');
-  });
-  document.querySelectorAll('[data-page]').forEach(function(a){ a.classList.remove('active'); });
-  var page = document.getElementById('page-'+id);
-  if(page){ page.classList.add('active'); window.scrollTo(0,0); setTimeout(runReveal,80); }
-  document.querySelectorAll('[data-page="'+id+'"]').forEach(function(a){ a.classList.add('active'); });
-  if(pushState) history.pushState({page:id},'','#'+id);
-  closeMob();
-  return false;
-}
-
+// Handle browser back/forward
 window.addEventListener('popstate', function(e){
-  var id = (e.state&&e.state.page)||location.hash.replace('#','')||'home';
-  if(pages.indexOf(id)!==-1) show(id,false);
+  var id = (e.state && e.state.page) || location.hash.replace('#','') || 'home';
+  var valid = ['home','about','services','cases','portfolio','contact'];
+  if(valid.indexOf(id) !== -1) show(id, false);
 });
 
+// On load, show correct page from URL hash
 window.addEventListener('DOMContentLoaded', function(){
   var hash = location.hash.replace('#','');
-  show((pages.indexOf(hash)!==-1)?hash:'home', false);
-
-  // Desktop nav
-  document.querySelectorAll('.nav-links a[data-page]').forEach(function(link){
-    link.addEventListener('click', function(e){ e.preventDefault(); show(link.getAttribute('data-page')); });
-  });
-
-  // Mobile nav - click AND touchend for fast response
-  document.querySelectorAll('.mob-link').forEach(function(link){
-    link.addEventListener('click', function(e){ e.preventDefault(); e.stopPropagation(); show(link.getAttribute('data-page')); });
-    link.addEventListener('touchend', function(e){ e.preventDefault(); e.stopPropagation(); show(link.getAttribute('data-page')); },{passive:false});
-  });
-
-  // Inline onclick links (used in page content)
-  document.querySelectorAll('a[onclick]').forEach(function(link){
-    link.style.cursor = 'pointer';
-  });
+  var valid = ['home','about','services','cases','portfolio','contact'];
+  show((valid.indexOf(hash) !== -1) ? hash : 'home', false);
+  setTimeout(runReveal, 100);
 });
 
-window.addEventListener('scroll',function(){
-  var n=document.getElementById('nav');
+// Nav scroll effect
+window.addEventListener('scroll', function(){
+  var n = document.getElementById('nav');
   if(n) n.classList.toggle('solid', window.scrollY > 30);
-},{passive:true});
+}, {passive:true});
 
+// Hamburger menu
 var ham = document.getElementById('ham');
 var mob = document.getElementById('mob');
 
@@ -1311,31 +1014,12 @@ if(ham && mob){
     if(mob.classList.contains('open') && !mob.contains(e.target) && !ham.contains(e.target)){
       closeMob();
     }
-  },{passive:true});
+  }, {passive:true});
   document.addEventListener('click', function(e){
     if(mob.classList.contains('open') && !mob.contains(e.target) && !ham.contains(e.target)){
       closeMob();
     }
   });
-}
-
-function runReveal(){
-  var els = document.querySelectorAll('.page.active .reveal:not(.on)');
-  if(!els.length) return;
-  var obs = new IntersectionObserver(function(entries){
-    entries.forEach(function(e){
-      if(e.isIntersecting){ e.target.classList.add('on'); obs.unobserve(e.target); }
-    });
-  },{threshold:0.08, rootMargin:'0px 0px -20px 0px'});
-  els.forEach(function(el){ obs.observe(el); });
-}
-
-function toggleCS(id){
-  var card = document.getElementById(id);
-  if(!card) return;
-  var isOpen = card.classList.contains('open');
-  document.querySelectorAll('.cs-card').forEach(function(c){ c.classList.remove('open'); });
-  if(!isOpen) card.classList.add('open');
 }
 </script>
 </body>

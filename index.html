@@ -6,7 +6,6 @@
 <title>Monicah Mburu — Finance-Fluent Virtual Assistant</title>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
 
-<!-- PAGE NAVIGATION — loaded in <head> so onclick handlers always work immediately -->
 <script>
 var pages = ['home','about','services','cases','portfolio','contact'];
 
@@ -212,18 +211,26 @@ h3{font-family:var(--serif);font-size:1.2rem;font-weight:500;color:var(--dark)}
 .trait-num{font-family:var(--serif);font-size:1.5rem;font-weight:600;color:rgba(138,100,69,0.2);line-height:1;flex-shrink:0;width:2rem}
 .trait-text h4{font-size:0.85rem;font-weight:500;color:var(--text);margin-bottom:0.2rem}
 .trait-text p{font-size:0.76rem;color:var(--text2);line-height:1.6;font-weight:300}
+
+/* TIMELINE */
 .timeline-section{padding:5rem 0;background:var(--warm)}
-.tl-list{margin-top:2.5rem}
-.tl-row{display:grid;grid-template-columns:160px 1fr;gap:2.5rem;padding:2rem 0;border-bottom:1px solid var(--border)}
-.tl-row:last-child{border-bottom:none}
-.tl-date{padding-top:0.15rem}
-.tl-date strong{display:block;font-size:0.78rem;font-weight:500;color:var(--text2);margin-bottom:0.15rem}
+.tl-list{position:relative;margin-top:2.5rem}
+.tl-list::before{content:'';position:absolute;left:160px;top:0;bottom:0;width:1px;background:rgba(58,48,40,0.15)}
+.tl-row{display:grid;grid-template-columns:160px 1fr;gap:0 2.5rem;margin-bottom:2.8rem;position:relative}
+.tl-row::before{content:'';position:absolute;left:156px;top:7px;width:9px;height:9px;border-radius:50%;background:var(--warm);border:2px solid var(--ink);z-index:1}
+.tl-date{padding-right:1.5rem;text-align:right;padding-top:2px}
+.tl-date strong{display:block;font-size:0.78rem;font-weight:500;color:var(--text);line-height:1.4;margin-bottom:0.15rem}
 .tl-date span{font-size:0.68rem;color:var(--text3)}
-.tl-co{font-family:var(--serif);font-size:1rem;font-weight:600;color:var(--dark);margin-bottom:0.15rem}
+.tl-body{padding-left:1.5rem}
+.tl-co{font-family:var(--serif);font-size:1rem;font-weight:600;color:var(--dark);margin-bottom:0.1rem}
 .tl-role{font-size:0.72rem;color:var(--ink);text-transform:uppercase;letter-spacing:0.08em;font-weight:500;margin-bottom:0.65rem}
-.tl-desc{font-size:0.82rem;color:var(--text2);line-height:1.75;font-weight:300}
-.tl-pills{display:flex;flex-wrap:wrap;gap:0.35rem;margin-top:0.75rem}
+.tl-desc{font-size:0.82rem;color:var(--text2);line-height:1.75;font-weight:300;margin-bottom:0.75rem}
+.tl-pills{display:flex;flex-wrap:wrap;gap:0.35rem;margin-top:0.35rem}
 .pill{background:var(--ink-pale);border:1px solid var(--ink-border);color:var(--ink);font-size:0.67rem;font-weight:500;padding:0.2rem 0.6rem;border-radius:100px}
+.tl-sub-block{margin-top:1.1rem;padding-top:1.1rem;border-top:1px solid rgba(58,48,40,0.1)}
+.tl-sub-block .tl-role{margin-top:0.25rem}
+
+/* EDUCATION & CERTS */
 .edu-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1rem;margin-top:2rem}
 .edu-card{background:#fff;border:1px solid var(--border);border-radius:var(--r);padding:1.5rem;transition:border-color 0.2s}
 .edu-card:hover{border-color:var(--ink-border)}
@@ -339,7 +346,11 @@ footer p{font-size:0.7rem;color:var(--text3)}
   .tools-grid,.cert-dark-grid{grid-template-columns:repeat(3,1fr)}
   .certs-grid{grid-template-columns:repeat(3,1fr)}
   .port-grid,.edu-grid{grid-template-columns:1fr}
-  .tl-row{grid-template-columns:1fr}.tl-date{margin-bottom:0.35rem}
+  .tl-list::before{left:0}
+  .tl-row{grid-template-columns:1fr;padding-left:1.5rem}
+  .tl-row::before{left:-4px}
+  .tl-date{text-align:left;padding-right:0;margin-bottom:0.35rem}
+  .tl-body{padding-left:0}
   .problem-grid{grid-template-columns:1fr}
   .nav-links,.nav-cta{display:none}
   .hamburger{display:flex}
@@ -355,7 +366,6 @@ footer p{font-size:0.7rem;color:var(--text3)}
   .mob-menu{padding:1.5rem}
 }
 
-/* MOBILE TOUCH */
 *,*::before,*::after{-webkit-tap-highlight-color:transparent}
 .mob-link{min-height:52px!important;display:flex!important;align-items:center!important;padding-top:0!important;padding-bottom:0!important;cursor:pointer;-webkit-user-select:none;user-select:none}
 .mob-cta{min-height:52px!important;display:flex!important;align-items:center!important;justify-content:center!important;cursor:pointer}
@@ -395,12 +405,13 @@ footer p{font-size:0.7rem;color:var(--text3)}
   <a href="https://calendly.com/monicahmburu/one-on-one" target="_blank" class="mob-cta">Book a free call</a>
 </div>
 
-<!-- HOME -->
+<!-- ═══════════════════════════════════════ HOME ═══════════════════════════════════════ -->
 <div id="page-home" class="page active">
   <div class="hero-wrap">
     <div class="hero">
       <div class="hero-badge"><span class="hero-badge-dot"></span> Open to new clients</div>
-      <h1>Your books are behind.<br>Your inbox is chaos.<br><em>I fix that.</em></h1>l learn how your business runs, then build systems that keep your processes running smoothly, and make sure your numbers are working for you.</p>
+      <h1>Your books are behind.<br>Your inbox is chaos.<br><em>I fix that.</em></h1>
+      <p class="hero-sub">I learn how your business runs, then build systems that keep your processes running smoothly, and make sure your <strong>numbers are working for you.</strong></p>
       <div class="hero-actions">
         <a href="https://calendly.com/monicahmburu/one-on-one" target="_blank" class="btn">Book a free discovery call</a>
         <a href="javascript:void(0)" onclick="return show('cases')" class="btn-ghost">See case studies</a>
@@ -414,7 +425,6 @@ footer p{font-size:0.7rem;color:var(--text3)}
     </div>
     <div class="hero-video-wrap">
       <div class="video-outer">
-        <!-- REPLACE THIS BLOCK WITH YOUR VIDEO EMBED -->
         <div class="video-ph">
           <div class="video-ph-ring">
             <div class="video-ph-play"><svg viewBox="0 0 24 24"><path d="M5 3l14 9-14 9V3z"/></svg></div>
@@ -456,7 +466,7 @@ footer p{font-size:0.7rem;color:var(--text3)}
       <span class="eyebrow reveal">How I help</span>
       <div class="wid-grid">
         <div class="reveal">
-          <h2>Not just finishing tasks.<br><em> I Build Systems.</em></h2>
+          <h2>Not just finishing tasks.<br><em>I Build Systems.</em></h2>
           <p style="font-size:0.93rem;color:var(--text2);font-weight:300;line-height:1.85;margin-top:1rem;margin-bottom:1rem">I do not show up and start ticking off a task list. I learn how your business actually works and then I build the structures that let it run without constant attention from you.</p>
           <p style="font-size:0.93rem;color:var(--text2);font-weight:300;line-height:1.85;margin-bottom:1rem">Clean books you can trust. Reports you can make decisions from. Workflows that handle themselves. And a financial picture that is current, not three months stale.</p>
           <p style="font-size:0.93rem;color:var(--text2);font-weight:300;line-height:1.85;margin-bottom:1.75rem">I bring something most VAs do not: a background in finance, economics and data. I understand why the reconciliation matters, not just how to do it.</p>
@@ -480,7 +490,7 @@ footer p{font-size:0.7rem;color:var(--text3)}
         <div class="proc-step reveal"><div class="proc-circle">1</div><h3>Understand</h3><p>We talk through your business, your current setup, and what fixed actually looks like for you.</p></div>
         <div class="proc-step reveal"><div class="proc-circle">2</div><h3>Organise</h3><p>I audit what exists and build the structure it needs. Clean books, documented processes, data where it should be.</p></div>
         <div class="proc-step reveal"><div class="proc-circle">3</div><h3>Automate</h3><p>Anything repetitive gets automated. Reports, reminders, data transfers. Built once, running forever.</p></div>
-        <div class="proc-step reveal"><div class="proc-circle">4</div><h3>Deliver</h3><p>I run the systems. You get regular updates and your only focus on the work only you can do.</p></div>
+        <div class="proc-step reveal"><div class="proc-circle">4</div><h3>Deliver</h3><p>I run the systems. You get regular updates and your only focus is the work only you can do.</p></div>
       </div>
     </div>
   </section>
@@ -528,7 +538,7 @@ footer p{font-size:0.7rem;color:var(--text3)}
   </section>
 </div><!-- /home -->
 
-<!-- ABOUT -->
+<!-- ═══════════════════════════════════════ ABOUT ═══════════════════════════════════════ -->
 <div id="page-about" class="page">
   <div class="about-hero">
     <div class="about-hero-inner">
@@ -590,264 +600,122 @@ footer p{font-size:0.7rem;color:var(--text3)}
     </div>
   </div>
 
+  <!-- EXPERIENCE TIMELINE -->
   <div class="timeline-section">
     <div class="wrap">
       <span class="eyebrow reveal">Experience</span>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Experience Timeline</title>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500&family=DM+Serif+Display&display=swap" rel="stylesheet" />
-  <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+      <h2 class="reveal">Where I have done the work</h2>
 
-    body {
-      font-family: 'DM Sans', sans-serif;
-      background: #faf9f7;
-      color: #1a1a1a;
-      padding: 4rem 2rem;
-    }
+      <div class="tl-list">
 
-    .wrap {
-      max-width: 860px;
-      margin: 0 auto;
-    }
-
-    .eyebrow {
-      display: block;
-      font-size: 11px;
-      text-transform: uppercase;
-      letter-spacing: 0.12em;
-      color: #888;
-      margin-bottom: 0.5rem;
-    }
-
-    h2 {
-      font-family: 'DM Serif Display', serif;
-      font-size: 2.2rem;
-      font-weight: 400;
-      color: #1a1a1a;
-      margin-bottom: 3rem;
-      line-height: 1.2;
-    }
-
-    /* Timeline */
-    .tl-list {
-      position: relative;
-    }
-
-    .tl-list::before {
-      content: '';
-      position: absolute;
-      left: 180px;
-      top: 0;
-      bottom: 0;
-      width: 1px;
-      background: #e0ddd8;
-    }
-
-    .tl-row {
-      display: grid;
-      grid-template-columns: 180px 1fr;
-      gap: 0 2.5rem;
-      margin-bottom: 2.8rem;
-      position: relative;
-    }
-
-    .tl-row::before {
-      content: '';
-      position: absolute;
-      left: 176px;
-      top: 7px;
-      width: 9px;
-      height: 9px;
-      border-radius: 50%;
-      background: #faf9f7;
-      border: 2px solid #999;
-      z-index: 1;
-    }
-
-    .tl-date {
-      padding-right: 1.5rem;
-      text-align: right;
-      padding-top: 2px;
-    }
-
-    .tl-date strong {
-      display: block;
-      font-size: 13px;
-      font-weight: 500;
-      color: #1a1a1a;
-      line-height: 1.4;
-    }
-
-    .tl-date span {
-      font-size: 12px;
-      color: #999;
-    }
-
-    .tl-body {
-      padding-left: 1.5rem;
-    }
-
-    .tl-co {
-      font-size: 11px;
-      font-weight: 500;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-      color: #999;
-      margin-bottom: 3px;
-    }
-
-    .tl-role {
-      font-size: 15px;
-      font-weight: 500;
-      color: #1a1a1a;
-      margin-bottom: 8px;
-    }
-
-    .tl-desc {
-      font-size: 14px;
-      color: #555;
-      line-height: 1.7;
-      margin-bottom: 12px;
-    }
-
-    .tl-pills {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 6px;
-    }
-
-    .pill {
-      font-size: 12px;
-      padding: 3px 11px;
-      border-radius: 999px;
-      background: #f0ede8;
-      border: 1px solid #e0ddd8;
-      color: #444;
-    }
-
-    .sub-block {
-      margin-top: 1.5rem;
-      padding-top: 1.5rem;
-      border-top: 1px solid #e8e5e0;
-    }
-
-    .sub-block .tl-role {
-      font-size: 14px;
-      color: #333;
-    }
-
-    /* Responsive */
-    @media (max-width: 600px) {
-      .tl-list::before { left: 0; }
-      .tl-row { grid-template-columns: 1fr; padding-left: 1.5rem; }
-      .tl-row::before { left: -4px; }
-      .tl-date { text-align: left; padding-right: 0; margin-bottom: 0.4rem; }
-      .tl-body { padding-left: 0; }
-    }
-  </style>
-</head>
-<body>
-  <div class="wrap">
-    <span class="eyebrow">Experience</span>
-    <h2>Where I have done the work</h2>
-
-    <div class="tl-list">
-
-      <!-- Aspire Lending -->
-      <div class="tl-row">
-        <div class="tl-date">
-          <strong>Mar 2025 – Present</strong>
-          <span>Current role</span>
-        </div>
-        <div class="tl-body">
-          <div class="tl-co">Aspire Lending Ltd.</div>
-          <div class="tl-role">Accounts Assistant and Receptionist</div>
-          <div class="tl-desc">Managed 900+ client loan files and supported lending operations day to day. Within weeks of joining, I noticed senior staff losing hours every week to a slow manual reporting process. I redesigned it without being asked and cut prep time by 20%, freeing over 10 hours a week for the team.</div>
-          <div class="tl-pills">
-            <span class="pill">20% faster reports</span>
-            <span class="pill">10hrs/week freed</span>
-            <span class="pill">900+ files organised</span>
+        <!-- Aspire Lending -->
+        <div class="tl-row reveal">
+          <div class="tl-date">
+            <strong>Mar 2025 – Present</strong>
+            <span>Current role</span>
           </div>
-        </div>
-      </div>
-
-      <!-- Pitch Investors -->
-      <div class="tl-row">
-        <div class="tl-date">
-          <strong>Mar – Sep 2024</strong>
-          <span>6 months</span>
-        </div>
-        <div class="tl-body">
-          <div class="tl-co">Pitch Investors</div>
-          <div class="tl-role">Accountant and Financial Analyst</div>
-          <div class="tl-desc">As an accountant, I managed the full AP/AR cycle. Cut late payments by 40% through better tracking and follow-up procedures. Reduced petty cash discrepancies by 60% and billing turnaround by 15%. Streamlined payroll processing with a 20% time reduction while maintaining 100% on-time disbursements.</div>
-          <div class="tl-pills">
-            <span class="pill">40% fewer late payments</span>
-            <span class="pill">60% fewer discrepancies</span>
-            <span class="pill">15% faster billing</span>
-          </div>
-
-          <div class="sub-block">
-            <div class="tl-role">As Financial Analyst</div>
-            <div class="tl-desc">Built financial models and DCF valuations for 10+ companies looking to raise investor funding. Improved forecasting accuracy by 30%. Wrote and presented 10+ investor-ready proposals and pitch decks, helping clients secure $500k+ in investor interest.</div>
+          <div class="tl-body">
+            <div class="tl-co">Aspire Lending Ltd.</div>
+            <div class="tl-role">Accounts Assistant and Receptionist</div>
+            <div class="tl-desc">Managed 900+ client loan files and supported lending operations day to day. Within weeks of joining, I noticed senior staff losing hours every week to a slow manual reporting process. I redesigned it without being asked and cut prep time by 20%, freeing over 10 hours a week for the team.</div>
             <div class="tl-pills">
-              <span class="pill">$500k+ investor interest</span>
-              <span class="pill">30% better forecasting</span>
-              <span class="pill">40% more engagement</span>
+              <span class="pill">20% faster reports</span>
+              <span class="pill">10hrs/week freed</span>
+              <span class="pill">900+ files organised</span>
             </div>
           </div>
         </div>
-      </div>
 
-      <!-- Target Mart -->
-      <div class="tl-row">
-        <div class="tl-date">
-          <strong>Jul – Dec 2023</strong>
-          <span>Finance intern</span>
-        </div>
-        <div class="tl-body">
-          <div class="tl-co">Target Mart Limited</div>
-          <div class="tl-role">Finance Intern</div>
-          <div class="tl-desc">Managed Accounts Payables and Receivables, improved cash flow by 30% through timely processing. Reduced unpaid invoices by 25% through ageing report analysis and follow-ups. Achieved 100% on-time tax filings. Monthly reports contributed data that influenced 80% of key management decisions.</div>
-          <div class="tl-pills">
-            <span class="pill">30% cash flow improvement</span>
-            <span class="pill">25% fewer unpaid invoices</span>
-            <span class="pill">100% on-time tax filings</span>
+        <!-- Pitch Investors -->
+        <div class="tl-row reveal">
+          <div class="tl-date">
+            <strong>Mar – Sep 2024</strong>
+            <span>6 months</span>
+          </div>
+          <div class="tl-body">
+            <div class="tl-co">Pitch Investors</div>
+            <div class="tl-role">Accountant and Financial Analyst</div>
+            <div class="tl-desc">Managed the full AP/AR cycle. Cut late payments by 40% through better tracking and follow-up procedures. Reduced petty cash discrepancies by 60% and billing turnaround by 15%. Streamlined payroll processing with a 20% time reduction while maintaining 100% on-time disbursements.</div>
+            <div class="tl-pills">
+              <span class="pill">40% fewer late payments</span>
+              <span class="pill">60% fewer discrepancies</span>
+              <span class="pill">15% faster billing</span>
+            </div>
+            <div class="tl-sub-block">
+              <div class="tl-role">As Financial Analyst</div>
+              <div class="tl-desc">Built financial models and DCF valuations for 10+ companies looking to raise investor funding. Improved forecasting accuracy by 30%. Wrote and presented 10+ investor-ready proposals and pitch decks, helping clients secure $500k+ in investor interest.</div>
+              <div class="tl-pills">
+                <span class="pill">$500k+ investor interest</span>
+                <span class="pill">30% better forecasting</span>
+                <span class="pill">40% more engagement</span>
+              </div>
+            </div>
           </div>
         </div>
-      </div>
 
-    </div>
-  </div>
-</body>
-</html>
+        <!-- Target Mart -->
         <div class="tl-row reveal">
-          <div class="tl-date"><strong>2024</strong><span>Training</span></div>
+          <div class="tl-date">
+            <strong>Jul – Dec 2023</strong>
+            <span>Finance intern</span>
+          </div>
+          <div class="tl-body">
+            <div class="tl-co">Target Mart Limited</div>
+            <div class="tl-role">Finance Intern</div>
+            <div class="tl-desc">Managed Accounts Payables and Receivables, improved cash flow by 30% through timely processing. Reduced unpaid invoices by 25% through ageing report analysis and follow-ups. Achieved 100% on-time tax filings. Monthly reports contributed data that influenced 80% of key management decisions.</div>
+            <div class="tl-pills">
+              <span class="pill">30% cash flow improvement</span>
+              <span class="pill">25% fewer unpaid invoices</span>
+              <span class="pill">100% on-time tax filings</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Athena Training -->
+        <div class="tl-row reveal">
+          <div class="tl-date">
+            <strong>2024</strong>
+            <span>Training</span>
+          </div>
           <div class="tl-body">
             <div class="tl-co">Athena</div>
             <div class="tl-role">Executive VA Training</div>
             <div class="tl-desc">Completed training at one of the most rigorous executive VA programs globally. Inbox management, calendar optimisation, SOP documentation, and proactive executive support.</div>
           </div>
         </div>
+
       </div>
     </div>
   </div>
 
+  <!-- EDUCATION -->
   <section>
     <div class="wrap">
       <span class="eyebrow reveal">Education</span>
       <h2 class="reveal">Academic background</h2>
       <div class="edu-grid">
-        <div class="edu-card reveal"><div class="edu-yr">2025 to Present</div><div class="edu-deg">MSc Financial Engineering</div><div class="edu-school">WorldQuant University</div></div>
-        <div class="edu-card reveal"><div class="edu-yr">2019 to 2024</div><div class="edu-deg">Bachelor of Arts — Economics and Mathematics</div><div class="edu-school">Kenyatta University</div></div>
-        <div class="edu-card reveal"><div class="edu-yr">Ongoing</div><div class="edu-deg">CPA Foundation Level</div><div class="edu-school">KASNEB</div></div>
-        <div class="edu-card reveal"><div class="edu-yr">2024</div><div class="edu-deg">ALX Virtual Assistant Certificate</div><div class="edu-school">ALX Africa</div></div>
+        <div class="edu-card reveal">
+          <div class="edu-yr">2025 to Present</div>
+          <div class="edu-deg">MSc Financial Engineering</div>
+          <div class="edu-school">WorldQuant University</div>
+        </div>
+        <div class="edu-card reveal">
+          <div class="edu-yr">2019 to 2024</div>
+          <div class="edu-deg">Bachelor of Arts — Economics and Mathematics</div>
+          <div class="edu-school">Kenyatta University</div>
+        </div>
+        <div class="edu-card reveal">
+          <div class="edu-yr">Ongoing</div>
+          <div class="edu-deg">CPA Foundation Level</div>
+          <div class="edu-school">KASNEB</div>
+        </div>
+        <div class="edu-card reveal">
+          <div class="edu-yr">2024</div>
+          <div class="edu-deg">ALX Virtual Assistant Certificate</div>
+          <div class="edu-school">ALX Africa</div>
+        </div>
       </div>
+
       <div style="margin-top:3rem">
         <span class="eyebrow reveal">Certifications</span>
         <h2 class="reveal" style="font-size:1.6rem">Credentials that back the work</h2>
@@ -863,7 +731,7 @@ footer p{font-size:0.7rem;color:var(--text3)}
   </section>
 </div><!-- /about -->
 
-<!-- SERVICES -->
+<!-- ═══════════════════════════════════════ SERVICES ═══════════════════════════════════════ -->
 <div id="page-services" class="page">
   <div class="svc-hero">
     <div class="wrap">
@@ -875,7 +743,7 @@ footer p{font-size:0.7rem;color:var(--text3)}
   <section>
     <div class="wrap">
       <div class="svc-grid">
-        <div class="svc-card reveal"><div class="svc-ico">📒</div><h3>Bookkeeping and Financial Support</h3><span class="svc-tag">Clean books every month</span><p>I handle the following tasks so that you always know exactly where your money is, without spending your evenings on it.</p><ul class="svc-list"><li>Monthly reconciliation</li><li>Accounts payable and receivable</li><li>Prepare P&amp;L, Balance Sheet, cash flow statements</li><li>Payroll support and tax preparation</li><li>I am comfortable using the following software; QuickBooks, Xero, Zoho, Sage</li></ul></div>
+        <div class="svc-card reveal"><div class="svc-ico">📒</div><h3>Bookkeeping and Financial Support</h3><span class="svc-tag">Clean books every month</span><p>I handle the following tasks so that you always know exactly where your money is, without spending your evenings on it.</p><ul class="svc-list"><li>Monthly reconciliation</li><li>Accounts payable and receivable</li><li>Prepare P&amp;L, Balance Sheet, cash flow statements</li><li>Payroll support and tax preparation</li><li>QuickBooks, Xero, Zoho, Sage</li></ul></div>
         <div class="svc-card reveal"><div class="svc-ico">📊</div><h3>Data Analysis and Reporting</h3><span class="svc-tag">Numbers that mean something</span><p>I build dashboards and reports from your data, clear enough to make decisions from, not just look at.</p><ul class="svc-list"><li>Excel dashboards and data cleaning</li><li>Business performance reports</li><li>Budget tracking and variance analysis</li><li>Financial modelling and forecasting</li><li>Investor-ready reports and presentations</li></ul></div>
         <div class="svc-card reveal"><div class="svc-ico">⚡</div><h3>Automation and Workflow Systems</h3><span class="svc-tag">Tasks that run themselves</span><p>Any process done the same way every week is a candidate for automation. I find those and take them off your plate.</p><ul class="svc-list"><li>Excel VBA macros and formula automation</li><li>Zapier and Make workflow builds</li><li>Google Workspace automation scripts</li><li>SOP documentation and process design</li><li>Scheduled reports and automated outputs</li></ul></div>
         <div class="svc-card reveal"><div class="svc-ico">🗓️</div><h3>Executive Admin and Operations</h3><span class="svc-tag">Your mornings back</span><p>Inbox managed, calendar organised, operations running without you thinking about it every day.</p><ul class="svc-list"><li>Inbox management and email triage</li><li>Calendar coordination and scheduling</li><li>Meeting prep and follow-up notes</li><li>Research, data entry and task tracking</li><li>Project coordination via Notion, Trello, Asana</li></ul></div>
@@ -911,7 +779,7 @@ footer p{font-size:0.7rem;color:var(--text3)}
   </section>
 </div><!-- /services -->
 
-<!-- CASE STUDIES -->
+<!-- ═══════════════════════════════════════ CASE STUDIES ═══════════════════════════════════════ -->
 <div id="page-cases" class="page">
   <div class="cs-hero">
     <div class="wrap">
@@ -1033,7 +901,7 @@ footer p{font-size:0.7rem;color:var(--text3)}
   </section>
 </div><!-- /cases -->
 
-<!-- PORTFOLIO -->
+<!-- ═══════════════════════════════════════ PORTFOLIO ═══════════════════════════════════════ -->
 <div id="page-portfolio" class="page">
   <div class="port-hero">
     <div class="wrap">
@@ -1116,7 +984,7 @@ footer p{font-size:0.7rem;color:var(--text3)}
   </section>
 </div><!-- /portfolio -->
 
-<!-- CONTACT -->
+<!-- ═══════════════════════════════════════ CONTACT ═══════════════════════════════════════ -->
 <div id="page-contact" class="page">
   <div class="contact-hero">
     <div class="wrap">
@@ -1168,14 +1036,12 @@ footer p{font-size:0.7rem;color:var(--text3)}
 </footer>
 
 <script>
-// Handle browser back/forward
 window.addEventListener('popstate', function(e){
   var id = (e.state && e.state.page) || location.hash.replace('#','') || 'home';
   var valid = ['home','about','services','cases','portfolio','contact'];
   if(valid.indexOf(id) !== -1) show(id, false);
 });
 
-// On load, show correct page from URL hash
 window.addEventListener('DOMContentLoaded', function(){
   var hash = location.hash.replace('#','');
   var valid = ['home','about','services','cases','portfolio','contact'];
@@ -1183,13 +1049,11 @@ window.addEventListener('DOMContentLoaded', function(){
   setTimeout(runReveal, 100);
 });
 
-// Nav scroll effect
 window.addEventListener('scroll', function(){
   var n = document.getElementById('nav');
   if(n) n.classList.toggle('solid', window.scrollY > 30);
 }, {passive:true});
 
-// Hamburger menu
 var ham = document.getElementById('ham');
 var mob = document.getElementById('mob');
 

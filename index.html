@@ -593,41 +593,239 @@ footer p{font-size:0.7rem;color:var(--text3)}
   <div class="timeline-section">
     <div class="wrap">
       <span class="eyebrow reveal">Experience</span>
-      <h2 class="reveal">Where I have done the work</h2>
-      <div class="tl-list">
-        <div class="tl-row reveal">
-          <div class="tl-date"><strong>Mar 2025 to Present</strong><span>Current role</span></div>
-          <div class="tl-body">
-            <div class="tl-co">Aspire Lending Ltd.</div>
-            <div class="tl-role">Accounts Assistant and Receptionist</div>
-            <div class="tl-desc">Managed 900+ client loan files and supported lending operations day to day. Within weeks of joining, I noticed senior staff losing hours every week to a slow manual reporting process. I redesigned it without being asked and cut prep time by 20%, freeing over 10 hours a week for the team.</div>
-            <div class="tl-pills"><span class="pill">20% faster reports</span><span class="pill">10hrs/week freed</span><span class="pill">900+ files organised</span></div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Experience Timeline</title>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500&family=DM+Serif+Display&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: #faf9f7;
+      color: #1a1a1a;
+      padding: 4rem 2rem;
+    }
+
+    .wrap {
+      max-width: 860px;
+      margin: 0 auto;
+    }
+
+    .eyebrow {
+      display: block;
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: #888;
+      margin-bottom: 0.5rem;
+    }
+
+    h2 {
+      font-family: 'DM Serif Display', serif;
+      font-size: 2.2rem;
+      font-weight: 400;
+      color: #1a1a1a;
+      margin-bottom: 3rem;
+      line-height: 1.2;
+    }
+
+    /* Timeline */
+    .tl-list {
+      position: relative;
+    }
+
+    .tl-list::before {
+      content: '';
+      position: absolute;
+      left: 180px;
+      top: 0;
+      bottom: 0;
+      width: 1px;
+      background: #e0ddd8;
+    }
+
+    .tl-row {
+      display: grid;
+      grid-template-columns: 180px 1fr;
+      gap: 0 2.5rem;
+      margin-bottom: 2.8rem;
+      position: relative;
+    }
+
+    .tl-row::before {
+      content: '';
+      position: absolute;
+      left: 176px;
+      top: 7px;
+      width: 9px;
+      height: 9px;
+      border-radius: 50%;
+      background: #faf9f7;
+      border: 2px solid #999;
+      z-index: 1;
+    }
+
+    .tl-date {
+      padding-right: 1.5rem;
+      text-align: right;
+      padding-top: 2px;
+    }
+
+    .tl-date strong {
+      display: block;
+      font-size: 13px;
+      font-weight: 500;
+      color: #1a1a1a;
+      line-height: 1.4;
+    }
+
+    .tl-date span {
+      font-size: 12px;
+      color: #999;
+    }
+
+    .tl-body {
+      padding-left: 1.5rem;
+    }
+
+    .tl-co {
+      font-size: 11px;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: #999;
+      margin-bottom: 3px;
+    }
+
+    .tl-role {
+      font-size: 15px;
+      font-weight: 500;
+      color: #1a1a1a;
+      margin-bottom: 8px;
+    }
+
+    .tl-desc {
+      font-size: 14px;
+      color: #555;
+      line-height: 1.7;
+      margin-bottom: 12px;
+    }
+
+    .tl-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+
+    .pill {
+      font-size: 12px;
+      padding: 3px 11px;
+      border-radius: 999px;
+      background: #f0ede8;
+      border: 1px solid #e0ddd8;
+      color: #444;
+    }
+
+    .sub-block {
+      margin-top: 1.5rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid #e8e5e0;
+    }
+
+    .sub-block .tl-role {
+      font-size: 14px;
+      color: #333;
+    }
+
+    /* Responsive */
+    @media (max-width: 600px) {
+      .tl-list::before { left: 0; }
+      .tl-row { grid-template-columns: 1fr; padding-left: 1.5rem; }
+      .tl-row::before { left: -4px; }
+      .tl-date { text-align: left; padding-right: 0; margin-bottom: 0.4rem; }
+      .tl-body { padding-left: 0; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <span class="eyebrow">Experience</span>
+    <h2>Where I have done the work</h2>
+
+    <div class="tl-list">
+
+      <!-- Aspire Lending -->
+      <div class="tl-row">
+        <div class="tl-date">
+          <strong>Mar 2025 – Present</strong>
+          <span>Current role</span>
+        </div>
+        <div class="tl-body">
+          <div class="tl-co">Aspire Lending Ltd.</div>
+          <div class="tl-role">Accounts Assistant and Receptionist</div>
+          <div class="tl-desc">Managed 900+ client loan files and supported lending operations day to day. Within weeks of joining, I noticed senior staff losing hours every week to a slow manual reporting process. I redesigned it without being asked and cut prep time by 20%, freeing over 10 hours a week for the team.</div>
+          <div class="tl-pills">
+            <span class="pill">20% faster reports</span>
+            <span class="pill">10hrs/week freed</span>
+            <span class="pill">900+ files organised</span>
           </div>
         </div>
-        <div class="tl-row reveal">
-          <div class="tl-date"><strong>March to Sep 2024</strong><span>6 months</span></div>
-          <div class="tl-body">
-            <div class="tl-co">Pitch Investors</div>
-            <div class="tl-role">Accountant and Financial Analyst</div>
-            <div class="tl-desc">As an accountant, I managed the full AP/AR cycle. Cut late payments by 40% through better tracking and follow-up procedures. Reduced petty cash discrepancies by 60% and billing turnaround by 15%. Streamlined payroll processing with a 20% time reduction while maintaining 100% on-time disbursements.</div>
-            <div class="tl-pills"><span class="pill">40% fewer late payments</span><span class="pill">60% fewer discrepancies</span><span class="pill">15% faster billing</span></div>
+      </div>
+
+      <!-- Pitch Investors -->
+      <div class="tl-row">
+        <div class="tl-date">
+          <strong>Mar – Sep 2024</strong>
+          <span>6 months</span>
+        </div>
+        <div class="tl-body">
+          <div class="tl-co">Pitch Investors</div>
+          <div class="tl-role">Accountant and Financial Analyst</div>
+          <div class="tl-desc">As an accountant, I managed the full AP/AR cycle. Cut late payments by 40% through better tracking and follow-up procedures. Reduced petty cash discrepancies by 60% and billing turnaround by 15%. Streamlined payroll processing with a 20% time reduction while maintaining 100% on-time disbursements.</div>
+          <div class="tl-pills">
+            <span class="pill">40% fewer late payments</span>
+            <span class="pill">60% fewer discrepancies</span>
+            <span class="pill">15% faster billing</span>
+          </div>
+
+          <div class="sub-block">
+            <div class="tl-role">As Financial Analyst</div>
+            <div class="tl-desc">Built financial models and DCF valuations for 10+ companies looking to raise investor funding. Improved forecasting accuracy by 30%. Wrote and presented 10+ investor-ready proposals and pitch decks, helping clients secure $500k+ in investor interest.</div>
+            <div class="tl-pills">
+              <span class="pill">$500k+ investor interest</span>
+              <span class="pill">30% better forecasting</span>
+              <span class="pill">40% more engagement</span>
+            </div>
           </div>
         </div>
-        <div class="tl-row reveal">
-          <div class="tl-body">
-            <div class="tl-desc">As a financial analyst, I built financial models and DCF valuations for 10+ companies looking to raise investor funding. Improved forecasting accuracy by 30%. Wrote and presented 10+ investor-ready proposals and pitch decks, helping clients secure $500k+ in investor interest.</div>
-            <div class="tl-pills"><span class="pill">$500k+ investor interest</span><span class="pill">30% better forecasting</span><span class="pill">40% more engagement</span></div>
+      </div>
+
+      <!-- Target Mart -->
+      <div class="tl-row">
+        <div class="tl-date">
+          <strong>Jul – Dec 2023</strong>
+          <span>Finance intern</span>
+        </div>
+        <div class="tl-body">
+          <div class="tl-co">Target Mart Limited</div>
+          <div class="tl-role">Finance Intern</div>
+          <div class="tl-desc">Managed Accounts Payables and Receivables, improved cash flow by 30% through timely processing. Reduced unpaid invoices by 25% through ageing report analysis and follow-ups. Achieved 100% on-time tax filings. Monthly reports contributed data that influenced 80% of key management decisions.</div>
+          <div class="tl-pills">
+            <span class="pill">30% cash flow improvement</span>
+            <span class="pill">25% fewer unpaid invoices</span>
+            <span class="pill">100% on-time tax filings</span>
           </div>
         </div>
-        <div class="tl-row reveal">
-          <div class="tl-date"><strong>Jul to Dec 2023</strong><span>Finance intern</span></div>
-          <div class="tl-body">
-            <div class="tl-co">Target Mart Limited</div>
-            <div class="tl-role">Finance Intern</div>
-            <div class="tl-desc">Managed Accounts Payables and Receivables, improved cash flow by 30% through timely processing. Reduced unpaid invoices by 25% through ageing report analysis and follow ups. Achieved 100% on-time tax filings. Monthly reports contributed data that influenced 80% of key management decisions.</div>
-            <div class="tl-pills"><span class="pill">30% cash flow improvement</span><span class="pill">25% fewer unpaid invoices</span><span class="pill">100% on-time tax filings</span></div>
-          </div>
-        </div>
+      </div>
+
+    </div>
+  </div>
+</body>
+</html>
         <div class="tl-row reveal">
           <div class="tl-date"><strong>2024</strong><span>Training</span></div>
           <div class="tl-body">

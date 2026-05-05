@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -111,6 +112,11 @@ h3{font-family:var(--serif);font-size:1.2rem;font-weight:500;color:var(--dark)}
 .plbl{font-size:0.69rem;color:var(--text3);margin-top:0.2rem;line-height:1.45}
 .hero-video-wrap{animation:fadeUp 0.8s 0.25s ease both}
 .video-outer{background:var(--dark2);border-radius:var(--r);overflow:hidden;border:1px solid rgba(255,255,255,0.06);box-shadow:0 20px 60px rgba(30,26,21,0.18)}
+
+/* VIDEO: responsive iframe wrapper */
+.video-responsive{position:relative;padding-bottom:56.25%;height:0;overflow:hidden;border-radius:var(--r)}
+.video-responsive iframe{position:absolute;top:0;left:0;width:100%;height:100%;border:0;display:block}
+
 .strip{background:var(--dark);padding:1.1rem 0;overflow:hidden}
 .strip-inner{display:flex;gap:3rem;max-width:1100px;margin:0 auto;padding:0 2.5rem;flex-wrap:wrap}
 .strip-item{display:flex;align-items:center;gap:0.5rem;font-size:0.76rem;color:rgba(255,255,255,0.45);white-space:nowrap}
@@ -325,10 +331,29 @@ footer p{font-size:0.7rem;color:var(--text3)}
 .footer-links a{font-size:0.7rem;color:var(--text3);text-decoration:none;transition:color 0.2s}
 .footer-links a:hover{color:var(--ink)}
 
-/* RESPONSIVE */
+/* =====================================================
+   RESPONSIVE — tablet & mobile
+   ===================================================== */
 @media(max-width:900px){
-  .hero-wrap,.about-hero-inner,.wid-grid{grid-template-columns:1fr;gap:3rem}
-  .hero-video-wrap{display:none}
+  /* Hero: stack content, then video below */
+  .hero-wrap{
+    grid-template-columns:1fr;
+    gap:2.5rem;
+    padding:3.5rem 1.5rem 3rem;
+    min-height:auto;
+  }
+
+  /* ✅ VIDEO: show on mobile, full-width responsive */
+  .hero-video-wrap{
+    display:block;          /* was display:none — now visible */
+    width:100%;
+    animation:fadeUp 0.8s 0.4s ease both;
+  }
+  .video-outer{
+    border-radius:var(--r);
+  }
+
+  .about-hero-inner{grid-template-columns:1fr;gap:2.5rem}
   .svc-grid,.testi-grid{grid-template-columns:1fr 1fr}
   .process-row{grid-template-columns:1fr 1fr;gap:2rem}.process-row::before{display:none}
   .personality-grid,.cs-card.open .cs-body,.contact-grid{grid-template-columns:1fr}
@@ -343,18 +368,45 @@ footer p{font-size:0.7rem;color:var(--text3)}
   .problem-grid{grid-template-columns:1fr}
   .nav-links,.nav-cta{display:none}
   .hamburger{display:flex}
+
+  /* ✅ PHOTOS: show full-width on tablet/mobile */
+  .photo-card{
+    max-width:340px;
+    margin:0 auto;
+  }
+  .photo-row{
+    grid-template-columns:repeat(3,1fr);
+    gap:0.75rem;
+  }
 }
+
 @media(max-width:580px){
-  .svc-grid,.testi-grid,.tools-grid,.photo-row,.cert-dark-grid{grid-template-columns:1fr}
+  .svc-grid,.testi-grid,.tools-grid,.cert-dark-grid{grid-template-columns:1fr}
+
+  /* ✅ PHOTOS: 3-col on small screens still looks good, but allow wrapping */
+  .photo-row{
+    grid-template-columns:repeat(3,1fr);
+    gap:0.5rem;
+  }
+
   .certs-grid{grid-template-columns:repeat(2,1fr)}
   .process-row{grid-template-columns:1fr}
   .hero-proof{gap:1.5rem}
-  .home-cta{padding:3rem 2rem}
-  .wrap{padding:0 1.5rem}
-  nav{padding:0 1.5rem}
-  .mob-menu{padding:1.5rem}
+  .home-cta{padding:3rem 1.5rem}
+  .wrap{padding:0 1.25rem}
+  nav{padding:0 1.25rem}
+  .mob-menu{padding:1.5rem 1.25rem}
+
+  /* ✅ VIDEO: make sure iframe wrapper fills nicely on small screens */
+  .video-responsive{border-radius:10px}
+  .video-outer{border-radius:10px}
+
+  /* Hero text tightening */
+  .hero-wrap{padding:3rem 1.25rem 2.5rem;gap:2rem}
+  .hero-sub{font-size:0.95rem}
 }
 
+/* Touch targets */
 *,*::before,*::after{-webkit-tap-highlight-color:transparent}
 .mob-link{min-height:52px!important;display:flex!important;align-items:center!important;padding-top:0!important;padding-bottom:0!important;cursor:pointer;-webkit-user-select:none;user-select:none}
 .mob-cta{min-height:52px!important;display:flex!important;align-items:center!important;justify-content:center!important;cursor:pointer}
@@ -413,18 +465,19 @@ footer p{font-size:0.7rem;color:var(--text3)}
       </div>
     </div>
 
-    <!-- ✅ FIXED: YouTube iframe with correct closing — only ONE closing </div> needed here -->
+    <!-- VIDEO: responsive 16:9 wrapper works on all screen sizes -->
     <div class="hero-video-wrap">
       <div class="video-outer">
-        <iframe
-          src="https://www.youtube.com/embed/9eVNpp_EpNI?si=xe1x9C0uBe-Jghmp"
-          title="YouTube video player"
-          frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          referrerpolicy="strict-origin-when-cross-origin"
-          allowfullscreen
-          style="width:100%;height:460px;display:block;">
-        </iframe>
+        <div class="video-responsive">
+          <iframe
+            src="https://www.youtube.com/embed/9eVNpp_EpNI?si=xe1x9C0uBe-Jghmp"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen>
+          </iframe>
+        </div>
       </div>
     </div>
 
@@ -522,30 +575,18 @@ footer p{font-size:0.7rem;color:var(--text3)}
   <div class="wrap">
     <div class="home-cta reveal">
       <span class="eyebrow">Ready to fix this?</span>
-
       <h2 style="position:relative;z-index:1">
         Stop running your business<br>on <em>controlled chaos.</em>
       </h2>
-
       <p>
         Book a free 30 minute call. We will talk through what is not working 
         and whether I can fix it. No pressure, no pitch, just an honest conversation.
       </p>
-
       <div class="cta-btns">
-        <a href="https://calendly.com/monicahmburu/one-on-one" target="_blank" class="btn-inv">
-          Book your free call
-        </a>
-
-        <a href="mailto:monicah.mburu@zohomail.com" class="btn-ghost-inv">
-          Email me
-        </a>
-
-        <a href="https://wa.me/254798498795" target="_blank" class="btn-ghost-inv">
-          Chat on WhatsApp
-        </a>
+        <a href="https://calendly.com/monicahmburu/one-on-one" target="_blank" class="btn-inv">Book your free call</a>
+        <a href="mailto:monicah.mburu@zohomail.com" class="btn-ghost-inv">Email me</a>
+        <a href="https://wa.me/254798498795" target="_blank" class="btn-ghost-inv">Chat on WhatsApp</a>
       </div>
-
     </div>
   </div>
 </section>
@@ -619,80 +660,46 @@ footer p{font-size:0.7rem;color:var(--text3)}
     <div class="wrap">
       <span class="eyebrow reveal">Experience</span>
       <h2 class="reveal">Where I have done the work</h2>
-
       <div class="tl-list">
-
         <div class="tl-row reveal">
-          <div class="tl-date">
-            <strong>Mar 2025 – Present</strong>
-            <span>Current role</span>
-          </div>
+          <div class="tl-date"><strong>Mar 2025 – Present</strong><span>Current role</span></div>
           <div class="tl-body">
             <div class="tl-co">Aspire Lending Ltd.</div>
             <div class="tl-role">Accounts Assistant and Receptionist</div>
             <div class="tl-desc">Managed 900+ client loan files and supported lending operations day to day. Within weeks of joining, I noticed senior staff losing hours every week to a slow manual reporting process. I redesigned it without being asked and cut prep time by 20%, freeing over 10 hours a week for the team.</div>
-            <div class="tl-pills">
-              <span class="pill">20% faster reports</span>
-              <span class="pill">10hrs/week freed</span>
-              <span class="pill">900+ files organised</span>
-            </div>
+            <div class="tl-pills"><span class="pill">20% faster reports</span><span class="pill">10hrs/week freed</span><span class="pill">900+ files organised</span></div>
           </div>
         </div>
-
         <div class="tl-row reveal">
-          <div class="tl-date">
-            <strong>Mar – Sep 2024</strong>
-            <span>6 months</span>
-          </div>
+          <div class="tl-date"><strong>Mar – Sep 2024</strong><span>6 months</span></div>
           <div class="tl-body">
             <div class="tl-co">Pitch Investors</div>
             <div class="tl-role">Accountant and Financial Analyst</div>
             <div class="tl-desc">As an accountant, I managed the full Accounts Payables and Receivables cycle. Cut late payments by 40% through better tracking and follow-up procedures. Reduced petty cash discrepancies by 60% and billing turnaround by 15%. Streamlined payroll processing with a 20% time reduction while maintaining 100% on-time disbursements.</div>
-            <div class="tl-pills">
-              <span class="pill">40% fewer late payments</span>
-              <span class="pill">60% fewer discrepancies</span>
-              <span class="pill">15% faster billing</span>
-            </div>
+            <div class="tl-pills"><span class="pill">40% fewer late payments</span><span class="pill">60% fewer discrepancies</span><span class="pill">15% faster billing</span></div>
             <div class="tl-sub-block">
               <div class="tl-desc">As a financial analyst I built financial models and DCF valuations for 10+ companies looking to raise investor funding. Improved forecasting accuracy by 30%. Wrote and presented 10+ investor-ready proposals and pitch decks, helping clients secure $500k+ in investor interest.</div>
-              <div class="tl-pills">
-                <span class="pill">$500k+ investor interest</span>
-                <span class="pill">30% better forecasting</span>
-                <span class="pill">40% more engagement</span>
-              </div>
+              <div class="tl-pills"><span class="pill">$500k+ investor interest</span><span class="pill">30% better forecasting</span><span class="pill">40% more engagement</span></div>
             </div>
           </div>
         </div>
-
         <div class="tl-row reveal">
-          <div class="tl-date">
-            <strong>Jul – Dec 2023</strong>
-            <span>Finance intern</span>
-          </div>
+          <div class="tl-date"><strong>Jul – Dec 2023</strong><span>Finance intern</span></div>
           <div class="tl-body">
             <div class="tl-co">Target Mart Limited</div>
             <div class="tl-role">Finance Intern</div>
             <div class="tl-desc">Managed Accounts Payables and Receivables, improved cash flow by 30% through timely processing. Reduced unpaid invoices by 25% through ageing report analysis and follow-ups. Achieved 100% on-time tax filings. Monthly reports contributed data that influenced 80% of key management decisions.</div>
-            <div class="tl-pills">
-              <span class="pill">30% cash flow improvement</span>
-              <span class="pill">25% fewer unpaid invoices</span>
-              <span class="pill">100% on-time tax filings</span>
-            </div>
+            <div class="tl-pills"><span class="pill">30% cash flow improvement</span><span class="pill">25% fewer unpaid invoices</span><span class="pill">100% on-time tax filings</span></div>
           </div>
         </div>
-
         <div class="tl-row reveal">
-          <div class="tl-date">
-            <strong>2024</strong>
-            <span>Training</span>
-          </div>
+          <div class="tl-date"><strong>2024</strong><span>Training</span></div>
           <div class="tl-body">
             <div class="tl-co">Athena</div>
             <div class="tl-role">Executive VA Training</div>
             <div class="tl-desc">Completed training at one of the most rigorous executive VA programs globally. Inbox management, calendar optimisation, SOP documentation, and proactive executive support.</div>
           </div>
         </div>
-
       </div>
     </div>
   </div>
@@ -703,28 +710,11 @@ footer p{font-size:0.7rem;color:var(--text3)}
       <span class="eyebrow reveal">Education</span>
       <h2 class="reveal">Academic background</h2>
       <div class="edu-grid">
-        <div class="edu-card reveal">
-          <div class="edu-yr">2025 to Present</div>
-          <div class="edu-deg">MSc Financial Engineering</div>
-          <div class="edu-school">WorldQuant University</div>
-        </div>
-        <div class="edu-card reveal">
-          <div class="edu-yr">2019 to 2024</div>
-          <div class="edu-deg">Bachelor of Arts — Economics and Mathematics</div>
-          <div class="edu-school">Kenyatta University</div>
-        </div>
-        <div class="edu-card reveal">
-          <div class="edu-yr">Ongoing</div>
-          <div class="edu-deg">CPA Foundation Level</div>
-          <div class="edu-school">KASNEB</div>
-        </div>
-        <div class="edu-card reveal">
-          <div class="edu-yr">2024</div>
-          <div class="edu-deg">ALX Virtual Assistant Certificate</div>
-          <div class="edu-school">ALX Africa</div>
-        </div>
+        <div class="edu-card reveal"><div class="edu-yr">2025 to Present</div><div class="edu-deg">MSc Financial Engineering</div><div class="edu-school">WorldQuant University</div></div>
+        <div class="edu-card reveal"><div class="edu-yr">2019 to 2024</div><div class="edu-deg">Bachelor of Arts — Economics and Mathematics</div><div class="edu-school">Kenyatta University</div></div>
+        <div class="edu-card reveal"><div class="edu-yr">Ongoing</div><div class="edu-deg">CPA Foundation Level</div><div class="edu-school">KASNEB</div></div>
+        <div class="edu-card reveal"><div class="edu-yr">2024</div><div class="edu-deg">ALX Virtual Assistant Certificate</div><div class="edu-school">ALX Africa</div></div>
       </div>
-
       <div style="margin-top:3rem">
         <span class="eyebrow reveal">Certifications</span>
         <h2 class="reveal" style="font-size:1.6rem">Credentials that back the work</h2>
@@ -1089,3 +1079,7 @@ if(ham && mob){
 </script>
 </body>
 </html>
+
+
+
+Claude is AI and can make mistakes. Please double-check responses.

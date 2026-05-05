@@ -111,17 +111,6 @@ h3{font-family:var(--serif);font-size:1.2rem;font-weight:500;color:var(--dark)}
 .plbl{font-size:0.69rem;color:var(--text3);margin-top:0.2rem;line-height:1.45}
 .hero-video-wrap{animation:fadeUp 0.8s 0.25s ease both}
 .video-outer{background:var(--dark2);border-radius:var(--r);overflow:hidden;border:1px solid rgba(255,255,255,0.06);box-shadow:0 20px 60px rgba(30,26,21,0.18)}
-.video-ph{aspect-ratio:9/16;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1rem;cursor:pointer;position:relative;overflow:hidden;max-height:460px}
-.video-ph::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 50% 40%,rgba(138,100,69,0.15),transparent 65%)}
-.video-ph-ring{width:68px;height:68px;border-radius:50%;border:2px solid rgba(138,100,69,0.5);display:flex;align-items:center;justify-content:center;position:relative;z-index:1;transition:transform 0.2s}
-.video-ph-ring:hover{transform:scale(1.06)}
-.video-ph-play{width:52px;height:52px;border-radius:50%;background:var(--ink);display:flex;align-items:center;justify-content:center}
-.video-ph-play svg{width:18px;height:18px;fill:#fff;margin-left:3px}
-.video-ph-text{font-size:0.76rem;color:rgba(255,255,255,0.45);position:relative;z-index:1;letter-spacing:0.03em}
-.video-ph-sub{font-size:0.65rem;color:rgba(255,255,255,0.25);position:relative;z-index:1}
-.video-meta-bar{padding:1rem 1.4rem;border-top:1px solid rgba(255,255,255,0.06)}
-.video-meta-bar p{font-size:0.74rem;color:rgba(255,255,255,0.35);font-weight:300}
-.video-meta-bar strong{color:rgba(255,255,255,0.7);font-weight:500}
 .strip{background:var(--dark);padding:1.1rem 0;overflow:hidden}
 .strip-inner{display:flex;gap:3rem;max-width:1100px;margin:0 auto;padding:0 2.5rem;flex-wrap:wrap}
 .strip-item{display:flex;align-items:center;gap:0.5rem;font-size:0.76rem;color:rgba(255,255,255,0.45);white-space:nowrap}
@@ -407,6 +396,7 @@ footer p{font-size:0.7rem;color:var(--text3)}
 
 <!-- ═══════════════════════════════════════ HOME ═══════════════════════════════════════ -->
 <div id="page-home" class="page active">
+
   <div class="hero-wrap">
     <div class="hero">
       <div class="hero-badge"><span class="hero-badge-dot"></span> Open to new clients</div>
@@ -422,20 +412,25 @@ footer p{font-size:0.7rem;color:var(--text3)}
         <div><div class="pnum">5</div><div class="plbl">finance and data certifications</div></div>
       </div>
     </div>
-    <iframe 
-      src="https://www.youtube.com/embed/9eVNpp_EpNI?si=xe1x9C0uBe-Jghmp" 
-      title="YouTube video player" 
-      frameborder="0" 
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-      referrerpolicy="strict-origin-when-cross-origin" 
-      allowfullscreen
-      style="width:100%;height:460px;display:block;">
-    </iframe>
+
+    <!-- ✅ FIXED: YouTube iframe with correct closing — only ONE closing </div> needed here -->
+    <div class="hero-video-wrap">
+      <div class="video-outer">
+        <iframe
+          src="https://www.youtube.com/embed/9eVNpp_EpNI?si=xe1x9C0uBe-Jghmp"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin"
+          allowfullscreen
+          style="width:100%;height:460px;display:block;">
+        </iframe>
       </div>
     </div>
-  </div>
 
- <div class="problem-section">
+  </div><!-- /hero-wrap -->
+
+  <div class="problem-section">
     <div class="wrap" style="display: flex; flex-direction: column; align-items: center; text-align: center;">
       <span class="eyebrow reveal" style="color:rgba(255,255,255,0.3)">Does this sound familiar?</span>
       <h2 class="reveal" style="color:#fff;max-width:560px">Most founders are great at their business. Running the admin around it is a different story.</h2>
@@ -443,7 +438,7 @@ footer p{font-size:0.7rem;color:var(--text3)}
       <div class="problem-grid reveal">
         <div class="prob-item">
             <div class="prob-n">01</div>
-            <h3>Disconnected Systems & Spreadsheets</h3>
+            <h3>Disconnected Systems &amp; Spreadsheets</h3>
             <p><strong style="font-weight: 700 !important;">The Problem:</strong> You have data sitting in five different sheets. None of them talks to each other. Answering a simple question about your own business takes an hour of digging.</p>
             <p><strong style="font-weight: 700 !important;">The Solution:</strong> Building custom financial and operational dashboards that centralise your data, making it easy to get the information you need.</p>
         </div>
@@ -456,8 +451,8 @@ footer p{font-size:0.7rem;color:var(--text3)}
         <div class="prob-item">
             <div class="prob-n">03</div>
             <h3>Manual work eating your week</h3>
-            <p><strong style="font-weight: 700 !important;">The Problem:</strong> Copying data between systems by hand. Chasing the same invoices every month. Sending the same emails over and over. Time that should be going into growing your business</p>
-           <p><strong style="font-weight: 700 !important;">The Solution:</strong> <p><strong>The Solution:</strong> Streamlining workflows and creating automations that eliminate the busywork.</p>
+            <p><strong style="font-weight: 700 !important;">The Problem:</strong> Copying data between systems by hand. Chasing the same invoices every month. Sending the same emails over and over. Time that should be going into growing your business.</p>
+            <p><strong style="font-weight: 700 !important;">The Solution:</strong> Streamlining workflows and creating automations that eliminate the busywork.</p>
         </div>
         <div class="prob-item">
             <div class="prob-n">04</div>
@@ -467,9 +462,9 @@ footer p{font-size:0.7rem;color:var(--text3)}
         </div>
       </div>
     </div>
-</div>
+  </div>
 
-<section>
+  <section>
     <div class="wrap">
       <span class="eyebrow reveal">How I help</span>
       <div class="wid-grid" style="display: flex; justify-content: center;">
@@ -489,13 +484,13 @@ footer p{font-size:0.7rem;color:var(--text3)}
       <span class="eyebrow reveal">How it works</span>
       <h2 class="reveal">From hello to <em>hands-off</em> in three steps.</h2>
       <div class="process-row">
-        <div class="proc-step reveal"><div class="proc-circle">1</div><h3>Audit & Organize</h3><p>We map out what isn't working—from disconnected spreadsheets to manual admin bottlenecks—to fix the root cause, not just the symptoms.</p></div>
-        <div class="proc-step reveal"><div class="proc-circle">2</div><h3>Build & Automate</h3><p>I design structured systems, clean up your books, and build custom workflows or VBA tools so your processes run without constant effort from you.</p></div>
-        <div class="proc-step reveal"><div class="proc-circle">3</div><h3>Analyze & Maintain</h3><p>I run the systems and turn your day-to-day data into clear, current financial insights, leaving you free to focus on growth.</p></div>
+        <div class="proc-step reveal"><div class="proc-circle">1</div><h3>Audit &amp; Organize</h3><p>We map out what isn't working—from disconnected spreadsheets to manual admin bottlenecks—to fix the root cause, not just the symptoms.</p></div>
+        <div class="proc-step reveal"><div class="proc-circle">2</div><h3>Build &amp; Automate</h3><p>I design structured systems, clean up your books, and build custom workflows or VBA tools so your processes run without constant effort from you.</p></div>
+        <div class="proc-step reveal"><div class="proc-circle">3</div><h3>Analyze &amp; Maintain</h3><p>I run the systems and turn your day-to-day data into clear, current financial insights, leaving you free to focus on growth.</p></div>
       </div>
     </div>
   </section>
-  
+
   <section>
     <div class="wrap">
       <span class="eyebrow reveal">What people I have worked with say</span>
@@ -537,7 +532,8 @@ footer p{font-size:0.7rem;color:var(--text3)}
       </div>
     </div>
   </section>
-</div><!-- /home -->
+
+</div><!-- /page-home -->
 
 <!-- ═══════════════════════════════════════ ABOUT ═══════════════════════════════════════ -->
 <div id="page-about" class="page">
@@ -609,7 +605,6 @@ footer p{font-size:0.7rem;color:var(--text3)}
 
       <div class="tl-list">
 
-        <!-- Aspire Lending -->
         <div class="tl-row reveal">
           <div class="tl-date">
             <strong>Mar 2025 – Present</strong>
@@ -627,7 +622,6 @@ footer p{font-size:0.7rem;color:var(--text3)}
           </div>
         </div>
 
-        <!-- Pitch Investors -->
         <div class="tl-row reveal">
           <div class="tl-date">
             <strong>Mar – Sep 2024</strong>
@@ -653,7 +647,6 @@ footer p{font-size:0.7rem;color:var(--text3)}
           </div>
         </div>
 
-        <!-- Target Mart -->
         <div class="tl-row reveal">
           <div class="tl-date">
             <strong>Jul – Dec 2023</strong>
@@ -671,7 +664,6 @@ footer p{font-size:0.7rem;color:var(--text3)}
           </div>
         </div>
 
-        <!-- Athena Training -->
         <div class="tl-row reveal">
           <div class="tl-date">
             <strong>2024</strong>

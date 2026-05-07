@@ -171,73 +171,86 @@ h3{font-family:var(--serif);font-size:1.2rem;font-weight:500;color:var(--dark)}
 .cta-contact{margin-top:1.5rem;font-size:0.74rem;color:rgba(255,255,255,0.28);position:relative;z-index:1}
 .cta-contact a{color:rgba(255,255,255,0.45);text-decoration:none}
 
-/* ABOUT */
+/* ── ABOUT PAGE ───────────────────────────────────────── */
+
+/* Hero */
 .about-hero{padding:5rem 0 4rem;background:var(--warm)}
-.about-hero-inner{display:grid;grid-template-columns:1fr 400px;gap:5rem;align-items:start;max-width:1100px;margin:0 auto;padding:0 2.5rem}
-.about-hero h1{margin-bottom:1.25rem}
-.about-hero p{font-size:0.95rem;color:var(--text2);font-weight:300;line-height:1.85;margin-bottom:1rem}
-.about-hero p strong{color:var(--text);font-weight:500}
-.photo-card{background:var(--dark2);border-radius:var(--r);overflow:hidden;border:1px solid rgba(255,255,255,0.06)}
-.photo-ph{aspect-ratio:3/4;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:0.75rem;background:linear-gradient(145deg,#2a241c,#1e1a15);position:relative}
-.photo-ph::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 50% 30%,rgba(138,100,69,0.12),transparent 60%)}
-.photo-initials{width:80px;height:80px;border-radius:50%;border:2px solid rgba(138,100,69,0.4);display:flex;align-items:center;justify-content:center;font-family:var(--serif);font-size:1.6rem;font-weight:600;color:var(--ink2);position:relative;z-index:1}
-.photo-ph-label{font-size:0.7rem;color:rgba(255,255,255,0.25);position:relative;z-index:1;text-align:center;line-height:1.5}
-.photo-ph-label strong{display:block;color:rgba(255,255,255,0.45);font-size:0.75rem;margin-bottom:0.2rem}
-.photo-meta{padding:1.1rem 1.3rem;border-top:1px solid rgba(255,255,255,0.06)}
+.about-hero-inner{display:grid;grid-template-columns:1fr 380px;gap:5rem;align-items:start;max-width:1100px;margin:0 auto;padding:0 2.5rem}
+.about-intro-text p{font-size:0.95rem;color:var(--text2);font-weight:300;line-height:1.9;margin-bottom:1rem}
+.about-intro-text p strong{color:var(--text);font-weight:500}
+.about-intro-text h1{margin-bottom:1.5rem}
+
+/* Photo card */
+.photo-card{background:var(--dark2);border-radius:var(--r);overflow:hidden;border:1px solid rgba(255,255,255,0.06);box-shadow:0 20px 50px rgba(30,26,21,0.14)}
+.photo-card img{width:100%;height:auto;display:block;object-fit:cover}
+.photo-meta{padding:1rem 1.3rem;border-top:1px solid rgba(255,255,255,0.06)}
 .photo-meta p{font-size:0.72rem;color:rgba(255,255,255,0.3)}
-.photo-row{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin-top:3rem}
-.photo-sm{background:var(--dark2);border-radius:var(--r);overflow:hidden;border:1px solid rgba(255,255,255,0.06);aspect-ratio:1}
-.photo-sm-inner{width:100%;height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:0.5rem;background:linear-gradient(145deg,#2a241c,#1e1a15);position:relative}
-.photo-sm-inner::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at center,rgba(138,100,69,0.1),transparent 65%)}
-.photo-sm-label{font-size:0.62rem;color:rgba(255,255,255,0.25);position:relative;z-index:1;text-align:center;padding:0 0.5rem;line-height:1.5}
-.photo-sm-icon{font-size:1.5rem;position:relative;z-index:1}
-.photo-add-btn{margin-top:0.5rem;font-size:0.6rem;color:var(--ink2);border:1px dashed rgba(138,100,69,0.35);border-radius:5px;padding:0.2rem 0.5rem;position:relative;z-index:1;background:rgba(138,100,69,0.08)}
+
+/* Personality / Traits */
 .personality-section{padding:5rem 0;background:var(--cream)}
-.personality-grid{display:grid;grid-template-columns:1fr 1fr;gap:3rem;margin-top:2.5rem;align-items:start}
-.personality-text p{font-size:0.92rem;color:var(--text2);line-height:1.85;font-weight:300;margin-bottom:1rem}
+.personality-grid{display:grid;grid-template-columns:1fr 1fr;gap:4rem;margin-top:2.5rem;align-items:start}
+.personality-text p{font-size:0.92rem;color:var(--text2);line-height:1.9;font-weight:300;margin-bottom:1rem}
 .personality-text p strong{color:var(--text);font-weight:500}
 .personality-text p em{color:var(--ink);font-style:italic}
-.trait-list{display:flex;flex-direction:column;gap:0.85rem;margin-top:0.5rem}
-.trait-item{display:flex;gap:1rem;align-items:flex-start;background:#fff;border:1px solid var(--border);border-radius:var(--r);padding:1.1rem 1.25rem;transition:border-color 0.2s}
-.trait-item:hover{border-color:var(--ink-border)}
-.trait-num{font-family:var(--serif);font-size:1.5rem;font-weight:600;color:rgba(138,100,69,0.2);line-height:1;flex-shrink:0;width:2rem}
-.trait-text h4{font-size:0.85rem;font-weight:500;color:var(--text);margin-bottom:0.2rem}
-.trait-text p{font-size:0.76rem;color:var(--text2);line-height:1.6;font-weight:300}
 
-/* TIMELINE */
+.trait-list{display:flex;flex-direction:column;gap:0.85rem}
+.trait-item{display:flex;gap:1rem;align-items:flex-start;background:#fff;border:1px solid var(--border);border-radius:var(--r);padding:1.1rem 1.25rem;transition:border-color 0.2s,transform 0.2s}
+.trait-item:hover{border-color:var(--ink-border);transform:translateX(4px)}
+.trait-num{font-family:var(--serif);font-size:1.5rem;font-weight:600;color:rgba(138,100,69,0.18);line-height:1;flex-shrink:0;width:2.2rem;padding-top:0.1rem}
+.trait-text h4{font-size:0.85rem;font-weight:500;color:var(--text);margin-bottom:0.2rem}
+.trait-text p{font-size:0.76rem;color:var(--text2);line-height:1.65;font-weight:300}
+
+/* Photo row */
+.photo-row{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin-top:1.5rem}
+.photo-sm{border-radius:var(--r);overflow:hidden;aspect-ratio:1;border:1px solid var(--border)}
+.photo-sm img{width:100%;height:100%;object-fit:cover;display:block;transition:transform 0.4s ease}
+.photo-sm:hover img{transform:scale(1.04)}
+
+/* Timeline */
 .timeline-section{padding:5rem 0;background:var(--warm)}
-.tl-list{position:relative;margin-top:2.5rem}
-.tl-list::before{content:'';position:absolute;left:160px;top:0;bottom:0;width:1px;background:rgba(58,48,40,0.15)}
-.tl-row{display:grid;grid-template-columns:160px 1fr;gap:0 2.5rem;margin-bottom:2.8rem;position:relative}
+
+.tl-list{position:relative;margin-top:2.5rem;display:flex;flex-direction:column;gap:0}
+.tl-list::before{content:'';position:absolute;left:160px;top:8px;bottom:0;width:1px;background:rgba(58,48,40,0.15)}
+
+.tl-row{display:grid;grid-template-columns:160px 1fr;gap:0 2.5rem;padding-bottom:2.8rem;position:relative}
+.tl-row:last-child{padding-bottom:0}
 .tl-row::before{content:'';position:absolute;left:156px;top:7px;width:9px;height:9px;border-radius:50%;background:var(--warm);border:2px solid var(--ink);z-index:1}
+
 .tl-date{padding-right:1.5rem;text-align:right;padding-top:2px}
 .tl-date strong{display:block;font-size:0.78rem;font-weight:500;color:var(--text);line-height:1.4;margin-bottom:0.15rem}
 .tl-date span{font-size:0.68rem;color:var(--text3)}
-.tl-body{padding-left:1.5rem}
-.tl-co{font-family:var(--serif);font-size:1rem;font-weight:600;color:var(--dark);margin-bottom:0.1rem}
-.tl-role{font-size:0.72rem;color:var(--ink);text-transform:uppercase;letter-spacing:0.08em;font-weight:500;margin-bottom:0.65rem}
-.tl-desc{font-size:0.82rem;color:var(--text2);line-height:1.75;font-weight:300;margin-bottom:0.75rem}
-.tl-pills{display:flex;flex-wrap:wrap;gap:0.35rem;margin-top:0.35rem}
-.pill{background:var(--ink-pale);border:1px solid var(--ink-border);color:var(--ink);font-size:0.67rem;font-weight:500;padding:0.2rem 0.6rem;border-radius:100px}
-.tl-sub-block{margin-top:1.1rem;padding-top:1.1rem;border-top:1px solid rgba(58,48,40,0.1)}
-.tl-sub-block .tl-role{margin-top:0.25rem}
 
-/* EDUCATION & CERTS */
+.tl-body{padding-left:1.5rem}
+.tl-co{font-family:var(--serif);font-size:1.1rem;font-weight:600;color:var(--dark);margin-bottom:0.15rem}
+.tl-role{font-size:0.7rem;color:var(--ink);text-transform:uppercase;letter-spacing:0.1em;font-weight:500;margin-bottom:0.7rem}
+
+.tl-desc ul{margin-top:0.4rem;padding-left:1.25rem;display:flex;flex-direction:column;gap:0.45rem}
+.tl-desc ul li{font-size:0.82rem;color:var(--text2);line-height:1.7;font-weight:300}
+.tl-desc ul li strong{color:var(--text);font-weight:500}
+
+.tl-pills{display:flex;flex-wrap:wrap;gap:0.35rem;margin-top:0.85rem}
+.pill{background:var(--ink-pale);border:1px solid var(--ink-border);color:var(--ink);font-size:0.67rem;font-weight:500;padding:0.22rem 0.65rem;border-radius:100px}
+
+/* Sub-role block (used when one row has two roles) */
+.tl-sub-role{margin-top:1.4rem;padding-top:1.25rem;border-top:1px dashed rgba(138,100,69,0.2)}
+
+/* Education */
 .edu-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1rem;margin-top:2rem}
-.edu-card{background:#fff;border:1px solid var(--border);border-radius:var(--r);padding:1.5rem;transition:border-color 0.2s}
-.edu-card:hover{border-color:var(--ink-border)}
+.edu-card{background:#fff;border:1px solid var(--border);border-radius:var(--r);padding:1.5rem;transition:border-color 0.2s,transform 0.2s}
+.edu-card:hover{border-color:var(--ink-border);transform:translateY(-2px)}
 .edu-yr{font-size:0.63rem;color:var(--text3);text-transform:uppercase;letter-spacing:0.08em;margin-bottom:0.35rem}
-.edu-deg{font-family:var(--serif);font-size:0.95rem;font-weight:600;color:var(--dark);line-height:1.3;margin-bottom:0.15rem}
+.edu-deg{font-family:var(--serif);font-size:0.98rem;font-weight:600;color:var(--dark);line-height:1.3;margin-bottom:0.2rem}
 .edu-school{font-size:0.74rem;color:var(--ink)}
-.certs-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:0.85rem;margin-top:2rem}
+
+/* Certifications */
+.certs-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:0.85rem;margin-top:1.5rem}
 .cert-card{background:#fff;border:1px solid var(--border);border-radius:var(--r);padding:1.1rem 0.85rem;text-align:center;transition:all 0.2s;cursor:pointer}
-.cert-card:hover{border-color:var(--ink-border);transform:translateY(-2px)}
+.cert-card:hover{border-color:var(--ink-border);transform:translateY(-2px);box-shadow:0 6px 20px rgba(58,48,40,0.07)}
 .cert-ico{font-size:1.5rem;margin-bottom:0.5rem;display:block}
 .cert-name{font-size:0.67rem;font-weight:500;color:var(--text);line-height:1.35;margin-bottom:0.2rem}
 .cert-by{font-size:0.58rem;color:var(--text3)}
-.cert-add{margin-top:0.5rem;font-size:0.56rem;color:var(--ink);border:1px dashed var(--ink-border);border-radius:4px;padding:0.22rem;background:var(--ink-pale)}
 
-/* SERVICES */
+/* ── SERVICES ─────────────────────────────────────────── */
 .svc-hero{padding:5rem 0 4rem;background:var(--warm)}
 .tools-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:0.85rem;margin-top:2rem}
 .tool-card{background:#fff;border:1px solid var(--border);border-radius:var(--r);padding:1.2rem 0.85rem;text-align:center;transition:all 0.2s}
@@ -246,7 +259,7 @@ h3{font-family:var(--serif);font-size:1.2rem;font-weight:500;color:var(--dark)}
 .tool-name{font-size:0.7rem;font-weight:500;color:var(--text);margin-bottom:0.12rem}
 .tool-cat{font-size:0.58rem;color:var(--text3)}
 
-/* CASE STUDIES */
+/* ── CASE STUDIES ─────────────────────────────────────── */
 .cs-hero{padding:5rem 0 4rem;background:var(--warm)}
 .cs-list{display:flex;flex-direction:column;gap:1.5rem;margin-top:3rem}
 .cs-card{background:#fff;border:1px solid var(--border);border-radius:var(--r);overflow:hidden;transition:border-color 0.2s}
@@ -275,7 +288,7 @@ h3{font-family:var(--serif);font-size:1.2rem;font-weight:500;color:var(--dark)}
 .result-pills{display:flex;flex-wrap:wrap;gap:0.35rem}
 .rpill{font-size:0.69rem;font-weight:500;color:var(--ink);background:#fff;border:1px solid var(--ink-border);padding:0.2rem 0.6rem;border-radius:100px}
 
-/* PORTFOLIO */
+/* ── PORTFOLIO ────────────────────────────────────────── */
 .port-hero{padding:5rem 0 4rem;background:var(--warm)}
 .port-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1.4rem;margin-top:3rem}
 .port-card{background:#fff;border:1px solid var(--border);border-radius:var(--r);overflow:hidden;transition:all 0.25s}
@@ -300,9 +313,8 @@ h3{font-family:var(--serif);font-size:1.2rem;font-weight:500;color:var(--dark)}
 .cert-dark-ico{font-size:1.35rem;margin-bottom:0.5rem;display:block}
 .cert-dark-name{font-size:0.65rem;font-weight:500;color:rgba(255,255,255,0.7);line-height:1.35;margin-bottom:0.2rem}
 .cert-dark-by{font-size:0.56rem;color:rgba(255,255,255,0.28)}
-.cert-dark-add{margin-top:0.45rem;font-size:0.55rem;color:var(--ink2);border:1px dashed rgba(138,100,69,0.35);border-radius:4px;padding:0.2rem;background:rgba(138,100,69,0.08)}
 
-/* CONTACT */
+/* ── CONTACT ──────────────────────────────────────────── */
 .contact-hero{padding:5rem 0 4rem;background:var(--warm)}
 .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:4rem;margin-top:3rem}
 .c-method{display:flex;align-items:center;gap:1rem;background:#fff;border:1px solid var(--border);border-radius:var(--r);padding:1.1rem 1.3rem;text-decoration:none;transition:border-color 0.2s;margin-bottom:0.85rem}
@@ -328,21 +340,10 @@ footer p{font-size:0.7rem;color:var(--text3)}
 .footer-links a{font-size:0.7rem;color:var(--text3);text-decoration:none;transition:color 0.2s}
 .footer-links a:hover{color:var(--ink)}
 
-/* =====================================================
-   RESPONSIVE — tablet & mobile
-   ===================================================== */
+/* ── RESPONSIVE ───────────────────────────────────────── */
 @media(max-width:900px){
-  .hero-wrap{
-    grid-template-columns:1fr;
-    gap:2.5rem;
-    padding:3.5rem 1.5rem 3rem;
-    min-height:auto;
-  }
-  .hero-video-wrap{
-    display:block;
-    width:100%;
-    animation:fadeUp 0.8s 0.4s ease both;
-  }
+  .hero-wrap{grid-template-columns:1fr;gap:2.5rem;padding:3.5rem 1.5rem 3rem;min-height:auto}
+  .hero-video-wrap{display:block;width:100%}
   .video-outer{border-radius:var(--r)}
   .about-hero-inner{grid-template-columns:1fr;gap:2.5rem}
   .svc-grid,.testi-grid{grid-template-columns:1fr 1fr}
@@ -362,7 +363,6 @@ footer p{font-size:0.7rem;color:var(--text3)}
   .photo-card{max-width:340px;margin:0 auto}
   .photo-row{grid-template-columns:repeat(3,1fr);gap:0.75rem}
 }
-
 @media(max-width:580px){
   .svc-grid,.testi-grid,.tools-grid,.cert-dark-grid{grid-template-columns:1fr}
   .photo-row{grid-template-columns:repeat(3,1fr);gap:0.5rem}
@@ -373,12 +373,9 @@ footer p{font-size:0.7rem;color:var(--text3)}
   .wrap{padding:0 1.25rem}
   nav{padding:0 1.25rem}
   .mob-menu{padding:1.5rem 1.25rem}
-  .video-responsive{border-radius:10px}
-  .video-outer{border-radius:10px}
   .hero-wrap{padding:3rem 1.25rem 2.5rem;gap:2rem}
   .hero-sub{font-size:0.95rem}
 }
-
 *,*::before,*::after{-webkit-tap-highlight-color:transparent}
 .mob-link{min-height:52px!important;display:flex!important;align-items:center!important;padding-top:0!important;padding-bottom:0!important;cursor:pointer;-webkit-user-select:none;user-select:none}
 .mob-cta{min-height:52px!important;display:flex!important;align-items:center!important;justify-content:center!important;cursor:pointer}
@@ -418,14 +415,14 @@ footer p{font-size:0.7rem;color:var(--text3)}
   <a href="https://calendly.com/monicahmburu/one-on-one" target="_blank" class="mob-cta">Book a free call</a>
 </div>
 
-<!-- ═══════════════════════════════════════ HOME ═══════════════════════════════════════ -->
+<!-- ═══════════════════════════════════ HOME ═══════════════════════════════════ -->
 <div id="page-home" class="page active">
 
   <div class="hero-wrap">
     <div class="hero">
       <div class="hero-badge"><span class="hero-badge-dot"></span> Open to new clients</div>
       <h1>Your books are behind.<br>Your inbox is chaos.<br><em>I fix that.</em></h1>
-      <p class="hero-sub">I learn how your business runs then build systems that keep your processes running smoothly and turn your financial data into<strong> a strategic advantage.</strong></p>
+      <p class="hero-sub">I learn how your business runs then build systems that keep your processes running smoothly and turn your financial data into <strong>a strategic advantage.</strong></p>
       <div class="hero-actions">
         <a href="https://calendly.com/monicahmburu/one-on-one" target="_blank" class="btn">Book a free discovery call</a>
         <a href="javascript:void(0)" onclick="return show('cases')" class="btn-ghost">See case studies</a>
@@ -436,53 +433,44 @@ footer p{font-size:0.7rem;color:var(--text3)}
         <div><div class="pnum">5</div><div class="plbl">finance and data certifications</div></div>
       </div>
     </div>
-
     <div class="hero-video-wrap">
       <div class="video-outer">
         <div class="video-responsive">
-          <iframe
-            src="https://www.youtube.com/embed/9eVNpp_EpNI?si=xe1x9C0uBe-Jghmp"
-            title="YouTube video player"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            referrerpolicy="strict-origin-when-cross-origin"
-            allowfullscreen>
-          </iframe>
+          <iframe src="https://www.youtube.com/embed/9eVNpp_EpNI?si=xe1x9C0uBe-Jghmp" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
         </div>
       </div>
     </div>
-
-  </div><!-- /hero-wrap -->
+  </div>
 
   <div class="problem-section">
-    <div class="wrap" style="display: flex; flex-direction: column; align-items: center; text-align: center;">
+    <div class="wrap" style="display:flex;flex-direction:column;align-items:center;text-align:center">
       <span class="eyebrow reveal" style="color:rgba(255,255,255,0.3)">Does this sound familiar?</span>
       <h2 class="reveal" style="color:#fff;max-width:560px">Most founders are great at their business. Running the admin around it is a different story.</h2>
       <p class="reveal" style="color:rgba(255,255,255,0.45);font-size:0.9rem;font-weight:300;max-width:520px;margin-top:0.75rem;margin-bottom:3rem;line-height:1.85">This is a systems problem and systems problems have solutions. Here is what happens when operations fall out of alignment and how I fix them:</p>
       <div class="problem-grid reveal">
         <div class="prob-item">
-            <div class="prob-n">01</div>
-            <h3>Disconnected Systems &amp; Spreadsheets</h3>
-            <p><strong style="font-weight: 700 !important;">The Problem:</strong> You have data sitting in five different sheets. None of them talks to each other. Answering a simple question about your own business takes an hour of digging.</p>
-            <p><strong style="font-weight: 700 !important;">The Solution:</strong> Building custom financial and operational dashboards that centralise your data, making it easy to get the information you need.</p>
+          <div class="prob-n">01</div>
+          <h3>Disconnected Systems &amp; Spreadsheets</h3>
+          <p><strong style="font-weight:700!important">The Problem:</strong> You have data sitting in five different sheets. None of them talks to each other. Answering a simple question about your own business takes an hour of digging.</p>
+          <p style="margin-top:0.6rem"><strong style="font-weight:700!important">The Solution:</strong> Building custom financial and operational dashboards that centralise your data, making it easy to get the information you need.</p>
         </div>
         <div class="prob-item">
-            <div class="prob-n">02</div>
-            <h3>No real picture of your finances</h3>
-            <p><strong style="font-weight: 700 !important;">The Problem:</strong> You know roughly what came in. You are less sure what went out. The books are a few months behind, and tax season is not slowing down for anyone.</p>
-            <p><strong style="font-weight: 700 !important;">The Solution:</strong> Having ongoing reconciliations and accurate bookkeeping that give you a real picture of your numbers at all times.</p>
+          <div class="prob-n">02</div>
+          <h3>No real picture of your finances</h3>
+          <p><strong style="font-weight:700!important">The Problem:</strong> You know roughly what came in. You are less sure what went out. The books are a few months behind, and tax season is not slowing down for anyone.</p>
+          <p style="margin-top:0.6rem"><strong style="font-weight:700!important">The Solution:</strong> Having ongoing reconciliations and accurate bookkeeping that give you a real picture of your numbers at all times.</p>
         </div>
         <div class="prob-item">
-            <div class="prob-n">03</div>
-            <h3>Manual work eating your week</h3>
-            <p><strong style="font-weight: 700 !important;">The Problem:</strong> Copying data between systems by hand. Chasing the same invoices every month. Sending the same emails over and over. Time that should be going into growing your business.</p>
-            <p><strong style="font-weight: 700 !important;">The Solution:</strong> Streamlining workflows and creating automations that eliminate the busywork.</p>
+          <div class="prob-n">03</div>
+          <h3>Manual work eating your week</h3>
+          <p><strong style="font-weight:700!important">The Problem:</strong> Copying data between systems by hand. Chasing the same invoices every month. Sending the same emails over and over. Time that should be going into growing your business.</p>
+          <p style="margin-top:0.6rem"><strong style="font-weight:700!important">The Solution:</strong> Streamlining workflows and creating automations that eliminate the busywork.</p>
         </div>
         <div class="prob-item">
-            <div class="prob-n">04</div>
-            <h3>The business is running you</h3>
-            <p><strong style="font-weight: 700 !important;">The Problem:</strong> You open your laptop and immediately feel behind. There is no system, just a pile of things demanding attention. You are reacting, not leading.</p>
-            <p><strong style="font-weight: 700 !important;">The Solution:</strong> Structuring administrative support that restores order and keeps your processes running smoothly.</p>
+          <div class="prob-n">04</div>
+          <h3>The business is running you</h3>
+          <p><strong style="font-weight:700!important">The Problem:</strong> You open your laptop and immediately feel behind. There is no system, just a pile of things demanding attention. You are reacting, not leading.</p>
+          <p style="margin-top:0.6rem"><strong style="font-weight:700!important">The Solution:</strong> Structuring administrative support that restores order and keeps your processes running smoothly.</p>
         </div>
       </div>
     </div>
@@ -491,8 +479,8 @@ footer p{font-size:0.7rem;color:var(--text3)}
   <section>
     <div class="wrap">
       <span class="eyebrow reveal">How I help</span>
-      <div class="wid-grid" style="display: flex; justify-content: center;">
-        <div class="reveal" style="max-width: 680px; width: 100%;">
+      <div style="display:flex;justify-content:center">
+        <div class="reveal" style="max-width:680px;width:100%">
           <h2>Not just finishing tasks.<br><em>I Build Systems.</em></h2>
           <p style="font-size:0.93rem;color:var(--text2);font-weight:300;line-height:1.85;margin-top:1rem;margin-bottom:1rem">Running a business is demanding, and the administrative side often falls out of alignment. I take the time to understand how your business runs, then build the operational structures that keep your day to day processes moving smoothly.</p>
           <p style="font-size:0.93rem;color:var(--text2);font-weight:300;line-height:1.85;margin-bottom:1rem">The result? Workflows that handle themselves, clean books you can trust, and a financial picture that is current.</p>
@@ -506,12 +494,12 @@ footer p{font-size:0.7rem;color:var(--text3)}
   <section style="background:var(--warm)">
     <div class="wrap">
       <span class="eyebrow reveal">How it works</span>
-      <h2 class="reveal">From hello to <em>hands-off</em> in Four steps.</h2>
+      <h2 class="reveal">From hello to <em>hands-off</em> in four steps.</h2>
       <div class="process-row">
-        <div class="proc-step reveal"><div class="proc-circle">1</div><h3>Audit &amp; Organise </h3><p>I map out what is and isn't working for your business. I go through your data, your emails, your calendar and overall how your business runs to find what is broken and why.</p></div>
+        <div class="proc-step reveal"><div class="proc-circle">1</div><h3>Audit &amp; Organise</h3><p>I map out what is and isn't working for your business. I go through your data, your emails, your calendar and overall how your business runs to find what is broken and why.</p></div>
         <div class="proc-step reveal"><div class="proc-circle">2</div><h3>Build &amp; Automate</h3><p>Once I understand the problem, I build systems, clean up your books, and build custom workflows and automations so your processes run without requiring constant effort from you.</p></div>
-        <div class="proc-step reveal"><div class="proc-circle">3</div><h3>Review &amp; Refine</h3><p>This is where you tell me how it's working. You try out the new systems, and we see if they truly make your life easier. If anything feels off or needs to be different, I refine and polish it until it fits your business perfectly.</p></div>
-        <div class="proc-step reveal"><div class="proc-circle">4</div><h3>Analyze &amp; Maintain</h3><p>After we agree that the systems are perfect, I stay to keep them running. I turn your data into simple reports so you can see how the business is doing as well as maintain workflows that ensure repetitive tasks that consume your time no longer stress you, leaving you free to focus on growth.</p></div>
+        <div class="proc-step reveal"><div class="proc-circle">3</div><h3>Review &amp; Refine</h3><p>You try out the new systems and we see if they truly make your life easier. If anything feels off, I refine and polish it until it fits your business perfectly.</p></div>
+        <div class="proc-step reveal"><div class="proc-circle">4</div><h3>Analyse &amp; Maintain</h3><p>I stay to keep things running. I turn your data into simple reports so you can see how the business is doing and maintain workflows so repetitive tasks no longer stress you.</p></div>
       </div>
     </div>
   </section>
@@ -523,9 +511,9 @@ footer p{font-size:0.7rem;color:var(--text3)}
       <div class="testi-grid">
         <div class="testi-card reveal">
           <div class="stars">★★★★★</div>
-          <p class="testi-q">"Before working with Monicah our receipts were a mess.She created a filing system that made tracing receipts very fast and easy for the accounts team and the auditors. I had no proof of where money was going month to month."</p>
+          <p class="testi-q">"Before working with Monicah our receipts were a mess. She created a filing system that made tracing receipts very fast and easy for the accounts team and the auditors. I had no proof of where money was going month to month."</p>
           <div class="testi-div"></div>
-          <div class="testi-name">Operations manager</div><div class="testi-co"> Target Mart Limited · Nairobi</div>
+          <div class="testi-name">Operations Manager</div><div class="testi-co">Target Mart Limited · Nairobi</div>
         </div>
         <div class="testi-card reveal">
           <div class="stars">★★★★★</div>
@@ -547,13 +535,8 @@ footer p{font-size:0.7rem;color:var(--text3)}
     <div class="wrap">
       <div class="home-cta reveal">
         <span class="eyebrow">Ready to fix this?</span>
-        <h2 style="position:relative;z-index:1">
-          Stop running your business<br>on <em>controlled chaos.</em>
-        </h2>
-        <p>
-          Book a free 30 minute call. We will talk through what is not working 
-          and whether I can fix it. No pressure, no pitch, just an honest conversation.
-        </p>
+        <h2 style="position:relative;z-index:1">Stop running your business<br>on <em>controlled chaos.</em></h2>
+        <p>Book a free 30 minute call. We will talk through what is not working and whether I can fix it. No pressure, no pitch, just an honest conversation.</p>
         <div class="cta-btns">
           <a href="https://calendly.com/monicahmburu/one-on-one" target="_blank" class="btn-inv">Book your free call</a>
           <a href="mailto:monicah.mburu@zohomail.com" class="btn-ghost-inv">Email me</a>
@@ -565,19 +548,19 @@ footer p{font-size:0.7rem;color:var(--text3)}
 
 </div><!-- /page-home -->
 
-<!-- ═══════════════════════════════════════ ABOUT ═══════════════════════════════════════ -->
+<!-- ═══════════════════════════════════ ABOUT ══════════════════════════════════ -->
 <div id="page-about" class="page">
 
-  <!-- HERO: 2-col grid — left text, right photo -->
+  <!-- ── Hero ── -->
   <div class="about-hero">
     <div class="about-hero-inner">
 
-      <!-- LEFT COLUMN -->
-      <div>
+      <!-- Left: text -->
+      <div class="about-intro-text">
         <span class="eyebrow">About me</span>
         <h1>The finance brain<br>merged with<em> operations.</em></h1>
         <p style="margin-top:1.25rem">I am Monicah and I have a confession 🤭. I genuinely enjoy untangling messy spreadsheets and cleaning up systems that no longer work. Most people find that strange but people I have worked with find it very useful.</p>
-        <p>I studied Economics and Mathematics because I wanted to understand how numbers tell stories. That curiosity has has grown into a full career in financial analysis, bookkeeping, and operations support, and it is why I notice the discrepancies that everyone else scrolls past.</p>
+        <p>I studied Economics and Mathematics because I wanted to understand how numbers tell stories. That curiosity has grown into a full career in financial analysis, bookkeeping, and operations support — and it is why I notice the discrepancies that everyone else scrolls past.</p>
         <p>I am currently completing my <strong>MSc in Financial Engineering at WorldQuant University</strong> and I hold five certifications in finance and data. So when I say I understand your numbers, I have the background to back that up.</p>
         <div style="display:flex;gap:0.75rem;margin-top:2rem;flex-wrap:wrap">
           <a href="https://calendly.com/monicahmburu/one-on-one" target="_blank" class="btn">Book a free call</a>
@@ -585,126 +568,266 @@ footer p{font-size:0.7rem;color:var(--text3)}
         </div>
       </div>
 
-      <!-- RIGHT COLUMN: photo only -->
+      <!-- Right: photo -->
       <div>
         <figure class="photo-card">
           <img
             src="https://lh3.googleusercontent.com/d/10KcYq3HJd_FPOkHjxR6sH8PXcxGq1NoY"
             alt="Monicah Mburu"
-            style="width:100%;height:auto;display:block;object-fit:cover;"
           >
           <figcaption class="photo-meta">
-            <p>Professional Data Analyst &amp; Systems Architect</p>
+            <p>Financial Analyst &amp; Operations Specialist · Nairobi</p>
           </figcaption>
         </figure>
       </div>
 
-    </div><!-- /about-hero-inner -->
+    </div>
   </div><!-- /about-hero -->
 
-  <!-- PERSONALITY: full-width section -->
+  <!-- ── Personality ── -->
   <div class="personality-section">
     <div class="wrap">
       <span class="eyebrow reveal">Who I actually am</span>
       <h2 class="reveal">Curious. Detail-obsessed.<br><em>Genuinely enjoys fixing things.</em></h2>
+
       <div class="personality-grid">
+        <!-- Left: prose -->
         <div class="personality-text reveal">
           <p>I am the person who, when handed a broken spreadsheet, does not sigh and muddle through. I open it up, trace the formula, find the error, fix it, and then write a note explaining what went wrong so it does not happen again. That is just how my brain works.</p>
           <p>Working with me is not transactional. I do not clock in, complete tasks, and disappear. I get invested. I learn how your business works end to end. I start to notice patterns and inefficiencies you stopped seeing because you have been too close to the work for too long.</p>
           <p>I will tell you when something does not make sense. I will flag the issue before you notice it. And I will do it clearly, without drama, because <em>that is more useful than staying quiet.</em></p>
           <p>I care a lot about sustainable business and climate-conscious finance. I am especially drawn to working with founders who are building something with intention, not just profit. That kind of work energises me.</p>
         </div>
+
+        <!-- Right: traits -->
         <div class="reveal">
           <div class="trait-list">
-            <div class="trait-item"><div class="trait-num">01</div><div class="trait-text"><h4>Detail-obsessed by nature</h4><p>I notice the small discrepancies. I notice the email that needed a follow-up three days ago. That attention is not something I switch on. It is just how I operate.</p></div></div>
-            <div class="trait-item"><div class="trait-num">02</div><div class="trait-text"><h4>I communicate before you have to ask</h4><p>You will not need to chase me for updates. I flag issues before they become problems and keep you informed without flooding your inbox.</p></div></div>
-            <div class="trait-item"><div class="trait-num">03</div><div class="trait-text"><h4>Genuinely curious about your business</h4><p>I ask questions other people skip. I want to understand how your business actually works, not just the task on the surface, because that is the only way to build something that actually helps.</p></div></div>
-            <div class="trait-item"><div class="trait-num">04</div><div class="trait-text"><h4>No micromanaging needed</h4><p>Give me a clear brief and clear goals. I will handle the rest and come back to you with results, not questions about every small decision.</p></div></div>
+            <div class="trait-item">
+              <div class="trait-num">01</div>
+              <div class="trait-text">
+                <h4>Detail-obsessed by nature</h4>
+                <p>I notice the small discrepancies. I notice the email that needed a follow-up three days ago. That attention is not something I switch on — it is just how I operate.</p>
+              </div>
+            </div>
+            <div class="trait-item">
+              <div class="trait-num">02</div>
+              <div class="trait-text">
+                <h4>I communicate before you have to ask</h4>
+                <p>You will not need to chase me for updates. I flag issues before they become problems and keep you informed without flooding your inbox.</p>
+              </div>
+            </div>
+            <div class="trait-item">
+              <div class="trait-num">03</div>
+              <div class="trait-text">
+                <h4>Genuinely curious about your business</h4>
+                <p>I ask questions other people skip. I want to understand how your business actually works, not just the task on the surface, because that is the only way to build something that actually helps.</p>
+              </div>
+            </div>
+            <div class="trait-item">
+              <div class="trait-num">04</div>
+              <div class="trait-text">
+                <h4>No micromanaging needed</h4>
+                <p>Give me a clear brief and clear goals. I will handle the rest and come back to you with results, not questions about every small decision.</p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
 
       <!-- Photo row -->
       <div style="margin-top:3.5rem">
-        <span class="eyebrow" style="margin-bottom:1.25rem">A few photos</span>
-        <div class="photo-row">
-          <div class="photo-sm"><img src="https://lh3.googleusercontent.com/d/1S2aDkK-6E0L6aCvYkcFJnLYoB-iw9X8m" style="width:100%;height:100%;object-fit:cover;display:block;"></div>
-          <div class="photo-sm"><img src="https://lh3.googleusercontent.com/d/16RigImOarQ--NpYr2YvF4s4s5T1_9sRh" style="width:100%;height:100%;object-fit:cover;display:block;"></div>
-          <div class="photo-sm"><img src="https://lh3.googleusercontent.com/d/12E6mwV2VSvBw0Fedx_rOnbsNNv1ob_eD" style="width:100%;height:100%;object-fit:cover;display:block;"></div>
+        <span class="eyebrow reveal" style="margin-bottom:1.25rem">A few photos</span>
+        <div class="photo-row reveal">
+          <div class="photo-sm"><img src="https://lh3.googleusercontent.com/d/1S2aDkK-6E0L6aCvYkcFJnLYoB-iw9X8m" alt="Photo 1"></div>
+          <div class="photo-sm"><img src="https://lh3.googleusercontent.com/d/16RigImOarQ--NpYr2YvF4s4s5T1_9sRh" alt="Photo 2"></div>
+          <div class="photo-sm"><img src="https://lh3.googleusercontent.com/d/12E6mwV2VSvBw0Fedx_rOnbsNNv1ob_eD" alt="Photo 3"></div>
         </div>
       </div>
     </div>
   </div><!-- /personality-section -->
 
-  <!-- EXPERIENCE TIMELINE: full-width section -->
+  <!-- ── Experience Timeline ── -->
   <div class="timeline-section">
     <div class="wrap">
       <span class="eyebrow reveal">Experience</span>
       <h2 class="reveal">Where I have done the work</h2>
+
       <div class="tl-list">
+
+        <!-- Row 1: Aspire Lending -->
         <div class="tl-row reveal">
-          <div class="tl-date"><strong>Mar 2025 – Present</strong><span>Current role</span></div>
+          <div class="tl-date">
+            <strong>Mar 2025 – Present</strong>
+            <span>Current role</span>
+          </div>
           <div class="tl-body">
             <div class="tl-co">Aspire Lending Ltd.</div>
-            <div class="tl-role">Accounts Assistant and Receptionist</div>
-            <div class="tl-desc">Managed 900+ client loan files and supported lending operations day to day. Within weeks of joining, I noticed senior staff losing hours every week to a slow manual reporting process. I redesigned it without being asked and cut prep time by 20%, freeing over 10 hours a week for the team.</div>
-            <div class="tl-pills"><span class="pill">20% faster reports</span><span class="pill">10hrs/week freed</span><span class="pill">900+ files organised</span></div>
-          </div>
-        </div>
-        <div class="tl-row reveal">
-          <div class="tl-date"><strong>Mar – Sep 2024</strong><span>6 months</span></div>
-          <div class="tl-body">
-            <div class="tl-co">Pitch Investors</div>
-            <div class="tl-role">Accountant and Financial Analyst</div>
-            <div class="tl-desc">As an accountant, I managed the full Accounts Payables and Receivables cycle. Cut late payments by 40% through better tracking and follow-up procedures. Reduced petty cash discrepancies by 60% and billing turnaround by 15%. Streamlined payroll processing with a 20% time reduction while maintaining 100% on-time disbursements.</div>
-            <div class="tl-pills"><span class="pill">40% fewer late payments</span><span class="pill">60% fewer discrepancies</span><span class="pill">15% faster billing</span></div>
-            <div class="tl-sub-block">
-              <div class="tl-desc">As a financial analyst I built financial models and DCF valuations for 10+ companies looking to raise investor funding. Improved forecasting accuracy by 30%. Wrote and presented 10+ investor-ready proposals and pitch decks, helping clients secure $500k+ in investor interest.</div>
-              <div class="tl-pills"><span class="pill">$500k+ investor interest</span><span class="pill">30% better forecasting</span><span class="pill">40% more engagement</span></div>
+            <div class="tl-role">Accounts Assistant &amp; Receptionist</div>
+            <div class="tl-desc">
+              <ul>
+                <li><strong>Client Relations:</strong> Serve as the main point of contact for the company, managing the main email and answering phone calls to ensure all inquiries are handled promptly.</li>
+                <li><strong>Financial Management:</strong> Maintain accurate records by posting daily expenses and performing regular account reconciliations to keep finances organised.</li>
+                <li><strong>Process Improvement:</strong> Streamlined the weekly reporting process, saving the senior team 10 hours a week and making operations 20% faster.</li>
+                <li><strong>Data Organisation:</strong> Manage and update over 900 client files, ensuring both digital and physical records are accurate and easy to access.</li>
+                <li><strong>Operational Support:</strong> Oversee day-to-day office tasks and front-of-house needs to keep the business running smoothly and professionally.</li>
+              </ul>
+            </div>
+            <div class="tl-pills">
+              <span class="pill">20% faster reports</span>
+              <span class="pill">10 hrs/week freed</span>
+              <span class="pill">900+ files organised</span>
             </div>
           </div>
         </div>
+
+        <!-- Row 2: Pitch Investors — two roles in one row -->
         <div class="tl-row reveal">
-          <div class="tl-date"><strong>Jul – Dec 2023</strong><span>Finance intern</span></div>
+          <div class="tl-date">
+            <strong>Mar – Sep 2024</strong>
+            <span>6 months</span>
+          </div>
+          <div class="tl-body">
+            <div class="tl-co">Pitch Investors</div>
+
+            <!-- Role A: Accountant -->
+            <div class="tl-role">Accountant</div>
+            <div class="tl-desc">
+              <ul>
+                <li><strong>Money Management:</strong> Handled all bills and payments, making sure the company stayed on track and avoided late fees.</li>
+                <li><strong>Record Keeping:</strong> Managed daily cash records and double-checked all accounting entries to ensure the books were perfectly accurate.</li>
+                <li><strong>Payroll &amp; Billing:</strong> Organised the payroll system to pay everyone on time and sped up the billing process so the company received money faster.</li>
+              </ul>
+            </div>
+
+            <!-- Role B: Financial Analyst -->
+            <div class="tl-sub-role">
+              <div class="tl-role">Financial Analyst</div>
+              <div class="tl-desc">
+                <ul>
+                  <li><strong>Business Planning:</strong> Created financial models for 10+ companies to help founders plan their growth and manage their budgets.</li>
+                  <li><strong>Investor Readiness:</strong> Wrote professional proposals and designed pitch decks to help businesses look their best for potential partners.</li>
+                  <li><strong>Strategy Support:</strong> Turned complicated financial data into clear reports that helped leadership make smarter business decisions.</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="tl-pills" style="margin-top:1rem">
+              <span class="pill">30% better forecasting</span>
+              <span class="pill">40% more engagement</span>
+              <span class="pill">60% fewer discrepancies</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Row 3: Target Mart -->
+        <div class="tl-row reveal">
+          <div class="tl-date">
+            <strong>Jul – Dec 2023</strong>
+            <span>Finance intern</span>
+          </div>
           <div class="tl-body">
             <div class="tl-co">Target Mart Limited</div>
             <div class="tl-role">Finance Intern</div>
-            <div class="tl-desc">Managed Accounts Payables and Receivables, improved cash flow by 30% through timely processing. Reduced unpaid invoices by 25% through ageing report analysis and follow-ups. Achieved 100% on-time tax filings. Monthly reports contributed data that influenced 80% of key management decisions.</div>
-            <div class="tl-pills"><span class="pill">30% cash flow improvement</span><span class="pill">25% fewer unpaid invoices</span><span class="pill">100% on-time tax filings</span></div>
+            <div class="tl-desc">
+              <ul>
+                <li><strong>Cash Flow Optimisation:</strong> Directed Accounts Payable and Receivable workflows, ensuring liquidity and maintaining healthy vendor and client relationships.</li>
+                <li><strong>Revenue Recovery:</strong> Conducted detailed analysis of aging reports and executed strategic follow-ups to significantly reduce outstanding receivables.</li>
+                <li><strong>Regulatory Compliance:</strong> Managed the end-to-end tax filing process with 100% accuracy and provided monthly financial insights to support management's strategic decisions.</li>
+              </ul>
+            </div>
+            <div class="tl-pills">
+              <span class="pill">30% cash flow improvement</span>
+              <span class="pill">25% reduction in unpaid invoices</span>
+              <span class="pill">100% on-time tax filings</span>
+            </div>
           </div>
         </div>
+
+        <!-- Row 4: Athena Training -->
         <div class="tl-row reveal">
-          <div class="tl-date"><strong>2024</strong><span>Training</span></div>
+          <div class="tl-date">
+            <strong>2024</strong>
+            <span>Training programme</span>
+          </div>
           <div class="tl-body">
             <div class="tl-co">Athena</div>
             <div class="tl-role">Executive VA Training</div>
-            <div class="tl-desc">Completed training at one of the most rigorous executive VA programs globally. Inbox management, calendar optimisation, SOP documentation, and proactive executive support.</div>
+            <div class="tl-desc">
+              <ul>
+                <li><strong>Executive Correspondence:</strong> Mastered advanced inbox management and communication strategies to act as a seamless extension of the leadership team.</li>
+                <li><strong>Workflow Engineering:</strong> Specialised in developing Standard Operating Procedures (SOPs) and documentation to create scalable, repeatable business processes.</li>
+                <li><strong>Strategic Resource Management:</strong> Trained in proactive calendar optimisation and decision-support to maximise executive productivity and focus.</li>
+              </ul>
+            </div>
+            <div class="tl-pills">
+              <span class="pill">Advanced inbox management</span>
+              <span class="pill">SOP development</span>
+              <span class="pill">Calendar strategy</span>
+            </div>
           </div>
         </div>
-      </div>
+
+      </div><!-- /tl-list -->
     </div>
   </div><!-- /timeline-section -->
 
-  <!-- EDUCATION: full-width section -->
+  <!-- ── Education & Certifications ── -->
   <section>
     <div class="wrap">
       <span class="eyebrow reveal">Education</span>
       <h2 class="reveal">Academic background</h2>
       <div class="edu-grid">
-        <div class="edu-card reveal"><div class="edu-yr">2025 to Present</div><div class="edu-deg">MSc Financial Engineering</div><div class="edu-school">WorldQuant University</div></div>
-        <div class="edu-card reveal"><div class="edu-yr">2019 to 2024</div><div class="edu-deg">Bachelor of Arts — Economics and Mathematics</div><div class="edu-school">Kenyatta University</div></div>
-        <div class="edu-card reveal"><div class="edu-yr">Ongoing</div><div class="edu-deg">CPA Foundation Level</div><div class="edu-school">KASNEB</div></div>
-        <div class="edu-card reveal"><div class="edu-yr">2024</div><div class="edu-deg">ALX Virtual Assistant Certificate</div><div class="edu-school">ALX Africa</div></div>
+        <div class="edu-card reveal">
+          <div class="edu-yr">2025 – Present</div>
+          <div class="edu-deg">MSc Financial Engineering</div>
+          <div class="edu-school">WorldQuant University</div>
+        </div>
+        <div class="edu-card reveal">
+          <div class="edu-yr">2019 – 2024</div>
+          <div class="edu-deg">Bachelor of Arts — Economics &amp; Mathematics</div>
+          <div class="edu-school">Kenyatta University</div>
+        </div>
+        <div class="edu-card reveal">
+          <div class="edu-yr">Ongoing</div>
+          <div class="edu-deg">CPA Foundation Level</div>
+          <div class="edu-school">KASNEB</div>
+        </div>
+        <div class="edu-card reveal">
+          <div class="edu-yr">2024</div>
+          <div class="edu-deg">ALX Virtual Assistant Certificate</div>
+          <div class="edu-school">ALX Africa</div>
+        </div>
       </div>
-      <div style="margin-top:3rem">
+
+      <div style="margin-top:3.5rem">
         <span class="eyebrow reveal">Certifications</span>
-        <h2 class="reveal" style="font-size:1.6rem">Credentials that back the work</h2>
+        <h2 class="reveal" style="font-size:clamp(1.4rem,2.5vw,1.8rem)">Credentials that back the work</h2>
         <div class="certs-grid">
-          <div class="cert-card reveal"><span class="cert-ico">🔵</span><div class="cert-name">Google Data Analytics</div><div class="cert-by">Google / Coursera</div><div class="cert-add">Add link</div></div>
-          <div class="cert-card reveal"><span class="cert-ico">🟦</span><div class="cert-name">IBM Data Science Practitioner</div><div class="cert-by">IBM SkillsBuild</div><div class="cert-add">Add link</div></div>
-          <div class="cert-card reveal"><span class="cert-ico">🔴</span><div class="cert-name">Business Analytics with Excel</div><div class="cert-by">Johns Hopkins / Coursera</div><div class="cert-add">Add link</div></div>
-          <div class="cert-card reveal"><span class="cert-ico">🟢</span><div class="cert-name">Intuit Bookkeeping</div><div class="cert-by">Intuit</div><div class="cert-add">Add link</div></div>
-          <div class="cert-card reveal"><span class="cert-ico">🏦</span><div class="cert-name">CFI Corporate Finance Foundations</div><div class="cert-by">CFI</div><div class="cert-add">Add link</div></div>
+          <div class="cert-card reveal">
+            <span class="cert-ico">🔵</span>
+            <div class="cert-name">Google Data Analytics</div>
+            <div class="cert-by">Google / Coursera</div>
+          </div>
+          <div class="cert-card reveal">
+            <span class="cert-ico">🟦</span>
+            <div class="cert-name">IBM Data Science Practitioner</div>
+            <div class="cert-by">IBM SkillsBuild</div>
+          </div>
+          <div class="cert-card reveal">
+            <span class="cert-ico">🔴</span>
+            <div class="cert-name">Business Analytics with Excel</div>
+            <div class="cert-by">Johns Hopkins / Coursera</div>
+          </div>
+          <div class="cert-card reveal">
+            <span class="cert-ico">🟢</span>
+            <div class="cert-name">Intuit Bookkeeping</div>
+            <div class="cert-by">Intuit</div>
+          </div>
+          <div class="cert-card reveal">
+            <span class="cert-ico">🏦</span>
+            <div class="cert-name">CFI Corporate Finance Foundations</div>
+            <div class="cert-by">CFI</div>
+          </div>
         </div>
       </div>
     </div>
@@ -712,20 +835,20 @@ footer p{font-size:0.7rem;color:var(--text3)}
 
 </div><!-- /page-about -->
 
-<!-- ═══════════════════════════════════════ SERVICES ═══════════════════════════════════════ -->
+<!-- ═══════════════════════════════════ SERVICES ══════════════════════════════════ -->
 <div id="page-services" class="page">
   <div class="svc-hero">
     <div class="wrap">
       <span class="eyebrow">Services</span>
       <h1>Three services that connect.<br><em>One person who delivers all three.</em></h1>
-      <p class="sub">Most VAs manage your calendar. Most bookkeepers reconcile your accounts. I do both and I bring the data skills to tie them into one clear picture of your business.</p>
+      <p class="sub">Most VAs manage your calendar. Most bookkeepers reconcile your accounts. I do both and bring the data skills to tie them into one clear picture of your business.</p>
     </div>
   </div>
   <section>
     <div class="wrap">
       <div class="svc-grid">
         <div class="svc-card reveal"><div class="svc-ico">📒</div><h3>Bookkeeping and Financial Support</h3><span class="svc-tag">Clean books every month</span><p>I handle the following tasks so that you always know exactly where your money is, without spending your evenings on it.</p><ul class="svc-list"><li>Monthly reconciliation</li><li>Accounts payable and receivable</li><li>Prepare P&amp;L, Balance Sheet, cash flow statements</li><li>Payroll support and tax preparation</li><li>QuickBooks, Xero, Zoho, Sage</li></ul></div>
-        <div class="svc-card reveal"><div class="svc-ico">📊</div><h3>Data Analysis and Reporting</h3><span class="svc-tag">Numbers that mean something</span><p>I build dashboards and reports from your data, clear enough to make decisions from, not just look at.</p><ul class="svc-list"><li>Excel dashboards and data cleaning</li><li>Business performance reports</li><li>Budget tracking and variance analysis</li><li>Financial modelling and forecasting</li><li>Investor-ready reports and presentations</li></ul></div>
+        <div class="svc-card reveal"><div class="svc-ico">📊</div><h3>Data Analysis and Reporting</h3><span class="svc-tag">Numbers that mean something</span><p>I build dashboards and reports from your data — clear enough to make decisions from, not just look at.</p><ul class="svc-list"><li>Excel dashboards and data cleaning</li><li>Business performance reports</li><li>Budget tracking and variance analysis</li><li>Financial modelling and forecasting</li><li>Investor-ready reports and presentations</li></ul></div>
         <div class="svc-card reveal"><div class="svc-ico">⚡</div><h3>Automation and Workflow Systems</h3><span class="svc-tag">Tasks that run themselves</span><p>Any process done the same way every week is a candidate for automation. I find those and take them off your plate.</p><ul class="svc-list"><li>Excel VBA macros and formula automation</li><li>Zapier and Make workflow builds</li><li>Google Workspace automation scripts</li><li>SOP documentation and process design</li><li>Scheduled reports and automated outputs</li></ul></div>
         <div class="svc-card reveal"><div class="svc-ico">🗓️</div><h3>Executive Admin and Operations</h3><span class="svc-tag">Your mornings back</span><p>Inbox managed, calendar organised, operations running without you thinking about it every day.</p><ul class="svc-list"><li>Inbox management and email triage</li><li>Calendar coordination and scheduling</li><li>Meeting prep and follow-up notes</li><li>Research, data entry and task tracking</li><li>Project coordination via Notion, Trello, Asana</li></ul></div>
         <div class="svc-card reveal"><div class="svc-ico">🔍</div><h3>Lead Generation and Research</h3><span class="svc-tag">Qualified leads, organised</span><p>Targeted research and structured lead lists so your sales time goes on conversations, not finding people to have them with.</p><ul class="svc-list"><li>Prospect research and list building</li><li>Market and competitor research</li><li>CRM data entry and cleaning</li><li>LinkedIn outreach support</li><li>Research reports and summaries</li></ul></div>
@@ -758,9 +881,9 @@ footer p{font-size:0.7rem;color:var(--text3)}
       <a href="https://calendly.com/monicahmburu/one-on-one" target="_blank" class="btn reveal">Book a free call</a>
     </div>
   </section>
-</div><!-- /services -->
+</div><!-- /page-services -->
 
-<!-- ═══════════════════════════════════════ CASE STUDIES ═══════════════════════════════════════ -->
+<!-- ═══════════════════════════════════ CASE STUDIES ═══════════════════════════════════ -->
 <div id="page-cases" class="page">
   <div class="cs-hero">
     <div class="wrap">
@@ -880,9 +1003,9 @@ footer p{font-size:0.7rem;color:var(--text3)}
       </div>
     </div>
   </section>
-</div><!-- /cases -->
+</div><!-- /page-cases -->
 
-<!-- ═══════════════════════════════════════ PORTFOLIO ═══════════════════════════════════════ -->
+<!-- ═══════════════════════════════════ PORTFOLIO ═══════════════════════════════════ -->
 <div id="page-portfolio" class="page">
   <div class="port-hero">
     <div class="wrap">
@@ -945,11 +1068,11 @@ footer p{font-size:0.7rem;color:var(--text3)}
         <h3>Five certifications backing the work</h3>
         <p>Click any certificate to verify. Links active once added.</p>
         <div class="cert-dark-grid">
-          <div class="cert-dark-item"><span class="cert-dark-ico">🔵</span><div class="cert-dark-name">Google Data Analytics</div><div class="cert-dark-by">Google / Coursera</div><div class="cert-dark-add">Add link</div></div>
-          <div class="cert-dark-item"><span class="cert-dark-ico">🟦</span><div class="cert-dark-name">IBM Data Science Practitioner</div><div class="cert-dark-by">IBM SkillsBuild</div><div class="cert-dark-add">Add link</div></div>
-          <div class="cert-dark-item"><span class="cert-dark-ico">🔴</span><div class="cert-dark-name">Business Analytics with Excel</div><div class="cert-dark-by">Johns Hopkins / Coursera</div><div class="cert-dark-add">Add link</div></div>
-          <div class="cert-dark-item"><span class="cert-dark-ico">🟢</span><div class="cert-dark-name">Intuit Bookkeeping</div><div class="cert-dark-by">Intuit</div><div class="cert-dark-add">Add link</div></div>
-          <div class="cert-dark-item"><span class="cert-dark-ico">🏦</span><div class="cert-dark-name">CFI Corporate Finance Foundations</div><div class="cert-dark-by">CFI</div><div class="cert-dark-add">Add link</div></div>
+          <div class="cert-dark-item"><span class="cert-dark-ico">🔵</span><div class="cert-dark-name">Google Data Analytics</div><div class="cert-dark-by">Google / Coursera</div></div>
+          <div class="cert-dark-item"><span class="cert-dark-ico">🟦</span><div class="cert-dark-name">IBM Data Science Practitioner</div><div class="cert-dark-by">IBM SkillsBuild</div></div>
+          <div class="cert-dark-item"><span class="cert-dark-ico">🔴</span><div class="cert-dark-name">Business Analytics with Excel</div><div class="cert-dark-by">Johns Hopkins / Coursera</div></div>
+          <div class="cert-dark-item"><span class="cert-dark-ico">🟢</span><div class="cert-dark-name">Intuit Bookkeeping</div><div class="cert-dark-by">Intuit</div></div>
+          <div class="cert-dark-item"><span class="cert-dark-ico">🏦</span><div class="cert-dark-name">CFI Corporate Finance Foundations</div><div class="cert-dark-by">CFI</div></div>
         </div>
       </div>
 
@@ -963,9 +1086,9 @@ footer p{font-size:0.7rem;color:var(--text3)}
       </div>
     </div>
   </section>
-</div><!-- /portfolio -->
+</div><!-- /page-portfolio -->
 
-<!-- ═══════════════════════════════════════ CONTACT ═══════════════════════════════════════ -->
+<!-- ═══════════════════════════════════ CONTACT ════════════════════════════════════ -->
 <div id="page-contact" class="page">
   <div class="contact-hero">
     <div class="wrap">
@@ -1005,7 +1128,7 @@ footer p{font-size:0.7rem;color:var(--text3)}
       </div>
     </div>
   </section>
-</div><!-- /contact -->
+</div><!-- /page-contact -->
 
 <footer>
   <p>© 2026 Monicah Mburu · Nairobi, Kenya</p>
@@ -1061,3 +1184,8 @@ if(ham && mob){
 </script>
 </body>
 </html>
+
+
+
+
+Claude is AI and can make mistakes. Please double-check responses.

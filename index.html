@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -112,8 +111,6 @@ h3{font-family:var(--serif);font-size:1.2rem;font-weight:500;color:var(--dark)}
 .plbl{font-size:0.69rem;color:var(--text3);margin-top:0.2rem;line-height:1.45}
 .hero-video-wrap{animation:fadeUp 0.8s 0.25s ease both}
 .video-outer{background:var(--dark2);border-radius:var(--r);overflow:hidden;border:1px solid rgba(255,255,255,0.06);box-shadow:0 20px 60px rgba(30,26,21,0.18)}
-
-/* VIDEO: responsive iframe wrapper */
 .video-responsive{position:relative;padding-bottom:56.25%;height:0;overflow:hidden;border-radius:var(--r)}
 .video-responsive iframe{position:absolute;top:0;left:0;width:100%;height:100%;border:0;display:block}
 
@@ -335,24 +332,18 @@ footer p{font-size:0.7rem;color:var(--text3)}
    RESPONSIVE — tablet & mobile
    ===================================================== */
 @media(max-width:900px){
-  /* Hero: stack content, then video below */
   .hero-wrap{
     grid-template-columns:1fr;
     gap:2.5rem;
     padding:3.5rem 1.5rem 3rem;
     min-height:auto;
   }
-
-  /* ✅ VIDEO: show on mobile, full-width responsive */
   .hero-video-wrap{
-    display:block;          /* was display:none — now visible */
+    display:block;
     width:100%;
     animation:fadeUp 0.8s 0.4s ease both;
   }
-  .video-outer{
-    border-radius:var(--r);
-  }
-
+  .video-outer{border-radius:var(--r)}
   .about-hero-inner{grid-template-columns:1fr;gap:2.5rem}
   .svc-grid,.testi-grid{grid-template-columns:1fr 1fr}
   .process-row{grid-template-columns:1fr 1fr;gap:2rem}.process-row::before{display:none}
@@ -368,27 +359,13 @@ footer p{font-size:0.7rem;color:var(--text3)}
   .problem-grid{grid-template-columns:1fr}
   .nav-links,.nav-cta{display:none}
   .hamburger{display:flex}
-
-  /* ✅ PHOTOS: show full-width on tablet/mobile */
-  .photo-card{
-    max-width:340px;
-    margin:0 auto;
-  }
-  .photo-row{
-    grid-template-columns:repeat(3,1fr);
-    gap:0.75rem;
-  }
+  .photo-card{max-width:340px;margin:0 auto}
+  .photo-row{grid-template-columns:repeat(3,1fr);gap:0.75rem}
 }
 
 @media(max-width:580px){
   .svc-grid,.testi-grid,.tools-grid,.cert-dark-grid{grid-template-columns:1fr}
-
-  /* ✅ PHOTOS: 3-col on small screens still looks good, but allow wrapping */
-  .photo-row{
-    grid-template-columns:repeat(3,1fr);
-    gap:0.5rem;
-  }
-
+  .photo-row{grid-template-columns:repeat(3,1fr);gap:0.5rem}
   .certs-grid{grid-template-columns:repeat(2,1fr)}
   .process-row{grid-template-columns:1fr}
   .hero-proof{gap:1.5rem}
@@ -396,17 +373,12 @@ footer p{font-size:0.7rem;color:var(--text3)}
   .wrap{padding:0 1.25rem}
   nav{padding:0 1.25rem}
   .mob-menu{padding:1.5rem 1.25rem}
-
-  /* ✅ VIDEO: make sure iframe wrapper fills nicely on small screens */
   .video-responsive{border-radius:10px}
   .video-outer{border-radius:10px}
-
-  /* Hero text tightening */
   .hero-wrap{padding:3rem 1.25rem 2.5rem;gap:2rem}
   .hero-sub{font-size:0.95rem}
 }
 
-/* Touch targets */
 *,*::before,*::after{-webkit-tap-highlight-color:transparent}
 .mob-link{min-height:52px!important;display:flex!important;align-items:center!important;padding-top:0!important;padding-bottom:0!important;cursor:pointer;-webkit-user-select:none;user-select:none}
 .mob-cta{min-height:52px!important;display:flex!important;align-items:center!important;justify-content:center!important;cursor:pointer}
@@ -465,7 +437,6 @@ footer p{font-size:0.7rem;color:var(--text3)}
       </div>
     </div>
 
-    <!-- VIDEO: responsive 16:9 wrapper works on all screen sizes -->
     <div class="hero-video-wrap">
       <div class="video-outer">
         <div class="video-responsive">
@@ -572,32 +543,36 @@ footer p{font-size:0.7rem;color:var(--text3)}
     </div>
   </section>
 
-<section>
-  <div class="wrap">
-    <div class="home-cta reveal">
-      <span class="eyebrow">Ready to fix this?</span>
-      <h2 style="position:relative;z-index:1">
-        Stop running your business<br>on <em>controlled chaos.</em>
-      </h2>
-      <p>
-        Book a free 30 minute call. We will talk through what is not working 
-        and whether I can fix it. No pressure, no pitch, just an honest conversation.
-      </p>
-      <div class="cta-btns">
-        <a href="https://calendly.com/monicahmburu/one-on-one" target="_blank" class="btn-inv">Book your free call</a>
-        <a href="mailto:monicah.mburu@zohomail.com" class="btn-ghost-inv">Email me</a>
-        <a href="https://wa.me/254798498795" target="_blank" class="btn-ghost-inv">Chat on WhatsApp</a>
+  <section>
+    <div class="wrap">
+      <div class="home-cta reveal">
+        <span class="eyebrow">Ready to fix this?</span>
+        <h2 style="position:relative;z-index:1">
+          Stop running your business<br>on <em>controlled chaos.</em>
+        </h2>
+        <p>
+          Book a free 30 minute call. We will talk through what is not working 
+          and whether I can fix it. No pressure, no pitch, just an honest conversation.
+        </p>
+        <div class="cta-btns">
+          <a href="https://calendly.com/monicahmburu/one-on-one" target="_blank" class="btn-inv">Book your free call</a>
+          <a href="mailto:monicah.mburu@zohomail.com" class="btn-ghost-inv">Email me</a>
+          <a href="https://wa.me/254798498795" target="_blank" class="btn-ghost-inv">Chat on WhatsApp</a>
+        </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
 </div><!-- /page-home -->
 
 <!-- ═══════════════════════════════════════ ABOUT ═══════════════════════════════════════ -->
 <div id="page-about" class="page">
+
+  <!-- HERO: 2-col grid — left text, right photo -->
   <div class="about-hero">
     <div class="about-hero-inner">
+
+      <!-- LEFT COLUMN -->
       <div>
         <span class="eyebrow">About me</span>
         <h1>The finance brain<br>merged with<em> operations.</em></h1>
@@ -609,18 +584,25 @@ footer p{font-size:0.7rem;color:var(--text3)}
           <a href="javascript:void(0)" onclick="return show('contact')" class="btn-ghost">Get in touch</a>
         </div>
       </div>
+
+      <!-- RIGHT COLUMN: photo only -->
       <div>
-<figure class="photo-card">
-  <img 
-    src="https://lh3.googleusercontent.com/d/1W4lTTSXiG5Lgl8PhNtB698qwGniaYsAI" 
-    alt="Monicah Mburu" 
-    style="width: 100%; height: auto; display: block; object-fit: cover;"
-  >
-  <figcaption class="photo-meta">
-    <p>Professional Data Analyst & Systems Architect</p>
-  </figcaption>
-</figure>
-    
+        <figure class="photo-card">
+          <img
+            src="https://lh3.googleusercontent.com/d/10KcYq3HJd_FPOkHjxR6sH8PXcxGq1NoY"
+            alt="Monicah Mburu"
+            style="width:100%;height:auto;display:block;object-fit:cover;"
+          >
+          <figcaption class="photo-meta">
+            <p>Professional Data Analyst &amp; Systems Architect</p>
+          </figcaption>
+        </figure>
+      </div>
+
+    </div><!-- /about-hero-inner -->
+  </div><!-- /about-hero -->
+
+  <!-- PERSONALITY: full-width section -->
   <div class="personality-section">
     <div class="wrap">
       <span class="eyebrow reveal">Who I actually am</span>
@@ -641,19 +623,20 @@ footer p{font-size:0.7rem;color:var(--text3)}
           </div>
         </div>
       </div>
+
+      <!-- Photo row -->
       <div style="margin-top:3.5rem">
         <span class="eyebrow" style="margin-bottom:1.25rem">A few photos</span>
         <div class="photo-row">
-          <div class="photo-sm"><div class="photo-sm-inner"><div class="photo-sm-icon">🏙️</div><div class="photo-sm-label">Working photo<div class="photo-add-btn">Add photo</div></div></div></div>
-          <div class="photo-sm"><div class="photo-sm-inner"><div class="photo-sm-icon">💻</div><div class="photo-sm-label">At the desk<div class="photo-add-btn">Add photo</div></div></div></div>
-          <div class="photo-sm"><div class="photo-sm-inner"><div class="photo-sm-icon">😊</div><div class="photo-sm-label">Casual shot<div class="photo-add-btn">Add photo</div></div></div></div>
+          <div class="photo-sm"><img src="https://lh3.googleusercontent.com/d/1S2aDkK-6E0L6aCvYkcFJnLYoB-iw9X8m" style="width:100%;height:100%;object-fit:cover;display:block;"></div>
+          <div class="photo-sm"><img src="https://lh3.googleusercontent.com/d/16RigImOarQ--NpYr2YvF4s4s5T1_9sRh" style="width:100%;height:100%;object-fit:cover;display:block;"></div>
+          <div class="photo-sm"><img src="https://lh3.googleusercontent.com/d/12E6mwV2VSvBw0Fedx_rOnbsNNv1ob_eD" style="width:100%;height:100%;object-fit:cover;display:block;"></div>
         </div>
-        <p style="font-size:0.7rem;color:var(--text3);margin-top:0.85rem;line-height:1.6">To add photos: replace each placeholder div with <code style="background:var(--warm2);padding:0.1rem 0.35rem;border-radius:4px;font-size:0.68rem">&lt;img src="yourphoto.jpg" style="width:100%;height:100%;object-fit:cover"&gt;</code></p>
       </div>
     </div>
-  </div>
+  </div><!-- /personality-section -->
 
-  <!-- EXPERIENCE TIMELINE -->
+  <!-- EXPERIENCE TIMELINE: full-width section -->
   <div class="timeline-section">
     <div class="wrap">
       <span class="eyebrow reveal">Experience</span>
@@ -700,9 +683,9 @@ footer p{font-size:0.7rem;color:var(--text3)}
         </div>
       </div>
     </div>
-  </div>
+  </div><!-- /timeline-section -->
 
-  <!-- EDUCATION -->
+  <!-- EDUCATION: full-width section -->
   <section>
     <div class="wrap">
       <span class="eyebrow reveal">Education</span>
@@ -726,7 +709,8 @@ footer p{font-size:0.7rem;color:var(--text3)}
       </div>
     </div>
   </section>
-</div><!-- /about -->
+
+</div><!-- /page-about -->
 
 <!-- ═══════════════════════════════════════ SERVICES ═══════════════════════════════════════ -->
 <div id="page-services" class="page">

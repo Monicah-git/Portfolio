@@ -87,7 +87,7 @@ nav.solid{background:rgba(250,248,244,0.97);backdrop-filter:blur(18px);border-bo
 .wrap{max-width:1100px;margin:0 auto;padding:0 2.5rem}
 section{padding:5rem 0}
 .eyebrow{font-size:0.67rem;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:var(--ink);display:block;margin-bottom:0.85rem}
-h1{font-family:var(--serif);font-size:clamp(2.6rem,5.5vw,4.4rem);font-weight:500;line-height:1.08;letter-spacing:-0.01em;color:var(--dark)}
+h1{font-family:var(--serif);font-size:clamp(2.6rem,8.5vw,7rem);font-weight:500;line-height:1.05;letter-spacing:-0.02em;color:var(--dark)}
 h1 em{font-style:italic;color:var(--ink)}
 h2{font-family:var(--serif);font-size:clamp(1.9rem,3.5vw,2.8rem);font-weight:500;line-height:1.15;color:var(--dark);letter-spacing:-0.01em}
 h2 em{font-style:italic;color:var(--ink)}
@@ -99,7 +99,13 @@ h3{font-family:var(--serif);font-size:1.2rem;font-weight:500;color:var(--dark)}
 .btn-ghost:hover{border-color:var(--ink);color:var(--ink)}
 
 /* HOME */
-.hero-wrap{padding:5rem 2.5rem 4rem;max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1fr 400px;gap:5rem;align-items:center;min-height:auto}
+.hero-wrap{padding:5rem 2.5rem 4rem;max-width:100%;margin:0 auto;min-height:auto}
+.hero-heading{margin-bottom:2.5rem;text-align:center}
+.hero-bottom{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:stretch}
+.hero-video-wrap{width:100%;display:flex;flex-direction:column}
+.hero-video-wrap .video-outer{flex:1;display:flex;flex-direction:column;height:100%}
+.hero-video-wrap .video-responsive{flex:1;position:relative;padding-bottom:0;height:100%;min-height:300px}
+.hero-video-wrap .video-responsive iframe{position:absolute;top:0;left:0;width:100%;height:100%;border:0;display:block}
 .hero-badge{display:inline-flex;align-items:center;gap:0.5rem;background:var(--ink-pale);border:1px solid var(--ink-border);color:var(--ink);font-size:0.7rem;font-weight:500;padding:0.32rem 0.85rem;border-radius:100px;letter-spacing:0.07em;text-transform:uppercase;margin-bottom:1.75rem;animation:fadeUp 0.6s ease both}
 .hero-badge-dot{width:6px;height:6px;border-radius:50%;background:var(--ink);animation:blink 2s infinite}
 .hero h1{animation:fadeUp 0.7s 0.1s ease both}
@@ -111,8 +117,6 @@ h3{font-family:var(--serif);font-size:1.2rem;font-weight:500;color:var(--dark)}
 .plbl{font-size:0.69rem;color:var(--text3);margin-top:0.2rem;line-height:1.45}
 .hero-video-wrap{animation:fadeUp 0.8s 0.25s ease both}
 .video-outer{background:var(--dark2);border-radius:var(--r);overflow:hidden;border:1px solid rgba(255,255,255,0.06);box-shadow:0 20px 60px rgba(30,26,21,0.18)}
-.video-responsive{position:relative;padding-bottom:56.25%;height:0;overflow:hidden;border-radius:var(--r)}
-.video-responsive iframe{position:absolute;top:0;left:0;width:100%;height:100%;border:0;display:block}
 
 .strip{background:var(--dark);padding:1.1rem 0;overflow:hidden}
 .strip-inner{display:flex;gap:3rem;max-width:1100px;margin:0 auto;padding:0 2.5rem;flex-wrap:wrap}
@@ -319,8 +323,10 @@ footer p{font-size:0.7rem;color:var(--text3)}
 
 /* ── RESPONSIVE ───────────────────────────────────────── */
 @media(max-width:900px){
-  .hero-wrap{grid-template-columns:1fr;gap:2.5rem;padding:3.5rem 1.5rem 3rem}
-  .hero-video-wrap{display:block;width:100%}
+  .hero-wrap{padding:3.5rem 1.5rem 3rem}
+  .hero-bottom{grid-template-columns:1fr;gap:2rem}
+  .hero-video-wrap .video-responsive{min-height:0;padding-bottom:56.25%;height:0;flex:none}
+  .hero-video-wrap .video-responsive iframe{position:absolute}
   .video-outer{border-radius:var(--r)}
   .about-hero-inner{grid-template-columns:1fr;gap:2.5rem}
   .svc-grid,.testi-grid{grid-template-columns:1fr 1fr}
@@ -350,7 +356,7 @@ footer p{font-size:0.7rem;color:var(--text3)}
   .wrap{padding:0 1.25rem}
   nav{padding:0 1.25rem}
   .mob-menu{padding:1.5rem 1.25rem}
-  .hero-wrap{padding:3rem 1.25rem 2.5rem;gap:2rem}
+  .hero-wrap{padding:3rem 1.25rem 2.5rem;gap:1.75rem}
   .hero-sub{font-size:0.95rem}
 }
 *,*::before,*::after{-webkit-tap-highlight-color:transparent}
@@ -396,24 +402,28 @@ footer p{font-size:0.7rem;color:var(--text3)}
 <div id="page-home" class="page active">
 
   <div class="hero-wrap">
-    <div class="hero">
-      <div class="hero-badge"><span class="hero-badge-dot"></span> Open to new clients</div>
+    <div class="hero-heading">
+      <div style="display:flex;justify-content:center;margin-bottom:1.75rem"><div class="hero-badge" style="margin-bottom:0"><span class="hero-badge-dot"></span> Open to new clients</div></div>
       <h1>Your books are behind.<br>Your inbox is chaos.<br><em>I fix that.</em></h1>
-      <p class="hero-sub">I learn how your business runs then build systems that keep your processes running smoothly and turn your financial data into <strong>a strategic advantage.</strong></p>
-      <div class="hero-actions">
-        <a href="https://calendly.com/monicahmburu/one-on-one" target="_blank" class="btn">Book a free discovery call</a>
-        <a href="javascript:void(0)" onclick="return show('cases')" class="btn-ghost">See case studies</a>
-      </div>
-      <div class="hero-proof">
-        <div><div class="pnum">20%</div><div class="plbl">faster reporting</div></div>
-        <div><div class="pnum">60%</div><div class="plbl">fewer cash discrepancies</div></div>
-        <div><div class="pnum">5</div><div class="plbl">finance and data certifications</div></div>
-      </div>
     </div>
-    <div class="hero-video-wrap">
-      <div class="video-outer">
-        <div class="video-responsive">
-          <iframe src="https://www.youtube.com/embed/9eVNpp_EpNI?si=xe1x9C0uBe-Jghmp" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    <div class="hero-bottom">
+      <div class="hero">
+        <p class="hero-sub">I learn how your business runs then build systems that keep your processes running smoothly and turn your financial data into <strong>a strategic advantage.</strong></p>
+        <div class="hero-actions">
+          <a href="https://calendly.com/monicahmburu/one-on-one" target="_blank" class="btn">Book a free discovery call</a>
+          <a href="javascript:void(0)" onclick="return show('cases')" class="btn-ghost">See case studies</a>
+        </div>
+        <div class="hero-proof">
+          <div><div class="pnum">20%</div><div class="plbl">faster reporting</div></div>
+          <div><div class="pnum">60%</div><div class="plbl">fewer cash discrepancies</div></div>
+          <div><div class="pnum">5</div><div class="plbl">finance and data certifications</div></div>
+        </div>
+      </div>
+      <div class="hero-video-wrap">
+        <div class="video-outer">
+          <div class="video-responsive">
+            <iframe src="https://www.youtube.com/embed/9eVNpp_EpNI?si=xe1x9C0uBe-Jghmp" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          </div>
         </div>
       </div>
     </div>

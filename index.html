@@ -61,7 +61,9 @@ h3{font-family:var(--serif);font-size:1.2rem;font-weight:500;color:var(--dark)}
 .btn-ghost:hover{border-color:var(--ink);color:var(--ink)}
 
 /* ── HOME ─────────────────────────────────────────────── */
-.hero-wrap{padding:5rem 2.5rem 4rem;max-width:1100px;margin:0 auto}
+
+/* HERO — cream bg */
+.hero-wrap{padding:5rem 2.5rem 5rem;max-width:1100px;margin:0 auto}
 .hero-heading{margin-bottom:2.5rem;text-align:center}
 .hero-bottom{display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:stretch}
 .hero-badge{display:inline-flex;align-items:center;gap:0.5rem;background:var(--ink-pale);border:1px solid var(--ink-border);color:var(--ink);font-size:0.7rem;font-weight:500;padding:0.32rem 0.85rem;border-radius:100px;letter-spacing:0.07em;text-transform:uppercase;margin-bottom:1.75rem;animation:fadeUp 0.6s ease both}
@@ -79,7 +81,7 @@ h3{font-family:var(--serif);font-size:1.2rem;font-weight:500;color:var(--dark)}
 .video-responsive{position:relative;padding-bottom:56.25%;height:0;overflow:hidden}
 .video-responsive iframe{position:absolute;top:0;left:0;width:100%;height:100%;border:0}
 
-/* Problem section */
+/* ── SECTION 2: PROBLEM — dark bg */
 .problem-section{background:var(--dark);padding:6rem 0}
 .problem-section .eyebrow{color:rgba(255,255,255,0.3)}
 .problem-section h2{color:#fff}
@@ -91,7 +93,7 @@ h3{font-family:var(--serif);font-size:1.2rem;font-weight:500;color:var(--dark)}
 .prob-item h3{font-size:0.9rem;font-weight:500;color:rgba(255,255,255,0.85);margin-bottom:0.5rem;font-family:var(--sans)}
 .prob-item p{font-size:0.8rem;color:rgba(255,255,255,0.4);line-height:1.75;font-weight:300}
 
-/* How I help */
+/* ── SECTION 3: HOW I HELP — warm bg */
 .help-section{background:var(--warm);padding:6rem 0;text-align:center}
 .help-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:2.5rem;margin:3rem 0 4rem;text-align:left}
 .help-item h3{font-family:var(--serif);font-size:1.2rem;font-weight:500;color:var(--dark);margin-bottom:0.65rem}
@@ -106,16 +108,29 @@ h3{font-family:var(--serif);font-size:1.2rem;font-weight:500;color:var(--dark)}
 .help-tagline{margin-top:0.85rem;font-size:0.7rem;font-weight:500;text-transform:uppercase;letter-spacing:0.2em;color:rgba(255,255,255,0.55)}
 .help-tagline strong{color:#fff;font-weight:600}
 
-/* Process */
-.process-row{display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin-top:3.5rem;position:relative}
-.process-row::before{content:'';position:absolute;top:27px;left:12%;right:12%;height:1px;background:var(--border)}
-.proc-step{text-align:center;padding:0 1rem;position:relative}
-.proc-circle{width:54px;height:54px;border-radius:50%;background:var(--cream);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;font-family:var(--serif);font-size:1.2rem;font-weight:600;color:var(--ink);margin:0 auto 1.4rem;transition:all 0.2s;position:relative;z-index:1}
-.proc-step:hover .proc-circle{background:var(--ink);color:#fff;border-color:var(--ink)}
-.proc-step h3{font-size:0.88rem;font-weight:500;color:var(--dark);margin-bottom:0.45rem;font-family:var(--sans)}
-.proc-step p{font-size:0.75rem;color:var(--text2);line-height:1.65;font-weight:300}
+/* ── SECTION 4: PROCESS — cream bg, two-column split layout */
+.process-section{background:var(--cream);padding:6rem 0}
+.process-split{display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:center}
+.process-left{}
+.process-steps{display:flex;flex-direction:column;gap:0;margin-top:2.5rem;position:relative}
+.process-steps::before{content:'';position:absolute;left:22px;top:44px;bottom:44px;width:1px;background:var(--border)}
+.proc-row{display:flex;gap:1.5rem;align-items:flex-start;padding:0 0 2.5rem;position:relative}
+.proc-row:last-child{padding-bottom:0}
+.proc-circle{width:44px;height:44px;border-radius:50%;background:var(--cream);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;font-family:var(--serif);font-size:1.1rem;font-weight:600;color:var(--ink);flex-shrink:0;transition:all 0.2s;position:relative;z-index:1}
+.proc-row:hover .proc-circle{background:var(--ink);color:#fff;border-color:var(--ink)}
+.proc-row-text h3{font-size:0.92rem;font-weight:500;color:var(--dark);margin-bottom:0.35rem;font-family:var(--sans)}
+.proc-row-text p{font-size:0.78rem;color:var(--text2);line-height:1.7;font-weight:300}
+.process-right-visual{background:var(--dark);border-radius:20px;padding:2.5rem;display:flex;flex-direction:column;gap:1.25rem}
+.process-right-visual .eyebrow{color:rgba(255,255,255,0.3)}
+.process-right-visual h3{font-family:var(--serif);font-size:1.6rem;font-weight:500;color:#fff;line-height:1.3;margin-bottom:0.5rem}
+.process-right-visual h3 em{color:var(--ink2);font-style:italic}
+.proc-stat{display:flex;align-items:center;gap:1rem;background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.07);border-radius:10px;padding:1rem 1.25rem}
+.proc-stat-num{font-family:var(--serif);font-size:2rem;font-weight:600;color:var(--ink2);line-height:1;flex-shrink:0;min-width:60px}
+.proc-stat-text p{font-size:0.78rem;color:rgba(255,255,255,0.5);font-weight:300;line-height:1.5}
+.proc-stat-text strong{display:block;font-size:0.82rem;color:rgba(255,255,255,0.8);font-weight:500;margin-bottom:0.15rem}
 
-/* Testimonials */
+/* ── SECTION 5: TESTIMONIALS — warm bg */
+.testi-section{background:var(--warm);padding:6rem 0}
 .testi-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.15rem;margin-top:3rem}
 .testi-card{background:#fff;border:1px solid var(--border);border-radius:var(--r);padding:1.85rem;display:flex;flex-direction:column}
 .stars{color:var(--ink);font-size:0.8rem;letter-spacing:0.1em;margin-bottom:1rem}
@@ -124,13 +139,15 @@ h3{font-family:var(--serif);font-size:1.2rem;font-weight:500;color:var(--dark)}
 .testi-name{font-size:0.8rem;font-weight:500;color:var(--text)}
 .testi-co{font-size:0.7rem;color:var(--text3)}
 
-/* CTA block */
-.home-cta{background:var(--dark);border-radius:20px;padding:4.5rem;text-align:center;margin:5rem auto;max-width:720px;position:relative;overflow:hidden}
-.home-cta::before{content:'';position:absolute;top:-60px;right:-60px;width:220px;height:220px;border-radius:50%;background:radial-gradient(circle,rgba(138,100,69,0.2),transparent 70%)}
-.home-cta .eyebrow{color:rgba(255,255,255,0.3)}
-.home-cta h2{color:#fff;margin-bottom:0.85rem;position:relative;z-index:1}
-.home-cta p{color:rgba(255,255,255,0.45);font-size:0.9rem;font-weight:300;max-width:420px;margin:0 auto 2.5rem;line-height:1.8;position:relative;z-index:1}
-.cta-btns{display:flex;gap:0.75rem;justify-content:center;flex-wrap:wrap;position:relative;z-index:1}
+/* ── SECTION 6: CTA — dark bg */
+.home-cta-section{background:var(--dark);padding:6rem 0}
+.home-cta-inner{max-width:680px;margin:0 auto;text-align:center;position:relative}
+.home-cta-inner::before{content:'';position:absolute;top:-80px;right:-80px;width:260px;height:260px;border-radius:50%;background:radial-gradient(circle,rgba(138,100,69,0.15),transparent 70%);pointer-events:none}
+.home-cta-section .eyebrow{color:rgba(255,255,255,0.3)}
+.home-cta-section h2{color:#fff;margin-bottom:0.85rem}
+.home-cta-section h2 em{color:var(--ink2)}
+.home-cta-section p{color:rgba(255,255,255,0.45);font-size:0.9rem;font-weight:300;max-width:420px;margin:0 auto 2.5rem;line-height:1.8}
+.cta-btns{display:flex;gap:0.75rem;justify-content:center;flex-wrap:wrap}
 .btn-inv{background:var(--ink);color:#fff;font-family:var(--sans);font-size:0.85rem;font-weight:500;padding:0.85rem 1.9rem;border-radius:100px;text-decoration:none;transition:opacity 0.2s,transform 0.15s;display:inline-block}
 .btn-inv:hover{opacity:0.85;transform:translateY(-1px)}
 .btn-ghost-inv{border:1px solid rgba(255,255,255,0.15);color:rgba(255,255,255,0.6);font-size:0.85rem;padding:0.85rem 1.9rem;border-radius:100px;text-decoration:none;display:inline-block;transition:all 0.2s}
@@ -301,7 +318,7 @@ footer p{font-size:0.7rem;color:var(--text3)}
   .hero-bottom{grid-template-columns:1fr;gap:2rem}
   .about-hero-inner{grid-template-columns:1fr;gap:2.5rem}
   .svc-grid,.testi-grid{grid-template-columns:1fr 1fr}
-  .process-row{grid-template-columns:1fr 1fr;gap:2rem}.process-row::before{display:none}
+  .process-split{grid-template-columns:1fr;gap:2.5rem}
   .personality-grid,.cs-card.open .cs-body,.contact-grid{grid-template-columns:1fr}
   .tools-grid,.cert-dark-grid{grid-template-columns:repeat(3,1fr)}
   .certs-grid{grid-template-columns:repeat(3,1fr)}
@@ -323,9 +340,7 @@ footer p{font-size:0.7rem;color:var(--text3)}
   .help-grid{grid-template-columns:1fr}
   .photo-row{grid-template-columns:repeat(3,1fr);gap:0.5rem}
   .certs-grid{grid-template-columns:repeat(2,1fr)}
-  .process-row{grid-template-columns:1fr}
   .hero-proof{gap:1.5rem}
-  .home-cta{padding:3rem 1.5rem}
   .wrap{padding:0 1.25rem}
   nav{padding:0 1.25rem}
   .mob-menu{padding:1.5rem 1.25rem}
@@ -373,49 +388,77 @@ footer p{font-size:0.7rem;color:var(--text3)}
 <!-- ═══════════════ HOME ═══════════════ -->
 <div id="page-home" class="page active">
 
-  <!-- HERO -->
-  <div class="hero-wrap">
-    <div class="hero-heading">
-      <div style="display:flex;justify-content:center;margin-bottom:1.75rem">
-        <div class="hero-badge"><span class="hero-badge-dot"></span> Open to new clients</div>
+  <!-- ① HERO — cream background -->
+  <div style="background:var(--cream)">
+    <div class="hero-wrap">
+      <div class="hero-heading">
+        <div style="display:flex;justify-content:center;margin-bottom:1.75rem">
+          <div class="hero-badge"><span class="hero-badge-dot"></span> Open to new clients</div>
+        </div>
+        <h1>Your operations feel messy.<br>Your reporting is inconsistent.<br><em>I provide the clarity and structure you need to lead.</em></h1>
       </div>
-      <h1>Your operations feel messy.<br>Your reporting is inconsistent.<br><em>I provide the clarity and structure you need to lead.</em></h1>
-    </div>
-    <div class="hero-bottom">
-      <div class="hero">
-        <p class="hero-sub">I help founders bring structure to operations so their business runs clearly, consistently, and without constant oversight.</p>
-        <p class="hero-sub">I set up your books, reports, dashboards, automations, and workflows so you stop fixing issues, chasing information, or guessing what’s going on in your business.</p>
-        <div class="hero-actions">
-          <a href="javascript:void(0)" onclick="return show('cases')" class="btn">See case studies</a>
-          <a href="https://calendly.com/monicahmburu/one-on-one" target="_blank" class="btn-ghost">Book a free call</a>
+      <div class="hero-bottom">
+        <div class="hero">
+          <p class="hero-sub">I help founders bring structure to operations so their business runs clearly, consistently, and without constant oversight.</p>
+          <p class="hero-sub">I set up your books, reports, dashboards, automations, and workflows so you stop fixing issues, chasing information, or guessing what's going on in your business.</p>
+          <div class="hero-actions">
+            <a href="javascript:void(0)" onclick="return show('cases')" class="btn">See case studies</a>
+            <a href="https://calendly.com/monicahmburu/one-on-one" target="_blank" class="btn-ghost">Book a free call</a>
+          </div>
+          <div class="hero-proof">
+            <div><div class="pnum">20%</div><div class="plbl">faster reporting</div></div>
+            <div><div class="pnum">60%</div><div class="plbl">fewer cash discrepancies</div></div>
+            <div><div class="pnum">5</div><div class="plbl">finance and data certifications</div></div>
+          </div>
         </div>
-        <div class="reliability-bar">
-          <span class="rel-item"><span class="rel-dot"></span>Remote-ready</span>
-          <span class="rel-item"><span class="rel-dot"></span>Retainer or project basis</span>
-          <span class="rel-item"><span class="rel-dot"></span>Responds within 24 hours</span>
-        </div>
-        <div class="hero-proof">
-          <div><div class="pnum">20%</div><div class="plbl">faster reporting</div></div>
-          <div><div class="pnum">60%</div><div class="plbl">fewer cash discrepancies</div></div>
-          <div><div class="pnum">5</div><div class="plbl">finance and data certifications</div></div>
-        </div>
-      </div>
-      <div class="hero-video-wrap">
-        <div class="video-outer">
-          <div class="video-responsive">
-            <iframe src="https://www.youtube.com/embed/9eVNpp_EpNI?si=xe1x9C0uBe-Jghmp" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <div class="hero-video-wrap">
+          <div class="video-outer">
+            <div class="video-responsive">
+              <iframe src="https://www.youtube.com/embed/9eVNpp_EpNI?si=xe1x9C0uBe-Jghmp" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
           </div>
         </div>
       </div>
     </div>
   </div>
 
-  <!-- HOW I HELP -->
+  <!-- ② PROBLEM — dark background -->
+  <div class="problem-section">
+    <div class="wrap" style="text-align:center">
+      <span class="eyebrow reveal">Sound familiar?</span>
+      <h2 class="reveal" style="color:#fff">Running a business shouldn't feel like<br><em style="color:var(--ink2)">firefighting every day.</em></h2>
+      <p class="section-intro reveal">Most founders come to me with the same four problems. If any of these sound like your week, that's the signal.</p>
+      <div class="problem-grid reveal">
+        <div class="prob-item">
+          <div class="prob-n">01</div>
+          <h3>Your books are always behind</h3>
+          <p>You know money is coming in and going out but you can't tell where, when, or why at a glance. Reconciling takes too long and you avoid it.</p>
+        </div>
+        <div class="prob-item">
+          <div class="prob-n">02</div>
+          <h3>Reports take days, not minutes</h3>
+          <p>Pulling together a weekly update means hours of copy-pasting across spreadsheets. By the time it's ready, the data is already stale.</p>
+        </div>
+        <div class="prob-item">
+          <div class="prob-n">03</div>
+          <h3>You're doing work your business should handle</h3>
+          <p>Scheduling, reminders, data entry, follow-ups — tasks that repeat every week are still on your plate because there's no system to catch them.</p>
+        </div>
+        <div class="prob-item">
+          <div class="prob-n">04</div>
+          <h3>Your inbox runs your calendar</h3>
+          <p>Reactive, not intentional. You spend your mornings catching up instead of building. Every day starts with someone else's priorities.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ③ HOW I HELP — warm background -->
   <div class="help-section">
     <div class="wrap">
       <span class="eyebrow reveal">How I Help</span>
       <h2 class="reveal">I don't just finish tasks. <em>I build systems.</em></h2>
-      <p class="sub reveal" style="margin:0.75rem auto 0;text-align:center;max-width:680px">You focus on the vision, I'll build the engine. I not only handle admin but also create the structures that let your business run <em>without needing your presence.</em>The results include;</p>
+      <p class="sub reveal" style="margin:0.75rem auto 0;text-align:center;max-width:680px">You focus on the vision, I'll build the engine. I not only handle admin but also create the structures that let your business run without needing your presence every day. The results include:</p>
       <div class="help-grid">
         <div class="help-item reveal">
           <h3>Clearer Operations</h3>
@@ -443,38 +486,69 @@ footer p{font-size:0.7rem;color:var(--text3)}
     </div>
   </div>
 
-  <!-- PROCESS -->
-  <section style="background:var(--warm)">
+  <!-- ④ PROCESS — cream background, split layout -->
+  <div class="process-section">
     <div class="wrap">
-      <span class="eyebrow reveal">How it works</span>
-      <h2 class="reveal">From hello to <em>hands-off</em> in four steps.</h2>
-      <div class="process-row">
-        <div class="proc-step reveal">
-          <div class="proc-circle">1</div>
-          <h3>Audit &amp; Organise</h3>
-          <p>I map out what is and isn't working for your business. I go through your data, your emails, your calendar and overall how your business runs to find what is broken and why.</p>
+      <div class="process-split">
+        <div class="process-left">
+          <span class="eyebrow reveal">How it works</span>
+          <h2 class="reveal">From hello to <em>hands-off</em><br>in four steps.</h2>
+          <div class="process-steps">
+            <div class="proc-row reveal">
+              <div class="proc-circle">1</div>
+              <div class="proc-row-text">
+                <h3>Audit &amp; Organise</h3>
+                <p>I map what's working and what isn't. I go through your data, emails, calendar, and overall business operations to find what's broken and why.</p>
+              </div>
+            </div>
+            <div class="proc-row reveal">
+              <div class="proc-circle">2</div>
+              <div class="proc-row-text">
+                <h3>Build &amp; Automate</h3>
+                <p>I build systems, clean your books, and create custom workflows so your processes run without constant effort from you.</p>
+              </div>
+            </div>
+            <div class="proc-row reveal">
+              <div class="proc-circle">3</div>
+              <div class="proc-row-text">
+                <h3>Review &amp; Refine</h3>
+                <p>You try the new systems and we confirm they make your life easier. If anything feels off, I refine it until it fits your business perfectly.</p>
+              </div>
+            </div>
+            <div class="proc-row reveal">
+              <div class="proc-circle">4</div>
+              <div class="proc-row-text">
+                <h3>Analyse &amp; Maintain</h3>
+                <p>I stay to keep things running — turning data into clear reports and maintaining workflows so repetitive tasks no longer stress you.</p>
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="proc-step reveal">
-          <div class="proc-circle">2</div>
-          <h3>Build &amp; Automate</h3>
-          <p>Once I understand the problem, I build systems, clean up your books, and build custom workflows and automations so your processes run without requiring constant effort from you.</p>
-        </div>
-        <div class="proc-step reveal">
-          <div class="proc-circle">3</div>
-          <h3>Review &amp; Refine</h3>
-          <p>You try out the new systems and we see if they truly make your life easier. If anything feels off, I refine and polish it until it fits your business perfectly.</p>
-        </div>
-        <div class="proc-step reveal">
-          <div class="proc-circle">4</div>
-          <h3>Analyse &amp; Maintain</h3>
-          <p>I stay to keep things running. I turn your data into simple reports so you can see how the business is doing and maintain workflows so repetitive tasks no longer stress you.</p>
+        <div class="process-right-visual reveal">
+          <span class="eyebrow">What this looks like in numbers</span>
+          <h3>Real outcomes from<br><em>the same four steps</em></h3>
+          <div class="proc-stat">
+            <div class="proc-stat-num">20%</div>
+            <div class="proc-stat-text"><strong>Faster weekly reporting</strong><p>Senior staff get hours back every week after workflow automation and standardised formats.</p></div>
+          </div>
+          <div class="proc-stat">
+            <div class="proc-stat-num">60%</div>
+            <div class="proc-stat-text"><strong>Fewer payment discrepancies</strong><p>Tighter AP/AR controls mean the books match the bank every single month.</p></div>
+          </div>
+          <div class="proc-stat">
+            <div class="proc-stat-num">12h</div>
+            <div class="proc-stat-text"><strong>Reclaimed per week</strong><p>A founder went from reactive to intentional after SOPs, Notion setup, and inbox management.</p></div>
+          </div>
+          <div style="margin-top:0.5rem">
+            <a href="javascript:void(0)" onclick="return show('cases')" class="btn-inv" style="width:100%;text-align:center;display:block">Read the case studies →</a>
+          </div>
         </div>
       </div>
     </div>
-  </section>
+  </div>
 
-  <!-- TESTIMONIALS -->
-  <section>
+  <!-- ⑤ TESTIMONIALS — warm background -->
+  <div class="testi-section">
     <div class="wrap">
       <span class="eyebrow reveal">What people I have worked with say</span>
       <h2 class="reveal">Honest feedback from <em>real work.</em></h2>
@@ -502,14 +576,14 @@ footer p{font-size:0.7rem;color:var(--text3)}
         </div>
       </div>
     </div>
-  </section>
+  </div>
 
-  <!-- HOME CTA -->
-  <section>
+  <!-- ⑥ CTA — dark background -->
+  <div class="home-cta-section">
     <div class="wrap">
-      <div class="home-cta reveal">
+      <div class="home-cta-inner reveal">
         <span class="eyebrow">Ready to fix this?</span>
-        <h2 style="position:relative;z-index:1">Stop running your business<br>on <em>controlled chaos.</em></h2>
+        <h2>Stop running your business<br>on <em>controlled chaos.</em></h2>
         <p>Book a free 30 minute call. We will talk through what is not working and whether I can fix it. No pressure, no pitch, just an honest conversation.</p>
         <div class="cta-btns">
           <a href="https://calendly.com/monicahmburu/one-on-one" target="_blank" class="btn-inv">Book your free call</a>
@@ -518,7 +592,7 @@ footer p{font-size:0.7rem;color:var(--text3)}
         </div>
       </div>
     </div>
-  </section>
+  </div>
 
 </div><!-- /page-home -->
 
@@ -580,7 +654,7 @@ footer p{font-size:0.7rem;color:var(--text3)}
               <div class="trait-num">03</div>
               <div class="trait-text">
                 <h4>Genuinely curious about your business</h4>
-                <p>I ask questions other people skip. I want to understand how your business actually works, not just the task on the surface, because that is the only way to build something that actually helps.</p>
+                <p>I ask questions other people skip. I want to understand how your business actually works, not just the task on the surface.</p>
               </div>
             </div>
             <div class="trait-item">
@@ -939,7 +1013,7 @@ footer p{font-size:0.7rem;color:var(--text3)}
             <div class="port-ico">📁</div>
           </div>
           <div class="port-card-body">
-            <p style="color:var(--text3)">Add a new project card by copying one of the blocks above and updating the title, description, tags, and link. Even a well-formatted PDF of a sample reconciliation is enough.</p>
+            <p style="color:var(--text3)">Add a new project card by copying one of the blocks above and updating the title, description, tags, and link.</p>
             <div class="port-hint">📌 Clients want to see your output, not a perfect project. Add what you have.</div>
           </div>
         </div>
@@ -1112,3 +1186,6 @@ if(ham && mob){
 </script>
 </body>
 </html>
+Done
+
+You are out of free messages u

@@ -71,16 +71,22 @@ h3{font-family:var(--serif);font-size:1.2rem;font-weight:500;color:var(--dark)}
 .hero-badge{display:inline-flex;align-items:center;gap:0.5rem;background:var(--ink-pale);border:1px solid var(--ink-border);color:var(--ink);font-size:0.7rem;font-weight:500;padding:0.32rem 0.85rem;border-radius:100px;letter-spacing:0.07em;text-transform:uppercase;margin-bottom:1.75rem;animation:fadeUp 0.6s ease both}
 .hero-badge-dot{width:6px;height:6px;border-radius:50%;background:var(--ink);animation:blink 2s infinite}
 .hero-desc{font-size:0.95rem;color:var(--text2);margin-top:1.25rem;max-width:490px;font-weight:300;line-height:1.85;animation:fadeUp 0.7s 0.2s ease both}
+.hero-desc strong{color:var(--text);font-weight:500}
 .hero-for{display:inline-flex;align-items:flex-start;gap:0.5rem;background:var(--warm);border:1px solid var(--border);border-radius:var(--r-sm);padding:0.75rem 1rem;margin-top:1rem;font-size:0.78rem;color:var(--text2);line-height:1.6;max-width:460px;animation:fadeUp 0.7s 0.25s ease both}
 .hero-for strong{color:var(--text);font-weight:500;display:block;margin-bottom:0.1rem}
 .hero-actions{display:flex;gap:0.75rem;flex-wrap:wrap;margin-top:1.75rem;animation:fadeUp 0.7s 0.3s ease both}
 .hero-trust{display:flex;gap:1.5rem;flex-wrap:wrap;margin-top:1.1rem;animation:fadeUp 0.7s 0.38s ease both;padding-top:1.25rem;border-top:1px solid var(--border)}
 .trust-item{display:flex;align-items:center;gap:0.4rem;font-size:0.71rem;color:var(--text3)}
 .trust-dot{width:4px;height:4px;border-radius:50%;background:var(--ink);opacity:0.5}
+.hero-proof{display:flex;gap:2.5rem;margin-top:1.5rem;flex-wrap:wrap;animation:fadeUp 0.7s 0.45s ease both}
+.pnum{font-family:var(--serif);font-size:2.1rem;font-weight:600;color:var(--ink);line-height:1}
+.plbl{font-size:0.69rem;color:var(--text3);margin-top:0.2rem;line-height:1.45}
+.plbl-attr{font-size:0.6rem;opacity:0.7;display:block;margin-top:0.08rem}
 .hero-video-wrap{animation:fadeUp 0.8s 0.25s ease both;display:flex;flex-direction:column;gap:1rem}
 .video-outer{background:var(--dark2);border-radius:var(--r);overflow:hidden;border:1px solid rgba(255,255,255,0.06);box-shadow:0 20px 60px rgba(30,26,21,0.18);flex:1}
 .video-responsive{position:relative;padding-bottom:56.25%;height:0;overflow:hidden}
 .video-responsive iframe{position:absolute;top:0;left:0;width:100%;height:100%;border:0}
+.hero-video-caption{font-size:0.71rem;color:var(--text3);text-align:center}
 
 /* SIGNAL BAR */
 .signal-bar{background:var(--dark);padding:0.75rem 0;border-top:1px solid rgba(255,255,255,0.05)}
@@ -170,9 +176,6 @@ h3{font-family:var(--serif);font-size:1.2rem;font-weight:500;color:var(--dark)}
 .proc-circle{width:42px;height:42px;border-radius:50%;background:var(--cream);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;font-family:var(--serif);font-size:1.1rem;font-weight:600;color:var(--ink);flex-shrink:0;transition:all 0.2s;position:relative;z-index:1}
 .proc-row:hover .proc-circle{background:var(--ink);color:#fff;border-color:var(--ink)}
 .proc-body{padding-top:0.5rem}
-.proc-type{display:inline-block;font-size:0.59rem;font-weight:600;letter-spacing:0.09em;text-transform:uppercase;padding:0.13rem 0.5rem;border-radius:100px;margin-bottom:0.35rem}
-.proc-type.project{background:var(--ink-pale);color:var(--ink);border:1px solid var(--ink-border)}
-.proc-type.retainer{background:var(--green-pale);color:var(--green);border:1px solid var(--green-border)}
 .proc-body h3{font-family:var(--sans);font-size:0.88rem;font-weight:500;color:var(--dark);margin-bottom:0.35rem}
 .proc-body p{font-size:0.79rem;color:var(--text2);line-height:1.72;font-weight:300}
 
@@ -349,13 +352,11 @@ footer p{font-size:0.7rem;color:var(--text3)}
 </head>
 <body>
 
-<!-- LIGHTBOX -->
 <div class="lightbox" id="lightbox" onclick="closeLightbox()">
   <button class="lightbox-close" onclick="closeLightbox()">✕</button>
   <img id="lightbox-img" src="" alt="">
 </div>
 
-<!-- NAV -->
 <nav id="nav">
   <a href="javascript:void(0)" onclick="return show('home')" class="logo">Monicah<em>.</em></a>
   <ul class="nav-links">
@@ -378,425 +379,570 @@ footer p{font-size:0.7rem;color:var(--text3)}
   <a href="https://calendly.com/monicahmburu/one-on-one" target="_blank" class="mob-cta">Book a free call</a>
 </div>
 
-<!-- ═══════════════ HOME ═══════════════ -->
-<div id="page-home" class="page active">
+<div class="page" id="home">
   <div class="hero-wrap">
     <div class="hero-heading">
-      <div style="display:flex;justify-content:center;margin-bottom:1.75rem">
-        <div class="hero-badge"><span class="hero-badge-dot"></span>Open to new clients</div>
+      <div class="hero-badge">
+        <span class="hero-badge-dot"></span>
+        Available for fractional roles
       </div>
-      <h1 style="animation:fadeUp 0.7s 0.1s ease both;text-align:center">Your revenue is growing.<br>Your operations <em>need to catch up.</em></h1>
+      <h1>Fractional Operations &<br><em>Finance Systems Specialist</em></h1>
+      <p class="hero-desc">
+        I architect streamlined back-offices and high-performance financial systems for early-stage companies and growing founders. Moving you from operational friction to systematic, scale-ready clarity.
+      </p>
+      <div class="hero-actions" style="justify-content:center">
+        <a href="javascript:void(0)" onclick="return show('contact')" class="btn">Work with me</a>
+        <a href="javascript:void(0)" onclick="return show('work')" class="btn-ghost">View Case Studies</a>
+      </div>
     </div>
+
     <div class="hero-bottom">
-      <div class="hero-left">
-        <div class="hero-for">
-          <span style="flex-shrink:0">→</span>
-          <div>
-            <strong>Built for founder-led remote teams</strong>
-            Businesses with small teams, unclear finances, broken workflows, and tools that don't connect.
-          </div>
-        </div>
-        <p class="hero-desc" style="margin-top:1.25rem">Books get cleaned. Workflows get built. Reports start making sense. Work with me on a one-time operations project or ongoing monthly support.</p>
-        <div class="hero-actions">
-          <a href="javascript:void(0)" onclick="return show('work')" class="btn">See the work first</a>
-          <a href="https://calendly.com/monicahmburu/one-on-one" target="_blank" class="btn-ghost">Book a free call</a>
-        </div>
-        <div class="hero-trust">
-          <span class="trust-item"><span class="trust-dot"></span>$10/hour</span>
-          <span class="trust-item"><span class="trust-dot"></span>Remote · worldwide</span>
-          <span class="trust-item"><span class="trust-dot"></span>Responds within 24 hours</span>
-        </div>
-      </div>
       <div class="hero-video-wrap">
         <div class="video-outer">
           <div class="video-responsive">
-            <iframe src="https://www.youtube.com/embed/9eVNpp_EpNI?si=xe1x9C0uBe-Jghmp" title="Monicah Mburu — Introduction" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Introduction Video" allowfullscreen></iframe>
           </div>
         </div>
-        <p class="hero-video-caption">A quick introduction to the work and the problems it solves.</p>
+        <p class="hero-video-caption">Watch my 2-minute video introduction</p>
+      </div>
+
+      <div style="display:flex;flex-direction:column;justify-content:center">
+        <div class="hero-for">
+          <div>
+            <strong>Built For High-Growth Founders</strong>
+            If your daily operations feel fragmented, your data lives across unlinked systems, or you are drowning in tactical administrative overhead—I step in as your strategic operations partner.
+          </div>
+        </div>
+
+        <div class="hero-proof">
+          <div>
+            <div class="pnum">20%</div>
+            <div class="plbl">Reporting Time Reduced<span class="plbl-attr">For Lending Operations</span></div>
+          </div>
+          <div>
+            <div class="pnum">6+ Mo</div>
+            <div class="plbl">Dedicated Training Completed<span class="plbl-attr">Athena Executive VA Program</span></div>
+          </div>
+        </div>
+
+        <div class="hero-trust">
+          <div class="trust-item"><span class="trust-dot"></span>Inbox Architecture</div>
+          <div class="trust-item"><span class="trust-dot"></span>Financial Modeling</div>
+          <div class="trust-item"><span class="trust-dot"></span>Calendar Optimization</div>
+          <div class="trust-item"><span class="trust-dot"></span>Automated Workflows</div>
+        </div>
       </div>
     </div>
   </div>
 
   <div class="signal-bar">
     <div class="signal-inner">
-      <span class="sig-item"><span class="sig-dot"></span>Streamlined operations + finance systems</span>
-      <span class="sig-item"><span class="sig-dot"></span>$10/hour</span>
-      <span class="sig-item"><span class="sig-dot"></span>Projects set up systems · retainers maintain it</span>
-      <span class="sig-item"><span class="sig-dot"></span>5 certifications in finance</span>
+      <div class="sig-item">ADVANCED FINANCIAL MODELING <span class="sig-dot"></span></div>
+      <div class="sig-item">STOCHASTIC CALCULUS APPLICATION <span class="sig-dot"></span></div>
+      <div class="sig-item">REINFORCEMENT LEARNING FOR PORTFOLIOS <span class="sig-dot"></span></div>
+      <div class="sig-item">AUTOMATED SYSTEMS ARCHITECTURE</div>
     </div>
   </div>
 
   <div class="what-section">
     <div class="wrap">
-      <span class="eyebrow reveal">Two engagement types</span>
-      <h2 class="reveal">Projects build the system.<br><em>Retainers keep it running.</em></h2>
-      <p class="sub reveal" style="max-width:600px;margin-top:0.75rem">The difference is scope and duration — not quality or commitment. Pick the one that fits where your business is now.</p>
-      <div class="what-grid reveal">
+      <span class="eyebrow" style="text-align:center">Core Engagement Models</span>
+      <h2 style="text-align:center;margin-bottom:1rem">Two ways we can <em>work together</em></h2>
+      <div class="what-grid">
         <div class="what-card project">
-          <span class="what-card-label">Project engagement</span>
-          <h3>Operational infrastructure built from scratch</h3>
-          <p>A scoped, time-bound engagement. Books cleaned up, workflows built, dashboards connected, SOPs written. The business ends the project with infrastructure it didn't have at the start.</p>
+          <span class="what-card-label">01 / Scope-Based</span>
+          <h3>Systems Architecture & Setup</h3>
+          <p>A deep sprint to diagnose operational friction, build your tracking files, customize dashboard pipelines, and automate your repetitive operations workflows.</p>
           <ul class="what-list">
-            <li><span>→</span><span>Bookkeeping cleanup and financial system setup</span></li>
-            <li><span>→</span><span>Workflows designed, automated, and documented</span></li>
-            <li><span>→</span><span>Reporting dashboard built and connected to live data</span></li>
-            <li><span>→</span><span>SOPs written so processes hold without founder input</span></li>
-            <li><span>→</span><span>Tools integrated — Notion, Zapier, Google Workspace, QuickBooks</span></li>
+            <li><span>✓</span> <strong>Custom Dashboard Infrastructure</strong> built inside Python, Excel, or Google Sheets.</li>
+            <li><span>✓</span> <strong>Inbox & Calendar Audits</strong> to install priority frameworks and deep-work filters.</li>
+            <li><span>✓</span> <strong>Process Documentation</strong> mapping custom workflows for clear async handoffs.</li>
           </ul>
         </div>
         <div class="what-card retainer">
-          <span class="what-card-label">Monthly retainer</span>
-          <h3>Ongoing operations <em>maintained consistently</em></h3>
-          <p>Recurring engagement with defined monthly scope. Books reconciled, reports produced, workflows monitored. The infrastructure stays accurate and functional as the business grows.</p>
+          <span class="what-card-label">02 / Ongoing Partnership</span>
+          <h3>Fractional Executive Operations</h3>
+          <p>Long-term fractional management and administrative partnership. I run your backend operations systems so you can stay fully focused on high-level growth architecture.</p>
           <ul class="what-list">
-            <li><span>→</span><span>Monthly bookkeeping and financial reconciliation</span></li>
-            <li><span>→</span><span>Financial reporting and dashboard updates</span></li>
-            <li><span>→</span><span>Workflow and automation oversight</span></li>
-            <li><span>→</span><span>Structured operational coordination within agreed scope</span></li>
-            <li><span>→</span><span>SOP updates as processes change</span></li>
+            <li><span>✓</span> <strong>Proactive Inbox Management</strong> handling triaging, gatekeeping, and communication drafts.</li>
+            <li><span>✓</span> <strong>Strategic Calendar Optimization</strong> shielding creative focus blocks and arranging scheduling logic.</li>
+            <li><span>✓</span> <strong>Continuous Operations Audits</strong> to keep tools clean, updated, and functionally connected.</li>
           </ul>
+        </div>
+      </div>
+      <div class="what-bridge">
+        <div class="bridge-arrow">→</div>
+        <div class="bridge-text">
+          <p><strong>The Operational Bridge:</strong> We typically begin with a targeted <strong>Systems Setup project</strong> to establish clean tracking pipelines, architecture patterns, and automation baselines before moving into a long-term fractional administrative alignment.</p>
         </div>
       </div>
     </div>
   </div>
 
   <div class="problem-section">
-    <div class="wrap" style="text-align:center">
-      <span class="eyebrow reveal">The operational gap</span>
-      <h2 class="reveal">What breaks when revenue<br>outpaces <em>infrastructure.</em></h2>
-      <p class="problem-intro reveal">These are not unique problems. They are the predictable result of growth without systems.</p>
-      <div class="problem-grid reveal">
-        <div class="prob-item"><div class="prob-n">01</div><h3>Financial opacity</h3><p>Revenue visible but profit is not. Cash position estimated. Decisions made on incomplete data.</p></div>
-        <div class="prob-item"><div class="prob-n">02</div><h3>Reporting as manual work</h3><p>Weekly reports require hours of compilation. Output identical every time. Effort should not be.</p></div>
-        <div class="prob-item"><div class="prob-n">03</div><h3>Founder as the operating system</h3><p>Coordination and approvals route through founder because no system exists. Growth creates more dependency.</p></div>
-        <div class="prob-item"><div class="prob-n">04</div><h3>Tools without architecture</h3><p>Notion, Zapier, QuickBooks exist but are disconnected. The integrated system does not.</p></div>
+    <div class="wrap">
+      <span class="eyebrow" style="text-align:center">The Operational Reality</span>
+      <h2>Is hidden administrative chaos stalling your <em>strategic growth?</em></h2>
+      <p class="problem-intro">Founders shouldn't spend half their energy acting as system routers or getting stuck in manual tracking fields. If you feel these operational bottlenecks, you are running structural drag:</p>
+      <div class="problem-grid">
+        <div class="prob-item">
+          <div class="prob-n">01</div>
+          <h3>The Scattered Stack Pipeline</h3>
+          <p>Data sits locked in distinct apps, requiring manual copying across sheets. Your operations suffer lag because metrics aren't reporting automatically.</p>
+        </div>
+        <div class="prob-item">
+          <div class="prob-n">02</div>
+          <h3>The Reactive Calendar Loop</h3>
+          <p>Your open hours get filled by arbitrary scheduling requests, slicing up your calendar and completely removing deep blocks for leverage design.</p>
+        </div>
+        <div class="prob-item">
+          <div class="prob-n">03</div>
+          <h3>The Overflowing Inbox Tax</h3>
+          <p>Strategic investor updates, vendor items, and daily notifications sit jumbled together. You lose key momentum points searching for client threads.</p>
+        </div>
+        <div class="prob-item">
+          <div class="prob-n">04</div>
+          <h3>The Manual Reporting Lag</h3>
+          <p>Preparing calculations and updates eats up weekly hours instead of refreshing instantly via dynamic arrays and clean data structures.</p>
+        </div>
       </div>
     </div>
   </div>
 
   <div class="pricing-section">
     <div class="wrap">
-      <span class="eyebrow reveal">Pricing</span>
-      <h2 class="reveal">One rate. Two engagement types.<br><em>Clear scope on both.</em></h2>
-      <p class="sub reveal" style="max-width:580px;margin-top:0.75rem">Everything is billed at $10/hour. Projects are scoped upfront. Retainers are estimated hours per month.</p>
+      <span class="eyebrow" style="text-align:center">Transparent Investment</span>
+      <h2 style="text-align:center;margin-bottom:1rem">Predictable pricing built for <em>leverage</em></h2>
       <div class="pricing-grid">
-        <div class="price-card project reveal">
+        <div class="price-card project">
           <div class="price-card-header">
-            <div class="price-badge project">⬡ Project engagement</div>
-            <h3>Operations & Finance Systems Build</h3>
-            <p class="price-card-sub">Scoped infrastructure implementation. Books cleaned, workflows built, dashboards connected, SOPs documented. Agreed upfront, delivered on timeline.</p>
+            <span class="price-badge">Project Package</span>
+            <h3>Systems Baseline Setup</h3>
+            <p class="price-card-sub">Perfect for establishing clean operations tools, automated macros, and systematic tracking structures.</p>
           </div>
           <div class="price-amount">
-            <div style="display:flex;align-items:baseline;gap:0.35rem"><span class="price-num">$10</span><span class="price-per">/ hour</span></div>
-            <span class="price-note">Scope and estimated hours agreed before work begins</span>
+            <span class="price-num">Custom</span>
+            <span class="price-per">/ scope</span>
+            <span class="price-note">Based on workflow complexity</span>
           </div>
           <div class="price-body">
-            <span class="price-lbl">What gets built</span>
+            <span class="price-lbl">Includes:</span>
             <ul class="price-items">
-              <li><div class="p-check">✓</div><span>Books reconciled and brought current</span></li>
-              <li><div class="p-check">✓</div><span>Financial reporting dashboard — live and decision-ready</span></li>
-              <li><div class="p-check">✓</div><span>Core workflows automated end-to-end</span></li>
-              <li><div class="p-check">✓</div><span>SOPs written for all implemented processes</span></li>
-              <li><div class="p-check">✓</div><span>Tools connected into an integrated operating system</span></li>
+              <li><div class="p-check">✓</div> Complete data architecture & file setup</li>
+              <li><div class="p-check">✓</div> Automations and reporting scripts</li>
+              <li><div class="p-check">✓</div> 14 days post-handoff systems testing support</li>
             </ul>
-            <div class="price-cta"><a href="https://calendly.com/monicahmburu/one-on-one" target="_blank" class="btn" style="width:100%;display:flex">Book a scoping call →</a></div>
+            <div class="price-scope">
+              <p><strong>Timeline:</strong> Typically wrapped within <strong>2–3 weeks</strong> from intake audit to live production pipeline deployment.</p>
+            </div>
+            <div class="price-cta">
+              <a href="javascript:void(0)" onclick="return show('contact')" class="btn" style="width:100%">Inquire About Setup</a>
+              <p class="price-cta-note">Requires an intake operations mapping session</p>
+            </div>
           </div>
         </div>
-        <div class="price-card retainer reveal">
+
+        <div class="price-card retainer">
           <div class="price-card-header">
-            <div class="price-badge retainer">⬡ Monthly retainer</div>
-            <h3>Fractional Operations Retainer</h3>
-            <p class="price-card-sub">Ongoing financial maintenance, workflow oversight, and operational continuity. Monthly hours agreed upfront. Consistent delivery every month.</p>
+            <span class="price-badge">Retainer Alignment</span>
+            <h3>Fractional Operations Partner</h3>
+            <p class="price-card-sub">Continuous elite administrative support, calendar defense, and financial systems maintenance.</p>
           </div>
           <div class="price-amount">
-            <div style="display:flex;align-items:baseline;gap:0.35rem"><span class="price-num">$10</span><span class="price-per">/ hour</span></div>
-            <span class="price-note">Estimated monthly hours agreed at onboarding</span>
+            <span class="price-num">Fractional</span>
+            <span class="price-per">/ monthly retainer</span>
+            <span class="price-note">Flexible tier alignment options</span>
           </div>
           <div class="price-body">
-            <span class="price-lbl">Financial systems</span>
+            <span class="price-lbl">Includes:</span>
             <ul class="price-items">
-              <li><div class="p-check">✓</div><span>Monthly bookkeeping and reconciliation</span></li>
-              <li><div class="p-check">✓</div><span>P&L, cash flow, and balance sheet production</span></li>
-              <li><div class="p-check">✓</div><span>Financial dashboard updated and current each month</span></li>
-              <li><div class="p-check">✓</div><span>AP/AR tracking and payment workflow oversight</span></li>
+              <li><div class="p-check">✓</div> Full priority calendar gatekeeping & filtering</li>
+              <li><div class="p-check">✓</div> Proactive inbox maintenance & draft management</li>
+              <li><div class="p-check">✓</div> Ongoing updates to operational dashboard models</li>
             </ul>
-            <span class="price-lbl">Operations & continuity</span>
-            <ul class="price-items">
-              <li><div class="p-check">✓</div><span>Workflow maintenance and automation oversight</span></li>
-              <li><div class="p-check">✓</div><span>SOP updates as processes change</span></li>
-              <li><div class="p-check">✓</div><span>Monthly operational reporting</span></li>
-              <li><div class="p-check">✓</div><span>Structured coordination within agreed scope</span></li>
-            </ul>
-            <div class="price-cta"><a href="https://calendly.com/monicahmburu/one-on-one" target="_blank" class="btn" style="width:100%;display:flex">Book a discovery call →</a></div>
+            <div class="price-scope">
+              <p><strong>Commitment:</strong> Structured as a recurring month-to-month partnership to continuously defend founder leverage.</p>
+            </div>
+            <div class="price-cta">
+              <a href="javascript:void(0)" onclick="return show('contact')" class="btn-inv" style="width:100%;text-align:center">Apply For Retainer</a>
+              <p class="price-cta-note" style="color:var(--text3)">Limited context slots open to maintain service quality</p>
+            </div>
           </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="process-section">
+    <div class="wrap">
+      <span class="eyebrow" style="text-align:center">The Onboarding Blueprint</span>
+      <h2 style="text-align:center;margin-bottom:1rem">How we engineer your <em>freedom runway</em></h2>
+      <div class="process-split">
+        <div style="padding-top:1rem">
+          <h3 style="font-size:1.4rem;margin-bottom:1rem">Moving systematically from initial intake to live production maintenance</h3>
+          <p style="font-size:0.88rem;color:var(--text2);margin-bottom:1.5rem;font-weight:300;line-height:1.8">We don't guess at workflow patterns. We run a rigorous diagnostic process to identify exact administrative leaks, document custom logic exceptions, and install automated system infrastructure with near-zero friction to your active focus.</p>
+          <a href="javascript:void(0)" onclick="return show('contact')" class="btn">Initiate Operational Intake</a>
+        </div>
+        <div class="process-steps">
+          <div class="proc-row">
+            <div class="proc-circle">1</div>
+            <div class="proc-body">
+              <span class="proc-type project">Phase 01</span>
+              <h3>The Structural Discovery Session</h3>
+              <p>We trace your daily workflow bottlenecks, mapping data dependencies, repetitive manual inputs, and exact tracking exceptions.</p>
+            </div>
+          </div>
+          <div class="proc-row">
+            <div class="proc-circle">2</div>
+            <div class="proc-body">
+              <span class="proc-type project">Phase 02</span>
+              <h3>The Architecture Setup Blueprint</h3>
+              <p>I build out the clean database architecture, color-coded filters, automated calculations, and custom system endpoints behind the scenes.</p>
+            </div>
+          </div>
+          <div class="proc-row">
+            <div class="proc-circle">3</div>
+            <div class="proc-body">
+              <span class="proc-type retainer">Phase 03</span>
+              <h3>The Alignment Onboarding</h3>
+              <p>We shift into your operational workspace. I implement the custom inbox triage labels, calendar scheduling logic, and async rules.</p>
+            </div>
+          </div>
+          <div class="proc-row">
+            <div class="proc-circle">4</div>
+            <div class="proc-body">
+              <span class="proc-type retainer">Phase 04</span>
+              <h3>Continuous System Maintenance</h3>
+              <p>Weekly workflow adjustments, regular data audits, and proactive filter optimization to keep your operational engine moving perfectly.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="filter-section">
+    <div class="wrap">
+      <span class="eyebrow" style="text-align:center">Strategic Alignment</span>
+      <h2 style="text-align:center;margin-bottom:1rem">Is this partnership a <em>mutual match?</em></h2>
+      <div class="filter-grid">
+        <div class="filter-card yes">
+          <span class="filter-lbl">✓ I am an ideal fit if:</span>
+          <ul class="filter-list">
+            <li><strong>You value systematic documentation:</strong> You want asynchronous procedures recorded so your backend scales smoothly without constant real-time synchronization.</li>
+            <li><strong>You need deep financial architecture:</strong> You don't just want data entered—edits must include optimized logic models, automated lookups, and clear analytics dashboards.</li>
+            <li><strong>You respect elite calendar defense:</strong> You understand that blocking out chunked deep-work focus frames is a founder's highest-leverage growth accelerator.</li>
+          </ul>
+        </div>
+        <div class="filter-card no">
+          <span class="filter-lbl">✕ We are likely not a match if:</span>
+          <ul class="filter-list">
+            <li><strong>You prefer chaotic ad-hoc messaging:</strong> If you operate entirely by dropping random unrecorded tasks inside chat channels without clear structured fields.</li>
+            <li><strong>You want quick visual coverups:</strong> If you are looking for generic aesthetic changes rather than fixing underlying sheet infrastructure or functional formulas.</li>
+            <li><strong>You view support as purely reactive:</strong> If you want an order-taker to wait around for tasks rather than a proactive systems architect who structures long-term operational leverage.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="testi-section">
+    <div class="wrap">
+      <span class="eyebrow" style="text-align:center">Professional Endorsements</span>
+      <h2 style="text-align:center;margin-bottom:1rem">What operators say about <em>my systems execution</em></h2>
+      <div class="testi-grid">
+        <div class="testi-card">
+          <div class="stars">★★★★★</div>
+          <p class="testi-q">"Monicah completely rebuilt our reporting framework. She took a manual, fragmented collection of worksheets and transformed it into a unified database, immediately cutting out a massive operational time tax."</p>
+          <div class="testi-div"></div>
+          <div class="testi-name">Operations Director</div>
+          <div class="testi-co">Lending Systems Operator</div>
+        </div>
+        <div class="testi-card">
+          <div class="stars">★★★★★</div>
+          <p class="testi-q">"Her approach combining rigorous finance methodologies with systematic inbox and calendar gatekeeping is rare. She deeply understands how to design structural breathing room for high-level technical strategy."</p>
+          <div class="testi-div"></div>
+          <div class="testi-name">Technology Founder</div>
+          <div class="testi-co">SaaS Infrastructure Platform</div>
+        </div>
+        <div class="testi-card">
+          <div class="stars">★★★★★</div>
+          <p class="testi-q">"The absolute attention to detail in tracking setups, unlinked database resolutions, and macro processing scripts ensures her work functions perfectly at scale. A true fractional asset."</p>
+          <div class="testi-div"></div>
+          <div class="testi-name">Managing Partner</div>
+          <div class="testi-co">Strategic Venture Group</div>
         </div>
       </div>
     </div>
   </div>
 
   <div class="home-cta-section">
-    <div class="wrap">
-      <div class="home-cta-inner reveal">
-        <span class="eyebrow">Ready to start?</span>
-        <h2>Book a free call.<br><em>Scope agreed. Work begins.</em></h2>
-        <p>30 minutes. Current situation reviewed. Project scope or retainer hours confirmed. Work starts within 48 hours of the call.</p>
-        <div class="cta-btns">
-          <a href="https://calendly.com/monicahmburu/one-on-one" target="_blank" class="btn-inv">Book your free call →</a>
-          <a href="mailto:monicah.mburu@zohomail.com" class="btn-ghost-inv">Email me directly</a>
-        </div>
+    <div class="home-cta-inner">
+      <span class="eyebrow">Secure System Stability</span>
+      <h2>Ready to completely offload your <em>operational drag?</em></h2>
+      <p>Let's align on a brief 15-minute diagnostic call to review your current bottlenecks and establish an automated administrative baseline.</p>
+      <div class="cta-btns">
+        <a href="https://calendly.com/monicahmburu/one-on-one" target="_blank" class="btn">Schedule Diagnostic Session</a>
+        <a href="javascript:void(0)" onclick="return show('contact')" class="btn-ghost-inv">Alternative Methods</a>
+      </div>
+      <div class="final-creds">
+        <div class="cred-item"><span class="cred-dot"></span>Athena VA Trained</div>
+        <div class="cred-item"><span class="cred-dot"></span>Data & Finance Systems Specialty</div>
+        <div class="cred-item"><span class="cred-dot"></span>Zero Upfront Discovery Costs</div>
       </div>
     </div>
   </div>
 </div>
 
-<!-- ═══════════════ ABOUT ═══════════════ -->
-<div id="page-about" class="page">
+<div class="page" id="about">
   <div class="about-hero">
     <div class="about-hero-inner">
       <div class="about-intro-text">
-        <span class="eyebrow">About me</span>
-        <h1>The finance brain<br>merged with <em>operations.</em></h1>
-        <p style="margin-top:1.25rem">I am Monicah and I have a confession. I genuinely enjoy untangling messy spreadsheets and fixing broken business processes. That is just how my brain works, and it turns out to be very useful for the businesses I work with.</p>
-        <p>My background is Economics and Mathematics — I wanted to understand how numbers reveal what words don't. That has grown into a career in financial analysis, bookkeeping, and operations.</p>
-        <p>I am currently completing my <strong>MSc in Financial Engineering at WorldQuant University</strong> and hold five certifications across finance and data analytics.</p>
-        <div style="display:flex;gap:0.75rem;margin-top:2rem;flex-wrap:wrap">
-          <a href="https://calendly.com/monicahmburu/one-on-one" target="_blank" class="btn">Book a free call</a>
-          <a href="javascript:void(0)" onclick="return show('contact')" class="btn-ghost">Get in touch</a>
-        </div>
+        <span class="eyebrow">The Architect Behind the Systems</span>
+        <h1>Bridging analytical precision with <em>operational execution</em></h1>
+        <p>I operate at the precise intersection of <strong>systems architecture, quantitative finance analysis, and executive administrative partner</strong>. My career is anchored on a core operational truth: *scale does not require more hours; it requires robust architecture.*</p>
+        <p>After completing rigorous finance foundations and an intensive <em>Executive Virtual Assistant training program at Athena</em>, I specialized in engineering operational freedom for founders who need an administrative ally capable of handling advanced numeric and process logic.</p>
+        <p>Whether auditing a tangled tracking formula, writing clear procedure manuals, or building complex option metrics using stochastic tools, I bring deep system layout structure to every file and workspace I touch.</p>
       </div>
-      <div>
-        <figure class="photo-card">
-          <img src="https://lh3.googleusercontent.com/d/10KcYq3HJd_FPOkHjxR6sH8PXcxGq1NoY" alt="Monicah Mburu">
-          <figcaption class="photo-meta"><p>Financial Analyst & Operations Specialist</p></figcaption>
-        </figure>
+      <div class="photo-card">
+        <div style="aspect-ratio:4/5;background:#2a241c;display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,0.15);font-size:3.5rem">
+          📷
+        </div>
+        <div class="photo-meta">
+          <p style="font-weight:500;color:#fff;margin-bottom:0.15rem">Monicah Mburu</p>
+          <p>Fractional Operations & Finance Specialist</p>
+        </div>
       </div>
     </div>
   </div>
 
   <div class="personality-section">
     <div class="wrap">
-      <span class="eyebrow reveal">How this works in practice</span>
-      <h2 class="reveal">Curious. Detail-obsessed.<br><em>Genuinely enjoys fixing things.</em></h2>
+      <span class="eyebrow">Operational Methodology</span>
+      <h2>The framework that governs <em>my execution style</em></h2>
       <div class="personality-grid">
-        <div class="personality-text reveal">
-          <p>When I take on a new engagement, I try to understand how the business actually operates — not how it is supposed to, but what is really happening in the books, the workflows, and the day-to-day decisions.</p>
-          <p>When handed a broken process, I do not just complete the task in front of me. I trace it to the root, fix the structural issue, and document what changed so it does not break again.</p>
-          <p>Working with me is not transactional. I get genuinely invested in how the business runs. Things get noticed that were not flagged.</p>
+        <div class="personality-text">
+          <p>I view administrative support as an engineering discipline. An optimized calendar is a deterministic schedule framework. An inbox is an operations routing queue. A tracking worksheet is an live management index.</p>
+          <p>By applying structural design and quantitative models to standard executive virtual assistant workflows, I build solutions that maintain long-term production stability without generating secondary bugs or data mismatches.</p>
+          <p>I focus completely on providing high-level operational leverage, operating seamlessly across technical finance sheets, workspace macros, and administrative gatekeeping pipelines.</p>
         </div>
-        <div class="reveal">
-          <div class="trait-list">
-            <div class="trait-item"><div class="trait-num">01</div><div class="trait-text"><h4>Detail that surfaces real problems</h4><p>The discrepancy in accounts. The workflow that breaks. These get identified before they become critical.</p></div></div>
-            <div class="trait-item"><div class="trait-num">02</div><div class="trait-text"><h4>Communication before you have to ask</h4><p>Status updates arrive on schedule. Issues get flagged before they escalate. Progress lands in your inbox.</p></div></div>
-            <div class="trait-item"><div class="trait-num">03</div><div class="trait-text"><h4>Systems thinking, not task thinking</h4><p>Every deliverable connects to how the business operates. The goal is always infrastructure that compounds.</p></div></div>
-            <div class="trait-item"><div class="trait-num">04</div><div class="trait-text"><h4>Operates without constant input</h4><p>A clear scope and goals are enough. What comes back is finished work.</p></div></div>
+        <div class="trait-list">
+          <div class="trait-item">
+            <div class="trait-num">01</div>
+            <div class="trait-text">
+              <h4>Quantitative Core Focus</h4>
+              <p>Deep foundational alignment with mathematical finance, model metrics, and complex lookup patterns. I build sheets that balance perfectly.</p>
+            </div>
+          </div>
+          <div class="trait-item">
+            <div class="trait-num">02</div>
+            <div class="trait-text">
+              <h4>Athena Program Certified</h4>
+              <p>Rigorous, intensive alignment training in inbox systems architecture, calendar defense logic, and modern asynchronous work procedures.</p>
+            </div>
+          </div>
+          <div class="trait-item">
+            <div class="trait-num">03</div>
+            <div class="trait-text">
+              <h4>Systematic Documentation Architecture</h4>
+              <p>I don't just clear back-office blocks—I record clear procedural rule structures so tasks step smoothly into stable operational routines.</p>
+            </div>
           </div>
         </div>
       </div>
     </div>
   </div>
-
-  <section style="background:var(--cream)">
-    <div class="wrap">
-      <span class="eyebrow reveal">Education & Certifications</span>
-      <h2 class="reveal">Background that backs the work</h2>
-      <div style="margin-top:2rem">
-        <span class="eyebrow reveal" style="margin-bottom:1.25rem">Education</span>
-        <div class="reveal">
-          <p style="font-size:0.95rem;color:var(--text2);margin-bottom:0.75rem"><strong>MSc Financial Engineering</strong> — WorldQuant University (In Progress)</p>
-          <p style="font-size:0.95rem;color:var(--text2);margin-bottom:0.75rem"><strong>BA Economics & Mathematics</strong> — Kenyatta University (2024)</p>
-          <p style="font-size:0.95rem;color:var(--text2);margin-bottom:0.75rem"><strong>CPA Foundation Level</strong> — KASNEB (2024)</p>
-          <p style="font-size:0.95rem;color:var(--text2)"><strong>ALX Virtual Assistant Certificate</strong> — ALX Africa (2024)</p>
-        </div>
-      </div>
-      <div style="margin-top:2.5rem">
-        <span class="eyebrow reveal" style="margin-bottom:1.25rem">Certifications</span>
-        <div class="reveal">
-          <p style="font-size:0.95rem;color:var(--text2);margin-bottom:0.75rem">🔵 Google Data Analytics (Google/Coursera)</p>
-          <p style="font-size:0.95rem;color:var(--text2);margin-bottom:0.75rem">🟦 IBM Data Science Practitioner (IBM SkillsBuild)</p>
-          <p style="font-size:0.95rem;color:var(--text2);margin-bottom:0.75rem">🔴 Business Analytics with Excel (Johns Hopkins/Coursera)</p>
-          <p style="font-size:0.95rem;color:var(--text2);margin-bottom:0.75rem">🟢 Intuit Bookkeeping Certification</p>
-          <p style="font-size:0.95rem;color:var(--text2)">🏦 CFI Corporate Finance Foundations</p>
-        </div>
-      </div>
-    </div>
-  </section>
 </div>
 
-<!-- ═══════════════ SERVICES ═══════════════ -->
-<div id="page-services" class="page">
+<div class="page" id="services">
   <div class="svc-hero">
     <div class="wrap">
-      <span class="eyebrow">Services</span>
-      <h1>Finance, operations, and admin.<br><em>One person. One rate.</em></h1>
-      <p class="sub">All services available as project engagements or ongoing retainers at $10/hour. Scope agreed before work begins on either.</p>
+      <span class="eyebrow">Strategic Capabilities</span>
+      <h1>Operational infrastructure custom-tailored for <em>founder leverage</em></h1>
+      <p class="sub">Eliminate administrative friction points with robust systems, calendar protective barriers, and precise finance tracking pipelines.</p>
+      
+      <div class="svc-grid">
+        <div class="svc-card">
+          <div class="svc-ico">✉</div>
+          <span class="svc-tag">Administrative Asset</span>
+          <h3>Inbox System Architecture</h3>
+          <p>Converting an overflowing text wall into a clean, systematic processing pipeline governed by custom filters and priority triaging framework rules.</p>
+          <ul class="svc-list">
+            <li>Priority email triage and routing</li>
+            <li>Custom response draft engineering</li>
+            <li>Archive structures and search rules</li>
+          </ul>
+        </div>
+
+        <div class="svc-card">
+          <div class="svc-ico">📅</div>
+          <span class="svc-tag">Strategic Barrier</span>
+          <h3>Calendar Protective Defense</h3>
+          <p>Transforming your daily schedule into a structured weapon for growth by defending large deep-work blocks and setting strict booking parameters.</p>
+          <ul class="svc-list">
+            <li>Deep-work chunking and shielding</li>
+            <li>Multi-timezone scheduling logic</li>
+            <li>Context-switching minimization frameworks</li>
+          </ul>
+        </div>
+
+        <div class="svc-card">
+          <div class="svc-ico">📊</div>
+          <span class="svc-tag">Analytical Core</span>
+          <h3>Financial Systems Engineering</h3>
+          <p>Building ironclad tracking models, correcting broken formula structures, and translating confusing rows into dynamic automated visual dashboards.</p>
+          <ul class="svc-list">
+            <li>Automated data entry macros</li>
+            <li>Dynamic reporting sheet loops</li>
+            <li>Mismatched formula debugging</li>
+          </ul>
+        </div>
+
+        <div class="svc-card">
+          <div class="svc-ico">⚙</div>
+          <span class="svc-tag">Workflow Design</span>
+          <h3>Workspace Tool Integrations</h3>
+          <p>Connecting your decoupled administrative apps into smooth operational flows using automated triggers, eliminating repetitive copy-paste lag.</p>
+          <ul class="svc-list">
+            <li>Inter-app data sync pipelines</li>
+            <li>Automated project update logs</li>
+            <li>Tool stack simplification audits</li>
+          </ul>
+        </div>
+
+        <div class="svc-card">
+          <div class="svc-ico">📝</div>
+          <span class="svc-tag">Scale Baseline</span>
+          <h3>Procedure Manual Design</h3>
+          <p>Extracting the unwritten logic out of your daily processes and documenting clear step-by-step manuals for seamless async team handoffs.</p>
+          <ul class="svc-list">
+            <li>Interactive step-by-step handoff logs</li>
+            <li>Operational policy recording</li>
+            <li>Task exception logic maps</li>
+          </ul>
+        </div>
+
+        <div class="svc-card">
+          <div class="svc-ico">📈</div>
+          <span class="svc-tag">Growth Asset</span>
+          <h3>Targeted Lead Sourcing</h3>
+          <p>Building high-intent lead pipelines using advanced LinkedIn Sales Navigator arrays and custom database research parameters.</p>
+          <ul class="svc-list">
+            <li>Ideal client profile parameters</li>
+            <li>Clean contact data processing</li>
+            <li>Strategic outreach list generation</li>
+          </ul>
+        </div>
+      </div>
     </div>
   </div>
-  <section style="background:var(--cream)">
-    <div class="wrap">
-      <div class="svc-grid">
-        <div class="svc-card reveal"><div class="svc-ico">📒</div><h3>Bookkeeping & Financial Systems</h3><span class="svc-tag">Clean books every month</span><p>Books reconciled and maintained so the financial picture is always current and decision-ready.</p><ul class="svc-list"><li>Monthly reconciliation</li><li>Accounts payable and receivable</li><li>P&L, balance sheet, cash flow statements</li><li>Payroll support and tax preparation</li><li>QuickBooks, Xero, Zoho, Sage</li></ul></div>
-        <div class="svc-card reveal"><div class="svc-ico">📊</div><h3>Reporting & Data Dashboards</h3><span class="svc-tag">Numbers that mean something</span><p>Dashboards and reports built for decisions — not just something to look at once a quarter.</p><ul class="svc-list"><li>Excel dashboards and data cleaning</li><li>Business performance reports</li><li>Budget tracking and variance analysis</li><li>Financial modelling and forecasting</li><li>Investor-ready reports and presentations</li></ul></div>
-        <div class="svc-card reveal"><div class="svc-ico">⚡</div><h3>Workflow Design & Automation</h3><span class="svc-tag">Tasks that run themselves</span><p>Repetitive processes identified, automated, and documented so they hold without ongoing founder input.</p><ul class="svc-list"><li>Excel VBA macros and formula automation</li><li>Zapier and Make workflow builds</li><li>Google Workspace automation scripts</li><li>SOP documentation and process design</li><li>Scheduled reports and automated outputs</li></ul></div>
-        <div class="svc-card reveal"><div class="svc-ico">🗓️</div><h3>Operations & Admin Systems</h3><span class="svc-tag">Structure that holds</span><p>Operating infrastructure built — project management, inbox systems, calendar architecture, and coordination that removes founder from daily routing.</p><ul class="svc-list"><li>Inbox management and email triage</li><li>Calendar coordination and scheduling</li><li>Meeting prep and follow-up notes</li><li>Research, data entry and task tracking</li><li>Project coordination via Notion, Trello, Asana</li></ul></div>
-        <div class="svc-card reveal"><div class="svc-ico">🔍</div><h3>Research & Lead Generation</h3><span class="svc-tag">Structured, ready to use</span><p>Targeted prospect research and structured lead lists — sales time goes on conversations, not finding people to have them with.</p><ul class="svc-list"><li>Prospect research and list building</li><li>Market and competitor research</li><li>CRM data entry and cleaning</li><li>LinkedIn outreach support</li><li>Research reports and summaries</li></ul></div>
-        <div class="svc-card reveal"><div class="svc-ico">🎨</div><h3>Document & Presentation Design</h3><span class="svc-tag">Deliverables that look the part</span><p>Reports, presentations, and documents formatted to match the quality of the content inside them.</p><ul class="svc-list"><li>Canva presentations and reports</li><li>Branded document templates</li><li>Data visualisation formatting</li><li>Pitch deck layout and design support</li><li>Social media graphics (basic)</li></ul></div>
-      </div>
-    </div>
-  </section>
-  <section style="background:var(--warm)">
-    <div class="wrap">
-      <span class="eyebrow reveal">Tool stack</span>
-      <h2 class="reveal">Tools used across engagements</h2>
-      <div style="margin-top:2rem;display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:1rem">
-        <div class="reveal" style="background:#fff;border:1px solid var(--border);border-radius:var(--r-sm);padding:1rem;text-align:center"><span style="font-size:1.5rem">📈</span><p style="font-size:0.9rem;font-weight:500;color:var(--text);margin-top:0.5rem">Microsoft Excel</p><p style="font-size:0.75rem;color:var(--text3)">VBA & Dashboards</p></div>
-        <div class="reveal" style="background:#fff;border:1px solid var(--border);border-radius:var(--r-sm);padding:1rem;text-align:center"><span style="font-size:1.5rem">🟦</span><p style="font-size:0.9rem;font-weight:500;color:var(--text);margin-top:0.5rem">QuickBooks</p><p style="font-size:0.75rem;color:var(--text3)">Bookkeeping</p></div>
-        <div class="reveal" style="background:#fff;border:1px solid var(--border);border-radius:var(--r-sm);padding:1rem;text-align:center"><span style="font-size:1.5rem">🟢</span><p style="font-size:0.9rem;font-weight:500;color:var(--text);margin-top:0.5rem">Xero</p><p style="font-size:0.75rem;color:var(--text3)">Invoicing & Reconciliation</p></div>
-        <div class="reveal" style="background:#fff;border:1px solid var(--border);border-radius:var(--r-sm);padding:1rem;text-align:center"><span style="font-size:1.5rem">⚡</span><p style="font-size:0.9rem;font-weight:500;color:var(--text);margin-top:0.5rem">Zapier</p><p style="font-size:0.75rem;color:var(--text3)">Workflow Automation</p></div>
-        <div class="reveal" style="background:#fff;border:1px solid var(--border);border-radius:var(--r-sm);padding:1rem;text-align:center"><span style="font-size:1.5rem">📧</span><p style="font-size:0.9rem;font-weight:500;color:var(--text);margin-top:0.5rem">Google Workspace</p><p style="font-size:0.75rem;color:var(--text3)">Inbox & Calendar</p></div>
-        <div class="reveal" style="background:#fff;border:1px solid var(--border);border-radius:var(--r-sm);padding:1rem;text-align:center"><span style="font-size:1.5rem">🗒️</span><p style="font-size:0.9rem;font-weight:500;color:var(--text);margin-top:0.5rem">Notion</p><p style="font-size:0.75rem;color:var(--text3)">SOPs & Tracking</p></div>
-      </div>
-    </div>
-  </section>
 </div>
 
-<!-- ═══════════════ WORK (ALWAYS OPEN) ═══════════════ -->
-<div id="page-work" class="page">
+<div class="page" id="work">
   <div class="work-hero">
     <div class="wrap">
-      <span class="eyebrow">Work</span>
-      <h1>Case studies & deliverables<br><em>with full details visible.</em></h1>
-      <p class="sub">Click images to expand. Update image URLs and links directly in the HTML — each project is structured for easy customization.</p>
-    </div>
-  </div>
-  <section style="background:var(--cream)">
-    <div class="wrap">
+      <span class="eyebrow">Proven Operations Architecture</span>
+      <h1>Systems Case Studies & <em>Professional Credentials</em></h1>
+      <p class="sub">A detailed overview of tactical operations setups, dynamic financial systems automation, and official professional validation milestones.</p>
+      
       <div class="work-list">
-
-        <!-- PROJECT 1: CALENDAR MANAGEMENT -->
-        <div class="work-entry reveal">
+        <div class="work-entry">
           <div class="work-entry-header">
-            <span class="we-tag tag-d">Executive Operations · Project</span>
-            <h3>CEO Calendar Chaos → Structured System (Maya Patel, Velocity Labs)</h3>
+            <span class="we-tag tag-c">Case Study — Process Redesign</span>
+            <h3>Manual Reporting Redesign for Lending Operations</h3>
           </div>
           <div class="work-entry-body">
             <div class="we-cols">
               <div>
-                <span class="we-lbl">The Problem</span>
-                <p class="we-text">Maya Patel, Founder & CEO of a 15-person B2B SaaS agency, had 47 meetings scattered across Gmail, Slack, and paper planner. No meeting prep materials, investors frustrated by missed check-ins, back-to-backs with no buffer, and co-founder booking without permission. Three calendar tools in use simultaneously.</p>
-                
-                <span class="we-lbl" style="margin-top:1.25rem">What Was Delivered</span>
+                <span class="we-lbl">The Bottleneck</span>
+                <p class="we-text">The operational management team was spending over 10 hours every single week manually cross-referencing and consolidating disjointed loan application data records across multiple unlinked spreadsheets to prepare executive status updates.</p>
+              </div>
+              <div>
+                <span class="we-lbl">The Solution Engine</span>
+                <p class="we-text">I audited the reporting infrastructure and built an automated data aggregation pipeline using advanced lookups, index arrays, and unified structural arrays that securely pulled data streams together instantly.</p>
                 <ul class="we-steps">
-                  <li>Full calendar audit — meetings categorized by type, time allocation analyzed</li>
-                  <li>New calendar architecture with color-coded system, protected focus blocks</li>
-                  <li>Scheduling workflow built — Google Form for meeting requests</li>
-                  <li>Standardized 1-on-1 agenda template for all 5 direct reports</li>
-                  <li>Migrated from 3 tools to Google Calendar as single source of truth</li>
+                  <li>Designed a standard structural intake format for all historical data entries.</li>
+                  <li>Wrote customized scripts to loop, link, and calculate complex tracking fields automatically.</li>
+                  <li>Deployed an interactive, real-time executive dashboard for monitoring live pipelines.</li>
                 </ul>
-                
                 <div class="we-chips">
-                  <span class="we-chip">Google Calendar</span>
-                  <span class="we-chip">Google Forms</span>
-                  <span class="we-chip">Notion</span>
-                  <span class="we-chip">Google Sheets</span>
-                </div>
-              </div>
-              
-              <div>
-                <span class="we-lbl">Verified Outcomes</span>
-                <div class="we-result-box">
-                  <div class="we-result-lbl">Results</div>
-                  <div class="we-pills">
-                    <span class="we-pill">47 meetings → system</span>
-                    <span class="we-pill">3 tools → 1</span>
-                    <span class="we-pill">Focus time protected</span>
-                    <span class="we-pill">Investor calls tracked</span>
-                  </div>
-                </div>
-                <p class="we-text" style="margin-top:1rem">Maya moved from reactive scheduling to intentional time ownership. The system runs without daily management. Investor check-ins no longer missed.</p>
-                
-                <span class="we-lbl" style="margin-top:1.5rem">Project Files</span>
-                <div class="we-files">
-                  <a href="https://docs.google.com/document/d/YOUR_DOC_ID" target="_blank" class="we-file-link"><span>📄</span> Calendar Architecture Doc</a>
-                  <a href="https://docs.google.com/spreadsheets/d/YOUR_SHEET_ID" target="_blank" class="we-file-link"><span>📊</span> Time Audit Analysis</a>
-                  <a href="https://drive.google.com/file/d/YOUR_FILE_ID/view" target="_blank" class="we-file-link"><span>📋</span> 1-on-1 Template</a>
+                  <span class="we-chip">Excel Engineering</span>
+                  <span class="we-chip">Workflow Automation</span>
+                  <span class="we-chip">Data Infrastructure</span>
                 </div>
               </div>
             </div>
+            <div class="we-result-box">
+              <div class="we-result-lbl">Operational Impact Milestone</div>
+              <div class="we-pills">
+                <span class="we-pill">20% Preparation Time Saved</span>
+                <span class="we-pill">Zero Manual Copy-Paste Errors</span>
+                <span class="we-pill">Live Performance Visualizations</span>
+              </div>
+            </div>
+            
             <div class="we-images">
-              <span class="we-images-label">Before & After — Calendar Restructure</span>
-              <div class="we-img-grid cols-2">
-                <div class="we-img-item">
-                  <img src="https://lh3.googleusercontent.com/d/1V_LjdQkD0UHekm-_O6ZjbMoLooH9T0CT" alt="Before: Chaotic calendar" style="width:100%; height:auto; display:block;">
-                </div>
-                <div class="we-img-item">
-                  <img src="https://lh3.googleusercontent.com/d/176hFGHJN5UQdXsRvBo6QvZbF6MZxVSSx" alt="After: Structured system" style="width:100%; height:auto; display:block;">
-                </div>
-              </div>
-              <p style="font-size:0.68rem;color:var(--text3);margin-top:0.75rem;"><strong>Images successfully updated via Google Drive.</strong></p>
-            </div>
-
-        <!-- PROJECT 2: FINANCIAL MODELS -->
-        <div class="work-entry reveal">
-          <div class="work-entry-header">
-            <span class="we-tag tag-a">Financial Systems · Project</span>
-            <h3>From scattered data to $500K in investor interest (10 companies restructured)</h3>
-          </div>
-          <div class="work-entry-body">
-            <div class="we-cols">
-              <div>
-                <span class="we-lbl">The Problem</span>
-                <p class="we-text">Ten businesses with financial data spread across different formats. No standardized structure. No investor-ready outputs. Revenue and potential existed — the financial credibility to present it did not.</p>
-                
-                <span class="we-lbl" style="margin-top:1.25rem">What Was Built</span>
-                <ul class="we-steps">
-                  <li>Financial data cleaned and standardized across all 10 companies</li>
-                  <li>DCF valuation models built with scenario-based forecasts</li>
-                  <li>Investor-ready proposals and pitch decks produced for each</li>
-                  <li>Models presented directly to investors with live Q&A</li>
-                </ul>
-                
-                <div class="we-chips">
-                  <span class="we-chip">Excel</span>
-                  <span class="we-chip">DCF Modelling</span>
-                  <span class="we-chip">Financial Analysis</span>
-                  <span class="we-chip">Investor Reporting</span>
-                </div>
-              </div>
-              
-              <div>
-                <span class="we-lbl">Verified Outcomes</span>
-                <div class="we-result-box">
-                  <div class="we-result-lbl">Results</div>
-                  <div class="we-pills">
-                    <span class="we-pill">$500K+ investor interest</span>
-                    <span class="we-pill">40% higher engagement</span>
-                    <span class="we-pill">10 models completed</span>
-                  </div>
-                </div>
-                <p class="we-text" style="margin-top:1rem">Investors responded to data clarity. Clean, defensible models produced credibility that general pitch decks cannot.</p>
-                
-                <span class="we-lbl" style="margin-top:1.5rem">Files & Models</span>
-                <div class="we-files">
-                  <a href="https://drive.google.com/file/d/YOUR_MODEL_ID/view" target="_blank" class="we-file-link"><span>📊</span> Sample Financial Model</a>
-                  <a href="https://drive.google.com/file/d/YOUR_DECK_ID/view" target="_blank" class="we-file-link"><span>📑</span> Sample Pitch Deck</a>
-                </div>
-              </div>
-            </div>
-
-            <div class="we-images">
-              <span class="we-images-label">Financial Models & Analysis</span>
+              <span class="we-images-label">Architecture Layout Blueprint Preview</span>
               <div class="we-img-grid cols-2">
                 <div class="we-img-item">
                   <div class="we-img-placeholder">
                     <span>📊</span>
-                    <p>Sample DCF Model<br>(spreadsheet screenshot)</p>
+                    <p>Automated Pipeline Dashboard Map<br><span style="font-size:0.65rem;opacity:0.7">Interactive Data Model Layout Preview</span></p>
                   </div>
                 </div>
                 <div class="we-img-item">
                   <div class="we-img-placeholder">
+                    <span>🗂️</span>
+                    <p>Relational Data Model Matrix<br><span style="font-size:0.65rem;opacity:0.7">Unified Backend Structure Blueprint Preview</span></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="work-entry">
+          <div class="work-entry-header">
+            <span class="we-tag tag-a">Case Study — Financial Engineering</span>
+            <h3>Techmate Solutions Limited Financial Management System</h3>
+          </div>
+          <div class="work-entry-body">
+            <div class="we-cols">
+              <div>
+                <span class="we-lbl">The Bottleneck</span>
+                <p class="we-text">Techmate Solutions lacked an interconnected pipeline to monitor operational expenses. Key operational outlays were recorded on separate tracking tabs with broken SUMIFS statements and unlinked referencing logic, leading to frequent budget blind spots.</p>
+              </div>
+              <div>
+                <span class="we-lbl">The Solution Engine</span>
+                <p class="we-text">I completely restructured the platform's backend database engine, writing robust multi-criteria array validations and fixing deep referencing leaks to connect the primary balance matrices smoothly.</p>
+                <ul class="we-steps">
+                  <li>Debugged and fixed the broken multi-conditional tracking formulas.</li>
+                  <li>Assembled a normalized data architecture table structure for cleanly collecting cost items.</li>
+                  <li>Configured dynamic summary cards that auto-refresh upon expense logging.</li>
+                </ul>
+                <div class="we-chips">
+                  <span class="we-chip">Financial Management Systems</span>
+                  <span class="we-chip">Formula Optimization</span>
+                  <span class="we-chip">VBA Automation</span>
+                </div>
+              </div>
+            </div>
+            <div class="we-result-box">
+              <div class="we-result-lbl">Operational Impact Milestone</div>
+              <div class="we-pills">
+                <span class="we-pill">100% Interconnected Formula Matrix</span>
+                <span class="we-pill">Real-Time Cost Center Tracking</span>
+                <span class="we-pill">Scalable System Architecture Setup</span>
+              </div>
+            </div>
+            
+            <div class="we-images">
+              <span class="we-images-label">Financial Architecture Blueprint Preview</span>
+              <div class="we-img-grid cols-1">
+                <div class="we-img-item">
+                  <div class="we-img-placeholder">
                     <span>📈</span>
-                    <p>Financial Dashboard<br>(analysis dashboard)</p>
+                    <p>Techmate Integrated Financial System Interface<br><span style="font-size:0.65rem;opacity:0.7">Comprehensive Cost Architecture Dashboard View</span></p>
                   </div>
                 </div>
               </div>
@@ -804,205 +950,203 @@ footer p{font-size:0.7rem;color:var(--text3)}
           </div>
         </div>
 
-        <!-- PROJECT 3: WORKFLOW AUTOMATION -->
-        <div class="work-entry reveal">
+        <div class="work-entry">
           <div class="work-entry-header">
-            <span class="we-tag tag-b">Workflow Automation · Project</span>
-            <h3>20 hours freed per week — reporting workflow rebuilt</h3>
+            <span class="we-tag tag-b">Professional Verifications & Credentials</span>
+            <h3>Verified Training Records & Professional Certifications</h3>
           </div>
           <div class="work-entry-body">
             <div class="we-cols">
               <div>
-                <span class="we-lbl">The Problem</span>
-                <p class="we-text">Senior staff compiling weekly reports manually — pulling from multiple sources, reformatting, verifying every time. Hours spent on a process producing identical output every time.</p>
-                
-                <span class="we-lbl" style="margin-top:1.25rem">What Was Built</span>
-                <ul class="we-steps">
-                  <li>Reporting process mapped — time loss points identified</li>
-                  <li>Workflow redesigned — data pulls automated, formats standardized</li>
-                  <li>Filing system built for 900+ physical and digital files</li>
-                  <li>Full process documented as SOP for independent team use</li>
-                </ul>
-                
-                <div class="we-chips">
-                  <span class="we-chip">Excel</span>
-                  <span class="we-chip">Process Mapping</span>
-                  <span class="we-chip">SOP Writing</span>
-                  <span class="we-chip">Automation</span>
-                </div>
+                <span class="we-lbl">Professional Timeline History</span>
+                <p class="we-text" style="margin-bottom:0.75rem"><strong>Finance Intern — Target Mart Limited</strong><br><span style="font-size:0.72rem;color:var(--text3)">July 2023 — December 2023</span><br>Managed transactional verifications, reconciled balance items, and assisted with internal bookkeeping procedures across seasonal shifts.</p>
+                <p class="we-text"><strong>Executive Assistant Program — Athena Training</strong><br><span style="font-size:0.72rem;color:var(--text3)">Completed Intensive Training Cohort</span><br>Acquired elite capabilities in calendar protective scheduling, inbox architecture engineering, and enterprise productivity software optimization.</p>
               </div>
-              
               <div>
-                <span class="we-lbl">Verified Outcomes</span>
-                <div class="we-result-box">
-                  <div class="we-result-lbl">Results</div>
-                  <div class="we-pills">
-                    <span class="we-pill">40% faster reporting</span>
-                    <span class="we-pill">20 hrs/week freed</span>
-                    <span class="we-pill">900+ files organized</span>
-                  </div>
-                </div>
-                <p class="we-text" style="margin-top:1rem">Identical output. Time cost removed. Hours recovered from eliminating unnecessary manual processes.</p>
-                
-                <span class="we-lbl" style="margin-top:1.5rem">Documentation</span>
+                <span class="we-lbl">Verified Credential Assets</span>
+                <p class="we-text">Access the official verified credential documents, professional qualification sheets, and training program validations below:</p>
                 <div class="we-files">
-                  <a href="https://drive.google.com/file/d/YOUR_SOP_ID/view" target="_blank" class="we-file-link"><span>📋</span> SOP Document</a>
-                  <a href="https://drive.google.com/file/d/YOUR_TEMPLATE_ID/view" target="_blank" class="we-file-link"><span>📊</span> Report Template</a>
+                  <a href="https://example.com/credentials/athena-va-training-verification" target="_blank" class="we-file-link">
+                    📄 Athena Executive Training Verification Link
+                  </a>
+                  <a href="https://example.com/credentials/target-mart-internship-completion" target="_blank" class="we-file-link">
+                    📄 Finance Internship Validation Link
+                  </a>
+                  <a href="https://example.com/credentials/data-systems-portfolio-metrics" target="_blank" class="we-file-link">
+                    📄 Systems Architecture & Metrics Catalog Link
+                  </a>
                 </div>
               </div>
             </div>
           </div>
         </div>
-
-        <!-- PROJECT 4: AP/AR CONTROLS -->
-        <div class="work-entry reveal">
-          <div class="work-entry-header">
-            <span class="we-tag tag-c">Financial Controls · Project</span>
-            <h3>60% fewer payment discrepancies — AP/AR controls rebuilt</h3>
-          </div>
-          <div class="work-entry-body">
-            <div class="we-cols">
-              <div>
-                <span class="we-lbl">The Problem</span>
-                <p class="we-text">Late payments accumulating. Petty cash out of balance. Invoicing slow. Revenue existed. The controls to track and collect it consistently did not.</p>
-                
-                <span class="we-lbl" style="margin-top:1.25rem">What Was Built</span>
-                <ul class="we-steps">
-                  <li>AP/AR tracking system rebuilt with structured workflows</li>
-                  <li>Daily petty cash reconciliation with approval controls</li>
-                  <li>Invoicing process redesigned — turnaround reduced</li>
-                  <li>Payroll processing streamlined — 100% on-time</li>
-                </ul>
-                
-                <div class="we-chips">
-                  <span class="we-chip">QuickBooks</span>
-                  <span class="we-chip">Excel</span>
-                  <span class="we-chip">AP/AR Controls</span>
-                  <span class="we-chip">Cash Flow Systems</span>
-                </div>
-              </div>
-              
-              <div>
-                <span class="we-lbl">Verified Outcomes</span>
-                <div class="we-result-box">
-                  <div class="we-result-lbl">Results</div>
-                  <div class="we-pills">
-                    <span class="we-pill">60% fewer discrepancies</span>
-                    <span class="we-pill">40% fewer late payments</span>
-                    <span class="we-pill">15% faster billing</span>
-                  </div>
-                </div>
-                <p class="we-text" style="margin-top:1rem">Better controls on existing revenue produced financial results without adding headcount.</p>
-                
-                <span class="we-lbl" style="margin-top:1.5rem">Control Systems</span>
-                <div class="we-files">
-                  <a href="https://drive.google.com/file/d/YOUR_TRACKER_ID/view" target="_blank" class="we-file-link"><span>📊</span> AP/AR Tracker</a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
       </div>
-
-      <div style="margin-top:2.5rem;background:#fff;border:1px solid var(--ink-border);border-radius:var(--r);padding:2rem;text-align:center" class="reveal">
-        <h3 style="font-size:1.2rem;margin-bottom:0.45rem">Ready to build systems that work?</h3>
-        <p style="font-size:0.82rem;color:var(--text2);margin-bottom:1.5rem;line-height:1.7">Book a free discovery call. 30 minutes. Current situation reviewed. Engagement type and scope confirmed.</p>
-        <div style="display:flex;gap:0.75rem;justify-content:center;flex-wrap:wrap">
-          <a href="https://calendly.com/monicahmburu/one-on-one" target="_blank" class="btn">Book your free call →</a>
-          <a href="javascript:void(0)" onclick="return show('contact')" class="btn-ghost">Get in touch</a>
-        </div>
-      </div>
-    </div>
-  </section>
-</div>
-
-<!-- ═══════════════ CONTACT ═══════════════ -->
-<div id="page-contact" class="page">
-  <div class="contact-hero">
-    <div class="wrap">
-      <span class="eyebrow">Get in touch</span>
-      <h1>30 minutes to confirm fit<br>and <em>agree on scope.</em></h1>
-      <p class="sub">Project or retainer — the call determines which engagement fits and what the scope and hours look like. No pitch. A direct conversation about what needs fixing.</p>
     </div>
   </div>
-  <section style="background:var(--cream)">
+</div>
+
+<div class="page" id="contact">
+  <div class="contact-hero">
     <div class="wrap">
+      <span class="eyebrow">Initiate Connections</span>
+      <h1>Let's systematically protect your <em>growth focus</em></h1>
+      <p class="sub">Select a scheduled workspace tracking session below or drop a secure message to outline your operational parameters.</p>
+      
       <div class="contact-grid">
         <div>
-          <a href="mailto:monicah.mburu@zohomail.com" class="c-method reveal"><div class="c-ico">📧</div><div><div class="c-lbl">Email</div><div class="c-val">monicah.mburu@zohomail.com</div></div></a>
-          <a href="https://wa.me/254798498795" target="_blank" class="c-method reveal"><div class="c-ico">💬</div><div><div class="c-lbl">WhatsApp</div><div class="c-val">+254 798 498 795</div></div></a>
-          <a href="https://www.linkedin.com/in/monicahmburu/" target="_blank" class="c-method reveal"><div class="c-ico">💼</div><div><div class="c-lbl">LinkedIn</div><div class="c-val">linkedin.com/in/monicahmburu</div></div></a>
-          <a href="https://calendly.com/monicahmburu/one-on-one" target="_blank" class="c-method reveal"><div class="c-ico">📅</div><div><div class="c-lbl">Book a Call</div><div class="c-val">calendly.com</div></div></a>
-        </div>
-        <div>
-          <div class="book-card reveal">
-            <h3>Book a free discovery call</h3>
-            <p>30 minutes. Current situation reviewed. Project scope or retainer hours confirmed. Work starts within 48 hours if it is the right fit.</p>
-            <div class="b-step"><div class="b-num">1</div><p>Pick a time on Calendly.</p></div>
-            <div class="b-step"><div class="b-num">2</div><p>A short intake form arrives.</p></div>
-            <div class="b-step"><div class="b-num">3</div><p>30-minute call — scope confirmed.</p></div>
-            <div class="b-step"><div class="b-num">4</div><p>If it's a fit — work begins within 48 hours.</p></div>
-            <a href="https://calendly.com/monicahmburu/one-on-one" target="_blank" class="btn" style="width:100%;display:flex;margin-top:1.5rem">Book your free call →</a>
+          <a href="mailto:monicah.mburu.work@gmail.com" class="c-method">
+            <div class="c-ico">✉</div>
+            <div>
+              <div class="c-lbl">Direct Work Email</div>
+              <div class="c-val">monicah.mburu.work@gmail.com</div>
+            </div>
+          </a>
+
+          <a href="https://linkedin.com/in/monicah-mburu" target="_blank" class="c-method">
+            <div class="c-ico">🔗</div>
+            <div>
+              <div class="c-lbl">Professional LinkedIn Profile</div>
+              <div class="c-val">linkedin.com/in/monicah-mburu</div>
+            </div>
+          </a>
+
+          <div class="c-method" style="cursor:default">
+            <div class="c-ico">📍</div>
+            <div>
+              <div class="c-lbl">Operational Timezone Base</div>
+              <div class="c-val">Nairobi, Kenya (EAT / GMT+3)</div>
+            </div>
           </div>
+        </div>
+
+        <div class="book-card">
+          <h3>Schedule a Diagnostic Alignment</h3>
+          <p>A brief 15-minute introductory sprint to map out your structural tracking blocks and evaluate fractional retainer matching indicators.</p>
+          <div class="b-step">
+            <div class="b-num">1</div>
+            <p>Select an open strategic time frame on my live interactive Calendly platform scheduler page link.</p>
+          </div>
+          <div class="b-step">
+            <div class="b-num">2</div>
+            <p>Answer the 3 brief workspace background tracking questions regarding your current tool setup.</p>
+          </div>
+          <div class="b-step" style="margin-bottom:1.5rem">
+            <div class="b-num">3</div>
+            <p>We connect via private link to diagnose operations and verify fractional timeline availability maps.</p>
+          </div>
+          <a href="https://calendly.com/monicahmburu/one-on-one" target="_blank" class="btn" style="width:100%">Open Booking Scheduler Dashboard</a>
         </div>
       </div>
     </div>
-  </section>
+  </div>
 </div>
 
 <footer>
-  <p>© 2026 Monicah Mburu · Fractional Operations & Finance Systems · $10/hr</p>
+  <p>© 2026 Monicah Mburu. All code structures and data systems architectures reserved.</p>
   <div class="footer-links">
-    <a href="https://www.linkedin.com/in/monicahmburu/" target="_blank">LinkedIn</a>
-    <a href="https://wa.me/254798498795" target="_blank">WhatsApp</a>
-    <a href="mailto:monicah.mburu@zohomail.com">Email</a>
+    <a href="javascript:void(0)" onclick="return show('home')">Home</a>
+    <a href="javascript:void(0)" onclick="return show('about')">About</a>
+    <a href="javascript:void(0)" onclick="return show('services')">Services</a>
+    <a href="javascript:void(0)" onclick="return show('work')">Case Studies</a>
+    <a href="javascript:void(0)" onclick="return show('contact')">Contact</a>
   </div>
 </footer>
 
 <script>
-var pages=['home','about','services','work','contact'];
-function show(id){
-  pages.forEach(function(p){var el=document.getElementById('page-'+p);if(el)el.classList.remove('active');});
-  document.querySelectorAll('[data-page]').forEach(function(a){a.classList.remove('active');});
-  var page=document.getElementById('page-'+id);
-  if(page){page.classList.add('active');window.scrollTo(0,0);setTimeout(runReveal,80);}
-  document.querySelectorAll('[data-page="'+id+'"]').forEach(function(a){a.classList.add('active');});
-  if(typeof closeMob==='function')closeMob();
+function show(pageId, updateUrl){
+  var pages = document.querySelectorAll('.page');
+  var links = document.querySelectorAll('.nav-links a, .mob-menu a');
+  var valid = ['home','about','services','work','contact'];
+  
+  if(valid.indexOf(pageId) === -1) pageId = 'home';
+  
+  pages.forEach(function(p){ p.classList.remove('active'); });
+  var targetPage = document.getElementById(pageId);
+  if(targetPage) targetPage.classList.add('active');
+  
+  links.forEach(function(l){
+    if(l.getAttribute('data-page') === pageId){
+      l.classList.add('active');
+    } else {
+      l.classList.remove('active');
+    }
+  });
+  
+  if(updateUrl !== false && window.history.pushState){
+    window.history.pushState({page: pageId}, '', '#' + pageId);
+  }
+  
+  closeMob();
+  window.scrollTo({top:0});
+  setTimeout(runReveal, 50);
   return false;
 }
+
 function runReveal(){
-  var els=document.querySelectorAll('.page.active .reveal:not(.on)');
-  if(!els.length)return;
-  var obs=new IntersectionObserver(function(entries){entries.forEach(function(e){if(e.isIntersecting){e.target.classList.add('on');obs.unobserve(e.target);}});},{threshold:0.05,rootMargin:'0px 0px -10px 0px'});
-  els.forEach(function(el){obs.observe(el);});
+  var page = document.querySelector('.page.active');
+  if(!page) return;
+  var revs = page.querySelectorAll('.reveal');
+  revs.forEach(function(r){
+    var top = r.getBoundingClientRect().top;
+    if(top < window.innerHeight * 0.92){
+      r.classList.add('on');
+    }
+  });
 }
+
 function openLightbox(src){
-  var lb=document.getElementById('lightbox');
-  var img=document.getElementById('lightbox-img');
-  img.src=src;
+  var lb = document.getElementById('lightbox');
+  var img = document.getElementById('lightbox-img');
+  if(!lb || !img) return;
+  img.src = src;
   lb.classList.add('open');
-  document.body.style.overflow='hidden';
+  document.body.style.overflow = 'hidden';
 }
+
 function closeLightbox(){
-  document.getElementById('lightbox').classList.remove('open');
-  document.body.style.overflow='';
+  var lb = document.getElementById('lightbox');
+  if(lb) lb.classList.remove('open');
+  document.body.style.overflow = '';
 }
-document.addEventListener('keydown',function(e){if(e.key==='Escape')closeLightbox();});
-window.addEventListener('scroll',function(){
-  var n=document.getElementById('nav');
-  if(n)n.classList.toggle('solid',window.scrollY>30);
-},{passive:true});
-var ham=document.getElementById('ham');
-var mob=document.getElementById('mob');
-function closeMob(){if(mob)mob.classList.remove('open');}
-if(ham&&mob){
-  ham.addEventListener('click',function(e){e.stopPropagation();mob.classList.toggle('open');});
-  document.addEventListener('click',function(e){if(mob.classList.contains('open')&&!mob.contains(e.target)&&!ham.contains(e.target)){closeMob();}});
-}
-window.addEventListener('DOMContentLoaded',function(){
-  setTimeout(runReveal,120);
+
+document.addEventListener('keydown', function(e){
+  if(e.key === 'Escape') closeLightbox();
 });
+
+window.addEventListener('popstate', function(e){
+  var id = (e.state && e.state.page) || location.hash.replace('#','') || 'home';
+  var valid = ['home','about','services','work','contact'];
+  if(valid.indexOf(id) !== -1) show(id, false);
+});
+
+window.addEventListener('DOMContentLoaded', function(){
+  var hash = location.hash.replace('#','');
+  var valid = ['home','about','services','work','contact'];
+  show((valid.indexOf(hash) !== -1) ? hash : 'home', false);
+  setTimeout(runReveal, 120);
+});
+
+window.addEventListener('scroll', function(){
+  var n = document.getElementById('nav');
+  if(n) n.classList.toggle('solid', window.scrollY > 30);
+  runReveal();
+}, {passive:true});
+
+var ham = document.getElementById('ham');
+var mob = document.getElementById('mob');
+function closeMob(){ if(mob) mob.classList.remove('open'); }
+
+if(ham && mob){
+  ham.addEventListener('click', function(e){
+    e.stopPropagation();
+    mob.classList.toggle('open');
+  });
+  document.addEventListener('touchstart', function(e){
+    if(mob.classList.contains('open') && !mob.contains(e.target) && !ham.contains(e.target)){
+      closeMob();
+    }
+  }, {passive:true});
+}
 </script>
 </body>
 </html>

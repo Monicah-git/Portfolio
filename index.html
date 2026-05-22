@@ -281,12 +281,8 @@ h3{font-family:var(--serif);font-size:1.2rem;font-weight:500;color:var(--dark)}
 .tool-ico{font-size:1.7rem;margin-bottom:0.45rem;display:block}
 .tool-name{font-size:0.7rem;font-weight:500;color:var(--text);margin-bottom:0.12rem}
 .tool-cat{font-size:0.58rem;color:var(--text3)}
-
-/* ── WORK SAMPLES PAGE — always-expanded cards ── */
 .ws-hero{padding:5rem 0 4rem;background:var(--warm)}
 .work-list{display:flex;flex-direction:column;gap:3rem;margin-top:3rem}
-
-/* Card — always open, no toggle */
 .work-card{background:#fff;border:1px solid var(--border);border-radius:18px;overflow:hidden}
 .work-card-header{padding:2rem 2.25rem 1.75rem;border-bottom:1px solid var(--border)}
 .we-tag{font-size:0.62rem;font-weight:500;text-transform:uppercase;letter-spacing:0.1em;padding:0.22rem 0.6rem;border-radius:100px;margin-bottom:0.65rem;display:inline-block}
@@ -297,7 +293,6 @@ h3{font-family:var(--serif);font-size:1.2rem;font-weight:500;color:var(--dark)}
 .work-card-header h3{font-size:1.25rem;line-height:1.3;font-family:var(--serif);font-weight:500;color:var(--dark);margin-bottom:0}
 .we-outcome-pills{display:flex;flex-wrap:wrap;gap:0.4rem;margin-top:0.65rem}
 .we-outcome-pill{font-size:0.68rem;font-weight:600;padding:0.28rem 0.7rem;border-radius:100px;background:var(--dark);color:rgba(255,255,255,0.8)}
-
 .work-card-body{padding:2rem 2.25rem}
 .we-cols{display:grid;grid-template-columns:1fr 1fr;gap:2.5rem}
 .we-lbl{font-size:0.6rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--text3);margin-bottom:0.55rem;display:block}
@@ -314,12 +309,8 @@ h3{font-family:var(--serif);font-size:1.2rem;font-weight:500;color:var(--dark)}
 .we-files{display:flex;flex-wrap:wrap;gap:0.65rem;margin-top:1.25rem}
 .we-file-link{display:inline-flex;align-items:center;gap:0.5rem;font-size:0.75rem;font-weight:500;color:var(--ink);background:var(--ink-pale);border:1px solid var(--ink-border);border-radius:100px;padding:0.4rem 0.9rem;text-decoration:none;transition:background 0.2s;-webkit-tap-highlight-color:rgba(138,100,69,0.1)}
 .we-file-link:hover{background:var(--warm2)}
-
-/* Images — full width, tall, visible */
 .work-card-images{border-top:1px solid var(--border);padding:2rem 2.25rem}
 .we-images-label{font-size:0.6rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--text3);margin-bottom:1.25rem;display:block}
-
-/* Before/after comparison */
 .ba-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.25rem}
 .ba-item{border-radius:12px;overflow:hidden;border:1px solid var(--border)}
 .ba-label{font-size:0.65rem;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;padding:0.55rem 0.85rem;display:flex;align-items:center;gap:0.4rem}
@@ -327,8 +318,6 @@ h3{font-family:var(--serif);font-size:1.2rem;font-weight:500;color:var(--dark)}
 .ba-label.after{background:var(--green-pale);color:var(--green);border-bottom:1px solid var(--green-border)}
 .ba-item img{width:100%;height:340px;object-fit:cover;display:block;cursor:zoom-in;transition:opacity 0.2s}
 .ba-item img:hover{opacity:0.9}
-
-/* Single or multi image grid */
 .img-grid{display:grid;gap:1.25rem}
 .img-grid.cols-1{grid-template-columns:1fr}
 .img-grid.cols-2{grid-template-columns:1fr 1fr}
@@ -336,21 +325,15 @@ h3{font-family:var(--serif);font-size:1.2rem;font-weight:500;color:var(--dark)}
 .img-item img{width:100%;height:380px;object-fit:cover;display:block;cursor:zoom-in;transition:opacity 0.2s}
 .img-item img:hover{opacity:0.9}
 .img-caption{font-size:0.67rem;color:var(--text3);padding:0.55rem 0.85rem;background:var(--warm);border-top:1px solid var(--border)}
-
-/* Placeholder box when no real image yet */
 .img-placeholder{border-radius:12px;border:2px dashed var(--border);background:var(--warm);min-height:280px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:0.65rem;padding:2rem}
 .img-placeholder span{font-size:2.5rem}
 .img-placeholder p{font-size:0.78rem;color:var(--text3);text-align:center;line-height:1.55;max-width:320px}
 .img-placeholder code{font-size:0.65rem;background:var(--warm2);padding:0.15rem 0.4rem;border-radius:4px;color:var(--text2)}
-
-/* Lightbox */
 .lightbox{display:none;position:fixed;inset:0;background:rgba(30,26,21,0.93);z-index:500;align-items:center;justify-content:center;padding:2rem}
 .lightbox.open{display:flex}
 .lightbox img{max-width:92vw;max-height:90vh;border-radius:var(--r);box-shadow:0 30px 80px rgba(0,0,0,0.5);object-fit:contain}
 .lightbox-close{position:absolute;top:1.5rem;right:1.5rem;width:44px;height:44px;border-radius:50%;background:rgba(255,255,255,0.12);border:1px solid rgba(255,255,255,0.18);color:#fff;font-size:1.2rem;display:flex;align-items:center;justify-content:center;cursor:pointer;transition:background 0.2s}
 .lightbox-close:hover{background:rgba(255,255,255,0.22)}
-
-/* Creds dark strip */
 .cert-dark-wrap{background:var(--dark);border-radius:18px;padding:2.5rem;margin-top:3rem}
 .cert-dark-wrap .eyebrow{color:rgba(255,255,255,0.28);margin-bottom:0.65rem}
 .cert-dark-wrap h3{color:#fff;font-family:var(--serif);font-size:1.4rem;font-weight:500;margin-bottom:0.5rem}
@@ -361,8 +344,6 @@ h3{font-family:var(--serif);font-size:1.2rem;font-weight:500;color:var(--dark)}
 .cert-dark-ico{font-size:1.35rem;margin-bottom:0.5rem;display:block}
 .cert-dark-name{font-size:0.65rem;font-weight:500;color:rgba(255,255,255,0.6);line-height:1.35;margin-bottom:0.2rem}
 .cert-dark-by{font-size:0.56rem;color:rgba(255,255,255,0.25)}
-
-/* CONTACT */
 .contact-hero{padding:5rem 0 4rem;background:var(--warm)}
 .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:4rem;margin-top:3rem}
 .c-method{display:flex;align-items:center;gap:1rem;background:#fff;border:1px solid var(--border);border-radius:var(--r);padding:1.1rem 1.3rem;text-decoration:none;transition:border-color 0.2s;margin-bottom:0.85rem}
@@ -385,7 +366,6 @@ footer p{font-size:0.7rem;color:var(--text3)}
 .footer-links{display:flex;gap:1.5rem}
 .footer-links a{font-size:0.7rem;color:var(--text3);text-decoration:none;transition:color 0.2s}
 .footer-links a:hover{color:var(--ink)}
-
 @media(max-width:900px){
   .hero-wrap{padding:3.5rem 1.5rem 3rem}
   .hero-bottom{grid-template-columns:1fr;gap:2rem}
@@ -522,7 +502,7 @@ footer p{font-size:0.7rem;color:var(--text3)}
     <div class="wrap">
       <span class="eyebrow">Work Samples</span>
       <h1>Case studies, deliverables,<br>and <em>real project files.</em></h1>
-      <p class="sub">Five engagements — the problem, what was built, and the verified outcome. Images are clickable to enlarge. Replace placeholder boxes with your own screenshots.</p>
+      <p class="sub">Five engagements — the problem, what was built, and the verified outcome. Images are clickable to enlarge.</p>
     </div>
   </div>
 
@@ -577,11 +557,13 @@ footer p{font-size:0.7rem;color:var(--text3)}
             <div class="ba-grid">
               <div class="ba-item">
                 <div class="ba-label before">⚠ Before — initial calendar</div>
-                <img src="https://drive.google.com/file/d/1-8GQZboN0aDqcFCfGoPaJLXgXP1rWI3x/view?usp=sharing" alt="Before — initial calendar">
+                <!-- FIX: converted from /file/d/ID/view to /uc?export=view&id=ID -->
+                <img src="https://drive.google.com/uc?export=view&id=1-8GQZboN0aDqcFCfGoPaJLXgXP1rWI3x" alt="Before — initial calendar" onclick="openLightbox(this.src)" style="cursor:zoom-in">
               </div>
               <div class="ba-item">
                 <div class="ba-label after">✓ After — restructured system</div>
-                <img src="https://drive.google.com/file/d/1aGktkYSbEMNU6YHAMfCCcCN2xp_bb0sz/view?usp=sharing" alt="After — restructured system">
+                <!-- FIX: converted from /file/d/ID/view to /uc?export=view&id=ID -->
+                <img src="https://drive.google.com/uc?export=view&id=1aGktkYSbEMNU6YHAMfCCcCN2xp_bb0sz" alt="After — restructured system" onclick="openLightbox(this.src)" style="cursor:zoom-in">
               </div>
             </div>
           </div>

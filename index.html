@@ -20,6 +20,7 @@ html{scroll-behavior:smooth}
 body{font-family:var(--sans);background:var(--cream);color:var(--text);line-height:1.7;-webkit-font-smoothing:antialiased;overflow-x:hidden}
 @keyframes fadeUp{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:translateY(0)}}
 @keyframes blink{0%,100%{opacity:1}50%{opacity:.3}}
+@keyframes spin{to{transform:rotate(360deg)}}
 .reveal{opacity:0;transform:translateY(22px);transition:opacity 0.6s ease,transform 0.6s ease}
 .reveal.on{opacity:1;transform:none}
 nav{position:fixed;top:0;left:0;right:0;z-index:200;height:62px;display:flex;align-items:center;justify-content:space-between;padding:0 2.5rem;transition:background 0.3s,border-bottom 0.3s}
@@ -329,6 +330,8 @@ h3{font-family:var(--serif);font-size:1.2rem;font-weight:500;color:var(--dark)}
 .img-placeholder span{font-size:2.5rem}
 .img-placeholder p{font-size:0.78rem;color:var(--text3);text-align:center;line-height:1.55;max-width:320px}
 .img-placeholder code{font-size:0.65rem;background:var(--warm2);padding:0.15rem 0.4rem;border-radius:4px;color:var(--text2)}
+.img-loading{position:relative;background:var(--warm);min-height:280px;display:flex;align-items:center;justify-content:center}
+.img-loading::after{content:'';width:20px;height:20px;border:2px solid var(--border);border-top-color:var(--ink);border-radius:50%;animation:spin 0.8s linear infinite}
 .lightbox{display:none;position:fixed;inset:0;background:rgba(30,26,21,0.93);z-index:500;align-items:center;justify-content:center;padding:2rem}
 .lightbox.open{display:flex}
 .lightbox img{max-width:92vw;max-height:90vh;border-radius:var(--r);box-shadow:0 30px 80px rgba(0,0,0,0.5);object-fit:contain}
@@ -502,7 +505,7 @@ footer p{font-size:0.7rem;color:var(--text3)}
     <div class="wrap">
       <span class="eyebrow">Work Samples</span>
       <h1>Case studies, deliverables,<br>and <em>real project files.</em></h1>
-      <p class="sub">Five engagements — the problem, what was built, and the verified outcome. Images are clickable to enlarge.</p>
+      <p class="sub">Five engagements — the problem, what was built, and the verified outcome. Images are clickable to enlarge. <strong>Add any Google Drive image link and it will display automatically.</strong></p>
     </div>
   </div>
 
@@ -557,13 +560,19 @@ footer p{font-size:0.7rem;color:var(--text3)}
             <div class="ba-grid">
               <div class="ba-item">
                 <div class="ba-label before">⚠ Before — initial calendar</div>
-                <!-- FIX: converted from /file/d/ID/view to /uc?export=view&id=ID -->
-                <img src="https://drive.google.com/uc?export=view&id=1aGktkYSbEMNU6YHAMfCCcCN2xp_bb0sz" onclick="openLightbox(this.src)" style="cursor:zoom-in"
+                <!-- INSTRUCTIONS: Replace FILE_ID with your Google Drive file ID. Example: 1aGktkYSbEMNU6YHAMfCCcCN2xp_bb0sz -->
+                <img data-drive-id="1aGktkYSbEMNU6YHAMfCCcCN2xp_bb0sz" 
+                     class="google-drive-img"
+                     alt="Before - initial calendar"
+                     style="cursor:zoom-in">
               </div>
               <div class="ba-item">
                 <div class="ba-label after">✓ After — restructured system</div>
-                <!-- FIX: converted from /file/d/ID/view to /uc?export=view&id=ID -->
-                <img src="https://drive.google.com/uc?export=view&id=1-8GQZboN0aDqcFCfGoPaJLXgXP1rWI3x" onclick="openLightbox(this.src)" style="cursor:zoom-in">
+                <!-- INSTRUCTIONS: Replace FILE_ID with your Google Drive file ID -->
+                <img data-drive-id="1-8GQZboN0aDqcFCfGoPaJLXgXP1rWI3x"
+                     class="google-drive-img"
+                     alt="After - restructured system"
+                     style="cursor:zoom-in">
               </div>
             </div>
           </div>
@@ -601,10 +610,6 @@ footer p{font-size:0.7rem;color:var(--text3)}
                   <div class="we-pills"><span class="we-pill">$500K+ investor interest</span><span class="we-pill">40% higher engagement</span><span class="we-pill">30% better forecasting</span></div>
                 </div>
                 <p class="we-text" style="margin-top:1rem">Investors responded to the clarity of data, not just the business case. Clean, defensible models produced credibility that general pitch decks do not.</p>
-                <div class="we-files">
-                  <a href="https://drive.google.com/file/d/YOUR_MODEL_ID" target="_blank" class="we-file-link"><span>📊</span> Sample Financial Model</a>
-                  <a href="https://drive.google.com/file/d/YOUR_DECK_ID" target="_blank" class="we-file-link"><span>📑</span> Sample Pitch Deck</a>
-                </div>
               </div>
             </div>
           </div>
@@ -612,11 +617,11 @@ footer p{font-size:0.7rem;color:var(--text3)}
             <span class="we-images-label">Work samples — financial model screenshots</span>
             <div class="img-grid cols-2">
               <div class="img-item">
-                <div class="img-placeholder"><span>📊</span><p>Add a screenshot of your DCF model<br><code>&lt;img src="YOUR_URL" onclick="openLightbox(this.src)"&gt;</code></p></div>
+                <div class="img-placeholder"><span>📊</span><p>Add a screenshot of your DCF model<br><code>data-drive-id="YOUR_FILE_ID"</code></p></div>
                 <div class="img-caption">DCF valuation model</div>
               </div>
               <div class="img-item">
-                <div class="img-placeholder"><span>📈</span><p>Add a screenshot of your dashboard or pitch deck<br><code>&lt;img src="YOUR_URL" onclick="openLightbox(this.src)"&gt;</code></p></div>
+                <div class="img-placeholder"><span>📈</span><p>Add a screenshot of your dashboard or pitch deck<br><code>data-drive-id="YOUR_FILE_ID"</code></p></div>
                 <div class="img-caption">Investor-ready dashboard</div>
               </div>
             </div>
@@ -655,10 +660,6 @@ footer p{font-size:0.7rem;color:var(--text3)}
                   <div class="we-pills"><span class="we-pill">40% faster reporting</span><span class="we-pill">20 hrs/week freed</span><span class="we-pill">900+ files structured</span></div>
                 </div>
                 <p class="we-text" style="margin-top:1rem">Identical output. Time cost removed. The hours recovered came from eliminating unnecessary manual processes, not from reduced work.</p>
-                <div class="we-files">
-                  <a href="https://drive.google.com/file/d/YOUR_SOP_ID" target="_blank" class="we-file-link"><span>📋</span> Sample SOP Document</a>
-                  <a href="https://drive.google.com/file/d/YOUR_EXCEL_ID" target="_blank" class="we-file-link"><span>📊</span> Automated Report Template</a>
-                </div>
               </div>
             </div>
           </div>
@@ -666,7 +667,7 @@ footer p{font-size:0.7rem;color:var(--text3)}
             <span class="we-images-label">SOP or workflow screenshots</span>
             <div class="img-grid cols-1">
               <div class="img-item">
-                <div class="img-placeholder"><span>📋</span><p>Add a screenshot of your SOP or automated workflow here<br><code>&lt;img src="YOUR_URL" onclick="openLightbox(this.src)"&gt;</code></p></div>
+                <div class="img-placeholder"><span>📋</span><p>Add a screenshot of your SOP or automated workflow here<br><code>data-drive-id="YOUR_FILE_ID"</code></p></div>
                 <div class="img-caption">Automated weekly reporting workflow</div>
               </div>
             </div>
@@ -705,9 +706,6 @@ footer p{font-size:0.7rem;color:var(--text3)}
                   <div class="we-pills"><span class="we-pill">60% fewer discrepancies</span><span class="we-pill">40% fewer late payments</span><span class="we-pill">100% on-time payroll</span></div>
                 </div>
                 <p class="we-text" style="margin-top:1rem">The business did not need more revenue. It needed better controls on the revenue already coming in. Structural changes produced financial results without adding headcount.</p>
-                <div class="we-files">
-                  <a href="https://drive.google.com/file/d/YOUR_TRACKER_ID" target="_blank" class="we-file-link"><span>📊</span> AP/AR Tracker Template</a>
-                </div>
               </div>
             </div>
           </div>
@@ -715,11 +713,11 @@ footer p{font-size:0.7rem;color:var(--text3)}
             <span class="we-images-label">AP/AR tracker or reconciliation screenshots</span>
             <div class="img-grid cols-2">
               <div class="img-item">
-                <div class="img-placeholder"><span>📊</span><p>Add AP/AR tracker screenshot<br><code>&lt;img src="YOUR_URL" onclick="openLightbox(this.src)"&gt;</code></p></div>
+                <div class="img-placeholder"><span>📊</span><p>Add AP/AR tracker screenshot<br><code>data-drive-id="YOUR_FILE_ID"</code></p></div>
                 <div class="img-caption">AP/AR tracking system</div>
               </div>
               <div class="img-item">
-                <div class="img-placeholder"><span>💰</span><p>Add cash flow / reconciliation screenshot<br><code>&lt;img src="YOUR_URL" onclick="openLightbox(this.src)"&gt;</code></p></div>
+                <div class="img-placeholder"><span>💰</span><p>Add cash flow / reconciliation screenshot<br><code>data-drive-id="YOUR_FILE_ID"</code></p></div>
                 <div class="img-caption">Cash flow reconciliation</div>
               </div>
             </div>
@@ -759,10 +757,6 @@ footer p{font-size:0.7rem;color:var(--text3)}
                   <div class="we-pills"><span class="we-pill">12+ hrs/week reclaimed</span><span class="we-pill">Onboarding time halved</span><span class="we-pill">8 SOPs operational</span><span class="we-pill">Inbox at zero</span></div>
                 </div>
                 <p class="we-text" style="margin-top:1rem">The founder moved from reactive to intentional. New hires could onboard without founder involvement. The retainer then kept systems current as the team grew.</p>
-                <div class="we-files">
-                  <a href="https://drive.google.com/file/d/YOUR_NOTION_ID" target="_blank" class="we-file-link"><span>🗒️</span> Notion System Template</a>
-                  <a href="https://drive.google.com/file/d/YOUR_SOP2_ID" target="_blank" class="we-file-link"><span>📋</span> SOP Library Sample</a>
-                </div>
               </div>
             </div>
           </div>
@@ -770,11 +764,11 @@ footer p{font-size:0.7rem;color:var(--text3)}
             <span class="we-images-label">Notion dashboard or SOP screenshots</span>
             <div class="img-grid cols-2">
               <div class="img-item">
-                <div class="img-placeholder"><span>🗒️</span><p>Add Notion dashboard screenshot<br><code>&lt;img src="YOUR_URL" onclick="openLightbox(this.src)"&gt;</code></p></div>
+                <div class="img-placeholder"><span>🗒️</span><p>Add Notion dashboard screenshot<br><code>data-drive-id="YOUR_FILE_ID"</code></p></div>
                 <div class="img-caption">Notion operating dashboard</div>
               </div>
               <div class="img-item">
-                <div class="img-placeholder"><span>📋</span><p>Add SOP library screenshot<br><code>&lt;img src="YOUR_URL" onclick="openLightbox(this.src)"&gt;</code></p></div>
+                <div class="img-placeholder"><span>📋</span><p>Add SOP library screenshot<br><code>data-drive-id="YOUR_FILE_ID"</code></p></div>
                 <div class="img-caption">SOP library</div>
               </div>
             </div>
@@ -825,6 +819,171 @@ footer p{font-size:0.7rem;color:var(--text3)}
 </footer>
 
 <script>
+// ═══════════════════════════════════════════════════════════════════
+// GOOGLE DRIVE IMAGE LOADER - HANDLES ALL FORMATS AUTOMATICALLY
+// ═══════════════════════════════════════════════════════════════════
+
+/**
+ * INSTRUCTIONS FOR ADDING IMAGES:
+ * 
+ * 1. Upload your image to Google Drive
+ * 2. Right-click → Share → "Anyonewith the link" (IMPORTANT!)
+ * 3. Get the File ID from the shareable link:
+ *    From: https://drive.google.com/file/d/FILE_ID/view?usp=...
+ *    Extract: FILE_ID
+ * 
+ * 4. Add to HTML using:
+ *    <img data-drive-id="FILE_ID" class="google-drive-img" alt="Description">
+ * 
+ * The script below will automatically load the image from Google's CDN.
+ */
+
+class GoogleDriveImageLoader {
+  constructor() {
+    this.retryAttempts = 3;
+    this.init();
+  }
+
+  init() {
+    document.addEventListener('DOMContentLoaded', () => {
+      this.loadAllGoogleDriveImages();
+    });
+    
+    // If DOM already loaded
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', () => this.loadAllGoogleDriveImages());
+    } else {
+      this.loadAllGoogleDriveImages();
+    }
+  }
+
+  loadAllGoogleDriveImages() {
+    const images = document.querySelectorAll('img[data-drive-id]');
+    if (!images.length) return;
+
+    images.forEach((img, index) => {
+      const driveId = img.getAttribute('data-drive-id');
+      if (!driveId) return;
+
+      // Show loading state
+      img.style.background = 'var(--warm)';
+      img.style.minHeight = '300px';
+      img.style.display = 'flex';
+      img.style.alignItems = 'center';
+      img.style.justifyContent = 'center';
+      
+      const spinner = document.createElement('div');
+      spinner.style.cssText = `
+        width: 20px; height: 20px;
+        border: 2px solid var(--border);
+        border-top-color: var(--ink);
+        border-radius: 50%;
+        animation: spin 0.8s linear infinite;
+      `;
+      img.appendChild(spinner);
+
+      // Attempt to load image
+      this.loadImage(img, driveId, 0);
+    });
+  }
+
+  loadImage(img, driveId, attemptNumber) {
+    if (attemptNumber >= this.retryAttempts) {
+      this.showError(img, driveId);
+      return;
+    }
+
+    const urls = this.generateUrls(driveId);
+    const currentUrl = urls[attemptNumber % urls.length];
+
+    const tempImg = new Image();
+    tempImg.crossOrigin = 'anonymous';
+    
+    tempImg.onload = () => {
+      // Clear loading spinner
+      while (img.firstChild) {
+        img.removeChild(img.firstChild);
+      }
+      
+      img.src = currentUrl;
+      img.removeAttribute('data-drive-id');
+      img.style.background = 'transparent';
+      img.style.minHeight = 'auto';
+      
+      // Add click handler for lightbox
+      img.addEventListener('click', (e) => {
+        if (typeof openLightbox === 'function') {
+          openLightbox(img.src);
+        }
+      });
+      
+      console.log(`✓ Image loaded successfully (${driveId}) from: ${currentUrl}`);
+    };
+
+    tempImg.onerror = () => {
+      // Try next URL
+      this.loadImage(img, driveId, attemptNumber + 1);
+    };
+
+    tempImg.src = currentUrl;
+  }
+
+  generateUrls(driveId) {
+    return [
+      `https://lh3.googleusercontent.com/d/${driveId}`,
+      `https://drive.google.com/uc?export=view&id=${driveId}`,
+      `https://drive.usercontent.google.com/download?id=${driveId}&export=view`,
+    ];
+  }
+
+  showError(img, driveId) {
+    // Clear loading spinner
+    while (img.firstChild) {
+      img.removeChild(img.firstChild);
+    }
+
+    img.src = '';
+    img.alt = 'Image failed to load';
+    img.style.background = '#f0e8df';
+    img.style.minHeight = '300px';
+    img.style.display = 'flex';
+    img.style.alignItems = 'center';
+    img.style.justifyContent = 'center';
+    img.style.color = '#b43c3c';
+    img.style.fontSize = '0.9rem';
+    img.style.textAlign = 'center';
+    img.style.padding = '2rem';
+    img.style.fontWeight = '500';
+    
+    const errorText = document.createElement('div');
+    errorText.innerHTML = `
+      <strong>❌ Image unavailable</strong><br>
+      <small style="font-size:0.75rem; margin-top:0.5rem; display:block; color:#7a6a5a;">
+        File ID: ${driveId}<br>
+        Make sure the file is publicly shared on Google Drive
+      </small>
+    `;
+    img.parentElement.appendChild(errorText);
+
+    console.warn(
+      `❌ Image load failed for ID: ${driveId}\n\n` +
+      `HOW TO FIX:\n` +
+      `1. Open the file on Google Drive\n` +
+      `2. Click Share button\n` +
+      `3. Change to "Anyone with the link"\n` +
+      `4. Copy the File ID from the URL\n` +
+      `5. Update data-drive-id="${driveId}" in your HTML`
+    );
+  }
+}
+
+// Initialize on page load
+new GoogleDriveImageLoader();
+
+// ═══════════════════════════════════════════════════════════════════
+// EXISTING FUNCTIONALITY - LIGHTBOX, NAVIGATION, ETC
+// ═══════════════════════════════════════════════════════════════════
+
 var pages=['home','about','services','work','contact'];
 function show(id,pushState){
   if(pushState===undefined)pushState=true;

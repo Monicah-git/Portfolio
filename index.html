@@ -71,7 +71,7 @@ h3{font-family:var(--serif);font-size:1.2rem;font-weight:500;color:var(--dark)}
 .btn-ghost-inv{border:1px solid rgba(255,255,255,0.15);color:rgba(255,255,255,0.65);font-size:0.85rem;padding:0.85rem 1.9rem;border-radius:100px;text-decoration:none;display:inline-flex;align-items:center;justify-content:center;transition:all 0.2s;min-height:48px}
 .btn-ghost-inv:hover{border-color:rgba(255,255,255,0.35);color:#fff}
 
-/* HERO — side by side like v2 */
+/* HERO */
 .hero-wrap{padding:5rem 2.5rem 4rem;max-width:1100px;margin:0 auto}
 .hero-heading{margin-bottom:2.5rem;text-align:center}
 .hero-bottom{display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:stretch}
@@ -102,7 +102,7 @@ h3{font-family:var(--serif);font-size:1.2rem;font-weight:500;color:var(--dark)}
 .sig-item{display:flex;align-items:center;gap:0.5rem;font-size:0.71rem;color:rgba(255,255,255,0.35)}
 .sig-dot{width:3px;height:3px;border-radius:50%;background:var(--ink2);opacity:0.6}
 
-/* REALITY (problem) */
+/* REALITY */
 .reality-section{background:var(--dark);padding:6rem 0}
 .reality-section .eyebrow{color:rgba(255,255,255,0.28);text-align:center;display:block}
 .reality-section h2{color:#fff;text-align:center;max-width:580px;margin:0 auto}
@@ -362,6 +362,23 @@ h3{font-family:var(--serif);font-size:1.2rem;font-weight:500;color:var(--dark)}
 .cert-dark-name{font-size:0.65rem;font-weight:500;color:rgba(255,255,255,0.6);line-height:1.35;margin-bottom:0.2rem}
 .cert-dark-by{font-size:0.56rem;color:rgba(255,255,255,0.25)}
 
+/* WORK SAMPLES — image placeholder blocks */
+.work-card-images{padding:0 2.25rem 2rem;border-top:1px solid var(--border)}
+.we-images-label{font-size:0.6rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--text3);display:block;padding:1.25rem 0 0.85rem}
+.ba-grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+.img-grid{display:grid;gap:1rem}
+.img-grid.cols-1{grid-template-columns:1fr;max-width:600px}
+.img-grid.cols-2{grid-template-columns:1fr 1fr}
+.img-item,.ba-item{display:flex;flex-direction:column;gap:0.5rem}
+.ba-label{font-size:0.68rem;font-weight:500;padding:0.22rem 0.7rem;border-radius:100px;display:inline-block;width:fit-content}
+.ba-label.before{background:rgba(200,70,50,0.08);color:#a03828;border:1px solid rgba(200,70,50,0.2)}
+.ba-label.after{background:rgba(45,106,79,0.09);color:#2d6a4f;border:1px solid rgba(45,106,79,0.22)}
+.img-placeholder{background:var(--warm);border:2px dashed var(--warm2);border-radius:var(--r);min-height:160px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:0.5rem;padding:2rem 1.5rem;text-align:center;cursor:default}
+.img-placeholder span{font-size:2rem;opacity:0.35;line-height:1}
+.img-placeholder p{font-size:0.72rem;color:var(--text3);line-height:1.65;font-weight:300;margin:0}
+.img-placeholder code{font-size:0.63rem;background:var(--warm2);border:1px solid var(--border);padding:0.12rem 0.38rem;border-radius:4px;color:var(--text2);display:inline-block;margin-top:0.2rem}
+.img-caption{font-size:0.67rem;color:var(--text3);text-align:center;font-weight:300}
+
 /* CONTACT */
 .contact-hero{padding:5rem 0 4rem;background:var(--warm)}
 .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:4rem;margin-top:3rem}
@@ -404,7 +421,7 @@ footer p{font-size:0.7rem;color:var(--text3)}
   .how-right{position:static}
   .about-hero-inner{grid-template-columns:1fr;gap:2.5rem}
   .svc-page-grid,.testi-grid{grid-template-columns:1fr 1fr}
-  .we-cols,.ba-grid{grid-template-columns:1fr}
+  .we-cols,.ba-grid,.img-grid.cols-2{grid-template-columns:1fr}
   .tools-grid,.cert-dark-grid{grid-template-columns:repeat(3,1fr)}
   .certs-grid{grid-template-columns:repeat(3,1fr)}
   .edu-grid{grid-template-columns:1fr}
@@ -420,6 +437,7 @@ footer p{font-size:0.7rem;color:var(--text3)}
   .signal-inner{gap:1.25rem}
   .work-card-body{padding:1.5rem 1.25rem}
   .work-card-header{padding:1.5rem 1.25rem}
+  .work-card-images{padding:0 1.25rem 1.5rem}
 }
 @media(max-width:580px){
   .svc-page-grid,.testi-grid,.tools-grid,.cert-dark-grid{grid-template-columns:1fr}
@@ -465,7 +483,6 @@ footer p{font-size:0.7rem;color:var(--text3)}
 
 <!-- ═══════════════ HOME ═══════════════ -->
 <div id="page-home" class="page active">
-
   <div class="hero-wrap">
     <div class="hero-heading">
       <div style="display:flex;justify-content:center;margin-bottom:1.75rem">
@@ -473,7 +490,6 @@ footer p{font-size:0.7rem;color:var(--text3)}
       </div>
       <h1 style="animation:fadeUp 0.7s 0.1s ease both;text-align:center">You started a business.<br>Now you're <em>holding it together</em> on your own.</h1>
     </div>
-
     <div class="hero-bottom">
       <div>
         <p class="hero-desc">Most founders at this stage end up doing things that shouldn't be on their plate — chasing numbers that take an hour to pull together, following up on work nobody owns, carrying the mental load of a team in one head. I step in and take that off you.</p>
@@ -516,26 +532,12 @@ footer p{font-size:0.7rem;color:var(--text3)}
     <h2 class="reveal">These aren't your fault.<br>They're <em>predictable</em> at this stage.</h2>
     <p class="reality-intro reveal">When a business grows faster than its systems, the founder becomes the system. Everything routes through you — not because you want it to, but because nothing else exists to hold it.</p>
     <div class="reality-grid reveal">
-      <div class="reality-item">
-        <div class="reality-title">You don't know exactly how the business is doing financially</div>
-        <div class="reality-desc">Revenue is visible. Profit is a guess. Cash position requires work to figure out. When someone asks how the business is going, the honest answer is you're not sure — not because the data isn't there, but because nobody's organised it.</div>
-      </div>
-      <div class="reality-item">
-        <div class="reality-title">Important things keep slipping through the cracks</div>
-        <div class="reality-desc">Not because you're not on top of it — because the business doesn't have the capacity. Follow-ups don't happen. Reconciliations are weeks behind. Things that should have been done last month are still waiting because something more urgent always comes up first.</div>
-      </div>
-      <div class="reality-item">
-        <div class="reality-title">You're the only one who knows how things actually get done</div>
-        <div class="reality-desc">Decisions, approvals, context — they all come back to you. When you're not available, work stops. Nothing is written down. Every new person on the team needs a full walkthrough you don't have time to give.</div>
-      </div>
-      <div class="reality-item">
-        <div class="reality-title">You're doing too many jobs at once</div>
-        <div class="reality-desc">Finance, operations, communication, execution — you're carrying more than one person should. Not because you haven't tried to hand things off, but because handing things off requires structure that doesn't exist yet.</div>
-      </div>
+      <div class="reality-item"><div class="reality-title">You don't know exactly how the business is doing financially</div><div class="reality-desc">Revenue is visible. Profit is a guess. Cash position requires work to figure out. When someone asks how the business is going, the honest answer is you're not sure — not because the data isn't there, but because nobody's organised it.</div></div>
+      <div class="reality-item"><div class="reality-title">Important things keep slipping through the cracks</div><div class="reality-desc">Not because you're not on top of it — because the business doesn't have the capacity. Follow-ups don't happen. Reconciliations are weeks behind. Things that should have been done last month are still waiting because something more urgent always comes up first.</div></div>
+      <div class="reality-item"><div class="reality-title">You're the only one who knows how things actually get done</div><div class="reality-desc">Decisions, approvals, context — they all come back to you. When you're not available, work stops. Nothing is written down. Every new person on the team needs a full walkthrough you don't have time to give.</div></div>
+      <div class="reality-item"><div class="reality-title">You're doing too many jobs at once</div><div class="reality-desc">Finance, operations, communication, execution — you're carrying more than one person should. Not because you haven't tried to hand things off, but because handing things off requires structure that doesn't exist yet.</div></div>
     </div>
-    <div class="reality-bridge reveal">
-      <p>These problems don't go away by working harder. They go away with <strong>better structure, clearer financial information, and someone you trust to follow through</strong> — which is what I provide.</p>
-    </div>
+    <div class="reality-bridge reveal"><p>These problems don't go away by working harder. They go away with <strong>better structure, clearer financial information, and someone you trust to follow through</strong> — which is what I provide.</p></div>
   </div></div>
 
   <div class="svc-section"><div class="wrap">
@@ -546,75 +548,22 @@ footer p{font-size:0.7rem;color:var(--text3)}
     </div>
     <div class="svc-cards">
       <div class="svc-row reveal">
-        <div>
-          <div class="svc-num">01</div>
-          <div class="svc-row-label">Bookkeeping</div>
-          <h3>Books that are always up to date</h3>
-        </div>
-        <div>
-          <p class="svc-row-desc">Most founders know their books are behind. It's not that they don't care — it's that keeping records current takes consistent time, and consistent time is the one thing they don't have. I keep the books current so you always know where things stand, without having to prepare for the conversation first.</p>
-          <div class="svc-row-why"><strong>Why this actually matters</strong>Clean books aren't a formality for accountants. They're how you know your cash position, make decisions based on real numbers, and stop dreading the question "how are we doing financially?"</div>
-          <ul class="svc-items" style="margin-top:1rem">
-            <li>Monthly transaction categorisation and reconciliation</li>
-            <li>Accounts payable and receivable tracking</li>
-            <li>Expense organisation and coding</li>
-            <li>QuickBooks, Xero, Zoho Books, Sage</li>
-          </ul>
-        </div>
-        <div class="svc-right">
-          <div class="svc-right-lbl">From the work</div>
-          <div class="svc-outcome"><div class="svc-outcome-num">60%</div><div class="svc-outcome-text">fewer payment discrepancies after AP/AR controls were rebuilt from scratch at a growing firm</div></div>
-          <div class="svc-outcome" style="margin-top:0.65rem"><div class="svc-outcome-num">100%</div><div class="svc-outcome-text">tax compliance across all filing periods — no amendments, no penalties</div></div>
-        </div>
+        <div><div class="svc-num">01</div><div class="svc-row-label">Bookkeeping</div><h3>Books that are always up to date</h3></div>
+        <div><p class="svc-row-desc">Most founders know their books are behind. It's not that they don't care — it's that keeping records current takes consistent time, and consistent time is the one thing they don't have. I keep the books current so you always know where things stand, without having to prepare for the conversation first.</p><div class="svc-row-why"><strong>Why this actually matters</strong>Clean books aren't a formality for accountants. They're how you know your cash position, make decisions based on real numbers, and stop dreading the question "how are we doing financially?"</div><ul class="svc-items" style="margin-top:1rem"><li>Monthly transaction categorisation and reconciliation</li><li>Accounts payable and receivable tracking</li><li>Expense organisation and coding</li><li>QuickBooks, Xero, Zoho Books, Sage</li></ul></div>
+        <div class="svc-right"><div class="svc-right-lbl">From the work</div><div class="svc-outcome"><div class="svc-outcome-num">60%</div><div class="svc-outcome-text">fewer payment discrepancies after AP/AR controls were rebuilt from scratch at a growing firm</div></div><div class="svc-outcome" style="margin-top:0.65rem"><div class="svc-outcome-num">100%</div><div class="svc-outcome-text">tax compliance across all filing periods — no amendments, no penalties</div></div></div>
       </div>
       <div class="svc-row reveal">
-        <div>
-          <div class="svc-num">02</div>
-          <div class="svc-row-label">Financial Reporting</div>
-          <h3>Numbers you can actually do something with</h3>
-        </div>
-        <div>
-          <p class="svc-row-desc">A P&L that arrives after you've already made the decisions it would have informed isn't useful. I build reporting that gives you the information you need when you need it — without hours of manual work to get there.</p>
-          <div class="svc-row-why"><strong>Why this actually matters</strong>Financial information you can't act on is just noise. Good reporting tells you whether cash is healthy, which revenue streams are pulling their weight, and what the numbers say you should do next.</div>
-          <ul class="svc-items" style="margin-top:1rem">
-            <li>P&L, cash flow statement, balance sheet</li>
-            <li>Dashboards connected to live data</li>
-            <li>Budget tracking and variance analysis</li>
-            <li>Investor-ready financial models and reports</li>
-          </ul>
-        </div>
-        <div class="svc-right">
-          <div class="svc-right-lbl">From the work</div>
-          <div class="svc-outcome"><div class="svc-outcome-num">$500K+</div><div class="svc-outcome-text">investor interest generated from clean financial models built across 10 companies</div></div>
-          <div class="svc-outcome" style="margin-top:0.65rem"><div class="svc-outcome-num">30%</div><div class="svc-outcome-text">improvement in forecast accuracy after models were restructured and standardised</div></div>
-        </div>
+        <div><div class="svc-num">02</div><div class="svc-row-label">Financial Reporting</div><h3>Numbers you can actually do something with</h3></div>
+        <div><p class="svc-row-desc">A P&L that arrives after you've already made the decisions it would have informed isn't useful. I build reporting that gives you the information you need when you need it — without hours of manual work to get there.</p><div class="svc-row-why"><strong>Why this actually matters</strong>Financial information you can't act on is just noise. Good reporting tells you whether cash is healthy, which revenue streams are pulling their weight, and what the numbers say you should do next.</div><ul class="svc-items" style="margin-top:1rem"><li>P&L, cash flow statement, balance sheet</li><li>Dashboards connected to live data</li><li>Budget tracking and variance analysis</li><li>Investor-ready financial models and reports</li></ul></div>
+        <div class="svc-right"><div class="svc-right-lbl">From the work</div><div class="svc-outcome"><div class="svc-outcome-num">$500K+</div><div class="svc-outcome-text">investor interest generated from clean financial models built across 10 companies</div></div><div class="svc-outcome" style="margin-top:0.65rem"><div class="svc-outcome-num">30%</div><div class="svc-outcome-text">improvement in forecast accuracy after models were restructured and standardised</div></div></div>
       </div>
       <div class="svc-row reveal">
-        <div>
-          <div class="svc-num">03</div>
-          <div class="svc-row-label">Executive & Operational Support</div>
-          <h3>Work that moves without you watching it</h3>
-        </div>
-        <div>
-          <p class="svc-row-desc">This isn't about ticking tasks off a list. It's about building the infrastructure — documented processes, coordination systems, and reliable follow-through — so important work keeps moving even when you're not in the room. The goal is to reduce how much routes through you, not create a new dependency on me.</p>
-          <div class="svc-row-why"><strong>Why this actually matters</strong>When you're the only person who knows how something gets done, your time is permanently rationed. Written-down systems and reliable execution create the space to actually think about the business.</div>
-          <ul class="svc-items" style="margin-top:1rem">
-            <li>SOP writing and process documentation</li>
-            <li>Workflow design and automation (Zapier, Make)</li>
-            <li>Inbox and calendar management</li>
-            <li>Project coordination and follow-through (Notion, Asana)</li>
-          </ul>
-        </div>
-        <div class="svc-right">
-          <div class="svc-right-lbl">From the work</div>
-          <div class="svc-outcome"><div class="svc-outcome-num">20 hrs</div><div class="svc-outcome-text">freed per week when a manual weekly reporting process was redesigned and automated</div></div>
-          <div class="svc-outcome" style="margin-top:0.65rem"><div class="svc-outcome-num">8 SOPs</div><div class="svc-outcome-text">written and live — new hires could onboard without the founder being involved</div></div>
-        </div>
+        <div><div class="svc-num">03</div><div class="svc-row-label">Executive & Operational Support</div><h3>Work that moves without you watching it</h3></div>
+        <div><p class="svc-row-desc">This isn't about ticking tasks off a list. It's about building the infrastructure — documented processes, coordination systems, and reliable follow-through — so important work keeps moving even when you're not in the room. The goal is to reduce how much routes through you, not create a new dependency on me.</p><div class="svc-row-why"><strong>Why this actually matters</strong>When you're the only person who knows how something gets done, your time is permanently rationed. Written-down systems and reliable execution create the space to actually think about the business.</div><ul class="svc-items" style="margin-top:1rem"><li>SOP writing and process documentation</li><li>Workflow design and automation (Zapier, Make)</li><li>Inbox and calendar management</li><li>Project coordination and follow-through (Notion, Asana)</li></ul></div>
+        <div class="svc-right"><div class="svc-right-lbl">From the work</div><div class="svc-outcome"><div class="svc-outcome-num">20 hrs</div><div class="svc-outcome-text">freed per week when a manual weekly reporting process was redesigned and automated</div></div><div class="svc-outcome" style="margin-top:0.65rem"><div class="svc-outcome-num">8 SOPs</div><div class="svc-outcome-text">written and live — new hires could onboard without the founder being involved</div></div></div>
       </div>
     </div>
-    <div style="margin-top:2rem;text-align:center">
-      <a href="javascript:void(0)" onclick="return show('services')" class="btn-ghost">Full service details →</a>
-    </div>
+    <div style="margin-top:2rem;text-align:center"><a href="javascript:void(0)" onclick="return show('services')" class="btn-ghost">Full service details →</a></div>
   </div></div>
 
   <div class="how-section"><div class="wrap">
@@ -625,22 +574,10 @@ footer p{font-size:0.7rem;color:var(--text3)}
     </div>
     <div class="how-grid">
       <div class="how-steps">
-        <div class="how-step reveal">
-          <div class="how-step-num">1</div>
-          <div class="how-step-body"><h4>We talk for 30 minutes</h4><p>You tell me what's not working — finances behind, reporting manual, processes undocumented, things falling through the cracks. I figure out what the real problem is and whether I'm the right person to fix it.</p></div>
-        </div>
-        <div class="how-step reveal">
-          <div class="how-step-num">2</div>
-          <div class="how-step-body"><h4>Scope agreed before work begins</h4><p>For projects: deliverables and estimated hours confirmed upfront. For retainers: monthly scope agreed at onboarding. No open-ended commitments on either side.</p></div>
-        </div>
-        <div class="how-step reveal">
-          <div class="how-step-num">3</div>
-          <div class="how-step-body"><h4>Work starts within 48 hours</h4><p>You give me access to the books, tools, and relevant workflows. I audit the current state, identify the gaps, and start building against the agreed scope.</p></div>
-        </div>
-        <div class="how-step reveal">
-          <div class="how-step-num">4</div>
-          <div class="how-step-body"><h4>Systems handed over — or kept running</h4><p>Project engagements close with full documentation so everything holds without me. Retainers keep the systems accurate and current each month going forward.</p></div>
-        </div>
+        <div class="how-step reveal"><div class="how-step-num">1</div><div class="how-step-body"><h4>We talk for 30 minutes</h4><p>You tell me what's not working — finances behind, reporting manual, processes undocumented, things falling through the cracks. I figure out what the real problem is and whether I'm the right person to fix it.</p></div></div>
+        <div class="how-step reveal"><div class="how-step-num">2</div><div class="how-step-body"><h4>Scope agreed before work begins</h4><p>For projects: deliverables and estimated hours confirmed upfront. For retainers: monthly scope agreed at onboarding. No open-ended commitments on either side.</p></div></div>
+        <div class="how-step reveal"><div class="how-step-num">3</div><div class="how-step-body"><h4>Work starts within 48 hours</h4><p>You give me access to the books, tools, and relevant workflows. I audit the current state, identify the gaps, and start building against the agreed scope.</p></div></div>
+        <div class="how-step reveal"><div class="how-step-num">4</div><div class="how-step-body"><h4>Systems handed over — or kept running</h4><p>Project engagements close with full documentation so everything holds without me. Retainers keep the systems accurate and current each month going forward.</p></div></div>
       </div>
       <div class="how-right reveal">
         <div class="how-proof-card">
@@ -666,39 +603,18 @@ footer p{font-size:0.7rem;color:var(--text3)}
         <span class="engage-badge">Project engagement</span>
         <h3>Build the infrastructure</h3>
         <p>Scoped and time-bound. Books cleaned, workflows built, dashboards connected, SOPs written. Ends with a fully documented system you own — not one that depends on me sticking around.</p>
-        <ul class="engage-list">
-          <li><span>→</span><span>Books reconciled and brought current</span></li>
-          <li><span>→</span><span>Financial reporting dashboard built and connected to live data</span></li>
-          <li><span>→</span><span>Workflows automated end-to-end</span></li>
-          <li><span>→</span><span>SOPs written so processes hold without the founder</span></li>
-          <li><span>→</span><span>Full documentation handed over at close</span></li>
-        </ul>
-        <div class="engage-price">
-          <div class="engage-price-num">$10/hr</div>
-          <div class="engage-price-note">Scope and estimated hours agreed before work begins. No surprises.</div>
-        </div>
+        <ul class="engage-list"><li><span>→</span><span>Books reconciled and brought current</span></li><li><span>→</span><span>Financial reporting dashboard built and connected to live data</span></li><li><span>→</span><span>Workflows automated end-to-end</span></li><li><span>→</span><span>SOPs written so processes hold without the founder</span></li><li><span>→</span><span>Full documentation handed over at close</span></li></ul>
+        <div class="engage-price"><div class="engage-price-num">$10/hr</div><div class="engage-price-note">Scope and estimated hours agreed before work begins. No surprises.</div></div>
       </div>
       <div class="engage-card retainer">
         <span class="engage-badge">Monthly retainer</span>
         <h3>Keep what <em>was built</em> running</h3>
         <p>Ongoing financial maintenance, workflow oversight, and operational continuity. Monthly scope agreed at onboarding. Not open-ended availability.</p>
-        <ul class="engage-list">
-          <li><span>→</span><span>Monthly bookkeeping and reconciliation</span></li>
-          <li><span>→</span><span>P&L, cash flow, and balance sheet produced monthly</span></li>
-          <li><span>→</span><span>Dashboard updated and current each month</span></li>
-          <li><span>→</span><span>Workflow maintenance and SOP updates as needed</span></li>
-          <li><span>→</span><span>Monthly operational reporting</span></li>
-        </ul>
-        <div class="engage-price">
-          <div class="engage-price-num">$10/hr</div>
-          <div class="engage-price-note">Estimated monthly hours agreed at onboarding. Billed on actuals.</div>
-        </div>
+        <ul class="engage-list"><li><span>→</span><span>Monthly bookkeeping and reconciliation</span></li><li><span>→</span><span>P&L, cash flow, and balance sheet produced monthly</span></li><li><span>→</span><span>Dashboard updated and current each month</span></li><li><span>→</span><span>Workflow maintenance and SOP updates as needed</span></li><li><span>→</span><span>Monthly operational reporting</span></li></ul>
+        <div class="engage-price"><div class="engage-price-num">$10/hr</div><div class="engage-price-note">Estimated monthly hours agreed at onboarding. Billed on actuals.</div></div>
       </div>
     </div>
-    <div class="engage-bridge reveal">
-      <span class="engage-bridge-arrow">⟶</span>
-      <p><strong>The natural order:</strong> Build the system first, then maintain it. If you already have working systems and need consistent upkeep, a retainer alone works too.</p>
-    </div>
+    <div class="engage-bridge reveal"><span class="engage-bridge-arrow">⟶</span><p><strong>The natural order:</strong> Build the system first, then maintain it. If you already have working systems and need consistent upkeep, a retainer alone works too.</p></div>
   </div></div>
 
   <div class="fit-section"><div class="wrap">
@@ -706,25 +622,8 @@ footer p{font-size:0.7rem;color:var(--text3)}
     <h2 class="reveal">Worth knowing before<br>you <em>book the call.</em></h2>
     <p class="sub reveal">This works well for a specific kind of situation. If it doesn't match, the call will confirm that quickly — which saves both of us time.</p>
     <div class="fit-grid reveal">
-      <div class="fit-card yes">
-        <span class="fit-lbl">✦ Good fit</span>
-        <ul class="fit-list">
-          <li><span>✓</span><span>Revenue coming in, but finances are disorganised — you don't have a reliable picture of your cash position</span></li>
-          <li><span>✓</span><span>Small team where you're still doing too much — growth is making you more of a bottleneck, not less</span></li>
-          <li><span>✓</span><span>Important work keeps getting delayed because no one owns the follow-through</span></li>
-          <li><span>✓</span><span>You want to hand off the financial and operational layer, not just a list of tasks</span></li>
-          <li><span>✓</span><span>Ready to share access to your books, tools, and current workflows</span></li>
-        </ul>
-      </div>
-      <div class="fit-card no">
-        <span class="fit-lbl">✗ Not the right fit</span>
-        <ul class="fit-list">
-          <li><span>✗</span><span>Need a registered CPA, statutory audit, or tax filing — that requires a licensed accountant</span></li>
-          <li><span>✗</span><span>Looking for unlimited scope, on-demand availability, or full-time hours</span></li>
-          <li><span>✗</span><span>Want tasks handled without building systems around them</span></li>
-          <li><span>✗</span><span>Not in a position to share access to the information and tools needed to do the work</span></li>
-        </ul>
-      </div>
+      <div class="fit-card yes"><span class="fit-lbl">✦ Good fit</span><ul class="fit-list"><li><span>✓</span><span>Revenue coming in, but finances are disorganised — you don't have a reliable picture of your cash position</span></li><li><span>✓</span><span>Small team where you're still doing too much — growth is making you more of a bottleneck, not less</span></li><li><span>✓</span><span>Important work keeps getting delayed because no one owns the follow-through</span></li><li><span>✓</span><span>You want to hand off the financial and operational layer, not just a list of tasks</span></li><li><span>✓</span><span>Ready to share access to your books, tools, and current workflows</span></li></ul></div>
+      <div class="fit-card no"><span class="fit-lbl">✗ Not the right fit</span><ul class="fit-list"><li><span>✗</span><span>Need a registered CPA, statutory audit, or tax filing — that requires a licensed accountant</span></li><li><span>✗</span><span>Looking for unlimited scope, on-demand availability, or full-time hours</span></li><li><span>✗</span><span>Want tasks handled without building systems around them</span></li><li><span>✗</span><span>Not in a position to share access to the information and tools needed to do the work</span></li></ul></div>
     </div>
   </div></div>
 
@@ -753,7 +652,6 @@ footer p{font-size:0.7rem;color:var(--text3)}
       <span class="cred-item"><span class="cred-dot"></span>Remote · worldwide</span>
     </div>
   </div></div></div>
-
 </div><!-- /page-home -->
 
 <!-- ═══════════════ ABOUT ═══════════════ -->
@@ -853,7 +751,6 @@ footer p{font-size:0.7rem;color:var(--text3)}
     <h1>Finance, bookkeeping,<br>and <em>operational support.</em></h1>
     <p class="sub">Three areas of work. One rate. Scope agreed before anything begins. Available as a project or monthly retainer depending on what you need.</p>
   </div></div>
-
   <section style="background:var(--cream)"><div class="wrap">
     <span class="eyebrow reveal">01 — Bookkeeping</span>
     <h2 class="reveal">Books that are <em>always current.</em></h2>
@@ -864,7 +761,6 @@ footer p{font-size:0.7rem;color:var(--text3)}
       <div class="svc-page-card reveal"><div class="svc-ico">🗂️</div><h3>Bookkeeping setup</h3><span class="svc-tag">Start clean or clean up</span><p>For businesses starting from scratch, or with books that have fallen behind — full-cycle bookkeeping setup so the records are reliable going forward.</p><ul class="svc-sub-list"><li>Chart of accounts setup and organisation</li><li>Historical cleanup and catch-up bookkeeping</li><li>QuickBooks, Xero, Zoho Books, Sage</li><li>Handover documentation and SOP</li></ul></div>
     </div>
   </div></section>
-
   <section style="background:var(--warm)"><div class="wrap">
     <span class="eyebrow reveal">02 — Financial Reporting</span>
     <h2 class="reveal">Numbers you can <em>do something with.</em></h2>
@@ -875,7 +771,6 @@ footer p{font-size:0.7rem;color:var(--text3)}
       <div class="svc-page-card reveal"><div class="svc-ico">🏦</div><h3>Financial modelling</h3><span class="svc-tag">For decisions and investor conversations</span><p>Forecasts, scenario models, and investor-ready financials. The kind of model that holds up when someone asks a hard question about the numbers behind it.</p><ul class="svc-sub-list"><li>DCF valuation and financial modelling</li><li>Scenario forecasting and sensitivity analysis</li><li>Investor reports and pitch deck financials</li><li>Budget models and growth projections</li></ul></div>
     </div>
   </div></section>
-
   <section style="background:var(--cream)"><div class="wrap">
     <span class="eyebrow reveal">03 — Executive & Operational Support</span>
     <h2 class="reveal">Execution that doesn't <em>need you in the room.</em></h2>
@@ -886,7 +781,6 @@ footer p{font-size:0.7rem;color:var(--text3)}
       <div class="svc-page-card reveal"><div class="svc-ico">🗓️</div><h3>Executive administration</h3><span class="svc-tag">Coordination handled</span><p>Inbox management, calendar structure, meeting preparation, follow-through. The operational overhead that pulls founders away from the work that actually moves the business.</p><ul class="svc-sub-list"><li>Inbox management and triage</li><li>Calendar design and scheduling</li><li>Meeting prep and follow-up notes</li><li>Project coordination via Notion, Asana, Trello</li></ul></div>
     </div>
   </div></section>
-
   <section style="background:var(--warm)"><div class="wrap">
     <span class="eyebrow reveal">Tool stack</span>
     <h2 class="reveal">Tools I work with</h2>
@@ -903,7 +797,6 @@ footer p{font-size:0.7rem;color:var(--text3)}
       <div class="tool-card reveal"><span class="tool-ico">📊</span><div class="tool-name">Power BI</div><div class="tool-cat">Dashboards · Reporting</div></div>
     </div>
   </div></section>
-
   <section><div class="wrap" style="text-align:center">
     <h2 class="reveal">Not sure which service fits?</h2>
     <p class="sub reveal" style="margin:0.75rem auto 2rem;text-align:center;max-width:440px">The discovery call figures that out. 30 minutes, your current situation reviewed, right engagement confirmed.</p>
@@ -918,9 +811,9 @@ footer p{font-size:0.7rem;color:var(--text3)}
     <h1>Real engagements.<br>Real deliverables.<br><em>Real outcomes.</em></h1>
     <p class="sub">Five projects — the problem, what was built, and what changed. Click any image to enlarge.</p>
   </div></div>
- 
+
   <section style="background:var(--cream)"><div class="wrap"><div class="work-list">
- 
+
     <!-- ── CASE 1 ── -->
     <div class="work-card reveal">
       <div class="work-card-header">
@@ -950,12 +843,18 @@ footer p{font-size:0.7rem;color:var(--text3)}
       <div class="work-card-images">
         <span class="we-images-label">Before &amp; after — calendar screenshots</span>
         <div class="ba-grid">
-          <div class="ba-item"><div class="ba-label before">⚠ Before — initial calendar</div><div class="img-placeholder"><span>📅</span><p>Add before-calendar screenshot<br><code>data-drive-id="YOUR_FILE_ID"</code></p></div></div>
-          <div class="ba-item"><div class="ba-label after">✓ After — restructured system</div><div class="img-placeholder"><span>✅</span><p>Add after-calendar screenshot<br><code>data-drive-id="YOUR_FILE_ID"</code></p></div></div>
+          <div class="ba-item">
+            <div class="ba-label before">⚠ Before — initial calendar</div>
+            <div class="img-placeholder"><span>📅</span><p>Replace with your before-calendar screenshot<br><code>&lt;img src="your-image.png"&gt;</code></p></div>
+          </div>
+          <div class="ba-item">
+            <div class="ba-label after">✓ After — restructured system</div>
+            <div class="img-placeholder"><span>✅</span><p>Replace with your after-calendar screenshot<br><code>&lt;img src="your-image.png"&gt;</code></p></div>
+          </div>
         </div>
       </div>
     </div>
- 
+
     <!-- ── CASE 2 ── -->
     <div class="work-card reveal">
       <div class="work-card-header">
@@ -980,12 +879,18 @@ footer p{font-size:0.7rem;color:var(--text3)}
       <div class="work-card-images">
         <span class="we-images-label">Work samples — financial model screenshots</span>
         <div class="img-grid cols-2">
-          <div class="img-item"><div class="img-placeholder"><span>📊</span><p>Add DCF model screenshot</p></div><div class="img-caption">DCF valuation model</div></div>
-          <div class="img-item"><div class="img-placeholder"><span>📈</span><p>Add investor dashboard screenshot</p></div><div class="img-caption">Investor-ready dashboard</div></div>
+          <div class="img-item">
+            <div class="img-placeholder"><span>📊</span><p>Replace with your DCF model screenshot<br><code>&lt;img src="your-image.png"&gt;</code></p></div>
+            <div class="img-caption">DCF valuation model</div>
+          </div>
+          <div class="img-item">
+            <div class="img-placeholder"><span>📈</span><p>Replace with your investor dashboard screenshot<br><code>&lt;img src="your-image.png"&gt;</code></p></div>
+            <div class="img-caption">Investor-ready dashboard</div>
+          </div>
         </div>
       </div>
     </div>
- 
+
     <!-- ── CASE 3 ── -->
     <div class="work-card reveal">
       <div class="work-card-header">
@@ -1009,10 +914,15 @@ footer p{font-size:0.7rem;color:var(--text3)}
       </div></div>
       <div class="work-card-images">
         <span class="we-images-label">SOP or workflow screenshots</span>
-        <div class="img-grid cols-1"><div class="img-item"><div class="img-placeholder"><span>📋</span><p>Add SOP or automated workflow screenshot</p></div><div class="img-caption">Automated weekly reporting workflow</div></div></div>
+        <div class="img-grid cols-1">
+          <div class="img-item">
+            <div class="img-placeholder"><span>📋</span><p>Replace with your SOP or automated workflow screenshot<br><code>&lt;img src="your-image.png"&gt;</code></p></div>
+            <div class="img-caption">Automated weekly reporting workflow</div>
+          </div>
+        </div>
       </div>
     </div>
- 
+
     <!-- ── CASE 4 ── -->
     <div class="work-card reveal">
       <div class="work-card-header">
@@ -1037,12 +947,18 @@ footer p{font-size:0.7rem;color:var(--text3)}
       <div class="work-card-images">
         <span class="we-images-label">AP/AR tracker or reconciliation screenshots</span>
         <div class="img-grid cols-2">
-          <div class="img-item"><div class="img-placeholder"><span>📊</span><p>Add AP/AR tracker screenshot</p></div><div class="img-caption">AP/AR tracking system</div></div>
-          <div class="img-item"><div class="img-placeholder"><span>💰</span><p>Add cash flow / reconciliation screenshot</p></div><div class="img-caption">Cash flow reconciliation</div></div>
+          <div class="img-item">
+            <div class="img-placeholder"><span>📊</span><p>Replace with your AP/AR tracker screenshot<br><code>&lt;img src="your-image.png"&gt;</code></p></div>
+            <div class="img-caption">AP/AR tracking system</div>
+          </div>
+          <div class="img-item">
+            <div class="img-placeholder"><span>💰</span><p>Replace with your cash flow / reconciliation screenshot<br><code>&lt;img src="your-image.png"&gt;</code></p></div>
+            <div class="img-caption">Cash flow reconciliation</div>
+          </div>
         </div>
       </div>
     </div>
- 
+
     <!-- ── CASE 5 ── -->
     <div class="work-card reveal">
       <div class="work-card-header">
@@ -1067,14 +983,20 @@ footer p{font-size:0.7rem;color:var(--text3)}
       <div class="work-card-images">
         <span class="we-images-label">Notion dashboard or SOP screenshots</span>
         <div class="img-grid cols-2">
-          <div class="img-item"><div class="img-placeholder"><span>🗒️</span><p>Add Notion dashboard screenshot</p></div><div class="img-caption">Notion operating dashboard</div></div>
-          <div class="img-item"><div class="img-placeholder"><span>📋</span><p>Add SOP library screenshot</p></div><div class="img-caption">SOP library</div></div>
+          <div class="img-item">
+            <div class="img-placeholder"><span>🗒️</span><p>Replace with your Notion dashboard screenshot<br><code>&lt;img src="your-image.png"&gt;</code></p></div>
+            <div class="img-caption">Notion operating dashboard</div>
+          </div>
+          <div class="img-item">
+            <div class="img-placeholder"><span>📋</span><p>Replace with your SOP library screenshot<br><code>&lt;img src="your-image.png"&gt;</code></p></div>
+            <div class="img-caption">SOP library</div>
+          </div>
         </div>
       </div>
     </div>
- 
+
   </div>
- 
+
   <div class="cert-dark-wrap reveal" style="margin-top:4rem">
     <span class="eyebrow">Credentials</span>
     <h3>Five certifications backing the work</h3>
@@ -1087,7 +1009,7 @@ footer p{font-size:0.7rem;color:var(--text3)}
       <div class="cert-dark-item"><span class="cert-dark-ico">🏦</span><div class="cert-dark-name">CFI Corporate Finance Foundations</div><div class="cert-dark-by">CFI</div></div>
     </div>
   </div>
- 
+
   <div style="margin-top:2.5rem;background:#fff;border:1px solid var(--ink-border);border-radius:var(--r);padding:2rem;text-align:center" class="reveal">
     <h3 style="font-size:1.2rem;margin-bottom:0.45rem">See yourself in any of this?</h3>
     <p style="font-size:0.82rem;color:var(--text2);font-weight:300;margin-bottom:1.25rem">30 minutes to confirm what applies and agree on scope. No pitch — a direct conversation about what needs fixing and whether I'm the right person to fix it.</p>
@@ -1098,6 +1020,7 @@ footer p{font-size:0.7rem;color:var(--text3)}
   </div>
   </div></section>
 </div>
+
 <!-- ═══════════════ CONTACT ═══════════════ -->
 <div id="page-contact" class="page">
   <div class="contact-hero"><div class="wrap">
@@ -1180,6 +1103,3 @@ if (ham && mob) {
 </script>
 </body>
 </html>
-
-You are out of free messages until 8:10 PM
-Keep working

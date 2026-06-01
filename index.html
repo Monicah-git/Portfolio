@@ -315,12 +315,54 @@ h3{font-family:var(--serif);font-size:1.2rem;font-weight:500;color:var(--dark)}
 .svc-sub-list{list-style:none;display:flex;flex-direction:column;gap:0.35rem}
 .svc-sub-list li{font-size:0.73rem;color:var(--text2);padding-left:0.95rem;position:relative;line-height:1.5}
 .svc-sub-list li::before{content:'·';position:absolute;left:0;color:var(--ink);font-size:1rem;line-height:1.2}
-.tools-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:0.85rem;margin-top:2rem}
-.tool-card{background:#fff;border:1px solid var(--border);border-radius:var(--r);padding:1.2rem 0.85rem;text-align:center;transition:all 0.2s}
-.tool-card:hover{border-color:var(--ink-border);transform:translateY(-2px)}
-.tool-ico{font-size:1.7rem;margin-bottom:0.45rem;display:block}
-.tool-name{font-size:0.7rem;font-weight:500;color:var(--text);margin-bottom:0.12rem}
-.tool-cat{font-size:0.58rem;color:var(--text3)}
+
+/* ─── TOOLS GRID — updated ─── */
+.tools-grid{
+  display:grid;
+  grid-template-columns:repeat(5,1fr);
+  gap:0.85rem;
+  margin-top:2rem
+}
+.tool-card{
+  background:#fff;
+  border:1px solid var(--border);
+  border-radius:var(--r);
+  padding:1.35rem 0.85rem 1.1rem;
+  text-align:center;
+  transition:border-color 0.22s, transform 0.22s, box-shadow 0.22s;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap:0;
+  cursor:default
+}
+.tool-card:hover{
+  border-color:var(--ink-border);
+  transform:translateY(-4px);
+  box-shadow:0 8px 24px rgba(58,48,40,0.09)
+}
+.tool-logo{
+  width:36px;
+  height:36px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  margin-bottom:0.65rem;
+  flex-shrink:0
+}
+.tool-logo svg{
+  width:36px;
+  height:36px;
+  display:block
+}
+.tool-logo img{
+  width:36px;
+  height:36px;
+  object-fit:contain;
+  display:block
+}
+.tool-name{font-size:0.7rem;font-weight:500;color:var(--text);margin-bottom:0.12rem;line-height:1.3}
+.tool-cat{font-size:0.58rem;color:var(--text3);line-height:1.3}
 
 /* WORK SAMPLES */
 .ws-hero{padding:5rem 0 4rem;background:var(--warm)}
@@ -361,8 +403,6 @@ h3{font-family:var(--serif);font-size:1.2rem;font-weight:500;color:var(--dark)}
 .cert-dark-ico{font-size:1.35rem;margin-bottom:0.5rem;display:block}
 .cert-dark-name{font-size:0.65rem;font-weight:500;color:rgba(255,255,255,0.6);line-height:1.35;margin-bottom:0.2rem}
 .cert-dark-by{font-size:0.56rem;color:rgba(255,255,255,0.25)}
-
-/* WORK SAMPLES — image placeholder blocks */
 .work-card-images{padding:0 2.25rem 2rem;border-top:1px solid var(--border)}
 .we-images-label{font-size:0.6rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--text3);display:block;padding:1.25rem 0 0.85rem}
 .ba-grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
@@ -440,13 +480,16 @@ footer p{font-size:0.7rem;color:var(--text3)}
   .work-card-images{padding:0 1.25rem 1.5rem}
 }
 @media(max-width:580px){
-  .svc-page-grid,.testi-grid,.tools-grid,.cert-dark-grid{grid-template-columns:1fr}
+  .svc-page-grid,.testi-grid,.tools-grid,.cert-dark-grid{grid-template-columns:1fr 1fr}
   .certs-grid{grid-template-columns:repeat(2,1fr)}
   .wrap{padding:0 1.25rem}
   nav{padding:0 1.25rem}
   .mob-menu{padding:1.5rem 1.25rem}
   .hero-wrap{padding:3rem 1.25rem 2.5rem}
   .home-cta-section{padding:4rem 0}
+}
+@media(max-width:380px){
+  .tools-grid{grid-template-columns:repeat(2,1fr)}
 }
 *,*::before,*::after{-webkit-tap-highlight-color:transparent}
 </style>
@@ -652,7 +695,7 @@ footer p{font-size:0.7rem;color:var(--text3)}
       <span class="cred-item"><span class="cred-dot"></span>Remote · worldwide</span>
     </div>
   </div></div></div>
-</div><!-- /page-home -->
+</div>
 
 <!-- ═══════════════ ABOUT ═══════════════ -->
 <div id="page-about" class="page">
@@ -781,22 +824,221 @@ footer p{font-size:0.7rem;color:var(--text3)}
       <div class="svc-page-card reveal"><div class="svc-ico">🗓️</div><h3>Executive administration</h3><span class="svc-tag">Coordination handled</span><p>Inbox management, calendar structure, meeting preparation, follow-through. The operational overhead that pulls founders away from the work that actually moves the business.</p><ul class="svc-sub-list"><li>Inbox management and triage</li><li>Calendar design and scheduling</li><li>Meeting prep and follow-up notes</li><li>Project coordination via Notion, Asana, Trello</li></ul></div>
     </div>
   </div></section>
+
+  <!-- ═══════ TOOLS SECTION — updated with brand logos ═══════ -->
   <section style="background:var(--warm)"><div class="wrap">
     <span class="eyebrow reveal">Tool stack</span>
     <h2 class="reveal">Tools I work with</h2>
     <div class="tools-grid">
-      <div class="tool-card reveal"><span class="tool-ico">📈</span><div class="tool-name">Microsoft Excel</div><div class="tool-cat">VBA · Dashboards · Analysis</div></div>
-      <div class="tool-card reveal"><span class="tool-ico">🟦</span><div class="tool-name">QuickBooks Online</div><div class="tool-cat">Bookkeeping · Reports</div></div>
-      <div class="tool-card reveal"><span class="tool-ico">🟢</span><div class="tool-name">Xero</div><div class="tool-cat">Invoicing · Reconciliation</div></div>
-      <div class="tool-card reveal"><span class="tool-ico">📘</span><div class="tool-name">Zoho Books</div><div class="tool-cat">Accounting · Budgets</div></div>
-      <div class="tool-card reveal"><span class="tool-ico">🪨</span><div class="tool-name">Sage</div><div class="tool-cat">Financial management</div></div>
-      <div class="tool-card reveal"><span class="tool-ico">⚡</span><div class="tool-name">Zapier / Make</div><div class="tool-cat">Workflow automation</div></div>
-      <div class="tool-card reveal"><span class="tool-ico">📧</span><div class="tool-name">Google Workspace</div><div class="tool-cat">Inbox · Calendar · Docs</div></div>
-      <div class="tool-card reveal"><span class="tool-ico">🗒️</span><div class="tool-name">Notion</div><div class="tool-cat">SOPs · Project tracking</div></div>
-      <div class="tool-card reveal"><span class="tool-ico">📋</span><div class="tool-name">Trello / Asana</div><div class="tool-cat">Task management</div></div>
-      <div class="tool-card reveal"><span class="tool-ico">📊</span><div class="tool-name">Power BI</div><div class="tool-cat">Dashboards · Reporting</div></div>
+
+      <!-- Microsoft Excel -->
+      <div class="tool-card reveal">
+        <div class="tool-logo" aria-label="Microsoft Excel logo">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Microsoft Excel">
+            <title>Microsoft Excel</title>
+            <path d="M21.17 1.5H8.83C8.09 1.5 7.5 2.09 7.5 2.83v2.67H3.83C3.09 5.5 2.5 6.09 2.5 6.83v10.34c0 .74.59 1.33 1.33 1.33H7.5v2.67c0 .74.59 1.33 1.33 1.33h12.34c.74 0 1.33-.59 1.33-1.33V2.83c0-.74-.59-1.33-1.33-1.33zM7.5 15.5H4.5v-2h3v2zm0-3H4.5v-2h3v2zm0-3H4.5V7.5h3V9.5zM13 17l-1.5-2.5L10 17H8l2.5-4L8 9h2l1.5 2.5L13 9h2l-2.5 4L15 17h-2zm7 1.5h-5.5V16H20v2.5zm0-4H14.5V12H20v2.5zm0-4H14.5V8H20v2.5z" fill="#217346"/>
+          </svg>
+        </div>
+        <div class="tool-name">Microsoft Excel</div>
+        <div class="tool-cat">VBA · Dashboards · Analysis</div>
+      </div>
+
+      <!-- Google Sheets -->
+      <div class="tool-card reveal">
+        <div class="tool-logo" aria-label="Google Sheets logo">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Google Sheets">
+            <title>Google Sheets</title>
+            <path d="M11.318 12.545H7.91v-1.909h3.41v1.91zm3.545 3.273H7.91v-1.909h6.953v1.91zm0-6.545H7.91V7.364h6.953v1.91zM14.864 0L19.5 4.636V22.09c0 1.052-.857 1.91-1.91 1.91H6.41a1.909 1.909 0 0 1-1.91-1.91V1.91C4.5.857 5.357 0 6.409 0h8.455z" fill="#0F9D58"/>
+          </svg>
+        </div>
+        <div class="tool-name">Google Sheets</div>
+        <div class="tool-cat">Spreadsheets · Formulas</div>
+      </div>
+
+      <!-- QuickBooks -->
+      <div class="tool-card reveal">
+        <div class="tool-logo" aria-label="QuickBooks logo">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="QuickBooks">
+            <title>QuickBooks</title>
+            <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm-1.09 16.364a4.364 4.364 0 1 1 0-8.728 4.364 4.364 0 0 1 0 8.728zm5.454-1.636h-1.09v-5.456h1.09a2.727 2.727 0 1 1 0 5.456z" fill="#2CA01C"/>
+          </svg>
+        </div>
+        <div class="tool-name">QuickBooks</div>
+        <div class="tool-cat">Bookkeeping · Reports</div>
+      </div>
+
+      <!-- Power BI -->
+      <div class="tool-card reveal">
+        <div class="tool-logo" aria-label="Power BI logo">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Microsoft Power BI">
+            <title>Microsoft Power BI</title>
+            <path d="M6.5 21V9.5H9V21H6.5zM10.75 21V6h2.5v15h-2.5zM2.25 21V14h2.5v7h-2.5zM15 21V3h2.5v18H15zM19.25 21V9.5h2.5V21h-2.5z" fill="#F2C811"/>
+          </svg>
+        </div>
+        <div class="tool-name">Power BI</div>
+        <div class="tool-cat">Dashboards · Reporting</div>
+      </div>
+
+      <!-- Notion -->
+      <div class="tool-card reveal">
+        <div class="tool-logo" aria-label="Notion logo">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Notion">
+            <title>Notion</title>
+            <path d="M4.459 4.208c.746.606 1.026.56 2.428.466l13.215-.793c.28 0 .047-.28-.046-.326L17.86 1.968c-.42-.326-.981-.7-2.055-.607L3.01 2.295c-.466.046-.56.28-.374.466zm.793 3.08v13.904c0 .747.373 1.027 1.214.98l14.523-.84c.841-.047.935-.56.935-1.167V6.354c0-.606-.233-.933-.748-.887l-15.177.887c-.56.047-.747.327-.747.933zm14.337.745c.093.42 0 .84-.42.888l-.7.14v10.264c-.608.327-1.168.514-1.635.514-.748 0-.935-.234-1.495-.933l-4.577-7.186v6.952L12.21 19s0 .84-1.168.84l-3.222.186c-.093-.186 0-.653.327-.746l.84-.233V9.854L7.822 9.76c-.094-.42.14-1.026.793-1.073l3.456-.233 4.764 7.279v-6.44l-1.215-.14c-.093-.514.28-.887.747-.933zM1.936 1.035l13.31-.98c1.634-.14 2.055-.047 3.082.7l4.249 2.986c.7.513.934.653.934 1.213v16.378c0 1.026-.373 1.634-1.68 1.726l-15.458.934c-.98.047-1.448-.093-1.962-.747l-3.129-4.06c-.56-.747-.793-1.306-.793-1.96V2.667c0-.839.374-1.54 1.447-1.632z" fill="#000000"/>
+          </svg>
+        </div>
+        <div class="tool-name">Notion</div>
+        <div class="tool-cat">SOPs · Project tracking</div>
+      </div>
+
+      <!-- Airtable -->
+      <div class="tool-card reveal">
+        <div class="tool-logo" aria-label="Airtable logo">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Airtable">
+            <title>Airtable</title>
+            <path d="M11.386 1.703l-9.08 3.36C1.79 5.28 1.78 6.3 2.29 6.52l9.12 3.71c.38.15.81.15 1.19 0l9.12-3.71c.51-.21.5-1.24-.02-1.46l-9.08-3.36a1.43 1.43 0 0 0-1.23 0zM2.1 9.25v7.27c0 .55.59.92 1.09.69l7.99-3.54c.35-.15.58-.5.58-.88V5.53L2.66 8.56c-.34.14-.56.47-.56.69zm19.8 0c0-.22-.22-.55-.56-.69l-9.1-4.03v7.26c0 .38.23.73.58.88l7.99 3.54c.5.22 1.09-.14 1.09-.69V9.25z" fill="#FCB400"/>
+          </svg>
+        </div>
+        <div class="tool-name">Airtable</div>
+        <div class="tool-cat">Databases · Tracking</div>
+      </div>
+
+      <!-- Zapier -->
+      <div class="tool-card reveal">
+        <div class="tool-logo" aria-label="Zapier logo">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Zapier">
+            <title>Zapier</title>
+            <path d="M12.003 0C5.374 0 0 5.374 0 12.003 0 18.63 5.374 24 12.003 24 18.63 24 24 18.63 24 12.003 24 5.374 18.63 0 12.003 0zm.593 14.508l-4.99 4.99a.86.86 0 0 1-1.217-1.217l4.99-4.99a.86.86 0 1 1 1.217 1.217zm0-9.8a.86.86 0 0 1-1.217 0l-4.99-4.99a.86.86 0 0 1 1.217-1.217l4.99 4.99a.86.86 0 0 1 0 1.217zm5.197 5.297H4.2a.86.86 0 1 1 0-1.72h13.593a.86.86 0 1 1 0 1.72z" fill="#FF4F00"/>
+          </svg>
+        </div>
+        <div class="tool-name">Zapier</div>
+        <div class="tool-cat">Automation · Integrations</div>
+      </div>
+
+      <!-- Google Workspace -->
+      <div class="tool-card reveal">
+        <div class="tool-logo" aria-label="Google Workspace logo">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Google Workspace">
+            <title>Google Workspace</title>
+            <path d="M12.545 10.239v3.821h5.445c-.712 2.315-2.647 3.972-5.445 3.972a6.033 6.033 0 1 1 0-12.064c1.498 0 2.866.549 3.921 1.453l2.814-2.814A9.969 9.969 0 0 0 12.545 2C7.021 2 2.543 6.477 2.543 12s4.478 10 10.002 10c8.396 0 10.249-7.85 9.426-11.748l-9.426-.013z" fill="#4285F4"/>
+          </svg>
+        </div>
+        <div class="tool-name">Google Workspace</div>
+        <div class="tool-cat">Inbox · Calendar · Docs</div>
+      </div>
+
+      <!-- Slack -->
+      <div class="tool-card reveal">
+        <div class="tool-logo" aria-label="Slack logo">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Slack">
+            <title>Slack</title>
+            <path d="M5.042 15.165a2.528 2.528 0 0 1-2.52 2.523A2.528 2.528 0 0 1 0 15.165a2.527 2.527 0 0 1 2.522-2.52h2.52v2.52zm1.271 0a2.527 2.527 0 0 1 2.521-2.52 2.527 2.527 0 0 1 2.521 2.52v6.313A2.528 2.528 0 0 1 8.834 24a2.528 2.528 0 0 1-2.521-2.522v-6.313zM8.834 5.042a2.528 2.528 0 0 1-2.521-2.52A2.528 2.528 0 0 1 8.834 0a2.528 2.528 0 0 1 2.521 2.522v2.52H8.834zm0 1.271a2.528 2.528 0 0 1 2.521 2.521 2.528 2.528 0 0 1-2.521 2.521H2.522A2.528 2.528 0 0 1 0 8.834a2.528 2.528 0 0 1 2.522-2.521h6.312zm10.122 2.521a2.528 2.528 0 0 1 2.522-2.521A2.528 2.528 0 0 1 24 8.834a2.528 2.528 0 0 1-2.522 2.521h-2.522V8.834zm-1.268 0a2.528 2.528 0 0 1-2.523 2.521 2.527 2.527 0 0 1-2.52-2.521V2.522A2.527 2.527 0 0 1 15.165 0a2.528 2.528 0 0 1 2.523 2.522v6.312zm-2.523 10.122a2.528 2.528 0 0 1 2.523 2.522A2.528 2.528 0 0 1 15.165 24a2.527 2.527 0 0 1-2.52-2.522v-2.522h2.52zm0-1.268a2.527 2.527 0 0 1-2.52-2.523 2.526 2.526 0 0 1 2.52-2.52h6.313A2.527 2.527 0 0 1 24 15.165a2.528 2.528 0 0 1-2.522 2.523h-6.313z" fill="#4A154B"/>
+          </svg>
+        </div>
+        <div class="tool-name">Slack</div>
+        <div class="tool-cat">Team communication</div>
+      </div>
+
+      <!-- Trello -->
+      <div class="tool-card reveal">
+        <div class="tool-logo" aria-label="Trello logo">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Trello">
+            <title>Trello</title>
+            <path d="M21 0H3C1.343 0 0 1.343 0 3v18c0 1.656 1.343 3 3 3h18c1.656 0 3-1.344 3-3V3c0-1.657-1.344-3-3-3zM10.44 18.18c0 .795-.645 1.44-1.44 1.44H4.56c-.795 0-1.44-.645-1.44-1.44V4.56c0-.795.645-1.44 1.44-1.44H9c.795 0 1.44.645 1.44 1.44v13.62zm10.44-6c0 .795-.645 1.44-1.44 1.44H15c-.795 0-1.44-.645-1.44-1.44V4.56c0-.795.645-1.44 1.44-1.44h4.44c.795 0 1.44.645 1.44 1.44v7.62z" fill="#0052CC"/>
+          </svg>
+        </div>
+        <div class="tool-name">Trello</div>
+        <div class="tool-cat">Task management</div>
+      </div>
+
+      <!-- Asana -->
+      <div class="tool-card reveal">
+        <div class="tool-logo" aria-label="Asana logo">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Asana">
+            <title>Asana</title>
+            <path d="M18.454 10.01c-3.051 0-5.527 2.476-5.527 5.527 0 3.05 2.476 5.526 5.527 5.526 3.05 0 5.526-2.476 5.526-5.526 0-3.051-2.476-5.527-5.526-5.527zM5.527 10.01C2.476 10.01 0 12.486 0 15.537c0 3.05 2.476 5.526 5.527 5.526 3.05 0 5.526-2.476 5.526-5.526 0-3.051-2.476-5.527-5.526-5.527zm6.484-4.483a5.527 5.527 0 1 0-11.054 0 5.527 5.527 0 0 0 11.054 0z" fill="#FC636B"/>
+          </svg>
+        </div>
+        <div class="tool-name">Asana</div>
+        <div class="tool-cat">Project management</div>
+      </div>
+
+      <!-- ClickUp -->
+      <div class="tool-card reveal">
+        <div class="tool-logo" aria-label="ClickUp logo">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="ClickUp">
+            <title>ClickUp</title>
+            <path d="M1.976 16.77l2.455-1.88c1.518 1.986 3.115 2.936 4.782 2.936 1.65 0 3.218-.934 4.704-2.894l2.479 1.845C14.307 19.21 11.99 20.636 9.23 20.636c-2.795 0-5.138-1.457-7.254-3.866zm7.254-9.285L4.76 2.985l1.983-1.998L12 5.742l5.257-4.755 1.983 1.998-4.47 4.5c-.906-.617-1.98-.95-3.09-.95a5.5 5.5 0 0 0-2.45.95z" fill="#7B68EE"/>
+          </svg>
+        </div>
+        <div class="tool-name">ClickUp</div>
+        <div class="tool-cat">Project · Docs · Goals</div>
+      </div>
+
+      <!-- Microsoft Outlook -->
+      <div class="tool-card reveal">
+        <div class="tool-logo" aria-label="Microsoft Outlook logo">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Microsoft Outlook">
+            <title>Microsoft Outlook</title>
+            <path d="M24 7.387v10.478L19.08 15.31l-1.68 3.36-1.68-1.344V24l-5.04-2.016V3.36L24 7.387zm-5.52 6.552l-1.68 5.04 1.68-1.345 4.32 2.018V8.622l-4.32 2.017v3.3zM0 7.56c0-1.68 1.344-3.024 3.024-3.024H9.24v2.184H3.024C2.52 6.72 2.184 7.056 2.184 7.56v8.88c0 .504.336.84.84.84H9.24v2.184H3.024C1.344 19.464 0 18.12 0 16.44V7.56zm9.24-3.024v18.928L10.584 24V3.696L9.24 4.536z" fill="#0078D4"/>
+          </svg>
+        </div>
+        <div class="tool-name">Outlook</div>
+        <div class="tool-cat">Email · Calendar</div>
+      </div>
+
+      <!-- Google Calendar -->
+      <div class="tool-card reveal">
+        <div class="tool-logo" aria-label="Google Calendar logo">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Google Calendar">
+            <title>Google Calendar</title>
+            <path d="M18 0H6L0 6v12l6 6h12l6-6V6L18 0zm0 18H6V6h12v12z" fill="#4285F4"/>
+            <path d="M12 7.5c-2.484 0-4.5 2.016-4.5 4.5s2.016 4.5 4.5 4.5 4.5-2.016 4.5-4.5S14.484 7.5 12 7.5zm0 7.5a3 3 0 1 1 0-6 3 3 0 0 1 0 6z" fill="#EA4335"/>
+          </svg>
+        </div>
+        <div class="tool-name">Google Calendar</div>
+        <div class="tool-cat">Scheduling · Time</div>
+      </div>
+
+      <!-- Microsoft Teams -->
+      <div class="tool-card reveal">
+        <div class="tool-logo" aria-label="Microsoft Teams logo">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Microsoft Teams">
+            <title>Microsoft Teams</title>
+            <path d="M20.625 7.875a2.625 2.625 0 1 0 0-5.25 2.625 2.625 0 0 0 0 5.25zm-4.5 2.25h-1.5v7.5c0 .825-.675 1.5-1.5 1.5H7.5v1.5c0 .825.675 1.5 1.5 1.5h7.125A1.875 1.875 0 0 0 18 20.25v-8.25a1.875 1.875 0 0 0-1.875-1.875zM3.375 9a1.875 1.875 0 0 0-1.875 1.875v7.5c0 1.035.84 1.875 1.875 1.875h7.5c1.035 0 1.875-.84 1.875-1.875v-7.5c0-1.035-.84-1.875-1.875-1.875h-7.5zM15.375 7.5a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" fill="#6264A7"/>
+          </svg>
+        </div>
+        <div class="tool-name">Microsoft Teams</div>
+        <div class="tool-cat">Meetings · Chat</div>
+      </div>
+
+      <!-- Zoom -->
+      <div class="tool-card reveal">
+        <div class="tool-logo" aria-label="Zoom logo">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Zoom">
+            <title>Zoom</title>
+            <path d="M24 12c0 6.627-5.373 12-12 12S0 18.627 0 12 5.373 0 12 0s12 5.373 12 12zm-6.465-3.696H9.229a1.313 1.313 0 0 0-1.313 1.313v4.44c0 .726.587 1.313 1.313 1.313h8.306a1.313 1.313 0 0 0 1.313-1.313V9.617a1.313 1.313 0 0 0-1.313-1.313zm2.335 1.313l-2.335 1.746v1.272l2.335 1.746V9.617z" fill="#2D8CFF"/>
+          </svg>
+        </div>
+        <div class="tool-name">Zoom</div>
+        <div class="tool-cat">Video meetings</div>
+      </div>
+
+      <!-- Canva -->
+      <div class="tool-card reveal">
+        <div class="tool-logo" aria-label="Canva logo">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Canva">
+            <title>Canva</title>
+            <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm3.893 16.618c-1.17.813-2.458 1.22-3.863 1.22-1.503 0-2.8-.376-3.891-1.128-1.091-.752-1.802-1.799-2.133-3.14a7.9 7.9 0 0 1-.204-1.8c0-2.13.611-3.81 1.832-5.042C8.854 5.496 10.364 5 12.08 5c1.04 0 2.043.207 3.01.62.495.213.949.48 1.363.8a.4.4 0 0 1 .04.574l-.886 1.023a.398.398 0 0 1-.549.05 4.183 4.183 0 0 0-2.825-1.029c-.972 0-1.8.283-2.485.85-.908.748-1.362 1.878-1.362 3.392 0 1.347.38 2.417 1.14 3.21.68.71 1.581 1.065 2.707 1.065a4.49 4.49 0 0 0 2.915-1.019.397.397 0 0 1 .554.055l.843 1.044a.4.4 0 0 1-.052.563l-.6.42z" fill="#00C4CC"/>
+          </svg>
+        </div>
+        <div class="tool-name">Canva</div>
+        <div class="tool-cat">Design · Presentations</div>
+      </div>
+
     </div>
   </div></section>
+
   <section><div class="wrap" style="text-align:center">
     <h2 class="reveal">Not sure which service fits?</h2>
     <p class="sub reveal" style="margin:0.75rem auto 2rem;text-align:center;max-width:440px">The discovery call figures that out. 30 minutes, your current situation reviewed, right engagement confirmed.</p>
@@ -843,14 +1085,8 @@ footer p{font-size:0.7rem;color:var(--text3)}
       <div class="work-card-images">
         <span class="we-images-label">Before &amp; after — calendar screenshots</span>
         <div class="ba-grid">
-          <div class="ba-item">
-            <div class="ba-label before">⚠ Before — initial calendar</div>
-            <div class="img-placeholder"><span>📅</span><p>Replace with your before-calendar screenshot<br><code>&lt;img src="your-image.png"&gt;</code></p></div>
-          </div>
-          <div class="ba-item">
-            <div class="ba-label after">✓ After — restructured system</div>
-            <div class="img-placeholder"><span>✅</span><p>Replace with your after-calendar screenshot<br><code>&lt;img src="your-image.png"&gt;</code></p></div>
-          </div>
+          <div class="ba-item"><div class="ba-label before">⚠ Before — initial calendar</div><div class="img-placeholder"><span>📅</span><p>Replace with your before-calendar screenshot<br><code>&lt;img src="your-image.png"&gt;</code></p></div></div>
+          <div class="ba-item"><div class="ba-label after">✓ After — restructured system</div><div class="img-placeholder"><span>✅</span><p>Replace with your after-calendar screenshot<br><code>&lt;img src="your-image.png"&gt;</code></p></div></div>
         </div>
       </div>
     </div>
@@ -879,14 +1115,8 @@ footer p{font-size:0.7rem;color:var(--text3)}
       <div class="work-card-images">
         <span class="we-images-label">Work samples — financial model screenshots</span>
         <div class="img-grid cols-2">
-          <div class="img-item">
-            <div class="img-placeholder"><span>📊</span><p>Replace with your DCF model screenshot<br><code>&lt;img src="your-image.png"&gt;</code></p></div>
-            <div class="img-caption">DCF valuation model</div>
-          </div>
-          <div class="img-item">
-            <div class="img-placeholder"><span>📈</span><p>Replace with your investor dashboard screenshot<br><code>&lt;img src="your-image.png"&gt;</code></p></div>
-            <div class="img-caption">Investor-ready dashboard</div>
-          </div>
+          <div class="img-item"><div class="img-placeholder"><span>📊</span><p>Replace with your DCF model screenshot</p></div><div class="img-caption">DCF valuation model</div></div>
+          <div class="img-item"><div class="img-placeholder"><span>📈</span><p>Replace with your investor dashboard screenshot</p></div><div class="img-caption">Investor-ready dashboard</div></div>
         </div>
       </div>
     </div>
@@ -915,10 +1145,7 @@ footer p{font-size:0.7rem;color:var(--text3)}
       <div class="work-card-images">
         <span class="we-images-label">SOP or workflow screenshots</span>
         <div class="img-grid cols-1">
-          <div class="img-item">
-            <div class="img-placeholder"><span>📋</span><p>Replace with your SOP or automated workflow screenshot<br><code>&lt;img src="your-image.png"&gt;</code></p></div>
-            <div class="img-caption">Automated weekly reporting workflow</div>
-          </div>
+          <div class="img-item"><div class="img-placeholder"><span>📋</span><p>Replace with your SOP or automated workflow screenshot</p></div><div class="img-caption">Automated weekly reporting workflow</div></div>
         </div>
       </div>
     </div>
@@ -947,14 +1174,8 @@ footer p{font-size:0.7rem;color:var(--text3)}
       <div class="work-card-images">
         <span class="we-images-label">AP/AR tracker or reconciliation screenshots</span>
         <div class="img-grid cols-2">
-          <div class="img-item">
-            <div class="img-placeholder"><span>📊</span><p>Replace with your AP/AR tracker screenshot<br><code>&lt;img src="your-image.png"&gt;</code></p></div>
-            <div class="img-caption">AP/AR tracking system</div>
-          </div>
-          <div class="img-item">
-            <div class="img-placeholder"><span>💰</span><p>Replace with your cash flow / reconciliation screenshot<br><code>&lt;img src="your-image.png"&gt;</code></p></div>
-            <div class="img-caption">Cash flow reconciliation</div>
-          </div>
+          <div class="img-item"><div class="img-placeholder"><span>📊</span><p>Replace with your AP/AR tracker screenshot</p></div><div class="img-caption">AP/AR tracking system</div></div>
+          <div class="img-item"><div class="img-placeholder"><span>💰</span><p>Replace with your cash flow / reconciliation screenshot</p></div><div class="img-caption">Cash flow reconciliation</div></div>
         </div>
       </div>
     </div>
@@ -983,14 +1204,8 @@ footer p{font-size:0.7rem;color:var(--text3)}
       <div class="work-card-images">
         <span class="we-images-label">Notion dashboard or SOP screenshots</span>
         <div class="img-grid cols-2">
-          <div class="img-item">
-            <div class="img-placeholder"><span>🗒️</span><p>Replace with your Notion dashboard screenshot<br><code>&lt;img src="your-image.png"&gt;</code></p></div>
-            <div class="img-caption">Notion operating dashboard</div>
-          </div>
-          <div class="img-item">
-            <div class="img-placeholder"><span>📋</span><p>Replace with your SOP library screenshot<br><code>&lt;img src="your-image.png"&gt;</code></p></div>
-            <div class="img-caption">SOP library</div>
-          </div>
+          <div class="img-item"><div class="img-placeholder"><span>🗒️</span><p>Replace with your Notion dashboard screenshot</p></div><div class="img-caption">Notion operating dashboard</div></div>
+          <div class="img-item"><div class="img-placeholder"><span>📋</span><p>Replace with your SOP library screenshot</p></div><div class="img-caption">SOP library</div></div>
         </div>
       </div>
     </div>

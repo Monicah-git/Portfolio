@@ -215,6 +215,56 @@ h3{font-family:var(--serif);font-size:1.2rem;font-weight:500;color:var(--dark)}
 .fit-card.yes .fit-list li{color:var(--text)}
 .fit-card.no .fit-list li{color:var(--text2)}
 
+/* ═══════════════════════════════════════════
+   NEW: FAQ SECTION
+   ═══════════════════════════════════════════ */
+.faq-section{background:var(--warm);padding:6.5rem 0}
+.faq-intro{max-width:520px;margin-bottom:3.25rem}
+.faq-list{display:flex;flex-direction:column;gap:0;border-radius:var(--r);overflow:hidden;border:1px solid var(--border)}
+.faq-item{background:#fff;border-bottom:1px solid var(--border);position:relative;overflow:hidden;transition:background 0.2s}
+.faq-item:last-child{border-bottom:none}
+.faq-item.open{background:var(--cream)}
+.faq-q{display:flex;justify-content:space-between;align-items:center;cursor:pointer;padding:1.55rem 1.85rem;gap:1.5rem;user-select:none}
+.faq-q-text{font-family:var(--serif);font-size:1.02rem;font-weight:500;color:var(--dark);line-height:1.42}
+.faq-icon{width:26px;height:26px;border-radius:50%;background:var(--ink-pale);border:1px solid var(--ink-border);display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:all 0.3s}
+.faq-icon svg{width:10px;height:10px;transition:transform 0.35s;color:var(--ink)}
+.faq-item.open .faq-icon{background:var(--ink);border-color:var(--ink)}
+.faq-item.open .faq-icon svg{transform:rotate(180deg);color:#fff}
+.faq-a{max-height:0;overflow:hidden;transition:max-height 0.4s cubic-bezier(0.4,0,0.2,1),opacity 0.3s ease;opacity:0}
+.faq-item.open .faq-a{max-height:400px;opacity:1}
+.faq-a-inner{padding:0 1.85rem 1.55rem;font-size:0.86rem;color:var(--text2);line-height:1.82;font-weight:300;border-top:1px solid var(--border);padding-top:1.05rem}
+
+/* ═══════════════════════════════════════════
+   NEW: LEAD MAGNET / FREEBIE
+   ═══════════════════════════════════════════ */
+.lead-section{background:var(--dark);padding:6.5rem 0}
+.lead-inner{display:grid;grid-template-columns:1fr 1fr;gap:5.5rem;align-items:start}
+.lead-left .eyebrow{color:rgba(255,255,255,0.25)}
+.lead-left h2{color:#fff;margin-bottom:0.8rem}
+.lead-left h2 em{color:var(--ink2)}
+.lead-left>p{font-size:0.88rem;color:rgba(255,255,255,0.38);line-height:1.9;font-weight:300;max-width:440px;margin-bottom:2rem}
+.lead-checks{display:grid;grid-template-columns:1fr 1fr;gap:0.6rem;margin-bottom:2.1rem}
+.lead-check{display:flex;align-items:center;gap:0.52rem;font-size:0.75rem;color:rgba(255,255,255,0.45)}
+.lead-check-dot{width:5px;height:5px;border-radius:50%;background:var(--ink2);flex-shrink:0}
+.lead-form-wrap{display:flex;gap:0.6rem;flex-wrap:wrap}
+.lead-input{flex:1;min-width:200px;background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.12);border-radius:100px;padding:0.82rem 1.35rem;font-family:var(--sans);font-size:0.82rem;color:#fff;outline:none;transition:border-color 0.2s,background 0.2s}
+.lead-input::placeholder{color:rgba(255,255,255,0.28)}
+.lead-input:focus{border-color:rgba(138,98,64,0.55);background:rgba(255,255,255,0.1)}
+.lead-note{font-size:0.68rem;color:rgba(255,255,255,0.2);margin-top:0.75rem}
+.lead-success{display:none;background:rgba(42,96,72,0.18);border:1px solid rgba(42,96,72,0.35);border-radius:var(--r);padding:1.05rem 1.35rem;font-size:0.83rem;color:#5fb88a;font-weight:400}
+.lead-right{display:flex;flex-direction:column;gap:0.68rem}
+.lead-checklist-card{background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.07);border-radius:var(--r);padding:1.6rem 1.75rem;overflow:hidden;position:relative}
+.lead-checklist-card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--ink),var(--ink2))}
+.lead-checklist-title{font-size:0.63rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.25);margin-bottom:1.05rem;display:block}
+.lead-checklist-items{display:flex;flex-direction:column;gap:0}
+.lead-cl-item{display:flex;align-items:center;gap:0.85rem;padding:0.72rem 0;border-bottom:1px solid rgba(255,255,255,0.05);font-size:0.8rem;color:rgba(255,255,255,0.45);font-weight:300}
+.lead-cl-item:last-child{border-bottom:none}
+.lead-cl-box{width:14px;height:14px;border-radius:3px;border:1px solid rgba(138,98,64,0.4);flex-shrink:0}
+.lead-stat-cards{display:grid;grid-template-columns:1fr 1fr;gap:0.68rem}
+.lead-stat-card{background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.06);border-radius:var(--r-sm);padding:1.05rem 1.15rem}
+.lead-stat-num{font-family:var(--serif);font-size:1.65rem;font-weight:600;color:var(--ink2);line-height:1;margin-bottom:0.22rem}
+.lead-stat-lbl{font-size:0.68rem;color:rgba(255,255,255,0.28);line-height:1.5;font-weight:300}
+
 /* ── TESTIMONIALS ── */
 .testi-section{background:var(--warm);padding:5.5rem 0}
 .testi-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem;margin-top:3.25rem}
@@ -404,6 +454,27 @@ h3{font-family:var(--serif);font-size:1.2rem;font-weight:500;color:var(--dark)}
 .gtn-items{display:flex;flex-direction:column;gap:0.4rem}
 .gtn-items div{font-size:0.78rem;color:var(--text2);font-weight:300}
 
+/* ═══════════════════════════════════════════
+   NEW: CONTACT INTAKE FORM
+   ═══════════════════════════════════════════ */
+.intake-section{background:var(--cream);padding:5.5rem 0}
+.intake-card{background:#fff;border:1px solid var(--border);border-radius:var(--r);padding:2.6rem;max-width:740px;margin:2.1rem auto 0}
+.intake-card h3{margin-bottom:0.4rem}
+.intake-card>p{font-size:0.83rem;color:var(--text2);font-weight:300;line-height:1.72;margin-bottom:2rem}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-bottom:1rem}
+.form-group{display:flex;flex-direction:column;gap:0.38rem;margin-bottom:1rem}
+.form-group.full{grid-column:1/-1}
+.form-label{font-size:0.68rem;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:var(--text3)}
+.form-input,.form-select,.form-textarea{font-family:var(--sans);font-size:0.84rem;color:var(--text);background:var(--cream);border:1px solid var(--border);border-radius:var(--r-sm);padding:0.72rem 1rem;outline:none;transition:border-color 0.2s,background 0.2s;width:100%}
+.form-input:focus,.form-select:focus,.form-textarea:focus{border-color:var(--ink);background:#fff}
+.form-input::placeholder,.form-textarea::placeholder{color:var(--text3)}
+.form-select{appearance:none;-webkit-appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23b0a090' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 1rem center;padding-right:2.5rem}
+.form-textarea{resize:vertical;min-height:110px;line-height:1.65}
+.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+.form-submit-row{display:flex;align-items:center;gap:1.2rem;flex-wrap:wrap;margin-top:0.5rem}
+.form-note{font-size:0.72rem;color:var(--text3);font-weight:300}
+.form-success{display:none;background:rgba(42,96,72,0.08);border:1px solid rgba(42,96,72,0.22);border-radius:var(--r-sm);padding:1rem 1.2rem;font-size:0.83rem;color:var(--green);margin-top:1rem}
+
 /* ── LIGHTBOX ── */
 .lightbox{display:none;position:fixed;inset:0;background:rgba(26,22,16,0.94);z-index:500;align-items:center;justify-content:center;padding:2rem}
 .lightbox.open{display:flex}
@@ -423,7 +494,7 @@ footer p{font-size:0.71rem;color:var(--text3)}
   .hero-wrap{padding:3.5rem 1.5rem 3rem}
   .hero-bottom{grid-template-columns:1fr;gap:2.25rem}
   .svc-cards .svc-row{grid-template-columns:1fr;gap:1.3rem}
-  .engage-grid,.fit-grid,.how-grid,.personality-grid,.contact-grid{grid-template-columns:1fr}
+  .engage-grid,.fit-grid,.how-grid,.personality-grid,.contact-grid,.lead-inner{grid-template-columns:1fr}
   .how-right{position:static}
   .about-hero-inner{grid-template-columns:1fr;gap:2.75rem}
   .svc-page-grid,.testi-grid{grid-template-columns:1fr 1fr}
@@ -444,6 +515,10 @@ footer p{font-size:0.71rem;color:var(--text3)}
   .work-card-body{padding:1.6rem 1.3rem}
   .work-card-header{padding:1.6rem 1.3rem}
   .work-card-images{padding:0 1.3rem 1.6rem}
+  .lead-checks{grid-template-columns:1fr}
+  .lead-stat-cards{grid-template-columns:1fr 1fr}
+  .form-grid{grid-template-columns:1fr}
+  .intake-card{padding:1.75rem}
 }
 @media(max-width:580px){
   .svc-page-grid,.testi-grid,.tools-grid,.cert-dark-grid{grid-template-columns:1fr 1fr}
@@ -455,6 +530,10 @@ footer p{font-size:0.71rem;color:var(--text3)}
   .home-cta-section{padding:4.5rem 0}
   .tool-logo{width:80px;height:80px}
   .tool-logo img,.tool-logo svg{width:80px;height:80px}
+  .lead-form-wrap{flex-direction:column}
+  .lead-input{min-width:unset;border-radius:var(--r-sm)}
+  .faq-q{padding:1.15rem 1.35rem}
+  .faq-a-inner{padding:0 1.35rem 1.15rem;padding-top:0.85rem}
 }
 @media(max-width:380px){
   .tools-grid{grid-template-columns:repeat(2,1fr)}
@@ -507,7 +586,7 @@ footer p{font-size:0.71rem;color:var(--text3)}
     </div>
     <div class="hero-bottom">
       <div>
-        <p class="hero-desc">Running a business shouldn’t mean wrestling with messy books, hunting for business KPI metrics, or chasing updates on work that nobody owns. I step in to set up your operations and manage your bookkeeping, taking that entire weight off you</p>
+        <p class="hero-desc">Running a business shouldn't mean wrestling with messy books, hunting for business KPI metrics, or chasing updates on work that nobody owns. I step in to set up your operations and manage your bookkeeping, taking that entire weight off you</p>
         <div class="hero-actions">
           <a href="javascript:void(0)" onclick="return show('work')" class="btn">See the work</a>
           <a href="https://calendly.com/monicahmburu/one-on-one" target="_blank" class="btn-ghost">Book a free call</a>
@@ -517,10 +596,10 @@ footer p{font-size:0.71rem;color:var(--text3)}
           <span class="trust-item"><span class="trust-dot"></span>$15/hr · founder rate</span>
           <span class="trust-item"><span class="trust-dot"></span>Remote · worldwide</span>
         </div>
-        <div class="hero-proof" style="display: flex; justify-content: space-between; align-items: flex-start; gap: 20px;">
-          <div><div class="pnum">10 hrs</div><div class="plbl">Given back every week<span class="plbl-attr" style="display: block;">reporting automated</span></div></div>
-          <div><div class="pnum">10+ business</div><div class="plbl">Fundraising documents generated<span class="plbl-attr" style="display: block;">clean financials projections</span></div></div>
-          <div><div class="pnum">1,000+</div><div class="plbl">Client records sorted<span class="plbl-attr" style="display: block;">filing system built</span></div></div>
+        <div class="hero-proof" style="display:flex;justify-content:space-between;align-items:flex-start;gap:20px">
+          <div><div class="pnum">10 hrs</div><div class="plbl">Given back every week<span class="plbl-attr">reporting automated</span></div></div>
+          <div><div class="pnum">10+ business</div><div class="plbl">Fundraising documents generated<span class="plbl-attr">clean financials projections</span></div></div>
+          <div><div class="pnum">1,000+</div><div class="plbl">Client records sorted<span class="plbl-attr">filing system built</span></div></div>
         </div>
         <div class="vv-banner">
           <div class="vv-badge">Virtually Versed Africa Bootcamp</div>
@@ -543,15 +622,15 @@ footer p{font-size:0.71rem;color:var(--text3)}
 
   <div class="reality-section"><div class="wrap">
     <span class="eyebrow reveal">Sound familiar?</span>
-    <h2 class="reveal"> Most founders are great at their business.<br>Running the <em>admin</em> around it is a different story.</h2>
+    <h2 class="reveal">Most founders are great at their business.<br>Running the <em>admin</em> around it is a different story.</h2>
     <p class="reality-intro reveal">When a business grows faster than its systems, the founder becomes the system. Everything routes through you because nothing else exists to hold it.</p>
     <div class="reality-grid reveal">
       <div class="reality-item"><div class="reality-title">You don't know exactly how the business is doing financially</div><div class="reality-desc">Revenue is visible. Profit is a guess. Cash position requires work to figure out. When someone asks how the business is going, the honest answer is you're not sure because nobody has organised your data.</div></div>
       <div class="reality-item"><div class="reality-title">Important things keep slipping through the cracks</div><div class="reality-desc">Not because you're not on top of it but because the business doesn't have the capacity. Follow-ups don't happen. Reconciliations are weeks behind. Things that should have been done last month are still waiting because something more urgent always comes up first.</div></div>
       <div class="reality-item"><div class="reality-title">You are the only one who knows how things get done</div><div class="reality-desc">Decisions, approvals, context all come back to you. When you're not available, work stops. Nothing is written down. Every new person on the team needs a full walkthrough you don't have time to give.</div></div>
-      <div class="reality-item"><div class="reality-title">You are doing too many jobs at once</div><div class="reality-desc">Finance, operations, communication, execution you're carrying more than one person should because handing things off requires structure that doesn't exist yet.</div></div>
+      <div class="reality-item"><div class="reality-title">You are doing too many jobs at once</div><div class="reality-desc">Finance, operations, communication, execution — you're carrying more than one person should because handing things off requires structure that doesn't exist yet.</div></div>
     </div>
-    <div class="reality-bridge reveal"><p>These problems don't go away by working harder. They go away with <strong>better structure, clearer financial information, and someone you trust to follow through</strong> which is exactly what I provide.</p></div>
+    <div class="reality-bridge reveal"><p>These problems don't go away by working harder. They go away with <strong>better structure, clearer financial information, and someone you trust to follow through</strong> — which is exactly what I provide.</p></div>
   </div></div>
 
   <div class="svc-section"><div class="wrap">
@@ -564,17 +643,17 @@ footer p{font-size:0.71rem;color:var(--text3)}
       <div class="svc-row reveal">
         <div><div class="svc-num">01</div><div class="svc-row-label">Bookkeeping</div><h3>Books that are always up to date</h3></div>
         <div><p class="svc-row-desc">Most founders know their books are behind. It's not that they don't care, it's just that keeping records current takes consistent time, and consistent time is the one thing they don't have. I keep the books current so you always know where things stand, without having to prepare for the conversation first.</p><div class="svc-row-why"><strong>Why this matters</strong>Clean books aren't a formality for accountants. They're how you know your cash position, make decisions based on real numbers, and stop dreading the question "how are we doing financially?"</div><ul class="svc-items" style="margin-top:1.05rem"><li>Monthly transaction categorisation and reconciliation</li><li>Accounts payable and receivable tracking</li><li>Expense organisation and coding</li><li>QuickBooks, Xero, Zoho Books, Sage</li></ul></div>
-        <div class="svc-right"><div class="svc-right-lbl">From the work</div><div class="svc-outcome"><div class="svc-outcome-num">60%</div><div class="svc-outcome-text">fewer payment discrepancies after Account payables and receivables controls were rebuilt from scratch at a growing firm</div></div><div class="svc-outcome" style="margin-top:0.68rem"><div class="svc-outcome-num">100%</div><div class="svc-outcome-text">tax compliance across all filing periods with no amendments and no penalties</div></div></div>
+        <div class="svc-right"><div class="svc-right-lbl">From the work</div><div class="svc-outcome"><div class="svc-outcome-num">60%</div><div class="svc-outcome-text">fewer payment discrepancies after AP/AR controls were rebuilt from scratch at a growing firm</div></div><div class="svc-outcome" style="margin-top:0.68rem"><div class="svc-outcome-num">100%</div><div class="svc-outcome-text">tax compliance across all filing periods with no amendments and no penalties</div></div></div>
       </div>
       <div class="svc-row reveal">
         <div><div class="svc-num">02</div><div class="svc-row-label">Financial Reporting</div><h3>Numbers you can actually do something with</h3></div>
         <div><p class="svc-row-desc">An income statement that arrives after you've already made the decisions it would have informed isn't useful. I build reporting that gives you the information you need when you need it without hours of manual work to get there.</p><div class="svc-row-why"><strong>Why this actually matters</strong>Financial information you can't act on is just noise. Good reporting tells you whether cash is healthy, which revenue streams are pulling their weight, and what the numbers say you should do next.</div><ul class="svc-items" style="margin-top:1.05rem"><li>Income statement, cash flow statement, balance sheet</li><li>Dashboards connected to live data</li><li>Budget tracking and variance analysis</li><li>Investor ready financial models and reports</li></ul></div>
-        <div class="svc-right"><div class="svc-right-lbl">From the work</div><div class="svc-outcome"><div class="svc-outcome-num">10+ business</div><div class="svc-outcome-text">Fundraising documents created that generated investor interest </div></div><div class="svc-outcome" style="margin-top:0.68rem"><div class="svc-outcome-num">30%</div><div class="svc-outcome-text">improvement in forecast accuracy after models were restructured and standardised</div></div></div>
+        <div class="svc-right"><div class="svc-right-lbl">From the work</div><div class="svc-outcome"><div class="svc-outcome-num">10+ business</div><div class="svc-outcome-text">Fundraising documents created that generated investor interest</div></div><div class="svc-outcome" style="margin-top:0.68rem"><div class="svc-outcome-num">30%</div><div class="svc-outcome-text">improvement in forecast accuracy after models were restructured and standardised</div></div></div>
       </div>
       <div class="svc-row reveal">
         <div><div class="svc-num">03</div><div class="svc-row-label">Executive & Operational Support</div><h3>Work that moves without you watching it</h3></div>
-        <div><p class="svc-row-desc">This isn't about ticking tasks off a list. It's about building the infrastructure from documented processes, coordination of systems, and reliable follow-through so important work keeps moving even when you're not in the room. The goal is to reduce how much routes through you, not create a new dependency on me.</p><div class="svc-row-why"><strong>Why this actually matters</strong>When you're the only person who knows how something gets done, your time is permanently rationed. Written down systems and reliable execution creates the space to actually think about the business.</div><ul class="svc-items" style="margin-top:1.05rem"><li>SOP writing and process documentation</li><li>Workflow design and automation (Zapier, Make)</li><li>Inbox and calendar management</li><li>Project coordination and follow through (Notion, Asana)</li></ul></div>
-        <div class="svc-right"><div class="svc-right-lbl">From the work</div><div class="svc-outcome"><div class="svc-outcome-num">10 hrs</div><div class="svc-outcome-text">freed per week when a manual weekly reporting process was redesigned and automated</div></div><div class="svc-outcome" style="margin-top:0.68rem"><div class="svc-outcome-num">8 SOPs</div><div class="svc-outcome-text">written and live new hires could onboard without the founder being involved</div></div></div>
+        <div><p class="svc-row-desc">This isn't about ticking tasks off a list. It's about building the infrastructure — documented processes, coordination of systems, and reliable follow-through — so important work keeps moving even when you're not in the room. The goal is to reduce how much routes through you, not create a new dependency on me.</p><div class="svc-row-why"><strong>Why this actually matters</strong>When you're the only person who knows how something gets done, your time is permanently rationed. Written down systems and reliable execution creates the space to actually think about the business.</div><ul class="svc-items" style="margin-top:1.05rem"><li>SOP writing and process documentation</li><li>Workflow design and automation (Zapier, Make)</li><li>Inbox and calendar management</li><li>Project coordination and follow through (Notion, Asana)</li></ul></div>
+        <div class="svc-right"><div class="svc-right-lbl">From the work</div><div class="svc-outcome"><div class="svc-outcome-num">10 hrs</div><div class="svc-outcome-text">freed per week when a manual weekly reporting process was redesigned and automated</div></div><div class="svc-outcome" style="margin-top:0.68rem"><div class="svc-outcome-num">8 SOPs</div><div class="svc-outcome-text">written and live — new hires could onboard without the founder being involved</div></div></div>
       </div>
     </div>
     <div style="margin-top:2.1rem;text-align:center"><a href="javascript:void(0)" onclick="return show('services')" class="btn-ghost">Full service details →</a></div>
@@ -588,8 +667,8 @@ footer p{font-size:0.71rem;color:var(--text3)}
     </div>
     <div class="how-grid">
       <div class="how-steps">
-        <div class="how-step reveal"><div class="how-step-num">1</div><div class="how-step-body"><h4>We talk for 30 minutes</h4><p>You tell me where the friction is whether it’s lagging finances, manual reporting, or broken processes. I figure out what the root cause of your problem is and whether I'm the right person to fix it.</p></div></div>
-        <div class="how-step reveal"><div class="how-step-num">2</div><div class="how-step-body"><h4>Scope agreed before work begins</h4><p>For projects, deliverables and estimated hours are confirmed upfront. For retainers, monthly scope agreed is at onboarding. No open ended commitments on either side.</p></div></div>
+        <div class="how-step reveal"><div class="how-step-num">1</div><div class="how-step-body"><h4>We talk for 30 minutes</h4><p>You tell me where the friction is — whether it's lagging finances, manual reporting, or broken processes. I figure out what the root cause of your problem is and whether I'm the right person to fix it.</p></div></div>
+        <div class="how-step reveal"><div class="how-step-num">2</div><div class="how-step-body"><h4>Scope agreed before work begins</h4><p>For projects, deliverables and estimated hours are confirmed upfront. For retainers, monthly scope is agreed at onboarding. No open-ended commitments on either side.</p></div></div>
         <div class="how-step reveal"><div class="how-step-num">3</div><div class="how-step-body"><h4>Work starts within 48 hours</h4><p>You give me access to the books, tools, and relevant workflows. I audit the current state, identify the gaps, and start building against the agreed scope.</p></div></div>
         <div class="how-step reveal"><div class="how-step-num">4</div><div class="how-step-body"><h4>Systems are handed over or kept running</h4><p>Project engagements close with full documentation so everything holds without me. Retainers keep the systems accurate and current each month going forward.</p></div></div>
       </div>
@@ -598,7 +677,7 @@ footer p{font-size:0.71rem;color:var(--text3)}
           <span class="how-proof-card-lbl">Outcomes from past engagements</span>
           <div class="proof-stat"><div class="proof-stat-num">10 hrs</div><div class="proof-stat-label">Given back every week</div><div class="proof-stat-desc">Manual reporting rebuilt for senior staff, reclaiming hours they were spending on a process that should have been automatic.</div></div>
           <div class="proof-stat"><div class="proof-stat-num">10+</div><div class="proof-stat-label">Fundraising documents generated</div><div class="proof-stat-desc">Ten companies with messy data got clean models and structured reports that produced credibility that raw data never could.</div></div>
-          <div class="proof-stat"><div class="proof-stat-num">1,000+</div><div class="proof-stat-label">Records organised</div><div class="proof-stat-desc">Client file system built from nothing which made it accessible to any team member.</div></div>
+          <div class="proof-stat"><div class="proof-stat-num">1,000+</div><div class="proof-stat-label">Records organised</div><div class="proof-stat-desc">Client file system built from nothing — accessible to any team member.</div></div>
         </div>
         <div class="how-work-cta">
           <p>Five documented case studies with deliverables, process notes, and real outcomes you can look through.</p>
@@ -616,15 +695,15 @@ footer p{font-size:0.71rem;color:var(--text3)}
       <div class="engage-card project">
         <span class="engage-badge">Project engagement</span>
         <h3>Build the infrastructure</h3>
-        <p>Scoped and time bound. Books cleaned, workflows built, dashboards connected, SOPs written. Ends with a fully documented system you own that does not depend on me sticking around.</p>
+        <p>Scoped and time bound. Books cleaned, workflows built, dashboards connected, SOPs written. Ends with a fully documented system you own.</p>
         <ul class="engage-list"><li><span>→</span><span>Books reconciled and brought current</span></li><li><span>→</span><span>Financial reporting dashboard built and connected to live data</span></li><li><span>→</span><span>Workflows automated end to end</span></li><li><span>→</span><span>SOPs written so processes run without the founder</span></li><li><span>→</span><span>Full documentation handed over at close</span></li></ul>
         <div class="engage-price"><div class="engage-price-num">$15/hr</div><div class="engage-price-note">Scope and estimated hours agreed before work begins. No surprises.</div></div>
       </div>
       <div class="engage-card retainer">
         <span class="engage-badge">Monthly retainer</span>
         <h3>Keep what <em>was built</em> running</h3>
-        <p>Ongoing financial maintenance, workflow oversight, and operational continuity. Monthly scope agreed at onboarding. Not open ended availability.</p>
-        <ul class="engage-list"><li><span>→</span><span>Monthly bookkeeping and reconciliation</span></li><li><span>→</span><span> Income Statement, cash flow, and balance sheet produced monthly</span></li><li><span>→</span><span>Dashboard updated and current each month</span></li><li><span>→</span><span>Workflow maintenance and SOP updates as needed</span></li><li><span>→</span><span>Monthly operational reporting</span></li></ul>
+        <p>Ongoing financial maintenance, workflow oversight, and operational continuity. Monthly scope agreed at onboarding. Not open-ended availability.</p>
+        <ul class="engage-list"><li><span>→</span><span>Monthly bookkeeping and reconciliation</span></li><li><span>→</span><span>Income Statement, cash flow, and balance sheet produced monthly</span></li><li><span>→</span><span>Dashboard updated and current each month</span></li><li><span>→</span><span>Workflow maintenance and SOP updates as needed</span></li><li><span>→</span><span>Monthly operational reporting</span></li></ul>
         <div class="engage-price"><div class="engage-price-num">$15/hr</div><div class="engage-price-note">Estimated monthly hours agreed at onboarding. Billed on actuals.</div></div>
       </div>
     </div>
@@ -634,10 +713,128 @@ footer p{font-size:0.71rem;color:var(--text3)}
   <div class="fit-section"><div class="wrap">
     <span class="eyebrow reveal">Is this for you?</span>
     <h2 class="reveal">Worth knowing before<br>you <em>book the call.</em></h2>
-    <p class="sub reveal">This works well for a specific kind of situation. If it doesn't match, the call will confirm that quickly which saves both of us time.</p>
+    <p class="sub reveal">This works well for a specific kind of situation. If it doesn't match, the call will confirm that quickly — which saves both of us time.</p>
     <div class="fit-grid reveal">
       <div class="fit-card yes"><span class="fit-lbl">✦ Good fit</span><ul class="fit-list"><li><span>✓</span><span>Revenue coming in, but finances are disorganised. You don't have a reliable picture of your cash position</span></li><li><span>✓</span><span>Small team where you're still doing too much and growth is making you more of a bottleneck, not less</span></li><li><span>✓</span><span>Important work keeps getting delayed because no one owns the follow through</span></li><li><span>✓</span><span>You want to hand off the financial and operational layer, not just a list of tasks</span></li><li><span>✓</span><span>Ready to share access to your books, tools, and current workflows</span></li></ul></div>
       <div class="fit-card no"><span class="fit-lbl">✗ Not the right fit</span><ul class="fit-list"><li><span>✗</span><span>Need a registered CPA, statutory audit, or tax filing that requires a licensed accountant</span></li><li><span>✗</span><span>Looking for unlimited scope, on-demand availability, or full-time hours</span></li><li><span>✗</span><span>Want tasks handled without building systems around them</span></li><li><span>✗</span><span>Not in a position to share access to the information and tools needed to do the work</span></li></ul></div>
+    </div>
+  </div></div>
+
+  <!-- ═══ NEW: FAQ ═══ -->
+  <div class="faq-section"><div class="wrap">
+    <div class="faq-intro reveal">
+      <span class="eyebrow">Questions</span>
+      <h2>Things founders ask<br>before <em>getting started.</em></h2>
+      <p class="sub">Straightforward answers. If something's missing, the discovery call covers it.</p>
+    </div>
+    <div class="faq-list reveal">
+
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">
+          <span class="faq-q-text">How is this different from hiring a regular virtual assistant?</span>
+          <span class="faq-icon"><svg viewBox="0 0 10 6" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><polyline points="1,1 5,5 9,1"/></svg></span>
+        </div>
+        <div class="faq-a"><div class="faq-a-inner">A VA does what you tell them to, when you tell them. I build systems, anticipate needs, and manage your operations proactively. My financial analysis background means I understand the business impact of every decision. The difference is a task-taker versus a partner who sees the full picture.</div></div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">
+          <span class="faq-q-text">What does a typical engagement look like?</span>
+          <span class="faq-icon"><svg viewBox="0 0 10 6" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><polyline points="1,1 5,5 9,1"/></svg></span>
+        </div>
+        <div class="faq-a"><div class="faq-a-inner">We start with a free 30-minute discovery call. If there's a fit, I recommend either a project engagement or a retainer depending on your situation. The first week is a deep-dive audit of your books, workflows, and systems. By week two, you're seeing results. Project engagements close with full documentation — retainers continue monthly.</div></div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">
+          <span class="faq-q-text">Do you work with clients outside Kenya?</span>
+          <span class="faq-icon"><svg viewBox="0 0 10 6" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><polyline points="1,1 5,5 9,1"/></svg></span>
+        </div>
+        <div class="faq-a"><div class="faq-a-inner">Yes. I work remotely with clients worldwide and operate asynchronously across time zones. Most communication happens via Slack or email, with scheduled weekly sync calls. The tools I use work regardless of where you're based.</div></div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">
+          <span class="faq-q-text">What tools do you work with?</span>
+          <span class="faq-icon"><svg viewBox="0 0 10 6" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><polyline points="1,1 5,5 9,1"/></svg></span>
+        </div>
+        <div class="faq-a"><div class="faq-a-inner">QuickBooks, Xero, Zoho Books, Excel, Power BI, Google Workspace, Notion, Zapier, Airtable, ClickUp, Trello, Asana, Slack, Zoom, and more. If you use something not on this list, I pick it up quickly. The goal is to reduce friction, not add it.</div></div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">
+          <span class="faq-q-text">How do you handle confidential financial data?</span>
+          <span class="faq-icon"><svg viewBox="0 0 10 6" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><polyline points="1,1 5,5 9,1"/></svg></span>
+        </div>
+        <div class="faq-a"><div class="faq-a-inner">Confidentiality is standard. I sign NDAs on request, use your preferred password manager, and follow any security protocols you have in place. My background in financial analysis means I'm already accustomed to handling sensitive financial data with discretion.</div></div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">
+          <span class="faq-q-text">Do you only do retainers, or can I hire you for a one-off project?</span>
+          <span class="faq-icon"><svg viewBox="0 0 10 6" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><polyline points="1,1 5,5 9,1"/></svg></span>
+        </div>
+        <div class="faq-a"><div class="faq-a-inner">Both. Project-based work includes things like QuickBooks cleanup, SOP creation, workflow audits, and financial reporting setup — scoped upfront with a clear deliverable. Retainers are for ongoing monthly maintenance. Most clients start with a project and move to a retainer once the system is built.</div></div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">
+          <span class="faq-q-text">How quickly can we start?</span>
+          <span class="faq-icon"><svg viewBox="0 0 10 6" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><polyline points="1,1 5,5 9,1"/></svg></span>
+        </div>
+        <div class="faq-a"><div class="faq-a-inner">After the discovery call and scope confirmation, work begins within 48 hours. The first week is dedicated to auditing your current systems and identifying the highest-value starting points. Most clients notice a difference within the first few days.</div></div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">
+          <span class="faq-q-text">Can you replace my accountant or CFO?</span>
+          <span class="faq-icon"><svg viewBox="0 0 10 6" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><polyline points="1,1 5,5 9,1"/></svg></span>
+        </div>
+        <div class="faq-a"><div class="faq-a-inner">No — and I'll be direct about that. I'm not a licensed CPA and don't file statutory accounts or handle tax compliance that requires registration. What I do is the operational and reporting layer: clean books, accurate records, usable dashboards, and financial models. If you have a CFO or accountant, I work alongside them to handle the day-to-day so they can focus on strategy.</div></div>
+      </div>
+
+    </div>
+  </div></div>
+
+  <!-- ═══ NEW: LEAD MAGNET ═══ -->
+  <div class="lead-section"><div class="wrap">
+    <div class="lead-inner reveal">
+      <div class="lead-left">
+        <span class="eyebrow">Free resource</span>
+        <h2>Get the Operations<br><em>Audit Checklist.</em></h2>
+        <p>Not sure if you need operations support? This 15-question checklist shows exactly where your business is leaking time, money, and focus — before you talk to anyone.</p>
+        <div class="lead-checks">
+          <div class="lead-check"><span class="lead-check-dot"></span>Calendar health check</div>
+          <div class="lead-check"><span class="lead-check-dot"></span>Inbox efficiency score</div>
+          <div class="lead-check"><span class="lead-check-dot"></span>Workflow automation gaps</div>
+          <div class="lead-check"><span class="lead-check-dot"></span>Financial visibility audit</div>
+          <div class="lead-check"><span class="lead-check-dot"></span>Tool stack redundancy</div>
+          <div class="lead-check"><span class="lead-check-dot"></span>SOP maturity assessment</div>
+        </div>
+        <div class="lead-form-wrap" id="leadFormWrap">
+          <input type="email" class="lead-input" id="leadEmail" placeholder="your@email.com">
+          <button class="btn-inv" onclick="submitLead()">Send me the checklist →</button>
+        </div>
+        <div class="lead-success" id="leadSuccess">Checklist sent. Check your inbox — including spam if you don't see it within a few minutes.</div>
+        <p class="lead-note">No marketing emails. One useful resource.</p>
+      </div>
+      <div class="lead-right">
+        <div class="lead-checklist-card">
+          <span class="lead-checklist-title">Operations Audit Checklist — Preview</span>
+          <div class="lead-checklist-items">
+            <div class="lead-cl-item"><span class="lead-cl-box"></span>Do you have protected deep-work blocks in your calendar?</div>
+            <div class="lead-cl-item"><span class="lead-cl-box"></span>Is your inbox under 50 unread emails at end of day?</div>
+            <div class="lead-cl-item"><span class="lead-cl-box"></span>Are your processes documented or living in someone's head?</div>
+            <div class="lead-cl-item"><span class="lead-cl-box"></span>Do you know your exact cash position right now?</div>
+            <div class="lead-cl-item"><span class="lead-cl-box"></span>Are your tools talking to each other automatically?</div>
+            <div class="lead-cl-item" style="opacity:0.35"><span class="lead-cl-box"></span>10 more questions inside...</div>
+          </div>
+        </div>
+        <div class="lead-stat-cards">
+          <div class="lead-stat-card"><div class="lead-stat-num">10 hrs</div><div class="lead-stat-lbl">Freed per week after one workflow rebuild</div></div>
+          <div class="lead-stat-card"><div class="lead-stat-num">48 hrs</div><div class="lead-stat-lbl">Time to scope and start after the call</div></div>
+        </div>
+      </div>
     </div>
   </div></div>
 
@@ -800,202 +997,22 @@ footer p{font-size:0.71rem;color:var(--text3)}
     <span class="eyebrow reveal">Tool stack</span>
     <h2 class="reveal">Tools I work with</h2>
     <div class="tools-grid">
-
-      <div class="tool-card reveal">
-        <div class="tool-logo">
-          <img src="https://lh3.googleusercontent.com/d/1Em_kUVYzG0PJxcgDq0pH3j6NdHapdE9v" alt="Microsoft Suite">
-        </div>
-        <div class="tool-name">Microsoft Suite</div>
-        <div class="tool-cat">Excel · Word · PowerPoint · Outlook · Teams</div>
-      </div>
-
-      <div class="tool-card reveal">
-        <div class="tool-logo">
-          <img src="https://lh3.googleusercontent.com/d/1He-WGlkEsOrSW6-mtxramK40gsppTvpl" alt="Google Workspace">
-        </div>
-        <div class="tool-name">Google Workspace</div>
-        <div class="tool-cat">Gmail · Calendar · Docs · Sheets · Drive</div>
-      </div>
-
-      <div class="tool-card reveal">
-        <div class="tool-logo">
-          <img src="https://lh3.googleusercontent.com/d/1XdrhJn8ojOi8kyJqZ56jb94zEktW7fCW" alt="QuickBooks">
-        </div>
-        <div class="tool-name">QuickBooks</div>
-        <div class="tool-cat">Bookkeeping · Reports</div>
-      </div>
-
-      <div class="tool-card reveal">
-        <div class="tool-logo">
-          <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-            <rect width="100" height="100" rx="14" fill="#F2C811"/>
-            <rect x="14" y="54" width="14" height="32" rx="3" fill="#1a1a2e" opacity="0.85"/>
-            <rect x="36" y="39" width="14" height="47" rx="3" fill="#1a1a2e" opacity="0.85"/>
-            <rect x="58" y="25" width="14" height="61" rx="3" fill="#1a1a2e" opacity="0.85"/>
-            <rect x="79" y="43" width="11" height="43" rx="3" fill="#1a1a2e" opacity="0.85"/>
-          </svg>
-        </div>
-        <div class="tool-name">Power BI</div>
-        <div class="tool-cat">Dashboards · Reporting</div>
-      </div>
-
-      <div class="tool-card reveal">
-        <div class="tool-logo">
-          <img src="https://lh3.googleusercontent.com/d/1R3i0znZ3uj3m7KiHlby6G-PYTQhnDpSk" alt="Notion">
-        </div>
-        <div class="tool-name">Notion</div>
-        <div class="tool-cat">Workspace · Wiki · Docs</div>
-      </div>
-
-      <div class="tool-card reveal">
-        <div class="tool-logo">
-          <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-            <rect width="100" height="100" rx="14" fill="#FCB400"/>
-            <rect x="14" y="23" width="72" height="20" rx="5" fill="#fff" opacity="0.95"/>
-            <rect x="14" y="50" width="33" height="20" rx="5" fill="#fff" opacity="0.95"/>
-            <rect x="54" y="50" width="33" height="20" rx="5" fill="#fff" opacity="0.6"/>
-            <rect x="14" y="77" width="33" height="9" rx="4" fill="#fff" opacity="0.4"/>
-            <rect x="54" y="77" width="33" height="9" rx="4" fill="#fff" opacity="0.4"/>
-          </svg>
-        </div>
-        <div class="tool-name">Airtable</div>
-        <div class="tool-cat">Databases · Tracking</div>
-      </div>
-
-      <div class="tool-card reveal">
-        <div class="tool-logo">
-          <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-            <circle cx="50" cy="50" r="47" fill="#FF4A00"/>
-            <text x="50" y="68" font-family="Georgia,serif" font-size="52" font-weight="bold" fill="#fff" text-anchor="middle">Z</text>
-          </svg>
-        </div>
-        <div class="tool-name">Zapier</div>
-        <div class="tool-cat">Automation · Integrations</div>
-      </div>
-
-      <div class="tool-card reveal">
-        <div class="tool-logo">
-          <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-            <rect x="14" y="14" width="22" height="40" rx="11" fill="#36C5F0"/>
-            <rect x="7"  y="40" width="40" height="22" rx="11" fill="#36C5F0"/>
-            <rect x="64" y="7"  width="22" height="40" rx="11" fill="#2EB67D"/>
-            <rect x="50" y="14" width="40" height="22" rx="11" fill="#2EB67D"/>
-            <rect x="14" y="64" width="22" height="29" rx="11" fill="#E01E5A"/>
-            <rect x="7"  y="61" width="40" height="22" rx="11" fill="#E01E5A"/>
-            <rect x="64" y="47" width="22" height="40" rx="11" fill="#ECB22E"/>
-            <rect x="50" y="68" width="40" height="22" rx="11" fill="#ECB22E"/>
-          </svg>
-        </div>
-        <div class="tool-name">Slack</div>
-        <div class="tool-cat">Team communication</div>
-      </div>
-
-      <div class="tool-card reveal">
-        <div class="tool-logo">
-          <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-            <rect width="100" height="100" rx="18" fill="#0052CC"/>
-            <rect x="14" y="18" width="29" height="54" rx="7" fill="#fff"/>
-            <rect x="54" y="18" width="29" height="36" rx="7" fill="#fff"/>
-          </svg>
-        </div>
-        <div class="tool-name">Trello</div>
-        <div class="tool-cat">Task management</div>
-      </div>
-
-      <div class="tool-card reveal">
-        <div class="tool-logo">
-          <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-            <rect width="100" height="100" rx="18" fill="#F06A6A"/>
-            <circle cx="50" cy="32" r="16" fill="#fff"/>
-            <circle cx="23" cy="67" r="16" fill="#fff"/>
-            <circle cx="77" cy="67" r="16" fill="#fff"/>
-          </svg>
-        </div>
-        <div class="tool-name">Asana</div>
-        <div class="tool-cat">Project management</div>
-      </div>
-
-      <div class="tool-card reveal">
-        <div class="tool-logo">
-          <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-            <rect width="100" height="100" rx="18" fill="#7B68EE"/>
-            <polyline points="18,54 36,75 82,28" stroke="#fff" stroke-width="11" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
-          </svg>
-        </div>
-        <div class="tool-name">ClickUp</div>
-        <div class="tool-cat">Project · Docs · Goals</div>
-      </div>
-
-      <div class="tool-card reveal">
-        <div class="tool-logo">
-          <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-            <rect width="100" height="100" rx="14" fill="#0078D4"/>
-            <rect x="11" y="25" width="54" height="47" rx="5" fill="#fff" opacity="0.95"/>
-            <polyline points="11,25 38,46 65,25" stroke="#0078D4" stroke-width="3.5" fill="none"/>
-            <rect x="57" y="50" width="32" height="32" rx="5" fill="#50A0E8"/>
-            <text x="73" y="72" font-family="Arial,sans-serif" font-size="16" font-weight="bold" fill="#fff" text-anchor="middle">31</text>
-          </svg>
-        </div>
-        <div class="tool-name">Outlook</div>
-        <div class="tool-cat">Email · Calendar</div>
-      </div>
-
-      <div class="tool-card reveal">
-        <div class="tool-logo">
-          <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-            <rect width="100" height="100" rx="14" fill="#fff" stroke="#dadce0" stroke-width="2.5"/>
-            <rect x="0" y="0" width="100" height="29" rx="14" fill="#1A73E8"/>
-            <rect x="0" y="14" width="100" height="14" fill="#1A73E8"/>
-            <line x1="0" y1="52" x2="100" y2="52" stroke="#e0e0e0" stroke-width="1.5"/>
-            <line x1="0" y1="75" x2="100" y2="75" stroke="#e0e0e0" stroke-width="1.5"/>
-            <line x1="34" y1="29" x2="34" y2="100" stroke="#e0e0e0" stroke-width="1.5"/>
-            <line x1="67" y1="29" x2="67" y2="100" stroke="#e0e0e0" stroke-width="1.5"/>
-            <text x="50" y="68" font-family="Arial,sans-serif" font-size="20" font-weight="bold" fill="#1A73E8" text-anchor="middle">28</text>
-            <circle cx="27" cy="7" r="5" fill="#fff"/>
-            <circle cx="73" cy="7" r="5" fill="#fff"/>
-          </svg>
-        </div>
-        <div class="tool-name">Google Calendar</div>
-        <div class="tool-cat">Scheduling · Time</div>
-      </div>
-
-      <div class="tool-card reveal">
-        <div class="tool-logo">
-          <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-            <rect width="100" height="100" rx="14" fill="#6264A7"/>
-            <circle cx="39" cy="32" r="15" fill="#fff"/>
-            <path d="M14 79 C14 61 64 61 64 79" fill="#fff"/>
-            <circle cx="72" cy="27" r="11" fill="#B0B1D8"/>
-            <path d="M54 76 C56 65 93 65 89 79" fill="#B0B1D8"/>
-          </svg>
-        </div>
-        <div class="tool-name">MS Teams</div>
-        <div class="tool-cat">Meetings · Chat</div>
-      </div>
-
-      <div class="tool-card reveal">
-        <div class="tool-logo">
-          <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-            <circle cx="50" cy="50" r="47" fill="#2D8CFF"/>
-            <rect x="11" y="29" width="50" height="43" rx="9" fill="#fff"/>
-            <polygon points="65,32 93,18 93,82 65,68" fill="#fff"/>
-          </svg>
-        </div>
-        <div class="tool-name">Zoom</div>
-        <div class="tool-cat">Video meetings</div>
-      </div>
-
-      <div class="tool-card reveal">
-        <div class="tool-logo">
-          <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-            <circle cx="50" cy="50" r="47" fill="#8B3DFF"/>
-            <path d="M68 36 A23 23 0 1 0 68 64" stroke="#fff" stroke-width="10" fill="none" stroke-linecap="round"/>
-          </svg>
-        </div>
-        <div class="tool-name">Canva</div>
-        <div class="tool-cat">Design · Presentations</div>
-      </div>
-
+      <div class="tool-card reveal"><div class="tool-logo"><img src="https://lh3.googleusercontent.com/d/1Em_kUVYzG0PJxcgDq0pH3j6NdHapdE9v" alt="Microsoft Suite"></div><div class="tool-name">Microsoft Suite</div><div class="tool-cat">Excel · Word · PowerPoint · Outlook · Teams</div></div>
+      <div class="tool-card reveal"><div class="tool-logo"><img src="https://lh3.googleusercontent.com/d/1He-WGlkEsOrSW6-mtxramK40gsppTvpl" alt="Google Workspace"></div><div class="tool-name">Google Workspace</div><div class="tool-cat">Gmail · Calendar · Docs · Sheets · Drive</div></div>
+      <div class="tool-card reveal"><div class="tool-logo"><img src="https://lh3.googleusercontent.com/d/1XdrhJn8ojOi8kyJqZ56jb94zEktW7fCW" alt="QuickBooks"></div><div class="tool-name">QuickBooks</div><div class="tool-cat">Bookkeeping · Reports</div></div>
+      <div class="tool-card reveal"><div class="tool-logo"><svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><rect width="100" height="100" rx="14" fill="#F2C811"/><rect x="14" y="54" width="14" height="32" rx="3" fill="#1a1a2e" opacity="0.85"/><rect x="36" y="39" width="14" height="47" rx="3" fill="#1a1a2e" opacity="0.85"/><rect x="58" y="25" width="14" height="61" rx="3" fill="#1a1a2e" opacity="0.85"/><rect x="79" y="43" width="11" height="43" rx="3" fill="#1a1a2e" opacity="0.85"/></svg></div><div class="tool-name">Power BI</div><div class="tool-cat">Dashboards · Reporting</div></div>
+      <div class="tool-card reveal"><div class="tool-logo"><img src="https://lh3.googleusercontent.com/d/1R3i0znZ3uj3m7KiHlby6G-PYTQhnDpSk" alt="Notion"></div><div class="tool-name">Notion</div><div class="tool-cat">Workspace · Wiki · Docs</div></div>
+      <div class="tool-card reveal"><div class="tool-logo"><svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><rect width="100" height="100" rx="14" fill="#FCB400"/><rect x="14" y="23" width="72" height="20" rx="5" fill="#fff" opacity="0.95"/><rect x="14" y="50" width="33" height="20" rx="5" fill="#fff" opacity="0.95"/><rect x="54" y="50" width="33" height="20" rx="5" fill="#fff" opacity="0.6"/><rect x="14" y="77" width="33" height="9" rx="4" fill="#fff" opacity="0.4"/><rect x="54" y="77" width="33" height="9" rx="4" fill="#fff" opacity="0.4"/></svg></div><div class="tool-name">Airtable</div><div class="tool-cat">Databases · Tracking</div></div>
+      <div class="tool-card reveal"><div class="tool-logo"><svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><circle cx="50" cy="50" r="47" fill="#FF4A00"/><text x="50" y="68" font-family="Georgia,serif" font-size="52" font-weight="bold" fill="#fff" text-anchor="middle">Z</text></svg></div><div class="tool-name">Zapier</div><div class="tool-cat">Automation · Integrations</div></div>
+      <div class="tool-card reveal"><div class="tool-logo"><svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><rect x="14" y="14" width="22" height="40" rx="11" fill="#36C5F0"/><rect x="7" y="40" width="40" height="22" rx="11" fill="#36C5F0"/><rect x="64" y="7" width="22" height="40" rx="11" fill="#2EB67D"/><rect x="50" y="14" width="40" height="22" rx="11" fill="#2EB67D"/><rect x="14" y="64" width="22" height="29" rx="11" fill="#E01E5A"/><rect x="7" y="61" width="40" height="22" rx="11" fill="#E01E5A"/><rect x="64" y="47" width="22" height="40" rx="11" fill="#ECB22E"/><rect x="50" y="68" width="40" height="22" rx="11" fill="#ECB22E"/></svg></div><div class="tool-name">Slack</div><div class="tool-cat">Team communication</div></div>
+      <div class="tool-card reveal"><div class="tool-logo"><svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><rect width="100" height="100" rx="18" fill="#0052CC"/><rect x="14" y="18" width="29" height="54" rx="7" fill="#fff"/><rect x="54" y="18" width="29" height="36" rx="7" fill="#fff"/></svg></div><div class="tool-name">Trello</div><div class="tool-cat">Task management</div></div>
+      <div class="tool-card reveal"><div class="tool-logo"><svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><rect width="100" height="100" rx="18" fill="#F06A6A"/><circle cx="50" cy="32" r="16" fill="#fff"/><circle cx="23" cy="67" r="16" fill="#fff"/><circle cx="77" cy="67" r="16" fill="#fff"/></svg></div><div class="tool-name">Asana</div><div class="tool-cat">Project management</div></div>
+      <div class="tool-card reveal"><div class="tool-logo"><svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><rect width="100" height="100" rx="18" fill="#7B68EE"/><polyline points="18,54 36,75 82,28" stroke="#fff" stroke-width="11" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg></div><div class="tool-name">ClickUp</div><div class="tool-cat">Project · Docs · Goals</div></div>
+      <div class="tool-card reveal"><div class="tool-logo"><svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><rect width="100" height="100" rx="14" fill="#0078D4"/><rect x="11" y="25" width="54" height="47" rx="5" fill="#fff" opacity="0.95"/><polyline points="11,25 38,46 65,25" stroke="#0078D4" stroke-width="3.5" fill="none"/><rect x="57" y="50" width="32" height="32" rx="5" fill="#50A0E8"/><text x="73" y="72" font-family="Arial,sans-serif" font-size="16" font-weight="bold" fill="#fff" text-anchor="middle">31</text></svg></div><div class="tool-name">Outlook</div><div class="tool-cat">Email · Calendar</div></div>
+      <div class="tool-card reveal"><div class="tool-logo"><svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><rect width="100" height="100" rx="14" fill="#fff" stroke="#dadce0" stroke-width="2.5"/><rect x="0" y="0" width="100" height="29" rx="14" fill="#1A73E8"/><rect x="0" y="14" width="100" height="14" fill="#1A73E8"/><line x1="0" y1="52" x2="100" y2="52" stroke="#e0e0e0" stroke-width="1.5"/><line x1="0" y1="75" x2="100" y2="75" stroke="#e0e0e0" stroke-width="1.5"/><line x1="34" y1="29" x2="34" y2="100" stroke="#e0e0e0" stroke-width="1.5"/><line x1="67" y1="29" x2="67" y2="100" stroke="#e0e0e0" stroke-width="1.5"/><text x="50" y="68" font-family="Arial,sans-serif" font-size="20" font-weight="bold" fill="#1A73E8" text-anchor="middle">28</text><circle cx="27" cy="7" r="5" fill="#fff"/><circle cx="73" cy="7" r="5" fill="#fff"/></svg></div><div class="tool-name">Google Calendar</div><div class="tool-cat">Scheduling · Time</div></div>
+      <div class="tool-card reveal"><div class="tool-logo"><svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><rect width="100" height="100" rx="14" fill="#6264A7"/><circle cx="39" cy="32" r="15" fill="#fff"/><path d="M14 79 C14 61 64 61 64 79" fill="#fff"/><circle cx="72" cy="27" r="11" fill="#B0B1D8"/><path d="M54 76 C56 65 93 65 89 79" fill="#B0B1D8"/></svg></div><div class="tool-name">MS Teams</div><div class="tool-cat">Meetings · Chat</div></div>
+      <div class="tool-card reveal"><div class="tool-logo"><svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><circle cx="50" cy="50" r="47" fill="#2D8CFF"/><rect x="11" y="29" width="50" height="43" rx="9" fill="#fff"/><polygon points="65,32 93,18 93,82 65,68" fill="#fff"/></svg></div><div class="tool-name">Zoom</div><div class="tool-cat">Video meetings</div></div>
+      <div class="tool-card reveal"><div class="tool-logo"><svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><circle cx="50" cy="50" r="47" fill="#8B3DFF"/><path d="M68 36 A23 23 0 1 0 68 64" stroke="#fff" stroke-width="10" fill="none" stroke-linecap="round"/></svg></div><div class="tool-name">Canva</div><div class="tool-cat">Design · Presentations</div></div>
     </div>
   </div></section>
 
@@ -1203,6 +1220,7 @@ footer p{font-size:0.71rem;color:var(--text3)}
     <h1>30 minutes to figure out<br>if this is <em>the right fit.</em></h1>
     <p class="sub">Project or retainer — the call determines which engagement fits, what the scope looks like, and what it would cost. No pitch. A straight conversation about what needs fixing.</p>
   </div></div>
+
   <section style="background:var(--cream)"><div class="wrap"><div class="contact-grid">
     <div>
       <a href="mailto:monicah.mburu@zohomail.com" class="c-method reveal"><div class="c-ico">📧</div><div><div class="c-lbl">Email</div><div class="c-val">monicah.mburu@zohomail.com</div></div></a>
@@ -1214,7 +1232,7 @@ footer p{font-size:0.71rem;color:var(--text3)}
           <div>⏱ Replies within 24 hours</div>
           <div>🌍 Remote — works with clients worldwide</div>
           <div>📅 Discovery call is always free</div>
-          <div>💰 $10/hour · founder launch rate</div>
+          <div>💰 $15/hour · founder rate</div>
           <div>🔒 2 spots currently available</div>
         </div>
       </div>
@@ -1231,10 +1249,95 @@ footer p{font-size:0.71rem;color:var(--text3)}
       </div>
     </div>
   </div></div></section>
+
+  <!-- ═══ NEW: INTAKE FORM ═══ -->
+  <div class="intake-section"><div class="wrap">
+    <div style="text-align:center;max-width:580px;margin:0 auto" class="reveal">
+      <span class="eyebrow">Prefer to write first?</span>
+      <h2>Tell me about your situation.</h2>
+      <p style="font-size:0.88rem;color:var(--text2);font-weight:300;line-height:1.8;margin-top:0.6rem">Fill this in before we speak and I'll come to the call already familiar with your setup. Or use it instead of a call if you'd rather start in writing.</p>
+    </div>
+    <div class="intake-card reveal">
+      <h3>Intake form</h3>
+      <p>Takes about 3 minutes. I read every submission and reply within 24 hours.</p>
+      <div id="intakeForm">
+        <div class="form-grid" style="margin-bottom:1rem">
+          <div class="form-group">
+            <label class="form-label">Your name</label>
+            <input type="text" class="form-input" id="intakeName" placeholder="First name is fine">
+          </div>
+          <div class="form-group">
+            <label class="form-label">Email address</label>
+            <input type="email" class="form-input" id="intakeEmail" placeholder="you@yourbusiness.com">
+          </div>
+        </div>
+        <div class="form-grid" style="margin-bottom:1rem">
+          <div class="form-group">
+            <label class="form-label">Business type</label>
+            <select class="form-select" id="intakeBiz">
+              <option value="" disabled selected>Select one</option>
+              <option>Solo founder / consultant</option>
+              <option>Agency (under 20 people)</option>
+              <option>Startup (early stage)</option>
+              <option>Growing SME</option>
+              <option>Other</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Main area of need</label>
+            <select class="form-select" id="intakeNeed">
+              <option value="" disabled selected>Select one</option>
+              <option>Bookkeeping and financial records</option>
+              <option>Financial reporting and dashboards</option>
+              <option>Operations and workflow systems</option>
+              <option>Executive and admin support</option>
+              <option>All of the above</option>
+              <option>Not sure yet</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="form-label">What's the biggest problem right now?</label>
+          <textarea class="form-textarea" id="intakeProblem" placeholder="Describe the friction. What's taking too long, falling through the cracks, or just not getting done? Be specific if you can."></textarea>
+        </div>
+        <div class="form-grid" style="margin-bottom:1rem">
+          <div class="form-group">
+            <label class="form-label">Engagement preference</label>
+            <select class="form-select" id="intakeType">
+              <option value="" disabled selected>Select one</option>
+              <option>One-off project</option>
+              <option>Monthly retainer</option>
+              <option>Both / not sure</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label class="form-label">How did you find me?</label>
+            <select class="form-select" id="intakeSource">
+              <option value="" disabled selected>Select one</option>
+              <option>LinkedIn</option>
+              <option>Referral</option>
+              <option>Virtually Versed</option>
+              <option>Google search</option>
+              <option>Other</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Anything else you want me to know?</label>
+          <textarea class="form-textarea" id="intakeOther" placeholder="Timeline, tools you use, questions you have — anything useful." style="min-height:80px"></textarea>
+        </div>
+        <div class="form-submit-row">
+          <button class="btn" onclick="submitIntake()">Send intake form →</button>
+          <span class="form-note">Replied to within 24 hours. Your information is kept confidential.</span>
+        </div>
+      </div>
+      <div class="form-success" id="intakeSuccess">Got it — I'll review your situation and reply within 24 hours. If you'd also like to book a call, you can do that above.</div>
+    </div>
+  </div></div>
 </div>
 
 <footer>
-  <p>© 2026 Monicah Mburu · Finance & Operations Support · $10/hr</p>
+  <p>© 2026 Monicah Mburu · Finance & Operations Support · $15/hr</p>
   <div class="footer-links">
     <a href="https://www.linkedin.com/in/monicahmburu/" target="_blank">LinkedIn</a>
     <a href="https://wa.me/254798498795" target="_blank">WhatsApp</a>
@@ -1274,6 +1377,44 @@ if(ham&&mob){
   ham.addEventListener('click',function(e){e.stopPropagation();mob.classList.toggle('open');});
   document.addEventListener('click',function(e){if(mob.classList.contains('open')&&!mob.contains(e.target)&&!ham.contains(e.target)){closeMob();}});
   document.addEventListener('touchstart',function(e){if(mob.classList.contains('open')&&!mob.contains(e.target)&&!ham.contains(e.target)){closeMob();}},{passive:true});
+}
+
+// FAQ accordion
+function toggleFaq(btn){
+  var item=btn.closest('.faq-item');
+  var isOpen=item.classList.contains('open');
+  document.querySelectorAll('.faq-item.open').forEach(function(i){i.classList.remove('open');});
+  if(!isOpen)item.classList.add('open');
+}
+
+// Lead magnet form
+function submitLead(){
+  var email=document.getElementById('leadEmail').value.trim();
+  if(!email||!email.includes('@')){
+    document.getElementById('leadEmail').style.borderColor='rgba(180,60,50,0.5)';
+    return;
+  }
+  // Connect to your email service here (Mailchimp, ConvertKit, etc.)
+  // For now, show the success state
+  document.getElementById('leadFormWrap').style.display='none';
+  document.getElementById('leadSuccess').style.display='block';
+}
+
+// Intake form
+function submitIntake(){
+  var name=document.getElementById('intakeName').value.trim();
+  var email=document.getElementById('intakeEmail').value.trim();
+  var problem=document.getElementById('intakeProblem').value.trim();
+  if(!name||!email||!problem){
+    if(!name)document.getElementById('intakeName').style.borderColor='rgba(180,60,50,0.5)';
+    if(!email)document.getElementById('intakeEmail').style.borderColor='rgba(180,60,50,0.5)';
+    if(!problem)document.getElementById('intakeProblem').style.borderColor='rgba(180,60,50,0.5)';
+    return;
+  }
+  // Connect to your backend / Zapier / Formspree here
+  // For now, show the success state
+  document.getElementById('intakeForm').style.display='none';
+  document.getElementById('intakeSuccess').style.display='block';
 }
 </script>
 </body>

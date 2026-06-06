@@ -73,7 +73,7 @@ h3{font-family:var(--serif);font-size:1.18rem;font-weight:500;color:var(--dark)}
 .btn-ghost-inv{border:1px solid rgba(255,255,255,0.16);color:rgba(255,255,255,0.6);font-size:0.88rem;padding:1rem 2.2rem;border-radius:100px;text-decoration:none;display:inline-flex;align-items:center;justify-content:center;transition:all 0.2s;min-height:52px;letter-spacing:0.01em}
 .btn-ghost-inv:hover{border-color:rgba(255,255,255,0.38);color:#fff}
 
-/* HERO — Site 1 layout: left text + right video, stats strip */
+/* HERO */
 .hero{padding:5rem 2.5rem 4rem;max-width:1080px;margin:0 auto}
 .hero-badge{display:inline-flex;align-items:center;gap:0.48rem;background:var(--ink-pale);border:1px solid var(--ink-border);color:var(--ink);font-size:0.7rem;font-weight:500;padding:0.32rem 0.88rem;border-radius:100px;letter-spacing:0.07em;text-transform:uppercase;margin-bottom:1.75rem;animation:fadeUp 0.5s ease both}
 .hero-badge-dot{width:6px;height:6px;border-radius:50%;background:var(--ink);animation:blink 2s infinite}
@@ -528,7 +528,6 @@ footer p{font-size:0.7rem;color:var(--text3)}
 <!-- ═══════════ HOME ═══════════ -->
 <div id="page-home" class="page active">
 
-<!-- HERO: Site 1 layout — left text, right video, stats below video -->
 <div class="hero">
   <div style="display:flex;justify-content:left;margin-bottom:1.75rem">
     <div class="hero-badge"><span class="hero-badge-dot"></span>Now taking new clients &middot; remote &middot; worldwide</div>
@@ -555,9 +554,18 @@ footer p{font-size:0.7rem;color:var(--text3)}
         </div>
       </div>
       <div class="hero-stats">
-        <div><div class="pnum">10+</div><div class="plbl">Fundraising processes supported<span class="plbl-attr">investor ready documents created</span></div></div>
-        <div><div class="pnum">10 hrs</div><div class="plbl">Given back every week<span class="plbl-attr">reporting automated</span></div></div>
-        <div><div class="pnum">1,000+</div><div class="plbl">Client records structured<span class="plbl-attr">filing system built</span></div></div>
+        <div class="stat-box">
+          <div class="stat-num">10+</div>
+          <div class="stat-lbl">Fundraising processes supported — investor ready documents created</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-num">10 hrs</div>
+          <div class="stat-lbl">Given back every week — reporting automated</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-num">1,000+</div>
+          <div class="stat-lbl">Client records structured — filing system built</div>
+        </div>
       </div>
     </div>
   </div>
@@ -592,13 +600,13 @@ footer p{font-size:0.7rem;color:var(--text3)}
   <div class="svc-cards">
     <div class="svc-row reveal">
       <div><div class="svc-num">01</div><div class="svc-row-label">Bookkeeping</div><h3>Books that are always up to date</h3></div>
-      <div><p class="svc-row-desc">Most founders know their books are behind. It's not that they don't care, it's that keeping records current takes consistent time and consistent time is the one thing they don't have. I keep the books current so you always know where things stand, without having to prepare for the conversation first.</p><div class="svc-row-why"><strong>Why this matters</strong>Clean books aren't a formality for accountants. They're how you know your cash position, make decisions based on real numbers, and stop dreading the question "how are we doing?"</div><ul class="svc-items" style="margin-top:1.05rem"><li>Monthly transaction categorisation and reconciliation</li><li>Accounts payable and receivable tracking</li><li>Expense organisation </li><li>QuickBooks, Xero, Fresh Books setup and maintenance</li></ul></div>
+      <div><p class="svc-row-desc">Most founders know their books are behind. It's not that they don't care, it's that keeping records current takes consistent time and consistent time is the one thing they don't have. I keep the books current so you always know where things stand, without having to prepare for the conversation first.</p><div class="svc-row-why"><strong>Why this matters</strong>Clean books aren't a formality for accountants. They're how you know your cash position, make decisions based on real numbers, and stop dreading the question "how are we doing?"</div><ul class="svc-items" style="margin-top:1.05rem"><li>Monthly transaction categorisation and reconciliation</li><li>Accounts payable and receivable tracking</li><li>Expense organisation</li><li>QuickBooks, Xero, Fresh Books setup and maintenance</li></ul></div>
       <div class="svc-right"><div class="svc-right-lbl">From the work</div><div class="svc-outcome"><div class="svc-outcome-num">60%</div><div class="svc-outcome-text">fewer payment discrepancies after Account Payables and Receivables controls were rebuilt from scratch</div></div><div class="svc-outcome" style="margin-top:0.68rem"><div class="svc-outcome-num">100%</div><div class="svc-outcome-text">tax compliance across all filing periods with no amendments</div></div></div>
     </div>
     <div class="svc-row reveal">
       <div><div class="svc-num">02</div><div class="svc-row-label">Financial Reporting</div><h3>Numbers you can actually do something with</h3></div>
       <div><p class="svc-row-desc">An income statement that arrives after you've already made the decisions it would have informed isn't useful. I build reporting that gives you the information you need when you need it, without hours of manual work to get there.</p><div class="svc-row-why"><strong>Why this actually matters</strong>Financial information you can't act on is just noise. Good reporting tells you whether cash is healthy, which revenue streams are pulling their weight, and what the numbers say you should do next.</div><ul class="svc-items" style="margin-top:1.05rem"><li>Income statement, cash flow statement, balance sheet</li><li>Dashboards connected to live data</li><li>Budget tracking and variance analysis</li><li>Investor ready financial models and reports</li></ul></div>
-      <div class="svc-right"><div class="svc-right-lbl">From the work</div><div class="svc-outcome"><div class="svc-outcome-num">10+</div><div class="svc-outcome-text">Fundraising processes supported by creating ivestor ready documents.</div></div><div class="svc-outcome" style="margin-top:0.68rem"><div class="svc-outcome-num">30%</div><div class="svc-outcome-text">improvement in forecast accuracy after models were restructured and standardised</div></div></div>
+      <div class="svc-right"><div class="svc-right-lbl">From the work</div><div class="svc-outcome"><div class="svc-outcome-num">10+</div><div class="svc-outcome-text">Fundraising processes supported by creating investor ready documents.</div></div><div class="svc-outcome" style="margin-top:0.68rem"><div class="svc-outcome-num">30%</div><div class="svc-outcome-text">improvement in forecast accuracy after models were restructured and standardised</div></div></div>
     </div>
     <div class="svc-row reveal">
       <div><div class="svc-num">03</div><div class="svc-row-label">Executive &amp; Operational Support</div><h3>Work that moves without you watching it</h3></div>
@@ -617,12 +625,29 @@ footer p{font-size:0.7rem;color:var(--text3)}
   </div>
   <div class="how-grid">
     <div class="how-steps">
-      <div class="how-step reveal"><div class="how-step-num">1</div><div class="how-step-body"><h4>We talk for 30 minutes</h4><p>We dicuss tell me where the friction is from lagging finances to manual reporting to broken processes. I figure out the root cause and whether I'm the right person to fix it.</p></div></div>
+      <div class="how-step reveal"><div class="how-step-num">1</div><div class="how-step-body"><h4>We talk for 30 minutes</h4><p>We discuss where the friction is — from lagging finances to manual reporting to broken processes. I figure out the root cause and whether I'm the right person to fix it.</p></div></div>
       <div class="how-step reveal"><div class="how-step-num">2</div><div class="how-step-body"><h4>Scope agreed before work begins</h4><p>For projects, deliverables and estimated hours are confirmed upfront. For retainers, monthly scope is agreed at onboarding. No open ended commitments on either side.</p></div></div>
       <div class="how-step reveal"><div class="how-step-num">3</div><div class="how-step-body"><h4>Work starts within 48 hours</h4><p>You give me access to the books, tools, and relevant workflows. I audit the current state, identify the gaps, and start building against the agreed scope.</p></div></div>
       <div class="how-step reveal"><div class="how-step-num">4</div><div class="how-step-body"><h4>Systems are handed over or kept running</h4><p>Project engagements close with full documentation so everything holds without me. Retainers keep the systems accurate and current each month going forward.</p></div></div>
     </div>
-    class="proof-stat"><div class="proof-stat-num">1,000+</div><div class="proof-stat-label">Records organised</div><div class="proof-stat-desc">Client file system built from nothing. Accessible to any team member without asking where anything is.</div></div>
+    <div class="how-right">
+      <div class="how-proof-card">
+        <span class="how-proof-card-lbl">From the work — real outcomes</span>
+        <div class="proof-stat">
+          <div class="proof-stat-num">$500K+</div>
+          <div class="proof-stat-label">Investor interest generated</div>
+          <div class="proof-stat-desc">10 businesses taken through a full financial restructure and investor readiness process at Pitch Investors.</div>
+        </div>
+        <div class="proof-stat">
+          <div class="proof-stat-num">20 hrs</div>
+          <div class="proof-stat-label">Freed per week</div>
+          <div class="proof-stat-desc">Manual weekly reporting process at Aspire Lending redesigned and automated. Identical output, time cost removed.</div>
+        </div>
+        <div class="proof-stat">
+          <div class="proof-stat-num">1,000+</div>
+          <div class="proof-stat-label">Records organised</div>
+          <div class="proof-stat-desc">Client file system built from nothing. Accessible to any team member without asking where anything is.</div>
+        </div>
       </div>
       <div class="how-work-cta">
         <p>Five documented case studies with deliverables, process notes, and real outcomes you can look through.</p>
@@ -683,7 +708,7 @@ footer p{font-size:0.7rem;color:var(--text3)}
   </div>
   <div class="faq-list reveal">
     <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)"><span class="faq-q-text">How is this different from hiring a regular virtual assistant?</span><span class="faq-icon"><svg viewBox="0 0 10 6" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><polyline points="1,1 5,5 9,1"/></svg></span></div><div class="faq-a"><div class="faq-a-inner">A VA does what you tell them to, when you tell them. I build systems, anticipate needs, and manage operations proactively. My financial analysis background means I understand the business impact of each decision. The difference is a task taker versus a partner who sees the full picture.</div></div></div>
-    <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)"><span class="faq-q-text">Do you have remote work experience?</span><span class="faq-icon"><svg viewBox="0 0 10 6" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><polyline points="1,1 5,5 9,1"/></svg></span></div><div class="faq-a"><div class="faq-a-inner">Yes. At Pitch Investors I supported a CEO for seven months handling coordination, investor communication, and financial deliverables remotely, with the CEO based in the US. I operate bothn synchronously and asynchronously by default and communicate proactively rather than waiting to be checked on.</div></div></div>
+    <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)"><span class="faq-q-text">Do you have remote work experience?</span><span class="faq-icon"><svg viewBox="0 0 10 6" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><polyline points="1,1 5,5 9,1"/></svg></span></div><div class="faq-a"><div class="faq-a-inner">Yes. At Pitch Investors I supported a CEO for seven months handling coordination, investor communication, and financial deliverables remotely, with the CEO based in the US. I operate both synchronously and asynchronously by default and communicate proactively rather than waiting to be checked on.</div></div></div>
     <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)"><span class="faq-q-text">What does a typical engagement look like?</span><span class="faq-icon"><svg viewBox="0 0 10 6" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><polyline points="1,1 5,5 9,1"/></svg></span></div><div class="faq-a"><div class="faq-a-inner">We start with a free 30 minute discovery call. If there's a fit, I recommend either a project engagement or a retainer depending on your situation. The first week is a deep dive audit of your books, workflows, and systems. By week two, you're seeing results. Project engagements close with full documentation. Retainers continue monthly.</div></div></div>
     <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)"><span class="faq-q-text">Do you work with clients outside Kenya?</span><span class="faq-icon"><svg viewBox="0 0 10 6" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><polyline points="1,1 5,5 9,1"/></svg></span></div><div class="faq-a"><div class="faq-a-inner">Yes. I work remotely with clients worldwide and operate both synchronously and asynchronously across time zones. Most communication happens via Slack or email, with scheduled weekly sync calls. The tools I use work regardless of where you're based.</div></div></div>
     <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)"><span class="faq-q-text">What tools do you work with?</span><span class="faq-icon"><svg viewBox="0 0 10 6" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><polyline points="1,1 5,5 9,1"/></svg></span></div><div class="faq-a"><div class="faq-a-inner">QuickBooks, Xero, Fresh Books, Excel, Power BI, Google Workspace, Notion, Zapier, Airtable, ClickUp, Trello, Asana, Slack, Zoom, and more. If you use something not on this list, I pick it up quickly. The goal is to reduce friction, not add it.</div></div></div>
@@ -752,7 +777,7 @@ footer p{font-size:0.7rem;color:var(--text3)}
     <div class="about-text">
       <span class="eyebrow">About me</span>
       <h1>Numbers person.<br>Operations brain.<br><em>Remote ready.</em></h1>
-      <p style="margin-top:1.3rem">Businesses run smoother when operations, executive support, and finance are aligned.Hello I am Monicah and I work across these areas to reduce delays, close gaps in communication, and keep execution consistent.</p>
+      <p style="margin-top:1.3rem">Businesses run smoother when operations, executive support, and finance are aligned. Hello I am Monicah and I work across these areas to reduce delays, close gaps in communication, and keep execution consistent.</p>
       <p>I started in finance because I wanted to understand what numbers actually reveal. That took me into bookkeeping, financial analysis, and eventually operations where I realised the two are harder to separate than most people think. A business with clean books but broken workflows is still broken.</p>
       <p>I'm currently completing my MSc in Financial Engineering at WorldQuant University and hold certifications in data analytics, bookkeeping, and corporate finance. The academic side adds to the practical work so I don't just clean numbers, I understand what they mean and the impact they have on your business.</p>
       <div style="display:flex;gap:0.75rem;margin-top:2rem;flex-wrap:wrap">
@@ -761,12 +786,10 @@ footer p{font-size:0.7rem;color:var(--text3)}
       </div>
     </div>
     <div>
-      <!-- Photo card -->
       <figure class="photo-card">
         <img src="https://lh3.googleusercontent.com/d/10KcYq3HJd_FPOkHjxR6sH8PXcxGq1NoY" alt="Monicah Mburu">
         <figcaption class="photo-meta"><p>Finance &amp; Operations Support · Remote-ready</p></figcaption>
       </figure>
-      <!-- VV callout sits below the photo on the about page -->
       <div class="vv-callout">
         <div class="vv-callout-icon">&#x1F4DA;</div>
         <div class="vv-callout-body">
@@ -798,7 +821,6 @@ footer p{font-size:0.7rem;color:var(--text3)}
   <div style="margin-top:3.75rem">
     <span class="eyebrow reveal" style="margin-bottom:1.3rem">A few photos</span>
     <div class="photo-row reveal">
-      <!-- Photo 1: using the headshot that loads reliably -->
       <div class="photo-sm"><img src="https://lh3.googleusercontent.com/d/1S2aDkK-6E0L6aCvYkcFJnLYoB-iw9X8m" alt="Photo 1"></div>
       <div class="photo-sm"><img src="https://lh3.googleusercontent.com/d/16RigImOarQ--NpYr2YvF4s4s5T1_9sRh" alt="Photo 2"></div>
       <div class="photo-sm"><img src="https://lh3.googleusercontent.com/d/12E6mwV2VSvBw0Fedx_rOnbsNNv1ob_eD" alt="Photo 3"></div>
@@ -806,7 +828,6 @@ footer p{font-size:0.7rem;color:var(--text3)}
   </div>
 </div></div>
 
-<!-- EXPERIENCE TIMELINE — real roles only, VV removed from here -->
 <div class="timeline-section"><div class="wrap">
   <span class="eyebrow reveal">Experience</span>
   <h2 class="reveal">Where this background came from</h2>
@@ -819,7 +840,7 @@ footer p{font-size:0.7rem;color:var(--text3)}
         <div class="tl-role">Admin &amp; Accounts Assistant</div>
         <div class="tl-desc"><ul>
           <li><strong>Front desk and client reception:</strong> First point of contact for every client walking in. I welcome them, handle incoming calls, and direct queries to the right person.</li>
-          <li><strong>Logbook management:</strong> Received and released logbooks.These are the collateral clients pledge when taking loans. Every movement was tracked and documented.</li>
+          <li><strong>Logbook management:</strong> Received and released logbooks. These are the collateral clients pledge when taking loans. Every movement was tracked and documented.</li>
           <li><strong>Client file management:</strong> Scanned, uploaded, and stored all client files. More than 1,000 records reorganised so anyone on the team can retrieve a file in seconds.</li>
           <li><strong>Offer letter drafting:</strong> Prepared the offer letters clients sign before a loan is issued covering terms, amounts, and conditions. Had to get these right every time.</li>
           <li><strong>Company mail and correspondence:</strong> Checked the company inbox daily, forwarded emails to the right parties, and handled the ones that needed a direct response.</li>
@@ -842,7 +863,7 @@ footer p{font-size:0.7rem;color:var(--text3)}
           <li><strong>Financial projections and business valuation:</strong> Built financial projections from each client's previous financial statements. Used DCF and financial statement analysis to produce valuations for 10+ companies.</li>
           <li><strong>Business plans and pitch decks:</strong> Wrote the business plans and created pitch decks for each company we were taking to investors.</li>
           <li><strong>Investor outreach and marketing:</strong> Once the documents were ready, we identified investor leads and marketed the businesses to them writing targeted outreach emails and following up.</li>
-          <li><strong>A notable win:</strong> For Mobile Mart Solutions, a venture capital firm called Persistent expressed interest in investing a significant amount. Athough the client pulled out over equity concerns, I had prepared all the documents that got them to that conversation.</li>
+          <li><strong>A notable win:</strong> For Mobile Mart Solutions, a venture capital firm called Persistent expressed interest in investing a significant amount. Although the client pulled out over equity concerns, I had prepared all the documents that got them to that conversation.</li>
           <li><strong>Bookkeeping system setup:</strong> Set up Zoho Books from scratch built the chart of accounts, sub-accounts, invoicing, expense recording, payroll, and reconciliations. Was the first person to do any of this at the firm.</li>
           <li><strong>Collections:</strong> Called clients to follow up on outstanding balances when needed.</li>
         </ul></div>
@@ -907,8 +928,8 @@ footer p{font-size:0.7rem;color:var(--text3)}
   <h2 class="reveal">Books that are <em>always current.</em></h2>
   <p class="sub reveal" style="max-width:580px">The point isn't tidy records for the sake of it. It's knowing where you stand financially without having to dig for the answer first.</p>
   <div class="svc-cards-grid">
-    <div class="svc-card reveal"><div class="svc-ico">&#x1F4D2;</div><h3>Monthly bookkeeping</h3><span class="svc-tag">Core financial maintenance</span><p>Transactions categorised, accounts reconciled, records kept current each month. The foundation everything else depends on.</p><ul class="svc-sub-list"><li>Transaction categorisation </li><li>Monthly bank and credit card reconciliation</li><li>Accounts payable and receivable tracking</li><li>Payroll support and expense organisation</li></ul></div>
-    <div class="svc-card reveal"><div class="svc-ico">&#x1F4B3;</div><h3>Account Payables are receivables controls</h3><span class="svc-tag">Cash flow visibility</span><p>Outstanding invoices tracked. Payment workflows structured. Late payments reduced. The money you're owed, collected consistently.</p><ul class="svc-sub-list"><li>Invoice tracking and follow up workflows</li><li>Vendor payment scheduling</li><li>Aging report analysis and cash flow monitoring</li><li>Petty cash reconciliation and controls</li></ul></div>
+    <div class="svc-card reveal"><div class="svc-ico">&#x1F4D2;</div><h3>Monthly bookkeeping</h3><span class="svc-tag">Core financial maintenance</span><p>Transactions categorised, accounts reconciled, records kept current each month. The foundation everything else depends on.</p><ul class="svc-sub-list"><li>Transaction categorisation</li><li>Monthly bank and credit card reconciliation</li><li>Accounts payable and receivable tracking</li><li>Payroll support and expense organisation</li></ul></div>
+    <div class="svc-card reveal"><div class="svc-ico">&#x1F4B3;</div><h3>Account Payables and Receivables controls</h3><span class="svc-tag">Cash flow visibility</span><p>Outstanding invoices tracked. Payment workflows structured. Late payments reduced. The money you're owed, collected consistently.</p><ul class="svc-sub-list"><li>Invoice tracking and follow up workflows</li><li>Vendor payment scheduling</li><li>Aging report analysis and cash flow monitoring</li><li>Petty cash reconciliation and controls</li></ul></div>
     <div class="svc-card reveal"><div class="svc-ico">&#x1F5C2;</div><h3>Bookkeeping setup</h3><span class="svc-tag">Start clean or clean up</span><p>For businesses starting from scratch, or with books that have fallen behind full cycle bookkeeping setup so records are reliable going forward.</p><ul class="svc-sub-list"><li>Chart of accounts setup and organisation</li><li>Historical cleanup and catch up bookkeeping</li><li>QuickBooks, Xero, Fresh Books, Sage</li><li>Handover documentation and SOP</li></ul></div>
   </div>
 </div></section>

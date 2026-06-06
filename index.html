@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Monicah Mburu — Operations & Executive Support</title>
-<meta name="description" content="Operations and Executive Support professional with bookkeeping and financial operations experience. Available for remote roles worldwide.">
+<title>Monicah Mburu — Finance & Operations Support</title>
+<meta name="description" content="Financial clarity and operational support for founders. Bookkeeping, financial reporting, and execution support. Remote-ready worldwide.">
 <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet">
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
@@ -73,7 +73,7 @@ h3{font-family:var(--serif);font-size:1.18rem;font-weight:500;color:var(--dark)}
 .btn-ghost-inv{border:1px solid rgba(255,255,255,0.16);color:rgba(255,255,255,0.6);font-size:0.88rem;padding:1rem 2.2rem;border-radius:100px;text-decoration:none;display:inline-flex;align-items:center;justify-content:center;transition:all 0.2s;min-height:52px;letter-spacing:0.01em}
 .btn-ghost-inv:hover{border-color:rgba(255,255,255,0.38);color:#fff}
 
-/* HERO */
+/* HERO — Site 1 layout: left text + right video, stats strip */
 .hero{padding:5rem 2.5rem 4rem;max-width:1080px;margin:0 auto}
 .hero-badge{display:inline-flex;align-items:center;gap:0.48rem;background:var(--ink-pale);border:1px solid var(--ink-border);color:var(--ink);font-size:0.7rem;font-weight:500;padding:0.32rem 0.88rem;border-radius:100px;letter-spacing:0.07em;text-transform:uppercase;margin-bottom:1.75rem;animation:fadeUp 0.5s ease both}
 .hero-badge-dot{width:6px;height:6px;border-radius:50%;background:var(--ink);animation:blink 2s infinite}
@@ -96,53 +96,273 @@ h3{font-family:var(--serif);font-size:1.18rem;font-weight:500;color:var(--dark)}
 .stat-num{font-family:var(--serif);font-size:1.75rem;font-weight:600;color:var(--ink2);line-height:1;margin-bottom:0.2rem}
 .stat-lbl{font-size:0.67rem;color:rgba(255,255,255,0.28);line-height:1.5;font-weight:300}
 
-/* ROLE STRIP */
-.role-strip{background:var(--dark);padding:1.1rem 0}
-.role-strip-inner{display:flex;align-items:center;justify-content:center;gap:1.5rem;flex-wrap:wrap;max-width:1080px;margin:0 auto;padding:0 2.5rem}
-.role-pill{font-size:0.72rem;font-weight:500;color:rgba(255,255,255,0.55);background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.1);padding:0.32rem 0.9rem;border-radius:100px;white-space:nowrap}
-.role-sep{color:rgba(255,255,255,0.15);font-size:0.6rem}
+/* SIGNAL STRIP */
+.signal-bar{background:var(--dark);padding:0.8rem 0}
+.signal-inner{display:flex;align-items:center;justify-content:center;gap:2.5rem;flex-wrap:wrap;max-width:1080px;margin:0 auto;padding:0 2.5rem}
+.sig-item{display:flex;align-items:center;gap:0.5rem;font-size:0.71rem;color:rgba(255,255,255,0.32)}
+.sig-dot{width:3px;height:3px;border-radius:50%;background:var(--ink2);opacity:0.6}
 
-/* WHAT I DO */
-.what{background:var(--warm);padding:5.5rem 0}
-.what-grid{display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:start;margin-top:3rem}
-.what-left p{font-size:0.92rem;color:var(--text2);line-height:1.9;font-weight:300;margin-bottom:1rem}
-.what-left p strong{color:var(--text);font-weight:500}
-.cap-list{display:flex;flex-direction:column;gap:0}
-.cap-item{padding:1.4rem 0;border-bottom:1px solid var(--border);display:flex;gap:1.5rem;align-items:flex-start}
-.cap-item:last-child{border-bottom:none}
-.cap-ico{width:36px;height:36px;border-radius:9px;background:var(--ink-pale);border:1px solid var(--ink-border);display:flex;align-items:center;justify-content:center;font-size:0.95rem;flex-shrink:0;margin-top:0.1rem}
-.cap-body h4{font-size:0.88rem;font-weight:500;color:var(--dark);margin-bottom:0.28rem}
-.cap-body p{font-size:0.78rem;color:var(--text2);line-height:1.72;font-weight:300;margin:0}
+/* REALITY SECTION */
+.reality-section{background:var(--dark);padding:6.5rem 0}
+.reality-section .eyebrow{color:rgba(255,255,255,0.25);text-align:center;display:block}
+.reality-section h2{color:#fff;text-align:center;max-width:600px;margin:0 auto}
+.reality-section h2 em{color:var(--ink2)}
+.reality-intro{color:rgba(255,255,255,0.35);font-size:0.9rem;font-weight:300;max-width:500px;margin:0.9rem auto 3.25rem;line-height:1.9;text-align:center}
+.reality-grid{display:grid;grid-template-columns:1fr 1fr;gap:2px;background:rgba(255,255,255,0.04);border-radius:var(--r);overflow:hidden}
+.reality-item{background:var(--dark2);padding:2.4rem;transition:background 0.2s;position:relative}
+.reality-item:hover{background:rgba(255,255,255,0.025)}
+.reality-item::before{content:"";position:absolute;top:0;left:2.4rem;width:28px;height:2px;background:var(--ink);opacity:0.65}
+.reality-title{font-size:0.88rem;font-weight:500;color:rgba(255,255,255,0.82);margin-bottom:0.6rem;font-family:var(--sans);line-height:1.45}
+.reality-desc{font-size:0.8rem;color:rgba(255,255,255,0.28);line-height:1.85;font-weight:300}
+.reality-bridge{background:rgba(138,98,64,0.1);border:1px solid rgba(138,98,64,0.22);border-radius:var(--r);padding:1.85rem 2.1rem;margin-top:1.6rem;text-align:center}
+.reality-bridge p{font-size:0.89rem;color:rgba(255,255,255,0.48);line-height:1.8;font-weight:300;max-width:540px;margin:0 auto}
+.reality-bridge strong{color:rgba(255,255,255,0.82);font-weight:500}
 
-/* EXP HIGHLIGHTS (home only) */
-.exp-highlights{background:var(--cream);padding:5rem 0}
-.exp-hl-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--border);border-radius:var(--r);overflow:hidden;margin-top:3rem}
-.exp-hl-item{background:#fff;padding:2rem;transition:background 0.2s}
-.exp-hl-item:hover{background:var(--warm)}
-.exp-hl-co{font-family:var(--serif);font-size:1.05rem;font-weight:600;color:var(--dark);margin-bottom:0.18rem}
-.exp-hl-role{font-size:0.67rem;color:var(--ink);text-transform:uppercase;letter-spacing:0.1em;font-weight:500;margin-bottom:0.88rem}
-.exp-hl-list{list-style:none;display:flex;flex-direction:column;gap:0.42rem}
-.exp-hl-list li{font-size:0.78rem;color:var(--text2);padding-left:0.9rem;position:relative;line-height:1.6;font-weight:300}
-.exp-hl-list li::before{content:'';position:absolute;left:0;top:0.54rem;width:4px;height:4px;border-radius:50%;background:var(--ink);opacity:0.6}
-.exp-hl-meta{font-size:0.66rem;color:var(--text3);margin-top:1rem;padding-top:0.75rem;border-top:1px solid var(--border)}
+/* SERVICES SECTION */
+.svc-section{background:var(--warm);padding:6.5rem 0}
+.svc-intro{max-width:560px}
+.svc-cards{display:flex;flex-direction:column;gap:1px;margin-top:3.25rem;border-radius:var(--r);overflow:hidden;border:1px solid var(--border)}
+.svc-row{background:#fff;padding:2.4rem 2.6rem;display:grid;grid-template-columns:268px 1fr 210px;gap:2.75rem;align-items:start;transition:background 0.2s;position:relative}
+.svc-row::after{content:"";position:absolute;bottom:0;left:0;right:0;height:1px;background:var(--border)}
+.svc-row:last-child::after{display:none}
+.svc-row:hover{background:var(--cream)}
+.svc-num{font-family:var(--serif);font-size:3.8rem;font-weight:600;color:var(--ink-pale);line-height:1;margin-bottom:0.5rem;user-select:none}
+.svc-row-label{font-size:0.63rem;font-weight:700;letter-spacing:0.13em;text-transform:uppercase;color:var(--ink);margin-bottom:0.4rem}
+.svc-row h3{font-size:1.1rem;color:var(--dark);margin-bottom:0}
+.svc-row-desc{font-size:0.83rem;color:var(--text2);line-height:1.82;font-weight:300;margin-bottom:1rem}
+.svc-row-why{background:var(--ink-pale);border:1px solid var(--ink-border);border-radius:var(--r-sm);padding:0.8rem 1.05rem;font-size:0.77rem;color:var(--text2);line-height:1.65}
+.svc-row-why strong{display:block;font-size:0.7rem;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:var(--ink);margin-bottom:0.38rem}
+.svc-items{list-style:none;display:flex;flex-direction:column;gap:0.42rem}
+.svc-items li{font-size:0.77rem;color:var(--text2);line-height:1.55;padding-left:0.9rem;position:relative}
+.svc-items li::before{content:'·';position:absolute;left:0;color:var(--ink);font-size:1rem;line-height:1.25}
+.svc-right{display:flex;flex-direction:column;gap:0.68rem}
+.svc-right-lbl{font-size:0.6rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--text3)}
+.svc-outcome{background:var(--dark);border-radius:var(--r-sm);padding:1.05rem 1.15rem}
+.svc-outcome-num{font-family:var(--serif);font-size:1.55rem;font-weight:600;color:var(--ink2);line-height:1;margin-bottom:0.22rem}
+.svc-outcome-text{font-size:0.72rem;color:rgba(255,255,255,0.32);line-height:1.58;font-weight:300}
 
-/* FULL EXP (about page) */
-.exp{padding:5.5rem 0}
-.exp-list{display:flex;flex-direction:column;gap:0;margin-top:3rem;border-radius:var(--r);overflow:hidden;border:1px solid var(--border)}
-.exp-row{background:#fff;padding:2.2rem 2.4rem;border-bottom:1px solid var(--border);transition:background 0.2s}
-.exp-row:last-child{border-bottom:none}
-.exp-row:hover{background:var(--cream)}
-.exp-header{display:flex;justify-content:space-between;align-items:flex-start;gap:2rem;margin-bottom:1rem;flex-wrap:wrap}
-.exp-co{font-family:var(--serif);font-size:1.15rem;font-weight:600;color:var(--dark);margin-bottom:0.18rem}
-.exp-role{font-size:0.7rem;color:var(--ink);text-transform:uppercase;letter-spacing:0.1em;font-weight:500}
-.exp-meta{text-align:right;flex-shrink:0}
-.exp-date{font-size:0.72rem;color:var(--text3);display:block;margin-bottom:0.14rem}
-.exp-type{font-size:0.66rem;font-weight:500;color:var(--text2);background:var(--warm);border:1px solid var(--border);padding:0.18rem 0.6rem;border-radius:100px}
-.exp-bullets{list-style:none;display:flex;flex-direction:column;gap:0.48rem}
-.exp-bullets li{font-size:0.82rem;color:var(--text2);padding-left:1.1rem;position:relative;line-height:1.7;font-weight:300}
-.exp-bullets li::before{content:'';position:absolute;left:0;top:0.58rem;width:5px;height:5px;border-radius:50%;background:var(--ink)}
-.exp-pills{display:flex;flex-wrap:wrap;gap:0.34rem;margin-top:1rem}
-.pill{background:var(--ink-pale);border:1px solid var(--ink-border);color:var(--ink);font-size:0.66rem;font-weight:500;padding:0.22rem 0.65rem;border-radius:100px}
+/* HOW IT WORKS */
+.how-section{background:var(--cream);padding:6.5rem 0}
+.how-intro{max-width:480px;margin-bottom:3.25rem}
+.how-grid{display:grid;grid-template-columns:1fr 1fr;gap:5.5rem;align-items:start}
+.how-steps{display:flex;flex-direction:column}
+.how-step{display:flex;gap:1.6rem;padding:1.85rem 0;border-bottom:1px solid var(--border)}
+.how-step:last-child{border-bottom:none}
+.how-step-num{font-family:var(--serif);font-size:2.6rem;font-weight:600;color:var(--ink-pale);line-height:1;flex-shrink:0;width:2.6rem;padding-top:0.15rem}
+.how-step-body h4{font-family:var(--serif);font-size:1.07rem;font-weight:500;color:var(--dark);margin-bottom:0.38rem}
+.how-step-body p{font-size:0.81rem;color:var(--text2);line-height:1.8;font-weight:300}
+.how-right{position:sticky;top:82px}
+.how-proof-card{background:var(--dark);border-radius:var(--r);padding:2.1rem;margin-bottom:1.2rem}
+.how-proof-card-lbl{font-size:0.61rem;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.2);margin-bottom:1.35rem;display:block}
+.proof-stat{padding:1.15rem 0;border-bottom:1px solid rgba(255,255,255,0.05)}
+.proof-stat:last-child{border-bottom:none;padding-bottom:0}
+.proof-stat-num{font-family:var(--serif);font-size:2rem;font-weight:600;color:var(--ink2);line-height:1;margin-bottom:0.22rem}
+.proof-stat-label{font-size:0.79rem;font-weight:500;color:rgba(255,255,255,0.55);margin-bottom:0.1rem}
+.proof-stat-desc{font-size:0.72rem;color:rgba(255,255,255,0.24);line-height:1.62;font-weight:300}
+.how-work-cta{background:#fff;border:1px solid var(--border);border-radius:var(--r);padding:1.6rem;text-align:center}
+.how-work-cta p{font-size:0.8rem;color:var(--text2);font-weight:300;margin-bottom:1.05rem;line-height:1.68}
+
+/* ENGAGEMENT TYPES */
+.engage-section{background:var(--warm);padding:6.5rem 0}
+.engage-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.6rem;margin-top:3.25rem}
+.engage-card{border-radius:var(--r);padding:2.4rem;position:relative;overflow:hidden}
+.engage-card.project{background:#fff;border:1px solid var(--border)}
+.engage-card.project::before{content:"";position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--ink),var(--ink2))}
+.engage-card.retainer{background:var(--dark);border:1px solid rgba(255,255,255,0.05)}
+.engage-card.retainer::before{content:"";position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--green),#4a9070)}
+.engage-badge{font-size:0.63rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;padding:0.24rem 0.68rem;border-radius:100px;display:inline-block;margin-bottom:1.05rem}
+.engage-card.project .engage-badge{background:var(--ink-pale);color:var(--ink);border:1px solid var(--ink-border)}
+.engage-card.retainer .engage-badge{background:rgba(42,96,72,0.16);color:#5fb88a;border:1px solid rgba(42,96,72,0.28)}
+.engage-card h3{font-size:1.28rem;margin-bottom:0.62rem}
+.engage-card.project h3{color:var(--dark)}
+.engage-card.retainer h3{color:#fff}
+.engage-card.retainer h3 em{color:var(--ink2);font-style:italic}
+.engage-card>p{font-size:0.82rem;line-height:1.82;font-weight:300;margin-bottom:1.6rem}
+.engage-card.project>p{color:var(--text2)}
+.engage-card.retainer>p{color:rgba(255,255,255,0.3)}
+.engage-list{list-style:none;display:flex;flex-direction:column;gap:0.52rem;margin-bottom:1.85rem}
+.engage-list li{font-size:0.79rem;display:flex;gap:0.68rem;align-items:flex-start;line-height:1.58}
+.engage-card.project .engage-list li{color:var(--text2)}
+.engage-card.retainer .engage-list li{color:rgba(255,255,255,0.3)}
+.engage-list li span:first-child{flex-shrink:0;color:var(--ink)}
+.engage-card.retainer .engage-list li span:first-child{color:var(--ink2)}
+.engage-price{border-top:1px solid var(--border);padding-top:1.3rem;margin-top:auto}
+.engage-card.retainer .engage-price{border-color:rgba(255,255,255,0.08)}
+.engage-price-num{font-family:var(--serif);font-size:2.3rem;font-weight:600;color:var(--ink);line-height:1}
+.engage-card.retainer .engage-price-num{color:var(--ink2)}
+.engage-price-note{font-size:0.73rem;color:var(--text3);margin-top:0.22rem;line-height:1.52}
+.engage-card.retainer .engage-price-note{color:rgba(255,255,255,0.22)}
+.engage-bridge{background:var(--dark2);border:1px solid rgba(138,98,64,0.22);border-radius:var(--r);padding:1.6rem 2.1rem;margin-top:1.6rem;display:flex;align-items:center;gap:1.6rem}
+.engage-bridge-arrow{font-size:1.28rem;color:var(--ink2);flex-shrink:0}
+.engage-bridge p{font-size:0.83rem;color:rgba(255,255,255,0.36);line-height:1.72;font-weight:300}
+.engage-bridge strong{color:rgba(255,255,255,0.72);font-weight:500}
+
+/* FIT SECTION */
+.fit-section{background:var(--cream);padding:5.5rem 0}
+.fit-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.6rem;margin-top:2.75rem}
+.fit-card{border-radius:var(--r);padding:2.1rem}
+.fit-card.yes{background:#fff;border:1px solid var(--border)}
+.fit-card.no{background:rgba(51,43,34,0.02);border:1px dashed rgba(51,43,34,0.13)}
+.fit-lbl{font-size:0.63rem;font-weight:700;letter-spacing:0.13em;text-transform:uppercase;margin-bottom:1.3rem;display:block}
+.fit-card.yes .fit-lbl{color:var(--green)}
+.fit-card.no .fit-lbl{color:var(--text3)}
+.fit-list{list-style:none;display:flex;flex-direction:column;gap:0.78rem}
+.fit-list li{font-size:0.83rem;line-height:1.58;display:flex;align-items:flex-start;gap:0.68rem}
+.fit-card.yes .fit-list li{color:var(--text)}
+.fit-card.no .fit-list li{color:var(--text2)}
+
+/* TESTIMONIALS */
+.testi-section{background:var(--warm);padding:5.5rem 0}
+.testi-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem;margin-top:3.25rem}
+.testi-card{background:#fff;border:1px solid var(--border);border-radius:var(--r);padding:1.95rem;display:flex;flex-direction:column}
+.stars{color:var(--ink);font-size:0.78rem;letter-spacing:0.1em;margin-bottom:1rem}
+.testi-q{font-family:var(--serif);font-size:1rem;font-weight:400;color:var(--dark);line-height:1.68;font-style:italic;flex:1}
+.testi-div{width:28px;height:1px;background:var(--border);margin:1.15rem 0}
+.testi-name{font-size:0.8rem;font-weight:500;color:var(--text)}
+.testi-co{font-size:0.7rem;color:var(--text3)}
+
+/* FAQ */
+.faq-section{background:var(--cream);padding:5.5rem 0}
+.faq-intro{max-width:520px;margin-bottom:3.25rem}
+.faq-list{display:flex;flex-direction:column;gap:0;border-radius:var(--r);overflow:hidden;border:1px solid var(--border)}
+.faq-item{background:#fff;border-bottom:1px solid var(--border);transition:background 0.2s}
+.faq-item:last-child{border-bottom:none}
+.faq-item.open{background:var(--cream)}
+.faq-q{display:flex;justify-content:space-between;align-items:center;cursor:pointer;padding:1.45rem 1.75rem;gap:1.5rem;user-select:none}
+.faq-q-text{font-family:var(--serif);font-size:1rem;font-weight:500;color:var(--dark);line-height:1.42}
+.faq-icon{width:26px;height:26px;border-radius:50%;background:var(--ink-pale);border:1px solid var(--ink-border);display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:all 0.3s}
+.faq-icon svg{width:10px;height:10px;transition:transform 0.35s;color:var(--ink)}
+.faq-item.open .faq-icon{background:var(--ink);border-color:var(--ink)}
+.faq-item.open .faq-icon svg{transform:rotate(180deg);color:#fff}
+.faq-a{max-height:0;overflow:hidden;transition:max-height 0.4s cubic-bezier(0.4,0,0.2,1),opacity 0.3s ease;opacity:0}
+.faq-item.open .faq-a{max-height:500px;opacity:1}
+.faq-a-inner{padding:0 1.75rem 1.45rem;font-size:0.85rem;color:var(--text2);line-height:1.85;font-weight:300;border-top:1px solid var(--border);padding-top:1rem}
+
+/* LEAD MAGNET */
+.lead-section{background:var(--dark);padding:6.5rem 0}
+.lead-inner{display:grid;grid-template-columns:1fr 1fr;gap:5.5rem;align-items:start}
+.lead-left .eyebrow{color:rgba(255,255,255,0.25)}
+.lead-left h2{color:#fff;margin-bottom:0.8rem}
+.lead-left h2 em{color:var(--ink2)}
+.lead-left>p{font-size:0.88rem;color:rgba(255,255,255,0.38);line-height:1.9;font-weight:300;max-width:440px;margin-bottom:2rem}
+.lead-checks{display:grid;grid-template-columns:1fr 1fr;gap:0.6rem;margin-bottom:2.1rem}
+.lead-check{display:flex;align-items:center;gap:0.52rem;font-size:0.75rem;color:rgba(255,255,255,0.45)}
+.lead-check-dot{width:5px;height:5px;border-radius:50%;background:var(--ink2);flex-shrink:0}
+.lead-note{font-size:0.68rem;color:rgba(255,255,255,0.2);margin-top:0.75rem}
+.lead-right{display:flex;flex-direction:column;gap:0.68rem}
+.lead-checklist-card{background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.07);border-radius:var(--r);padding:1.6rem 1.75rem;overflow:hidden;position:relative}
+.lead-checklist-card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--ink),var(--ink2))}
+.lead-checklist-title{font-size:0.63rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.25);margin-bottom:1.05rem;display:block}
+.lead-cl-item{display:flex;align-items:center;gap:0.85rem;padding:0.72rem 0;border-bottom:1px solid rgba(255,255,255,0.05);font-size:0.8rem;color:rgba(255,255,255,0.45);font-weight:300}
+.lead-cl-item:last-child{border-bottom:none}
+.lead-cl-box{width:14px;height:14px;border-radius:3px;border:1px solid rgba(138,98,64,0.4);flex-shrink:0}
+.lead-stat-cards{display:grid;grid-template-columns:1fr 1fr;gap:0.68rem}
+.lead-stat-card{background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.06);border-radius:var(--r-sm);padding:1.05rem 1.15rem}
+.lead-stat-num{font-family:var(--serif);font-size:1.65rem;font-weight:600;color:var(--ink2);line-height:1;margin-bottom:0.22rem}
+.lead-stat-lbl{font-size:0.68rem;color:rgba(255,255,255,0.28);line-height:1.5;font-weight:300}
+
+/* MAIN CTA */
+.main-cta{background:var(--dark);padding:5.5rem 0}
+.main-cta-inner{max-width:580px;margin:0 auto;text-align:center}
+.main-cta-inner .eyebrow{color:rgba(255,255,255,0.25)}
+.main-cta-inner h2{color:#fff;margin-bottom:0.85rem}
+.main-cta-inner h2 em{color:var(--ink2)}
+.main-cta-inner p{color:rgba(255,255,255,0.36);font-size:0.88rem;font-weight:300;max-width:400px;margin:0 auto 2rem;line-height:1.95}
+.cta-btns{display:flex;gap:0.75rem;justify-content:center;flex-wrap:wrap}
+.cta-creds{display:flex;gap:1.5rem;justify-content:center;flex-wrap:wrap;margin-top:2rem;padding-top:2rem;border-top:1px solid rgba(255,255,255,0.06)}
+.cred{font-size:0.7rem;color:rgba(255,255,255,0.22);display:flex;align-items:center;gap:0.4rem}
+.cred-dot{width:3px;height:3px;border-radius:50%;background:var(--ink);opacity:0.5}
+
+/* SERVICES PAGE */
+.svc-page-hero{padding:5rem 0 4rem;background:var(--warm)}
+.svc-cards-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem;margin-top:2.5rem}
+.svc-card{background:#fff;border:1px solid var(--border);border-radius:var(--r);padding:1.85rem;transition:all 0.25s;position:relative;overflow:hidden}
+.svc-card::after{content:'';position:absolute;bottom:0;left:0;right:0;height:2px;background:var(--ink);transform:scaleX(0);transform-origin:left;transition:transform 0.3s}
+.svc-card:hover{border-color:var(--ink-border);transform:translateY(-4px);box-shadow:0 12px 36px rgba(51,43,34,0.07)}
+.svc-card:hover::after{transform:scaleX(1)}
+.svc-ico{width:44px;height:44px;border-radius:10px;background:var(--ink-pale);border:1px solid var(--ink-border);display:flex;align-items:center;justify-content:center;font-size:1.15rem;margin-bottom:1.15rem}
+.svc-card h3{font-size:1.05rem;margin-bottom:0.35rem}
+.svc-card .svc-tag{font-size:0.68rem;font-weight:500;color:var(--ink);background:var(--ink-pale);padding:0.22rem 0.65rem;border-radius:100px;display:inline-block;margin-bottom:0.75rem}
+.svc-card>p{font-size:0.79rem;color:var(--text2);line-height:1.72;font-weight:300;margin-bottom:0.85rem}
+.svc-sub-list{list-style:none;display:flex;flex-direction:column;gap:0.36rem}
+.svc-sub-list li{font-size:0.73rem;color:var(--text2);padding-left:0.95rem;position:relative;line-height:1.52}
+.svc-sub-list li::before{content:'·';position:absolute;left:0;color:var(--ink);font-size:1rem;line-height:1.25}
+
+/* TOOLS */
+.tools-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:1rem;margin-top:2rem}
+.tool-card{background:#fff;border:1px solid var(--border);border-radius:var(--r);padding:1.75rem 1rem 1.35rem;text-align:center;transition:border-color 0.22s,transform 0.22s,box-shadow 0.22s;display:flex;flex-direction:column;align-items:center}
+.tool-card:hover{border-color:var(--ink-border);transform:translateY(-4px);box-shadow:0 10px 28px rgba(51,43,34,0.09)}
+.tool-logo{width:88px;height:88px;display:flex;align-items:center;justify-content:center;margin-bottom:0.9rem}
+.tool-logo img{width:88px;height:88px;object-fit:contain;display:block}
+.tool-logo svg{width:88px;height:88px;display:block}
+.tool-name{font-size:0.74rem;font-weight:500;color:var(--text);margin-bottom:0.14rem}
+.tool-cat{font-size:0.61rem;color:var(--text3);line-height:1.35}
+
+/* ABOUT PAGE */
+.about-hero{padding:5rem 0 4rem;background:var(--warm)}
+.about-inner{display:grid;grid-template-columns:1fr 340px;gap:5rem;align-items:start;max-width:1080px;margin:0 auto;padding:0 2.5rem}
+.about-text p{font-size:0.92rem;color:var(--text2);font-weight:300;line-height:1.92;margin-bottom:1rem}
+.about-text p strong{color:var(--text);font-weight:500}
+.about-text h1{margin-bottom:1.5rem}
+.photo-card{background:var(--dark2);border-radius:var(--r);overflow:hidden;border:1px solid rgba(255,255,255,0.06);box-shadow:0 20px 50px rgba(26,22,16,0.15)}
+.photo-card img{width:100%;height:auto;display:block;object-fit:cover}
+.photo-meta{padding:1rem 1.3rem;border-top:1px solid rgba(255,255,255,0.06)}
+.photo-meta p{font-size:0.72rem;color:rgba(255,255,255,0.3)}
+.vv-callout{background:var(--dark2);border:1px solid rgba(138,98,64,0.3);border-radius:var(--r);padding:1.5rem 1.75rem;margin-top:1.2rem;display:flex;align-items:flex-start;gap:1.1rem}
+.vv-callout-icon{font-size:1.25rem;flex-shrink:0;margin-top:0.1rem}
+.vv-callout-body strong{display:block;font-size:0.88rem;color:#fff;font-weight:500;margin-bottom:0.35rem}
+.vv-callout-body p{font-size:0.78rem;color:rgba(255,255,255,0.38);line-height:1.72;font-weight:300;margin:0}
+
+/* PERSONALITY */
+.personality-section{padding:5rem 0;background:var(--cream)}
+.personality-grid{display:grid;grid-template-columns:1fr 1fr;gap:4.5rem;margin-top:2.75rem;align-items:start}
+.personality-text p{font-size:0.92rem;color:var(--text2);line-height:1.92;font-weight:300;margin-bottom:1rem}
+.personality-text p strong{color:var(--text);font-weight:500}
+.trait-list{display:flex;flex-direction:column;gap:0.9rem}
+.trait-item{display:flex;gap:1.05rem;align-items:flex-start;background:#fff;border:1px solid var(--border);border-radius:var(--r);padding:1.15rem 1.3rem;transition:border-color 0.2s,transform 0.2s}
+.trait-item:hover{border-color:var(--ink-border);transform:translateX(4px)}
+.trait-num{font-family:var(--serif);font-size:1.55rem;font-weight:600;color:rgba(138,98,64,0.14);line-height:1;flex-shrink:0;width:2.2rem;padding-top:0.1rem}
+.trait-text h4{font-size:0.86rem;font-weight:500;color:var(--text);margin-bottom:0.22rem}
+.trait-text p{font-size:0.77rem;color:var(--text2);line-height:1.68;font-weight:300;margin-bottom:0}
+.photo-row{display:grid;grid-template-columns:repeat(3,1fr);gap:1.05rem;margin-top:1.6rem}
+.photo-sm{border-radius:var(--r);overflow:hidden;aspect-ratio:1;border:1px solid var(--border)}
+.photo-sm img{width:100%;height:100%;object-fit:cover;display:block;transition:transform 0.4s ease}
+.photo-sm:hover img{transform:scale(1.04)}
+
+/* EXPERIENCE / TIMELINE */
+.timeline-section{padding:5.5rem 0;background:var(--warm)}
+.tl-list{position:relative;margin-top:2.75rem;display:flex;flex-direction:column;gap:0}
+.tl-list::before{content:'';position:absolute;left:162px;top:8px;bottom:0;width:1px;background:rgba(51,43,34,0.14)}
+.tl-row{display:grid;grid-template-columns:162px 1fr;gap:0 2.6rem;padding-bottom:3rem;position:relative}
+.tl-row:last-child{padding-bottom:0}
+.tl-row::before{content:'';position:absolute;left:158px;top:7px;width:9px;height:9px;border-radius:50%;background:var(--warm);border:2px solid var(--ink);z-index:1}
+.tl-date{padding-right:1.5rem;text-align:right;padding-top:2px}
+.tl-date strong{display:block;font-size:0.79rem;font-weight:500;color:var(--text);line-height:1.42;margin-bottom:0.16rem}
+.tl-date span{font-size:0.69rem;color:var(--text3)}
+.tl-body{padding-left:1.55rem}
+.tl-co{font-family:var(--serif);font-size:1.12rem;font-weight:600;color:var(--dark);margin-bottom:0.16rem}
+.tl-role{font-size:0.71rem;color:var(--ink);text-transform:uppercase;letter-spacing:0.1em;font-weight:500;margin-bottom:0.75rem}
+.tl-desc ul{margin-top:0.42rem;padding-left:1.3rem;display:flex;flex-direction:column;gap:0.48rem}
+.tl-desc ul li{font-size:0.83rem;color:var(--text2);line-height:1.72;font-weight:300}
+.tl-desc ul li strong{color:var(--text);font-weight:500}
+.tl-pills{display:flex;flex-wrap:wrap;gap:0.36rem;margin-top:0.9rem}
+.pill{background:var(--ink-pale);border:1px solid var(--ink-border);color:var(--ink);font-size:0.67rem;font-weight:500;padding:0.23rem 0.68rem;border-radius:100px}
+
+/* EDU / CERTS */
+.edu-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1rem;margin-top:2rem}
+.edu-card{background:#fff;border:1px solid var(--border);border-radius:var(--r);padding:1.5rem;transition:border-color 0.2s,transform 0.2s}
+.edu-card:hover{border-color:var(--ink-border);transform:translateY(-2px)}
+.edu-yr{font-size:0.63rem;color:var(--text3);text-transform:uppercase;letter-spacing:0.08em;margin-bottom:0.35rem}
+.edu-deg{font-family:var(--serif);font-size:0.98rem;font-weight:600;color:var(--dark);line-height:1.32;margin-bottom:0.2rem}
+.edu-school{font-size:0.74rem;color:var(--ink)}
+.certs-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:0.88rem;margin-top:1.5rem}
+.cert-card{background:#fff;border:1px solid var(--border);border-radius:var(--r);padding:1.15rem 0.85rem;text-align:center;transition:all 0.2s;display:flex;flex-direction:column;align-items:center;gap:0.25rem}
+.cert-card:hover{border-color:var(--ink-border);transform:translateY(-2px)}
+.cert-ico{font-size:1.5rem;margin-bottom:0.25rem;display:block}
+.cert-name{font-size:0.67rem;font-weight:500;color:var(--text);line-height:1.38;margin-bottom:0.14rem}
+.cert-by{font-size:0.58rem;color:var(--text3);margin-bottom:0.35rem}
+.cert-link{font-size:0.62rem;color:var(--ink);text-decoration:none;border-bottom:1px solid var(--ink-border);padding-bottom:1px;transition:border-color 0.2s}
+.cert-link:hover{border-color:var(--ink)}
 
 /* WORK SAMPLES */
 .ws-hero{padding:5rem 0 4rem;background:var(--warm)}
@@ -200,124 +420,6 @@ h3{font-family:var(--serif);font-size:1.18rem;font-weight:500;color:var(--dark)}
 .cert-dark-name{font-size:0.65rem;font-weight:500;color:rgba(255,255,255,0.55);line-height:1.38;margin-bottom:0.2rem}
 .cert-dark-by{font-size:0.56rem;color:rgba(255,255,255,0.22)}
 
-/* SERVICES */
-.svc-page-hero{padding:5rem 0 4rem;background:var(--warm)}
-.svc-cards-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem;margin-top:2.5rem}
-.svc-card{background:#fff;border:1px solid var(--border);border-radius:var(--r);padding:1.85rem;transition:all 0.25s;position:relative;overflow:hidden}
-.svc-card::after{content:'';position:absolute;bottom:0;left:0;right:0;height:2px;background:var(--ink);transform:scaleX(0);transform-origin:left;transition:transform 0.3s}
-.svc-card:hover{border-color:var(--ink-border);transform:translateY(-4px);box-shadow:0 12px 36px rgba(51,43,34,0.07)}
-.svc-card:hover::after{transform:scaleX(1)}
-.svc-ico{width:44px;height:44px;border-radius:10px;background:var(--ink-pale);border:1px solid var(--ink-border);display:flex;align-items:center;justify-content:center;font-size:1.15rem;margin-bottom:1.15rem}
-.svc-card h3{font-size:1.05rem;margin-bottom:0.35rem}
-.svc-card .svc-tag{font-size:0.68rem;font-weight:500;color:var(--ink);background:var(--ink-pale);padding:0.22rem 0.65rem;border-radius:100px;display:inline-block;margin-bottom:0.75rem}
-.svc-card>p{font-size:0.79rem;color:var(--text2);line-height:1.72;font-weight:300;margin-bottom:0.85rem}
-.svc-sub-list{list-style:none;display:flex;flex-direction:column;gap:0.36rem}
-.svc-sub-list li{font-size:0.73rem;color:var(--text2);padding-left:0.95rem;position:relative;line-height:1.52}
-.svc-sub-list li::before{content:'·';position:absolute;left:0;color:var(--ink);font-size:1rem;line-height:1.25}
-
-/* TOOLS */
-.tools-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:1rem;margin-top:2rem}
-.tool-card{background:#fff;border:1px solid var(--border);border-radius:var(--r);padding:1.75rem 1rem 1.35rem;text-align:center;transition:border-color 0.22s,transform 0.22s,box-shadow 0.22s;display:flex;flex-direction:column;align-items:center}
-.tool-card:hover{border-color:var(--ink-border);transform:translateY(-4px);box-shadow:0 10px 28px rgba(51,43,34,0.09)}
-.tool-logo{width:88px;height:88px;display:flex;align-items:center;justify-content:center;margin-bottom:0.9rem}
-.tool-logo img{width:88px;height:88px;object-fit:contain;display:block}
-.tool-logo svg{width:88px;height:88px;display:block}
-.tool-name{font-size:0.74rem;font-weight:500;color:var(--text);margin-bottom:0.14rem}
-.tool-cat{font-size:0.61rem;color:var(--text3);line-height:1.35}
-
-/* ABOUT */
-.about-hero{padding:5rem 0 4rem;background:var(--warm)}
-.about-inner{display:grid;grid-template-columns:1fr 340px;gap:5rem;align-items:start;max-width:1080px;margin:0 auto;padding:0 2.5rem}
-.about-text p{font-size:0.92rem;color:var(--text2);font-weight:300;line-height:1.92;margin-bottom:1rem}
-.about-text p strong{color:var(--text);font-weight:500}
-.about-text h1{margin-bottom:1.5rem}
-.photo-card{background:var(--dark2);border-radius:var(--r);overflow:hidden;border:1px solid rgba(255,255,255,0.06);box-shadow:0 20px 50px rgba(26,22,16,0.15)}
-.photo-card img{width:100%;height:auto;display:block;object-fit:cover}
-.photo-meta{padding:1rem 1.3rem;border-top:1px solid rgba(255,255,255,0.06)}
-.photo-meta p{font-size:0.72rem;color:rgba(255,255,255,0.3)}
-.vv-callout{background:var(--dark2);border:1px solid rgba(138,98,64,0.3);border-radius:var(--r);padding:1.5rem 1.75rem;margin-top:1.5rem;display:flex;align-items:flex-start;gap:1.1rem}
-.vv-callout-icon{font-size:1.25rem;flex-shrink:0;margin-top:0.1rem}
-.vv-callout-body strong{display:block;font-size:0.88rem;color:#fff;font-weight:500;margin-bottom:0.35rem}
-.vv-callout-body p{font-size:0.78rem;color:rgba(255,255,255,0.38);line-height:1.72;font-weight:300;margin:0}
-
-/* EDU / CERTS */
-.edu-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1rem;margin-top:2rem}
-.edu-card{background:#fff;border:1px solid var(--border);border-radius:var(--r);padding:1.5rem;transition:border-color 0.2s,transform 0.2s}
-.edu-card:hover{border-color:var(--ink-border);transform:translateY(-2px)}
-.edu-yr{font-size:0.63rem;color:var(--text3);text-transform:uppercase;letter-spacing:0.08em;margin-bottom:0.35rem}
-.edu-deg{font-family:var(--serif);font-size:0.98rem;font-weight:600;color:var(--dark);line-height:1.32;margin-bottom:0.2rem}
-.edu-school{font-size:0.74rem;color:var(--ink)}
-.certs-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:0.88rem;margin-top:1.5rem}
-.cert-card{background:#fff;border:1px solid var(--border);border-radius:var(--r);padding:1.15rem 0.85rem;text-align:center;transition:all 0.2s;display:flex;flex-direction:column;align-items:center;gap:0.25rem}
-.cert-card:hover{border-color:var(--ink-border);transform:translateY(-2px)}
-.cert-ico{font-size:1.5rem;margin-bottom:0.25rem;display:block}
-.cert-name{font-size:0.67rem;font-weight:500;color:var(--text);line-height:1.38;margin-bottom:0.14rem}
-.cert-by{font-size:0.58rem;color:var(--text3);margin-bottom:0.35rem}
-.cert-link{font-size:0.62rem;color:var(--ink);text-decoration:none;border-bottom:1px solid var(--ink-border);padding-bottom:1px;transition:border-color 0.2s}
-.cert-link:hover{border-color:var(--ink)}
-
-/* TESTIMONIALS */
-.testi{background:var(--warm);padding:5rem 0}
-.testi-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem;margin-top:3rem}
-.testi-card{background:#fff;border:1px solid var(--border);border-radius:var(--r);padding:1.85rem;display:flex;flex-direction:column}
-.stars{color:var(--ink);font-size:0.78rem;letter-spacing:0.1em;margin-bottom:1rem}
-.testi-q{font-family:var(--serif);font-size:0.97rem;font-weight:400;color:var(--dark);line-height:1.7;font-style:italic;flex:1}
-.testi-div{width:26px;height:1px;background:var(--border);margin:1.1rem 0}
-.testi-name{font-size:0.8rem;font-weight:500;color:var(--text)}
-.testi-co{font-size:0.7rem;color:var(--text3)}
-
-/* FAQ */
-.faq{background:var(--cream);padding:5.5rem 0}
-.faq-intro{max-width:500px;margin-bottom:3rem}
-.faq-list{display:flex;flex-direction:column;gap:0;border-radius:var(--r);overflow:hidden;border:1px solid var(--border)}
-.faq-item{background:#fff;border-bottom:1px solid var(--border);transition:background 0.2s}
-.faq-item:last-child{border-bottom:none}
-.faq-item.open{background:var(--cream)}
-.faq-q{display:flex;justify-content:space-between;align-items:center;cursor:pointer;padding:1.45rem 1.75rem;gap:1.5rem;user-select:none}
-.faq-q-text{font-family:var(--serif);font-size:1rem;font-weight:500;color:var(--dark);line-height:1.42}
-.faq-icon{width:26px;height:26px;border-radius:50%;background:var(--ink-pale);border:1px solid var(--ink-border);display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:all 0.3s}
-.faq-icon svg{width:10px;height:10px;transition:transform 0.35s;color:var(--ink)}
-.faq-item.open .faq-icon{background:var(--ink);border-color:var(--ink)}
-.faq-item.open .faq-icon svg{transform:rotate(180deg);color:#fff}
-.faq-a{max-height:0;overflow:hidden;transition:max-height 0.4s cubic-bezier(0.4,0,0.2,1),opacity 0.3s ease;opacity:0}
-.faq-item.open .faq-a{max-height:400px;opacity:1}
-.faq-a-inner{padding:0 1.75rem 1.45rem;font-size:0.85rem;color:var(--text2);line-height:1.85;font-weight:300;border-top:1px solid var(--border);padding-top:1rem}
-
-/* RESOURCE */
-.resource{background:var(--dark);padding:5.5rem 0}
-.resource-inner{display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:start}
-.resource-left .eyebrow{color:rgba(255,255,255,0.25)}
-.resource-left h2{color:#fff;margin-bottom:0.75rem}
-.resource-left h2 em{color:var(--ink2)}
-.resource-left>p{font-size:0.87rem;color:rgba(255,255,255,0.38);line-height:1.9;font-weight:300;max-width:420px;margin-bottom:1.85rem}
-.resource-checks{display:grid;grid-template-columns:1fr 1fr;gap:0.55rem;margin-bottom:2rem}
-.resource-check{display:flex;align-items:center;gap:0.5rem;font-size:0.74rem;color:rgba(255,255,255,0.42)}
-.resource-check-dot{width:5px;height:5px;border-radius:50%;background:var(--ink2);flex-shrink:0}
-.resource-note{font-size:0.67rem;color:rgba(255,255,255,0.18);margin-top:0.7rem}
-.resource-right{display:flex;flex-direction:column;gap:0.65rem}
-.checklist-preview{background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.07);border-radius:var(--r);padding:1.5rem 1.65rem;position:relative;overflow:hidden}
-.checklist-preview::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--ink),var(--ink2))}
-.checklist-lbl{font-size:0.62rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.25);margin-bottom:1rem;display:block}
-.cl-item{display:flex;align-items:center;gap:0.8rem;padding:0.68rem 0;border-bottom:1px solid rgba(255,255,255,0.05);font-size:0.79rem;color:rgba(255,255,255,0.42);font-weight:300}
-.cl-item:last-child{border-bottom:none}
-.cl-box{width:14px;height:14px;border-radius:3px;border:1px solid rgba(138,98,64,0.4);flex-shrink:0}
-.resource-stat-row{display:grid;grid-template-columns:1fr 1fr;gap:0.65rem}
-.resource-stat{background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.06);border-radius:var(--r-sm);padding:1rem 1.1rem}
-.resource-stat-num{font-family:var(--serif);font-size:1.6rem;font-weight:600;color:var(--ink2);line-height:1;margin-bottom:0.18rem}
-.resource-stat-lbl{font-size:0.67rem;color:rgba(255,255,255,0.27);line-height:1.5;font-weight:300}
-
-/* CTA */
-.main-cta{background:var(--dark);padding:5.5rem 0}
-.main-cta-inner{max-width:580px;margin:0 auto;text-align:center}
-.main-cta-inner .eyebrow{color:rgba(255,255,255,0.25)}
-.main-cta-inner h2{color:#fff;margin-bottom:0.85rem}
-.main-cta-inner h2 em{color:var(--ink2)}
-.main-cta-inner p{color:rgba(255,255,255,0.36);font-size:0.88rem;font-weight:300;max-width:400px;margin:0 auto 2rem;line-height:1.95}
-.cta-btns{display:flex;gap:0.75rem;justify-content:center;flex-wrap:wrap}
-.cta-creds{display:flex;gap:1.5rem;justify-content:center;flex-wrap:wrap;margin-top:2rem;padding-top:2rem;border-top:1px solid rgba(255,255,255,0.06)}
-.cred{font-size:0.7rem;color:rgba(255,255,255,0.22);display:flex;align-items:center;gap:0.4rem}
-.cred-dot{width:3px;height:3px;border-radius:50%;background:var(--ink);opacity:0.5}
-
 /* CONTACT */
 .contact-hero{padding:5rem 0 4rem;background:var(--warm)}
 .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:4.5rem;margin-top:3rem}
@@ -353,9 +455,8 @@ footer p{font-size:0.7rem;color:var(--text3)}
 /* RESPONSIVE */
 @media(max-width:900px){
   .hero{padding:3.5rem 1.5rem 3rem}
-  .hero-grid,.what-grid,.contact-grid,.resource-inner{grid-template-columns:1fr;gap:2.25rem}
-  .exp-hl-grid{grid-template-columns:1fr}
-  .svc-cards-grid,.testi-grid{grid-template-columns:1fr 1fr}
+  .hero-grid,.what-grid,.contact-grid,.lead-inner,.how-grid,.engage-grid,.fit-grid,.personality-grid{grid-template-columns:1fr;gap:2.25rem}
+  .testi-grid,.svc-cards-grid{grid-template-columns:1fr 1fr}
   .about-inner{grid-template-columns:1fr;gap:2.5rem}
   .tools-grid,.certs-grid{grid-template-columns:repeat(3,1fr)}
   .edu-grid{grid-template-columns:1fr}
@@ -364,10 +465,17 @@ footer p{font-size:0.7rem;color:var(--text3)}
   .nav-links,.nav-spot,.nav-cta{display:none}
   .hamburger{display:flex!important}
   .photo-card{max-width:330px;margin:0 auto}
-  .role-strip-inner{gap:0.75rem}
+  .svc-row{grid-template-columns:1fr;gap:1.3rem}
+  .tl-list::before{left:0}
+  .tl-row{grid-template-columns:1fr;padding-left:1.55rem}
+  .tl-row::before{left:-4px}
+  .tl-date{text-align:left;padding-right:0;margin-bottom:0.38rem}
+  .tl-body{padding-left:0}
+  .how-right{position:static}
+  .lead-checks{grid-template-columns:1fr}
 }
 @media(max-width:580px){
-  .svc-cards-grid,.testi-grid,.tools-grid{grid-template-columns:1fr 1fr}
+  .testi-grid,.tools-grid,.svc-cards-grid{grid-template-columns:1fr 1fr}
   .certs-grid,.cert-dark-grid{grid-template-columns:repeat(2,1fr)}
   .wrap{padding:0 1.25rem}
   nav{padding:0 1.25rem}
@@ -393,8 +501,8 @@ footer p{font-size:0.7rem;color:var(--text3)}
 
 <nav id="nav">
 <a href="javascript:void(0)" onclick="return show('home')" class="logo">
-<img src="https://lh3.googleusercontent.com/d/1pTNIk4uZdbGw8SAJuiFThyXA_H0yfU3J" alt="Monicah Mburu" class="logo-img">
-<span class="logo-text">Monicah <em>Mburu</em></span>
+  <img src="https://lh3.googleusercontent.com/d/1pTNIk4uZdbGw8SAJuiFThyXA_H0yfU3J" alt="Monicah Mburu" class="logo-img">
+  <span class="logo-text">Monicah <em>Mburu</em></span>
 </a>
 <ul class="nav-links">
 <li><a href="javascript:void(0)" onclick="return show('home')" data-page="home">Home</a></li>
@@ -417,17 +525,18 @@ footer p{font-size:0.7rem;color:var(--text3)}
 <a href="https://calendly.com/monicahmburu/one-on-one" target="_blank" class="mob-cta">Schedule a call</a>
 </div>
 
-<!-- ═══════════════════════ HOME ═══════════════════════ -->
+<!-- ═══════════ HOME ═══════════ -->
 <div id="page-home" class="page active">
 
+<!-- HERO: Site 1 layout — left text, right video, stats below video -->
 <div class="hero">
   <div style="display:flex;justify-content:left;margin-bottom:1.75rem">
-    <div class="hero-badge"><span class="hero-badge-dot"></span>Open to remote roles &middot; worldwide</div>
+    <div class="hero-badge"><span class="hero-badge-dot"></span>Now taking new clients &middot; remote &middot; worldwide</div>
   </div>
   <div class="hero-grid">
     <div class="hero-left">
-      <h1>Operations &amp; Executive<br>Support — <em>remote-ready.</em></h1>
-      <p style="margin-top:1.2rem">I'm Monicah — an Operations and Executive Support professional with hands-on experience in front office operations, financial bookkeeping, and workflow systems. I've supported executive-level work at an investor firm, managed day-to-day office operations at a lending firm, and handled financial administration across three organisations.</p>
+      <h1>You started a business.<br>Now you're <em>holding it together</em> on your own.</h1>
+      <p style="margin-top:1.2rem">Running a business shouldn't mean wrestling with messy books, hunting for numbers, or chasing updates on work nobody owns. I step in to set up your operations and manage your bookkeeping so that weight comes off you.</p>
       <p style="margin-top:0.75rem;font-size:0.88rem;color:var(--text2);font-weight:300;line-height:1.85">Available for remote Executive Assistant, Operations Coordinator, and Operations Specialist roles. Open to agency placements and fractional engagements.</p>
       <div class="hero-actions">
         <a href="https://calendly.com/monicahmburu/one-on-one" target="_blank" class="btn">Schedule a call</a>
@@ -446,91 +555,124 @@ footer p{font-size:0.7rem;color:var(--text3)}
         </div>
       </div>
       <div class="hero-stats">
-        <div class="stat-box"><div class="stat-num">3</div><div class="stat-lbl">Organisations — operations &amp; finance experience</div></div>
-        <div class="stat-box"><div class="stat-num">10+</div><div class="stat-lbl">Investor-ready documents produced</div></div>
-        <div class="stat-box"><div class="stat-num">1,000+</div><div class="stat-lbl">Client records organised and maintained</div></div>
+        <div class="stat-box"><div class="stat-num">3</div><div class="stat-lbl">Organisations across operations and finance</div></div>
+        <div class="stat-box"><div class="stat-num">$500K+</div><div class="stat-lbl">Investor interest generated across 10+ companies</div></div>
+        <div class="stat-box"><div class="stat-num">20 hrs</div><div class="stat-lbl">Freed per week after one workflow rebuild</div></div>
       </div>
     </div>
   </div>
 </div>
 
-<div class="role-strip">
-  <div class="role-strip-inner">
-    <span class="role-pill">Executive Assistant</span><span class="role-sep">·</span>
-    <span class="role-pill">Operations Coordinator</span><span class="role-sep">·</span>
-    <span class="role-pill">Operations Specialist</span><span class="role-sep">·</span>
-    <span class="role-pill">Bookkeeping Support</span><span class="role-sep">·</span>
-    <span class="role-pill">Fractional Ops Support</span><span class="role-sep">·</span>
-    <span class="role-pill">Agency Placements</span>
-  </div>
-</div>
+<div class="signal-bar"><div class="signal-inner">
+  <span class="sig-item"><span class="sig-dot"></span>Bookkeeping &amp; financial records</span>
+  <span class="sig-item"><span class="sig-dot"></span>Financial reporting &amp; analysis</span>
+  <span class="sig-item"><span class="sig-dot"></span>Executive &amp; operational support</span>
+  <span class="sig-item"><span class="sig-dot"></span>$15/hr &middot; 2 spots remaining</span>
+</div></div>
 
-<div class="what"><div class="wrap">
+<div class="reality-section"><div class="wrap">
+  <span class="eyebrow reveal">Sound familiar?</span>
+  <h2 class="reveal">Most founders are great at their business.<br>Running the <em>admin</em> around it is a different story.</h2>
+  <p class="reality-intro reveal">When a business grows faster than its systems, the founder becomes the system. Everything routes through you because nothing else exists to hold it.</p>
+  <div class="reality-grid reveal">
+    <div class="reality-item"><div class="reality-title">You don't know exactly how the business is doing financially</div><div class="reality-desc">Revenue is visible. Profit is a guess. Cash position requires work to figure out. When someone asks how the business is going, the honest answer is you're not sure because nobody has organised the data.</div></div>
+    <div class="reality-item"><div class="reality-title">Important things keep slipping through the cracks</div><div class="reality-desc">Not because you're not on top of it, but because the business doesn't have the capacity. Follow-ups don't happen. Reconciliations are weeks behind. Things that should have been done last month are still waiting.</div></div>
+    <div class="reality-item"><div class="reality-title">You are the only one who knows how things get done</div><div class="reality-desc">Decisions, approvals, context all come back to you. When you're not available, work stops. Nothing is written down. Every new person needs a full walkthrough you don't have time to give.</div></div>
+    <div class="reality-item"><div class="reality-title">You are doing too many jobs at once</div><div class="reality-desc">Finance, operations, communication, execution. You're carrying more than one person should because handing things off requires structure that doesn't exist yet.</div></div>
+  </div>
+  <div class="reality-bridge reveal"><p>These problems don't go away by working harder. They go away with <strong>better structure, clearer financial information, and someone you trust to follow through</strong> — which is exactly what I provide.</p></div>
+</div></div>
+
+<div class="svc-section"><div class="wrap">
   <span class="eyebrow reveal">What I do</span>
-  <div style="max-width:520px" class="reveal">
-    <h2>Operations, executive support,<br>and <em>financial administration.</em></h2>
-    <p class="sub">Three capability areas, all practical and remote-ready. I handle the day-to-day that keeps an operation running — and the financial administration that supports decision-making.</p>
+  <div class="svc-intro reveal">
+    <h2>Three areas.<br>One person you <em>talk to.</em></h2>
+    <p class="sub">I work across finance, bookkeeping, and operations. Not a generalist who handles whatever lands in their inbox. A consistent support partner who understands how the different parts connect.</p>
   </div>
-  <div class="what-grid">
-    <div class="what-left reveal">
-      <p>My background spans front office operations, executive and investor support, and financial administration across bookkeeping, AP/AR, and reporting. These aren't separate career tracks — they connect in the way most operations roles actually work.</p>
-      <p><strong>I work independently and communicate proactively.</strong> A clear scope and defined goals are enough — you get finished work, not status updates asking what to do next.</p>
-      <p>I'm currently completing the <strong>Virtually Versed Africa Operations Bootcamp</strong> (June 2026), which formalises my systems-thinking and remote operations approach.</p>
+  <div class="svc-cards">
+    <div class="svc-row reveal">
+      <div><div class="svc-num">01</div><div class="svc-row-label">Bookkeeping</div><h3>Books that are always up to date</h3></div>
+      <div><p class="svc-row-desc">Most founders know their books are behind. It's not that they don't care, it's that keeping records current takes consistent time — and consistent time is the one thing they don't have. I keep the books current so you always know where things stand, without having to prepare for the conversation first.</p><div class="svc-row-why"><strong>Why this matters</strong>Clean books aren't a formality for accountants. They're how you know your cash position, make decisions based on real numbers, and stop dreading the question "how are we doing?"</div><ul class="svc-items" style="margin-top:1.05rem"><li>Monthly transaction categorisation and reconciliation</li><li>Accounts payable and receivable tracking</li><li>Expense organisation and coding</li><li>QuickBooks, Xero, Zoho Books setup and maintenance</li></ul></div>
+      <div class="svc-right"><div class="svc-right-lbl">From the work</div><div class="svc-outcome"><div class="svc-outcome-num">60%</div><div class="svc-outcome-text">fewer payment discrepancies after AP/AR controls were rebuilt from scratch</div></div><div class="svc-outcome" style="margin-top:0.68rem"><div class="svc-outcome-num">100%</div><div class="svc-outcome-text">tax compliance across all filing periods with no amendments</div></div></div>
     </div>
-    <div class="cap-list reveal">
-      <div class="cap-item"><div class="cap-ico">🗂️</div><div class="cap-body"><h4>Executive &amp; Administrative Support</h4><p>Inbox management, calendar coordination, scheduling, meeting prep, document handling, and operational follow-through for founders and senior staff.</p></div></div>
-      <div class="cap-item"><div class="cap-ico">⚙️</div><div class="cap-body"><h4>Operations Coordination</h4><p>Process documentation, SOP writing, workflow design, project coordination, and day-to-day operational support across teams.</p></div></div>
-      <div class="cap-item"><div class="cap-ico">📒</div><div class="cap-body"><h4>Bookkeeping &amp; Financial Administration</h4><p>AP/AR, reconciliations, expense tracking, petty cash, payroll support, and accounting system setup (Zoho Books, QuickBooks, Xero).</p></div></div>
-      <div class="cap-item"><div class="cap-ico">📊</div><div class="cap-body"><h4>Financial Reporting &amp; Modelling</h4><p>P&amp;L, cash flow, variance analysis, investor-ready documents, DCF models, and financial dashboards in Excel and Power BI.</p></div></div>
+    <div class="svc-row reveal">
+      <div><div class="svc-num">02</div><div class="svc-row-label">Financial Reporting</div><h3>Numbers you can actually do something with</h3></div>
+      <div><p class="svc-row-desc">An income statement that arrives after you've already made the decisions it would have informed isn't useful. I build reporting that gives you the information you need when you need it, without hours of manual work to get there.</p><div class="svc-row-why"><strong>Why this actually matters</strong>Financial information you can't act on is just noise. Good reporting tells you whether cash is healthy, which revenue streams are pulling their weight, and what the numbers say you should do next.</div><ul class="svc-items" style="margin-top:1.05rem"><li>Income statement, cash flow statement, balance sheet</li><li>Dashboards connected to live data</li><li>Budget tracking and variance analysis</li><li>Investor-ready financial models and reports</li></ul></div>
+      <div class="svc-right"><div class="svc-right-lbl">From the work</div><div class="svc-outcome"><div class="svc-outcome-num">$500K+</div><div class="svc-outcome-text">investor interest generated across 10+ companies with clean models and structured reports</div></div><div class="svc-outcome" style="margin-top:0.68rem"><div class="svc-outcome-num">30%</div><div class="svc-outcome-text">improvement in forecast accuracy after models were restructured and standardised</div></div></div>
+    </div>
+    <div class="svc-row reveal">
+      <div><div class="svc-num">03</div><div class="svc-row-label">Executive &amp; Operational Support</div><h3>Work that moves without you watching it</h3></div>
+      <div><p class="svc-row-desc">This isn't about ticking tasks off a list. It's about building the infrastructure — documented processes, coordination systems, and reliable follow-through — so important work keeps moving even when you're not in the room.</p><div class="svc-row-why"><strong>Why this actually matters</strong>When you're the only person who knows how something gets done, your time is permanently rationed. Written-down systems and reliable execution create the space to actually think about the business.</div><ul class="svc-items" style="margin-top:1.05rem"><li>SOP writing and process documentation</li><li>Workflow design and automation (Zapier, Make)</li><li>Inbox and calendar management</li><li>Project coordination and follow-through</li></ul></div>
+      <div class="svc-right"><div class="svc-right-lbl">From the work</div><div class="svc-outcome"><div class="svc-outcome-num">20 hrs</div><div class="svc-outcome-text">freed per week when a manual weekly reporting process was redesigned and automated</div></div><div class="svc-outcome" style="margin-top:0.68rem"><div class="svc-outcome-num">8 SOPs</div><div class="svc-outcome-text">written and live. New hires onboard without the founder being involved.</div></div></div>
+    </div>
+  </div>
+  <div style="margin-top:2.1rem;text-align:center"><a href="javascript:void(0)" onclick="return show('services')" class="btn-ghost">Full service details &rarr;</a></div>
+</div></div>
+
+<div class="how-section"><div class="wrap">
+  <div class="how-intro reveal">
+    <span class="eyebrow">How it works</span>
+    <h2>From a conversation<br>to <em>systems that run.</em></h2>
+    <p class="sub">The process is straightforward on your end. You describe the situation. I scope the work. We start.</p>
+  </div>
+  <div class="how-grid">
+    <div class="how-steps">
+      <div class="how-step reveal"><div class="how-step-num">1</div><div class="how-step-body"><h4>We talk for 30 minutes</h4><p>You tell me where the friction is — lagging finances, manual reporting, broken processes. I figure out the root cause and whether I'm the right person to fix it.</p></div></div>
+      <div class="how-step reveal"><div class="how-step-num">2</div><div class="how-step-body"><h4>Scope agreed before work begins</h4><p>For projects, deliverables and estimated hours are confirmed upfront. For retainers, monthly scope is agreed at onboarding. No open-ended commitments on either side.</p></div></div>
+      <div class="how-step reveal"><div class="how-step-num">3</div><div class="how-step-body"><h4>Work starts within 48 hours</h4><p>You give me access to the books, tools, and relevant workflows. I audit the current state, identify the gaps, and start building against the agreed scope.</p></div></div>
+      <div class="how-step reveal"><div class="how-step-num">4</div><div class="how-step-body"><h4>Systems are handed over or kept running</h4><p>Project engagements close with full documentation so everything holds without me. Retainers keep the systems accurate and current each month going forward.</p></div></div>
+    </div>
+    <div class="how-right reveal">
+      <div class="how-proof-card">
+        <span class="how-proof-card-lbl">Outcomes from past engagements</span>
+        <div class="proof-stat"><div class="proof-stat-num">20 hrs</div><div class="proof-stat-label">Given back every week</div><div class="proof-stat-desc">Manual reporting rebuilt at Aspire Lending, reclaiming hours spent on a process that should have been automatic.</div></div>
+        <div class="proof-stat"><div class="proof-stat-num">$500K+</div><div class="proof-stat-label">Investor interest generated</div><div class="proof-stat-desc">Ten companies with messy data got clean models and structured reports that built credibility raw data never could.</div></div>
+        <div class="proof-stat"><div class="proof-stat-num">1,000+</div><div class="proof-stat-label">Records organised</div><div class="proof-stat-desc">Client file system built from nothing. Accessible to any team member without asking where anything is.</div></div>
+      </div>
+      <div class="how-work-cta">
+        <p>Five documented case studies with deliverables, process notes, and real outcomes you can look through.</p>
+        <a href="javascript:void(0)" onclick="return show('work')" class="btn" style="width:100%;display:flex">View work samples &rarr;</a>
+      </div>
     </div>
   </div>
 </div></div>
 
-<!-- EXPERIENCE HIGHLIGHTS — home only, one per org, no duplication -->
-<div class="exp-highlights"><div class="wrap">
-  <span class="eyebrow reveal">Experience</span>
-  <h2 class="reveal">Three roles across operations,<br>finance, and <em>executive support.</em></h2>
-  <p class="sub reveal">Full detail on the About page. <a href="javascript:void(0)" onclick="return show('about')" style="color:var(--ink);text-decoration:none;border-bottom:1px solid var(--ink-border)">View complete experience &rarr;</a></p>
-  <div class="exp-hl-grid reveal">
-    <div class="exp-hl-item">
-      <div class="exp-hl-co">Aspire Lending Ltd.</div>
-      <div class="exp-hl-role">Admin &amp; Accounts Assistant</div>
-      <ul class="exp-hl-list">
-        <li>Front office operations — calls, correspondence, client onboarding</li>
-        <li>1,000+ client files reorganised and standardised</li>
-        <li>Insurance renewal tracking automated — zero missed renewals</li>
-        <li>Petty cash, reconciliations, and accounting support</li>
-      </ul>
-      <div class="exp-hl-meta">Mar 2025 – Present &nbsp;·&nbsp; Onsite · Current</div>
+<div class="engage-section"><div class="wrap">
+  <span class="eyebrow reveal">How we work together</span>
+  <h2 class="reveal">Projects build the system.<br><em>Retainers keep it running.</em></h2>
+  <p class="sub reveal">The difference matters. A project is scoped, time-bound, and ends with a deliverable you own. A retainer is ongoing maintenance with a defined monthly scope. Most clients do both in that order.</p>
+  <div class="engage-grid reveal">
+    <div class="engage-card project">
+      <span class="engage-badge">Project engagement</span>
+      <h3>Build the infrastructure</h3>
+      <p>Scoped and time-bound. Books cleaned, workflows built, dashboards connected, SOPs written. Ends with a fully documented system you own.</p>
+      <ul class="engage-list"><li><span>&rarr;</span><span>Books reconciled and brought current</span></li><li><span>&rarr;</span><span>Financial reporting dashboard built and connected to live data</span></li><li><span>&rarr;</span><span>Workflows automated end to end</span></li><li><span>&rarr;</span><span>SOPs written so processes run without the founder</span></li><li><span>&rarr;</span><span>Full documentation handed over at close</span></li></ul>
+      <div class="engage-price"><div class="engage-price-num">$15/hr</div><div class="engage-price-note">Scope and estimated hours agreed before work begins. No surprises.</div></div>
     </div>
-    <div class="exp-hl-item">
-      <div class="exp-hl-co">Pitch Investors</div>
-      <div class="exp-hl-role">Accountant &amp; Financial Analyst</div>
-      <ul class="exp-hl-list">
-        <li>Executive support — lead qualification, investor outreach, coordination</li>
-        <li>DCF models and investor documents for 10+ companies</li>
-        <li>Zoho Books setup from scratch — full-cycle bookkeeping</li>
-        <li>Due diligence site visits and written investor analysis</li>
-      </ul>
-      <div class="exp-hl-meta">Mar 2024 – Sep 2024 &nbsp;·&nbsp; 7 months</div>
+    <div class="engage-card retainer">
+      <span class="engage-badge">Monthly retainer</span>
+      <h3>Keep what <em>was built</em> running</h3>
+      <p>Ongoing financial maintenance, workflow oversight, and operational continuity. Monthly scope agreed at onboarding.</p>
+      <ul class="engage-list"><li><span>&rarr;</span><span>Monthly bookkeeping and reconciliation</span></li><li><span>&rarr;</span><span>Income statement, cash flow, and balance sheet produced monthly</span></li><li><span>&rarr;</span><span>Dashboard updated and current each month</span></li><li><span>&rarr;</span><span>Workflow maintenance and SOP updates as needed</span></li><li><span>&rarr;</span><span>Monthly operational reporting</span></li></ul>
+      <div class="engage-price"><div class="engage-price-num">$15/hr</div><div class="engage-price-note">Estimated monthly hours agreed at onboarding. Billed on actuals.</div></div>
     </div>
-    <div class="exp-hl-item">
-      <div class="exp-hl-co">Target Mart Limited</div>
-      <div class="exp-hl-role">Finance Intern</div>
-      <ul class="exp-hl-list">
-        <li>AP/AR management — tracking, follow-up, payment allocation</li>
-        <li>Reduced unpaid receivables by 25%</li>
-        <li>Inventory tracking with variance analysis</li>
-        <li>Petty cash, financial records, 100% tax compliance</li>
-      </ul>
-      <div class="exp-hl-meta">Jul 2023 – Dec 2023 &nbsp;·&nbsp; 6 months</div>
-    </div>
+  </div>
+  <div class="engage-bridge reveal"><span class="engage-bridge-arrow">&#10230;</span><p><strong>The natural order:</strong> Build the system first, then maintain it. If you already have working systems and need consistent upkeep, a retainer alone works too.</p></div>
+</div></div>
+
+<div class="fit-section"><div class="wrap">
+  <span class="eyebrow reveal">Is this for you?</span>
+  <h2 class="reveal">Worth knowing before<br>you <em>book the call.</em></h2>
+  <p class="sub reveal">This works well for a specific kind of situation. If it doesn't match, the call confirms that quickly — which saves both of us time.</p>
+  <div class="fit-grid reveal">
+    <div class="fit-card yes"><span class="fit-lbl">&#x2736; Good fit</span><ul class="fit-list"><li><span>&#x2713;</span><span>Revenue coming in, but finances are disorganised. You don't have a reliable picture of your cash position.</span></li><li><span>&#x2713;</span><span>Small team where you're still doing too much and growth is making you more of a bottleneck, not less.</span></li><li><span>&#x2713;</span><span>Important work keeps getting delayed because no one owns the follow-through.</span></li><li><span>&#x2713;</span><span>You want to hand off the financial and operational layer, not just a list of tasks.</span></li><li><span>&#x2713;</span><span>Ready to share access to your books, tools, and current workflows.</span></li></ul></div>
+    <div class="fit-card no"><span class="fit-lbl">&#x2717; Not the right fit</span><ul class="fit-list"><li><span>&#x2717;</span><span>Need a registered CPA, statutory audit, or tax filing that requires a licensed accountant.</span></li><li><span>&#x2717;</span><span>Looking for unlimited scope, on-demand availability, or full-time hours without a defined scope.</span></li><li><span>&#x2717;</span><span>Want tasks handled without building systems around them.</span></li><li><span>&#x2717;</span><span>Not in a position to share access to the information and tools needed to do the work.</span></li></ul></div>
   </div>
 </div></div>
 
-<div class="testi"><div class="wrap">
-  <span class="eyebrow reveal">References</span>
-  <h2 class="reveal">What colleagues and clients said.</h2>
+<div class="testi-section"><div class="wrap">
+  <span class="eyebrow reveal">From people I've worked with</span>
+  <h2 class="reveal">What they said about <em>the work.</em></h2>
   <div class="testi-grid">
     <div class="testi-card reveal"><div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p class="testi-q">"Before working with Monicah our receipt tracking was all over the place and we couldn't reliably trace spending month to month. After she stepped in, everything became structured, traceable, and audit-ready without extra work from the accounts team."</p><div class="testi-div"></div><div class="testi-name">Operations Manager</div><div class="testi-co">Target Mart Limited</div></div>
     <div class="testi-card reveal"><div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p class="testi-q">"We kept missing insurance renewals because tracking was manual and nobody owned it. Since the system she built, renewals are fully automated. We don't monitor or chase anything manually anymore."</p><div class="testi-div"></div><div class="testi-name">Colleague</div><div class="testi-co">Aspire Lending Limited</div></div>
@@ -538,60 +680,63 @@ footer p{font-size:0.7rem;color:var(--text3)}
   </div>
 </div></div>
 
-<div class="faq"><div class="wrap">
+<div class="faq-section"><div class="wrap">
   <div class="faq-intro reveal">
     <span class="eyebrow">Common questions</span>
-    <h2>What recruiters and<br>hiring managers ask.</h2>
+    <h2>Things founders ask<br>before <em>getting started.</em></h2>
+    <p class="sub">Straightforward answers. If something's missing, the discovery call covers it.</p>
   </div>
   <div class="faq-list reveal">
-    <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)"><span class="faq-q-text">What roles are you open to?</span><span class="faq-icon"><svg viewBox="0 0 10 6" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><polyline points="1,1 5,5 9,1"/></svg></span></div><div class="faq-a"><div class="faq-a-inner">Remote Executive Assistant, Operations Coordinator, Operations Specialist, Bookkeeping Support, and fractional operations roles. I'm also open to agency placements through firms like Atlas Assistants and similar. My sweet spot is roles that combine administrative coordination with financial administration.</div></div></div>
-    <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)"><span class="faq-q-text">Do you have remote work experience?</span><span class="faq-icon"><svg viewBox="0 0 10 6" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><polyline points="1,1 5,5 9,1"/></svg></span></div><div class="faq-a"><div class="faq-a-inner">Yes. At Pitch Investors I supported a CEO for seven months handling coordination, investor communication, and financial deliverables. I operate asynchronously by default and communicate proactively rather than waiting to be checked on.</div></div></div>
-    <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)"><span class="faq-q-text">What tools do you work with?</span><span class="faq-icon"><svg viewBox="0 0 10 6" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><polyline points="1,1 5,5 9,1"/></svg></span></div><div class="faq-a"><div class="faq-a-inner">For operations and admin: Google Workspace, Microsoft 365, Notion, Slack, Asana, ClickUp, Trello, Zoom. For finance and bookkeeping: Zoho Books, QuickBooks, Xero, Excel, Power BI. For automation: Zapier, Make. I pick up new tools quickly.</div></div></div>
-    <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)"><span class="faq-q-text">Are you available full-time or part-time?</span><span class="faq-icon"><svg viewBox="0 0 10 6" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><polyline points="1,1 5,5 9,1"/></svg></span></div><div class="faq-a"><div class="faq-a-inner">I'm open to both. Full-time remote employment, part-time retainers, and fractional arrangements all work. For freelance and agency placements, I operate at $15/hr with hours agreed upfront.</div></div></div>
-    <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)"><span class="faq-q-text">What's your educational background?</span><span class="faq-icon"><svg viewBox="0 0 10 6" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><polyline points="1,1 5,5 9,1"/></svg></span></div><div class="faq-a"><div class="faq-a-inner">BA in Economics and Mathematics from Kenyatta University. Currently completing an MSc in Financial Engineering at WorldQuant University. CPA Foundation Level (KASNEB), ALX Virtual Assistant Certificate, and five professional certifications in data analytics, bookkeeping, and corporate finance.</div></div></div>
-    <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)"><span class="faq-q-text">How do you handle confidential information?</span><span class="faq-icon"><svg viewBox="0 0 10 6" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><polyline points="1,1 5,5 9,1"/></svg></span></div><div class="faq-a"><div class="faq-a-inner">Confidentiality is standard in everything I've done — financial records, investor documents, client data. I sign NDAs on request, use your preferred password manager, and follow any security protocols you have in place.</div></div></div>
+    <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)"><span class="faq-q-text">How is this different from hiring a regular virtual assistant?</span><span class="faq-icon"><svg viewBox="0 0 10 6" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><polyline points="1,1 5,5 9,1"/></svg></span></div><div class="faq-a"><div class="faq-a-inner">A VA does what you tell them to, when you tell them. I build systems, anticipate needs, and manage operations proactively. My financial analysis background means I understand the business impact of each decision — not just the task in front of me. The difference is a task-taker versus a partner who sees the full picture.</div></div></div>
+    <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)"><span class="faq-q-text">Do you have remote work experience?</span><span class="faq-icon"><svg viewBox="0 0 10 6" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><polyline points="1,1 5,5 9,1"/></svg></span></div><div class="faq-a"><div class="faq-a-inner">Yes. At Pitch Investors I supported a CEO for seven months handling coordination, investor communication, and financial deliverables — entirely remotely, with the CEO based in the US. I operate asynchronously by default and communicate proactively rather than waiting to be checked on.</div></div></div>
+    <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)"><span class="faq-q-text">What does a typical engagement look like?</span><span class="faq-icon"><svg viewBox="0 0 10 6" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><polyline points="1,1 5,5 9,1"/></svg></span></div><div class="faq-a"><div class="faq-a-inner">We start with a free 30-minute discovery call. If there's a fit, I recommend either a project engagement or a retainer depending on your situation. The first week is a deep-dive audit of your books, workflows, and systems. By week two, you're seeing results. Project engagements close with full documentation. Retainers continue monthly.</div></div></div>
+    <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)"><span class="faq-q-text">Do you work with clients outside Kenya?</span><span class="faq-icon"><svg viewBox="0 0 10 6" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><polyline points="1,1 5,5 9,1"/></svg></span></div><div class="faq-a"><div class="faq-a-inner">Yes. I work remotely with clients worldwide and operate asynchronously across time zones. Most communication happens via Slack or email, with scheduled weekly sync calls. The tools I use work regardless of where you're based.</div></div></div>
+    <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)"><span class="faq-q-text">What tools do you work with?</span><span class="faq-icon"><svg viewBox="0 0 10 6" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><polyline points="1,1 5,5 9,1"/></svg></span></div><div class="faq-a"><div class="faq-a-inner">QuickBooks, Xero, Zoho Books, Excel, Power BI, Google Workspace, Notion, Zapier, Airtable, ClickUp, Trello, Asana, Slack, Zoom, and more. If you use something not on this list, I pick it up quickly. The goal is to reduce friction, not add it.</div></div></div>
+    <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)"><span class="faq-q-text">How do you handle confidential financial data?</span><span class="faq-icon"><svg viewBox="0 0 10 6" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><polyline points="1,1 5,5 9,1"/></svg></span></div><div class="faq-a"><div class="faq-a-inner">Confidentiality is standard. I sign NDAs on request, use your preferred password manager, and follow any security protocols you have in place. My background in financial analysis means I'm accustomed to handling sensitive data with discretion.</div></div></div>
+    <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)"><span class="faq-q-text">Are you available full-time or part-time?</span><span class="faq-icon"><svg viewBox="0 0 10 6" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><polyline points="1,1 5,5 9,1"/></svg></span></div><div class="faq-a"><div class="faq-a-inner">Both. Full-time remote employment, part-time retainers, and fractional arrangements all work. For freelance and agency placements, I operate at $15/hr with hours agreed upfront.</div></div></div>
+    <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)"><span class="faq-q-text">Can you replace my accountant or CFO?</span><span class="faq-icon"><svg viewBox="0 0 10 6" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><polyline points="1,1 5,5 9,1"/></svg></span></div><div class="faq-a"><div class="faq-a-inner">No, and I'll be direct about that. I'm not a licensed CPA and don't file statutory accounts or handle tax compliance that requires registration. What I do is the operational and reporting layer: clean books, accurate records, usable dashboards, and financial models. If you have a CFO or accountant, I work alongside them to handle the day-to-day so they focus on strategy.</div></div></div>
   </div>
 </div></div>
 
-<div class="resource"><div class="wrap">
-  <div class="resource-inner reveal">
-    <div class="resource-left">
+<div class="lead-section"><div class="wrap">
+  <div class="lead-inner reveal">
+    <div class="lead-left">
       <span class="eyebrow">Free resource</span>
-      <h2>Operations Audit<br><em>Checklist.</em></h2>
-      <p>A 15-question checklist for founders who want to identify where operations are breaking down — before it becomes a bigger problem.</p>
-      <div class="resource-checks">
-        <div class="resource-check"><span class="resource-check-dot"></span>Calendar health check</div>
-        <div class="resource-check"><span class="resource-check-dot"></span>Inbox efficiency score</div>
-        <div class="resource-check"><span class="resource-check-dot"></span>Workflow automation gaps</div>
-        <div class="resource-check"><span class="resource-check-dot"></span>Financial visibility audit</div>
-        <div class="resource-check"><span class="resource-check-dot"></span>Tool stack redundancy</div>
-        <div class="resource-check"><span class="resource-check-dot"></span>SOP maturity assessment</div>
+      <h2>Get the Operations<br><em>Audit Checklist.</em></h2>
+      <p>Not sure if you need operations support? This 15-question checklist shows exactly where your business is leaking time, money, and focus.</p>
+      <div class="lead-checks">
+        <div class="lead-check"><span class="lead-check-dot"></span>Calendar health check</div>
+        <div class="lead-check"><span class="lead-check-dot"></span>Inbox efficiency score</div>
+        <div class="lead-check"><span class="lead-check-dot"></span>Workflow automation gaps</div>
+        <div class="lead-check"><span class="lead-check-dot"></span>Financial visibility audit</div>
+        <div class="lead-check"><span class="lead-check-dot"></span>Tool stack redundancy</div>
+        <div class="lead-check"><span class="lead-check-dot"></span>SOP maturity assessment</div>
       </div>
-      <a href="https://drive.google.com/uc?export=download&id=1MxftcECtWvW93TEiMz-YvhIyYERulAZQ" target="_blank" class="btn-inv" style="text-decoration:none">&#x2193; Download free — no email required</a>
-      <p class="resource-note" style="margin-top:0.72rem">Direct download. No email required.</p>
+      <a href="https://drive.google.com/uc?export=download&id=1MxftcECtWvW93TEiMz-YvhIyYERulAZQ" target="_blank" class="btn-inv" style="text-decoration:none;margin-top:0.25rem">&#x2193; Download free — no email required</a>
+      <p class="lead-note" style="margin-top:0.75rem">Direct download. No email required.</p>
     </div>
-    <div class="resource-right">
-      <div class="checklist-preview">
-        <span class="checklist-lbl">Operations Audit Checklist — Preview</span>
-        <div class="cl-item"><span class="cl-box"></span>Do you have protected deep-work blocks in your calendar?</div>
-        <div class="cl-item"><span class="cl-box"></span>Is your inbox under 50 unread emails at end of day?</div>
-        <div class="cl-item"><span class="cl-box"></span>Are your processes documented or living in someone's head?</div>
-        <div class="cl-item"><span class="cl-box"></span>Do you know your exact cash position right now?</div>
-        <div class="cl-item"><span class="cl-box"></span>Are your tools talking to each other automatically?</div>
-        <div class="cl-item" style="opacity:0.35"><span class="cl-box"></span>10 more questions inside...</div>
+    <div class="lead-right">
+      <div class="lead-checklist-card">
+        <span class="lead-checklist-title">Operations Audit Checklist — Preview</span>
+        <div class="lead-cl-item"><span class="lead-cl-box"></span>Do you have protected deep-work blocks in your calendar?</div>
+        <div class="lead-cl-item"><span class="lead-cl-box"></span>Is your inbox under 50 unread emails at end of day?</div>
+        <div class="lead-cl-item"><span class="lead-cl-box"></span>Are your processes documented or living in someone's head?</div>
+        <div class="lead-cl-item"><span class="lead-cl-box"></span>Do you know your exact cash position right now?</div>
+        <div class="lead-cl-item"><span class="lead-cl-box"></span>Are your tools talking to each other automatically?</div>
+        <div class="lead-cl-item" style="opacity:0.35"><span class="lead-cl-box"></span>10 more questions inside...</div>
       </div>
-      <div class="resource-stat-row">
-        <div class="resource-stat"><div class="resource-stat-num">$15/hr</div><div class="resource-stat-lbl">Rate · hours agreed upfront</div></div>
-        <div class="resource-stat"><div class="resource-stat-num">48 hrs</div><div class="resource-stat-lbl">Typical start time after scope is confirmed</div></div>
+      <div class="lead-stat-cards">
+        <div class="lead-stat-card"><div class="lead-stat-num">$15/hr</div><div class="lead-stat-lbl">Rate · hours agreed upfront</div></div>
+        <div class="lead-stat-card"><div class="lead-stat-num">48 hrs</div><div class="lead-stat-lbl">Typical start time after scope is confirmed</div></div>
       </div>
     </div>
   </div>
 </div></div>
 
 <div class="main-cta"><div class="wrap"><div class="main-cta-inner reveal">
-  <span class="eyebrow">Let's connect</span>
-  <h2>Available now<br>for <em>remote roles.</em></h2>
-  <p>A 30-minute call to review the role and confirm fit. I'll be direct about whether my background is the right match.</p>
+  <span class="eyebrow">Ready to start?</span>
+  <h2>Book a free call.<br><em>Scope agreed. Work begins.</em></h2>
+  <p>30 minutes. You tell me what's not working. I tell you whether I can fix it and what it would look like. If it's a fit, scope is agreed and work starts within 48 hours.</p>
   <div class="cta-btns">
     <a href="https://calendly.com/monicahmburu/one-on-one" target="_blank" class="btn-inv">Schedule a call &rarr;</a>
     <a href="mailto:monicah.mburu@zohomail.com" class="btn-ghost-inv">Email me directly</a>
@@ -606,91 +751,134 @@ footer p{font-size:0.7rem;color:var(--text3)}
 
 </div><!-- end home -->
 
-<!-- ═══════════════════════ ABOUT ═══════════════════════ -->
+<!-- ═══════════ ABOUT ═══════════ -->
 <div id="page-about" class="page">
 <div class="about-hero">
   <div class="about-inner">
     <div class="about-text">
       <span class="eyebrow">About me</span>
-      <h1>Operations background.<br>Finance foundation.<br><em>Remote-ready.</em></h1>
-      <p style="margin-top:1.3rem">I'm Monicah. My background combines front office operations, executive support, and financial administration. These three things overlap more than people expect — and working across all of them has made me more practical in each one.</p>
-      <p>I've managed day-to-day office operations at a lending firm, supported a CEO on investor work and business coordination at Pitch Investors, and handled financial administration including bookkeeping setup, AP/AR, and investor-facing financial documents. The common thread is ownership: I take responsibility for outcomes, not just tasks.</p>
-      <p>I communicate before you need to ask. I work independently within a clear scope. The work I hand over is documented and self-sustaining.</p>
-      <p>I'm currently completing my <strong>MSc in Financial Engineering at WorldQuant University</strong> and hold certifications in data analytics, bookkeeping, and corporate finance. The academic side is useful context — but what you're hiring is the operational and administrative experience behind it.</p>
-      <div class="vv-callout">
-        <div class="vv-callout-icon">&#x1F4DA;</div>
-        <div class="vv-callout-body">
-          <strong>Virtually Versed Africa — Operations Bootcamp, June 2026</strong>
-          <p>Intensive programme focused on operational systems, remote team support, and scalable process design. It formalises the approach I already use in practice.</p>
-        </div>
-      </div>
+      <h1>Numbers person.<br>Operations brain.<br><em>Remote-ready.</em></h1>
+      <p style="margin-top:1.3rem">I'm Monicah. My background combines front office operations, executive support, and financial administration across three organisations. These things overlap more than people treat them — and working across all of them has made me more practical in each one.</p>
+      <p>I started in finance because I wanted to understand what numbers actually reveal. That took me into bookkeeping, financial analysis, and eventually operations — where I realised the two are harder to separate than most people think. A business with clean books but broken workflows is still broken.</p>
+      <p>I communicate before you have to ask. I work independently within a clear scope. The work I hand over is documented and self-sustaining.</p>
+      <p>I'm currently completing my <strong>MSc in Financial Engineering at WorldQuant University</strong> and hold certifications in data analytics, bookkeeping, and corporate finance. The academic side adds to the practical work — I don't just clean numbers, I understand what they mean.</p>
       <div style="display:flex;gap:0.75rem;margin-top:2rem;flex-wrap:wrap">
         <a href="https://calendly.com/monicahmburu/one-on-one" target="_blank" class="btn">Schedule a call</a>
         <a href="https://www.linkedin.com/in/monicahmburu/" target="_blank" class="btn-ghost">View LinkedIn &rarr;</a>
       </div>
     </div>
     <div>
+      <!-- Photo card -->
       <figure class="photo-card">
         <img src="https://lh3.googleusercontent.com/d/10KcYq3HJd_FPOkHjxR6sH8PXcxGq1NoY" alt="Monicah Mburu">
-        <figcaption class="photo-meta"><p>Operations &amp; Executive Support · Remote-ready</p></figcaption>
+        <figcaption class="photo-meta"><p>Finance &amp; Operations Support · Remote-ready</p></figcaption>
       </figure>
+      <!-- VV callout sits below the photo on the about page -->
+      <div class="vv-callout">
+        <div class="vv-callout-icon">&#x1F4DA;</div>
+        <div class="vv-callout-body">
+          <strong>Virtually Versed Africa — Operations Bootcamp, June 2026</strong>
+          <p>Intensive training in remote operations, systems setup, workflow automation, and execution infrastructure. It formalises the approach I already use in practice.</p>
+        </div>
+      </div>
     </div>
   </div>
 </div>
 
-<!-- FULL EXPERIENCE — about page only -->
-<div class="exp" style="background:var(--cream)"><div class="wrap">
-  <span class="eyebrow reveal">Experience</span>
-  <h2 class="reveal">Three roles. Real responsibilities.</h2>
-  <div class="exp-list">
-    <div class="exp-row reveal">
-      <div class="exp-header">
-        <div><div class="exp-co">Aspire Lending Ltd.</div><div class="exp-role">Admin &amp; Accounts Assistant</div></div>
-        <div class="exp-meta"><span class="exp-date">Mar 2025 – Present</span><span class="exp-type">Onsite · Current</span></div>
-      </div>
-      <ul class="exp-bullets">
-        <li>Primary front office contact — managed incoming calls, client correspondence, and daily operational coordination</li>
-        <li>Handled client onboarding documentation, file logbooks, and offer letter drafting from intake to completion</li>
-        <li>Coordinated insurance tracking and renewals — built a system that automated follow-up and eliminated missed renewals entirely</li>
-        <li>Maintained petty cash records, supported accounting system entries, and ran regular reconciliations</li>
-        <li>Reorganised 1,000+ physical and digital client files — standardised naming, access, and retrieval</li>
-        <li>Redesigned the weekly reporting workflow for senior staff, reducing manual preparation time significantly</li>
-      </ul>
-      <div class="exp-pills"><span class="pill">Front office operations</span><span class="pill">Client onboarding</span><span class="pill">Document management</span><span class="pill">Reconciliations</span><span class="pill">Insurance coordination</span><span class="pill">Process improvement</span></div>
+<div class="personality-section"><div class="wrap">
+  <span class="eyebrow reveal">How I work</span>
+  <h2 class="reveal">What it's like to<br>hand something <em>to me.</em></h2>
+  <div class="personality-grid">
+    <div class="personality-text reveal">
+      <p>When I pick up a new engagement, my first instinct is to understand the whole picture — not just the task sitting in front of me. If a process is broken, I want to know why before I fix the symptoms. That takes a little more time upfront and saves a lot of time later.</p>
+      <p>I work independently. A clear scope and clear goals are enough — what comes back is finished work, not a status update asking what to do next.</p>
+      <p>I communicate before you have to ask. If something unexpected comes up mid-engagement, you'll hear about it before it becomes a problem — not after I've quietly worked around it or left it sitting.</p>
+      <p><strong>The goal with every engagement is to make myself replaceable.</strong> Systems that need me to keep showing up haven't been built properly. Good infrastructure holds on its own.</p>
     </div>
-    <div class="exp-row reveal">
-      <div class="exp-header">
-        <div><div class="exp-co">Pitch Investors</div><div class="exp-role">Accountant &amp; Financial Analyst</div></div>
-        <div class="exp-meta"><span class="exp-date">Mar 2024 – Sep 2024</span><span class="exp-type">7 months</span></div>
-      </div>
-      <ul class="exp-bullets">
-        <li>Supported the CEO with lead qualification, client coordination, investor outreach, and follow-up communication</li>
-        <li>Conducted due diligence site visits and produced written analysis for investor review</li>
-        <li>Built DCF valuation models, scenario-based forecasts, and variance analysis for 10+ portfolio companies</li>
-        <li>Produced investor-ready business plans, pitch deck financials, and company financial summaries</li>
-        <li>Set up full-cycle bookkeeping from scratch in Zoho Books — chart of accounts, invoicing, billing, payroll, and reconciliations</li>
-        <li>Presented findings directly to investors and responded to live questions from the financial models</li>
-      </ul>
-      <div class="exp-pills"><span class="pill">Executive support</span><span class="pill">Investor communication</span><span class="pill">Financial modelling</span><span class="pill">Zoho Books setup</span><span class="pill">Due diligence</span><span class="pill">Pitch decks</span></div>
-    </div>
-    <div class="exp-row reveal">
-      <div class="exp-header">
-        <div><div class="exp-co">Target Mart Limited</div><div class="exp-role">Finance Intern</div></div>
-        <div class="exp-meta"><span class="exp-date">Jul 2023 – Dec 2023</span><span class="exp-type">Onsite · 6 months</span></div>
-      </div>
-      <ul class="exp-bullets">
-        <li>Managed accounts payable and receivable — tracked outstanding invoices, followed up on collections, and allocated incoming payments</li>
-        <li>Reduced unpaid receivables by 25% through a structured follow-up process</li>
-        <li>Maintained inventory and stock tracking with regular variance analysis</li>
-        <li>Handled petty cash records, financial documentation, and daily expense entries</li>
-        <li>Filed taxes across all periods at 100% accuracy — no amendments required</li>
-      </ul>
-      <div class="exp-pills"><span class="pill">AP/AR management</span><span class="pill">Inventory tracking</span><span class="pill">Variance analysis</span><span class="pill">Tax filing</span><span class="pill">Petty cash</span></div>
+    <div class="reveal"><div class="trait-list">
+      <div class="trait-item"><div class="trait-num">01</div><div class="trait-text"><h4>I catch the things that matter</h4><p>The discrepancy in the accounts. The workflow that breaks every third week. These get flagged before they get reported upward.</p></div></div>
+      <div class="trait-item"><div class="trait-num">02</div><div class="trait-text"><h4>You don't have to chase me for updates</h4><p>Updates arrive on schedule. Issues get flagged before they escalate. You shouldn't have to ask what's happening.</p></div></div>
+      <div class="trait-item"><div class="trait-num">03</div><div class="trait-text"><h4>I build systems, not just outputs</h4><p>Every deliverable connects to how the business operates. The goal is always infrastructure — something that keeps working after I'm done.</p></div></div>
+      <div class="trait-item"><div class="trait-num">04</div><div class="trait-text"><h4>I don't need hand-holding</h4><p>A clear scope and defined goals are enough. You don't need to manage me to get finished work.</p></div></div>
+    </div></div>
+  </div>
+  <div style="margin-top:3.75rem">
+    <span class="eyebrow reveal" style="margin-bottom:1.3rem">A few photos</span>
+    <div class="photo-row reveal">
+      <!-- Photo 1: using the headshot that loads reliably -->
+      <div class="photo-sm"><img src="https://lh3.googleusercontent.com/d/10KcYq3HJd_FPOkHjxR6sH8PXcxGq1NoY" alt="Monicah Mburu"></div>
+      <div class="photo-sm"><img src="https://lh3.googleusercontent.com/d/16RigImOarQ--NpYr2YvF4s4s5T1_9sRh" alt="Photo 2"></div>
+      <div class="photo-sm"><img src="https://lh3.googleusercontent.com/d/12E6mwV2VSvBw0Fedx_rOnbsNNv1ob_eD" alt="Photo 3"></div>
     </div>
   </div>
 </div></div>
 
-<section style="background:var(--warm)"><div class="wrap">
+<!-- EXPERIENCE TIMELINE — real roles only, VV removed from here -->
+<div class="timeline-section"><div class="wrap">
+  <span class="eyebrow reveal">Experience</span>
+  <h2 class="reveal">Where this background came from</h2>
+  <div class="tl-list">
+
+    <div class="tl-row reveal">
+      <div class="tl-date"><strong>Mar 2025 – Present</strong><span>Current · Onsite</span></div>
+      <div class="tl-body">
+        <div class="tl-co">Aspire Lending Ltd.</div>
+        <div class="tl-role">Admin &amp; Accounts Assistant</div>
+        <div class="tl-desc"><ul>
+          <li><strong>Front desk and client reception:</strong> First point of contact for every client walking in. I welcome them, handle incoming calls, and direct queries to the right person.</li>
+          <li><strong>Logbook management:</strong> Received and released logbooks — these are the collateral clients pledge when taking loans. Every movement was tracked and documented.</li>
+          <li><strong>Client file management:</strong> Scanned, uploaded, and stored all client files. More than 1,000 records reorganised so anyone on the team can retrieve a file in seconds.</li>
+          <li><strong>Offer letter drafting:</strong> Prepared the offer letters clients sign before a loan is issued — covering terms, amounts, and conditions. Had to get these right every time.</li>
+          <li><strong>Company mail and correspondence:</strong> Checked the company inbox daily, forwarded emails to the right parties, and handled the ones that needed a direct response.</li>
+          <li><strong>Vehicle tracker reporting:</strong> Helped the accountant compile a tracker report for the leasing company — showing which cars had active trackers and which didn't.</li>
+          <li><strong>Insurance coordination:</strong> Covered insurance renewals and follow-up when the insurance officer was away. Built a system to automate the tracking so nothing gets missed — which is what the testimonial on this site is about.</li>
+          <li><strong>Petty cash and reconciliations:</strong> Managed petty cash when the accountant was out — making payments, recording them on the accounting system, and reconciling what was posted against what was spent.</li>
+        </ul></div>
+        <div class="tl-pills"><span class="pill">Client reception</span><span class="pill">Document management</span><span class="pill">Offer letters</span><span class="pill">Insurance coordination</span><span class="pill">Petty cash</span><span class="pill">Reconciliations</span></div>
+      </div>
+    </div>
+
+    <div class="tl-row reveal">
+      <div class="tl-date"><strong>Mar 2024 – Sep 2024</strong><span>Remote · 7 months</span></div>
+      <div class="tl-body">
+        <div class="tl-co">Pitch Investors</div>
+        <div class="tl-role">Accountant &amp; Financial Analyst</div>
+        <div class="tl-desc"><ul>
+          <li><strong>Lead conversion:</strong> We ran Facebook ads to attract businesses seeking funding. When a lead came in, I was the one converting them — qualifying the business, setting up the three-way meeting between the client, the CEO (who was based in the US), and myself.</li>
+          <li><strong>Due diligence:</strong> Went to client sites with my colleague to see the actual business — verifying what they'd told us before we took them forward in the process.</li>
+          <li><strong>Financial projections and business valuation:</strong> Built financial projections from each client's previous financial statements. Used DCF and financial statement analysis to produce valuations for 10+ companies.</li>
+          <li><strong>Business plans and pitch decks:</strong> Wrote the business plans and created pitch decks for each company we were taking to investors.</li>
+          <li><strong>Investor outreach and marketing:</strong> Once the documents were ready, we identified investor leads and marketed the businesses to them — writing targeted outreach emails and following up.</li>
+          <li><strong>A notable win:</strong> For Mobile Mart Solutions, a venture capital firm called Persistent expressed interest in investing a significant amount. The client ultimately pulled out over equity concerns — but I had prepared all the documents that got them to that conversation.</li>
+          <li><strong>Bookkeeping system setup:</strong> Set up Zoho Books from scratch — built the chart of accounts, sub-accounts, invoicing, expense recording, payroll, and reconciliations. Was the first person to do any of this at the firm.</li>
+          <li><strong>Collections:</strong> Called clients to follow up on outstanding balances when needed.</li>
+        </ul></div>
+        <div class="tl-pills"><span class="pill">Remote operations</span><span class="pill">Lead conversion</span><span class="pill">Due diligence</span><span class="pill">DCF modelling</span><span class="pill">Business plans</span><span class="pill">Investor outreach</span><span class="pill">Zoho Books setup</span></div>
+      </div>
+    </div>
+
+    <div class="tl-row reveal">
+      <div class="tl-date"><strong>Jul 2023 – Dec 2023</strong><span>Onsite · 6 months</span></div>
+      <div class="tl-body">
+        <div class="tl-co">Target Mart Limited</div>
+        <div class="tl-role">Finance Intern</div>
+        <div class="tl-desc"><ul>
+          <li><strong>Stock taking and inventory:</strong> Helped count incoming goods and ran stock checks before deliveries to determine what needed restocking. Also helped with packing orders.</li>
+          <li><strong>Variance analysis on stock:</strong> Compared physical stock counts to system records to identify discrepancies and flag what was missing.</li>
+          <li><strong>Receipt organisation:</strong> Arranged and categorised receipts so they were traceable and audit-ready — which is what the testimonial on this site references.</li>
+          <li><strong>Accounts payable and receivable:</strong> Recorded invoices and payments, allocated incoming payments to the right client accounts, and ran aging reports mostly for payables to keep track of what was outstanding.</li>
+          <li><strong>Reconciliations:</strong> Reconciled accounts regularly against what had been recorded in the system.</li>
+          <li><strong>Petty cash:</strong> Managed petty cash records, handled payments, and kept the documentation current.</li>
+          <li><strong>Result:</strong> The structured follow-up processes reduced unpaid receivables by 25% over the six months.</li>
+        </ul></div>
+        <div class="tl-pills"><span class="pill">Stock taking</span><span class="pill">Variance analysis</span><span class="pill">AP/AR</span><span class="pill">Aging reports</span><span class="pill">Reconciliations</span><span class="pill">Petty cash</span></div>
+      </div>
+    </div>
+
+  </div>
+</div></div>
+
+<section style="background:var(--cream)"><div class="wrap">
   <span class="eyebrow reveal">Education</span>
   <h2 class="reveal">Academic background</h2>
   <div class="edu-grid">
@@ -713,37 +901,48 @@ footer p{font-size:0.7rem;color:var(--text3)}
 </div></section>
 </div><!-- end about -->
 
-<!-- ═══════════════════════ SERVICES ═══════════════════════ -->
+<!-- ═══════════ SERVICES ═══════════ -->
 <div id="page-services" class="page">
 <div class="svc-page-hero"><div class="wrap">
   <span class="eyebrow">What I offer</span>
-  <h1>Operations support,<br>executive assistance,<br>and <em>financial administration.</em></h1>
+  <h1>Finance, bookkeeping,<br>and <em>operational support.</em></h1>
   <p class="sub">Available as a full-time remote hire, part-time retainer, or through agency placement. Rate: $15/hr.</p>
 </div></div>
 
 <section style="background:var(--cream)"><div class="wrap">
-  <span class="eyebrow reveal">Executive &amp; Administrative Support</span>
-  <h2 class="reveal">Day-to-day coordination<br>and <em>operational follow-through.</em></h2>
-  <p class="sub reveal" style="max-width:560px">The work that keeps an executive's time protected and the team running without constant direction.</p>
+  <span class="eyebrow reveal">01 — Bookkeeping</span>
+  <h2 class="reveal">Books that are <em>always current.</em></h2>
+  <p class="sub reveal" style="max-width:580px">The point isn't tidy records for the sake of it. It's knowing where you stand financially without having to dig for the answer first.</p>
   <div class="svc-cards-grid">
-    <div class="svc-card reveal"><div class="svc-ico">📧</div><h3>Inbox &amp; calendar management</h3><span class="svc-tag">Executive support</span><p>Email triage, response drafting, scheduling, and calendar coordination. Communication managed so the executive's time stays focused.</p><ul class="svc-sub-list"><li>Inbox triage and prioritisation</li><li>Calendar structuring and scheduling</li><li>Meeting prep and follow-up notes</li><li>Correspondence drafting</li></ul></div>
-    <div class="svc-card reveal"><div class="svc-ico">📋</div><h3>Process documentation &amp; SOPs</h3><span class="svc-tag">Operations coordination</span><p>Processes written down so any team member can run them. Removes the reliance on a single person knowing how something gets done.</p><ul class="svc-sub-list"><li>SOP writing and process mapping</li><li>Workflow documentation</li><li>Onboarding guides</li><li>Operating handbooks in Notion</li></ul></div>
-    <div class="svc-card reveal"><div class="svc-ico">⚙️</div><h3>Workflow &amp; project coordination</h3><span class="svc-tag">Operations support</span><p>Project tracking, team coordination, deadline management, and operational follow-through across tools and teams.</p><ul class="svc-sub-list"><li>Project coordination via Notion, Asana, ClickUp</li><li>Task tracking and deadline management</li><li>Workflow design and improvement</li><li>Zapier and Make automations</li></ul></div>
+    <div class="svc-card reveal"><div class="svc-ico">&#x1F4D2;</div><h3>Monthly bookkeeping</h3><span class="svc-tag">Core financial maintenance</span><p>Transactions categorised, accounts reconciled, records kept current each month. The foundation everything else depends on.</p><ul class="svc-sub-list"><li>Transaction categorisation and coding</li><li>Monthly bank and credit card reconciliation</li><li>Accounts payable and receivable tracking</li><li>Payroll support and expense organisation</li></ul></div>
+    <div class="svc-card reveal"><div class="svc-ico">&#x1F4B3;</div><h3>AP/AR controls</h3><span class="svc-tag">Cash flow visibility</span><p>Outstanding invoices tracked. Payment workflows structured. Late payments reduced. The money you're owed, collected consistently.</p><ul class="svc-sub-list"><li>Invoice tracking and follow-up workflows</li><li>Vendor payment scheduling</li><li>Aging report analysis and cash flow monitoring</li><li>Petty cash reconciliation and controls</li></ul></div>
+    <div class="svc-card reveal"><div class="svc-ico">&#x1F5C2;</div><h3>Bookkeeping setup</h3><span class="svc-tag">Start clean or clean up</span><p>For businesses starting from scratch, or with books that have fallen behind — full-cycle bookkeeping setup so records are reliable going forward.</p><ul class="svc-sub-list"><li>Chart of accounts setup and organisation</li><li>Historical cleanup and catch-up bookkeeping</li><li>QuickBooks, Xero, Zoho Books, Sage</li><li>Handover documentation and SOP</li></ul></div>
   </div>
 </div></section>
 
 <section style="background:var(--warm)"><div class="wrap">
-  <span class="eyebrow reveal">Bookkeeping &amp; Financial Administration</span>
-  <h2 class="reveal">Accurate records and<br><em>financial visibility.</em></h2>
-  <p class="sub reveal" style="max-width:560px">Financial administration that keeps accounts current, AP/AR under control, and reporting ready when needed.</p>
+  <span class="eyebrow reveal">02 — Financial Reporting</span>
+  <h2 class="reveal">Numbers you can <em>do something with.</em></h2>
+  <p class="sub reveal" style="max-width:580px">Reporting should tell you something useful — not just confirm what happened.</p>
   <div class="svc-cards-grid">
-    <div class="svc-card reveal"><div class="svc-ico">📒</div><h3>Bookkeeping &amp; reconciliation</h3><span class="svc-tag">Financial administration</span><p>Monthly transaction categorisation, reconciliation, and record-keeping. Accounting system setup and ongoing maintenance.</p><ul class="svc-sub-list"><li>Monthly reconciliation and transaction coding</li><li>Zoho Books, QuickBooks, Xero setup</li><li>Payroll support and expense tracking</li><li>Petty cash management</li></ul></div>
-    <div class="svc-card reveal"><div class="svc-ico">💳</div><h3>AP/AR management</h3><span class="svc-tag">Cash flow administration</span><p>Accounts payable and receivable tracking, invoice follow-up, and payment allocation — keeping cash flow visible and collections consistent.</p><ul class="svc-sub-list"><li>Invoice tracking and follow-up</li><li>Payment allocation and reconciliation</li><li>Aging report analysis</li><li>Vendor payment scheduling</li></ul></div>
-    <div class="svc-card reveal"><div class="svc-ico">📊</div><h3>Financial reporting &amp; modelling</h3><span class="svc-tag">Reporting &amp; analysis</span><p>P&amp;L, cash flow, balance sheet, and investor-ready documents. Financial models for planning, fundraising, and decision-making.</p><ul class="svc-sub-list"><li>Monthly P&amp;L, cash flow, balance sheet</li><li>Excel dashboards and KPI tracking</li><li>DCF models and scenario forecasts</li><li>Investor reports and pitch deck financials</li></ul></div>
+    <div class="svc-card reveal"><div class="svc-ico">&#x1F4CA;</div><h3>Monthly financial reporting</h3><span class="svc-tag">Decision-ready information</span><p>P&amp;L, cash flow statement, and balance sheet produced monthly. Delivered with enough context to act on, not just review.</p><ul class="svc-sub-list"><li>Profit &amp; loss statement</li><li>Cash flow statement</li><li>Balance sheet</li><li>Month-over-month variance notes</li></ul></div>
+    <div class="svc-card reveal"><div class="svc-ico">&#x1F4C8;</div><h3>Dashboards &amp; reporting systems</h3><span class="svc-tag">Live data, not manual assembly</span><p>If compiling a report takes hours of manual work, that's a systems problem. Dashboards pull live data and surface the number you need to make the call.</p><ul class="svc-sub-list"><li>Excel dashboards connected to live data</li><li>KPI tracking and performance metrics</li><li>Budget tracking and variance analysis</li><li>Power BI reporting builds</li></ul></div>
+    <div class="svc-card reveal"><div class="svc-ico">&#x1F3E6;</div><h3>Financial modelling</h3><span class="svc-tag">For decisions and investor conversations</span><p>Forecasts, scenario models, and investor-ready financials. The kind of model that holds up when someone asks a hard question about the numbers behind it.</p><ul class="svc-sub-list"><li>DCF valuation and financial modelling</li><li>Scenario forecasting and sensitivity analysis</li><li>Investor reports and pitch deck financials</li><li>Budget models and growth projections</li></ul></div>
   </div>
 </div></section>
 
 <section style="background:var(--cream)"><div class="wrap">
+  <span class="eyebrow reveal">03 — Executive &amp; Operational Support</span>
+  <h2 class="reveal">Execution that doesn't <em>need you in the room.</em></h2>
+  <p class="sub reveal" style="max-width:580px">Operational support that builds systems — not a dependency on me.</p>
+  <div class="svc-cards-grid">
+    <div class="svc-card reveal"><div class="svc-ico">&#x1F4CB;</div><h3>Process documentation &amp; SOPs</h3><span class="svc-tag">Systems that hold independently</span><p>Processes written down so any team member can run them without asking. Removes the single-point-of-failure problem.</p><ul class="svc-sub-list"><li>SOP writing and process mapping</li><li>Workflow design and documentation</li><li>Onboarding guides and training materials</li><li>Operating handbook builds in Notion</li></ul></div>
+    <div class="svc-card reveal"><div class="svc-ico">&#x26A1;</div><h3>Workflow automation</h3><span class="svc-tag">Repetitive work that runs itself</span><p>Processes that go through the same steps every time are good candidates for automation. The manual effort gets removed while the output stays the same.</p><ul class="svc-sub-list"><li>Excel automation and formula builds</li><li>Zapier and Make workflow builds</li><li>Google Workspace automation</li><li>Integration between disconnected tools</li></ul></div>
+    <div class="svc-card reveal"><div class="svc-ico">&#x1F5D3;</div><h3>Executive administration</h3><span class="svc-tag">Coordination handled</span><p>Inbox management, calendar structure, meeting preparation, follow-through. The operational overhead that pulls founders away from the work that actually moves the business.</p><ul class="svc-sub-list"><li>Inbox management and triage</li><li>Calendar design and scheduling</li><li>Meeting prep and follow-up notes</li><li>Project coordination via Notion, Asana, Trello</li></ul></div>
+  </div>
+</div></section>
+
+<section style="background:var(--warm)"><div class="wrap">
   <span class="eyebrow reveal">Tool stack</span>
   <h2 class="reveal">Tools I work with</h2>
   <div class="tools-grid">
@@ -759,9 +958,9 @@ footer p{font-size:0.7rem;color:var(--text3)}
     <div class="tool-card reveal"><div class="tool-logo"><svg viewBox="0 0 100 100"><rect width="100" height="100" rx="18" fill="#F06A6A"/><circle cx="50" cy="32" r="16" fill="#fff"/><circle cx="23" cy="67" r="16" fill="#fff"/><circle cx="77" cy="67" r="16" fill="#fff"/></svg></div><div class="tool-name">Asana</div><div class="tool-cat">Project management</div></div>
     <div class="tool-card reveal"><div class="tool-logo"><svg viewBox="0 0 100 100"><rect width="100" height="100" rx="18" fill="#7B68EE"/><polyline points="18,54 36,75 82,28" stroke="#fff" stroke-width="11" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg></div><div class="tool-name">ClickUp</div><div class="tool-cat">Project · Docs · Goals</div></div>
     <div class="tool-card reveal"><div class="tool-logo"><svg viewBox="0 0 100 100"><rect width="100" height="100" rx="14" fill="#0078D4"/><rect x="11" y="25" width="54" height="47" rx="5" fill="#fff" opacity="0.95"/><polyline points="11,25 38,46 65,25" stroke="#0078D4" stroke-width="3.5" fill="none"/><rect x="57" y="50" width="32" height="32" rx="5" fill="#50A0E8"/><text x="73" y="72" font-family="Arial,sans-serif" font-size="16" font-weight="bold" fill="#fff" text-anchor="middle">31</text></svg></div><div class="tool-name">Outlook</div><div class="tool-cat">Email · Calendar</div></div>
-    <div class="tool-card reveal"><div class="tool-logo"><svg viewBox="0 0 100 100"><circle cx="50" cy="50" r="47" fill="#2D8CFF"/><rect x="11" y="29" width="50" height="43" rx="9" fill="#fff"/><polygon points="65,32 93,18 93,82 65,68" fill="#fff"/></svg></div><div class="tool-name">Zoom</div><div class="tool-cat">Video meetings</div></div>
-    <div class="tool-card reveal"><div class="tool-logo"><svg viewBox="0 0 100 100"><rect width="100" height="100" rx="14" fill="#6264A7"/><circle cx="39" cy="32" r="15" fill="#fff"/><path d="M14 79 C14 61 64 61 64 79" fill="#fff"/><circle cx="72" cy="27" r="11" fill="#B0B1D8"/><path d="M54 76 C56 65 93 65 89 79" fill="#B0B1D8"/></svg></div><div class="tool-name">MS Teams</div><div class="tool-cat">Meetings · Chat</div></div>
     <div class="tool-card reveal"><div class="tool-logo"><svg viewBox="0 0 100 100"><rect width="100" height="100" rx="14" fill="#fff" stroke="#dadce0" stroke-width="2.5"/><rect x="0" y="0" width="100" height="29" rx="14" fill="#1A73E8"/><rect x="0" y="14" width="100" height="14" fill="#1A73E8"/><line x1="0" y1="52" x2="100" y2="52" stroke="#e0e0e0" stroke-width="1.5"/><line x1="0" y1="75" x2="100" y2="75" stroke="#e0e0e0" stroke-width="1.5"/><line x1="34" y1="29" x2="34" y2="100" stroke="#e0e0e0" stroke-width="1.5"/><line x1="67" y1="29" x2="67" y2="100" stroke="#e0e0e0" stroke-width="1.5"/><text x="50" y="68" font-family="Arial,sans-serif" font-size="20" font-weight="bold" fill="#1A73E8" text-anchor="middle">28</text><circle cx="27" cy="7" r="5" fill="#fff"/><circle cx="73" cy="7" r="5" fill="#fff"/></svg></div><div class="tool-name">Google Calendar</div><div class="tool-cat">Scheduling · Time</div></div>
+    <div class="tool-card reveal"><div class="tool-logo"><svg viewBox="0 0 100 100"><rect width="100" height="100" rx="14" fill="#6264A7"/><circle cx="39" cy="32" r="15" fill="#fff"/><path d="M14 79 C14 61 64 61 64 79" fill="#fff"/><circle cx="72" cy="27" r="11" fill="#B0B1D8"/><path d="M54 76 C56 65 93 65 89 79" fill="#B0B1D8"/></svg></div><div class="tool-name">MS Teams</div><div class="tool-cat">Meetings · Chat</div></div>
+    <div class="tool-card reveal"><div class="tool-logo"><svg viewBox="0 0 100 100"><circle cx="50" cy="50" r="47" fill="#2D8CFF"/><rect x="11" y="29" width="50" height="43" rx="9" fill="#fff"/><polygon points="65,32 93,18 93,82 65,68" fill="#fff"/></svg></div><div class="tool-name">Zoom</div><div class="tool-cat">Video meetings</div></div>
   </div>
 </div></section>
 
@@ -772,12 +971,12 @@ footer p{font-size:0.7rem;color:var(--text3)}
 </div></section>
 </div><!-- end services -->
 
-<!-- ═══════════════════════ WORK ═══════════════════════ -->
+<!-- ═══════════ WORK ═══════════ -->
 <div id="page-work" class="page">
 <div class="ws-hero"><div class="wrap">
   <span class="eyebrow">Work Samples</span>
   <h1>Real engagements.<br>Real deliverables.<br><em>Real outcomes.</em></h1>
-  <p class="sub">Five projects — the situation, what was built, and what changed. Click any image to enlarge.</p>
+  <p class="sub">Five projects — the problem, what was built, and what changed. Click any image to enlarge.</p>
 </div></div>
 
 <section style="background:var(--cream)"><div class="wrap"><div class="work-list">
@@ -785,8 +984,8 @@ footer p{font-size:0.7rem;color:var(--text3)}
 <div class="work-card reveal">
 <div class="work-card-header">
 <span class="we-tag tag-d">Executive Operations · Simulated Project</span>
-<h3>CEO Calendar Chaos → Structured System</h3>
-<div class="we-outcome-pills"><span class="we-outcome-pill">47 meetings → 1 system</span><span class="we-outcome-pill">3 tools → 1 calendar</span><span class="we-outcome-pill">Focus time protected daily</span><span class="we-outcome-pill">5 SOPs live</span></div>
+<h3>CEO Calendar Chaos to Structured System</h3>
+<div class="we-outcome-pills"><span class="we-outcome-pill">47 meetings to 1 system</span><span class="we-outcome-pill">3 tools to 1 calendar</span><span class="we-outcome-pill">Focus time protected daily</span><span class="we-outcome-pill">5 SOPs live</span></div>
 </div>
 <div class="work-card-body"><div class="we-cols">
 <div>
@@ -804,7 +1003,7 @@ footer p{font-size:0.7rem;color:var(--text3)}
 </div>
 <div>
 <span class="we-lbl">What changed</span>
-<div class="we-result-box"><div class="we-result-lbl">Results</div><div class="we-pills"><span class="we-pill">47 meetings → structured system</span><span class="we-pill">3 tools → 1 calendar</span><span class="we-pill">Focus time protected daily</span><span class="we-pill">5 SOPs live</span></div></div>
+<div class="we-result-box"><div class="we-result-lbl">Results</div><div class="we-pills"><span class="we-pill">47 meetings to structured system</span><span class="we-pill">3 tools to 1 calendar</span><span class="we-pill">Focus time protected daily</span><span class="we-pill">5 SOPs live</span></div></div>
 <p class="we-text" style="margin-top:1.05rem">Maya went from reactive scheduling to intentional time ownership. Investor check-ins stopped being missed. Co-founder bookings now go through an approval workflow. The system runs without daily management.</p>
 <div class="we-files">
 <a href="https://docs.google.com/document/d/1bDrGI8S5iUOxE8wL_2-8HxxBBWp6d42IPkOPMeIBNkg/edit?usp=sharing" target="_blank" class="we-file-link"><span>📄</span> Calendar Architecture Doc</a>
@@ -816,8 +1015,8 @@ footer p{font-size:0.7rem;color:var(--text3)}
 <div class="work-card-images">
 <span class="we-images-label">Before &amp; after — calendar screenshots</span>
 <div class="ba-grid">
-<div class="ba-item"><div class="ba-label before">⚠ Before — initial calendar</div><div class="img-placeholder"><span>📅</span><p>Replace with your before-calendar screenshot<br><code>&lt;img src="your-image.png"&gt;</code></p></div></div>
-<div class="ba-item"><div class="ba-label after">✓ After — restructured system</div><div class="img-placeholder"><span>✅</span><p>Replace with your after-calendar screenshot<br><code>&lt;img src="your-image.png"&gt;</code></p></div></div>
+<div class="ba-item"><div class="ba-label before">&#x26A0; Before — initial calendar</div><div class="img-placeholder"><span>📅</span><p>Replace with your before-calendar screenshot<br><code>&lt;img src="your-image.png"&gt;</code></p></div></div>
+<div class="ba-item"><div class="ba-label after">&#x2713; After — restructured system</div><div class="img-placeholder"><span>✅</span><p>Replace with your after-calendar screenshot<br><code>&lt;img src="your-image.png"&gt;</code></p></div></div>
 </div>
 </div>
 </div>
@@ -836,15 +1035,15 @@ footer p{font-size:0.7rem;color:var(--text3)}
 <ul class="we-steps">
 <li>Financial data cleaned and standardised across all 10 companies</li>
 <li>DCF valuation models, scenario-based forecasts, and variance analysis built for each</li>
-<li>10+ investor-ready proposals and pitch decks produced</li>
-<li>Findings presented directly to investors — questions fielded live from the models</li>
+<li>Business plans and pitch decks produced for each company</li>
+<li>Investor outreach written and sent — findings presented directly in meetings</li>
 </ul>
-<div class="we-chips"><span class="we-chip">Excel</span><span class="we-chip">DCF Modelling</span><span class="we-chip">Scenario Analysis</span><span class="we-chip">Investor Reporting</span></div>
+<div class="we-chips"><span class="we-chip">Excel</span><span class="we-chip">DCF Modelling</span><span class="we-chip">Scenario Analysis</span><span class="we-chip">Investor Reporting</span><span class="we-chip">Business Plans</span></div>
 </div>
 <div>
 <span class="we-lbl">What changed</span>
 <div class="we-result-box"><div class="we-result-lbl">Results</div><div class="we-pills"><span class="we-pill">$500K+ investor interest</span><span class="we-pill">40% higher engagement</span><span class="we-pill">30% better forecasting</span></div></div>
-<p class="we-text" style="margin-top:1.05rem">Investors responded to clarity of data, not just the business case. Clean, defensible models built credibility that general pitch decks don't.</p>
+<p class="we-text" style="margin-top:1.05rem">Investors responded to clarity of data, not just the business case. For one company, Mobile Mart Solutions, a VC firm expressed interest in a significant investment — the client pulled out over equity concerns, but the documents I prepared got them to that table.</p>
 </div>
 </div></div>
 <div class="work-card-images">
@@ -860,7 +1059,7 @@ footer p{font-size:0.7rem;color:var(--text3)}
 <div class="work-card-header">
 <span class="we-tag tag-b">Workflow Automation · Aspire Lending</span>
 <h3>20 hours freed per week — reporting workflow rebuilt before anyone asked</h3>
-<div class="we-outcome-pills"><span class="we-outcome-pill">40% faster reporting</span><span class="we-outcome-pill">20 hrs/week freed</span><span class="we-outcome-pill">900+ files structured</span></div>
+<div class="we-outcome-pills"><span class="we-outcome-pill">40% faster reporting</span><span class="we-outcome-pill">20 hrs/week freed</span><span class="we-outcome-pill">1,000+ files structured</span></div>
 </div>
 <div class="work-card-body"><div class="we-cols">
 <div>
@@ -870,14 +1069,14 @@ footer p{font-size:0.7rem;color:var(--text3)}
 <ul class="we-steps">
 <li>Reporting process mapped — exact points of time loss identified</li>
 <li>Workflow redesigned — data pulls automated, formats standardised in Excel</li>
-<li>Filing system built for 900+ physical and digital loan files</li>
+<li>Filing system built for 1,000+ physical and digital loan files</li>
 <li>Full process documented as a SOP — any team member can maintain it independently</li>
 </ul>
 <div class="we-chips"><span class="we-chip">Excel</span><span class="we-chip">Process Mapping</span><span class="we-chip">SOP Writing</span><span class="we-chip">Workflow Automation</span></div>
 </div>
 <div>
 <span class="we-lbl">What changed</span>
-<div class="we-result-box"><div class="we-result-lbl">Results</div><div class="we-pills"><span class="we-pill">40% faster reporting</span><span class="we-pill">20 hrs/week freed</span><span class="we-pill">900+ files structured</span></div></div>
+<div class="we-result-box"><div class="we-result-lbl">Results</div><div class="we-pills"><span class="we-pill">40% faster reporting</span><span class="we-pill">20 hrs/week freed</span><span class="we-pill">1,000+ files structured</span></div></div>
 <p class="we-text" style="margin-top:1.05rem">Identical output. Time cost removed. The hours recovered came from eliminating unnecessary manual steps, not cutting corners on the work.</p>
 </div>
 </div></div>
@@ -893,24 +1092,25 @@ footer p{font-size:0.7rem;color:var(--text3)}
 <div class="work-card-header">
 <span class="we-tag tag-c">Financial Controls · Target Mart</span>
 <h3>60% fewer payment discrepancies — AP/AR controls rebuilt from scratch</h3>
-<div class="we-outcome-pills"><span class="we-outcome-pill">60% fewer discrepancies</span><span class="we-outcome-pill">40% fewer late payments</span><span class="we-outcome-pill">100% on-time payroll</span></div>
+<div class="we-outcome-pills"><span class="we-outcome-pill">60% fewer discrepancies</span><span class="we-outcome-pill">25% fewer unpaid invoices</span><span class="we-outcome-pill">100% tax compliance</span></div>
 </div>
 <div class="work-card-body"><div class="we-cols">
 <div>
 <span class="we-lbl">The situation</span>
-<p class="we-text">Late payments building up. Petty cash out of balance. Invoicing slow, so cash collection was slow. The revenue existed. The controls to track and collect it consistently did not.</p>
+<p class="we-text">Late payments building up. Petty cash out of balance. Receipts unorganised and untraceable. The revenue existed. The controls to track and collect it consistently did not.</p>
 <span class="we-lbl" style="margin-top:1.3rem;display:block">What was built</span>
 <ul class="we-steps">
-<li>AP/AR tracking system rebuilt with structured follow-up workflows</li>
-<li>Daily petty cash reconciliation with documentation and approval controls</li>
-<li>Invoicing process redesigned — time from issue to confirmation reduced</li>
-<li>Payroll processing streamlined — 100% on-time disbursement maintained</li>
+<li>AP/AR tracking rebuilt — invoices recorded, payments allocated to the right client accounts, aging reports shared for payables</li>
+<li>Receipts organised and categorised so every transaction was traceable</li>
+<li>Stock variance analysis run to identify missing inventory</li>
+<li>Petty cash records maintained with full documentation</li>
+<li>Tax filing handled at 100% accuracy across all periods</li>
 </ul>
-<div class="we-chips"><span class="we-chip">QuickBooks</span><span class="we-chip">Excel</span><span class="we-chip">AP/AR Controls</span><span class="we-chip">Cash Flow Systems</span></div>
+<div class="we-chips"><span class="we-chip">QuickBooks</span><span class="we-chip">Excel</span><span class="we-chip">AP/AR Controls</span><span class="we-chip">Stock variance</span></div>
 </div>
 <div>
 <span class="we-lbl">What changed</span>
-<div class="we-result-box"><div class="we-result-lbl">Results</div><div class="we-pills"><span class="we-pill">60% fewer discrepancies</span><span class="we-pill">40% fewer late payments</span><span class="we-pill">100% on-time payroll</span></div></div>
+<div class="we-result-box"><div class="we-result-lbl">Results</div><div class="we-pills"><span class="we-pill">60% fewer discrepancies</span><span class="we-pill">25% fewer unpaid invoices</span><span class="we-pill">100% tax compliance</span></div></div>
 <p class="we-text" style="margin-top:1.05rem">The business didn't need more revenue. It needed better controls on the revenue already coming in. Structural changes produced financial results without adding headcount.</p>
 </div>
 </div></div>
@@ -962,7 +1162,7 @@ footer p{font-size:0.7rem;color:var(--text3)}
 <div class="cert-dark-wrap reveal">
 <span class="eyebrow">Credentials</span>
 <h3>Five certifications backing the work</h3>
-<p>Verification links active on the About page. Click any to confirm.</p>
+<p>Verification links are active on the About page.</p>
 <div class="cert-dark-grid">
 <div class="cert-dark-item"><span class="cert-dark-ico">🔵</span><div class="cert-dark-name">Google Data Analytics</div><div class="cert-dark-by">Google / Coursera</div></div>
 <div class="cert-dark-item"><span class="cert-dark-ico">🟦</span><div class="cert-dark-name">IBM Data Science Practitioner</div><div class="cert-dark-by">IBM SkillsBuild</div></div>
@@ -973,8 +1173,8 @@ footer p{font-size:0.7rem;color:var(--text3)}
 </div>
 
 <div style="margin-top:2.5rem;background:#fff;border:1px solid var(--ink-border);border-radius:var(--r);padding:2rem;text-align:center" class="reveal">
-<h3 style="font-size:1.2rem;margin-bottom:0.45rem">Interested in working together?</h3>
-<p style="font-size:0.82rem;color:var(--text2);font-weight:300;margin-bottom:1.25rem;max-width:440px;margin-left:auto;margin-right:auto;margin-top:0.4rem">30 minutes to review the role and confirm fit. No pitch. A direct conversation about what needs doing and whether I'm the right match.</p>
+<h3 style="font-size:1.2rem;margin-bottom:0.45rem">See yourself in any of this?</h3>
+<p style="font-size:0.82rem;color:var(--text2);font-weight:300;margin-bottom:1.25rem;max-width:440px;margin-left:auto;margin-right:auto;margin-top:0.4rem">30 minutes to confirm what applies and agree on scope. No pitch. A straight conversation about what needs fixing and whether I'm the right person to fix it.</p>
 <div style="display:flex;gap:0.75rem;justify-content:center;flex-wrap:wrap">
 <a href="https://calendly.com/monicahmburu/one-on-one" target="_blank" class="btn">Schedule a call &rarr;</a>
 <a href="mailto:monicah.mburu@zohomail.com" class="btn-ghost">Email directly</a>
@@ -984,12 +1184,12 @@ footer p{font-size:0.7rem;color:var(--text3)}
 </div></section>
 </div><!-- end work -->
 
-<!-- ═══════════════════════ CONTACT ═══════════════════════ -->
+<!-- ═══════════ CONTACT ═══════════ -->
 <div id="page-contact" class="page">
 <div class="contact-hero"><div class="wrap">
   <span class="eyebrow">Contact</span>
-  <h1>Open to remote roles.<br><em>Let's talk.</em></h1>
-  <p class="sub">A 30-minute call to review the role and confirm whether my background is the right fit. No commitment needed.</p>
+  <h1>30 minutes to figure out<br>if this is <em>the right fit.</em></h1>
+  <p class="sub">Project or retainer — the call determines which engagement fits, what the scope looks like, and what it would cost. No pitch. A straight conversation about what needs fixing.</p>
 </div></div>
 
 <section style="background:var(--cream)"><div class="wrap"><div class="contact-grid">
@@ -1005,24 +1205,25 @@ footer p{font-size:0.7rem;color:var(--text3)}
         <div>📅 Discovery call is free</div>
         <div>💰 $15/hr for freelance and fractional work</div>
         <div>✅ Open to full-time remote employment</div>
+        <div>🔒 NDAs signed on request</div>
       </div>
     </div>
   </div>
   <div>
     <div class="book-card reveal">
       <h3>Book a discovery call</h3>
-      <p>30 minutes. We review the role, I walk through my experience, and we confirm whether it's a match.</p>
-      <div class="b-step"><div class="b-num">1</div><p>Pick a time on Calendly.</p></div>
-      <div class="b-step"><div class="b-num">2</div><p>Brief intake form — role type, tools used, key responsibilities.</p></div>
+      <p>30 minutes. We review the situation, I walk through what I've done, and we confirm whether it's a match.</p>
+      <div class="b-step"><div class="b-num">1</div><p>Pick a time on Calendly. Takes two minutes.</p></div>
+      <div class="b-step"><div class="b-num">2</div><p>A short intake form — role type, tools used, what needs fixing.</p></div>
       <div class="b-step"><div class="b-num">3</div><p>30-minute call. I'll be direct about whether my background fits.</p></div>
-      <div class="b-step"><div class="b-num">4</div><p>If it's a match — next steps agreed and work begins promptly.</p></div>
+      <div class="b-step"><div class="b-num">4</div><p>If it's a match — scope agreed and work begins within 48 hours.</p></div>
       <a href="https://calendly.com/monicahmburu/one-on-one" target="_blank" class="btn" style="width:100%;display:flex;margin-top:1.5rem">Schedule a free call &rarr;</a>
     </div>
   </div>
 </div></div></section>
 
 <footer>
-<p>&copy; 2026 Monicah Mburu &middot; Operations &amp; Executive Support &middot; Remote-ready</p>
+<p>&copy; 2026 Monicah Mburu &middot; Finance &amp; Operations Support &middot; Remote-ready</p>
 <div class="footer-links">
 <a href="https://www.linkedin.com/in/monicahmburu/" target="_blank">LinkedIn</a>
 <a href="https://wa.me/254798498795" target="_blank">WhatsApp</a>

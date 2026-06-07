@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Monicah Mburu — Finance & Operations Support</title>
+<title>Monicah Mburu Finance & Operations expert</title>
 <meta name="description" content="Financial clarity and operational support for founders. Bookkeeping, financial reporting, and execution support. Remote-ready worldwide.">
 <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet">
 <style>
@@ -141,13 +141,18 @@ h3{font-family:var(--serif);font-size:1.18rem;font-weight:500;color:var(--dark)}
 .svc-outcome-num{font-family:var(--serif);font-size:1.55rem;font-weight:600;color:var(--ink2);line-height:1;margin-bottom:0.22rem}
 .svc-outcome-text{font-size:0.72rem;color:rgba(255,255,255,0.32);line-height:1.58;font-weight:300}
 
-/* HOW IT WORKS */
+/* HOW IT WORKS — FIX: define both old and new class names */
 .how-section{background:var(--cream);padding:6.5rem 0}
 .how-intro{max-width:480px;margin-bottom:3.25rem}
+/* steps in a single straight column (new class used in HTML) */
+.how-steps-straight{display:flex;flex-direction:column}
+.how-steps-straight .how-step,
+.how-steps .how-step{display:flex;gap:1.6rem;padding:1.85rem 0;border-bottom:1px solid var(--border)}
+.how-steps-straight .how-step:last-child,
+.how-steps .how-step:last-child{border-bottom:none}
+/* also keep the old grid layout class for backward compat */
 .how-grid{display:grid;grid-template-columns:1fr 1fr;gap:5.5rem;align-items:start}
 .how-steps{display:flex;flex-direction:column}
-.how-step{display:flex;gap:1.6rem;padding:1.85rem 0;border-bottom:1px solid var(--border)}
-.how-step:last-child{border-bottom:none}
 .how-step-num{font-family:var(--serif);font-size:2.6rem;font-weight:600;color:var(--ink-pale);line-height:1;flex-shrink:0;width:2.6rem;padding-top:0.15rem}
 .how-step-body h4{font-family:var(--serif);font-size:1.07rem;font-weight:500;color:var(--dark);margin-bottom:0.38rem}
 .how-step-body p{font-size:0.81rem;color:var(--text2);line-height:1.8;font-weight:300}
@@ -159,13 +164,18 @@ h3{font-family:var(--serif);font-size:1.18rem;font-weight:500;color:var(--dark)}
 .proof-stat-num{font-family:var(--serif);font-size:2rem;font-weight:600;color:var(--ink2);line-height:1;margin-bottom:0.22rem}
 .proof-stat-label{font-size:0.79rem;font-weight:500;color:rgba(255,255,255,0.55);margin-bottom:0.1rem}
 .proof-stat-desc{font-size:0.72rem;color:rgba(255,255,255,0.24);line-height:1.62;font-weight:300}
+/* separate CTA below steps (new class) */
+.how-work-cta-separate{background:#fff;border:1px solid var(--border);border-radius:var(--r);padding:2rem}
 .how-work-cta{background:#fff;border:1px solid var(--border);border-radius:var(--r);padding:1.6rem;text-align:center}
 .how-work-cta p{font-size:0.8rem;color:var(--text2);font-weight:300;margin-bottom:1.05rem;line-height:1.68}
 
 /* ENGAGEMENT TYPES */
 .engage-section{background:var(--warm);padding:6.5rem 0}
-.engage-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.6rem;margin-top:3.25rem}
-.engage-card{border-radius:var(--r);padding:2.4rem;position:relative;overflow:hidden}
+/* intro text block above grid */
+.engage-intro-text{max-width:650px;margin-bottom:2.5rem}
+.engage-intro-text .sub{margin-top:0}
+.engage-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.6rem;margin-top:0}
+.engage-card{border-radius:var(--r);padding:2.4rem;position:relative;overflow:hidden;display:flex;flex-direction:column}
 .engage-card.project{background:#fff;border:1px solid var(--border)}
 .engage-card.project::before{content:"";position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--ink),var(--ink2))}
 .engage-card.retainer{background:var(--dark);border:1px solid rgba(255,255,255,0.05)}
@@ -180,7 +190,7 @@ h3{font-family:var(--serif);font-size:1.18rem;font-weight:500;color:var(--dark)}
 .engage-card>p{font-size:0.82rem;line-height:1.82;font-weight:300;margin-bottom:1.6rem}
 .engage-card.project>p{color:var(--text2)}
 .engage-card.retainer>p{color:rgba(255,255,255,0.3)}
-.engage-list{list-style:none;display:flex;flex-direction:column;gap:0.52rem;margin-bottom:1.85rem}
+.engage-list{list-style:none;display:flex;flex-direction:column;gap:0.52rem;margin-bottom:1.85rem;flex:1}
 .engage-list li{font-size:0.79rem;display:flex;gap:0.68rem;align-items:flex-start;line-height:1.58}
 .engage-card.project .engage-list li{color:var(--text2)}
 .engage-card.retainer .engage-list li{color:rgba(255,255,255,0.3)}
@@ -610,68 +620,84 @@ footer p{font-size:0.7rem;color:var(--text3)}
     </div>
     <div class="svc-row reveal">
       <div><div class="svc-num">03</div><div class="svc-row-label">Executive &amp; Operational Support</div><h3>Work that moves without you watching it</h3></div>
-      <div><p class="svc-row-desc">This isn't about ticking tasks off a list. It's about building the infrastructure from documented processes, coordination systems, and reliable follow through so important work keeps moving even when you're not in the room.</p><div class="svc-row-why"><strong>Why this actually matters</strong>When you're the only person who knows how something gets done, your time is permanently rationed. Written-down systems and reliable execution create the space to actually think about the business.</div><ul class="svc-items" style="margin-top:1.05rem"><li>SOP writing and process documentation</li><li>Workflow design and automation (Zapier, Make)</li><li>Inbox and calendar management</li><li>Project coordination and follow-through</li></ul></div>
+      <div><p class="svc-row-desc">This isn't about ticking tasks off a list. It's about building the infrastructure from documented processes, coordination systems, and reliable follow through so important work keeps moving even when you're not in the room.</p><div class="svc-row-why"><strong>Why this actually matters</strong>When you're the only person who knows how something gets done, your time is permanently rationed. Written-down systems and reliable execution create the space to actually think about the business.</div><ul class="svc-items" style="margin-top:1.05rem"><li>SOP writing and process documentation</li><li>Workflow design and automation (Zapier, Make)</li><li>Inbox and calendar management</li><li>Project coordination and follow through</li></ul></div>
       <div class="svc-right"><div class="svc-right-lbl">From the work</div><div class="svc-outcome"><div class="svc-outcome-num">10 hrs</div><div class="svc-outcome-text">freed per week when a manual weekly reporting process was redesigned and automated</div></div><div class="svc-outcome" style="margin-top:0.68rem"><div class="svc-outcome-num">8 SOPs</div><div class="svc-outcome-text">written and live. New hires onboard without the founder being involved.</div></div></div>
     </div>
   </div>
   <div style="margin-top:2.1rem;text-align:center"><a href="javascript:void(0)" onclick="return show('services')" class="btn-ghost">Full service details &rarr;</a></div>
 </div></div>
+
+<!-- HOW IT WORKS — fixed: single column layout, CTA below -->
 <div class="how-section"><div class="wrap">
   <div class="how-intro reveal">
     <span class="eyebrow">How it works</span>
     <h2>From a conversation<br>to <em>systems that run.</em></h2>
     <p class="sub">The process is straightforward on your end. You describe the situation. I scope the work. We start.</p>
   </div>
-  
-  <!-- Steps stacked straight down in a single column -->
+
   <div class="how-steps-straight">
-    <div class="how-step reveal"><div class="how-step-num">1</div><div class="how-step-body"><h4>We talk for 30 minutes</h4><p>We discuss where the friction is — from lagging finances to manual reporting to broken processes. I figure out the root cause and whether I'm the right person to fix it.</p></div></div>
+    <div class="how-step reveal"><div class="how-step-num">1</div><div class="how-step-body"><h4>We talk for 30 minutes</h4><p>We discuss where the friction is from lagging finances to manual reporting to broken processes. I figure out the root cause and whether I'm the right person to fix it.</p></div></div>
     <div class="how-step reveal"><div class="how-step-num">2</div><div class="how-step-body"><h4>Scope agreed before work begins</h4><p>For projects, deliverables and estimated hours are confirmed upfront. For retainers, monthly scope is agreed at onboarding. No open ended commitments on either side.</p></div></div>
     <div class="how-step reveal"><div class="how-step-num">3</div><div class="how-step-body"><h4>Work starts within 48 hours</h4><p>You give me access to the books, tools, and relevant workflows. I audit the current state, identify the gaps, and start building against the agreed scope.</p></div></div>
     <div class="how-step reveal"><div class="how-step-num">4</div><div class="how-step-body"><h4>Systems are handed over or kept running</h4><p>Project engagements close with full documentation so everything holds without me. Retainers keep the systems accurate and current each month going forward.</p></div></div>
   </div>
 
-  <hr style="border: 0; border-top: 1px solid dashed; opacity: 0.1; margin: 3rem 0;">
+  <div style="border-top:1px solid var(--border);margin:3rem 0"></div>
 
-  <!-- Separated CTA section underneath -->
-  <div class="how-work-cta-separate reveal" style="max-width: 500px; margin: 0 auto; text-align: center;">
-    <p style="margin-bottom: 1.5rem;">Five documented case studies with deliverables, process notes, and real outcomes you can look through.</p>
-    <a href="javascript:void(0)" onclick="return show('work')" class="btn" style="display: inline-flex; justify-content: center; width: 100%;">View work samples &rarr;</a>
+  <div class="how-work-cta-separate reveal" style="max-width:500px;margin:0 auto;text-align:center;">
+    <p style="font-size:0.8rem;color:var(--text2);font-weight:300;line-height:1.68;margin-bottom:1.5rem">Five documented case studies with deliverables, process notes, and real outcomes you can look through.</p>
+    <a href="javascript:void(0)" onclick="return show('work')" class="btn" style="display:inline-flex;justify-content:center;width:100%">View work samples &rarr;</a>
   </div>
 </div></div>
 
-  
+<!-- ENGAGEMENT TYPES — fixed: cards contain their own content -->
 <div class="engage-section"><div class="wrap">
   <span class="eyebrow reveal">How we work together</span>
   <h2 class="reveal">Projects build the system.<br><em>Retainers keep it running.</em></h2>
-  
-  <!-- Moved to a single full-width column above the grid split -->
-  <div class="engage-intro-text reveal" style="max-width: 650px; margin-bottom: 2.5rem;">
+
+  <div class="engage-intro-text reveal">
     <p class="sub">The difference matters. A project is scoped, time bound, and ends with a deliverable you own. A retainer is ongoing maintenance with a defined monthly scope. Most clients do both in that order.</p>
   </div>
 
   <div class="engage-grid reveal">
     <div class="engage-card project">
-      <!-- Your project card content stays here -->
-    </div>
-    <!-- Your retainer card content stays here -->
-  </div>
-</div></div>
       <span class="engage-badge">Project engagement</span>
       <h3>Build the infrastructure</h3>
       <p>Scoped and time bound. Books cleaned, workflows built, dashboards connected, SOPs written. Ends with a fully documented system you own.</p>
-      <ul class="engage-list"><li><span>&rarr;</span><span>Books reconciled and brought current</span></li><li><span>&rarr;</span><span>Financial reporting dashboard built and connected to live data</span></li><li><span>&rarr;</span><span>Workflows automated end to end</span></li><li><span>&rarr;</span><span>SOPs written so processes run without the founder</span></li><li><span>&rarr;</span><span>Full documentation handed over at close</span></li></ul>
-      <div class="engage-price"><div class="engage-price-num">$15/hr</div><div class="engage-price-note">Scope and estimated hours agreed before work begins. No surprises.</div></div>
+      <ul class="engage-list">
+        <li><span>&rarr;</span><span>Books reconciled and brought current</span></li>
+        <li><span>&rarr;</span><span>Financial reporting dashboard built and connected to live data</span></li>
+        <li><span>&rarr;</span><span>Workflows automated end to end</span></li>
+        <li><span>&rarr;</span><span>SOPs written so processes run without the founder</span></li>
+        <li><span>&rarr;</span><span>Full documentation handed over at close</span></li>
+      </ul>
+      <div class="engage-price">
+        <div class="engage-price-num">$15/hr</div>
+        <div class="engage-price-note">Scope and estimated hours agreed before work begins. No surprises.</div>
+      </div>
     </div>
     <div class="engage-card retainer">
       <span class="engage-badge">Monthly retainer</span>
       <h3>Keep what <em>was built</em> running</h3>
       <p>Ongoing financial maintenance, workflow oversight, and operational continuity. Monthly scope agreed at onboarding.</p>
-      <ul class="engage-list"><li><span>&rarr;</span><span>Monthly bookkeeping and reconciliation</span></li><li><span>&rarr;</span><span>Income statement, cash flow, and balance sheet produced monthly</span></li><li><span>&rarr;</span><span>Dashboard updated and current each month</span></li><li><span>&rarr;</span><span>Workflow maintenance and SOP updates as needed</span></li><li><span>&rarr;</span><span>Monthly operational reporting</span></li></ul>
-      <div class="engage-price"><div class="engage-price-num">$15/hr</div><div class="engage-price-note">Estimated monthly hours agreed at onboarding. Billed on actuals.</div></div>
+      <ul class="engage-list">
+        <li><span>&rarr;</span><span>Monthly bookkeeping and reconciliation</span></li>
+        <li><span>&rarr;</span><span>Income statement, cash flow, and balance sheet produced monthly</span></li>
+        <li><span>&rarr;</span><span>Dashboard updated and current each month</span></li>
+        <li><span>&rarr;</span><span>Workflow maintenance and SOP updates as needed</span></li>
+        <li><span>&rarr;</span><span>Monthly operational reporting</span></li>
+      </ul>
+      <div class="engage-price">
+        <div class="engage-price-num">$15/hr</div>
+        <div class="engage-price-note">Estimated monthly hours agreed at onboarding. Billed on actuals.</div>
+      </div>
     </div>
   </div>
-  <div class="engage-bridge reveal"><span class="engage-bridge-arrow">&#10230;</span><p><strong>The natural order:</strong> Build the system first, then maintain it. If you already have working systems and need consistent upkeep, a retainer alone works too.</p></div>
+
+  <div class="engage-bridge reveal">
+    <span class="engage-bridge-arrow">&#10230;</span>
+    <p><strong>The natural order:</strong> Build the system first, then maintain it. If you already have working systems and need consistent upkeep, a retainer alone works too.</p>
+  </div>
 </div></div>
 
 <div class="fit-section"><div class="wrap">
@@ -933,9 +959,9 @@ footer p{font-size:0.7rem;color:var(--text3)}
   <h2 class="reveal">Numbers you can <em>do something with.</em></h2>
   <p class="sub reveal" style="max-width:580px">Reporting should tell you something useful — not just confirm what happened.</p>
   <div class="svc-cards-grid">
-    <div class="svc-card reveal"><div class="svc-ico">&#x1F4CA;</div><h3>Monthly financial reporting</h3><span class="svc-tag">Decision-ready information</span><p>P&amp;L, cash flow statement, and balance sheet produced monthly. Delivered with enough context to act on, not just review.</p><ul class="svc-sub-list"><li>Profit &amp; loss statement</li><li>Cash flow statement</li><li>Balance sheet</li><li>Month-over-month variance notes</li></ul></div>
+    <div class="svc-card reveal"><div class="svc-ico">&#x1F4CA;</div><h3>Monthly financial reporting</h3><span class="svc-tag">Decision-ready information</span><p>P&amp;L, cash flow statement, and balance sheet produced monthly. Delivered with enough context to act on, not just review.</p><ul class="svc-sub-list"><li>Profit &amp; loss statement</li><li>Cash flow statement</li><li>Balance sheet</li><li>Month to month variance notes</li></ul></div>
     <div class="svc-card reveal"><div class="svc-ico">&#x1F4C8;</div><h3>Dashboards &amp; reporting systems</h3><span class="svc-tag">Live data, not manual assembly</span><p>If compiling a report takes hours of manual work, that's a systems problem. Dashboards pull live data and surface the number you need to make the call.</p><ul class="svc-sub-list"><li>Excel dashboards connected to live data</li><li>KPI tracking and performance metrics</li><li>Budget tracking and variance analysis</li><li>Power BI reporting builds</li></ul></div>
-    <div class="svc-card reveal"><div class="svc-ico">&#x1F3E6;</div><h3>Financial modelling</h3><span class="svc-tag">For decisions and investor conversations</span><p>Forecasts, scenario models, and investor-ready financials. The kind of model that holds up when someone asks a hard question about the numbers behind it.</p><ul class="svc-sub-list"><li>DCF valuation and financial modelling</li><li>Scenario forecasting and sensitivity analysis</li><li>Investor reports and pitch deck financials</li><li>Budget models and growth projections</li></ul></div>
+    <div class="svc-card reveal"><div class="svc-ico">&#x1F3E6;</div><h3>Financial modelling</h3><span class="svc-tag">For decisions and investor conversations</span><p>Forecasts, scenario models, and investor ready financials. The kind of model that holds up when someone asks a hard question about the numbers behind it.</p><ul class="svc-sub-list"><li>DCF valuation and financial modelling</li><li>Scenario forecasting and sensitivity analysis</li><li>Investor reports and pitch deck financials</li><li>Budget models and growth projections</li></ul></div>
   </div>
 </div></section>
 
@@ -944,9 +970,9 @@ footer p{font-size:0.7rem;color:var(--text3)}
   <h2 class="reveal">Execution that doesn't <em>need you in the room.</em></h2>
   <p class="sub reveal" style="max-width:580px">Operational support that builds systems — not a dependency on me.</p>
   <div class="svc-cards-grid">
-    <div class="svc-card reveal"><div class="svc-ico">&#x1F4CB;</div><h3>Process documentation &amp; SOPs</h3><span class="svc-tag">Systems that hold independently</span><p>Processes written down so any team member can run them without asking. Removes the single-point-of-failure problem.</p><ul class="svc-sub-list"><li>SOP writing and process mapping</li><li>Workflow design and documentation</li><li>Onboarding guides and training materials</li><li>Operating handbook builds in Notion</li></ul></div>
+    <div class="svc-card reveal"><div class="svc-ico">&#x1F4CB;</div><h3>Process documentation &amp; SOPs</h3><span class="svc-tag">Systems that hold independently</span><p>Processes written down so any team member can run them without asking. Removes the single point of failure problem.</p><ul class="svc-sub-list"><li>SOP writing and process mapping</li><li>Workflow design and documentation</li><li>Onboarding guides and training materials</li><li>Operating handbook builds in Notion</li></ul></div>
     <div class="svc-card reveal"><div class="svc-ico">&#x26A1;</div><h3>Workflow automation</h3><span class="svc-tag">Repetitive work that runs itself</span><p>Processes that go through the same steps every time are good candidates for automation. The manual effort gets removed while the output stays the same.</p><ul class="svc-sub-list"><li>Excel automation and formula builds</li><li>Zapier and Make workflow builds</li><li>Google Workspace automation</li><li>Integration between disconnected tools</li></ul></div>
-    <div class="svc-card reveal"><div class="svc-ico">&#x1F5D3;</div><h3>Executive administration</h3><span class="svc-tag">Coordination handled</span><p>Inbox management, calendar structure, meeting preparation, follow-through. The operational overhead that pulls founders away from the work that actually moves the business.</p><ul class="svc-sub-list"><li>Inbox management and triage</li><li>Calendar design and scheduling</li><li>Meeting prep and follow-up notes</li><li>Project coordination via Notion, Asana, Trello</li></ul></div>
+    <div class="svc-card reveal"><div class="svc-ico">&#x1F5D3;</div><h3>Executive administration</h3><span class="svc-tag">Coordination handled</span><p>Inbox management, calendar structure, meeting preparation, follow through. The operational overhead that pulls founders away from the work that actually moves the business.</p><ul class="svc-sub-list"><li>Inbox management and triage</li><li>Calendar design and scheduling</li><li>Meeting prep and follow up notes</li><li>Project coordination via Notion, Asana, Trello</li></ul></div>
   </div>
 </div></section>
 

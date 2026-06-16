@@ -3,461 +3,469 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Monicah Mburu — Finance & Operations Professional</title>
-<meta name="description" content="Finance and Operations professional specialising in bookkeeping, financial reporting, and operational systems. Open to permanent remote roles and consulting engagements worldwide.">
+<title>Monicah Mburu — Financial Operations & Finance Systems</title>
+<meta name="description" content="Financial Operations Assistant and Finance Systems VA. I help founder-led teams get accurate books, useful reporting, and financial workflows that run without constant oversight.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,600&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
-/* ── RESET & ROOT ───────────────────────────────────────────── */
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 :root{
-  --ink:       #1a1610;
-  --ink2:      #2e2620;
-  --brown:     #6b4a2a;
-  --brown2:    #9a6b40;
-  --brown-pale:#f5ede3;
-  --brown-border:rgba(107,74,42,0.2);
-  --cream:     #faf8f4;
-  --warm:      #f3ede3;
-  --warm2:     #ede5d8;
-  --text:      #312a22;
-  --text2:     #6b5e50;
-  --text3:     #a89a8a;
-  --border:    rgba(49,42,34,0.1);
-  --green:     #2a6048;
-  --serif:     'Lora',Georgia,serif;
-  --sans:      'Inter',system-ui,sans-serif;
-  --r:         12px;
-  --r-sm:      7px;
-  --nav-h:     62px;
+  --ink:#16120d;
+  --ink2:#221c14;
+  --brown:#7a5230;
+  --brown2:#b07d4a;
+  --brown-pale:#f5ede0;
+  --brown-border:rgba(122,82,48,0.18);
+  --cream:#faf8f3;
+  --warm:#f3ece0;
+  --warm2:#ece3d4;
+  --text:#302820;
+  --text2:#70584a;
+  --text3:#a8917e;
+  --border:rgba(48,40,32,0.1);
+  --green:#1e5c3a;
+  --serif:'Lora',Georgia,serif;
+  --sans:'DM Sans',system-ui,sans-serif;
+  --r:14px;
+  --r-sm:8px;
+  --nav-h:64px;
 }
 html{scroll-behavior:smooth}
 body{font-family:var(--sans);background:var(--cream);color:var(--text);line-height:1.7;-webkit-font-smoothing:antialiased;overflow-x:hidden}
 
-/* ── ANIMATIONS ─────────────────────────────────────────────── */
-@keyframes fadeUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
-@keyframes pulse{0%,100%{opacity:1}50%{opacity:.25}}
-.reveal{opacity:0;transform:translateY(16px);transition:opacity .55s ease,transform .55s ease}
+/* ANIMATIONS */
+@keyframes fadeUp{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:translateY(0)}}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.2}}
+@keyframes shimmer{0%{background-position:200% center}100%{background-position:-200% center}}
+.reveal{opacity:0;transform:translateY(18px);transition:opacity .6s ease,transform .6s ease}
 .reveal.on{opacity:1;transform:none}
 
-/* ── NAV ────────────────────────────────────────────────────── */
-nav{position:fixed;top:0;left:0;right:0;z-index:200;height:var(--nav-h);display:flex;align-items:center;justify-content:space-between;padding:0 2.25rem;transition:background .3s,border-bottom .3s}
-nav.solid{background:rgba(250,248,244,.97);backdrop-filter:blur(16px);border-bottom:1px solid var(--border)}
-.logo{display:flex;align-items:center;gap:.55rem;text-decoration:none}
-.logo-img{width:38px;height:38px;border-radius:50%;object-fit:cover;border:1.5px solid var(--brown-border)}
-.logo-name{font-family:var(--serif);font-size:1rem;font-weight:500;color:var(--ink)}
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:200;height:var(--nav-h);display:flex;align-items:center;justify-content:space-between;padding:0 2.5rem;transition:background .3s,border-bottom .3s}
+nav.solid{background:rgba(250,248,243,.97);backdrop-filter:blur(18px);border-bottom:1px solid var(--border)}
+.logo{display:flex;align-items:center;gap:.6rem;text-decoration:none}
+.logo-img{width:36px;height:36px;border-radius:50%;object-fit:cover;border:1.5px solid var(--brown-border)}
+.logo-name{font-family:var(--serif);font-size:.98rem;font-weight:500;color:var(--ink)}
 .logo-name em{font-style:italic;color:var(--brown)}
-.nav-links{display:flex;gap:.05rem;list-style:none}
-.nav-links a{font-size:.755rem;color:var(--text2);text-decoration:none;padding:.35rem .85rem;border-radius:100px;transition:all .2s;cursor:pointer;letter-spacing:.01em}
+.nav-links{display:flex;gap:.1rem;list-style:none}
+.nav-links a{font-size:.74rem;color:var(--text2);text-decoration:none;padding:.32rem .82rem;border-radius:100px;transition:all .2s;cursor:pointer;letter-spacing:.01em}
 .nav-links a:hover,.nav-links a.active{color:var(--ink);background:var(--warm)}
 .nav-links a.active{font-weight:500}
-.nav-avail{font-size:.66rem;color:var(--brown);background:var(--brown-pale);border:1px solid var(--brown-border);padding:.24rem .7rem;border-radius:100px;display:inline-flex;align-items:center;gap:.35rem;white-space:nowrap}
-.avail-dot{width:5px;height:5px;border-radius:50%;background:var(--brown);animation:pulse 2.2s infinite}
-.nav-cta{background:var(--ink);color:var(--cream);font-family:var(--sans);font-size:.755rem;font-weight:500;padding:.42rem 1.15rem;border-radius:100px;text-decoration:none;transition:background .2s;white-space:nowrap}
+.nav-avail{font-size:.64rem;color:var(--brown);background:var(--brown-pale);border:1px solid var(--brown-border);padding:.22rem .7rem;border-radius:100px;display:inline-flex;align-items:center;gap:.35rem;white-space:nowrap}
+.avail-dot{width:5px;height:5px;border-radius:50%;background:var(--brown);animation:pulse 2s infinite}
+.nav-cta{background:var(--ink);color:var(--cream);font-family:var(--sans);font-size:.74rem;font-weight:500;padding:.4rem 1.1rem;border-radius:100px;text-decoration:none;transition:background .2s;white-space:nowrap}
 .nav-cta:hover{background:var(--brown)}
 .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px;border:none;background:none;min-width:44px;min-height:44px;align-items:center;justify-content:center}
 .hamburger span{width:20px;height:1.5px;background:var(--ink);border-radius:2px;transition:all .3s;display:block}
-.mob-menu{display:none;position:fixed;top:var(--nav-h);inset-x:0;background:rgba(250,248,244,.98);backdrop-filter:blur(16px);border-bottom:1px solid var(--border);z-index:199;padding:1.5rem 2.25rem 2rem;flex-direction:column;gap:.2rem}
+.mob-menu{display:none;position:fixed;top:var(--nav-h);inset-x:0;background:rgba(250,248,243,.98);backdrop-filter:blur(18px);border-bottom:1px solid var(--border);z-index:199;padding:1.5rem 2.5rem 2rem;flex-direction:column;gap:.2rem}
 .mob-menu.open{display:flex}
-.mob-menu a{font-size:.88rem;color:var(--text2);text-decoration:none;padding:.62rem 0;border-bottom:1px solid var(--border);cursor:pointer;min-height:52px;display:flex;align-items:center;transition:color .2s}
+.mob-menu a{font-size:.88rem;color:var(--text2);text-decoration:none;padding:.6rem 0;border-bottom:1px solid var(--border);cursor:pointer;min-height:52px;display:flex;align-items:center;transition:color .2s}
 .mob-menu a:hover{color:var(--brown)}
 .mob-menu a:last-child{border:none}
 .mob-cta{margin-top:.75rem;display:flex!important;align-items:center!important;justify-content:center!important;background:var(--ink);color:var(--cream)!important;padding:.75rem!important;border-radius:100px;font-weight:500;border:none!important;min-height:52px!important}
 
-/* ── PAGES ──────────────────────────────────────────────────── */
+/* PAGES */
 .page{display:none;padding-top:var(--nav-h);min-height:100vh}
 .page.active{display:block}
-.wrap{max-width:1060px;margin:0 auto;padding:0 2.25rem}
-section{padding:5rem 0}
+.wrap{max-width:1060px;margin:0 auto;padding:0 2.5rem}
+section{padding:5.5rem 0}
 
-/* ── TYPE SYSTEM ────────────────────────────────────────────── */
-.eyebrow{font-size:.645rem;font-weight:600;letter-spacing:.13em;text-transform:uppercase;color:var(--brown);display:block;margin-bottom:.8rem}
-h1{font-family:var(--serif);font-size:clamp(2rem,3.8vw,3.5rem);font-weight:500;line-height:1.08;letter-spacing:-.02em;color:var(--ink)}
+/* TYPE */
+.eyebrow{font-size:.63rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--brown);display:block;margin-bottom:.85rem}
+h1{font-family:var(--serif);font-size:clamp(2.1rem,4vw,3.6rem);font-weight:500;line-height:1.07;letter-spacing:-.022em;color:var(--ink)}
 h1 em{font-style:italic;color:var(--brown)}
-h2{font-family:var(--serif);font-size:clamp(1.7rem,3vw,2.55rem);font-weight:500;line-height:1.16;color:var(--ink);letter-spacing:-.015em}
+h2{font-family:var(--serif);font-size:clamp(1.75rem,3vw,2.6rem);font-weight:500;line-height:1.14;color:var(--ink);letter-spacing:-.016em}
 h2 em{font-style:italic;color:var(--brown)}
-h3{font-family:var(--serif);font-size:1.12rem;font-weight:500;color:var(--ink)}
-.sub{font-size:.9rem;color:var(--text2);font-weight:300;line-height:1.9;max-width:520px;margin-top:.72rem}
+h3{font-family:var(--serif);font-size:1.1rem;font-weight:500;color:var(--ink)}
+.sub{font-size:.88rem;color:var(--text2);font-weight:300;line-height:1.92;max-width:510px;margin-top:.75rem}
 
-/* ── BUTTONS ────────────────────────────────────────────────── */
-.btn{background:var(--ink);color:var(--cream);font-family:var(--sans);font-size:.83rem;font-weight:500;padding:.84rem 1.9rem;border-radius:100px;text-decoration:none;display:inline-flex;align-items:center;justify-content:center;transition:background .2s,transform .15s;cursor:pointer;min-height:46px;border:none;letter-spacing:.01em}
+/* BUTTONS */
+.btn{background:var(--ink);color:var(--cream);font-family:var(--sans);font-size:.82rem;font-weight:500;padding:.82rem 1.85rem;border-radius:100px;text-decoration:none;display:inline-flex;align-items:center;justify-content:center;transition:background .2s,transform .15s;cursor:pointer;min-height:46px;border:none;letter-spacing:.01em}
 .btn:hover{background:var(--brown);transform:translateY(-1px)}
-.btn-ghost{border:1px solid var(--border);color:var(--text2);font-size:.83rem;padding:.84rem 1.9rem;border-radius:100px;text-decoration:none;display:inline-flex;align-items:center;justify-content:center;transition:all .2s;background:none;cursor:pointer;min-height:46px;letter-spacing:.01em}
+.btn-ghost{border:1px solid var(--border);color:var(--text2);font-size:.82rem;padding:.82rem 1.85rem;border-radius:100px;text-decoration:none;display:inline-flex;align-items:center;justify-content:center;transition:all .2s;background:none;cursor:pointer;min-height:46px;letter-spacing:.01em}
 .btn-ghost:hover{border-color:var(--brown);color:var(--brown)}
-.btn-inv{background:var(--brown);color:#fff;font-family:var(--sans);font-size:.86rem;font-weight:500;padding:.96rem 2.1rem;border-radius:100px;text-decoration:none;display:inline-flex;align-items:center;justify-content:center;transition:opacity .2s,transform .15s;min-height:50px;letter-spacing:.01em;border:none;cursor:pointer}
-.btn-inv:hover{opacity:.85;transform:translateY(-1px)}
-.btn-ghost-inv{border:1px solid rgba(255,255,255,.16);color:rgba(255,255,255,.55);font-size:.86rem;padding:.96rem 2.1rem;border-radius:100px;text-decoration:none;display:inline-flex;align-items:center;justify-content:center;transition:all .2s;min-height:50px;letter-spacing:.01em}
-.btn-ghost-inv:hover{border-color:rgba(255,255,255,.38);color:#fff}
+.btn-inv{background:var(--brown);color:#fff;font-family:var(--sans);font-size:.86rem;font-weight:500;padding:.94rem 2.1rem;border-radius:100px;text-decoration:none;display:inline-flex;align-items:center;justify-content:center;transition:opacity .2s,transform .15s;min-height:50px;letter-spacing:.01em;border:none;cursor:pointer}
+.btn-inv:hover{opacity:.86;transform:translateY(-1px)}
+.btn-ghost-inv{border:1px solid rgba(255,255,255,.15);color:rgba(255,255,255,.5);font-size:.86rem;padding:.94rem 2.1rem;border-radius:100px;text-decoration:none;display:inline-flex;align-items:center;justify-content:center;transition:all .2s;min-height:50px;letter-spacing:.01em}
+.btn-ghost-inv:hover{border-color:rgba(255,255,255,.36);color:#fff}
 
-/* ══════════════════════════════════════════════════════════════
-   HOME PAGE
-══════════════════════════════════════════════════════════════ */
+/* ══ HOME ══════════════════════════════════════════════════════ */
 
-/* ── HERO ───────────────────────────────────────────────────── */
-.hero{padding:4.5rem 2.25rem 4rem;max-width:1060px;margin:0 auto}
-.hero-grid{display:grid;grid-template-columns:1fr 1fr;gap:3.75rem;align-items:start}
+/* HERO */
+.hero{padding:4.5rem 2.5rem 4rem;max-width:1060px;margin:0 auto}
+.hero-grid{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:start}
 .hero-left{animation:fadeUp .6s .05s ease both}
-.hero-badge{display:inline-flex;align-items:center;gap:.45rem;background:var(--brown-pale);border:1px solid var(--brown-border);color:var(--brown);font-size:.68rem;font-weight:500;padding:.3rem .85rem;border-radius:100px;letter-spacing:.06em;text-transform:uppercase;margin-bottom:1.65rem}
-.hero-badge-dot{width:5px;height:5px;border-radius:50%;background:var(--brown);animation:pulse 2.2s infinite}
+.hero-badge{display:inline-flex;align-items:center;gap:.45rem;background:var(--brown-pale);border:1px solid var(--brown-border);color:var(--brown);font-size:.66rem;font-weight:600;padding:.28rem .88rem;border-radius:100px;letter-spacing:.07em;text-transform:uppercase;margin-bottom:1.7rem}
+.hero-badge-dot{width:5px;height:5px;border-radius:50%;background:var(--brown);animation:pulse 2s infinite}
 .hero-left h1{margin-bottom:1.1rem}
-.hero-left p{font-size:.92rem;color:var(--text2);font-weight:300;line-height:1.88;max-width:455px}
-.hero-actions{display:flex;gap:.7rem;flex-wrap:wrap;margin-top:1.65rem}
-.hero-trust{display:flex;gap:1.4rem;flex-wrap:wrap;margin-top:1.1rem;padding-top:1.1rem;border-top:1px solid var(--border)}
-.trust-item{display:flex;align-items:center;gap:.38rem;font-size:.68rem;color:var(--text3)}
+.hero-left>p{font-size:.9rem;color:var(--text2);font-weight:300;line-height:1.9;max-width:460px}
+.hero-actions{display:flex;gap:.72rem;flex-wrap:wrap;margin-top:1.7rem}
+.hero-trust{display:flex;gap:1.35rem;flex-wrap:wrap;margin-top:1.1rem;padding-top:1.1rem;border-top:1px solid var(--border)}
+.trust-item{display:flex;align-items:center;gap:.38rem;font-size:.67rem;color:var(--text3)}
 .trust-dot{width:3px;height:3px;border-radius:50%;background:var(--brown);opacity:.5}
-.hero-right{animation:fadeUp .7s .15s ease both;display:flex;flex-direction:column;gap:.95rem}
-.video-wrap{background:var(--ink2);border-radius:var(--r);overflow:hidden;border:1px solid rgba(255,255,255,.06);box-shadow:0 18px 48px rgba(26,22,16,.16)}
+
+/* ROLE TAG */
+.role-tag{display:inline-flex;align-items:center;gap:.5rem;background:var(--ink);color:rgba(255,255,255,.55);font-size:.68rem;font-weight:500;padding:.32rem 1rem;border-radius:100px;letter-spacing:.05em;text-transform:uppercase;margin-bottom:1.35rem}
+.role-tag-accent{color:var(--brown2)}
+
+.hero-right{animation:fadeUp .7s .18s ease both;display:flex;flex-direction:column;gap:1rem}
+.video-wrap{background:var(--ink2);border-radius:var(--r);overflow:hidden;border:1px solid rgba(255,255,255,.05);box-shadow:0 20px 52px rgba(22,18,13,.18)}
 .video-responsive{position:relative;padding-bottom:56.25%;height:0;overflow:hidden}
 .video-responsive iframe{position:absolute;top:0;left:0;width:100%;height:100%;border:0}
 .hero-metrics{display:grid;grid-template-columns:repeat(3,1fr)}
-.metric-box{background:var(--ink);padding:1.15rem;border-right:1px solid rgba(255,255,255,.05)}
+.metric-box{background:var(--ink);padding:1.2rem;border-right:1px solid rgba(255,255,255,.04)}
 .metric-box:first-child{border-radius:var(--r) 0 0 var(--r)}
 .metric-box:last-child{border-right:none;border-radius:0 var(--r) var(--r) 0}
-.metric-num{font-family:var(--serif);font-size:1.65rem;font-weight:600;color:var(--brown2);line-height:1;margin-bottom:.18rem}
-.metric-lbl{font-size:.63rem;color:rgba(255,255,255,.26);line-height:1.52;font-weight:300}
+.metric-num{font-family:var(--serif);font-size:1.6rem;font-weight:600;color:var(--brown2);line-height:1;margin-bottom:.2rem}
+.metric-lbl{font-size:.61rem;color:rgba(255,255,255,.24);line-height:1.55;font-weight:300}
 
-/* ── SIGNAL STRIP ───────────────────────────────────────────── */
-.signal{background:var(--ink);padding:.75rem 0}
-.signal-inner{display:flex;align-items:center;justify-content:center;gap:2.4rem;flex-wrap:wrap;max-width:1060px;margin:0 auto;padding:0 2.25rem}
-.sig-item{display:flex;align-items:center;gap:.45rem;font-size:.69rem;color:rgba(255,255,255,.3)}
-.sig-dot{width:3px;height:3px;border-radius:50%;background:var(--brown2);opacity:.55}
+/* WHAT I DO STRIP */
+.role-strip{background:var(--ink2);border-top:1px solid rgba(255,255,255,.04);border-bottom:1px solid rgba(255,255,255,.04);padding:1rem 0}
+.role-strip-inner{display:flex;align-items:center;justify-content:center;gap:0;flex-wrap:wrap;max-width:1060px;margin:0 auto;padding:0 2.5rem}
+.rs-item{display:flex;align-items:center;gap:.5rem;font-size:.7rem;color:rgba(255,255,255,.38);padding:.35rem 1.4rem;border-right:1px solid rgba(255,255,255,.07)}
+.rs-item:last-child{border-right:none}
+.rs-dot{width:4px;height:4px;border-radius:50%;background:var(--brown2);flex-shrink:0}
 
-/* ── REALITY ────────────────────────────────────────────────── */
-.reality{background:var(--ink);padding:6rem 0}
-.reality .eyebrow{color:rgba(255,255,255,.22);text-align:center;display:block}
-.reality h2{color:#fff;text-align:center;max-width:580px;margin:0 auto}
-.reality h2 em{color:var(--brown2)}
-.reality-intro{color:rgba(255,255,255,.32);font-size:.88rem;font-weight:300;max-width:480px;margin:.85rem auto 3rem;line-height:1.9;text-align:center}
-.reality-grid{display:grid;grid-template-columns:1fr 1fr;gap:2px;background:rgba(255,255,255,.04);border-radius:var(--r);overflow:hidden}
-.reality-item{background:var(--ink2);padding:2.2rem;transition:background .2s;position:relative}
-.reality-item:hover{background:rgba(255,255,255,.025)}
-.reality-item::before{content:'';position:absolute;top:0;left:2.2rem;width:24px;height:2px;background:var(--brown);opacity:.6}
-.reality-title{font-size:.86rem;font-weight:500;color:rgba(255,255,255,.8);margin-bottom:.55rem;line-height:1.44}
-.reality-desc{font-size:.79rem;color:rgba(255,255,255,.27);line-height:1.82;font-weight:300}
-.reality-bridge{background:rgba(107,74,42,.1);border:1px solid rgba(107,74,42,.22);border-radius:var(--r);padding:1.75rem 2rem;margin-top:1.5rem;text-align:center}
-.reality-bridge p{font-size:.87rem;color:rgba(255,255,255,.44);line-height:1.82;font-weight:300;max-width:520px;margin:0 auto}
-.reality-bridge strong{color:rgba(255,255,255,.8);font-weight:500}
+/* PROBLEM SECTION */
+.problem{background:var(--ink);padding:6rem 0}
+.problem .eyebrow{color:rgba(255,255,255,.2);text-align:center;display:block}
+.problem h2{color:#fff;text-align:center;max-width:580px;margin:0 auto}
+.problem h2 em{color:var(--brown2)}
+.problem-intro{color:rgba(255,255,255,.3);font-size:.87rem;font-weight:300;max-width:470px;margin:.9rem auto 3.25rem;line-height:1.92;text-align:center}
+.problem-grid{display:grid;grid-template-columns:1fr 1fr;gap:2px;background:rgba(255,255,255,.04);border-radius:var(--r);overflow:hidden}
+.problem-item{background:var(--ink2);padding:2.25rem;transition:background .22s;position:relative}
+.problem-item:hover{background:rgba(255,255,255,.025)}
+.problem-item::before{content:'';position:absolute;top:0;left:2.25rem;width:28px;height:2px;background:var(--brown);opacity:.55}
+.problem-title{font-size:.85rem;font-weight:500;color:rgba(255,255,255,.78);margin-bottom:.55rem;line-height:1.46}
+.problem-desc{font-size:.78rem;color:rgba(255,255,255,.26);line-height:1.84;font-weight:300}
+.problem-bridge{background:rgba(122,82,48,.1);border:1px solid rgba(122,82,48,.22);border-radius:var(--r);padding:1.8rem 2.1rem;margin-top:1.5rem;text-align:center}
+.problem-bridge p{font-size:.87rem;color:rgba(255,255,255,.42);line-height:1.84;font-weight:300;max-width:510px;margin:0 auto}
+.problem-bridge strong{color:rgba(255,255,255,.78);font-weight:500}
 
-/* ── SERVICES ───────────────────────────────────────────────── */
-.svc-section{background:var(--warm);padding:6rem 0}
-.svc-intro{max-width:540px}
+/* SERVICES OVERVIEW */
+.svc-overview{background:var(--warm);padding:6rem 0}
+.svc-intro{max-width:520px}
 .svc-rows{display:flex;flex-direction:column;gap:1px;margin-top:3rem;border-radius:var(--r);overflow:hidden;border:1px solid var(--border)}
-.svc-row{background:#fff;padding:2.25rem 2.5rem;display:grid;grid-template-columns:256px 1fr 200px;gap:2.6rem;align-items:start;transition:background .2s;position:relative}
+.svc-row{background:#fff;padding:2.25rem 2.5rem;display:grid;grid-template-columns:248px 1fr 196px;gap:2.5rem;align-items:start;transition:background .22s;position:relative}
 .svc-row::after{content:'';position:absolute;bottom:0;left:0;right:0;height:1px;background:var(--border)}
 .svc-row:last-child::after{display:none}
 .svc-row:hover{background:var(--cream)}
-.svc-num{font-family:var(--serif);font-size:3.4rem;font-weight:600;color:var(--brown-pale);line-height:1;margin-bottom:.45rem;user-select:none}
-.svc-lbl{font-size:.61rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--brown);margin-bottom:.38rem}
-.svc-row h3{font-size:1.05rem;color:var(--ink);margin-bottom:0}
-.svc-row-desc{font-size:.81rem;color:var(--text2);line-height:1.82;font-weight:300;margin-bottom:.95rem}
-.svc-why{background:var(--brown-pale);border:1px solid var(--brown-border);border-radius:var(--r-sm);padding:.75rem 1rem;font-size:.76rem;color:var(--text2);line-height:1.64}
-.svc-why strong{display:block;font-size:.68rem;font-weight:700;letter-spacing:.07em;text-transform:uppercase;color:var(--brown);margin-bottom:.35rem}
-.svc-items{list-style:none;display:flex;flex-direction:column;gap:.38rem}
-.svc-items li{font-size:.76rem;color:var(--text2);line-height:1.55;padding-left:.85rem;position:relative}
+.svc-num{font-family:var(--serif);font-size:3.2rem;font-weight:600;color:var(--brown-pale);line-height:1;margin-bottom:.5rem;user-select:none}
+.svc-lbl{font-size:.6rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--brown);margin-bottom:.4rem}
+.svc-row h3{font-size:1.02rem;color:var(--ink);margin-bottom:0}
+.svc-row-desc{font-size:.8rem;color:var(--text2);line-height:1.84;font-weight:300;margin-bottom:1rem}
+.svc-why{background:var(--brown-pale);border:1px solid var(--brown-border);border-radius:var(--r-sm);padding:.78rem 1rem;font-size:.75rem;color:var(--text2);line-height:1.66}
+.svc-why strong{display:block;font-size:.67rem;font-weight:700;letter-spacing:.07em;text-transform:uppercase;color:var(--brown);margin-bottom:.36rem}
+.svc-items{list-style:none;display:flex;flex-direction:column;gap:.4rem}
+.svc-items li{font-size:.75rem;color:var(--text2);line-height:1.56;padding-left:.88rem;position:relative}
 .svc-items li::before{content:'·';position:absolute;left:0;color:var(--brown);font-size:1rem;line-height:1.22}
-.svc-right{display:flex;flex-direction:column;gap:.62rem}
-.svc-right-lbl{font-size:.58rem;font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:var(--text3)}
+.svc-right{display:flex;flex-direction:column;gap:.65rem}
+.svc-right-lbl{font-size:.57rem;font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:var(--text3)}
 .svc-outcome{background:var(--ink);border-radius:var(--r-sm);padding:1rem 1.1rem}
-.svc-outcome-num{font-family:var(--serif);font-size:1.45rem;font-weight:600;color:var(--brown2);line-height:1;margin-bottom:.2rem}
-.svc-outcome-text{font-size:.7rem;color:rgba(255,255,255,.3);line-height:1.55;font-weight:300}
+.svc-outcome-num{font-family:var(--serif);font-size:1.42rem;font-weight:600;color:var(--brown2);line-height:1;margin-bottom:.22rem}
+.svc-outcome-text{font-size:.69rem;color:rgba(255,255,255,.28);line-height:1.56;font-weight:300}
 
-/* ── HOW IT WORKS ───────────────────────────────────────────── */
-.how{background:var(--cream);padding:6rem 0}
+/* DIFFERENCE */
+.diff{background:var(--cream);padding:6rem 0}
+.diff-grid{display:grid;grid-template-columns:1fr 1fr;gap:3.5rem;align-items:start;margin-top:2.75rem}
+.diff-text p{font-size:.88rem;color:var(--text2);line-height:1.9;font-weight:300;margin-bottom:.95rem}
+.diff-text p strong{color:var(--text);font-weight:500}
+.diff-cards{display:flex;flex-direction:column;gap:.75rem}
+.diff-card{background:#fff;border:1px solid var(--border);border-radius:var(--r);padding:1.2rem 1.35rem;display:flex;gap:1rem;align-items:flex-start;transition:border-color .2s,transform .18s}
+.diff-card:hover{border-color:var(--brown-border);transform:translateX(4px)}
+.diff-card-num{font-family:var(--serif);font-size:1.4rem;font-weight:600;color:rgba(122,82,48,.14);line-height:1;flex-shrink:0;width:2rem;padding-top:.06rem}
+.diff-card-body h4{font-size:.83rem;font-weight:500;color:var(--text);margin-bottom:.18rem}
+.diff-card-body p{font-size:.74rem;color:var(--text2);line-height:1.68;font-weight:300;margin:0}
+
+/* HOW IT WORKS */
+.how{background:var(--warm);padding:6rem 0}
 .how-intro{max-width:460px;margin-bottom:3rem}
 .how-steps{display:flex;flex-direction:column}
 .how-step{display:flex;gap:1.5rem;padding:1.75rem 0;border-bottom:1px solid var(--border)}
 .how-step:last-child{border-bottom:none}
-.how-step-num{font-family:var(--serif);font-size:2.4rem;font-weight:600;color:var(--brown-pale);line-height:1;flex-shrink:0;width:2.4rem;padding-top:.14rem}
-.how-step-body h4{font-family:var(--serif);font-size:1.04rem;font-weight:500;color:var(--ink);margin-bottom:.35rem}
-.how-step-body p{font-size:.8rem;color:var(--text2);line-height:1.8;font-weight:300}
+.how-step-num{font-family:var(--serif);font-size:2.3rem;font-weight:600;color:var(--brown-pale);line-height:1;flex-shrink:0;width:2.4rem;padding-top:.14rem}
+.how-step-body h4{font-family:var(--serif);font-size:1.02rem;font-weight:500;color:var(--ink);margin-bottom:.36rem}
+.how-step-body p{font-size:.79rem;color:var(--text2);line-height:1.82;font-weight:300}
 .how-cta{background:#fff;border:1px solid var(--border);border-radius:var(--r);padding:1.9rem;max-width:480px;margin:2.75rem auto 0;text-align:center}
 .how-cta p{font-size:.79rem;color:var(--text2);font-weight:300;margin-bottom:1rem;line-height:1.68}
 
-/* ── ENGAGEMENT TYPES ───────────────────────────────────────── */
-.engage{background:var(--warm);padding:6rem 0}
-.engage-intro{max-width:620px;margin-bottom:2.4rem}
+/* ENGAGEMENT */
+.engage{background:var(--cream);padding:6rem 0}
+.engage-intro{max-width:600px;margin-bottom:2.5rem}
 .engage-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem}
 .engage-card{border-radius:var(--r);padding:2.25rem;position:relative;overflow:hidden;display:flex;flex-direction:column}
 .engage-card.project{background:#fff;border:1px solid var(--border)}
 .engage-card.project::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--brown),var(--brown2))}
 .engage-card.retainer{background:var(--ink);border:1px solid rgba(255,255,255,.05)}
-.engage-card.retainer::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--green),#4a9070)}
-.engage-badge{font-size:.61rem;font-weight:700;letter-spacing:.09em;text-transform:uppercase;padding:.22rem .65rem;border-radius:100px;display:inline-block;margin-bottom:1rem}
+.engage-card.retainer::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--green),#3a8a60)}
+.engage-badge{font-size:.6rem;font-weight:700;letter-spacing:.09em;text-transform:uppercase;padding:.22rem .65rem;border-radius:100px;display:inline-block;margin-bottom:1rem}
 .engage-card.project .engage-badge{background:var(--brown-pale);color:var(--brown);border:1px solid var(--brown-border)}
-.engage-card.retainer .engage-badge{background:rgba(42,96,72,.16);color:#5fb88a;border:1px solid rgba(42,96,72,.28)}
-.engage-card h3{font-size:1.22rem;margin-bottom:.58rem}
+.engage-card.retainer .engage-badge{background:rgba(30,92,58,.18);color:#5fba8a;border:1px solid rgba(30,92,58,.3)}
+.engage-card h3{font-size:1.2rem;margin-bottom:.6rem}
 .engage-card.project h3{color:var(--ink)}
 .engage-card.retainer h3{color:#fff}
 .engage-card.retainer h3 em{color:var(--brown2);font-style:italic}
-.engage-card>p{font-size:.81rem;line-height:1.82;font-weight:300;margin-bottom:1.5rem}
+.engage-card>p{font-size:.8rem;line-height:1.84;font-weight:300;margin-bottom:1.5rem}
 .engage-card.project>p{color:var(--text2)}
-.engage-card.retainer>p{color:rgba(255,255,255,.28)}
-.engage-list{list-style:none;display:flex;flex-direction:column;gap:.48rem;margin-bottom:1.75rem;flex:1}
-.engage-list li{font-size:.78rem;display:flex;gap:.65rem;align-items:flex-start;line-height:1.56}
+.engage-card.retainer>p{color:rgba(255,255,255,.27)}
+.engage-list{list-style:none;display:flex;flex-direction:column;gap:.5rem;margin-bottom:1.75rem;flex:1}
+.engage-list li{font-size:.77rem;display:flex;gap:.65rem;align-items:flex-start;line-height:1.58}
 .engage-card.project .engage-list li{color:var(--text2)}
-.engage-card.retainer .engage-list li{color:rgba(255,255,255,.28)}
+.engage-card.retainer .engage-list li{color:rgba(255,255,255,.27)}
 .engage-list li span:first-child{flex-shrink:0;color:var(--brown)}
 .engage-card.retainer .engage-list li span:first-child{color:var(--brown2)}
-.engage-bridge{background:var(--ink2);border:1px solid rgba(107,74,42,.22);border-radius:var(--r);padding:1.5rem 2rem;margin-top:1.5rem;display:flex;align-items:center;gap:1.5rem}
-.engage-bridge-arrow{font-size:1.2rem;color:var(--brown2);flex-shrink:0}
-.engage-bridge p{font-size:.81rem;color:rgba(255,255,255,.34);line-height:1.72;font-weight:300}
+.engage-bridge{background:var(--ink2);border:1px solid rgba(122,82,48,.2);border-radius:var(--r);padding:1.5rem 2rem;margin-top:1.5rem;display:flex;align-items:center;gap:1.5rem}
+.engage-bridge p{font-size:.8rem;color:rgba(255,255,255,.32);line-height:1.74;font-weight:300}
 .engage-bridge strong{color:rgba(255,255,255,.7);font-weight:500}
 
-/* ── WHO THIS FITS ──────────────────────────────────────────── */
-.fit{background:var(--cream);padding:5.5rem 0}
-.fit-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin-top:2.6rem}
+/* FIT */
+.fit{background:var(--warm);padding:5.5rem 0}
+.fit-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin-top:2.75rem}
 .fit-card{border-radius:var(--r);padding:2rem}
 .fit-card.yes{background:#fff;border:1px solid var(--border)}
-.fit-card.no{background:rgba(49,42,34,.02);border:1px dashed rgba(49,42,34,.12)}
-.fit-lbl{font-size:.61rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;margin-bottom:1.2rem;display:block}
+.fit-card.no{background:rgba(48,40,32,.02);border:1px dashed rgba(48,40,32,.12)}
+.fit-lbl{font-size:.6rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;margin-bottom:1.2rem;display:block}
 .fit-card.yes .fit-lbl{color:var(--green)}
 .fit-card.no .fit-lbl{color:var(--text3)}
-.fit-list{list-style:none;display:flex;flex-direction:column;gap:.72rem}
-.fit-list li{font-size:.82rem;line-height:1.56;display:flex;align-items:flex-start;gap:.65rem}
+.fit-list{list-style:none;display:flex;flex-direction:column;gap:.75rem}
+.fit-list li{font-size:.82rem;line-height:1.58;display:flex;align-items:flex-start;gap:.65rem}
 .fit-card.yes .fit-list li{color:var(--text)}
 .fit-card.no .fit-list li{color:var(--text2)}
 
-/* ── TESTIMONIALS ───────────────────────────────────────────── */
-.testi{background:var(--warm);padding:5.5rem 0}
+/* TESTIMONIALS */
+.testi{background:var(--cream);padding:5.5rem 0}
 .testi-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.15rem;margin-top:3rem}
 .testi-card{background:#fff;border:1px solid var(--border);border-radius:var(--r);padding:1.85rem;display:flex;flex-direction:column}
-.stars{color:var(--brown);font-size:.76rem;letter-spacing:.09em;margin-bottom:.95rem}
-.testi-q{font-family:var(--serif);font-size:.97rem;font-weight:400;color:var(--ink);line-height:1.68;font-style:italic;flex:1}
-.testi-div{width:26px;height:1px;background:var(--border);margin:1.1rem 0}
-.testi-name{font-size:.78rem;font-weight:500;color:var(--text)}
-.testi-co{font-size:.68rem;color:var(--text3)}
+.stars{color:var(--brown);font-size:.75rem;letter-spacing:.09em;margin-bottom:.95rem}
+.testi-q{font-family:var(--serif);font-size:.96rem;font-weight:400;color:var(--ink);line-height:1.7;font-style:italic;flex:1}
+.testi-div{width:24px;height:1px;background:var(--border);margin:1.1rem 0}
+.testi-name{font-size:.77rem;font-weight:500;color:var(--text)}
+.testi-co{font-size:.67rem;color:var(--text3)}
 
-/* ── FAQ ────────────────────────────────────────────────────── */
-.faq{background:var(--cream);padding:5.5rem 0}
+/* FAQ */
+.faq{background:var(--warm);padding:5.5rem 0}
 .faq-intro{max-width:500px;margin-bottom:3rem}
 .faq-list{display:flex;flex-direction:column;border-radius:var(--r);overflow:hidden;border:1px solid var(--border)}
 .faq-item{background:#fff;border-bottom:1px solid var(--border)}
 .faq-item:last-child{border-bottom:none}
 .faq-item.open{background:var(--cream)}
-.faq-q{display:flex;justify-content:space-between;align-items:center;cursor:pointer;padding:1.38rem 1.65rem;gap:1.4rem;user-select:none}
-.faq-q-text{font-family:var(--serif);font-size:.97rem;font-weight:500;color:var(--ink);line-height:1.42}
+.faq-q{display:flex;justify-content:space-between;align-items:center;cursor:pointer;padding:1.35rem 1.65rem;gap:1.4rem;user-select:none}
+.faq-q-text{font-family:var(--serif);font-size:.96rem;font-weight:500;color:var(--ink);line-height:1.42}
 .faq-icon{width:24px;height:24px;border-radius:50%;background:var(--brown-pale);border:1px solid var(--brown-border);display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:all .3s}
 .faq-icon svg{width:9px;height:9px;transition:transform .32s;color:var(--brown)}
 .faq-item.open .faq-icon{background:var(--brown);border-color:var(--brown)}
 .faq-item.open .faq-icon svg{transform:rotate(180deg);color:#fff}
 .faq-a{max-height:0;overflow:hidden;transition:max-height .38s cubic-bezier(.4,0,.2,1),opacity .28s ease;opacity:0}
 .faq-item.open .faq-a{max-height:480px;opacity:1}
-.faq-a-inner{padding:0 1.65rem 1.38rem;font-size:.84rem;color:var(--text2);line-height:1.85;font-weight:300;border-top:1px solid var(--border);padding-top:.95rem}
+.faq-a-inner{padding:0 1.65rem 1.35rem;font-size:.83rem;color:var(--text2);line-height:1.88;font-weight:300;border-top:1px solid var(--border);padding-top:.95rem}
 
-/* ── MAIN CTA ───────────────────────────────────────────────── */
+/* MAIN CTA */
 .main-cta{background:var(--ink);padding:5.5rem 0}
-.main-cta-inner{max-width:560px;margin:0 auto;text-align:center}
-.main-cta-inner .eyebrow{color:rgba(255,255,255,.22)}
+.main-cta-inner{max-width:540px;margin:0 auto;text-align:center}
+.main-cta-inner .eyebrow{color:rgba(255,255,255,.2)}
 .main-cta-inner h2{color:#fff;margin-bottom:.8rem}
 .main-cta-inner h2 em{color:var(--brown2)}
-.main-cta-inner p{color:rgba(255,255,255,.34);font-size:.86rem;font-weight:300;max-width:390px;margin:0 auto 1.9rem;line-height:1.95}
-.cta-btns{display:flex;gap:.7rem;justify-content:center;flex-wrap:wrap}
+.main-cta-inner p{color:rgba(255,255,255,.32);font-size:.85rem;font-weight:300;max-width:380px;margin:0 auto 1.9rem;line-height:1.96}
+.cta-btns{display:flex;gap:.72rem;justify-content:center;flex-wrap:wrap}
 .cta-creds{display:flex;gap:1.4rem;justify-content:center;flex-wrap:wrap;margin-top:1.9rem;padding-top:1.9rem;border-top:1px solid rgba(255,255,255,.06)}
-.cred{font-size:.68rem;color:rgba(255,255,255,.2);display:flex;align-items:center;gap:.38rem}
+.cred{font-size:.67rem;color:rgba(255,255,255,.2);display:flex;align-items:center;gap:.38rem}
 .cred-dot{width:3px;height:3px;border-radius:50%;background:var(--brown);opacity:.45}
 
-/* ══════════════════════════════════════════════════════════════
-   ABOUT PAGE
-══════════════════════════════════════════════════════════════ */
+/* ══ ABOUT ═════════════════════════════════════════════════════ */
 .about-hero{padding:5rem 0 4rem;background:var(--warm)}
-.about-inner{display:grid;grid-template-columns:1fr 320px;gap:4.75rem;align-items:start}
-.about-text p{font-size:.9rem;color:var(--text2);font-weight:300;line-height:1.9;margin-bottom:.95rem}
+.about-inner{display:grid;grid-template-columns:1fr 300px;gap:4.75rem;align-items:start}
+.about-text p{font-size:.89rem;color:var(--text2);font-weight:300;line-height:1.92;margin-bottom:.95rem}
 .about-text p strong{color:var(--text);font-weight:500}
 .about-text h1{margin-bottom:1.4rem}
-.photo-card{background:var(--ink2);border-radius:var(--r);overflow:hidden;border:1px solid rgba(255,255,255,.06);box-shadow:0 18px 48px rgba(26,22,16,.14)}
+.photo-card{background:var(--ink2);border-radius:var(--r);overflow:hidden;border:1px solid rgba(255,255,255,.06);box-shadow:0 18px 50px rgba(22,18,13,.16)}
 .photo-card img{width:100%;height:auto;display:block;object-fit:cover}
 .photo-meta{padding:.9rem 1.2rem;border-top:1px solid rgba(255,255,255,.06)}
-.photo-meta p{font-size:.7rem;color:rgba(255,255,255,.28)}
-.vv-callout{background:var(--ink2);border:1px solid rgba(107,74,42,.28);border-radius:var(--r);padding:1.4rem 1.65rem;margin-top:1.1rem;display:flex;align-items:flex-start;gap:1rem}
+.photo-meta p{font-size:.69rem;color:rgba(255,255,255,.28)}
+.vv-callout{background:var(--ink2);border:1px solid rgba(122,82,48,.26);border-radius:var(--r);padding:1.4rem 1.65rem;margin-top:1.1rem;display:flex;align-items:flex-start;gap:1rem}
 .vv-callout-icon{font-size:1.15rem;flex-shrink:0;margin-top:.1rem}
-.vv-callout-body strong{display:block;font-size:.86rem;color:#fff;font-weight:500;margin-bottom:.32rem}
-.vv-callout-body p{font-size:.76rem;color:rgba(255,255,255,.36);line-height:1.72;font-weight:300;margin:0}
+.vv-callout-body strong{display:block;font-size:.85rem;color:#fff;font-weight:500;margin-bottom:.32rem}
+.vv-callout-body p{font-size:.75rem;color:rgba(255,255,255,.34);line-height:1.74;font-weight:300;margin:0}
 .personality{padding:5rem 0;background:var(--cream)}
-.personality-grid{display:grid;grid-template-columns:1fr 1fr;gap:4.25rem;margin-top:2.6rem;align-items:start}
-.personality-text p{font-size:.9rem;color:var(--text2);line-height:1.9;font-weight:300;margin-bottom:.95rem}
+.personality-grid{display:grid;grid-template-columns:1fr 1fr;gap:4.25rem;margin-top:2.75rem;align-items:start}
+.personality-text p{font-size:.89rem;color:var(--text2);line-height:1.9;font-weight:300;margin-bottom:.95rem}
 .personality-text p strong{color:var(--text);font-weight:500}
 .trait-list{display:flex;flex-direction:column;gap:.85rem}
 .trait-item{display:flex;gap:1rem;align-items:flex-start;background:#fff;border:1px solid var(--border);border-radius:var(--r);padding:1.1rem 1.25rem;transition:border-color .2s,transform .2s}
 .trait-item:hover{border-color:var(--brown-border);transform:translateX(3px)}
-.trait-num{font-family:var(--serif);font-size:1.45rem;font-weight:600;color:rgba(107,74,42,.12);line-height:1;flex-shrink:0;width:2rem;padding-top:.08rem}
-.trait-text h4{font-size:.84rem;font-weight:500;color:var(--text);margin-bottom:.2rem}
-.trait-text p{font-size:.76rem;color:var(--text2);line-height:1.66;font-weight:300;margin:0}
+.trait-num{font-family:var(--serif);font-size:1.4rem;font-weight:600;color:rgba(122,82,48,.12);line-height:1;flex-shrink:0;width:2rem;padding-top:.08rem}
+.trait-text h4{font-size:.83rem;font-weight:500;color:var(--text);margin-bottom:.2rem}
+.trait-text p{font-size:.75rem;color:var(--text2);line-height:1.68;font-weight:300;margin:0}
 .photo-row{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin-top:1.5rem}
 .photo-sm{border-radius:var(--r);overflow:hidden;aspect-ratio:1;border:1px solid var(--border)}
 .photo-sm img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .4s ease}
-.photo-sm:hover img{transform:scale(1.04)}
+.photo-sm:hover img{transform:scale(1.05)}
 
-/* ── TIMELINE ───────────────────────────────────────────────── */
+/* TIMELINE */
 .timeline{padding:5.5rem 0;background:var(--warm)}
-.tl-list{position:relative;margin-top:2.6rem;display:flex;flex-direction:column}
-.tl-list::before{content:'';position:absolute;left:156px;top:8px;bottom:0;width:1px;background:rgba(49,42,34,.13)}
-.tl-row{display:grid;grid-template-columns:156px 1fr;gap:0 2.5rem;padding-bottom:2.75rem;position:relative}
+.tl-list{position:relative;margin-top:2.75rem;display:flex;flex-direction:column}
+.tl-list::before{content:'';position:absolute;left:158px;top:8px;bottom:0;width:1px;background:rgba(48,40,32,.12)}
+.tl-row{display:grid;grid-template-columns:158px 1fr;gap:0 2.5rem;padding-bottom:2.75rem;position:relative}
 .tl-row:last-child{padding-bottom:0}
-.tl-row::before{content:'';position:absolute;left:152px;top:7px;width:9px;height:9px;border-radius:50%;background:var(--warm);border:2px solid var(--brown);z-index:1}
+.tl-row::before{content:'';position:absolute;left:154px;top:7px;width:9px;height:9px;border-radius:50%;background:var(--warm);border:2px solid var(--brown);z-index:1}
 .tl-date{padding-right:1.4rem;text-align:right;padding-top:2px}
-.tl-date strong{display:block;font-size:.77rem;font-weight:500;color:var(--text);line-height:1.4;margin-bottom:.14rem}
-.tl-date span{font-size:.67rem;color:var(--text3)}
+.tl-date strong{display:block;font-size:.76rem;font-weight:500;color:var(--text);line-height:1.4;margin-bottom:.14rem}
+.tl-date span{font-size:.66rem;color:var(--text3)}
 .tl-body{padding-left:1.5rem}
-.tl-co{font-family:var(--serif);font-size:1.08rem;font-weight:600;color:var(--ink);margin-bottom:.14rem}
-.tl-role{font-size:.69rem;color:var(--brown);text-transform:uppercase;letter-spacing:.09em;font-weight:500;margin-bottom:.7rem}
+.tl-co{font-family:var(--serif);font-size:1.06rem;font-weight:600;color:var(--ink);margin-bottom:.14rem}
+.tl-role{font-size:.68rem;color:var(--brown);text-transform:uppercase;letter-spacing:.09em;font-weight:500;margin-bottom:.7rem}
 .tl-desc ul{margin-top:.4rem;padding-left:1.25rem;display:flex;flex-direction:column;gap:.44rem}
-.tl-desc ul li{font-size:.82rem;color:var(--text2);line-height:1.7;font-weight:300}
+.tl-desc ul li{font-size:.81rem;color:var(--text2);line-height:1.72;font-weight:300}
 .tl-desc ul li strong{color:var(--text);font-weight:500}
 .tl-pills{display:flex;flex-wrap:wrap;gap:.32rem;margin-top:.85rem}
-.pill{background:var(--brown-pale);border:1px solid var(--brown-border);color:var(--brown);font-size:.65rem;font-weight:500;padding:.2rem .65rem;border-radius:100px}
+.pill{background:var(--brown-pale);border:1px solid var(--brown-border);color:var(--brown);font-size:.64rem;font-weight:500;padding:.2rem .65rem;border-radius:100px}
 
-/* ── EDUCATION ──────────────────────────────────────────────── */
+/* EDUCATION */
 .edu-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:.95rem;margin-top:1.9rem}
 .edu-card{background:#fff;border:1px solid var(--border);border-radius:var(--r);padding:1.4rem;transition:border-color .2s,transform .2s}
 .edu-card:hover{border-color:var(--brown-border);transform:translateY(-2px)}
-.edu-yr{font-size:.61rem;color:var(--text3);text-transform:uppercase;letter-spacing:.07em;margin-bottom:.32rem}
-.edu-deg{font-family:var(--serif);font-size:.95rem;font-weight:600;color:var(--ink);line-height:1.3;margin-bottom:.18rem}
-.edu-school{font-size:.72rem;color:var(--brown)}
+.edu-yr{font-size:.6rem;color:var(--text3);text-transform:uppercase;letter-spacing:.07em;margin-bottom:.32rem}
+.edu-deg{font-family:var(--serif);font-size:.94rem;font-weight:600;color:var(--ink);line-height:1.3;margin-bottom:.18rem}
+.edu-school{font-size:.71rem;color:var(--brown)}
 .certs-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:.82rem;margin-top:1.4rem}
 .cert-card{background:#fff;border:1px solid var(--border);border-radius:var(--r);padding:1.1rem .82rem;text-align:center;transition:all .2s;display:flex;flex-direction:column;align-items:center;gap:.22rem}
 .cert-card:hover{border-color:var(--brown-border);transform:translateY(-2px)}
 .cert-ico{font-size:1.45rem;margin-bottom:.22rem;display:block}
-.cert-name{font-size:.65rem;font-weight:500;color:var(--text);line-height:1.36;margin-bottom:.12rem}
+.cert-name{font-size:.64rem;font-weight:500;color:var(--text);line-height:1.36;margin-bottom:.12rem}
 .cert-by{font-size:.57rem;color:var(--text3);margin-bottom:.32rem}
 .cert-link{font-size:.6rem;color:var(--brown);text-decoration:none;border-bottom:1px solid var(--brown-border);padding-bottom:1px;transition:border-color .2s}
 .cert-link:hover{border-color:var(--brown)}
 
-/* ══════════════════════════════════════════════════════════════
-   SERVICES PAGE
-══════════════════════════════════════════════════════════════ */
+/* ══ SERVICES PAGE ═════════════════════════════════════════════ */
 .svc-page-hero{padding:5rem 0 4rem;background:var(--warm)}
 .svc-cards-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.15rem;margin-top:2.4rem}
 .svc-card{background:#fff;border:1px solid var(--border);border-radius:var(--r);padding:1.8rem;transition:all .22s;position:relative;overflow:hidden}
 .svc-card::after{content:'';position:absolute;bottom:0;left:0;right:0;height:2px;background:var(--brown);transform:scaleX(0);transform-origin:left;transition:transform .3s}
-.svc-card:hover{border-color:var(--brown-border);transform:translateY(-3px);box-shadow:0 10px 30px rgba(49,42,34,.07)}
+.svc-card:hover{border-color:var(--brown-border);transform:translateY(-3px);box-shadow:0 10px 32px rgba(48,40,32,.07)}
 .svc-card:hover::after{transform:scaleX(1)}
 .svc-ico{width:42px;height:42px;border-radius:9px;background:var(--brown-pale);border:1px solid var(--brown-border);display:flex;align-items:center;justify-content:center;font-size:1.1rem;margin-bottom:1.1rem}
-.svc-card h3{font-size:1.02rem;margin-bottom:.32rem}
-.svc-card .svc-tag{font-size:.66rem;font-weight:500;color:var(--brown);background:var(--brown-pale);padding:.2rem .62rem;border-radius:100px;display:inline-block;margin-bottom:.72rem}
-.svc-card>p{font-size:.78rem;color:var(--text2);line-height:1.72;font-weight:300;margin-bottom:.82rem}
+.svc-card h3{font-size:1rem;margin-bottom:.32rem}
+.svc-card .svc-tag{font-size:.65rem;font-weight:500;color:var(--brown);background:var(--brown-pale);padding:.2rem .62rem;border-radius:100px;display:inline-block;margin-bottom:.72rem}
+.svc-card>p{font-size:.77rem;color:var(--text2);line-height:1.74;font-weight:300;margin-bottom:.82rem}
 .svc-sub-list{list-style:none;display:flex;flex-direction:column;gap:.32rem}
-.svc-sub-list li{font-size:.71rem;color:var(--text2);padding-left:.92rem;position:relative;line-height:1.5}
+.svc-sub-list li{font-size:.7rem;color:var(--text2);padding-left:.92rem;position:relative;line-height:1.5}
 .svc-sub-list li::before{content:'·';position:absolute;left:0;color:var(--brown);font-size:1rem;line-height:1.22}
 .tools-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:.95rem;margin-top:1.9rem}
 .tool-card{background:#fff;border:1px solid var(--border);border-radius:var(--r);padding:1.65rem .95rem 1.3rem;text-align:center;transition:border-color .2s,transform .2s;display:flex;flex-direction:column;align-items:center}
 .tool-card:hover{border-color:var(--brown-border);transform:translateY(-3px)}
-.tool-logo{width:80px;height:80px;display:flex;align-items:center;justify-content:center;margin-bottom:.85rem}
-.tool-logo img{width:80px;height:80px;object-fit:contain;display:block}
-.tool-logo svg{width:80px;height:80px;display:block}
-.tool-name{font-size:.72rem;font-weight:500;color:var(--text);margin-bottom:.12rem}
-.tool-cat{font-size:.59rem;color:var(--text3);line-height:1.35}
+.tool-logo{width:72px;height:72px;display:flex;align-items:center;justify-content:center;margin-bottom:.85rem}
+.tool-logo img{width:72px;height:72px;object-fit:contain;display:block}
+.tool-logo svg{width:72px;height:72px;display:block}
+.tool-name{font-size:.71rem;font-weight:500;color:var(--text);margin-bottom:.12rem}
+.tool-cat{font-size:.58rem;color:var(--text3);line-height:1.35}
 
-/* ══════════════════════════════════════════════════════════════
-   WORK PAGE
-══════════════════════════════════════════════════════════════ */
+/* ══ WORK PAGE ═════════════════════════════════════════════════ */
 .ws-hero{padding:5rem 0 4rem;background:var(--warm)}
 .work-list{display:flex;flex-direction:column;gap:2.75rem;margin-top:2.75rem}
 .work-card{background:#fff;border:1px solid var(--border);border-radius:var(--r);overflow:hidden}
 .work-card-header{padding:1.9rem 2.1rem 1.65rem;border-bottom:1px solid var(--border)}
-.we-tag{font-size:.6rem;font-weight:500;text-transform:uppercase;letter-spacing:.09em;padding:.2rem .58rem;border-radius:100px;margin-bottom:.6rem;display:inline-block}
+.we-tag{font-size:.59rem;font-weight:500;text-transform:uppercase;letter-spacing:.09em;padding:.2rem .58rem;border-radius:100px;margin-bottom:.6rem;display:inline-block}
 .tag-a{background:var(--brown-pale);color:var(--brown);border:1px solid var(--brown-border)}
 .tag-b{background:rgba(196,149,90,.09);color:#9a6f35;border:1px solid rgba(196,149,90,.24)}
 .tag-c{background:rgba(80,140,100,.08);color:#3d7a55;border:1px solid rgba(80,140,100,.18)}
 .tag-d{background:rgba(80,100,170,.08);color:#4a5fa0;border:1px solid rgba(80,100,170,.18)}
 .tag-practice{background:rgba(80,100,170,.08);color:#4a5fa0;border:1px solid rgba(80,100,170,.18);font-style:italic}
-.work-card-header h3{font-size:1.16rem;line-height:1.3;font-family:var(--serif);font-weight:500;color:var(--ink)}
+.work-card-header h3{font-size:1.14rem;line-height:1.3;font-family:var(--serif);font-weight:500;color:var(--ink)}
 .we-outcome-pills{display:flex;flex-wrap:wrap;gap:.38rem;margin-top:.62rem}
-.we-outcome-pill{font-size:.66rem;font-weight:600;padding:.24rem .65rem;border-radius:100px;background:var(--ink);color:rgba(255,255,255,.78)}
+.we-outcome-pill{font-size:.65rem;font-weight:600;padding:.24rem .65rem;border-radius:100px;background:var(--ink);color:rgba(255,255,255,.76)}
 .work-card-body{padding:1.9rem 2.1rem}
 .we-cols{display:grid;grid-template-columns:1fr 1fr;gap:2.4rem}
-.we-lbl{font-size:.58rem;font-weight:700;letter-spacing:.11em;text-transform:uppercase;color:var(--text3);margin-bottom:.52rem;display:block}
-.we-text{font-size:.81rem;color:var(--text2);line-height:1.82;font-weight:300}
+.we-lbl{font-size:.57rem;font-weight:700;letter-spacing:.11em;text-transform:uppercase;color:var(--text3);margin-bottom:.52rem;display:block}
+.we-text{font-size:.8rem;color:var(--text2);line-height:1.84;font-weight:300}
 .we-steps{list-style:none;display:flex;flex-direction:column;gap:.46rem;margin-top:.62rem}
-.we-steps li{font-size:.79rem;color:var(--text2);padding-left:1.05rem;position:relative;line-height:1.56;font-weight:300}
+.we-steps li{font-size:.78rem;color:var(--text2);padding-left:1.05rem;position:relative;line-height:1.58;font-weight:300}
 .we-steps li::before{content:'';position:absolute;left:0;top:.52rem;width:4px;height:4px;border-radius:50%;background:var(--brown)}
 .we-chips{display:flex;flex-wrap:wrap;gap:.28rem;margin-top:.85rem}
-.we-chip{font-size:.63rem;color:var(--text3);background:var(--warm);border:1px solid var(--border);border-radius:100px;padding:.14rem .48rem}
+.we-chip{font-size:.62rem;color:var(--text3);background:var(--warm);border:1px solid var(--border);border-radius:100px;padding:.14rem .48rem}
 .we-result-box{background:var(--brown-pale);border:1px solid var(--brown-border);border-radius:var(--r-sm);padding:.95rem 1.05rem;margin-top:.85rem}
-.we-result-lbl{font-size:.56rem;font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:var(--brown);margin-bottom:.46rem}
+.we-result-lbl{font-size:.55rem;font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:var(--brown);margin-bottom:.46rem}
 .we-pills{display:flex;flex-wrap:wrap;gap:.3rem}
-.we-pill{font-size:.67rem;font-weight:500;color:var(--brown);background:#fff;border:1px solid var(--brown-border);padding:.2rem .58rem;border-radius:100px}
+.we-pill{font-size:.66rem;font-weight:500;color:var(--brown);background:#fff;border:1px solid var(--brown-border);padding:.2rem .58rem;border-radius:100px}
 .we-files{display:flex;flex-wrap:wrap;gap:.6rem;margin-top:1.2rem}
-.we-file-link{display:inline-flex;align-items:center;gap:.45rem;font-size:.73rem;font-weight:500;color:var(--brown);background:var(--brown-pale);border:1px solid var(--brown-border);border-radius:100px;padding:.38rem .88rem;text-decoration:none;transition:background .2s}
+.we-file-link{display:inline-flex;align-items:center;gap:.45rem;font-size:.72rem;font-weight:500;color:var(--brown);background:var(--brown-pale);border:1px solid var(--brown-border);border-radius:100px;padding:.38rem .88rem;text-decoration:none;transition:background .2s}
 .we-file-link:hover{background:var(--warm2)}
 .work-card-images{padding:0 2.1rem 1.9rem;border-top:1px solid var(--border)}
-.we-images-label{font-size:.58rem;font-weight:700;letter-spacing:.11em;text-transform:uppercase;color:var(--text3);display:block;padding:1.15rem 0 .82rem}
+.we-images-label{font-size:.57px;font-weight:700;letter-spacing:.11em;text-transform:uppercase;color:var(--text3);display:block;padding:1.15rem 0 .82rem;font-size:.57rem}
 .ba-grid{display:grid;grid-template-columns:1fr 1fr;gap:.95rem}
 .ba-item{display:flex;flex-direction:column;gap:.46rem}
-.ba-label{font-size:.66rem;font-weight:500;padding:.2rem .68rem;border-radius:100px;display:inline-block;width:fit-content}
+.ba-label{font-size:.65rem;font-weight:500;padding:.2rem .68rem;border-radius:100px;display:inline-block;width:fit-content}
 .ba-label.before{background:rgba(200,70,50,.07);color:#a03828;border:1px solid rgba(200,70,50,.18)}
-.ba-label.after{background:rgba(42,96,72,.08);color:#2a6048;border:1px solid rgba(42,96,72,.2)}
+.ba-label.after{background:rgba(30,92,58,.08);color:#1e5c3a;border:1px solid rgba(30,92,58,.2)}
 .img-grid{display:grid;gap:.95rem}
 .img-grid.cols-1{grid-template-columns:1fr;max-width:560px}
 .img-grid.cols-2{grid-template-columns:1fr 1fr}
 .img-item{display:flex;flex-direction:column;gap:.46rem}
 .img-placeholder{background:var(--warm);border:2px dashed var(--warm2);border-radius:var(--r);min-height:148px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.46rem;padding:1.9rem 1.4rem;text-align:center}
-.img-placeholder span{font-size:1.75rem;opacity:.32;line-height:1}
-.img-placeholder p{font-size:.7rem;color:var(--text3);line-height:1.66;font-weight:300;margin:0}
-.img-caption{font-size:.65rem;color:var(--text3);text-align:center;font-weight:300}
-.practice-notice{background:rgba(80,100,170,.05);border:1px solid rgba(80,100,170,.15);border-radius:var(--r-sm);padding:.7rem 1rem;margin-top:.7rem;font-size:.74rem;color:#4a5fa0;line-height:1.62}
+.img-placeholder span{font-size:1.75rem;opacity:.3;line-height:1}
+.img-placeholder p{font-size:.69rem;color:var(--text3);line-height:1.66;font-weight:300;margin:0}
+.img-caption{font-size:.64rem;color:var(--text3);text-align:center;font-weight:300}
+.practice-notice{background:rgba(80,100,170,.05);border:1px solid rgba(80,100,170,.14);border-radius:var(--r-sm);padding:.7rem 1rem;margin-top:.7rem;font-size:.73rem;color:#4a5fa0;line-height:1.64}
 
-/* ══════════════════════════════════════════════════════════════
-   CONTACT PAGE
-══════════════════════════════════════════════════════════════ */
+/* ══ CONTACT PAGE ══════════════════════════════════════════════ */
 .contact-hero{padding:5rem 0 4rem;background:var(--warm)}
 .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:4.25rem;margin-top:2.75rem}
 .c-method{display:flex;align-items:center;gap:.95rem;background:#fff;border:1px solid var(--border);border-radius:var(--r);padding:1.05rem 1.25rem;text-decoration:none;transition:border-color .2s;margin-bottom:.82rem}
 .c-method:hover{border-color:var(--brown-border)}
 .c-ico{width:36px;height:36px;border-radius:8px;background:var(--brown-pale);border:1px solid var(--brown-border);display:flex;align-items:center;justify-content:center;font-size:.95rem;flex-shrink:0}
-.c-lbl{font-size:.6rem;color:var(--text3);text-transform:uppercase;letter-spacing:.07em}
-.c-val{font-size:.8rem;color:var(--text);font-weight:500;margin-top:.05rem}
+.c-lbl{font-size:.59rem;color:var(--text3);text-transform:uppercase;letter-spacing:.07em}
+.c-val{font-size:.79rem;color:var(--text);font-weight:500;margin-top:.05rem}
 .book-card{background:#fff;border:2px solid var(--brown-border);border-radius:var(--r);padding:2.1rem}
 .book-card h3{margin-bottom:.42rem}
-.book-card>p{font-size:.8rem;color:var(--text2);margin-bottom:1.65rem;font-weight:300;line-height:1.72}
+.book-card>p{font-size:.8rem;color:var(--text2);margin-bottom:1.65rem;font-weight:300;line-height:1.74}
 .b-step{display:flex;gap:.82rem;align-items:flex-start;margin-bottom:.82rem}
-.b-num{width:21px;height:21px;border-radius:50%;background:var(--brown);color:#fff;font-size:.62rem;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:.17rem}
-.b-step p{font-size:.77rem;color:var(--text2);font-weight:300;margin:0;line-height:1.56}
+.b-num{width:21px;height:21px;border-radius:50%;background:var(--brown);color:#fff;font-size:.61rem;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:.17rem}
+.b-step p{font-size:.76rem;color:var(--text2);font-weight:300;margin:0;line-height:1.58}
 .gtn{background:var(--warm);border:1px solid var(--border);border-radius:var(--r);padding:1.2rem;margin-top:.82rem}
-.gtn-title{font-size:.6rem;color:var(--text3);text-transform:uppercase;letter-spacing:.07em;margin-bottom:.6rem}
-.gtn-items div{font-size:.75rem;color:var(--text2);font-weight:300;margin-bottom:.36rem}
+.gtn-title{font-size:.59rem;color:var(--text3);text-transform:uppercase;letter-spacing:.07em;margin-bottom:.6rem}
+.gtn-items div{font-size:.74rem;color:var(--text2);font-weight:300;margin-bottom:.36rem}
 
-/* ── LIGHTBOX ───────────────────────────────────────────────── */
-.lightbox{display:none;position:fixed;inset:0;background:rgba(26,22,16,.94);z-index:500;align-items:center;justify-content:center;padding:2rem}
+/* LIGHTBOX */
+.lightbox{display:none;position:fixed;inset:0;background:rgba(22,18,13,.95);z-index:500;align-items:center;justify-content:center;padding:2rem}
 .lightbox.open{display:flex}
 .lightbox img{max-width:92vw;max-height:90vh;border-radius:var(--r);box-shadow:0 28px 72px rgba(0,0,0,.5);object-fit:contain}
 .lightbox-close{position:absolute;top:1.4rem;right:1.4rem;width:42px;height:42px;border-radius:50%;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.16);color:#fff;font-size:1.15rem;display:flex;align-items:center;justify-content:center;cursor:pointer;transition:background .2s}
 .lightbox-close:hover{background:rgba(255,255,255,.2)}
 
-/* ── FOOTER ─────────────────────────────────────────────────── */
-footer{border-top:1px solid var(--border);padding:1.65rem 2.25rem;display:flex;justify-content:space-between;align-items:center}
-footer p{font-size:.68rem;color:var(--text3)}
+/* FOOTER */
+footer{border-top:1px solid var(--border);padding:1.65rem 2.5rem;display:flex;justify-content:space-between;align-items:center}
+footer p{font-size:.67rem;color:var(--text3)}
 .footer-links{display:flex;gap:1.4rem}
-.footer-links a{font-size:.68rem;color:var(--text3);text-decoration:none;transition:color .2s}
+.footer-links a{font-size:.67rem;color:var(--text3);text-decoration:none;transition:color .2s}
 .footer-links a:hover{color:var(--brown)}
 
-/* ── RESPONSIVE ─────────────────────────────────────────────── */
+/* RESPONSIVE */
 @media(max-width:900px){
   .hero{padding:3.25rem 1.5rem 2.75rem}
-  .hero-grid,.about-inner,.contact-grid,.engage-grid,.fit-grid,.personality-grid{grid-template-columns:1fr;gap:2.1rem}
+  .hero-grid,.about-inner,.contact-grid,.engage-grid,.fit-grid,.personality-grid,.diff-grid{grid-template-columns:1fr;gap:2.1rem}
   .testi-grid,.svc-cards-grid{grid-template-columns:1fr 1fr}
   .tools-grid,.certs-grid{grid-template-columns:repeat(3,1fr)}
   .edu-grid{grid-template-columns:1fr}
   .we-cols,.ba-grid,.img-grid.cols-2{grid-template-columns:1fr}
   .nav-links,.nav-avail,.nav-cta{display:none}
   .hamburger{display:flex!important}
-  .photo-card{max-width:310px;margin:0 auto}
+  .photo-card{max-width:300px;margin:0 auto}
   .svc-row{grid-template-columns:1fr;gap:1.25rem}
   .tl-list::before{left:0}
   .tl-row{grid-template-columns:1fr;padding-left:1.5rem}
   .tl-row::before{left:-4px}
   .tl-date{text-align:left;padding-right:0;margin-bottom:.35rem}
   .tl-body{padding-left:0}
+  .role-strip-inner{gap:0}
+  .rs-item{padding:.3rem .9rem;font-size:.65rem}
 }
 @media(max-width:580px){
-  .testi-grid,.tools-grid,.svc-cards-grid{grid-template-columns:1fr 1fr}
+  .testi-grid,.tools-grid,.svc-cards-grid{grid-template-columns:1fr}
   .certs-grid{grid-template-columns:repeat(2,1fr)}
-  .wrap{padding:0 1.2rem}
-  nav{padding:0 1.2rem}
-  .mob-menu{padding:1.4rem 1.2rem}
-  .hero{padding:2.75rem 1.2rem 2.25rem}
-  .tool-logo{width:68px;height:68px}
-  .tool-logo img,.tool-logo svg{width:68px;height:68px}
+  .wrap{padding:0 1.25rem}
+  nav{padding:0 1.25rem}
+  .mob-menu{padding:1.4rem 1.25rem}
+  .hero{padding:2.75rem 1.25rem 2.25rem}
+  .rs-item{border-right:none;border-bottom:1px solid rgba(255,255,255,.06)}
 }
 *,*::before,*::after{-webkit-tap-highlight-color:transparent}
 </style>
@@ -497,19 +505,16 @@ footer p{font-size:.68rem;color:var(--text3)}
   <a href="https://calendly.com/monicahmburu/one-on-one" target="_blank" class="mob-cta">Schedule a call</a>
 </div>
 
-<!-- ═══════════════════════════════════════════════════════════
-     HOME
-════════════════════════════════════════════════════════════ -->
+<!-- ═══════════════ HOME ═══════════════════════════════════════ -->
 <div id="page-home" class="page active">
 
-  <!-- HERO -->
   <div class="hero">
     <div class="hero-grid">
       <div class="hero-left">
-        <div class="hero-badge"><span class="hero-badge-dot"></span>Open to remote roles &amp; consulting engagements worldwide</div>
-        <h1>Clean books.<br>Useful reports.<br>Operations that <em>run themselves.</em></h1>
-        <p style="margin-top:1.1rem">I help early-stage founders get their finances in order and their back office running — without hiring three people to do it. Bookkeeping, financial reporting, and operational systems, from one person who understands how the parts connect.</p>
-        <p style="margin-top:.7rem;font-size:.86rem;color:var(--text2);font-weight:300;line-height:1.86">Whether you need investor-ready financials, a back office built from scratch, or ongoing support to keep things accurate — I work inside your team or alongside it, and you always know where things stand.</p>
+        <div class="hero-badge"><span class="hero-badge-dot"></span>Financial Operations Assistant &middot; Finance Systems VA</div>
+        <h1>Accurate books.<br>Useful reports.<br>Financial systems that <em>hold.</em></h1>
+        <p style="margin-top:1.1rem">I help founder-led teams get their finances in order and their financial workflows running — without the overhead of a full-time hire. Bookkeeping, reporting, and the operational systems that connect them.</p>
+        <p style="margin-top:.7rem;font-size:.86rem;color:var(--text2);font-weight:300;line-height:1.9">Whether you need clean books before investor conversations, a reporting dashboard that doesn't take hours to assemble, or financial workflows documented so your team can run them — I work inside your systems and you always know where things stand.</p>
         <div class="hero-actions">
           <a href="https://calendly.com/monicahmburu/one-on-one" target="_blank" class="btn">Schedule a call</a>
           <a href="javascript:void(0)" onclick="return show('work')" class="btn-ghost">View work samples &rarr;</a>
@@ -517,8 +522,8 @@ footer p{font-size:.68rem;color:var(--text3)}
         <div class="hero-trust">
           <span class="trust-item"><span class="trust-dot"></span>BA Economics &amp; Mathematics</span>
           <span class="trust-item"><span class="trust-dot"></span>CPA Foundation Certified</span>
+          <span class="trust-item"><span class="trust-dot"></span>MSc Financial Engineering</span>
           <span class="trust-item"><span class="trust-dot"></span>Remote &middot; worldwide</span>
-          <span class="trust-item"><span class="trust-dot"></span>Virtually Versed Africa &middot; Jun 2026</span>
         </div>
       </div>
       <div class="hero-right">
@@ -534,7 +539,7 @@ footer p{font-size:.68rem;color:var(--text3)}
           </div>
           <div class="metric-box">
             <div class="metric-num">60%</div>
-            <div class="metric-lbl">Fewer payment discrepancies after AP/AR controls were rebuilt</div>
+            <div class="metric-lbl">Fewer payment discrepancies after AP/AR controls rebuilt</div>
           </div>
           <div class="metric-box">
             <div class="metric-num">$500K+</div>
@@ -545,55 +550,58 @@ footer p{font-size:.68rem;color:var(--text3)}
     </div>
   </div>
 
-  <!-- SIGNAL STRIP -->
-  <div class="signal"><div class="signal-inner">
-    <span class="sig-item"><span class="sig-dot"></span>Early-stage founders &amp; growing teams</span>
-    <span class="sig-item"><span class="sig-dot"></span>Bookkeeping &amp; financial records</span>
-    <span class="sig-item"><span class="sig-dot"></span>Investor-ready reporting &amp; models</span>
-    <span class="sig-item"><span class="sig-dot"></span>Operational systems &amp; SOPs</span>
-    <span class="sig-item"><span class="sig-dot"></span>Open to full-time remote roles</span>
-  </div></div>
+  <!-- ROLE STRIP -->
+  <div class="role-strip">
+    <div class="role-strip-inner">
+      <span class="rs-item"><span class="rs-dot"></span>Financial Operations Assistant</span>
+      <span class="rs-item"><span class="rs-dot"></span>Finance Systems VA</span>
+      <span class="rs-item"><span class="rs-dot"></span>Bookkeeping &amp; Reconciliations</span>
+      <span class="rs-item"><span class="rs-dot"></span>Financial Reporting &amp; Dashboards</span>
+      <span class="rs-item"><span class="rs-dot"></span>Financial Workflow Design</span>
+      <span class="rs-item"><span class="rs-dot"></span>Open to remote roles worldwide</span>
+    </div>
+  </div>
 
-  <!-- REALITY -->
-  <div class="reality"><div class="wrap">
+  <!-- PROBLEM -->
+  <div class="problem"><div class="wrap">
     <span class="eyebrow reveal">Sound familiar?</span>
-    <h2 class="reveal">Most founders grow faster<br>than their <em>systems do.</em></h2>
-    <p class="reality-intro reveal">When a business scales without structure, the founder becomes the system. Everything routes through one person because nothing else exists to hold it.</p>
-    <div class="reality-grid reveal">
-      <div class="reality-item">
-        <div class="reality-title">You don't have a reliable picture of your financial position</div>
-        <div class="reality-desc">Revenue is visible. Profit is a guess. Cash position requires work to calculate. When someone asks how the business is doing, the honest answer is you're not entirely sure because the data hasn't been organised.</div>
+    <h2 class="reveal">The financial layer gets messy<br>before anyone <em>admits it.</em></h2>
+    <p class="problem-intro reveal">When a business grows faster than its financial systems, the founder carries the gap. Everything sits in one person's head because no structure exists to hold it.</p>
+    <div class="problem-grid reveal">
+      <div class="problem-item">
+        <div class="problem-title">You don't have a clear picture of your financial position</div>
+        <div class="problem-desc">Revenue is visible. Profit is a guess. Cash position requires manual work to calculate. When someone asks how the business is doing, the honest answer is you're not entirely sure — because the financial data hasn't been organised.</div>
       </div>
-      <div class="reality-item">
-        <div class="reality-title">Important things keep slipping through</div>
-        <div class="reality-desc">Not because you're not across it, but because the business doesn't have the capacity. Follow-ups don't happen. Reconciliations are weeks behind. Things that should have been done last month are still waiting.</div>
+      <div class="problem-item">
+        <div class="problem-title">Reporting takes hours of manual assembly every month</div>
+        <div class="problem-desc">The same report, rebuilt by hand each time. Pulling from multiple sources, reformatting, verifying. Hours spent producing information that should already exist — in a system, updating itself.</div>
       </div>
-      <div class="reality-item">
-        <div class="reality-title">You are the only person who knows how things get done</div>
-        <div class="reality-desc">Decisions, approvals, and context all come back to you. When you're unavailable, work stops. Nothing is written down. Every new person needs a full walkthrough you don't have time to give.</div>
+      <div class="problem-item">
+        <div class="problem-title">Financial workflows have no documented process</div>
+        <div class="problem-desc">AP, AR, reconciliations, expense tracking — done by whoever has bandwidth, however they figure it out. When they leave or are unavailable, nothing continues cleanly. There's no system, just individuals.</div>
       </div>
-      <div class="reality-item">
-        <div class="reality-title">You're doing too many jobs at once</div>
-        <div class="reality-desc">Finance, operations, communication, execution — you're carrying more than one person should because handing things off requires structure that doesn't exist yet. Growth is making you more of a bottleneck, not less.</div>
+      <div class="problem-item">
+        <div class="problem-title">The books are behind and investor conversations are coming</div>
+        <div class="problem-desc">Messy or outdated records are manageable until they're not. A funding round, a new hire, or an audit makes the gap very visible very quickly — and cleaning it up under pressure is expensive.</div>
       </div>
     </div>
-    <div class="reality-bridge reveal"><p>These problems don't go away by working harder. They go away with <strong>better structure, cleaner financial information, and someone you can trust to follow through</strong> — which is exactly what I provide.</p></div>
+    <div class="problem-bridge reveal"><p>These problems don't solve themselves. They need <strong>accurate records, systems built around the financial workflows, and someone accountable for keeping both current</strong> — which is exactly where I work.</p></div>
   </div></div>
 
   <!-- SERVICES OVERVIEW -->
-  <div class="svc-section"><div class="wrap">
+  <div class="svc-overview"><div class="wrap">
     <span class="eyebrow reveal">What I do</span>
     <div class="svc-intro reveal">
-      <h2>Three areas.<br>One person you <em>talk to.</em></h2>
-      <p class="sub">I work across bookkeeping, financial reporting, and operations. Not a generalist handling whatever lands in the inbox — a consistent support partner who understands how the different parts connect.</p>
+      <h2>Financial operations support<br>from one person who understands<br>how the <em>parts connect.</em></h2>
+      <p class="sub">Not a generalist. Not a bookkeeper who stops at the ledger. I work across the financial operations layer — accurate records, useful reporting, and the documented workflows that make both sustainable.</p>
     </div>
     <div class="svc-rows">
 
       <div class="svc-row reveal">
-        <div><div class="svc-num">01</div><div class="svc-lbl">Bookkeeping</div><h3>Books that are always current</h3></div>
+        <div><div class="svc-num">01</div><div class="svc-lbl">Bookkeeping &amp; Financial Records</div><h3>Books that are current and clean</h3></div>
         <div>
-          <p class="svc-row-desc">Most founders know their books are behind. It's not that they don't care — it's that keeping records current takes consistent time, and consistent time is the one thing they don't have. I keep the books current so you always know where things stand without having to prepare for the conversation first.</p>
-          <div class="svc-why"><strong>Why this matters</strong>Clean books aren't a formality for accountants. They're how you know your cash position, make decisions based on real numbers, and stop dreading the question "how are we doing?"</div>
+          <p class="svc-row-desc">Most founders know their books are behind — not because they don't care, but because keeping records current takes consistent time they don't have. I maintain the books so you always know where you stand without preparing for the conversation first.</p>
+          <div class="svc-why"><strong>Why this matters for operations</strong>Clean books aren't just for accountants. They're the foundation that reporting, cash flow visibility, and investor conversations all depend on. Without them, every downstream financial process is guesswork.</div>
           <ul class="svc-items" style="margin-top:1rem">
             <li>Monthly transaction categorisation and reconciliation</li>
             <li>Accounts payable and receivable tracking</li>
@@ -604,45 +612,45 @@ footer p{font-size:.68rem;color:var(--text3)}
         <div class="svc-right">
           <div class="svc-right-lbl">From the work</div>
           <div class="svc-outcome"><div class="svc-outcome-num">60%</div><div class="svc-outcome-text">fewer payment discrepancies after AP/AR controls were rebuilt from scratch</div></div>
-          <div class="svc-outcome" style="margin-top:.62rem"><div class="svc-outcome-num">100%</div><div class="svc-outcome-text">tax filing compliance across all periods with no amendments</div></div>
+          <div class="svc-outcome" style="margin-top:.65rem"><div class="svc-outcome-num">100%</div><div class="svc-outcome-text">tax filing compliance across all periods with no amendments</div></div>
         </div>
       </div>
 
       <div class="svc-row reveal">
-        <div><div class="svc-num">02</div><div class="svc-lbl">Financial Reporting</div><h3>Numbers you can act on</h3></div>
+        <div><div class="svc-num">02</div><div class="svc-lbl">Financial Reporting &amp; Dashboards</div><h3>Numbers you can act on</h3></div>
         <div>
-          <p class="svc-row-desc">A report that arrives after you've already made the decisions it would have informed isn't useful. I build reporting that gives you the information you need when you need it, without hours of manual assembly to get there.</p>
-          <div class="svc-why"><strong>Why this actually matters</strong>Financial information you can't act on is just noise. Good reporting tells you whether cash is healthy, which revenue streams are pulling their weight, and what the numbers say you should do next.</div>
+          <p class="svc-row-desc">A report that arrives after decisions have already been made isn't useful. I build reporting systems that surface the financial information you need when you need it — without hours of manual work to get there each month.</p>
+          <div class="svc-why"><strong>Why this matters for operations</strong>Good financial reporting doesn't describe what happened — it tells you what to do next. Cash health, revenue trends, budget variance. Information that drives decisions, not just confirms them.</div>
           <ul class="svc-items" style="margin-top:1rem">
-            <li>Income statement, cash flow statement, balance sheet</li>
-            <li>Dashboards connected to live data</li>
+            <li>P&amp;L, cash flow statement, balance sheet — monthly</li>
+            <li>Excel and Google Sheets dashboards connected to live data</li>
             <li>Budget tracking and variance analysis</li>
             <li>Investor-ready financial models and reports</li>
           </ul>
         </div>
         <div class="svc-right">
           <div class="svc-right-lbl">From the work</div>
-          <div class="svc-outcome"><div class="svc-outcome-num">10+</div><div class="svc-outcome-text">investor-ready financial packages produced, supporting $500K+ in investor interest</div></div>
-          <div class="svc-outcome" style="margin-top:.62rem"><div class="svc-outcome-num">30%</div><div class="svc-outcome-text">improvement in forecast accuracy after models were restructured</div></div>
+          <div class="svc-outcome"><div class="svc-outcome-num">40%</div><div class="svc-outcome-text">faster reporting — 20+ hrs/week recovered after manual process was redesigned</div></div>
+          <div class="svc-outcome" style="margin-top:.65rem"><div class="svc-outcome-num">$500K+</div><div class="svc-outcome-text">investor interest generated through financial packages produced for 10+ companies</div></div>
         </div>
       </div>
 
       <div class="svc-row reveal">
-        <div><div class="svc-num">03</div><div class="svc-lbl">Executive &amp; Operational Support</div><h3>Work that moves without you watching it</h3></div>
+        <div><div class="svc-num">03</div><div class="svc-lbl">Financial Workflow Design</div><h3>Processes that run without you</h3></div>
         <div>
-          <p class="svc-row-desc">This isn't about ticking tasks off a list. It's about building the infrastructure — documented processes, coordination systems, reliable follow-through — so important work keeps moving even when you're not in the room.</p>
-          <div class="svc-why"><strong>Why this actually matters</strong>When you're the only person who knows how something gets done, your time is permanently rationed. Written-down systems and reliable execution create the space to actually think about the business.</div>
+          <p class="svc-row-desc">The financial operations layer only holds if the workflows holding it are documented, automated where possible, and not dependent on one person knowing what to do. I design and document the financial processes so they run consistently — whoever is running them.</p>
+          <div class="svc-why"><strong>Why this is the missing piece</strong>Most businesses have the people and the tools. What's missing is the documented financial process that connects them. SOPs, workflow design, and automation turn one-time work into repeatable systems.</div>
           <ul class="svc-items" style="margin-top:1rem">
-            <li>SOP writing and process documentation</li>
-            <li>Workflow design and automation (Zapier, Make)</li>
-            <li>Inbox and calendar management</li>
-            <li>Project coordination and follow-through</li>
+            <li>Financial workflow design and SOP documentation</li>
+            <li>AP/AR workflow automation (Zapier, Make, Excel)</li>
+            <li>Expense submission and approval workflow builds</li>
+            <li>Month-end close process documentation</li>
           </ul>
         </div>
         <div class="svc-right">
           <div class="svc-right-lbl">From the work</div>
-          <div class="svc-outcome"><div class="svc-outcome-num">40%</div><div class="svc-outcome-text">faster reporting — 20+ hrs/week recovered after a manual process was redesigned</div></div>
-          <div class="svc-outcome" style="margin-top:.62rem"><div class="svc-outcome-num">8 SOPs</div><div class="svc-outcome-text">written and live — new hires onboard without the founder being involved</div></div>
+          <div class="svc-outcome"><div class="svc-outcome-num">8 SOPs</div><div class="svc-outcome-text">written and live — team runs processes without the founder involved</div></div>
+          <div class="svc-outcome" style="margin-top:.65rem"><div class="svc-outcome-num">30%</div><div class="svc-outcome-text">improvement in forecast accuracy after reporting models were restructured</div></div>
         </div>
       </div>
 
@@ -650,18 +658,40 @@ footer p{font-size:.68rem;color:var(--text3)}
     <div style="margin-top:2rem;text-align:center"><a href="javascript:void(0)" onclick="return show('services')" class="btn-ghost">Full service details &rarr;</a></div>
   </div></div>
 
+  <!-- WHAT MAKES THIS DIFFERENT -->
+  <div class="diff"><div class="wrap">
+    <span class="eyebrow reveal">Why it works</span>
+    <h2 class="reveal">This isn't bookkeeping.<br>It isn't operations. It's<br>the <em>layer between them.</em></h2>
+    <div class="diff-grid">
+      <div class="diff-text reveal">
+        <p>A bookkeeper maintains records. An operations VA handles tasks and coordination. A Financial Operations Assistant works at the intersection — building and maintaining the financial systems that the rest of the business depends on.</p>
+        <p>My background in Economics and Mathematics means I understand what financial numbers imply, not just how to organise them. The MSc in Financial Engineering adds the analytical layer — forecasting, scenario modelling, financial system design.</p>
+        <p><strong>The difference shows up in the questions I ask.</strong> When I see a discrepancy in the accounts, I investigate root cause rather than documenting the error. When I build a reporting dashboard, I ask what decisions it needs to support. When I document a workflow, I design for the version that runs without me.</p>
+        <p>That's the distinction between someone who manages financial tasks and someone who builds financial operations.</p>
+      </div>
+      <div class="reveal">
+        <div class="diff-cards">
+          <div class="diff-card"><div class="diff-card-num">01</div><div class="diff-card-body"><h4>Financial fluency, not just execution</h4><p>I understand what numbers mean and what they're pointing toward — not just how to enter them correctly.</p></div></div>
+          <div class="diff-card"><div class="diff-card-num">02</div><div class="diff-card-body"><h4>Systems, not tasks</h4><p>Every deliverable is built to run independently. The goal is infrastructure that holds without me present.</p></div></div>
+          <div class="diff-card"><div class="diff-card-num">03</div><div class="diff-card-body"><h4>Root cause, not symptoms</h4><p>If something keeps going wrong, I find why — not just fix it each time it surfaces.</p></div></div>
+          <div class="diff-card"><div class="diff-card-num">04</div><div class="diff-card-body"><h4>Remote-ready by default</h4><p>Asynchronous communication, proactive updates, no micro-management required. Proven over 10 months supporting a US-based CEO.</p></div></div>
+        </div>
+      </div>
+    </div>
+  </div></div>
+
   <!-- HOW IT WORKS -->
   <div class="how"><div class="wrap">
     <div class="how-intro reveal">
       <span class="eyebrow">How it works</span>
       <h2>From a conversation<br>to <em>systems that run.</em></h2>
-      <p class="sub">The process is straightforward on your end. You describe the situation. I scope the work. We start.</p>
+      <p class="sub">Straightforward on your end. You describe the situation. I scope the work. We start.</p>
     </div>
     <div class="how-steps">
-      <div class="how-step reveal"><div class="how-step-num">1</div><div class="how-step-body"><h4>We talk for 30 minutes</h4><p>We discuss where the friction is — lagging finances, manual reporting, broken processes. I figure out the root cause and whether I'm the right person to address it.</p></div></div>
-      <div class="how-step reveal"><div class="how-step-num">2</div><div class="how-step-body"><h4>Scope agreed before work begins</h4><p>For projects, deliverables and estimated hours are confirmed upfront. For retainers, monthly scope is agreed at onboarding. No open-ended commitments on either side.</p></div></div>
-      <div class="how-step reveal"><div class="how-step-num">3</div><div class="how-step-body"><h4>Work starts within 48 hours</h4><p>You provide access to the books, tools, and relevant workflows. I audit the current state, identify the gaps, and start building against the agreed scope.</p></div></div>
-      <div class="how-step reveal"><div class="how-step-num">4</div><div class="how-step-body"><h4>Systems are handed over or kept running</h4><p>Project engagements close with full documentation so everything holds independently. Retainers keep the systems accurate and current each month going forward.</p></div></div>
+      <div class="how-step reveal"><div class="how-step-num">1</div><div class="how-step-body"><h4>We talk for 30 minutes</h4><p>You describe where the friction is — lagging books, manual reporting, financial workflows that break. I identify root cause and confirm whether I'm the right person to address it.</p></div></div>
+      <div class="how-step reveal"><div class="how-step-num">2</div><div class="how-step-body"><h4>Scope agreed before work begins</h4><p>For projects, deliverables and timeline confirmed upfront. For retainers, monthly scope agreed at onboarding. No open-ended commitments on either side.</p></div></div>
+      <div class="how-step reveal"><div class="how-step-num">3</div><div class="how-step-body"><h4>Financial audit and systems review — week one</h4><p>I review the current state of your books, reporting, and financial workflows. Gaps identified, priority order confirmed, work starts against agreed scope.</p></div></div>
+      <div class="how-step reveal"><div class="how-step-num">4</div><div class="how-step-body"><h4>Systems handed over or kept running</h4><p>Project engagements close with full documentation so everything holds independently. Retainers keep the financial layer accurate and current each month going forward.</p></div></div>
     </div>
     <div class="how-cta reveal">
       <p>Five case studies with deliverables, process notes, and real outcomes — available to review before we speak.</p>
@@ -669,50 +699,50 @@ footer p{font-size:.68rem;color:var(--text3)}
     </div>
   </div></div>
 
-  <!-- ENGAGEMENT TYPES -->
+  <!-- ENGAGEMENT -->
   <div class="engage"><div class="wrap">
     <span class="eyebrow reveal">How we work together</span>
-    <h2 class="reveal">Projects build the system.<br><em>Retainers keep it running.</em></h2>
+    <h2 class="reveal">Projects build the financial system.<br><em>Retainers keep it accurate.</em></h2>
     <div class="engage-intro reveal">
-      <p class="sub">A project is scoped, time-bound, and ends with a deliverable you own. A retainer is ongoing maintenance with a defined monthly scope. Most clients do both, in that order. I am also open to full-time remote employment — the same capabilities, inside your team.</p>
+      <p class="sub">A project is scoped, time-bound, and ends with a deliverable you own. A retainer is ongoing financial maintenance with a defined monthly scope. Most clients start with a project. I'm also open to full-time remote employment.</p>
     </div>
     <div class="engage-grid reveal">
       <div class="engage-card project">
         <span class="engage-badge">Project engagement</span>
-        <h3>Build the infrastructure</h3>
-        <p>Scoped and time-bound. Books cleaned, workflows built, dashboards connected, SOPs written. Ends with a fully documented system you own.</p>
+        <h3>Build the financial infrastructure</h3>
+        <p>Scoped and time-bound. Books cleaned, reporting system built, financial workflows documented, dashboards connected. Ends with everything fully documented.</p>
         <ul class="engage-list">
           <li><span>&rarr;</span><span>Books reconciled and brought current</span></li>
-          <li><span>&rarr;</span><span>Financial reporting dashboard built and connected to live data</span></li>
-          <li><span>&rarr;</span><span>Workflows automated end to end</span></li>
-          <li><span>&rarr;</span><span>SOPs written so processes run without constant oversight</span></li>
+          <li><span>&rarr;</span><span>Reporting dashboard built and connected to live data</span></li>
+          <li><span>&rarr;</span><span>Financial workflows documented as SOPs</span></li>
+          <li><span>&rarr;</span><span>AP/AR tracking rebuilt or automated</span></li>
           <li><span>&rarr;</span><span>Full documentation handed over at close</span></li>
         </ul>
         <div style="border-top:1px solid var(--border);padding-top:1.2rem;margin-top:auto">
-          <div style="font-family:var(--serif);font-size:1.05rem;font-weight:500;color:var(--brown);line-height:1.4">Scope &amp; investment discussed on the discovery call</div>
-          <div style="font-size:.7rem;color:var(--text3);margin-top:.2rem;line-height:1.5">Deliverables and hours confirmed before work begins</div>
+          <div style="font-family:var(--serif);font-size:1.02rem;font-weight:500;color:var(--brown);line-height:1.4">Scope &amp; investment discussed on the discovery call</div>
+          <div style="font-size:.69rem;color:var(--text3);margin-top:.2rem;line-height:1.5">Deliverables and timeline confirmed before work begins</div>
         </div>
       </div>
       <div class="engage-card retainer">
         <span class="engage-badge">Monthly retainer</span>
-        <h3>Keep what <em>was built</em> running</h3>
-        <p>Ongoing financial maintenance, workflow oversight, and operational continuity. Monthly scope agreed at onboarding.</p>
+        <h3>Keep the financial layer <em>running</em></h3>
+        <p>Ongoing financial operations maintenance. Books current, reporting produced monthly, financial workflows maintained. Monthly scope agreed at onboarding.</p>
         <ul class="engage-list">
           <li><span>&rarr;</span><span>Monthly bookkeeping and reconciliation</span></li>
-          <li><span>&rarr;</span><span>Income statement, cash flow, and balance sheet produced monthly</span></li>
-          <li><span>&rarr;</span><span>Dashboard updated and current each month</span></li>
-          <li><span>&rarr;</span><span>Workflow maintenance and SOP updates as needed</span></li>
-          <li><span>&rarr;</span><span>Monthly operational reporting</span></li>
+          <li><span>&rarr;</span><span>P&amp;L, cash flow, and balance sheet — produced monthly</span></li>
+          <li><span>&rarr;</span><span>Reporting dashboard updated and current</span></li>
+          <li><span>&rarr;</span><span>AP/AR tracking maintained</span></li>
+          <li><span>&rarr;</span><span>Financial workflow maintenance and SOP updates</span></li>
         </ul>
-        <div style="border-top:1px solid rgba(255,255,255,.08);padding-top:1.2rem;margin-top:auto">
-          <div style="font-family:var(--serif);font-size:1.05rem;font-weight:500;color:var(--brown2);line-height:1.4">Scope &amp; investment discussed on the discovery call</div>
-          <div style="font-size:.7rem;color:rgba(255,255,255,.22);margin-top:.2rem;line-height:1.5">Monthly hours agreed at onboarding · billed on actuals</div>
+        <div style="border-top:1px solid rgba(255,255,255,.07);padding-top:1.2rem;margin-top:auto">
+          <div style="font-family:var(--serif);font-size:1.02rem;font-weight:500;color:var(--brown2);line-height:1.4">Scope &amp; investment discussed on the discovery call</div>
+          <div style="font-size:.69rem;color:rgba(255,255,255,.22);margin-top:.2rem;line-height:1.5">Monthly hours agreed at onboarding &middot; billed on actuals</div>
         </div>
       </div>
     </div>
     <div class="engage-bridge reveal">
-      <span class="engage-bridge-arrow">&#10230;</span>
-      <p><strong>The natural sequence:</strong> Build the system first, then maintain it. If you already have working systems and need consistent upkeep, a retainer alone works. I am also available for permanent full-time remote roles — same background, inside your team.</p>
+      <span style="font-size:1.2rem;color:var(--brown2);flex-shrink:0">&#10230;</span>
+      <p><strong>The natural sequence:</strong> Build the financial system first, then maintain it. If your financial systems are already structured and you need consistent upkeep, a retainer alone works. I'm also open to permanent full-time remote roles — same background, inside your team.</p>
     </div>
   </div></div>
 
@@ -720,25 +750,25 @@ footer p{font-size:.68rem;color:var(--text3)}
   <div class="fit"><div class="wrap">
     <span class="eyebrow reveal">Is this the right fit?</span>
     <h2 class="reveal">Worth knowing before<br>you <em>book the call.</em></h2>
-    <p class="sub reveal">This works well for a specific kind of situation. If it doesn't match, the call confirms that quickly — which saves both of us time.</p>
+    <p class="sub reveal">This works well for specific situations. If it doesn't match, the call confirms that quickly — which saves both of us time.</p>
     <div class="fit-grid reveal">
       <div class="fit-card yes">
         <span class="fit-lbl">&#x2736; Good fit</span>
         <ul class="fit-list">
-          <li><span>&#x2713;</span><span>Early-stage founder with revenue coming in but finances that are disorganised. You don't have a reliable picture of your cash position.</span></li>
-          <li><span>&#x2713;</span><span>Small team where you're still doing too much — growth is making you more of a bottleneck, not less.</span></li>
-          <li><span>&#x2713;</span><span>Need investor-ready financials, a clean set of books, or operational systems built from scratch.</span></li>
-          <li><span>&#x2713;</span><span>You want to hand off the financial and operational layer, not just a list of tasks.</span></li>
-          <li><span>&#x2713;</span><span>Ready to share access to your books, tools, and current workflows.</span></li>
+          <li><span>&#x2713;</span><span>Founder-led business with revenue coming in but books that are disorganised, behind, or producing unreliable financial information.</span></li>
+          <li><span>&#x2713;</span><span>Monthly reporting takes hours of manual assembly every time — and the information usually arrives too late to act on.</span></li>
+          <li><span>&#x2713;</span><span>Financial workflows (AP, AR, expense approval, reconciliation) aren't documented. They depend on individuals who know the unwritten process.</span></li>
+          <li><span>&#x2713;</span><span>You need investor-ready financials, a clean set of books, or a reporting system built from scratch.</span></li>
+          <li><span>&#x2713;</span><span>Ready to share access to your books, financial tools, and current workflows.</span></li>
         </ul>
       </div>
       <div class="fit-card no">
         <span class="fit-lbl">&#x2717; Not the right fit</span>
         <ul class="fit-list">
-          <li><span>&#x2717;</span><span>Need a registered CPA, statutory audit, or tax filing that requires a licensed accountant.</span></li>
-          <li><span>&#x2717;</span><span>Looking for unlimited scope, on-demand availability, or undocumented expectations on either side.</span></li>
-          <li><span>&#x2717;</span><span>Want tasks handled without building systems around them.</span></li>
-          <li><span>&#x2717;</span><span>Not in a position to share access to the information and tools needed to do the work.</span></li>
+          <li><span>&#x2717;</span><span>Need a registered CPA, statutory audit, or tax filing that requires licensed accountant registration.</span></li>
+          <li><span>&#x2717;</span><span>Looking for on-demand task handling without building systems around the tasks.</span></li>
+          <li><span>&#x2717;</span><span>Unlimited scope, undocumented expectations, or no willingness to share access to financial records and tools.</span></li>
+          <li><span>&#x2717;</span><span>Primarily need general executive admin support — calendar and inbox management only, no financial operations component.</span></li>
         </ul>
       </div>
     </div>
@@ -763,15 +793,15 @@ footer p{font-size:.68rem;color:var(--text3)}
       <p class="sub">Straightforward answers. If something's missing, the discovery call covers it.</p>
     </div>
     <div class="faq-list reveal">
-      <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)"><span class="faq-q-text">Are you looking for employment or offering freelance services?</span><span class="faq-icon"><svg viewBox="0 0 10 6" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><polyline points="1,1 5,5 9,1"/></svg></span></div><div class="faq-a"><div class="faq-a-inner">Both, and I'm clear about the difference. I'm open to permanent full-time remote employment and available for project-based or monthly retainer engagements. The skills are the same either way — the arrangement is just different. If you're a recruiter or employer, the About page has my full background and credentials. If you're a founder or business owner looking for operational support, the Services page covers scope and structure.</div></div></div>
-      <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)"><span class="faq-q-text">How is this different from hiring a virtual assistant?</span><span class="faq-icon"><svg viewBox="0 0 10 6" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><polyline points="1,1 5,5 9,1"/></svg></span></div><div class="faq-a"><div class="faq-a-inner">A VA executes tasks. I build systems and understand the financial implications of what I'm doing. My background in Economics, Mathematics, and financial analysis means I can look at your books and identify what the numbers are telling you — not just organise them. The difference shows up most clearly in complex work: investor reports, process redesign, or financial modelling. Those require judgment, not just execution. If you need someone to tick tasks off a list, a general VA is probably a better fit. If you need someone who can take ownership of the financial and operational layer and build infrastructure that holds, that's where I work.</div></div></div>
-      <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)"><span class="faq-q-text">Do you have remote work experience?</span><span class="faq-icon"><svg viewBox="0 0 10 6" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><polyline points="1,1 5,5 9,1"/></svg></span></div><div class="faq-a"><div class="faq-a-inner">Yes. At Pitch Investors I supported a CEO for nearly a year, handling coordination, investor communication, and financial deliverables remotely — with the CEO based in the US. I operate both synchronously and asynchronously by default, and communicate proactively rather than waiting to be checked on.</div></div></div>
-      <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)"><span class="faq-q-text">What does a typical engagement look like?</span><span class="faq-icon"><svg viewBox="0 0 10 6" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><polyline points="1,1 5,5 9,1"/></svg></span></div><div class="faq-a"><div class="faq-a-inner">We start with a free 30-minute discovery call. If there's a fit, I recommend either a project engagement or a retainer depending on your situation. The first week is a deep-dive audit of your books, workflows, and systems. By week two, you're seeing results. Project engagements close with full documentation. Retainers continue monthly.</div></div></div>
-      <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)"><span class="faq-q-text">What does this cost?</span><span class="faq-icon"><svg viewBox="0 0 10 6" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><polyline points="1,1 5,5 9,1"/></svg></span></div><div class="faq-a"><div class="faq-a-inner">Scope and investment are discussed on the discovery call, once I understand what actually needs doing. Project engagements are priced based on deliverables and estimated hours — confirmed before work begins. Retainers are based on monthly scope agreed at onboarding, billed on actuals. There are no surprises on either side.</div></div></div>
-      <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)"><span class="faq-q-text">Do you work with clients outside Kenya?</span><span class="faq-icon"><svg viewBox="0 0 10 6" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><polyline points="1,1 5,5 9,1"/></svg></span></div><div class="faq-a"><div class="faq-a-inner">Yes. I work remotely with clients and employers worldwide and operate across time zones both synchronously and asynchronously. Most communication happens via Slack or email, with scheduled weekly sync calls where needed.</div></div></div>
-      <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)"><span class="faq-q-text">What tools do you work with?</span><span class="faq-icon"><svg viewBox="0 0 10 6" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><polyline points="1,1 5,5 9,1"/></svg></span></div><div class="faq-a"><div class="faq-a-inner">QuickBooks, Xero, Zoho Books, Excel, Power BI, Google Workspace, Notion, Zapier, Airtable, ClickUp, Trello, Asana, Slack, Zoom, and others. If you use something not on this list, I pick it up quickly. The goal is to reduce friction, not add it.</div></div></div>
-      <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)"><span class="faq-q-text">How do you handle confidential financial data?</span><span class="faq-icon"><svg viewBox="0 0 10 6" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><polyline points="1,1 5,5 9,1"/></svg></span></div><div class="faq-a"><div class="faq-a-inner">Confidentiality is standard. I sign NDAs on request, use your preferred password manager, and follow whatever security protocols you have in place. My background in financial analysis means I'm accustomed to handling sensitive data with care.</div></div></div>
-      <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)"><span class="faq-q-text">Can you replace my accountant or CFO?</span><span class="faq-icon"><svg viewBox="0 0 10 6" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><polyline points="1,1 5,5 9,1"/></svg></span></div><div class="faq-a"><div class="faq-a-inner">No, and I'll be direct about that. I'm not a licensed CPA and don't file statutory accounts or handle tax compliance that requires registration. What I do is the operational and reporting layer: clean books, accurate records, usable dashboards, and financial models. If you have a CFO or accountant, I work alongside them — handling the day-to-day so they can focus on strategy.</div></div></div>
+      <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)"><span class="faq-q-text">What exactly is a Financial Operations Assistant?</span><span class="faq-icon"><svg viewBox="0 0 10 6" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><polyline points="1,1 5,5 9,1"/></svg></span></div><div class="faq-a"><div class="faq-a-inner">A Financial Operations Assistant sits between pure bookkeeping and general operations support. A bookkeeper maintains records. A general VA handles tasks. A Financial Operations Assistant builds and maintains the financial systems — the processes, workflows, reporting structures, and controls — that make financial records accurate and useful. I handle the full layer: keeping the books current, producing reporting you can act on, and documenting the workflows so the financial operations run consistently without depending on one person.</div></div></div>
+      <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)"><span class="faq-q-text">Are you looking for employment or offering freelance services?</span><span class="faq-icon"><svg viewBox="0 0 10 6" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><polyline points="1,1 5,5 9,1"/></svg></span></div><div class="faq-a"><div class="faq-a-inner">Both, and I'm clear about the difference. I'm open to permanent full-time remote employment in financial operations, finance systems, or bookkeeping roles, and I'm available for project-based or monthly retainer consulting engagements. The skills are the same either way — the arrangement is different. If you're a recruiter or employer, the About page has my full background and credentials.</div></div></div>
+      <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)"><span class="faq-q-text">How is this different from hiring a bookkeeper or a general VA?</span><span class="faq-icon"><svg viewBox="0 0 10 6" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><polyline points="1,1 5,5 9,1"/></svg></span></div><div class="faq-a"><div class="faq-a-inner">A bookkeeper maintains records. A general VA handles inbox and calendar tasks. I work at the intersection: accurate financial records, plus the reporting systems that make those records useful, plus the documented financial workflows that make the whole thing sustainable. My background in Economics, Mathematics, and Financial Engineering means I understand what numbers imply — not just how to organise them. If you need someone who can take ownership of the financial and operational layer and build infrastructure that holds, that's where I work.</div></div></div>
+      <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)"><span class="faq-q-text">Do you have remote work experience?</span><span class="faq-icon"><svg viewBox="0 0 10 6" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><polyline points="1,1 5,5 9,1"/></svg></span></div><div class="faq-a"><div class="faq-a-inner">Yes. At Pitch Investors I supported a US-based CEO for 10 months remotely — handling financial deliverables, investor communication, and operational coordination. I operate asynchronously by default, communicate proactively, and don't need to be checked on to produce finished work.</div></div></div>
+      <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)"><span class="faq-q-text">What does a typical engagement look like?</span><span class="faq-icon"><svg viewBox="0 0 10 6" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><polyline points="1,1 5,5 9,1"/></svg></span></div><div class="faq-a"><div class="faq-a-inner">We start with a free 30-minute discovery call. If there's a fit, I recommend a project engagement or a retainer depending on your situation. Week one is a financial audit — I review your books, reporting, and workflows, identify the gaps, and confirm priority order. Work starts against agreed scope. Project engagements close with full documentation. Retainers continue monthly.</div></div></div>
+      <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)"><span class="faq-q-text">What does this cost?</span><span class="faq-icon"><svg viewBox="0 0 10 6" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><polyline points="1,1 5,5 9,1"/></svg></span></div><div class="faq-a"><div class="faq-a-inner">Scope and investment are discussed on the discovery call, once I understand what actually needs doing. Project engagements are priced on deliverables and hours — confirmed before work begins. Retainers are based on monthly scope agreed at onboarding, billed on actuals. No surprises on either side.</div></div></div>
+      <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)"><span class="faq-q-text">Do you work with clients outside Kenya?</span><span class="faq-icon"><svg viewBox="0 0 10 6" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><polyline points="1,1 5,5 9,1"/></svg></span></div><div class="faq-a"><div class="faq-a-inner">Yes. I work remotely with clients and employers worldwide across time zones, both synchronously and asynchronously. Most communication happens via Slack or email, with weekly sync calls where needed.</div></div></div>
+      <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)"><span class="faq-q-text">What tools do you work with?</span><span class="faq-icon"><svg viewBox="0 0 10 6" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><polyline points="1,1 5,5 9,1"/></svg></span></div><div class="faq-a"><div class="faq-a-inner">QuickBooks, Xero, Zoho Books, Excel, Google Sheets, Power BI, Notion, Zapier, Make, Airtable, ClickUp, Trello, Asana, Slack, Zoom, and others. If you use something not on this list, I pick it up quickly. The goal is to reduce friction, not add it.</div></div></div>
+      <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)"><span class="faq-q-text">Can you replace my accountant or CFO?</span><span class="faq-icon"><svg viewBox="0 0 10 6" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><polyline points="1,1 5,5 9,1"/></svg></span></div><div class="faq-a"><div class="faq-a-inner">No — I'll be direct about that. I'm not a licensed CPA and don't file statutory accounts or handle tax compliance requiring registration. What I do is the financial operations layer: accurate records, useful reporting, and the documented workflows that make both sustainable. If you have a CFO or accountant, I work alongside them — handling the day-to-day financial operations so they can focus on strategy.</div></div></div>
     </div>
   </div></div>
 
@@ -779,7 +809,7 @@ footer p{font-size:.68rem;color:var(--text3)}
   <div class="main-cta"><div class="wrap"><div class="main-cta-inner reveal">
     <span class="eyebrow">Ready to start?</span>
     <h2>One conversation.<br><em>Scope agreed. Work begins.</em></h2>
-    <p>30 minutes. You describe the situation. I tell you whether I can address it and what that would look like. If it's a fit, scope is agreed and work starts within 48 hours.</p>
+    <p>30 minutes. You describe the financial operations situation. I confirm whether I can address it and what that would look like. If there's a fit, scope is agreed and work starts within 48 hours.</p>
     <div class="cta-btns">
       <a href="https://calendly.com/monicahmburu/one-on-one" target="_blank" class="btn-inv">Schedule a free call &rarr;</a>
       <a href="mailto:monicah.mburu@zohomail.com" class="btn-ghost-inv">Email me directly</a>
@@ -788,26 +818,24 @@ footer p{font-size:.68rem;color:var(--text3)}
       <span class="cred"><span class="cred-dot"></span>Remote &middot; worldwide</span>
       <span class="cred"><span class="cred-dot"></span>Open to full-time remote roles</span>
       <span class="cred"><span class="cred-dot"></span>CPA Foundation Certified</span>
-      <span class="cred"><span class="cred-dot"></span>Virtually Versed Africa &middot; Jun 2026</span>
+      <span class="cred"><span class="cred-dot"></span>MSc Financial Engineering</span>
     </div>
   </div></div></div>
 
 </div><!-- /home -->
 
-<!-- ═══════════════════════════════════════════════════════════
-     ABOUT
-════════════════════════════════════════════════════════════ -->
+<!-- ═══════════════ ABOUT ══════════════════════════════════════ -->
 <div id="page-about" class="page">
   <div class="about-hero">
     <div class="about-inner wrap">
       <div class="about-text">
         <span class="eyebrow">About me</span>
-        <h1>Numbers background.<br>Operations instinct.<br><em>Remote ready.</em></h1>
-        <p style="margin-top:1.25rem">Finance and operations work are harder to separate than most businesses realise. A business with clean books but broken workflows is still losing money to inefficiency. A business with documented processes but inaccurate records cannot make reliable decisions. I work across both areas because the problems usually sit at the intersection.</p>
-        <p>My background is in Economics and Mathematics. I hold a CPA Foundation certification alongside professional certifications in data analytics, bookkeeping, and corporate finance. I am currently completing an MSc in Financial Engineering at WorldQuant University. The academic side is not decorative — it means I understand what numbers imply, not just how to organise them.</p>
-        <p>I started in finance because I wanted to understand what numbers actually reveal. That took me into bookkeeping, financial analysis, and eventually operations — where the two disciplines connect directly. At Pitch Investors, I built financial models and investor packages for 10+ businesses remotely, supporting a US-based CEO. At Aspire Lending, I redesigned a manual reporting process that was consuming 20+ hours of senior staff time every week.</p>
-        <p><strong>I am open to permanent full-time remote employment and available for project-based or retainer consulting engagements.</strong> Based in Nairobi, working worldwide.</p>
-        <div style="display:flex;gap:.7rem;margin-top:1.9rem;flex-wrap:wrap">
+        <h1>Financial operations.<br>Systems thinking.<br><em>Remote ready.</em></h1>
+        <p style="margin-top:1.25rem">Finance and financial operations are harder to separate than most businesses realise. A business with accurate books but no documented financial workflows is still losing time to manual processes. A business with workflows but unreliable records cannot make decisions based on real numbers. I work across both because the problems usually sit at the intersection.</p>
+        <p>My background is in Economics and Mathematics. I hold a CPA Foundation certification and professional certifications in data analytics, bookkeeping, and corporate finance. I am currently completing an MSc in Financial Engineering at WorldQuant University. The academic side is not decorative — it means I understand what financial numbers imply, not just how to organise them.</p>
+        <p>At Pitch Investors, I built financial models and investor packages for 10+ businesses remotely, supporting a US-based CEO. At Aspire Lending, I redesigned a manual reporting process that was consuming 20+ hours of senior staff time every week. At Target Mart, I rebuilt AP/AR controls from scratch, cutting payment discrepancies by 60% and bringing tax filings to 100% compliance.</p>
+        <p><strong>I am open to permanent full-time remote employment in financial operations or finance systems roles, and available for project-based or retainer consulting engagements.</strong> Based in Nairobi, working worldwide.</p>
+        <div style="display:flex;gap:.72rem;margin-top:1.9rem;flex-wrap:wrap">
           <a href="https://calendly.com/monicahmburu/one-on-one" target="_blank" class="btn">Schedule a call</a>
           <a href="https://www.linkedin.com/in/monicahmburu/" target="_blank" class="btn-ghost">View LinkedIn &rarr;</a>
         </div>
@@ -815,13 +843,13 @@ footer p{font-size:.68rem;color:var(--text3)}
       <div>
         <figure class="photo-card">
           <img src="https://lh3.googleusercontent.com/d/10KcYq3HJd_FPOkHjxR6sH8PXcxGq1NoY" alt="Monicah Mburu">
-          <figcaption class="photo-meta"><p>Finance &amp; Operations Professional &middot; Remote-ready</p></figcaption>
+          <figcaption class="photo-meta"><p>Financial Operations &middot; Finance Systems VA &middot; Remote-ready</p></figcaption>
         </figure>
         <div class="vv-callout">
           <div class="vv-callout-icon">&#x1F4DA;</div>
           <div class="vv-callout-body">
             <strong>Virtually Versed Africa Operations Bootcamp, June 2026</strong>
-            <p>Intensive training in remote operations, systems setup, workflow automation, and execution infrastructure — formalising the approach I already apply in practice.</p>
+            <p>Intensive training in remote operations, systems setup, workflow automation, and execution infrastructure — formalising the approach I already apply in financial operations practice.</p>
           </div>
         </div>
       </div>
@@ -833,17 +861,17 @@ footer p{font-size:.68rem;color:var(--text3)}
     <h2 class="reveal">What it's like to hand<br>something <em>to me.</em></h2>
     <div class="personality-grid">
       <div class="personality-text reveal">
-        <p>When I pick up a new engagement, my first instinct is to understand the whole picture — not just the task in front of me. If a process is broken, I want to know why before I fix the symptoms. That takes a little more time upfront and saves a lot of time later.</p>
-        <p>I work independently. A clear scope and clear goals are enough. What comes back is finished work, not a status update asking what to do next.</p>
-        <p>I communicate before you have to ask. If something unexpected comes up mid-engagement, you hear about it before it becomes a problem — not after I've quietly worked around it or left it waiting.</p>
-        <p><strong>The goal with every engagement is to make myself replaceable.</strong> Systems that need me to keep showing up haven't been built properly. Good infrastructure holds on its own.</p>
+        <p>When I pick up a new engagement, my first instinct is to understand the whole picture — not just the task. If a financial process keeps producing errors, I want to know why before fixing the symptom. That takes more time upfront and saves significantly more later.</p>
+        <p>I work independently. A clear scope and defined goals are enough. What comes back is finished work, not a status update asking what to do next.</p>
+        <p>I communicate before you have to ask. If something unexpected surfaces mid-engagement, you hear about it before it becomes a problem — not after I've quietly worked around it.</p>
+        <p><strong>The goal with every engagement is to make myself replaceable.</strong> Financial systems that need me to keep showing up haven't been built properly. Good financial infrastructure holds on its own.</p>
       </div>
       <div class="reveal">
         <div class="trait-list">
-          <div class="trait-item"><div class="trait-num">01</div><div class="trait-text"><h4>I catch the things that matter</h4><p>The discrepancy in the accounts. The workflow that breaks every third week. These get flagged before they get reported upward.</p></div></div>
+          <div class="trait-item"><div class="trait-num">01</div><div class="trait-text"><h4>I catch what the numbers are saying</h4><p>The discrepancy in the reconciliation. The cash flow pattern that signals a problem. These get flagged, not filed.</p></div></div>
           <div class="trait-item"><div class="trait-num">02</div><div class="trait-text"><h4>You don't have to chase me for updates</h4><p>Updates arrive on schedule. Issues get flagged before they escalate. You shouldn't have to ask what's happening.</p></div></div>
-          <div class="trait-item"><div class="trait-num">03</div><div class="trait-text"><h4>I build systems, not just outputs</h4><p>Every deliverable connects to how the business operates. The goal is always something that keeps working after I'm done.</p></div></div>
-          <div class="trait-item"><div class="trait-num">04</div><div class="trait-text"><h4>I don't need hand-holding</h4><p>A clear scope and defined goals are enough. You don't need to manage me to get finished work.</p></div></div>
+          <div class="trait-item"><div class="trait-num">03</div><div class="trait-text"><h4>I build financial systems, not outputs</h4><p>Every deliverable is connected to how the financial operations run. The goal is always something that keeps working after I'm done.</p></div></div>
+          <div class="trait-item"><div class="trait-num">04</div><div class="trait-text"><h4>I don't need hand-holding</h4><p>Clear scope and defined goals are enough. You don't need to manage me to get finished work back.</p></div></div>
         </div>
       </div>
     </div>
@@ -935,7 +963,7 @@ footer p{font-size:.68rem;color:var(--text3)}
   </div></section>
 
   <footer>
-    <p>&copy; 2026 Monicah Mburu &middot; Finance &amp; Operations Professional &middot; Remote-ready</p>
+    <p>&copy; 2026 Monicah Mburu &middot; Financial Operations &middot; Finance Systems VA &middot; Remote-ready</p>
     <div class="footer-links">
       <a href="https://www.linkedin.com/in/monicahmburu/" target="_blank">LinkedIn</a>
       <a href="https://wa.me/254798498795" target="_blank">WhatsApp</a>
@@ -944,46 +972,44 @@ footer p{font-size:.68rem;color:var(--text3)}
   </footer>
 </div><!-- /about -->
 
-<!-- ═══════════════════════════════════════════════════════════
-     SERVICES
-════════════════════════════════════════════════════════════ -->
+<!-- ═══════════════ SERVICES ═══════════════════════════════════ -->
 <div id="page-services" class="page">
   <div class="svc-page-hero"><div class="wrap">
     <span class="eyebrow">What I offer</span>
-    <h1>Finance, bookkeeping,<br>and <em>operational support.</em></h1>
-    <p class="sub">Available for permanent remote employment, part-time retainers, and project-based engagements. Scope and investment discussed on the discovery call.</p>
+    <h1>Financial operations support<br>for founder-led <em>remote teams.</em></h1>
+    <p class="sub">Bookkeeping, financial reporting, and the workflow systems that make both sustainable. Available for permanent remote employment, retainers, and project engagements.</p>
   </div></div>
 
   <section style="background:var(--cream)"><div class="wrap">
-    <span class="eyebrow reveal">01 — Bookkeeping</span>
+    <span class="eyebrow reveal">01 — Bookkeeping &amp; Financial Records</span>
     <h2 class="reveal">Books that are <em>always current.</em></h2>
-    <p class="sub reveal" style="max-width:560px">The point isn't tidy records for the sake of it. It's knowing where you stand financially without having to dig for the answer first.</p>
+    <p class="sub reveal" style="max-width:560px">The foundation everything else depends on. Accurate records are not a formality — they're how every downstream financial process gets reliable input.</p>
     <div class="svc-cards-grid">
-      <div class="svc-card reveal"><div class="svc-ico">&#x1F4D2;</div><h3>Monthly bookkeeping</h3><span class="svc-tag">Core financial maintenance</span><p>Transactions categorised, accounts reconciled, records kept current each month. The foundation everything else depends on.</p><ul class="svc-sub-list"><li>Transaction categorisation</li><li>Monthly bank and credit card reconciliation</li><li>Accounts payable and receivable tracking</li><li>Payroll support and expense organisation</li></ul></div>
-      <div class="svc-card reveal"><div class="svc-ico">&#x1F4B3;</div><h3>AP/AR controls</h3><span class="svc-tag">Cash flow visibility</span><p>Outstanding invoices tracked. Payment workflows structured. Late payments reduced. The money you're owed, collected consistently.</p><ul class="svc-sub-list"><li>Invoice tracking and follow-up workflows</li><li>Vendor payment scheduling</li><li>Aging report analysis and cash flow monitoring</li><li>Petty cash reconciliation and controls</li></ul></div>
-      <div class="svc-card reveal"><div class="svc-ico">&#x1F5C2;</div><h3>Bookkeeping setup</h3><span class="svc-tag">Start clean or clean up</span><p>For businesses starting from scratch, or with books that have fallen behind — full-cycle setup so records are reliable going forward.</p><ul class="svc-sub-list"><li>Chart of accounts setup and organisation</li><li>Historical cleanup and catch-up bookkeeping</li><li>QuickBooks, Xero, Zoho Books, Sage</li><li>Handover documentation and SOP</li></ul></div>
+      <div class="svc-card reveal"><div class="svc-ico">&#x1F4D2;</div><h3>Monthly bookkeeping</h3><span class="svc-tag">Core financial maintenance</span><p>Transactions categorised, accounts reconciled, records kept current each month.</p><ul class="svc-sub-list"><li>Transaction categorisation</li><li>Monthly bank and credit card reconciliation</li><li>Accounts payable and receivable tracking</li><li>Payroll support and expense organisation</li></ul></div>
+      <div class="svc-card reveal"><div class="svc-ico">&#x1F4B3;</div><h3>AP/AR management</h3><span class="svc-tag">Cash flow visibility</span><p>Outstanding invoices tracked. Payment workflows structured. Late payments reduced.</p><ul class="svc-sub-list"><li>Invoice tracking and follow-up workflows</li><li>Vendor payment scheduling</li><li>Aging report analysis and monitoring</li><li>Petty cash reconciliation and controls</li></ul></div>
+      <div class="svc-card reveal"><div class="svc-ico">&#x1F5C2;</div><h3>Bookkeeping setup</h3><span class="svc-tag">Start clean or clean up</span><p>Full-cycle setup for businesses starting fresh, or cleanup for books that have fallen behind.</p><ul class="svc-sub-list"><li>Chart of accounts setup and organisation</li><li>Historical cleanup and catch-up bookkeeping</li><li>QuickBooks, Xero, Zoho Books, Sage</li><li>Handover documentation and SOP</li></ul></div>
     </div>
   </div></section>
 
   <section style="background:var(--warm)"><div class="wrap">
-    <span class="eyebrow reveal">02 — Financial Reporting</span>
+    <span class="eyebrow reveal">02 — Financial Reporting &amp; Dashboards</span>
     <h2 class="reveal">Numbers you can <em>do something with.</em></h2>
-    <p class="sub reveal" style="max-width:560px">Reporting should tell you something useful — not just confirm what happened.</p>
+    <p class="sub reveal" style="max-width:560px">Reporting should drive decisions, not just describe what already happened. If assembling it takes hours each month, that's a systems problem.</p>
     <div class="svc-cards-grid">
-      <div class="svc-card reveal"><div class="svc-ico">&#x1F4CA;</div><h3>Monthly financial reporting</h3><span class="svc-tag">Decision-ready information</span><p>P&amp;L, cash flow statement, and balance sheet produced monthly. Delivered with enough context to act on, not just review.</p><ul class="svc-sub-list"><li>Profit &amp; loss statement</li><li>Cash flow statement</li><li>Balance sheet</li><li>Month-to-month variance notes</li></ul></div>
-      <div class="svc-card reveal"><div class="svc-ico">&#x1F4C8;</div><h3>Dashboards &amp; reporting systems</h3><span class="svc-tag">Live data, not manual assembly</span><p>If compiling a report takes hours of manual work, that's a systems problem. Dashboards pull live data and surface the numbers you need when you need them.</p><ul class="svc-sub-list"><li>Excel dashboards connected to live data</li><li>KPI tracking and performance metrics</li><li>Budget tracking and variance analysis</li><li>Power BI reporting builds</li></ul></div>
-      <div class="svc-card reveal"><div class="svc-ico">&#x1F3E6;</div><h3>Financial modelling</h3><span class="svc-tag">For decisions and investor conversations</span><p>Forecasts, scenario models, and investor-ready financials. The kind of model that holds up when someone asks a hard question about the numbers behind it.</p><ul class="svc-sub-list"><li>DCF valuation and financial modelling</li><li>Scenario forecasting and sensitivity analysis</li><li>Investor reports and pitch deck financials</li><li>Budget models and growth projections</li></ul></div>
+      <div class="svc-card reveal"><div class="svc-ico">&#x1F4CA;</div><h3>Monthly financial reporting</h3><span class="svc-tag">Decision-ready information</span><p>P&amp;L, cash flow, and balance sheet produced monthly with enough context to act on.</p><ul class="svc-sub-list"><li>Profit &amp; loss statement</li><li>Cash flow statement</li><li>Balance sheet</li><li>Month-to-month variance notes</li></ul></div>
+      <div class="svc-card reveal"><div class="svc-ico">&#x1F4C8;</div><h3>Dashboards &amp; reporting systems</h3><span class="svc-tag">Live data, not manual assembly</span><p>Dashboards that pull live data and surface the financial numbers you need — without hours of manual work to get there.</p><ul class="svc-sub-list"><li>Excel and Google Sheets dashboards</li><li>KPI tracking and performance metrics</li><li>Budget tracking and variance analysis</li><li>Power BI reporting builds</li></ul></div>
+      <div class="svc-card reveal"><div class="svc-ico">&#x1F3E6;</div><h3>Financial modelling</h3><span class="svc-tag">For decisions and investor conversations</span><p>Forecasts, scenario models, and investor-ready financials that hold up when someone asks a hard question.</p><ul class="svc-sub-list"><li>DCF valuation and financial modelling</li><li>Scenario forecasting and sensitivity analysis</li><li>Investor reports and pitch deck financials</li><li>Budget models and growth projections</li></ul></div>
     </div>
   </div></section>
 
   <section style="background:var(--cream)"><div class="wrap">
-    <span class="eyebrow reveal">03 — Executive &amp; Operational Support</span>
-    <h2 class="reveal">Execution that doesn't <em>need you in the room.</em></h2>
-    <p class="sub reveal" style="max-width:560px">Operational support that builds systems without dependency on me.</p>
+    <span class="eyebrow reveal">03 — Financial Workflow Design</span>
+    <h2 class="reveal">Financial processes that <em>run without you.</em></h2>
+    <p class="sub reveal" style="max-width:560px">The financial layer only holds if the processes holding it are documented, automated where possible, and not dependent on one person's memory.</p>
     <div class="svc-cards-grid">
-      <div class="svc-card reveal"><div class="svc-ico">&#x1F4CB;</div><h3>Process documentation &amp; SOPs</h3><span class="svc-tag">Systems that hold independently</span><p>Processes written down so any team member can run them without asking. Removes the single point of failure problem.</p><ul class="svc-sub-list"><li>SOP writing and process mapping</li><li>Workflow design and documentation</li><li>Onboarding guides and training materials</li><li>Operating handbook builds in Notion</li></ul></div>
-      <div class="svc-card reveal"><div class="svc-ico">&#x26A1;</div><h3>Workflow automation</h3><span class="svc-tag">Repetitive work that runs itself</span><p>Processes that follow the same steps every time are good candidates for automation. The manual effort gets removed while the output stays consistent.</p><ul class="svc-sub-list"><li>Excel automation and formula builds</li><li>Zapier and Make workflow builds</li><li>Google Workspace automation</li><li>Integration between disconnected tools</li></ul></div>
-      <div class="svc-card reveal"><div class="svc-ico">&#x1F5D3;</div><h3>Executive administration</h3><span class="svc-tag">Coordination handled</span><p>Inbox management, calendar structure, meeting preparation, follow-through. The operational overhead that pulls people away from the work that actually moves things forward.</p><ul class="svc-sub-list"><li>Inbox management and triage</li><li>Calendar design and scheduling</li><li>Meeting prep and follow-up notes</li><li>Project coordination via Notion, Asana, Trello</li></ul></div>
+      <div class="svc-card reveal"><div class="svc-ico">&#x1F4CB;</div><h3>Financial SOP documentation</h3><span class="svc-tag">Systems that hold independently</span><p>Financial processes written down so any team member can run them without asking — and without making mistakes.</p><ul class="svc-sub-list"><li>Month-end close process documentation</li><li>AP/AR workflow SOPs</li><li>Expense submission and approval guides</li><li>Reconciliation process documentation</li></ul></div>
+      <div class="svc-card reveal"><div class="svc-ico">&#x26A1;</div><h3>Financial workflow automation</h3><span class="svc-tag">Repetitive finance work that runs itself</span><p>Invoice reminders, expense categorisation, report scheduling, approval routing — automated so the manual effort is removed.</p><ul class="svc-sub-list"><li>Excel automation and formula builds</li><li>Zapier and Make workflow builds</li><li>Google Workspace automation</li><li>AP/AR automation and integration</li></ul></div>
+      <div class="svc-card reveal"><div class="svc-ico">&#x1F5D3;</div><h3>Executive &amp; operational support</h3><span class="svc-tag">Coordination handled</span><p>Calendar, inbox, project coordination — the operational layer that supports the financial work and keeps engagements moving.</p><ul class="svc-sub-list"><li>Inbox management and triage</li><li>Calendar design and scheduling</li><li>Meeting prep and follow-up notes</li><li>Project coordination via Notion, Asana, Trello</li></ul></div>
     </div>
   </div></section>
 
@@ -1011,12 +1037,12 @@ footer p{font-size:.68rem;color:var(--text3)}
 
   <section><div class="wrap" style="text-align:center">
     <h2 class="reveal">Interested in working together?</h2>
-    <p class="sub reveal" style="margin:.75rem auto 1.9rem;text-align:center;max-width:400px">A 30-minute conversation to discuss the role or engagement and confirm fit. No commitment required.</p>
+    <p class="sub reveal" style="margin:.75rem auto 1.9rem;text-align:center;max-width:400px">30 minutes to discuss the situation, confirm fit, and agree scope. No commitment required.</p>
     <a href="https://calendly.com/monicahmburu/one-on-one" target="_blank" class="btn reveal">Schedule a call &rarr;</a>
   </div></section>
 
   <footer>
-    <p>&copy; 2026 Monicah Mburu &middot; Finance &amp; Operations Professional &middot; Remote-ready</p>
+    <p>&copy; 2026 Monicah Mburu &middot; Financial Operations &middot; Finance Systems VA &middot; Remote-ready</p>
     <div class="footer-links">
       <a href="https://www.linkedin.com/in/monicahmburu/" target="_blank">LinkedIn</a>
       <a href="https://wa.me/254798498795" target="_blank">WhatsApp</a>
@@ -1025,23 +1051,20 @@ footer p{font-size:.68rem;color:var(--text3)}
   </footer>
 </div><!-- /services -->
 
-<!-- ═══════════════════════════════════════════════════════════
-     WORK SAMPLES
-════════════════════════════════════════════════════════════ -->
+<!-- ═══════════════ WORK ════════════════════════════════════════ -->
 <div id="page-work" class="page">
   <div class="ws-hero"><div class="wrap">
     <span class="eyebrow">Work Samples</span>
     <h1>Real engagements.<br>Real deliverables.<br><em>Real outcomes.</em></h1>
-    <p class="sub">Five projects — the problem, what was built, and what changed. Click any image to enlarge.</p>
+    <p class="sub">Five projects — the financial operations problem, what was built, and what changed. Click any image to enlarge.</p>
   </div></div>
 
   <section style="background:var(--cream)"><div class="wrap"><div class="work-list">
 
-    <!-- CARD 1 -->
     <div class="work-card reveal">
       <div class="work-card-header">
         <span class="we-tag tag-a">Financial Systems &middot; Pitch Investors</span>
-        <h3>From scattered data to $500K in investor interest — 10 companies restructured</h3>
+        <h3>From scattered financial data to $500K in investor interest — 10 companies restructured</h3>
         <div class="we-outcome-pills"><span class="we-outcome-pill">$500K+ investor interest</span><span class="we-outcome-pill">40% higher engagement</span><span class="we-outcome-pill">30% better forecasting</span></div>
       </div>
       <div class="work-card-body"><div class="we-cols">
@@ -1072,21 +1095,20 @@ footer p{font-size:.68rem;color:var(--text3)}
       </div>
     </div>
 
-    <!-- CARD 2 -->
     <div class="work-card reveal">
       <div class="work-card-header">
-        <span class="we-tag tag-b">Workflow Automation &middot; Aspire Lending</span>
-        <h3>40% faster reporting — weekly process redesigned before anyone asked for it</h3>
+        <span class="we-tag tag-b">Financial Workflow Redesign &middot; Aspire Lending</span>
+        <h3>40% faster reporting — financial workflow redesigned before anyone asked for it</h3>
         <div class="we-outcome-pills"><span class="we-outcome-pill">40% faster reporting</span><span class="we-outcome-pill">20+ hrs/week recovered</span><span class="we-outcome-pill">1,000+ files structured</span></div>
       </div>
       <div class="work-card-body"><div class="we-cols">
         <div>
           <span class="we-lbl">The situation</span>
-          <p class="we-text">Senior staff spent hours every week assembling the same report by hand — pulling from multiple sources, reformatting, verifying every time. Same output, every week, for hours. Nobody had identified it as a systems problem yet.</p>
+          <p class="we-text">Senior staff spent hours every week assembling the same report by hand — pulling from multiple sources, reformatting, verifying each time. Same output, every week, for hours. Nobody had identified it as a financial systems problem yet.</p>
           <span class="we-lbl" style="margin-top:1.25rem;display:block">What was built</span>
           <ul class="we-steps">
-            <li>Reporting process mapped — exact points of time loss identified</li>
-            <li>Workflow redesigned — data pulls automated, formats standardised in Excel</li>
+            <li>Reporting workflow mapped — exact points of time loss identified</li>
+            <li>Financial workflow redesigned — data pulls automated, formats standardised in Excel</li>
             <li>Filing system built for 1,000+ physical and digital loan files</li>
             <li>Full process documented as an SOP — any team member can maintain it independently</li>
           </ul>
@@ -1095,7 +1117,7 @@ footer p{font-size:.68rem;color:var(--text3)}
         <div>
           <span class="we-lbl">What changed</span>
           <div class="we-result-box"><div class="we-result-lbl">Results</div><div class="we-pills"><span class="we-pill">40% faster reporting</span><span class="we-pill">20+ hrs/week recovered</span><span class="we-pill">1,000+ files structured</span></div></div>
-          <p class="we-text" style="margin-top:1rem">Identical output. Time cost removed. The hours recovered came from eliminating unnecessary manual steps — not cutting corners on the work itself.</p>
+          <p class="we-text" style="margin-top:1rem">Identical output. Time cost removed. Hours recovered by eliminating unnecessary manual steps — not cutting corners on the work itself.</p>
         </div>
       </div></div>
       <div class="work-card-images">
@@ -1106,7 +1128,6 @@ footer p{font-size:.68rem;color:var(--text3)}
       </div>
     </div>
 
-    <!-- CARD 3 -->
     <div class="work-card reveal">
       <div class="work-card-header">
         <span class="we-tag tag-d">Executive Operations &middot; Applied Practice Project</span>
@@ -1116,7 +1137,7 @@ footer p{font-size:.68rem;color:var(--text3)}
       <div class="work-card-body"><div class="we-cols">
         <div>
           <span class="we-lbl">The situation</span>
-          <p class="we-text">A founder with 47 meetings scattered across Gmail, Slack, and a paper planner. No prep materials, investors frustrated by missed check-ins, back-to-backs with no breathing room, and a co-founder booking without any approval process. Three calendar tools running with nothing connecting them.</p>
+          <p class="we-text">A founder with 47 meetings scattered across Gmail, Slack, and a paper planner. No prep materials, investors frustrated by missed check-ins, back-to-backs with no breathing room, and a co-founder booking without any approval process.</p>
           <span class="we-lbl" style="margin-top:1.25rem;display:block">What was delivered</span>
           <ul class="we-steps">
             <li>Full calendar audit — meetings categorised by type and time allocation mapped</li>
@@ -1131,7 +1152,7 @@ footer p{font-size:.68rem;color:var(--text3)}
         <div>
           <span class="we-lbl">What changed</span>
           <div class="we-result-box"><div class="we-result-lbl">Results</div><div class="we-pills"><span class="we-pill">47 meetings → structured system</span><span class="we-pill">3 tools → 1 calendar</span><span class="we-pill">Focus time protected daily</span><span class="we-pill">SOPs live</span></div></div>
-          <p class="we-text" style="margin-top:1rem">Reactive scheduling replaced with intentional time ownership. Investor check-ins stopped being missed. Co-founder bookings now go through an approval workflow. The system runs without daily management.</p>
+          <p class="we-text" style="margin-top:1rem">Reactive scheduling replaced with intentional time ownership. Investor check-ins stopped being missed. Co-founder bookings now go through an approval workflow.</p>
           <div class="we-files">
             <a href="https://drive.google.com/file/d/1ALr8J13AUe46Q5IWChAqfFJ1B09F4LZW/view?usp=sharing" target="_blank" class="we-file-link"><span>📄</span> Calendar Architecture Doc</a>
             <a href="https://docs.google.com/spreadsheets/d/1-J2gBrHHntmp56TEuH-rS0mXqVPFdIUsHTkhU2xnWMg/edit?usp=sharing" target="_blank" class="we-file-link"><span>📊</span> Calendar Preferences</a>
@@ -1154,20 +1175,19 @@ footer p{font-size:.68rem;color:var(--text3)}
       </div>
     </div>
 
-    <!-- CARD 4 -->
     <div class="work-card reveal">
       <div class="work-card-header">
         <span class="we-tag tag-c">Financial Controls &middot; Target Mart</span>
-        <h3>60% fewer payment discrepancies — AP/AR controls rebuilt from scratch</h3>
+        <h3>60% fewer payment discrepancies — AP/AR financial controls rebuilt from scratch</h3>
         <div class="we-outcome-pills"><span class="we-outcome-pill">60% fewer discrepancies</span><span class="we-outcome-pill">25% fewer unpaid invoices</span><span class="we-outcome-pill">100% tax compliance</span></div>
       </div>
       <div class="work-card-body"><div class="we-cols">
         <div>
           <span class="we-lbl">The situation</span>
-          <p class="we-text">Late payments building up. Petty cash out of balance. Receipts unorganised and untraceable. The revenue existed — the controls to track and collect it consistently did not.</p>
+          <p class="we-text">Late payments building up. Petty cash out of balance. Receipts unorganised and untraceable. The revenue existed — the financial controls to track and collect it consistently did not.</p>
           <span class="we-lbl" style="margin-top:1.25rem;display:block">What was built</span>
           <ul class="we-steps">
-            <li>AP/AR tracking rebuilt — invoices recorded, payments allocated, aging reports produced for payables</li>
+            <li>AP/AR tracking rebuilt — invoices recorded, payments allocated, aging reports produced</li>
             <li>Receipts organised and categorised so every transaction was traceable</li>
             <li>Stock variance analysis run to identify missing inventory</li>
             <li>Petty cash records maintained with full documentation</li>
@@ -1178,7 +1198,7 @@ footer p{font-size:.68rem;color:var(--text3)}
         <div>
           <span class="we-lbl">What changed</span>
           <div class="we-result-box"><div class="we-result-lbl">Results</div><div class="we-pills"><span class="we-pill">60% fewer discrepancies</span><span class="we-pill">25% fewer unpaid invoices</span><span class="we-pill">100% tax compliance</span></div></div>
-          <p class="we-text" style="margin-top:1rem">The business didn't need more revenue. It needed better controls on the revenue already coming in. Structural changes produced financial results without adding headcount.</p>
+          <p class="we-text" style="margin-top:1rem">The business didn't need more revenue. It needed better financial controls on the revenue already coming in. Structural changes produced measurable results without adding headcount.</p>
         </div>
       </div></div>
       <div class="work-card-images">
@@ -1190,7 +1210,6 @@ footer p{font-size:.68rem;color:var(--text3)}
       </div>
     </div>
 
-    <!-- CARD 5 -->
     <div class="work-card reveal">
       <div class="work-card-header">
         <span class="we-tag tag-d">Operations Build &middot; Applied Practice Project</span>
@@ -1226,11 +1245,10 @@ footer p{font-size:.68rem;color:var(--text3)}
       </div>
     </div>
 
-    <!-- BOTTOM CTA -->
     <div style="background:#fff;border:1px solid var(--brown-border);border-radius:var(--r);padding:1.9rem;text-align:center" class="reveal">
-      <h3 style="font-size:1.15rem;margin-bottom:.42rem">See something that applies?</h3>
-      <p style="font-size:.8rem;color:var(--text2);font-weight:300;margin-bottom:1.2rem;max-width:420px;margin-left:auto;margin-right:auto;line-height:1.72;margin-top:.38rem">30 minutes to confirm what's relevant and agree on scope. No pitch — a direct conversation about what needs fixing and whether I'm the right person to fix it.</p>
-      <div style="display:flex;gap:.7rem;justify-content:center;flex-wrap:wrap">
+      <h3 style="font-size:1.15rem;margin-bottom:.42rem">See something relevant to your situation?</h3>
+      <p style="font-size:.79rem;color:var(--text2);font-weight:300;margin-bottom:1.2rem;max-width:420px;margin-left:auto;margin-right:auto;line-height:1.74;margin-top:.38rem">30 minutes to confirm what applies and agree scope. A direct conversation about the financial operations problem and whether I'm the right person to address it.</p>
+      <div style="display:flex;gap:.72rem;justify-content:center;flex-wrap:wrap">
         <a href="https://calendly.com/monicahmburu/one-on-one" target="_blank" class="btn">Schedule a call &rarr;</a>
         <a href="mailto:monicah.mburu@zohomail.com" class="btn-ghost">Email directly</a>
       </div>
@@ -1239,7 +1257,7 @@ footer p{font-size:.68rem;color:var(--text3)}
   </div></div></section>
 
   <footer>
-    <p>&copy; 2026 Monicah Mburu &middot; Finance &amp; Operations Professional &middot; Remote-ready</p>
+    <p>&copy; 2026 Monicah Mburu &middot; Financial Operations &middot; Finance Systems VA &middot; Remote-ready</p>
     <div class="footer-links">
       <a href="https://www.linkedin.com/in/monicahmburu/" target="_blank">LinkedIn</a>
       <a href="https://wa.me/254798498795" target="_blank">WhatsApp</a>
@@ -1248,14 +1266,12 @@ footer p{font-size:.68rem;color:var(--text3)}
   </footer>
 </div><!-- /work -->
 
-<!-- ═══════════════════════════════════════════════════════════
-     CONTACT
-════════════════════════════════════════════════════════════ -->
+<!-- ═══════════════ CONTACT ════════════════════════════════════ -->
 <div id="page-contact" class="page">
   <div class="contact-hero"><div class="wrap">
     <span class="eyebrow">Contact</span>
     <h1>30 minutes to determine<br>if this is <em>the right fit.</em></h1>
-    <p class="sub">Whether you're a recruiter reviewing candidates or a founder looking for operational support — the call is the same. You tell me what you need. I'll be direct about whether my background fits.</p>
+    <p class="sub">Whether you're a recruiter, a founder, or a team lead looking for financial operations support — the call is the same. You describe what needs addressing. I'll be direct about whether my background is the right fit.</p>
   </div></div>
 
   <section style="background:var(--cream)"><div class="wrap"><div class="contact-grid">
@@ -1267,10 +1283,10 @@ footer p{font-size:.68rem;color:var(--text3)}
         <div class="gtn-title">Good to know</div>
         <div class="gtn-items">
           <div>⏱ Replies within 24 hours</div>
-          <div>🌍 Remote — available for roles and engagements worldwide</div>
+          <div>🌍 Remote — available worldwide for roles and engagements</div>
           <div>📅 Discovery call is free, no obligation</div>
           <div>✅ Open to full-time remote employment</div>
-          <div>📋 Available for project-based and retainer consulting</div>
+          <div>📋 Available for project-based and retainer engagements</div>
           <div>🔒 NDAs signed on request</div>
         </div>
       </div>
@@ -1278,9 +1294,9 @@ footer p{font-size:.68rem;color:var(--text3)}
     <div>
       <div class="book-card reveal">
         <h3>Book a discovery call</h3>
-        <p>30 minutes. Whether you're a recruiter or a founder, we cover the situation, I walk through relevant experience, and we confirm fit.</p>
+        <p>30 minutes. Describe the financial operations situation or role. I'll walk through relevant experience and be direct about fit.</p>
         <div class="b-step"><div class="b-num">1</div><p>Pick a time on Calendly. Takes two minutes.</p></div>
-        <div class="b-step"><div class="b-num">2</div><p>Short intake form — role type or engagement scope, tools used, what needs addressing.</p></div>
+        <div class="b-step"><div class="b-num">2</div><p>Short intake — role type or engagement scope, tools used, what needs addressing.</p></div>
         <div class="b-step"><div class="b-num">3</div><p>30-minute call. I'll be direct about whether my background is the right fit.</p></div>
         <div class="b-step"><div class="b-num">4</div><p>If it's a match — for employment, next steps with your team. For consulting, scope agreed and work starts within 48 hours.</p></div>
         <a href="https://calendly.com/monicahmburu/one-on-one" target="_blank" class="btn" style="width:100%;display:flex;margin-top:1.5rem">Schedule a free call &rarr;</a>
@@ -1289,7 +1305,7 @@ footer p{font-size:.68rem;color:var(--text3)}
   </div></div></section>
 
   <footer>
-    <p>&copy; 2026 Monicah Mburu &middot; Finance &amp; Operations Professional &middot; Remote-ready</p>
+    <p>&copy; 2026 Monicah Mburu &middot; Financial Operations &middot; Finance Systems VA &middot; Remote-ready</p>
     <div class="footer-links">
       <a href="https://www.linkedin.com/in/monicahmburu/" target="_blank">LinkedIn</a>
       <a href="https://wa.me/254798498795" target="_blank">WhatsApp</a>
@@ -1300,13 +1316,9 @@ footer p{font-size:.68rem;color:var(--text3)}
 
 <script>
 var PAGES=['home','about','services','work','contact'];
-
 function show(id,push){
   if(push===undefined)push=true;
-  PAGES.forEach(function(p){
-    var el=document.getElementById('page-'+p);
-    if(el)el.classList.remove('active');
-  });
+  PAGES.forEach(function(p){var el=document.getElementById('page-'+p);if(el)el.classList.remove('active')});
   document.querySelectorAll('[data-page]').forEach(function(a){a.classList.remove('active')});
   var page=document.getElementById('page-'+id);
   if(page){page.classList.add('active');window.scrollTo(0,0);setTimeout(runReveal,80)}
@@ -1315,55 +1327,27 @@ function show(id,push){
   closeMob();
   return false;
 }
-
 function runReveal(){
   var els=document.querySelectorAll('.page.active .reveal:not(.on)');
   if(!els.length)return;
   var obs=new IntersectionObserver(function(entries){
-    entries.forEach(function(e){
-      if(e.isIntersecting){e.target.classList.add('on');obs.unobserve(e.target)}
-    });
+    entries.forEach(function(e){if(e.isIntersecting){e.target.classList.add('on');obs.unobserve(e.target)}});
   },{threshold:0.04,rootMargin:'0px 0px -8px 0px'});
   els.forEach(function(el){obs.observe(el)});
 }
-
-function openLightbox(src){
-  document.getElementById('lightbox-img').src=src;
-  document.getElementById('lightbox').classList.add('open');
-  document.body.style.overflow='hidden';
-}
-function closeLightbox(){
-  document.getElementById('lightbox').classList.remove('open');
-  document.body.style.overflow='';
-}
+function openLightbox(src){document.getElementById('lightbox-img').src=src;document.getElementById('lightbox').classList.add('open');document.body.style.overflow='hidden'}
+function closeLightbox(){document.getElementById('lightbox').classList.remove('open');document.body.style.overflow=''}
 document.addEventListener('keydown',function(e){if(e.key==='Escape')closeLightbox()});
-
-window.addEventListener('popstate',function(e){
-  var id=(e.state&&e.state.page)||location.hash.replace('#','')||'home';
-  if(PAGES.indexOf(id)!==-1)show(id,false);
-});
-window.addEventListener('DOMContentLoaded',function(){
-  var hash=location.hash.replace('#','');
-  show(PAGES.indexOf(hash)!==-1?hash:'home',false);
-  setTimeout(runReveal,120);
-});
-window.addEventListener('scroll',function(){
-  var n=document.getElementById('nav');
-  if(n)n.classList.toggle('solid',window.scrollY>28);
-},{passive:true});
-
+window.addEventListener('popstate',function(e){var id=(e.state&&e.state.page)||location.hash.replace('#','')||'home';if(PAGES.indexOf(id)!==-1)show(id,false)});
+window.addEventListener('DOMContentLoaded',function(){var hash=location.hash.replace('#','');show(PAGES.indexOf(hash)!==-1?hash:'home',false);setTimeout(runReveal,120)});
+window.addEventListener('scroll',function(){var n=document.getElementById('nav');if(n)n.classList.toggle('solid',window.scrollY>28)},{passive:true});
 var ham=document.getElementById('ham'),mob=document.getElementById('mob');
 function closeMob(){if(mob)mob.classList.remove('open')}
 if(ham&&mob){
   ham.addEventListener('click',function(e){e.stopPropagation();mob.classList.toggle('open')});
-  document.addEventListener('click',function(e){
-    if(mob.classList.contains('open')&&!mob.contains(e.target)&&!ham.contains(e.target))closeMob();
-  });
-  document.addEventListener('touchstart',function(e){
-    if(mob.classList.contains('open')&&!mob.contains(e.target)&&!ham.contains(e.target))closeMob();
-  },{passive:true});
+  document.addEventListener('click',function(e){if(mob.classList.contains('open')&&!mob.contains(e.target)&&!ham.contains(e.target))closeMob()});
+  document.addEventListener('touchstart',function(e){if(mob.classList.contains('open')&&!mob.contains(e.target)&&!ham.contains(e.target))closeMob()},{passive:true});
 }
-
 function toggleFaq(btn){
   var item=btn.closest('.faq-item');
   var isOpen=item.classList.contains('open');

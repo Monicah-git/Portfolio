@@ -3,11 +3,11 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Monicah Mburu — Financial Operations & Finance Systems</title>
-<meta name="description" content="Financial Operations Assistant and Finance Systems VA. I help founder-led teams get accurate books, useful reporting, and financial workflows that run without constant oversight.">
+<title>Monicah Mburu Finance &amp; Operations Partner</title>
+<meta name="description" content="Finance and Operations Partner for founder-led teams. Financial records, systems, automation, and direct executive support — from one person who works alongside the CEO.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,600&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,600&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet">
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 :root{
@@ -34,10 +34,8 @@
 html{scroll-behavior:smooth}
 body{font-family:var(--sans);background:var(--cream);color:var(--text);line-height:1.7;-webkit-font-smoothing:antialiased;overflow-x:hidden}
 
-/* ANIMATIONS */
 @keyframes fadeUp{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:translateY(0)}}
 @keyframes pulse{0%,100%{opacity:1}50%{opacity:.2}}
-@keyframes shimmer{0%{background-position:200% center}100%{background-position:-200% center}}
 .reveal{opacity:0;transform:translateY(18px);transition:opacity .6s ease,transform .6s ease}
 .reveal.on{opacity:1;transform:none}
 
@@ -90,25 +88,22 @@ h3{font-family:var(--serif);font-size:1.1rem;font-weight:500;color:var(--ink)}
 .btn-ghost-inv{border:1px solid rgba(255,255,255,.15);color:rgba(255,255,255,.5);font-size:.86rem;padding:.94rem 2.1rem;border-radius:100px;text-decoration:none;display:inline-flex;align-items:center;justify-content:center;transition:all .2s;min-height:50px;letter-spacing:.01em}
 .btn-ghost-inv:hover{border-color:rgba(255,255,255,.36);color:#fff}
 
-/* ══ HOME ══════════════════════════════════════════════════════ */
-
-/* HERO */
+/* ══ HOME HERO — RESTRUCTURED ══════════════════════════════════ */
 .hero{padding:4.5rem 2.5rem 4rem;max-width:1060px;margin:0 auto}
-.hero-grid{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:start}
-.hero-left{animation:fadeUp .6s .05s ease both}
-.hero-badge{display:inline-flex;align-items:center;gap:.45rem;background:var(--brown-pale);border:1px solid var(--brown-border);color:var(--brown);font-size:.66rem;font-weight:600;padding:.28rem .88rem;border-radius:100px;letter-spacing:.07em;text-transform:uppercase;margin-bottom:1.7rem}
+
+/* Full-width top block: badge + h1 */
+.hero-top{animation:fadeUp .6s .05s ease both;margin-bottom:2.2rem}
+.hero-badge{display:inline-flex;align-items:center;gap:.45rem;background:var(--brown-pale);border:1px solid var(--brown-border);color:var(--brown);font-size:.66rem;font-weight:600;padding:.28rem .88rem;border-radius:100px;letter-spacing:.07em;text-transform:uppercase;margin-bottom:1.4rem}
 .hero-badge-dot{width:5px;height:5px;border-radius:50%;background:var(--brown);animation:pulse 2s infinite}
-.hero-left h1{margin-bottom:1.1rem}
+
+/* Two-column grid: paragraph+actions+trust LEFT | video+metrics RIGHT */
+.hero-grid{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:start}
+.hero-left{animation:fadeUp .65s .12s ease both}
 .hero-left>p{font-size:.9rem;color:var(--text2);font-weight:300;line-height:1.9;max-width:460px}
 .hero-actions{display:flex;gap:.72rem;flex-wrap:wrap;margin-top:1.7rem}
 .hero-trust{display:flex;gap:1.35rem;flex-wrap:wrap;margin-top:1.1rem;padding-top:1.1rem;border-top:1px solid var(--border)}
 .trust-item{display:flex;align-items:center;gap:.38rem;font-size:.67rem;color:var(--text3)}
 .trust-dot{width:3px;height:3px;border-radius:50%;background:var(--brown);opacity:.5}
-
-/* ROLE TAG */
-.role-tag{display:inline-flex;align-items:center;gap:.5rem;background:var(--ink);color:rgba(255,255,255,.55);font-size:.68rem;font-weight:500;padding:.32rem 1rem;border-radius:100px;letter-spacing:.05em;text-transform:uppercase;margin-bottom:1.35rem}
-.role-tag-accent{color:var(--brown2)}
-
 .hero-right{animation:fadeUp .7s .18s ease both;display:flex;flex-direction:column;gap:1rem}
 .video-wrap{background:var(--ink2);border-radius:var(--r);overflow:hidden;border:1px solid rgba(255,255,255,.05);box-shadow:0 20px 52px rgba(22,18,13,.18)}
 .video-responsive{position:relative;padding-bottom:56.25%;height:0;overflow:hidden}
@@ -120,14 +115,14 @@ h3{font-family:var(--serif);font-size:1.1rem;font-weight:500;color:var(--ink)}
 .metric-num{font-family:var(--serif);font-size:1.6rem;font-weight:600;color:var(--brown2);line-height:1;margin-bottom:.2rem}
 .metric-lbl{font-size:.61rem;color:rgba(255,255,255,.24);line-height:1.55;font-weight:300}
 
-/* WHAT I DO STRIP */
+/* ROLE STRIP */
 .role-strip{background:var(--ink2);border-top:1px solid rgba(255,255,255,.04);border-bottom:1px solid rgba(255,255,255,.04);padding:1rem 0}
 .role-strip-inner{display:flex;align-items:center;justify-content:center;gap:0;flex-wrap:wrap;max-width:1060px;margin:0 auto;padding:0 2.5rem}
 .rs-item{display:flex;align-items:center;gap:.5rem;font-size:.7rem;color:rgba(255,255,255,.38);padding:.35rem 1.4rem;border-right:1px solid rgba(255,255,255,.07)}
 .rs-item:last-child{border-right:none}
 .rs-dot{width:4px;height:4px;border-radius:50%;background:var(--brown2);flex-shrink:0}
 
-/* PROBLEM SECTION */
+/* PROBLEM */
 .problem{background:var(--ink);padding:6rem 0}
 .problem .eyebrow{color:rgba(255,255,255,.2);text-align:center;display:block}
 .problem h2{color:#fff;text-align:center;max-width:580px;margin:0 auto}
@@ -143,30 +138,23 @@ h3{font-family:var(--serif);font-size:1.1rem;font-weight:500;color:var(--ink)}
 .problem-bridge p{font-size:.87rem;color:rgba(255,255,255,.42);line-height:1.84;font-weight:300;max-width:510px;margin:0 auto}
 .problem-bridge strong{color:rgba(255,255,255,.78);font-weight:500}
 
-/* SERVICES OVERVIEW */
-.svc-overview{background:var(--warm);padding:6rem 0}
-.svc-intro{max-width:520px}
-.svc-rows{display:flex;flex-direction:column;gap:1px;margin-top:3rem;border-radius:var(--r);overflow:hidden;border:1px solid var(--border)}
-.svc-row{background:#fff;padding:2.25rem 2.5rem;display:grid;grid-template-columns:248px 1fr 196px;gap:2.5rem;align-items:start;transition:background .22s;position:relative}
-.svc-row::after{content:'';position:absolute;bottom:0;left:0;right:0;height:1px;background:var(--border)}
-.svc-row:last-child::after{display:none}
-.svc-row:hover{background:var(--cream)}
-.svc-num{font-family:var(--serif);font-size:3.2rem;font-weight:600;color:var(--brown-pale);line-height:1;margin-bottom:.5rem;user-select:none}
-.svc-lbl{font-size:.6rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--brown);margin-bottom:.4rem}
-.svc-row h3{font-size:1.02rem;color:var(--ink);margin-bottom:0}
-.svc-row-desc{font-size:.8rem;color:var(--text2);line-height:1.84;font-weight:300;margin-bottom:1rem}
-.svc-why{background:var(--brown-pale);border:1px solid var(--brown-border);border-radius:var(--r-sm);padding:.78rem 1rem;font-size:.75rem;color:var(--text2);line-height:1.66}
-.svc-why strong{display:block;font-size:.67rem;font-weight:700;letter-spacing:.07em;text-transform:uppercase;color:var(--brown);margin-bottom:.36rem}
-.svc-items{list-style:none;display:flex;flex-direction:column;gap:.4rem}
-.svc-items li{font-size:.75rem;color:var(--text2);line-height:1.56;padding-left:.88rem;position:relative}
-.svc-items li::before{content:'·';position:absolute;left:0;color:var(--brown);font-size:1rem;line-height:1.22}
-.svc-right{display:flex;flex-direction:column;gap:.65rem}
-.svc-right-lbl{font-size:.57rem;font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:var(--text3)}
-.svc-outcome{background:var(--ink);border-radius:var(--r-sm);padding:1rem 1.1rem}
-.svc-outcome-num{font-family:var(--serif);font-size:1.42rem;font-weight:600;color:var(--brown2);line-height:1;margin-bottom:.22rem}
-.svc-outcome-text{font-size:.69rem;color:rgba(255,255,255,.28);line-height:1.56;font-weight:300}
+/* THREE PILLARS */
+.pillars{background:var(--warm);padding:6rem 0}
+.pillars-intro{max-width:560px;margin-bottom:3.25rem}
+.pillars-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem}
+.pillar-card{background:#fff;border:1px solid var(--border);border-radius:var(--r);padding:2rem;display:flex;flex-direction:column;position:relative;overflow:hidden;transition:border-color .2s,transform .2s}
+.pillar-card:hover{border-color:var(--brown-border);transform:translateY(-3px)}
+.pillar-card::after{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--brown),var(--brown2))}
+.pillar-num{font-family:var(--serif);font-size:2.8rem;font-weight:600;color:var(--brown-pale);line-height:1;margin-bottom:1rem;user-select:none}
+.pillar-ico{width:44px;height:44px;border-radius:10px;background:var(--brown-pale);border:1px solid var(--brown-border);display:flex;align-items:center;justify-content:center;font-size:1.15rem;margin-bottom:1rem}
+.pillar-card h3{font-size:1.08rem;margin-bottom:.5rem}
+.pillar-tag{font-size:.62rem;font-weight:600;color:var(--brown);background:var(--brown-pale);border:1px solid var(--brown-border);padding:.2rem .65rem;border-radius:100px;display:inline-block;margin-bottom:.85rem;letter-spacing:.04em}
+.pillar-desc{font-size:.8rem;color:var(--text2);line-height:1.82;font-weight:300;margin-bottom:1.1rem;flex:1}
+.pillar-items{list-style:none;display:flex;flex-direction:column;gap:.38rem;border-top:1px solid var(--border);padding-top:1rem;margin-top:auto}
+.pillar-items li{font-size:.73rem;color:var(--text2);padding-left:.88rem;position:relative;line-height:1.5}
+.pillar-items li::before{content:'·';position:absolute;left:0;color:var(--brown);font-size:1rem;line-height:1.22}
 
-/* DIFFERENCE */
+/* WHAT MAKES THIS DIFFERENT */
 .diff{background:var(--cream);padding:6rem 0}
 .diff-grid{display:grid;grid-template-columns:1fr 1fr;gap:3.5rem;align-items:start;margin-top:2.75rem}
 .diff-text p{font-size:.88rem;color:var(--text2);line-height:1.9;font-weight:300;margin-bottom:.95rem}
@@ -174,7 +162,7 @@ h3{font-family:var(--serif);font-size:1.1rem;font-weight:500;color:var(--ink)}
 .diff-cards{display:flex;flex-direction:column;gap:.75rem}
 .diff-card{background:#fff;border:1px solid var(--border);border-radius:var(--r);padding:1.2rem 1.35rem;display:flex;gap:1rem;align-items:flex-start;transition:border-color .2s,transform .18s}
 .diff-card:hover{border-color:var(--brown-border);transform:translateX(4px)}
-.diff-card-num{font-family:var(--serif);font-size:1.4rem;font-weight:600;color:rgba(122,82,48,.14);line-height:1;flex-shrink:0;width:2rem;padding-top:.06rem}
+.diff-card-ico{width:34px;height:34px;border-radius:8px;background:var(--brown-pale);border:1px solid var(--brown-border);display:flex;align-items:center;justify-content:center;font-size:.9rem;flex-shrink:0;margin-top:.06rem}
 .diff-card-body h4{font-size:.83rem;font-weight:500;color:var(--text);margin-bottom:.18rem}
 .diff-card-body p{font-size:.74rem;color:var(--text2);line-height:1.68;font-weight:300;margin:0}
 
@@ -257,7 +245,7 @@ h3{font-family:var(--serif);font-size:1.1rem;font-weight:500;color:var(--ink)}
 .faq-item.open .faq-icon{background:var(--brown);border-color:var(--brown)}
 .faq-item.open .faq-icon svg{transform:rotate(180deg);color:#fff}
 .faq-a{max-height:0;overflow:hidden;transition:max-height .38s cubic-bezier(.4,0,.2,1),opacity .28s ease;opacity:0}
-.faq-item.open .faq-a{max-height:480px;opacity:1}
+.faq-item.open .faq-a{max-height:520px;opacity:1}
 .faq-a-inner{padding:0 1.65rem 1.35rem;font-size:.83rem;color:var(--text2);line-height:1.88;font-weight:300;border-top:1px solid var(--border);padding-top:.95rem}
 
 /* MAIN CTA */
@@ -293,7 +281,7 @@ h3{font-family:var(--serif);font-size:1.1rem;font-weight:500;color:var(--ink)}
 .trait-list{display:flex;flex-direction:column;gap:.85rem}
 .trait-item{display:flex;gap:1rem;align-items:flex-start;background:#fff;border:1px solid var(--border);border-radius:var(--r);padding:1.1rem 1.25rem;transition:border-color .2s,transform .2s}
 .trait-item:hover{border-color:var(--brown-border);transform:translateX(3px)}
-.trait-num{font-family:var(--serif);font-size:1.4rem;font-weight:600;color:rgba(122,82,48,.12);line-height:1;flex-shrink:0;width:2rem;padding-top:.08rem}
+.trait-ico{width:32px;height:32px;border-radius:7px;background:var(--brown-pale);border:1px solid var(--brown-border);display:flex;align-items:center;justify-content:center;font-size:.85rem;flex-shrink:0;margin-top:.06rem}
 .trait-text h4{font-size:.83rem;font-weight:500;color:var(--text);margin-bottom:.2rem}
 .trait-text p{font-size:.75rem;color:var(--text2);line-height:1.68;font-weight:300;margin:0}
 .photo-row{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin-top:1.5rem}
@@ -369,7 +357,6 @@ h3{font-family:var(--serif);font-size:1.1rem;font-weight:500;color:var(--ink)}
 .tag-b{background:rgba(196,149,90,.09);color:#9a6f35;border:1px solid rgba(196,149,90,.24)}
 .tag-c{background:rgba(80,140,100,.08);color:#3d7a55;border:1px solid rgba(80,140,100,.18)}
 .tag-d{background:rgba(80,100,170,.08);color:#4a5fa0;border:1px solid rgba(80,100,170,.18)}
-.tag-practice{background:rgba(80,100,170,.08);color:#4a5fa0;border:1px solid rgba(80,100,170,.18);font-style:italic}
 .work-card-header h3{font-size:1.14rem;line-height:1.3;font-family:var(--serif);font-weight:500;color:var(--ink)}
 .we-outcome-pills{display:flex;flex-wrap:wrap;gap:.38rem;margin-top:.62rem}
 .we-outcome-pill{font-size:.65rem;font-weight:600;padding:.24rem .65rem;border-radius:100px;background:var(--ink);color:rgba(255,255,255,.76)}
@@ -390,7 +377,7 @@ h3{font-family:var(--serif);font-size:1.1rem;font-weight:500;color:var(--ink)}
 .we-file-link{display:inline-flex;align-items:center;gap:.45rem;font-size:.72rem;font-weight:500;color:var(--brown);background:var(--brown-pale);border:1px solid var(--brown-border);border-radius:100px;padding:.38rem .88rem;text-decoration:none;transition:background .2s}
 .we-file-link:hover{background:var(--warm2)}
 .work-card-images{padding:0 2.1rem 1.9rem;border-top:1px solid var(--border)}
-.we-images-label{font-size:.57px;font-weight:700;letter-spacing:.11em;text-transform:uppercase;color:var(--text3);display:block;padding:1.15rem 0 .82rem;font-size:.57rem}
+.we-images-label{font-size:.57rem;font-weight:700;letter-spacing:.11em;text-transform:uppercase;color:var(--text3);display:block;padding:1.15rem 0 .82rem}
 .ba-grid{display:grid;grid-template-columns:1fr 1fr;gap:.95rem}
 .ba-item{display:flex;flex-direction:column;gap:.46rem}
 .ba-label{font-size:.65rem;font-weight:500;padding:.2rem .68rem;border-radius:100px;display:inline-block;width:fit-content}
@@ -442,14 +429,13 @@ footer p{font-size:.67rem;color:var(--text3)}
 @media(max-width:900px){
   .hero{padding:3.25rem 1.5rem 2.75rem}
   .hero-grid,.about-inner,.contact-grid,.engage-grid,.fit-grid,.personality-grid,.diff-grid{grid-template-columns:1fr;gap:2.1rem}
-  .testi-grid,.svc-cards-grid{grid-template-columns:1fr 1fr}
+  .pillars-grid,.testi-grid,.svc-cards-grid{grid-template-columns:1fr 1fr}
   .tools-grid,.certs-grid{grid-template-columns:repeat(3,1fr)}
   .edu-grid{grid-template-columns:1fr}
   .we-cols,.ba-grid,.img-grid.cols-2{grid-template-columns:1fr}
   .nav-links,.nav-avail,.nav-cta{display:none}
   .hamburger{display:flex!important}
   .photo-card{max-width:300px;margin:0 auto}
-  .svc-row{grid-template-columns:1fr;gap:1.25rem}
   .tl-list::before{left:0}
   .tl-row{grid-template-columns:1fr;padding-left:1.5rem}
   .tl-row::before{left:-4px}
@@ -459,7 +445,7 @@ footer p{font-size:.67rem;color:var(--text3)}
   .rs-item{padding:.3rem .9rem;font-size:.65rem}
 }
 @media(max-width:580px){
-  .testi-grid,.tools-grid,.svc-cards-grid{grid-template-columns:1fr}
+  .pillars-grid,.testi-grid,.tools-grid,.svc-cards-grid{grid-template-columns:1fr}
   .certs-grid{grid-template-columns:repeat(2,1fr)}
   .wrap{padding:0 1.25rem}
   nav{padding:0 1.25rem}
@@ -472,13 +458,11 @@ footer p{font-size:.67rem;color:var(--text3)}
 </head>
 <body>
 
-<!-- LIGHTBOX -->
 <div class="lightbox" id="lightbox" onclick="closeLightbox()">
   <button class="lightbox-close" onclick="event.stopPropagation();closeLightbox()">&#x2715;</button>
   <img id="lightbox-img" src="" alt="" onclick="event.stopPropagation()">
 </div>
 
-<!-- NAV -->
 <nav id="nav">
   <a href="javascript:void(0)" onclick="return show('home')" class="logo">
     <img src="https://lh3.googleusercontent.com/d/1pTNIk4uZdbGw8SAJuiFThyXA_H0yfU3J" alt="Monicah Mburu" class="logo-img">
@@ -509,12 +493,18 @@ footer p{font-size:.67rem;color:var(--text3)}
 <div id="page-home" class="page active">
 
   <div class="hero">
+
+    <!-- FULL-WIDTH TOP: badge + h1 title spans across both columns -->
+    <div class="hero-top">
+      <div class="hero-badge"><span class="hero-badge-dot"></span>Finance &amp; Operations Partner &middot; Remote worldwide</div>
+      <h1>Clean finances. Automated systems.<br>A partner who works <em>directly with you.</em></h1>
+    </div>
+
+    <!-- TWO-COLUMN: paragraph + actions + trust LEFT | video + metrics RIGHT -->
     <div class="hero-grid">
       <div class="hero-left">
-        <div class="hero-badge"><span class="hero-badge-dot"></span>Financial Operations Assistant &middot; Finance Systems VA</div>
-        <h1>Accurate books.<br>Useful reports.<br>Financial systems that <em>hold.</em></h1>
-        <p style="margin-top:1.1rem">I help founder-led teams get their finances in order and their financial workflows running — without the overhead of a full-time hire. Bookkeeping, reporting, and the operational systems that connect them.</p>
-        <p style="margin-top:.7rem;font-size:.86rem;color:var(--text2);font-weight:300;line-height:1.9">Whether you need clean books before investor conversations, a reporting dashboard that doesn't take hours to assemble, or financial workflows documented so your team can run them — I work inside your systems and you always know where things stand.</p>
+        <p>I work alongside founders and CEOs on the financial and operational layer of their business.After working with me you will get accurate books, reporting that surfaces useful information, systems that automate the repetitive work and direct executive support from one person accountable to you.</p>
+        <p style="margin-top:.7rem;font-size:.86rem;color:var(--text2);font-weight:300;line-height:1.9">Whether your books are behind, your processes exist only in people's heads, or your time gets eaten by work that should run itself, I fix the infrastructure and keep it running.</p>
         <div class="hero-actions">
           <a href="https://calendly.com/monicahmburu/one-on-one" target="_blank" class="btn">Schedule a call</a>
           <a href="javascript:void(0)" onclick="return show('work')" class="btn-ghost">View work samples &rarr;</a>
@@ -523,7 +513,7 @@ footer p{font-size:.67rem;color:var(--text3)}
           <span class="trust-item"><span class="trust-dot"></span>BA Economics &amp; Mathematics</span>
           <span class="trust-item"><span class="trust-dot"></span>CPA Foundation Certified</span>
           <span class="trust-item"><span class="trust-dot"></span>MSc Financial Engineering</span>
-          <span class="trust-item"><span class="trust-dot"></span>Remote &middot; worldwide</span>
+          <span class="trust-item"><span class="trust-dot"></span>Virtually Versed &middot; Jun 2026</span>
         </div>
       </div>
       <div class="hero-right">
@@ -543,21 +533,20 @@ footer p{font-size:.67rem;color:var(--text3)}
           </div>
           <div class="metric-box">
             <div class="metric-num">$500K+</div>
-            <div class="metric-lbl">Investor interest generated through financial packages I built</div>
+            <div class="metric-lbl">Investor interest generated through financial documents I built</div>
           </div>
         </div>
       </div>
     </div>
   </div>
 
-  <!-- ROLE STRIP -->
   <div class="role-strip">
     <div class="role-strip-inner">
-      <span class="rs-item"><span class="rs-dot"></span>Financial Operations Assistant</span>
-      <span class="rs-item"><span class="rs-dot"></span>Finance Systems VA</span>
-      <span class="rs-item"><span class="rs-dot"></span>Bookkeeping &amp; Reconciliations</span>
-      <span class="rs-item"><span class="rs-dot"></span>Financial Reporting &amp; Dashboards</span>
-      <span class="rs-item"><span class="rs-dot"></span>Financial Workflow Design</span>
+      <span class="rs-item"><span class="rs-dot"></span>Finance &amp; Operations Partner</span>
+      <span class="rs-item"><span class="rs-dot"></span>Financial Operations</span>
+      <span class="rs-item"><span class="rs-dot"></span>Systems &amp; Automation</span>
+      <span class="rs-item"><span class="rs-dot"></span>Executive Support</span>
+      <span class="rs-item"><span class="rs-dot"></span>Works directly with the CEO</span>
       <span class="rs-item"><span class="rs-dot"></span>Open to remote roles worldwide</span>
     </div>
   </div>
@@ -565,116 +554,96 @@ footer p{font-size:.67rem;color:var(--text3)}
   <!-- PROBLEM -->
   <div class="problem"><div class="wrap">
     <span class="eyebrow reveal">Sound familiar?</span>
-    <h2 class="reveal">The financial layer gets messy<br>before anyone <em>admits it.</em></h2>
-    <p class="problem-intro reveal">When a business grows faster than its financial systems, the founder carries the gap. Everything sits in one person's head because no structure exists to hold it.</p>
+    <h2 class="reveal">Founders outgrow their systems<br>before anyone <em>notices.</em></h2>
+    <p class="problem-intro reveal">When a business scales without structure, the founder absorbs the gap. Everything flows through one person because no infrastructure exists to hold it.</p>
     <div class="problem-grid reveal">
       <div class="problem-item">
-        <div class="problem-title">You don't have a clear picture of your financial position</div>
-        <div class="problem-desc">Revenue is visible. Profit is a guess. Cash position requires manual work to calculate. When someone asks how the business is doing, the honest answer is you're not entirely sure — because the financial data hasn't been organised.</div>
+        <div class="problem-title">Your financial picture is blurry</div>
+        <div class="problem-desc">Revenue is visible. Profit is a guess. Cash position requires manual work to calculate. When someone asks how the business is doing, the honest answer is you're not entirely sure — because the financial data hasn't been organised into something useful.</div>
       </div>
       <div class="problem-item">
-        <div class="problem-title">Reporting takes hours of manual assembly every month</div>
-        <div class="problem-desc">The same report, rebuilt by hand each time. Pulling from multiple sources, reformatting, verifying. Hours spent producing information that should already exist — in a system, updating itself.</div>
+        <div class="problem-title">Repetitive work still requires a person every time</div>
+        <div class="problem-desc">Invoice follow-ups, report assembly, expense tracking, renewal chasing — the same steps done manually, over and over. The work isn't complex. It's just never been set up to run itself.</div>
       </div>
       <div class="problem-item">
-        <div class="problem-title">Financial workflows have no documented process</div>
-        <div class="problem-desc">AP, AR, reconciliations, expense tracking — done by whoever has bandwidth, however they figure it out. When they leave or are unavailable, nothing continues cleanly. There's no system, just individuals.</div>
+        <div class="problem-title">How things get done lives in people's heads</div>
+        <div class="problem-desc">No documented processes. Every new person needs a full walkthrough. When someone leaves, knowledge goes with them. When you're unavailable, work stops — because nothing is written down and nothing is automated.</div>
       </div>
       <div class="problem-item">
-        <div class="problem-title">The books are behind and investor conversations are coming</div>
-        <div class="problem-desc">Messy or outdated records are manageable until they're not. A funding round, a new hire, or an audit makes the gap very visible very quickly — and cleaning it up under pressure is expensive.</div>
+        <div class="problem-title">Your time goes to things that shouldn't reach you</div>
+        <div class="problem-desc">Scheduling, inbox management, follow-ups, status checks — work that routes back to the CEO because no one else has the access, context, or authority to handle it. Every one of those things is a distraction from the actual job.</div>
       </div>
     </div>
-    <div class="problem-bridge reveal"><p>These problems don't solve themselves. They need <strong>accurate records, systems built around the financial workflows, and someone accountable for keeping both current</strong> — which is exactly where I work.</p></div>
+    <div class="problem-bridge reveal"><p>These problems share a root cause: <strong>no one owns the operational and financial layer</strong>. That's the gap I fill — working directly with the founder to build the structure, run the numbers, and keep things moving.</p></div>
   </div></div>
 
-  <!-- SERVICES OVERVIEW -->
-  <div class="svc-overview"><div class="wrap">
+  <!-- THREE PILLARS -->
+  <div class="pillars"><div class="wrap">
     <span class="eyebrow reveal">What I do</span>
-    <div class="svc-intro reveal">
-      <h2>Financial operations support<br>from one person who understands<br>how the <em>parts connect.</em></h2>
-      <p class="sub">Not a generalist. Not a bookkeeper who stops at the ledger. I work across the financial operations layer — accurate records, useful reporting, and the documented workflows that make both sustainable.</p>
+    <div class="pillars-intro reveal">
+      <h2>Three areas of work.<br>One person accountable<br><em>directly to you.</em></h2>
+      <p class="sub">Financial operations, systems and automation, and executive support. Each area stands on its own. Together they cover the full operational layer a founder-led team needs.</p>
     </div>
-    <div class="svc-rows">
-
-      <div class="svc-row reveal">
-        <div><div class="svc-num">01</div><div class="svc-lbl">Bookkeeping &amp; Financial Records</div><h3>Books that are current and clean</h3></div>
-        <div>
-          <p class="svc-row-desc">Most founders know their books are behind — not because they don't care, but because keeping records current takes consistent time they don't have. I maintain the books so you always know where you stand without preparing for the conversation first.</p>
-          <div class="svc-why"><strong>Why this matters for operations</strong>Clean books aren't just for accountants. They're the foundation that reporting, cash flow visibility, and investor conversations all depend on. Without them, every downstream financial process is guesswork.</div>
-          <ul class="svc-items" style="margin-top:1rem">
-            <li>Monthly transaction categorisation and reconciliation</li>
-            <li>Accounts payable and receivable tracking</li>
-            <li>Expense organisation and petty cash management</li>
-            <li>QuickBooks, Xero, Zoho Books setup and maintenance</li>
-          </ul>
-        </div>
-        <div class="svc-right">
-          <div class="svc-right-lbl">From the work</div>
-          <div class="svc-outcome"><div class="svc-outcome-num">60%</div><div class="svc-outcome-text">fewer payment discrepancies after AP/AR controls were rebuilt from scratch</div></div>
-          <div class="svc-outcome" style="margin-top:.65rem"><div class="svc-outcome-num">100%</div><div class="svc-outcome-text">tax filing compliance across all periods with no amendments</div></div>
-        </div>
+    <div class="pillars-grid reveal">
+      <div class="pillar-card">
+        <div class="pillar-ico">&#x1F4CA;</div>
+        <div class="pillar-tag">Financial operations</div>
+        <h3>Accurate books and useful reporting</h3>
+        <p class="pillar-desc">Bookkeeping, reconciliation, AP/AR management, financial reporting, and models you present to investors. The financial records are current. The reports surface useful information. The numbers are trustworthy.</p>
+        <ul class="pillar-items">
+          <li>Monthly bookkeeping and reconciliation</li>
+          <li>Accounts payable and receivable</li>
+          <li>P&amp;L, cash flow, balance sheet</li>
+          <li>Dashboards connected to live data</li>
+          <li>Investor-ready financial models</li>
+        </ul>
       </div>
-
-      <div class="svc-row reveal">
-        <div><div class="svc-num">02</div><div class="svc-lbl">Financial Reporting &amp; Dashboards</div><h3>Numbers you can act on</h3></div>
-        <div>
-          <p class="svc-row-desc">A report that arrives after decisions have already been made isn't useful. I build reporting systems that surface the financial information you need when you need it — without hours of manual work to get there each month.</p>
-          <div class="svc-why"><strong>Why this matters for operations</strong>Good financial reporting doesn't describe what happened — it tells you what to do next. Cash health, revenue trends, budget variance. Information that drives decisions, not just confirms them.</div>
-          <ul class="svc-items" style="margin-top:1rem">
-            <li>P&amp;L, cash flow statement, balance sheet — monthly</li>
-            <li>Excel and Google Sheets dashboards connected to live data</li>
-            <li>Budget tracking and variance analysis</li>
-            <li>Investor-ready financial models and reports</li>
-          </ul>
-        </div>
-        <div class="svc-right">
-          <div class="svc-right-lbl">From the work</div>
-          <div class="svc-outcome"><div class="svc-outcome-num">40%</div><div class="svc-outcome-text">faster reporting — 20+ hrs/week recovered after manual process was redesigned</div></div>
-          <div class="svc-outcome" style="margin-top:.65rem"><div class="svc-outcome-num">$500K+</div><div class="svc-outcome-text">investor interest generated through financial packages produced for 10+ companies</div></div>
-        </div>
+      <div class="pillar-card">
+        <div class="pillar-ico">&#x26A1;</div>
+        <div class="pillar-tag">Systems &amp; automation</div>
+        <h3>Processes documented and repetitive work automated</h3>
+        <p class="pillar-desc">SOPs written so anyone can run the process. Workflows automated so repetitive tasks stop requiring a person. Tools integrated so information stops living in disconnected places.</p>
+        <ul class="pillar-items">
+          <li>SOP writing and process documentation</li>
+          <li>Zapier and Make workflow builds</li>
+          <li>Google Workspace and Notion setup</li>
+          <li>Tool integration and data flow design</li>
+          <li>Financial workflow automation</li>
+        </ul>
       </div>
-
-      <div class="svc-row reveal">
-        <div><div class="svc-num">03</div><div class="svc-lbl">Financial Workflow Design</div><h3>Processes that run without you</h3></div>
-        <div>
-          <p class="svc-row-desc">The financial operations layer only holds if the workflows holding it are documented, automated where possible, and not dependent on one person knowing what to do. I design and document the financial processes so they run consistently — whoever is running them.</p>
-          <div class="svc-why"><strong>Why this is the missing piece</strong>Most businesses have the people and the tools. What's missing is the documented financial process that connects them. SOPs, workflow design, and automation turn one-time work into repeatable systems.</div>
-          <ul class="svc-items" style="margin-top:1rem">
-            <li>Financial workflow design and SOP documentation</li>
-            <li>AP/AR workflow automation (Zapier, Make, Excel)</li>
-            <li>Expense submission and approval workflow builds</li>
-            <li>Month-end close process documentation</li>
-          </ul>
-        </div>
-        <div class="svc-right">
-          <div class="svc-right-lbl">From the work</div>
-          <div class="svc-outcome"><div class="svc-outcome-num">8 SOPs</div><div class="svc-outcome-text">written and live — team runs processes without the founder involved</div></div>
-          <div class="svc-outcome" style="margin-top:.65rem"><div class="svc-outcome-num">30%</div><div class="svc-outcome-text">improvement in forecast accuracy after reporting models were restructured</div></div>
-        </div>
+      <div class="pillar-card">
+        <div class="pillar-ico">&#x1F5D3;</div>
+        <div class="pillar-tag">Executive support</div>
+        <h3>Inbox, calendar, and coordination handled</h3>
+        <p class="pillar-desc">Direct support for the CEO. Calendar designed for focus, not just availability. Inbox managed and triaged. Meetings prepped and followed up. Coordination that doesn't bounce back to you.</p>
+        <ul class="pillar-items">
+          <li>Inbox management and triage</li>
+          <li>Calendar design and scheduling</li>
+          <li>Meeting prep and follow-up notes</li>
+          <li>Project coordination and follow-through</li>
+          <li>Stakeholder and investor communication</li>
+        </ul>
       </div>
-
     </div>
     <div style="margin-top:2rem;text-align:center"><a href="javascript:void(0)" onclick="return show('services')" class="btn-ghost">Full service details &rarr;</a></div>
   </div></div>
 
   <!-- WHAT MAKES THIS DIFFERENT -->
   <div class="diff"><div class="wrap">
-    <span class="eyebrow reveal">Why it works</span>
-    <h2 class="reveal">This isn't bookkeeping.<br>It isn't operations. It's<br>the <em>layer between them.</em></h2>
+    <span class="eyebrow reveal">Why this works</span>
+    <h2 class="reveal">Not a bookkeeper. Not a coordinator.<br>A partner who owns <em>the whole layer.</em></h2>
     <div class="diff-grid">
       <div class="diff-text reveal">
-        <p>A bookkeeper maintains records. An operations VA handles tasks and coordination. A Financial Operations Assistant works at the intersection — building and maintaining the financial systems that the rest of the business depends on.</p>
-        <p>My background in Economics and Mathematics means I understand what financial numbers imply, not just how to organise them. The MSc in Financial Engineering adds the analytical layer — forecasting, scenario modelling, financial system design.</p>
-        <p><strong>The difference shows up in the questions I ask.</strong> When I see a discrepancy in the accounts, I investigate root cause rather than documenting the error. When I build a reporting dashboard, I ask what decisions it needs to support. When I document a workflow, I design for the version that runs without me.</p>
-        <p>That's the distinction between someone who manages financial tasks and someone who builds financial operations.</p>
+        <p>A bookkeeper maintains records and stops there. A coordinator handles tasks and stops there. A Finance and Operations Partner takes ownership of the full operational layer — financial records, the systems around them, and the executive support that keeps the CEO's time protected.</p>
+        <p>My background in Economics, Mathematics, and Financial Engineering means I understand what financial numbers imply, not just how to organise them. When I see a discrepancy, I investigate root cause. When I build a reporting dashboard, I design it around the decisions it needs to support. When I document a process, I design it to run without me.</p>
+        <p><strong>The relationship is direct.</strong> You talk to me. Not to a team, not through a project manager. I am accountable to the CEO for the work, and I communicate like it.</p>
       </div>
       <div class="reveal">
         <div class="diff-cards">
-          <div class="diff-card"><div class="diff-card-num">01</div><div class="diff-card-body"><h4>Financial fluency, not just execution</h4><p>I understand what numbers mean and what they're pointing toward — not just how to enter them correctly.</p></div></div>
-          <div class="diff-card"><div class="diff-card-num">02</div><div class="diff-card-body"><h4>Systems, not tasks</h4><p>Every deliverable is built to run independently. The goal is infrastructure that holds without me present.</p></div></div>
-          <div class="diff-card"><div class="diff-card-num">03</div><div class="diff-card-body"><h4>Root cause, not symptoms</h4><p>If something keeps going wrong, I find why — not just fix it each time it surfaces.</p></div></div>
-          <div class="diff-card"><div class="diff-card-num">04</div><div class="diff-card-body"><h4>Remote-ready by default</h4><p>Asynchronous communication, proactive updates, no micro-management required. Proven over 10 months supporting a US-based CEO.</p></div></div>
+          <div class="diff-card"><div class="diff-card-ico">&#x1F4CA;</div><div class="diff-card-body"><h4>Financial fluency, not just execution</h4><p>I understand what the numbers mean and what they're pointing toward — not just how to enter them correctly.</p></div></div>
+          <div class="diff-card"><div class="diff-card-ico">&#x26A1;</div><div class="diff-card-body"><h4>Automation-first thinking</h4><p>If something is done the same way every week, I look for the automated version before adding it to a task list.</p></div></div>
+          <div class="diff-card"><div class="diff-card-ico">&#x1F4CB;</div><div class="diff-card-body"><h4>Systems that hold without me</h4><p>Every process I build is documented so it runs independently. The goal is infrastructure, not dependency.</p></div></div>
+          <div class="diff-card"><div class="diff-card-ico">&#x1F30D;</div><div class="diff-card-body"><h4>Remote-ready by default</h4><p>Asynchronous by default, proactive communication, no chasing required. Proven over 10 months supporting a US-based CEO.</p></div></div>
         </div>
       </div>
     </div>
@@ -688,10 +657,10 @@ footer p{font-size:.67rem;color:var(--text3)}
       <p class="sub">Straightforward on your end. You describe the situation. I scope the work. We start.</p>
     </div>
     <div class="how-steps">
-      <div class="how-step reveal"><div class="how-step-num">1</div><div class="how-step-body"><h4>We talk for 30 minutes</h4><p>You describe where the friction is — lagging books, manual reporting, financial workflows that break. I identify root cause and confirm whether I'm the right person to address it.</p></div></div>
+      <div class="how-step reveal"><div class="how-step-num">1</div><div class="how-step-body"><h4>We talk for 30 minutes</h4><p>You describe where the friction is — books behind, manual processes, time going to things that shouldn't reach you. I identify root cause and confirm whether I'm the right fit.</p></div></div>
       <div class="how-step reveal"><div class="how-step-num">2</div><div class="how-step-body"><h4>Scope agreed before work begins</h4><p>For projects, deliverables and timeline confirmed upfront. For retainers, monthly scope agreed at onboarding. No open-ended commitments on either side.</p></div></div>
-      <div class="how-step reveal"><div class="how-step-num">3</div><div class="how-step-body"><h4>Financial audit and systems review — week one</h4><p>I review the current state of your books, reporting, and financial workflows. Gaps identified, priority order confirmed, work starts against agreed scope.</p></div></div>
-      <div class="how-step reveal"><div class="how-step-num">4</div><div class="how-step-body"><h4>Systems handed over or kept running</h4><p>Project engagements close with full documentation so everything holds independently. Retainers keep the financial layer accurate and current each month going forward.</p></div></div>
+      <div class="how-step reveal"><div class="how-step-num">3</div><div class="how-step-body"><h4>Audit and review — week one</h4><p>I review your books, workflows, tools, and calendar. Gaps identified, priorities confirmed, work starts against agreed scope.</p></div></div>
+      <div class="how-step reveal"><div class="how-step-num">4</div><div class="how-step-body"><h4>Delivered or kept running</h4><p>Project engagements close with full documentation so everything holds independently. Retainers keep the systems current each month going forward.</p></div></div>
     </div>
     <div class="how-cta reveal">
       <p>Five case studies with deliverables, process notes, and real outcomes — available to review before we speak.</p>
@@ -702,21 +671,21 @@ footer p{font-size:.67rem;color:var(--text3)}
   <!-- ENGAGEMENT -->
   <div class="engage"><div class="wrap">
     <span class="eyebrow reveal">How we work together</span>
-    <h2 class="reveal">Projects build the financial system.<br><em>Retainers keep it accurate.</em></h2>
+    <h2 class="reveal">Projects build the infrastructure.<br><em>Retainers keep it running.</em></h2>
     <div class="engage-intro reveal">
-      <p class="sub">A project is scoped, time-bound, and ends with a deliverable you own. A retainer is ongoing financial maintenance with a defined monthly scope. Most clients start with a project. I'm also open to full-time remote employment.</p>
+      <p class="sub">A project is scoped, time-bound, and ends with a deliverable you own. A retainer is ongoing support with a defined monthly scope. Most clients start with a project. I am also open to full-time remote employment.</p>
     </div>
     <div class="engage-grid reveal">
       <div class="engage-card project">
         <span class="engage-badge">Project engagement</span>
-        <h3>Build the financial infrastructure</h3>
-        <p>Scoped and time-bound. Books cleaned, reporting system built, financial workflows documented, dashboards connected. Ends with everything fully documented.</p>
+        <h3>Build the operational layer</h3>
+        <p>Scoped and time-bound. Books cleaned, workflows documented, repetitive tasks automated, executive systems set up. Ends with everything fully documented and handed over.</p>
         <ul class="engage-list">
           <li><span>&rarr;</span><span>Books reconciled and brought current</span></li>
           <li><span>&rarr;</span><span>Reporting dashboard built and connected to live data</span></li>
-          <li><span>&rarr;</span><span>Financial workflows documented as SOPs</span></li>
-          <li><span>&rarr;</span><span>AP/AR tracking rebuilt or automated</span></li>
-          <li><span>&rarr;</span><span>Full documentation handed over at close</span></li>
+          <li><span>&rarr;</span><span>SOPs written for critical processes</span></li>
+          <li><span>&rarr;</span><span>Automation workflows built and live</span></li>
+          <li><span>&rarr;</span><span>Calendar and inbox systems set up</span></li>
         </ul>
         <div style="border-top:1px solid var(--border);padding-top:1.2rem;margin-top:auto">
           <div style="font-family:var(--serif);font-size:1.02rem;font-weight:500;color:var(--brown);line-height:1.4">Scope &amp; investment discussed on the discovery call</div>
@@ -725,14 +694,14 @@ footer p{font-size:.67rem;color:var(--text3)}
       </div>
       <div class="engage-card retainer">
         <span class="engage-badge">Monthly retainer</span>
-        <h3>Keep the financial layer <em>running</em></h3>
-        <p>Ongoing financial operations maintenance. Books current, reporting produced monthly, financial workflows maintained. Monthly scope agreed at onboarding.</p>
+        <h3>Keep the whole layer <em>running</em></h3>
+        <p>Ongoing financial maintenance, systems upkeep, and direct executive support. Monthly scope agreed at onboarding. You talk to me directly each week.</p>
         <ul class="engage-list">
           <li><span>&rarr;</span><span>Monthly bookkeeping and reconciliation</span></li>
-          <li><span>&rarr;</span><span>P&amp;L, cash flow, and balance sheet — produced monthly</span></li>
-          <li><span>&rarr;</span><span>Reporting dashboard updated and current</span></li>
-          <li><span>&rarr;</span><span>AP/AR tracking maintained</span></li>
-          <li><span>&rarr;</span><span>Financial workflow maintenance and SOP updates</span></li>
+          <li><span>&rarr;</span><span>P&amp;L, cash flow, balance sheet produced monthly</span></li>
+          <li><span>&rarr;</span><span>Automation workflows maintained and updated</span></li>
+          <li><span>&rarr;</span><span>Inbox and calendar managed on an ongoing basis</span></li>
+          <li><span>&rarr;</span><span>Project coordination and weekly CEO sync</span></li>
         </ul>
         <div style="border-top:1px solid rgba(255,255,255,.07);padding-top:1.2rem;margin-top:auto">
           <div style="font-family:var(--serif);font-size:1.02rem;font-weight:500;color:var(--brown2);line-height:1.4">Scope &amp; investment discussed on the discovery call</div>
@@ -742,7 +711,7 @@ footer p{font-size:.67rem;color:var(--text3)}
     </div>
     <div class="engage-bridge reveal">
       <span style="font-size:1.2rem;color:var(--brown2);flex-shrink:0">&#10230;</span>
-      <p><strong>The natural sequence:</strong> Build the financial system first, then maintain it. If your financial systems are already structured and you need consistent upkeep, a retainer alone works. I'm also open to permanent full-time remote roles — same background, inside your team.</p>
+      <p><strong>The natural path:</strong> Build the infrastructure first, then maintain it. If your systems are already in place and you need consistent upkeep and direct support, a retainer alone works. I am also open to permanent full-time remote roles — same background, inside your team, reporting to the CEO.</p>
     </div>
   </div></div>
 
@@ -750,25 +719,25 @@ footer p{font-size:.67rem;color:var(--text3)}
   <div class="fit"><div class="wrap">
     <span class="eyebrow reveal">Is this the right fit?</span>
     <h2 class="reveal">Worth knowing before<br>you <em>book the call.</em></h2>
-    <p class="sub reveal">This works well for specific situations. If it doesn't match, the call confirms that quickly — which saves both of us time.</p>
+    <p class="sub reveal">This works for a specific type of situation. If it doesn't match, the call confirms that quickly.</p>
     <div class="fit-grid reveal">
       <div class="fit-card yes">
         <span class="fit-lbl">&#x2736; Good fit</span>
         <ul class="fit-list">
-          <li><span>&#x2713;</span><span>Founder-led business with revenue coming in but books that are disorganised, behind, or producing unreliable financial information.</span></li>
-          <li><span>&#x2713;</span><span>Monthly reporting takes hours of manual assembly every time — and the information usually arrives too late to act on.</span></li>
-          <li><span>&#x2713;</span><span>Financial workflows (AP, AR, expense approval, reconciliation) aren't documented. They depend on individuals who know the unwritten process.</span></li>
-          <li><span>&#x2713;</span><span>You need investor-ready financials, a clean set of books, or a reporting system built from scratch.</span></li>
-          <li><span>&#x2713;</span><span>Ready to share access to your books, financial tools, and current workflows.</span></li>
+          <li><span>&#x2713;</span><span>Founder or CEO of a team of 2 to 15 people. You want one person who handles the financial and operational layer and reports directly to you.</span></li>
+          <li><span>&#x2713;</span><span>Books are disorganised or behind. Reporting takes hours of manual work. You don't have a clear picture of your cash position.</span></li>
+          <li><span>&#x2713;</span><span>Too much repetitive work still routes through you personally — because it was never set up to run any other way.</span></li>
+          <li><span>&#x2713;</span><span>Processes exist in people's heads, not in documentation. New hires need a full walkthrough every time.</span></li>
+          <li><span>&#x2713;</span><span>You want direct communication — not routed through a team, not managed by a project coordinator. You talk to the person doing the work.</span></li>
         </ul>
       </div>
       <div class="fit-card no">
         <span class="fit-lbl">&#x2717; Not the right fit</span>
         <ul class="fit-list">
-          <li><span>&#x2717;</span><span>Need a registered CPA, statutory audit, or tax filing that requires licensed accountant registration.</span></li>
-          <li><span>&#x2717;</span><span>Looking for on-demand task handling without building systems around the tasks.</span></li>
-          <li><span>&#x2717;</span><span>Unlimited scope, undocumented expectations, or no willingness to share access to financial records and tools.</span></li>
-          <li><span>&#x2717;</span><span>Primarily need general executive admin support — calendar and inbox management only, no financial operations component.</span></li>
+          <li><span>&#x2717;</span><span>Need a licensed CPA, statutory audit, or tax filing that requires professional registration.</span></li>
+          <li><span>&#x2717;</span><span>Looking for pure task execution with no systems or documentation component.</span></li>
+          <li><span>&#x2717;</span><span>Not willing to share access to books, tools, or calendar — the work requires it.</span></li>
+          <li><span>&#x2717;</span><span>Need someone available on-demand at all hours without a defined scope or agreement.</span></li>
         </ul>
       </div>
     </div>
@@ -790,18 +759,18 @@ footer p{font-size:.67rem;color:var(--text3)}
     <div class="faq-intro reveal">
       <span class="eyebrow">Common questions</span>
       <h2>Things people ask<br>before <em>getting started.</em></h2>
-      <p class="sub">Straightforward answers. If something's missing, the discovery call covers it.</p>
+      <p class="sub">Straightforward answers. The discovery call covers anything missing.</p>
     </div>
     <div class="faq-list reveal">
-      <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)"><span class="faq-q-text">What exactly is a Financial Operations Assistant?</span><span class="faq-icon"><svg viewBox="0 0 10 6" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><polyline points="1,1 5,5 9,1"/></svg></span></div><div class="faq-a"><div class="faq-a-inner">A Financial Operations Assistant sits between pure bookkeeping and general operations support. A bookkeeper maintains records. A general VA handles tasks. A Financial Operations Assistant builds and maintains the financial systems — the processes, workflows, reporting structures, and controls — that make financial records accurate and useful. I handle the full layer: keeping the books current, producing reporting you can act on, and documenting the workflows so the financial operations run consistently without depending on one person.</div></div></div>
-      <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)"><span class="faq-q-text">Are you looking for employment or offering freelance services?</span><span class="faq-icon"><svg viewBox="0 0 10 6" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><polyline points="1,1 5,5 9,1"/></svg></span></div><div class="faq-a"><div class="faq-a-inner">Both, and I'm clear about the difference. I'm open to permanent full-time remote employment in financial operations, finance systems, or bookkeeping roles, and I'm available for project-based or monthly retainer consulting engagements. The skills are the same either way — the arrangement is different. If you're a recruiter or employer, the About page has my full background and credentials.</div></div></div>
-      <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)"><span class="faq-q-text">How is this different from hiring a bookkeeper or a general VA?</span><span class="faq-icon"><svg viewBox="0 0 10 6" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><polyline points="1,1 5,5 9,1"/></svg></span></div><div class="faq-a"><div class="faq-a-inner">A bookkeeper maintains records. A general VA handles inbox and calendar tasks. I work at the intersection: accurate financial records, plus the reporting systems that make those records useful, plus the documented financial workflows that make the whole thing sustainable. My background in Economics, Mathematics, and Financial Engineering means I understand what numbers imply — not just how to organise them. If you need someone who can take ownership of the financial and operational layer and build infrastructure that holds, that's where I work.</div></div></div>
-      <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)"><span class="faq-q-text">Do you have remote work experience?</span><span class="faq-icon"><svg viewBox="0 0 10 6" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><polyline points="1,1 5,5 9,1"/></svg></span></div><div class="faq-a"><div class="faq-a-inner">Yes. At Pitch Investors I supported a US-based CEO for 10 months remotely — handling financial deliverables, investor communication, and operational coordination. I operate asynchronously by default, communicate proactively, and don't need to be checked on to produce finished work.</div></div></div>
-      <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)"><span class="faq-q-text">What does a typical engagement look like?</span><span class="faq-icon"><svg viewBox="0 0 10 6" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><polyline points="1,1 5,5 9,1"/></svg></span></div><div class="faq-a"><div class="faq-a-inner">We start with a free 30-minute discovery call. If there's a fit, I recommend a project engagement or a retainer depending on your situation. Week one is a financial audit — I review your books, reporting, and workflows, identify the gaps, and confirm priority order. Work starts against agreed scope. Project engagements close with full documentation. Retainers continue monthly.</div></div></div>
-      <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)"><span class="faq-q-text">What does this cost?</span><span class="faq-icon"><svg viewBox="0 0 10 6" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><polyline points="1,1 5,5 9,1"/></svg></span></div><div class="faq-a"><div class="faq-a-inner">Scope and investment are discussed on the discovery call, once I understand what actually needs doing. Project engagements are priced on deliverables and hours — confirmed before work begins. Retainers are based on monthly scope agreed at onboarding, billed on actuals. No surprises on either side.</div></div></div>
-      <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)"><span class="faq-q-text">Do you work with clients outside Kenya?</span><span class="faq-icon"><svg viewBox="0 0 10 6" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><polyline points="1,1 5,5 9,1"/></svg></span></div><div class="faq-a"><div class="faq-a-inner">Yes. I work remotely with clients and employers worldwide across time zones, both synchronously and asynchronously. Most communication happens via Slack or email, with weekly sync calls where needed.</div></div></div>
-      <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)"><span class="faq-q-text">What tools do you work with?</span><span class="faq-icon"><svg viewBox="0 0 10 6" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><polyline points="1,1 5,5 9,1"/></svg></span></div><div class="faq-a"><div class="faq-a-inner">QuickBooks, Xero, Zoho Books, Excel, Google Sheets, Power BI, Notion, Zapier, Make, Airtable, ClickUp, Trello, Asana, Slack, Zoom, and others. If you use something not on this list, I pick it up quickly. The goal is to reduce friction, not add it.</div></div></div>
-      <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)"><span class="faq-q-text">Can you replace my accountant or CFO?</span><span class="faq-icon"><svg viewBox="0 0 10 6" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><polyline points="1,1 5,5 9,1"/></svg></span></div><div class="faq-a"><div class="faq-a-inner">No — I'll be direct about that. I'm not a licensed CPA and don't file statutory accounts or handle tax compliance requiring registration. What I do is the financial operations layer: accurate records, useful reporting, and the documented workflows that make both sustainable. If you have a CFO or accountant, I work alongside them — handling the day-to-day financial operations so they can focus on strategy.</div></div></div>
+      <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)"><span class="faq-q-text">What is a Finance and Operations Partner?</span><span class="faq-icon"><svg viewBox="0 0 10 6" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><polyline points="1,1 5,5 9,1"/></svg></span></div><div class="faq-a"><div class="faq-a-inner">A Finance and Operations Partner takes ownership of the full operational and financial layer of a founder-led business. That means accurate financial records, reporting that surfaces useful information, automated workflows that remove repetitive manual work, documented processes so the business doesn't depend on one person's memory, and direct executive support for the CEO. The role reports directly to the founder — not through an operations director or team lead. One person, accountable for the whole layer.</div></div></div>
+      <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)"><span class="faq-q-text">How is this different from hiring a bookkeeper, a coordinator, or a virtual assistant?</span><span class="faq-icon"><svg viewBox="0 0 10 6" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><polyline points="1,1 5,5 9,1"/></svg></span></div><div class="faq-a"><div class="faq-a-inner">A bookkeeper maintains records and stops there. A coordinator manages tasks and stops there. A Finance and Operations Partner works across all three areas — financial operations, systems and automation, and executive support — and owns the outcomes, not just the tasks. My background in Economics, Mathematics, and Financial Engineering means I understand what the numbers imply, not just how to record them. When I see a discrepancy, I investigate why. When I build a process, I design it to run without me. The difference is ownership versus execution.</div></div></div>
+      <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)"><span class="faq-q-text">Are you looking for employment or offering consulting services?</span><span class="faq-icon"><svg viewBox="0 0 10 6" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><polyline points="1,1 5,5 9,1"/></svg></span></div><div class="faq-a"><div class="faq-a-inner">Both, and I am clear about the difference. I am open to permanent full-time remote employment in finance, operations, or executive support roles. I am also available for project-based and monthly retainer consulting engagements. The skills and approach are the same either way. If you are a recruiter or employer, the About page has my full background and credentials.</div></div></div>
+      <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)"><span class="faq-q-text">Do you have remote work experience?</span><span class="faq-icon"><svg viewBox="0 0 10 6" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><polyline points="1,1 5,5 9,1"/></svg></span></div><div class="faq-a"><div class="faq-a-inner">Yes. At Pitch Investors I supported a US-based CEO for 10 months remotely — delivering financial packages, managing investor communication, and coordinating operations across time zones. I operate asynchronously by default, communicate proactively, and produce finished work without needing to be checked on.</div></div></div>
+      <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)"><span class="faq-q-text">What does a typical engagement look like?</span><span class="faq-icon"><svg viewBox="0 0 10 6" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><polyline points="1,1 5,5 9,1"/></svg></span></div><div class="faq-a"><div class="faq-a-inner">We start with a free 30-minute call. If there is a fit, I recommend a project or retainer depending on your situation. Week one is a review of your books, workflows, tools, and calendar — gaps identified, priorities confirmed. Work starts against the agreed scope. Project engagements close with full documentation. Retainers continue monthly with a weekly sync.</div></div></div>
+      <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)"><span class="faq-q-text">What does this cost?</span><span class="faq-icon"><svg viewBox="0 0 10 6" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><polyline points="1,1 5,5 9,1"/></svg></span></div><div class="faq-a"><div class="faq-a-inner">Scope and investment are discussed on the discovery call, once I understand what actually needs doing. Projects are priced on deliverables and timeline — confirmed before work begins. Retainers are based on monthly scope agreed at onboarding, billed on actuals. No surprises on either side.</div></div></div>
+      <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)"><span class="faq-q-text">Do you work with clients outside Kenya?</span><span class="faq-icon"><svg viewBox="0 0 10 6" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><polyline points="1,1 5,5 9,1"/></svg></span></div><div class="faq-a"><div class="faq-a-inner">Yes. I work remotely with founders and employers worldwide. Most communication happens via Slack or email, with a weekly sync call. I operate across time zones both synchronously and asynchronously.</div></div></div>
+      <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)"><span class="faq-q-text">What tools do you work with?</span><span class="faq-icon"><svg viewBox="0 0 10 6" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><polyline points="1,1 5,5 9,1"/></svg></span></div><div class="faq-a"><div class="faq-a-inner">QuickBooks, Xero, Zoho Books, Excel, Google Sheets, Power BI, Notion, Zapier, Make, Airtable, ClickUp, Trello, Asana, Slack, Zoom, Google Workspace, and others. If you use something not on this list, I pick it up quickly.</div></div></div>
+      <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)"><span class="faq-q-text">Can you replace my accountant or CFO?</span><span class="faq-icon"><svg viewBox="0 0 10 6" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><polyline points="1,1 5,5 9,1"/></svg></span></div><div class="faq-a"><div class="faq-a-inner">No — I am direct about that. I am not a licensed CPA and do not file statutory accounts or handle tax compliance requiring registration. What I do is the financial operations layer: accurate records, useful reporting, documented workflows, and direct executive support. If you have a CFO or accountant, I work alongside them and handle the day-to-day so they focus on strategy.</div></div></div>
     </div>
   </div></div>
 
@@ -809,7 +778,7 @@ footer p{font-size:.67rem;color:var(--text3)}
   <div class="main-cta"><div class="wrap"><div class="main-cta-inner reveal">
     <span class="eyebrow">Ready to start?</span>
     <h2>One conversation.<br><em>Scope agreed. Work begins.</em></h2>
-    <p>30 minutes. You describe the financial operations situation. I confirm whether I can address it and what that would look like. If there's a fit, scope is agreed and work starts within 48 hours.</p>
+    <p>30 minutes. You describe the situation. I confirm whether I can address it and what that looks like. If there is a fit, scope is agreed and work starts within 48 hours.</p>
     <div class="cta-btns">
       <a href="https://calendly.com/monicahmburu/one-on-one" target="_blank" class="btn-inv">Schedule a free call &rarr;</a>
       <a href="mailto:monicah.mburu@zohomail.com" class="btn-ghost-inv">Email me directly</a>
@@ -830,11 +799,11 @@ footer p{font-size:.67rem;color:var(--text3)}
     <div class="about-inner wrap">
       <div class="about-text">
         <span class="eyebrow">About me</span>
-        <h1>Financial operations.<br>Systems thinking.<br><em>Remote ready.</em></h1>
-        <p style="margin-top:1.25rem">Finance and financial operations are harder to separate than most businesses realise. A business with accurate books but no documented financial workflows is still losing time to manual processes. A business with workflows but unreliable records cannot make decisions based on real numbers. I work across both because the problems usually sit at the intersection.</p>
-        <p>My background is in Economics and Mathematics. I hold a CPA Foundation certification and professional certifications in data analytics, bookkeeping, and corporate finance. I am currently completing an MSc in Financial Engineering at WorldQuant University. The academic side is not decorative — it means I understand what financial numbers imply, not just how to organise them.</p>
-        <p>At Pitch Investors, I built financial models and investor packages for 10+ businesses remotely, supporting a US-based CEO. At Aspire Lending, I redesigned a manual reporting process that was consuming 20+ hours of senior staff time every week. At Target Mart, I rebuilt AP/AR controls from scratch, cutting payment discrepancies by 60% and bringing tax filings to 100% compliance.</p>
-        <p><strong>I am open to permanent full-time remote employment in financial operations or finance systems roles, and available for project-based or retainer consulting engagements.</strong> Based in Nairobi, working worldwide.</p>
+        <h1>Finance background.<br>Operations instinct.<br><em>Remote ready.</em></h1>
+        <p style="margin-top:1.25rem">Finance and operations are harder to separate than most businesses realise. A business with accurate books but no documented workflows still loses time to manual processes every week. A business with good processes but unreliable financial records makes decisions on bad data. I work across both areas because the problems usually sit at the intersection.</p>
+        <p>My background is in Economics and Mathematics. I hold a CPA Foundation certification and professional certifications in data analytics, bookkeeping, and corporate finance. I am completing an MSc in Financial Engineering at WorldQuant University. The academic side is not decorative — it shapes how I read financial information and design systems around it.</p>
+        <p>At Pitch Investors, I built financial models and investor packages for 10+ businesses remotely, supporting a US-based CEO directly for 10 months. At Aspire Lending, I redesigned a manual reporting process that was consuming 20+ hours of senior staff time every week. At Target Mart, I rebuilt AP/AR controls from scratch, cutting payment discrepancies by 60% and bringing tax filings to 100% compliance.</p>
+        <p><strong>I am open to permanent full-time remote employment in finance and operations roles, and available for project-based or retainer engagements.</strong> Based in Nairobi, working worldwide.</p>
         <div style="display:flex;gap:.72rem;margin-top:1.9rem;flex-wrap:wrap">
           <a href="https://calendly.com/monicahmburu/one-on-one" target="_blank" class="btn">Schedule a call</a>
           <a href="https://www.linkedin.com/in/monicahmburu/" target="_blank" class="btn-ghost">View LinkedIn &rarr;</a>
@@ -843,13 +812,13 @@ footer p{font-size:.67rem;color:var(--text3)}
       <div>
         <figure class="photo-card">
           <img src="https://lh3.googleusercontent.com/d/10KcYq3HJd_FPOkHjxR6sH8PXcxGq1NoY" alt="Monicah Mburu">
-          <figcaption class="photo-meta"><p>Financial Operations &middot; Finance Systems VA &middot; Remote-ready</p></figcaption>
+          <figcaption class="photo-meta"><p>Finance &amp; Operations Partner &middot; Remote-ready</p></figcaption>
         </figure>
         <div class="vv-callout">
           <div class="vv-callout-icon">&#x1F4DA;</div>
           <div class="vv-callout-body">
             <strong>Virtually Versed Africa Operations Bootcamp, June 2026</strong>
-            <p>Intensive training in remote operations, systems setup, workflow automation, and execution infrastructure — formalising the approach I already apply in financial operations practice.</p>
+            <p>Intensive training in remote operations, systems setup, workflow automation, and execution infrastructure for distributed teams.</p>
           </div>
         </div>
       </div>
@@ -858,20 +827,20 @@ footer p{font-size:.67rem;color:var(--text3)}
 
   <div class="personality"><div class="wrap">
     <span class="eyebrow reveal">How I work</span>
-    <h2 class="reveal">What it's like to hand<br>something <em>to me.</em></h2>
+    <h2 class="reveal">What it's like to work<br><em>with me directly.</em></h2>
     <div class="personality-grid">
       <div class="personality-text reveal">
-        <p>When I pick up a new engagement, my first instinct is to understand the whole picture — not just the task. If a financial process keeps producing errors, I want to know why before fixing the symptom. That takes more time upfront and saves significantly more later.</p>
+        <p>When I take on an engagement, my first instinct is to understand the full picture — not just the task. If a process keeps breaking, I want to know why before fixing the symptom. That takes more time upfront and saves more time later.</p>
         <p>I work independently. A clear scope and defined goals are enough. What comes back is finished work, not a status update asking what to do next.</p>
-        <p>I communicate before you have to ask. If something unexpected surfaces mid-engagement, you hear about it before it becomes a problem — not after I've quietly worked around it.</p>
-        <p><strong>The goal with every engagement is to make myself replaceable.</strong> Financial systems that need me to keep showing up haven't been built properly. Good financial infrastructure holds on its own.</p>
+        <p>I communicate before you have to ask. If something unexpected surfaces mid-engagement, you hear about it before it becomes a problem.</p>
+        <p><strong>The goal with every engagement is to make myself replaceable.</strong> Systems that need me to keep showing up haven't been built properly. Good infrastructure holds on its own — and I document everything so it does.</p>
       </div>
       <div class="reveal">
         <div class="trait-list">
-          <div class="trait-item"><div class="trait-num">01</div><div class="trait-text"><h4>I catch what the numbers are saying</h4><p>The discrepancy in the reconciliation. The cash flow pattern that signals a problem. These get flagged, not filed.</p></div></div>
-          <div class="trait-item"><div class="trait-num">02</div><div class="trait-text"><h4>You don't have to chase me for updates</h4><p>Updates arrive on schedule. Issues get flagged before they escalate. You shouldn't have to ask what's happening.</p></div></div>
-          <div class="trait-item"><div class="trait-num">03</div><div class="trait-text"><h4>I build financial systems, not outputs</h4><p>Every deliverable is connected to how the financial operations run. The goal is always something that keeps working after I'm done.</p></div></div>
-          <div class="trait-item"><div class="trait-num">04</div><div class="trait-text"><h4>I don't need hand-holding</h4><p>Clear scope and defined goals are enough. You don't need to manage me to get finished work back.</p></div></div>
+          <div class="trait-item"><div class="trait-ico">&#x1F50D;</div><div class="trait-text"><h4>I find what the numbers are pointing to</h4><p>The discrepancy in the reconciliation. The cash flow pattern that signals a problem. These get flagged, not filed.</p></div></div>
+          <div class="trait-item"><div class="trait-ico">&#x1F4AC;</div><div class="trait-text"><h4>You don't have to chase me for updates</h4><p>Updates arrive on schedule. Issues get flagged before they escalate. You should not have to ask what is happening.</p></div></div>
+          <div class="trait-item"><div class="trait-ico">&#x26A1;</div><div class="trait-text"><h4>I automate before I add to a task list</h4><p>If something is done the same way every week, I look for the automated version first. Manual work that doesn't need a person shouldn't have one.</p></div></div>
+          <div class="trait-item"><div class="trait-ico">&#x1F3AF;</div><div class="trait-text"><h4>I don't need managing</h4><p>Clear scope and defined goals are enough. You get finished work back, not check-ins about what to do next.</p></div></div>
         </div>
       </div>
     </div>
@@ -889,23 +858,21 @@ footer p{font-size:.67rem;color:var(--text3)}
     <span class="eyebrow reveal">Experience</span>
     <h2 class="reveal">Where this background came from</h2>
     <div class="tl-list">
-
       <div class="tl-row reveal">
         <div class="tl-date"><strong>Mar 2025 – Present</strong><span>Current &middot; On-site</span></div>
         <div class="tl-body">
           <div class="tl-co">Aspire Lending Ltd.</div>
           <div class="tl-role">Accounts Assistant &amp; Receptionist</div>
           <div class="tl-desc"><ul>
-            <li><strong>Reporting redesign:</strong> Identified that senior staff were spending hours weekly assembling the same report manually. Redesigned the process — report preparation time dropped by 40%, recovering over 20 hours per week.</li>
+            <li><strong>Reporting redesign:</strong> Identified senior staff spending hours weekly assembling the same report manually. Redesigned the process — preparation time dropped by 40%, recovering over 20 hours per week.</li>
             <li><strong>Filing system:</strong> Built a retrieval system for 1,000+ loan files (physical and digital), reducing retrieval time by 30%.</li>
-            <li><strong>Petty cash &amp; reconciliations:</strong> Managed petty cash, posted transactions to the accounting system, and performed month-end reconciliations.</li>
-            <li><strong>Insurance coordination:</strong> Covered insurance renewals independently during staff absence. Built an automated tracking system to prevent future lapses — removing a recurring manual bottleneck.</li>
-            <li><strong>Loan administration:</strong> Drafted offer letters, processed logbook intake and release, managed client correspondence and front desk.</li>
+            <li><strong>Petty cash and reconciliations:</strong> Managed petty cash, posted transactions, and performed month-end reconciliations.</li>
+            <li><strong>Insurance coordination:</strong> Built an automated tracking system during a staff absence — removing a recurring manual bottleneck and preventing future lapses.</li>
+            <li><strong>Loan administration:</strong> Drafted offer letters, processed logbook intake and release, managed client correspondence.</li>
           </ul></div>
           <div class="tl-pills"><span class="pill">Reporting redesign</span><span class="pill">Records management</span><span class="pill">Reconciliations</span><span class="pill">Process automation</span><span class="pill">Loan administration</span></div>
         </div>
       </div>
-
       <div class="tl-row reveal">
         <div class="tl-date"><strong>Mar 2024 – Jan 2025</strong><span>Remote &middot; 10 months</span></div>
         <div class="tl-body">
@@ -913,15 +880,14 @@ footer p{font-size:.67rem;color:var(--text3)}
           <div class="tl-role">Accountant &amp; Financial Analyst</div>
           <div class="tl-desc"><ul>
             <li><strong>Financial modelling:</strong> Built DCF valuations, scenario-based forecasts, and investor-ready financial statements for 10+ businesses — supporting $500K+ in documented investor interest.</li>
-            <li><strong>Accounting system setup:</strong> Established Zoho Books from scratch as the firm's first structured accounting system — chart of accounts, invoicing, expense recording, payroll, and reconciliations.</li>
-            <li><strong>AP/AR management:</strong> Reduced late payments by 40% through workflow improvements; reduced payment discrepancies by 60% through tighter petty cash controls.</li>
-            <li><strong>Business plans &amp; pitch decks:</strong> Produced 10+ business plans and pitch decks presented directly to investors; led client qualification and on-site due diligence.</li>
-            <li><strong>Remote operations:</strong> Supported a US-based CEO for 10 months — coordinating meetings, managing investor communication, and delivering financial packages to deadline.</li>
+            <li><strong>Accounting system setup:</strong> Established Zoho Books from scratch — chart of accounts, invoicing, expense recording, payroll, and reconciliations.</li>
+            <li><strong>AP/AR management:</strong> Reduced late payments by 40% through workflow improvements; reduced payment discrepancies by 60% through tighter controls.</li>
+            <li><strong>Business plans and pitch decks:</strong> Produced 10+ business plans and pitch decks presented directly to investors; led client qualification and due diligence.</li>
+            <li><strong>Remote executive support:</strong> Supported a US-based CEO for 10 months — coordinating meetings, managing investor communication, delivering financial packages to deadline.</li>
           </ul></div>
           <div class="tl-pills"><span class="pill">Remote operations</span><span class="pill">DCF modelling</span><span class="pill">Investor reporting</span><span class="pill">Zoho Books setup</span><span class="pill">AP/AR management</span></div>
         </div>
       </div>
-
       <div class="tl-row reveal">
         <div class="tl-date"><strong>Jul 2023 – Dec 2023</strong><span>On-site &middot; 6 months</span></div>
         <div class="tl-body">
@@ -929,14 +895,13 @@ footer p{font-size:.67rem;color:var(--text3)}
           <div class="tl-role">Finance Intern</div>
           <div class="tl-desc"><ul>
             <li><strong>AP/AR controls:</strong> Managed accounts payable and receivable — invoice recording, payment allocation, aging report analysis. Contributed to a 25% reduction in unpaid invoices over six months.</li>
-            <li><strong>Receipt filing:</strong> Resolved a filing gap identified during audit, implementing a categorisation system that improved traceability and reduced retrieval time by 30%.</li>
+            <li><strong>Receipt filing:</strong> Resolved a filing gap identified during audit, implementing a categorisation system that reduced retrieval time by 30%.</li>
             <li><strong>Tax compliance:</strong> Assisted with withholding tax submissions — 100% on-time filing across all periods.</li>
             <li><strong>Stock variance analysis:</strong> Conducted stock takes and identified discrepancies between physical counts and system records.</li>
           </ul></div>
           <div class="tl-pills"><span class="pill">AP/AR</span><span class="pill">Aging reports</span><span class="pill">Reconciliations</span><span class="pill">Tax compliance</span><span class="pill">Stock variance</span></div>
         </div>
       </div>
-
     </div>
   </div></div>
 
@@ -963,7 +928,7 @@ footer p{font-size:.67rem;color:var(--text3)}
   </div></section>
 
   <footer>
-    <p>&copy; 2026 Monicah Mburu &middot; Financial Operations &middot; Finance Systems VA &middot; Remote-ready</p>
+    <p>&copy; 2026 Monicah Mburu &middot; Finance &amp; Operations Partner &middot; Remote-ready</p>
     <div class="footer-links">
       <a href="https://www.linkedin.com/in/monicahmburu/" target="_blank">LinkedIn</a>
       <a href="https://wa.me/254798498795" target="_blank">WhatsApp</a>
@@ -976,40 +941,40 @@ footer p{font-size:.67rem;color:var(--text3)}
 <div id="page-services" class="page">
   <div class="svc-page-hero"><div class="wrap">
     <span class="eyebrow">What I offer</span>
-    <h1>Financial operations support<br>for founder-led <em>remote teams.</em></h1>
-    <p class="sub">Bookkeeping, financial reporting, and the workflow systems that make both sustainable. Available for permanent remote employment, retainers, and project engagements.</p>
+    <h1>Finance, operations, and<br>direct support for<br><em>founders and CEOs.</em></h1>
+    <p class="sub">Three areas of work. One person you talk to directly. Available for permanent remote employment, monthly retainers, and project engagements.</p>
   </div></div>
 
   <section style="background:var(--cream)"><div class="wrap">
-    <span class="eyebrow reveal">01 — Bookkeeping &amp; Financial Records</span>
-    <h2 class="reveal">Books that are <em>always current.</em></h2>
-    <p class="sub reveal" style="max-width:560px">The foundation everything else depends on. Accurate records are not a formality — they're how every downstream financial process gets reliable input.</p>
+    <span class="eyebrow reveal">Financial operations</span>
+    <h2 class="reveal">Accurate books and<br>reporting you can <em>act on.</em></h2>
+    <p class="sub reveal" style="max-width:560px">The financial records are current. The reports surface useful information. The numbers are trustworthy. Everything downstream depends on this being right.</p>
     <div class="svc-cards-grid">
-      <div class="svc-card reveal"><div class="svc-ico">&#x1F4D2;</div><h3>Monthly bookkeeping</h3><span class="svc-tag">Core financial maintenance</span><p>Transactions categorised, accounts reconciled, records kept current each month.</p><ul class="svc-sub-list"><li>Transaction categorisation</li><li>Monthly bank and credit card reconciliation</li><li>Accounts payable and receivable tracking</li><li>Payroll support and expense organisation</li></ul></div>
-      <div class="svc-card reveal"><div class="svc-ico">&#x1F4B3;</div><h3>AP/AR management</h3><span class="svc-tag">Cash flow visibility</span><p>Outstanding invoices tracked. Payment workflows structured. Late payments reduced.</p><ul class="svc-sub-list"><li>Invoice tracking and follow-up workflows</li><li>Vendor payment scheduling</li><li>Aging report analysis and monitoring</li><li>Petty cash reconciliation and controls</li></ul></div>
-      <div class="svc-card reveal"><div class="svc-ico">&#x1F5C2;</div><h3>Bookkeeping setup</h3><span class="svc-tag">Start clean or clean up</span><p>Full-cycle setup for businesses starting fresh, or cleanup for books that have fallen behind.</p><ul class="svc-sub-list"><li>Chart of accounts setup and organisation</li><li>Historical cleanup and catch-up bookkeeping</li><li>QuickBooks, Xero, Zoho Books, Sage</li><li>Handover documentation and SOP</li></ul></div>
+      <div class="svc-card reveal"><div class="svc-ico">&#x1F4D2;</div><h3>Bookkeeping and reconciliation</h3><span class="svc-tag">Financial records</span><p>Transactions categorised, accounts reconciled, records kept current each month. The foundation everything else depends on.</p><ul class="svc-sub-list"><li>Monthly transaction categorisation</li><li>Bank and credit card reconciliation</li><li>Accounts payable and receivable tracking</li><li>Payroll support and expense organisation</li><li>QuickBooks, Xero, Zoho Books setup and maintenance</li></ul></div>
+      <div class="svc-card reveal"><div class="svc-ico">&#x1F4CA;</div><h3>Financial reporting and dashboards</h3><span class="svc-tag">Decision-ready information</span><p>P&amp;L, cash flow, balance sheet produced monthly. Dashboards connected to live data so reports don't require manual assembly each time.</p><ul class="svc-sub-list"><li>Profit and loss statement</li><li>Cash flow statement and balance sheet</li><li>Excel and Google Sheets dashboards</li><li>Budget tracking and variance analysis</li><li>Power BI reporting builds</li></ul></div>
+      <div class="svc-card reveal"><div class="svc-ico">&#x1F3E6;</div><h3>Financial modelling</h3><span class="svc-tag">For investors and decisions</span><p>Forecasts, scenario models, and investor-ready financials that hold up when someone asks a hard question about the numbers.</p><ul class="svc-sub-list"><li>DCF valuation and financial modelling</li><li>Scenario forecasting and sensitivity analysis</li><li>Investor reports and pitch deck financials</li><li>Budget models and growth projections</li></ul></div>
     </div>
   </div></section>
 
   <section style="background:var(--warm)"><div class="wrap">
-    <span class="eyebrow reveal">02 — Financial Reporting &amp; Dashboards</span>
-    <h2 class="reveal">Numbers you can <em>do something with.</em></h2>
-    <p class="sub reveal" style="max-width:560px">Reporting should drive decisions, not just describe what already happened. If assembling it takes hours each month, that's a systems problem.</p>
+    <span class="eyebrow reveal">Systems &amp; automation</span>
+    <h2 class="reveal">Processes documented.<br>Repetitive work <em>automated.</em></h2>
+    <p class="sub reveal" style="max-width:560px">If something is done the same way every week, it should not require a person every time. I document the processes that need to be written down and automate the work that doesn't need a human.</p>
     <div class="svc-cards-grid">
-      <div class="svc-card reveal"><div class="svc-ico">&#x1F4CA;</div><h3>Monthly financial reporting</h3><span class="svc-tag">Decision-ready information</span><p>P&amp;L, cash flow, and balance sheet produced monthly with enough context to act on.</p><ul class="svc-sub-list"><li>Profit &amp; loss statement</li><li>Cash flow statement</li><li>Balance sheet</li><li>Month-to-month variance notes</li></ul></div>
-      <div class="svc-card reveal"><div class="svc-ico">&#x1F4C8;</div><h3>Dashboards &amp; reporting systems</h3><span class="svc-tag">Live data, not manual assembly</span><p>Dashboards that pull live data and surface the financial numbers you need — without hours of manual work to get there.</p><ul class="svc-sub-list"><li>Excel and Google Sheets dashboards</li><li>KPI tracking and performance metrics</li><li>Budget tracking and variance analysis</li><li>Power BI reporting builds</li></ul></div>
-      <div class="svc-card reveal"><div class="svc-ico">&#x1F3E6;</div><h3>Financial modelling</h3><span class="svc-tag">For decisions and investor conversations</span><p>Forecasts, scenario models, and investor-ready financials that hold up when someone asks a hard question.</p><ul class="svc-sub-list"><li>DCF valuation and financial modelling</li><li>Scenario forecasting and sensitivity analysis</li><li>Investor reports and pitch deck financials</li><li>Budget models and growth projections</li></ul></div>
+      <div class="svc-card reveal"><div class="svc-ico">&#x1F4CB;</div><h3>SOP writing and process documentation</h3><span class="svc-tag">Systems that hold without you</span><p>Processes written down so any team member can run them without asking. Removes the single point of failure that is one person's memory.</p><ul class="svc-sub-list"><li>Financial process SOPs</li><li>Operational workflow documentation</li><li>Onboarding guides and training materials</li><li>Operating handbooks in Notion</li></ul></div>
+      <div class="svc-card reveal"><div class="svc-ico">&#x26A1;</div><h3>Workflow automation</h3><span class="svc-tag">Manual work that runs itself</span><p>Invoice reminders, expense routing, report scheduling, approval workflows — built once, run automatically. The manual effort is removed.</p><ul class="svc-sub-list"><li>Zapier and Make workflow builds</li><li>Google Workspace automation</li><li>Excel automation and formula builds</li><li>Tool integration and data flow design</li><li>AP/AR and financial workflow automation</li></ul></div>
+      <div class="svc-card reveal"><div class="svc-ico">&#x1F527;</div><h3>Tool setup and integration</h3><span class="svc-tag">Systems that talk to each other</span><p>Disconnected tools create duplicate work and information gaps. I set up and connect the tools your business already uses so data flows where it needs to go.</p><ul class="svc-sub-list"><li>Notion workspace design</li><li>Google Workspace setup and structure</li><li>Project management tool setup (Asana, ClickUp, Trello)</li><li>Integration between financial and operational tools</li></ul></div>
     </div>
   </div></section>
 
   <section style="background:var(--cream)"><div class="wrap">
-    <span class="eyebrow reveal">03 — Financial Workflow Design</span>
-    <h2 class="reveal">Financial processes that <em>run without you.</em></h2>
-    <p class="sub reveal" style="max-width:560px">The financial layer only holds if the processes holding it are documented, automated where possible, and not dependent on one person's memory.</p>
+    <span class="eyebrow reveal">Executive support</span>
+    <h2 class="reveal">Your time protected.<br>Your operations <em>coordinated.</em></h2>
+    <p class="sub reveal" style="max-width:560px">Direct support for the CEO. Calendar designed for focus. Inbox managed. Meetings prepared and followed up. Coordination that does not bounce back to you.</p>
     <div class="svc-cards-grid">
-      <div class="svc-card reveal"><div class="svc-ico">&#x1F4CB;</div><h3>Financial SOP documentation</h3><span class="svc-tag">Systems that hold independently</span><p>Financial processes written down so any team member can run them without asking — and without making mistakes.</p><ul class="svc-sub-list"><li>Month-end close process documentation</li><li>AP/AR workflow SOPs</li><li>Expense submission and approval guides</li><li>Reconciliation process documentation</li></ul></div>
-      <div class="svc-card reveal"><div class="svc-ico">&#x26A1;</div><h3>Financial workflow automation</h3><span class="svc-tag">Repetitive finance work that runs itself</span><p>Invoice reminders, expense categorisation, report scheduling, approval routing — automated so the manual effort is removed.</p><ul class="svc-sub-list"><li>Excel automation and formula builds</li><li>Zapier and Make workflow builds</li><li>Google Workspace automation</li><li>AP/AR automation and integration</li></ul></div>
-      <div class="svc-card reveal"><div class="svc-ico">&#x1F5D3;</div><h3>Executive &amp; operational support</h3><span class="svc-tag">Coordination handled</span><p>Calendar, inbox, project coordination — the operational layer that supports the financial work and keeps engagements moving.</p><ul class="svc-sub-list"><li>Inbox management and triage</li><li>Calendar design and scheduling</li><li>Meeting prep and follow-up notes</li><li>Project coordination via Notion, Asana, Trello</li></ul></div>
+      <div class="svc-card reveal"><div class="svc-ico">&#x1F4E5;</div><h3>Inbox management</h3><span class="svc-tag">Communication handled</span><p>Inbox reviewed, triaged, and actioned. Important messages flagged. Responses drafted. The email backlog stops being something you manage personally.</p><ul class="svc-sub-list"><li>Daily inbox triage and organisation</li><li>Response drafting and sending</li><li>Follow-up tracking</li><li>Vendor and stakeholder communication</li></ul></div>
+      <div class="svc-card reveal"><div class="svc-ico">&#x1F5D3;</div><h3>Calendar management</h3><span class="svc-tag">Time that works for you</span><p>Calendar designed for focus, not just availability. Protected time for deep work. Scheduling handled without it bouncing back to you for approval.</p><ul class="svc-sub-list"><li>Calendar audit and restructure</li><li>Scheduling and coordination</li><li>Meeting prep materials</li><li>Follow-up notes and action items</li></ul></div>
+      <div class="svc-card reveal"><div class="svc-ico">&#x1F91D;</div><h3>Project coordination</h3><span class="svc-tag">Follow-through handled</span><p>Project tracking, stakeholder follow-up, status updates, and deadline management — so things move without you chasing them.</p><ul class="svc-sub-list"><li>Project tracking in Notion, Asana, or ClickUp</li><li>Stakeholder and investor communication</li><li>Status updates and progress tracking</li><li>Meeting coordination and agenda prep</li></ul></div>
     </div>
   </div></section>
 
@@ -1042,7 +1007,7 @@ footer p{font-size:.67rem;color:var(--text3)}
   </div></section>
 
   <footer>
-    <p>&copy; 2026 Monicah Mburu &middot; Financial Operations &middot; Finance Systems VA &middot; Remote-ready</p>
+    <p>&copy; 2026 Monicah Mburu &middot; Finance &amp; Operations Partner &middot; Remote-ready</p>
     <div class="footer-links">
       <a href="https://www.linkedin.com/in/monicahmburu/" target="_blank">LinkedIn</a>
       <a href="https://wa.me/254798498795" target="_blank">WhatsApp</a>
@@ -1056,14 +1021,14 @@ footer p{font-size:.67rem;color:var(--text3)}
   <div class="ws-hero"><div class="wrap">
     <span class="eyebrow">Work Samples</span>
     <h1>Real engagements.<br>Real deliverables.<br><em>Real outcomes.</em></h1>
-    <p class="sub">Five projects — the financial operations problem, what was built, and what changed. Click any image to enlarge.</p>
+    <p class="sub">Five projects across financial operations, systems and automation, and executive support. The problem, what was built, and what changed.</p>
   </div></div>
 
   <section style="background:var(--cream)"><div class="wrap"><div class="work-list">
 
     <div class="work-card reveal">
       <div class="work-card-header">
-        <span class="we-tag tag-a">Financial Systems &middot; Pitch Investors</span>
+        <span class="we-tag tag-a">Financial operations &middot; Pitch Investors</span>
         <h3>From scattered financial data to $500K in investor interest — 10 companies restructured</h3>
         <div class="we-outcome-pills"><span class="we-outcome-pill">$500K+ investor interest</span><span class="we-outcome-pill">40% higher engagement</span><span class="we-outcome-pill">30% better forecasting</span></div>
       </div>
@@ -1076,14 +1041,14 @@ footer p{font-size:.67rem;color:var(--text3)}
             <li>Financial data cleaned and standardised across all 10 companies</li>
             <li>DCF valuation models, scenario-based forecasts, and variance analysis built for each</li>
             <li>Business plans and pitch decks produced for each company</li>
-            <li>Investor outreach written and sent — findings presented directly in meetings</li>
+            <li>Investor outreach written and findings presented directly in meetings</li>
           </ul>
           <div class="we-chips"><span class="we-chip">Excel</span><span class="we-chip">DCF Modelling</span><span class="we-chip">Scenario Analysis</span><span class="we-chip">Investor Reporting</span><span class="we-chip">Business Plans</span></div>
         </div>
         <div>
           <span class="we-lbl">What changed</span>
           <div class="we-result-box"><div class="we-result-lbl">Results</div><div class="we-pills"><span class="we-pill">$500K+ investor interest</span><span class="we-pill">40% higher engagement</span><span class="we-pill">30% better forecasting</span></div></div>
-          <p class="we-text" style="margin-top:1rem">Investors responded to clarity of data, not just the business case. For one company, Mobile Mart Solutions, a VC firm expressed interest in a significant investment. The client declined over equity concerns, but the documents I prepared got them to that conversation.</p>
+          <p class="we-text" style="margin-top:1rem">Investors responded to clarity of data, not just the business case. For Mobile Mart Solutions, a VC firm expressed interest in a significant investment. The client declined over equity concerns, but the documents I prepared got them to that conversation.</p>
         </div>
       </div></div>
       <div class="work-card-images">
@@ -1097,18 +1062,18 @@ footer p{font-size:.67rem;color:var(--text3)}
 
     <div class="work-card reveal">
       <div class="work-card-header">
-        <span class="we-tag tag-b">Financial Workflow Redesign &middot; Aspire Lending</span>
-        <h3>40% faster reporting — financial workflow redesigned before anyone asked for it</h3>
+        <span class="we-tag tag-b">Systems and automation &middot; Aspire Lending</span>
+        <h3>40% faster reporting — manual workflow redesigned and automated before anyone asked for it</h3>
         <div class="we-outcome-pills"><span class="we-outcome-pill">40% faster reporting</span><span class="we-outcome-pill">20+ hrs/week recovered</span><span class="we-outcome-pill">1,000+ files structured</span></div>
       </div>
       <div class="work-card-body"><div class="we-cols">
         <div>
           <span class="we-lbl">The situation</span>
-          <p class="we-text">Senior staff spent hours every week assembling the same report by hand — pulling from multiple sources, reformatting, verifying each time. Same output, every week, for hours. Nobody had identified it as a financial systems problem yet.</p>
+          <p class="we-text">Senior staff spent hours every week assembling the same report by hand — pulling from multiple sources, reformatting, verifying each time. Same output, every week. Nobody had identified it as a systems problem yet.</p>
           <span class="we-lbl" style="margin-top:1.25rem;display:block">What was built</span>
           <ul class="we-steps">
             <li>Reporting workflow mapped — exact points of time loss identified</li>
-            <li>Financial workflow redesigned — data pulls automated, formats standardised in Excel</li>
+            <li>Workflow redesigned — data pulls automated, formats standardised in Excel</li>
             <li>Filing system built for 1,000+ physical and digital loan files</li>
             <li>Full process documented as an SOP — any team member can maintain it independently</li>
           </ul>
@@ -1117,7 +1082,7 @@ footer p{font-size:.67rem;color:var(--text3)}
         <div>
           <span class="we-lbl">What changed</span>
           <div class="we-result-box"><div class="we-result-lbl">Results</div><div class="we-pills"><span class="we-pill">40% faster reporting</span><span class="we-pill">20+ hrs/week recovered</span><span class="we-pill">1,000+ files structured</span></div></div>
-          <p class="we-text" style="margin-top:1rem">Identical output. Time cost removed. Hours recovered by eliminating unnecessary manual steps — not cutting corners on the work itself.</p>
+          <p class="we-text" style="margin-top:1rem">Identical output. Time cost removed. Hours recovered by eliminating unnecessary manual steps — not by cutting corners on the work itself.</p>
         </div>
       </div></div>
       <div class="work-card-images">
@@ -1130,9 +1095,9 @@ footer p{font-size:.67rem;color:var(--text3)}
 
     <div class="work-card reveal">
       <div class="work-card-header">
-        <span class="we-tag tag-d">Executive Operations &middot; Applied Practice Project</span>
-        <h3>CEO Calendar Chaos to Structured System</h3>
-        <div class="we-outcome-pills"><span class="we-outcome-pill">47 meetings → 1 system</span><span class="we-outcome-pill">3 tools → 1 calendar</span><span class="we-outcome-pill">Focus time protected daily</span><span class="we-outcome-pill">5 SOPs live</span></div>
+        <span class="we-tag tag-d">Executive support &middot; Applied practice project</span>
+        <h3>CEO calendar chaos to structured system — 47 meetings, 3 tools, no process</h3>
+        <div class="we-outcome-pills"><span class="we-outcome-pill">47 meetings structured</span><span class="we-outcome-pill">3 tools to 1 calendar</span><span class="we-outcome-pill">Focus time protected daily</span><span class="we-outcome-pill">5 SOPs live</span></div>
       </div>
       <div class="work-card-body"><div class="we-cols">
         <div>
@@ -1141,7 +1106,7 @@ footer p{font-size:.67rem;color:var(--text3)}
           <span class="we-lbl" style="margin-top:1.25rem;display:block">What was delivered</span>
           <ul class="we-steps">
             <li>Full calendar audit — meetings categorised by type and time allocation mapped</li>
-            <li>New architecture: colour-coded system, protected focus blocks, scheduling rules</li>
+            <li>New calendar architecture: colour-coded system, protected focus blocks, scheduling rules</li>
             <li>Scheduling workflow built with Google Form for requests and defined authority levels</li>
             <li>Standardised 1:1 agenda template for all 5 direct reports</li>
             <li>Migrated from 3 tools to Google Calendar as single source of truth</li>
@@ -1151,7 +1116,7 @@ footer p{font-size:.67rem;color:var(--text3)}
         </div>
         <div>
           <span class="we-lbl">What changed</span>
-          <div class="we-result-box"><div class="we-result-lbl">Results</div><div class="we-pills"><span class="we-pill">47 meetings → structured system</span><span class="we-pill">3 tools → 1 calendar</span><span class="we-pill">Focus time protected daily</span><span class="we-pill">SOPs live</span></div></div>
+          <div class="we-result-box"><div class="we-result-lbl">Results</div><div class="we-pills"><span class="we-pill">47 meetings structured</span><span class="we-pill">3 tools to 1 calendar</span><span class="we-pill">Focus time protected</span><span class="we-pill">SOPs live</span></div></div>
           <p class="we-text" style="margin-top:1rem">Reactive scheduling replaced with intentional time ownership. Investor check-ins stopped being missed. Co-founder bookings now go through an approval workflow.</p>
           <div class="we-files">
             <a href="https://drive.google.com/file/d/1ALr8J13AUe46Q5IWChAqfFJ1B09F4LZW/view?usp=sharing" target="_blank" class="we-file-link"><span>📄</span> Calendar Architecture Doc</a>
@@ -1161,7 +1126,7 @@ footer p{font-size:.67rem;color:var(--text3)}
         </div>
       </div></div>
       <div class="work-card-images">
-        <span class="we-images-label">Before &amp; after — calendar screenshots</span>
+        <span class="we-images-label">Before and after — calendar screenshots</span>
         <div class="ba-grid">
           <div class="ba-item">
             <div class="ba-label before">&#x26A0; Before — initial calendar</div>
@@ -1177,8 +1142,8 @@ footer p{font-size:.67rem;color:var(--text3)}
 
     <div class="work-card reveal">
       <div class="work-card-header">
-        <span class="we-tag tag-c">Financial Controls &middot; Target Mart</span>
-        <h3>60% fewer payment discrepancies — AP/AR financial controls rebuilt from scratch</h3>
+        <span class="we-tag tag-c">Financial operations &middot; Target Mart</span>
+        <h3>60% fewer payment discrepancies — AP/AR controls rebuilt from scratch</h3>
         <div class="we-outcome-pills"><span class="we-outcome-pill">60% fewer discrepancies</span><span class="we-outcome-pill">25% fewer unpaid invoices</span><span class="we-outcome-pill">100% tax compliance</span></div>
       </div>
       <div class="work-card-body"><div class="we-cols">
@@ -1188,17 +1153,17 @@ footer p{font-size:.67rem;color:var(--text3)}
           <span class="we-lbl" style="margin-top:1.25rem;display:block">What was built</span>
           <ul class="we-steps">
             <li>AP/AR tracking rebuilt — invoices recorded, payments allocated, aging reports produced</li>
-            <li>Receipts organised and categorised so every transaction was traceable</li>
+            <li>Receipts organised so every transaction was traceable</li>
             <li>Stock variance analysis run to identify missing inventory</li>
             <li>Petty cash records maintained with full documentation</li>
-            <li>Tax filing handled at 100% accuracy across all periods</li>
+            <li>Tax filings handled at 100% accuracy across all periods</li>
           </ul>
           <div class="we-chips"><span class="we-chip">QuickBooks</span><span class="we-chip">Excel</span><span class="we-chip">AP/AR Controls</span><span class="we-chip">Stock Variance</span></div>
         </div>
         <div>
           <span class="we-lbl">What changed</span>
           <div class="we-result-box"><div class="we-result-lbl">Results</div><div class="we-pills"><span class="we-pill">60% fewer discrepancies</span><span class="we-pill">25% fewer unpaid invoices</span><span class="we-pill">100% tax compliance</span></div></div>
-          <p class="we-text" style="margin-top:1rem">The business didn't need more revenue. It needed better financial controls on the revenue already coming in. Structural changes produced measurable results without adding headcount.</p>
+          <p class="we-text" style="margin-top:1rem">The business did not need more revenue. It needed better financial controls on the revenue already coming in. Structural changes produced measurable results without adding headcount.</p>
         </div>
       </div></div>
       <div class="work-card-images">
@@ -1212,8 +1177,8 @@ footer p{font-size:.67rem;color:var(--text3)}
 
     <div class="work-card reveal">
       <div class="work-card-header">
-        <span class="we-tag tag-d">Operations Build &middot; Applied Practice Project</span>
-        <h3>Founder removed from daily operations — full systems build, ongoing maintenance</h3>
+        <span class="we-tag tag-d">Systems and automation &middot; Applied practice project</span>
+        <h3>Founder removed from daily operations — full systems build across finance and ops</h3>
         <div class="we-outcome-pills"><span class="we-outcome-pill">12+ hrs/week reclaimed</span><span class="we-outcome-pill">Onboarding time halved</span><span class="we-outcome-pill">8 SOPs operational</span><span class="we-outcome-pill">Inbox at zero</span></div>
       </div>
       <div class="work-card-body"><div class="we-cols">
@@ -1225,7 +1190,7 @@ footer p{font-size:.67rem;color:var(--text3)}
             <li>Workflows audited — 8 critical processes identified and prioritised</li>
             <li>Step-by-step SOPs written so any team member could run them independently</li>
             <li>Google Workspace and Notion operating dashboard set up for the full team</li>
-            <li>Founder's inbox and calendar managed for 30 days while systems bedded in</li>
+            <li>Founder inbox and calendar managed for 30 days while systems bedded in</li>
           </ul>
           <div class="we-chips"><span class="we-chip">Google Workspace</span><span class="we-chip">Notion</span><span class="we-chip">SOP Writing</span><span class="we-chip">Operations Design</span></div>
           <div class="practice-notice">Practice engagement — client details are fictionalised. Methodology, tools, and deliverables reflect real approaches applied to a realistic scenario.</div>
@@ -1233,7 +1198,7 @@ footer p{font-size:.67rem;color:var(--text3)}
         <div>
           <span class="we-lbl">What changed</span>
           <div class="we-result-box"><div class="we-result-lbl">Results</div><div class="we-pills"><span class="we-pill">12+ hrs/week reclaimed</span><span class="we-pill">Onboarding time halved</span><span class="we-pill">8 SOPs operational</span><span class="we-pill">Inbox at zero</span></div></div>
-          <p class="we-text" style="margin-top:1rem">The founder moved from reactive to intentional. New hires could onboard without the founder's involvement.</p>
+          <p class="we-text" style="margin-top:1rem">The founder moved from reactive to intentional. New hires onboarded without the founder's involvement.</p>
         </div>
       </div></div>
       <div class="work-card-images">
@@ -1247,7 +1212,7 @@ footer p{font-size:.67rem;color:var(--text3)}
 
     <div style="background:#fff;border:1px solid var(--brown-border);border-radius:var(--r);padding:1.9rem;text-align:center" class="reveal">
       <h3 style="font-size:1.15rem;margin-bottom:.42rem">See something relevant to your situation?</h3>
-      <p style="font-size:.79rem;color:var(--text2);font-weight:300;margin-bottom:1.2rem;max-width:420px;margin-left:auto;margin-right:auto;line-height:1.74;margin-top:.38rem">30 minutes to confirm what applies and agree scope. A direct conversation about the financial operations problem and whether I'm the right person to address it.</p>
+      <p style="font-size:.79rem;color:var(--text2);font-weight:300;margin-bottom:1.2rem;max-width:420px;margin-left:auto;margin-right:auto;line-height:1.74;margin-top:.38rem">30 minutes to confirm what applies and agree scope. A direct conversation about the problem and whether I am the right person to address it.</p>
       <div style="display:flex;gap:.72rem;justify-content:center;flex-wrap:wrap">
         <a href="https://calendly.com/monicahmburu/one-on-one" target="_blank" class="btn">Schedule a call &rarr;</a>
         <a href="mailto:monicah.mburu@zohomail.com" class="btn-ghost">Email directly</a>
@@ -1257,7 +1222,7 @@ footer p{font-size:.67rem;color:var(--text3)}
   </div></div></section>
 
   <footer>
-    <p>&copy; 2026 Monicah Mburu &middot; Financial Operations &middot; Finance Systems VA &middot; Remote-ready</p>
+    <p>&copy; 2026 Monicah Mburu &middot; Finance &amp; Operations Partner &middot; Remote-ready</p>
     <div class="footer-links">
       <a href="https://www.linkedin.com/in/monicahmburu/" target="_blank">LinkedIn</a>
       <a href="https://wa.me/254798498795" target="_blank">WhatsApp</a>
@@ -1270,8 +1235,8 @@ footer p{font-size:.67rem;color:var(--text3)}
 <div id="page-contact" class="page">
   <div class="contact-hero"><div class="wrap">
     <span class="eyebrow">Contact</span>
-    <h1>30 minutes to determine<br>if this is <em>the right fit.</em></h1>
-    <p class="sub">Whether you're a recruiter, a founder, or a team lead looking for financial operations support — the call is the same. You describe what needs addressing. I'll be direct about whether my background is the right fit.</p>
+    <h1>30 minutes to confirm<br>this is <em>the right fit.</em></h1>
+    <p class="sub">Whether you are a founder looking for a Finance and Operations Partner, a recruiter reviewing candidates, or a CEO looking for direct operational support — the call is the same. You describe what needs addressing. I will be direct about whether my background is the right fit.</p>
   </div></div>
 
   <section style="background:var(--cream)"><div class="wrap"><div class="contact-grid">
@@ -1294,18 +1259,18 @@ footer p{font-size:.67rem;color:var(--text3)}
     <div>
       <div class="book-card reveal">
         <h3>Book a discovery call</h3>
-        <p>30 minutes. Describe the financial operations situation or role. I'll walk through relevant experience and be direct about fit.</p>
+        <p>30 minutes. Describe the situation or role. I will walk through relevant experience and be direct about fit.</p>
         <div class="b-step"><div class="b-num">1</div><p>Pick a time on Calendly. Takes two minutes.</p></div>
         <div class="b-step"><div class="b-num">2</div><p>Short intake — role type or engagement scope, tools used, what needs addressing.</p></div>
-        <div class="b-step"><div class="b-num">3</div><p>30-minute call. I'll be direct about whether my background is the right fit.</p></div>
-        <div class="b-step"><div class="b-num">4</div><p>If it's a match — for employment, next steps with your team. For consulting, scope agreed and work starts within 48 hours.</p></div>
+        <div class="b-step"><div class="b-num">3</div><p>30-minute call. I will be direct about whether my background is the right fit.</p></div>
+        <div class="b-step"><div class="b-num">4</div><p>If it is a match — for employment, next steps with your team. For consulting, scope agreed and work starts within 48 hours.</p></div>
         <a href="https://calendly.com/monicahmburu/one-on-one" target="_blank" class="btn" style="width:100%;display:flex;margin-top:1.5rem">Schedule a free call &rarr;</a>
       </div>
     </div>
   </div></div></section>
 
   <footer>
-    <p>&copy; 2026 Monicah Mburu &middot; Financial Operations &middot; Finance Systems VA &middot; Remote-ready</p>
+    <p>&copy; 2026 Monicah Mburu &middot; Finance &amp; Operations Partner &middot; Remote-ready</p>
     <div class="footer-links">
       <a href="https://www.linkedin.com/in/monicahmburu/" target="_blank">LinkedIn</a>
       <a href="https://wa.me/254798498795" target="_blank">WhatsApp</a>

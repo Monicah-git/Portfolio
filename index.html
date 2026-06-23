@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -88,15 +88,11 @@ h3{font-family:var(--serif);font-size:1.1rem;font-weight:500;color:var(--ink)}
 .btn-ghost-inv{border:1px solid rgba(255,255,255,.15);color:rgba(255,255,255,.5);font-size:.86rem;padding:.94rem 2.1rem;border-radius:100px;text-decoration:none;display:inline-flex;align-items:center;justify-content:center;transition:all .2s;min-height:50px;letter-spacing:.01em}
 .btn-ghost-inv:hover{border-color:rgba(255,255,255,.36);color:#fff}
 
-/* ══ HOME HERO — RESTRUCTURED ══════════════════════════════════ */
+/* ══ HOME HERO ══════════════════════════════════════════════════ */
 .hero{padding:4.5rem 2.5rem 4rem;max-width:1060px;margin:0 auto}
-
-/* Full-width top block: badge + h1 */
 .hero-top{animation:fadeUp .6s .05s ease both;margin-bottom:2.2rem}
 .hero-badge{display:inline-flex;align-items:center;gap:.45rem;background:var(--brown-pale);border:1px solid var(--brown-border);color:var(--brown);font-size:.66rem;font-weight:600;padding:.28rem .88rem;border-radius:100px;letter-spacing:.07em;text-transform:uppercase;margin-bottom:1.4rem}
 .hero-badge-dot{width:5px;height:5px;border-radius:50%;background:var(--brown);animation:pulse 2s infinite}
-
-/* Two-column grid: paragraph+actions+trust LEFT | video+metrics RIGHT */
 .hero-grid{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:start}
 .hero-left{animation:fadeUp .65s .12s ease both}
 .hero-left>p{font-size:.9rem;color:var(--text2);font-weight:300;line-height:1.9;max-width:460px}
@@ -105,15 +101,22 @@ h3{font-family:var(--serif);font-size:1.1rem;font-weight:500;color:var(--ink)}
 .trust-item{display:flex;align-items:center;gap:.38rem;font-size:.67rem;color:var(--text3)}
 .trust-dot{width:3px;height:3px;border-radius:50%;background:var(--brown);opacity:.5}
 .hero-right{animation:fadeUp .7s .18s ease both;display:flex;flex-direction:column;gap:1rem}
-.video-wrap{background:var(--ink2);border-radius:var(--r);overflow:hidden;border:1px solid rgba(255,255,255,.05);box-shadow:0 20px 52px rgba(22,18,13,.18)}
-.video-responsive{position:relative;padding-bottom:56.25%;height:0;overflow:hidden}
-.video-responsive iframe{position:absolute;top:0;left:0;width:100%;height:100%;border:0}
+
+/* Hero photo */
+.hero-photo-wrap{border-radius:var(--r);overflow:hidden;box-shadow:0 20px 52px rgba(22,18,13,.18);border:1px solid rgba(255,255,255,.05);max-height:340px;display:flex;align-items:center;justify-content:center}
+.hero-photo-wrap img{width:100%;display:block;height:auto;max-height:340px;object-fit:contain}
+
 .hero-metrics{display:grid;grid-template-columns:repeat(3,1fr)}
 .metric-box{background:var(--ink);padding:1.2rem;border-right:1px solid rgba(255,255,255,.04)}
 .metric-box:first-child{border-radius:var(--r) 0 0 var(--r)}
 .metric-box:last-child{border-right:none;border-radius:0 var(--r) var(--r) 0}
 .metric-num{font-family:var(--serif);font-size:1.6rem;font-weight:600;color:var(--brown2);line-height:1;margin-bottom:.2rem}
 .metric-lbl{font-size:.61rem;color:rgba(255,255,255,.24);line-height:1.55;font-weight:300}
+
+/* VIDEO WRAP (used on About page) */
+.video-wrap{background:var(--ink2);border-radius:var(--r);overflow:hidden;border:1px solid rgba(255,255,255,.05);box-shadow:0 20px 52px rgba(22,18,13,.18)}
+.video-responsive{position:relative;padding-bottom:56.25%;height:0;overflow:hidden}
+.video-responsive iframe{position:absolute;top:0;left:0;width:100%;height:100%;border:0}
 
 /* ROLE STRIP */
 .role-strip{background:var(--ink2);border-top:1px solid rgba(255,255,255,.04);border-bottom:1px solid rgba(255,255,255,.04);padding:1rem 0}
@@ -145,7 +148,6 @@ h3{font-family:var(--serif);font-size:1.1rem;font-weight:500;color:var(--ink)}
 .pillar-card{background:#fff;border:1px solid var(--border);border-radius:var(--r);padding:2rem;display:flex;flex-direction:column;position:relative;overflow:hidden;transition:border-color .2s,transform .2s}
 .pillar-card:hover{border-color:var(--brown-border);transform:translateY(-3px)}
 .pillar-card::after{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--brown),var(--brown2))}
-.pillar-num{font-family:var(--serif);font-size:2.8rem;font-weight:600;color:var(--brown-pale);line-height:1;margin-bottom:1rem;user-select:none}
 .pillar-ico{width:44px;height:44px;border-radius:10px;background:var(--brown-pale);border:1px solid var(--brown-border);display:flex;align-items:center;justify-content:center;font-size:1.15rem;margin-bottom:1rem}
 .pillar-card h3{font-size:1.08rem;margin-bottom:.5rem}
 .pillar-tag{font-size:.62rem;font-weight:600;color:var(--brown);background:var(--brown-pale);border:1px solid var(--brown-border);padding:.2rem .65rem;border-radius:100px;display:inline-block;margin-bottom:.85rem;letter-spacing:.04em}
@@ -231,6 +233,16 @@ h3{font-family:var(--serif);font-size:1.1rem;font-weight:500;color:var(--ink)}
 .testi-name{font-size:.77rem;font-weight:500;color:var(--text)}
 .testi-co{font-size:.67rem;color:var(--text3)}
 
+/* EDUCATION + TOOLS HOME STRIP */
+.edu-tools-strip{background:var(--cream);padding:4.5rem 0;border-top:1px solid var(--border)}
+.edu-tools-grid{display:grid;grid-template-columns:1fr 1fr;gap:3.5rem;align-items:start}
+.edu-card-sm{background:#fff;border:1px solid var(--border);border-radius:var(--r);padding:1.05rem 1.3rem;display:flex;align-items:flex-start;gap:.85rem}
+.edu-card-sm-icon{font-size:1.15rem;flex-shrink:0;margin-top:.08rem}
+.edu-card-sm-yr{font-size:.58rem;color:var(--text3);letter-spacing:.07em;text-transform:uppercase;margin-bottom:.15rem}
+.edu-card-sm-deg{font-family:var(--serif);font-size:.93rem;font-weight:600;color:var(--ink)}
+.edu-card-sm-school{font-size:.7rem;color:var(--brown)}
+.tool-pill{background:#fff;border:1px solid var(--border);border-radius:100px;padding:.35rem .85rem;font-size:.72rem;color:var(--text2)}
+
 /* FAQ */
 .faq{background:var(--warm);padding:5.5rem 0}
 .faq-intro{max-width:500px;margin-bottom:3rem}
@@ -274,6 +286,12 @@ h3{font-family:var(--serif);font-size:1.1rem;font-weight:500;color:var(--ink)}
 .vv-callout-icon{font-size:1.15rem;flex-shrink:0;margin-top:.1rem}
 .vv-callout-body strong{display:block;font-size:.85rem;color:#fff;font-weight:500;margin-bottom:.32rem}
 .vv-callout-body p{font-size:.75rem;color:rgba(255,255,255,.34);line-height:1.74;font-weight:300;margin:0}
+
+/* Intro video on About */
+.about-video-section{background:var(--ink2);padding:3.5rem 0}
+.about-video-section .eyebrow{color:rgba(255,255,255,.28)}
+.about-video-section h2{color:#fff;font-size:clamp(1.4rem,2.5vw,2rem);margin-bottom:1.75rem}
+
 .personality{padding:5rem 0;background:var(--cream)}
 .personality-grid{display:grid;grid-template-columns:1fr 1fr;gap:4.25rem;margin-top:2.75rem;align-items:start}
 .personality-text p{font-size:.89rem;color:var(--text2);line-height:1.9;font-weight:300;margin-bottom:.95rem}
@@ -428,7 +446,7 @@ footer p{font-size:.67rem;color:var(--text3)}
 /* RESPONSIVE */
 @media(max-width:900px){
   .hero{padding:3.25rem 1.5rem 2.75rem}
-  .hero-grid,.about-inner,.contact-grid,.engage-grid,.fit-grid,.personality-grid,.diff-grid{grid-template-columns:1fr;gap:2.1rem}
+  .hero-grid,.about-inner,.contact-grid,.engage-grid,.fit-grid,.personality-grid,.diff-grid,.edu-tools-grid{grid-template-columns:1fr;gap:2.1rem}
   .pillars-grid,.testi-grid,.svc-cards-grid{grid-template-columns:1fr 1fr}
   .tools-grid,.certs-grid{grid-template-columns:repeat(3,1fr)}
   .edu-grid{grid-template-columns:1fr}
@@ -494,16 +512,14 @@ footer p{font-size:.67rem;color:var(--text3)}
 
   <div class="hero">
 
-    <!-- FULL-WIDTH TOP: badge + h1 title spans across both columns -->
     <div class="hero-top">
       <div class="hero-badge"><span class="hero-badge-dot"></span>Finance &amp; Operations Partner &middot; Remote worldwide</div>
       <h1>Clean finances. Automated systems.<br>A partner who works <em>directly with you.</em></h1>
     </div>
 
-    <!-- TWO-COLUMN: paragraph + actions + trust LEFT | video + metrics RIGHT -->
     <div class="hero-grid">
       <div class="hero-left">
-        <p>I work directly with founders to build the financial systems, operational processes,Cleaner reporting , Clearer workflows and a support structure that should already be in place. Spend less of your time going to work that should not reach you.</p>
+        <p>I work directly with founders to build the financial systems, operational processes, cleaner reporting, clearer workflows and a support structure that should already be in place. Spend less of your time going to work that should not reach you.</p>
         <p style="margin-top:.7rem;font-size:.86rem;color:var(--text2);font-weight:300;line-height:1.9">After 90 days, you know your cash position without asking. Processes run without you. And your time goes to the decisions that actually grow the business.</p>
         <div class="hero-actions">
           <a href="https://calendly.com/monicahmburu/one-on-one" target="_blank" class="btn">Schedule a call</a>
@@ -516,11 +532,11 @@ footer p{font-size:.67rem;color:var(--text3)}
           <span class="trust-item"><span class="trust-dot"></span>Virtually Versed &middot; Jun 2026</span>
         </div>
       </div>
+
+      <!-- HERO RIGHT: Professional photo (video moved to About page) -->
       <div class="hero-right">
-        <div class="video-wrap">
-          <div class="video-responsive">
-            <iframe src="https://www.youtube.com/embed/9eVNpp_EpNI?si=xe1x9C0uBe-Jghmp" title="Monicah Mburu Introduction" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-          </div>
+        <div class="hero-photo-wrap">
+          <img src="https://lh3.googleusercontent.com/d/10KcYq3HJd_FPOkHjxR6sH8PXcxGq1NoY" alt="Monicah Mburu — Finance &amp; Operations Partner">
         </div>
         <div class="hero-metrics">
           <div class="metric-box">
@@ -593,7 +609,7 @@ footer p{font-size:.67rem;color:var(--text3)}
         <ul class="pillar-items">
           <li>Monthly bookkeeping and reconciliation</li>
           <li>Accounts payable and receivable</li>
-          <li>P&amp;L(Income statement), cash flow, balance sheet</li>
+          <li>P&amp;L, cash flow, balance sheet</li>
           <li>Dashboards connected to live data</li>
           <li>Investor ready financial models</li>
         </ul>
@@ -657,7 +673,7 @@ footer p{font-size:.67rem;color:var(--text3)}
       <p class="sub">Straightforward on your end. You describe the situation. I scope the work. We start.</p>
     </div>
     <div class="how-steps">
-      <div class="how-step reveal"><div class="how-step-num">1</div><div class="how-step-body"><h4>We talk for 30 minutes</h4><p>You describe where the friction is. Is it that your books behind, you have tpp many manual processes, your time is going to things that shouldn't reach you. I identify root cause and confirm whether I'm the right fit.</p></div></div>
+      <div class="how-step reveal"><div class="how-step-num">1</div><div class="how-step-body"><h4>We talk for 30 minutes</h4><p>You describe where the friction is. Whether your books are behind, you have too many manual processes, or your time is going to things that shouldn't reach you. I identify root cause and confirm whether I'm the right fit.</p></div></div>
       <div class="how-step reveal"><div class="how-step-num">2</div><div class="how-step-body"><h4>Scope agreed before work begins</h4><p>For projects, deliverables and timelines are confirmed upfront. For retainers, monthly scope is agreed on at onboarding. No open ended commitments on either side.</p></div></div>
       <div class="how-step reveal"><div class="how-step-num">3</div><div class="how-step-body"><h4>Audit and review week one</h4><p>I review your books, workflows, tools, and calendar. Then I identify gaps, confirm priorities and work starts against the agreed scope.</p></div></div>
       <div class="how-step reveal"><div class="how-step-num">4</div><div class="how-step-body"><h4>Delivered or kept running</h4><p>Project engagements close with full documentation so everything holds independently. Retainers keep the systems current each month going forward.</p></div></div>
@@ -698,7 +714,7 @@ footer p{font-size:.67rem;color:var(--text3)}
         <p>Ongoing financial maintenance, systems upkeep, and direct executive support. Monthly scope agreed at onboarding. You talk to me directly each week.</p>
         <ul class="engage-list">
           <li><span>&rarr;</span><span>Monthly bookkeeping and reconciliation</span></li>
-          <li><span>&rarr;</span><span>P&amp;L (Income Statement), cash flow, balance sheet produced monthly</span></li>
+          <li><span>&rarr;</span><span>P&amp;L, cash flow, balance sheet produced monthly</span></li>
           <li><span>&rarr;</span><span>Automation workflows maintained and updated</span></li>
           <li><span>&rarr;</span><span>Inbox and calendar managed on an ongoing basis</span></li>
           <li><span>&rarr;</span><span>Project coordination and weekly CEO sync</span></li>
@@ -754,6 +770,60 @@ footer p{font-size:.67rem;color:var(--text3)}
     </div>
   </div></div>
 
+  <!-- EDUCATION + TOOLS STRIP -->
+  <div class="edu-tools-strip">
+    <div class="wrap">
+      <div class="edu-tools-grid">
+        <div>
+          <span class="eyebrow reveal">Education</span>
+          <h2 class="reveal" style="font-size:clamp(1.35rem,2.4vw,1.9rem);margin-bottom:1.5rem">Academic &amp; professional background</h2>
+          <div style="display:flex;flex-direction:column;gap:.72rem">
+            <div class="edu-card-sm reveal">
+              <span class="edu-card-sm-icon">🎓</span>
+              <div><div class="edu-card-sm-yr">2025 – Present</div><div class="edu-card-sm-deg">MSc Financial Engineering</div><div class="edu-card-sm-school">WorldQuant University</div></div>
+            </div>
+            <div class="edu-card-sm reveal">
+              <span class="edu-card-sm-icon">🎓</span>
+              <div><div class="edu-card-sm-yr">2019 – 2024</div><div class="edu-card-sm-deg">BA Economics &amp; Mathematics</div><div class="edu-card-sm-school">Kenyatta University</div></div>
+            </div>
+            <div class="edu-card-sm reveal">
+              <span class="edu-card-sm-icon">📜</span>
+              <div><div class="edu-card-sm-yr">2024</div><div class="edu-card-sm-deg">CPA Foundation Level</div><div class="edu-card-sm-school">KASNEB</div></div>
+            </div>
+            <div class="edu-card-sm reveal">
+              <span class="edu-card-sm-icon">🏆</span>
+              <div><div class="edu-card-sm-yr">2024</div><div class="edu-card-sm-deg">5 Professional Certifications</div><div class="edu-card-sm-school">Google · IBM · Johns Hopkins · Intuit · CFI</div></div>
+            </div>
+          </div>
+          <div style="margin-top:1.25rem" class="reveal"><a href="javascript:void(0)" onclick="return show('about')" class="btn-ghost">Full background &rarr;</a></div>
+        </div>
+        <div>
+          <span class="eyebrow reveal">Tools</span>
+          <h2 class="reveal" style="font-size:clamp(1.35rem,2.4vw,1.9rem);margin-bottom:1.5rem">Tools I work with</h2>
+          <div class="reveal" style="display:flex;flex-wrap:wrap;gap:.46rem;margin-bottom:1.25rem">
+            <span class="tool-pill">QuickBooks</span>
+            <span class="tool-pill">Xero</span>
+            <span class="tool-pill">Zoho Books</span>
+            <span class="tool-pill">Excel</span>
+            <span class="tool-pill">Google Sheets</span>
+            <span class="tool-pill">Power BI</span>
+            <span class="tool-pill">Notion</span>
+            <span class="tool-pill">Zapier</span>
+            <span class="tool-pill">Make</span>
+            <span class="tool-pill">Airtable</span>
+            <span class="tool-pill">Asana</span>
+            <span class="tool-pill">ClickUp</span>
+            <span class="tool-pill">Google Workspace</span>
+            <span class="tool-pill">Slack</span>
+            <span class="tool-pill">Zoom</span>
+            <span class="tool-pill">MS Teams</span>
+          </div>
+          <div class="reveal"><a href="javascript:void(0)" onclick="return show('services')" class="btn-ghost">Full tool stack &rarr;</a></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <!-- FAQ -->
   <div class="faq"><div class="wrap">
     <div class="faq-intro reveal">
@@ -767,7 +837,7 @@ footer p{font-size:.67rem;color:var(--text3)}
       <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)"><span class="faq-q-text">Are you looking for employment or offering consulting services?</span><span class="faq-icon"><svg viewBox="0 0 10 6" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><polyline points="1,1 5,5 9,1"/></svg></span></div><div class="faq-a"><div class="faq-a-inner">Both, and I am clear about the difference. I am open to permanent full-time remote employment in finance, operations, or executive support roles. I am also available for project based and monthly retainer consulting engagements. The skills and approach are the same either way. If you are a recruiter or employer, the About page has my full background and credentials.</div></div></div>
       <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)"><span class="faq-q-text">Do you have remote work experience?</span><span class="faq-icon"><svg viewBox="0 0 10 6" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><polyline points="1,1 5,5 9,1"/></svg></span></div><div class="faq-a"><div class="faq-a-inner">Yes. At Pitch Investors I supported a US-based CEO for 8 months remotely delivering financial packages, managing investor communication and coordinating operations across time zones. I operate asynchronously by default, communicate proactively and produce finished work without needing to be checked on.</div></div></div>
       <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)"><span class="faq-q-text">What does a typical engagement look like?</span><span class="faq-icon"><svg viewBox="0 0 10 6" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><polyline points="1,1 5,5 9,1"/></svg></span></div><div class="faq-a"><div class="faq-a-inner">We start with a free 30 minute call. If there is a fit, I recommend a project or retainer depending on your situation. Week one is a review of your books, workflows, tools and calendar I ensure gaps are identified and priorities are confirmed. Work starts against the agreed scope. Project engagements close with full documentation. Retainers continue monthly with a weekly sync.</div></div></div>
-      <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)"><span class="faq-q-text">What does this cost?</span><span class="faq-icon"><svg viewBox="0 0 10 6" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><polyline points="1,1 5,5 9,1"/></svg></span></div><div class="faq-a"><div class="faq-a-inner">Scope and investment are discussed on the discovery call, once I understand what actually needs doing. Projects are priced on deliverables and timeline  which is confirmed before work begins. Retainers are based on monthly scope agreed at onboarding, billed on actuals. No surprises on either side.</div></div></div>
+      <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)"><span class="faq-q-text">What does this cost?</span><span class="faq-icon"><svg viewBox="0 0 10 6" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><polyline points="1,1 5,5 9,1"/></svg></span></div><div class="faq-a"><div class="faq-a-inner">Scope and investment are discussed on the discovery call, once I understand what actually needs doing. Projects are priced on deliverables and timeline which is confirmed before work begins. Retainers are based on monthly scope agreed at onboarding, billed on actuals. No surprises on either side.</div></div></div>
       <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)"><span class="faq-q-text">Do you work with clients outside Kenya?</span><span class="faq-icon"><svg viewBox="0 0 10 6" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><polyline points="1,1 5,5 9,1"/></svg></span></div><div class="faq-a"><div class="faq-a-inner">Yes. I work remotely with founders and employers worldwide. Most communication happens via Slack or email, with a weekly sync call. I operate across time zones both synchronously and asynchronously.</div></div></div>
       <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)"><span class="faq-q-text">What tools do you work with?</span><span class="faq-icon"><svg viewBox="0 0 10 6" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><polyline points="1,1 5,5 9,1"/></svg></span></div><div class="faq-a"><div class="faq-a-inner">QuickBooks, Xero, Zoho Books, Excel, Google Sheets, Power BI, Notion, Zapier, Make, Airtable, ClickUp, Trello, Asana, Slack, Zoom, Google Workspace, and others. If you use something not on this list, I pick it up quickly.</div></div></div>
       <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)"><span class="faq-q-text">Can you replace my accountant or CFO?</span><span class="faq-icon"><svg viewBox="0 0 10 6" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><polyline points="1,1 5,5 9,1"/></svg></span></div><div class="faq-a"><div class="faq-a-inner">No, I am direct about that. I am not a licensed CPA and do not file statutory accounts or handle tax compliance requiring registration. What I do is the financial operations layer preparing accurate records, useful reporting, documenting workflows and direct executive support. If you have a CFO or accountant, I work alongside them and handle the day to day so they focus on strategy.</div></div></div>
@@ -809,18 +879,20 @@ footer p{font-size:.67rem;color:var(--text3)}
           <a href="https://www.linkedin.com/in/monicahmburu/" target="_blank" class="btn-ghost">View LinkedIn &rarr;</a>
         </div>
       </div>
-      <div>
-        <figure class="photo-card">
-          <img src="https://lh3.googleusercontent.com/d/10KcYq3HJd_FPOkHjxR6sH8PXcxGq1NoY" alt="Monicah Mburu">
-          <figcaption class="photo-meta"><p>Finance &amp; Operations Partner &middot; Remote-ready</p></figcaption>
-        </figure>
-        <div class="vv-callout">
-          <div class="vv-callout-icon">&#x1F4DA;</div>
-          <div class="vv-callout-body">
-            <strong>Virtually Versed Africa Operations Bootcamp, June 2026</strong>
-            <p>Intensive training in remote operations, systems setup, workflow automation, and execution infrastructure for distributed teams.</p>
-          </div>
+
+
+  <!-- INTRO VIDEO — moved from hero to About page -->
+  <div class="about-video-section">
+    <div class="wrap">
+      <span class="eyebrow">Introduction</span>
+      <h2>Watch a short intro</h2>
+      <div class="video-wrap" style="max-width:700px;margin:0 auto">
+        <div class="video-responsive">
+          <iframe src="https://www.youtube.com/embed/9eVNpp_EpNI?si=xe1x9C0uBe-Jghmp" title="Monicah Mburu Introduction" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
         </div>
+      </div>
+      <div style="text-align:center;margin-top:1.75rem">
+        <a href="https://calendly.com/monicahmburu/one-on-one" target="_blank" class="btn-inv">Schedule a call &rarr;</a>
       </div>
     </div>
   </div>
@@ -830,7 +902,7 @@ footer p{font-size:.67rem;color:var(--text3)}
     <h2 class="reveal">What it's like to work<br><em>with me directly.</em></h2>
     <div class="personality-grid">
       <div class="personality-text reveal">
-        <p>A messy set of books or an undocumented process isn't an inconvenience to me, it's a puzzle with a findable answer. When I take on an engagement, my first instinct is to understand the full picture and not just the task. If a process keeps breaking, I want to know why before fixing the symptom. That takes more time upfront and saves more time later.I'll admit it, I find a messy spreadsheet very satisfying to untangle.</p>
+        <p>A messy set of books or an undocumented process isn't an inconvenience to me, it's a puzzle with a findable answer. When I take on an engagement, my first instinct is to understand the full picture and not just the task. If a process keeps breaking, I want to know why before fixing the symptom. That takes more time upfront and saves more time later. I'll admit it, I find a messy spreadsheet very satisfying to untangle.</p>
         <p>I work independently. A clear scope and defined goals are enough. What comes back is finished work, not a status update asking what to do next.</p>
         <p>I communicate before you have to ask. If something unexpected surfaces mid-engagement, you hear about it before it becomes a problem.</p>
         <p><strong>The goal with every engagement is to make myself replaceable.</strong> Systems that need me to keep showing up haven't been built properly. Good infrastructure holds on its own and I document everything so it does.</p>
@@ -885,7 +957,7 @@ footer p{font-size:.67rem;color:var(--text3)}
             <li><strong>Business plans and pitch decks:</strong> Produced 10+ business plans and pitch decks presented directly to investors; led client qualification and due diligence.</li>
             <li><strong>Remote executive support:</strong> Supported a US based CEO for 10 months coordinating meetings, managing investor communication, delivering financial packages to deadline.</li>
           </ul></div>
-          <div class="tl-pills"><span class="pill">Remote operations</span><span class="pill">Discounted Cash Flow modelling</span><span class="pill">Investor reporting</span><span class="pill">Zoho Books setup</span><span class="pill">Accounts payable and receivable management</span></div>
+          <div class="tl-pills"><span class="pill">Remote operations</span><span class="pill">DCF modelling</span><span class="pill">Investor reporting</span><span class="pill">Zoho Books setup</span><span class="pill">AP/AR management</span></div>
         </div>
       </div>
       <div class="tl-row reveal">
@@ -894,12 +966,12 @@ footer p{font-size:.67rem;color:var(--text3)}
           <div class="tl-co">Target Mart Limited</div>
           <div class="tl-role">Finance Intern</div>
           <div class="tl-desc"><ul>
-            <li><strong>Accounts payable and receivable controls:</strong> Managed accounts payable and receivable invoice recording, payment allocation, aging report analysis. Contributed to a 25% reduction in unpaid invoices over six months.</li>
+            <li><strong>AP/AR controls:</strong> Managed invoice recording, payment allocation, aging report analysis. Contributed to a 25% reduction in unpaid invoices over six months.</li>
             <li><strong>Receipt filing:</strong> Resolved a filing gap identified during audit, implementing a categorisation system that reduced retrieval time by 30%.</li>
             <li><strong>Tax compliance:</strong> Assisted with withholding tax submissions resulting in 100% on time filing across all periods.</li>
             <li><strong>Stock variance analysis:</strong> Conducted stock takes and identified discrepancies between physical counts and system records.</li>
           </ul></div>
-          <div class="tl-pills"><span class="pill">Accounts payable and receivable</span><span class="pill">Aging reports</span><span class="pill">Reconciliations</span><span class="pill">Tax compliance</span><span class="pill">Stock variance</span></div>
+          <div class="tl-pills"><span class="pill">AP/AR</span><span class="pill">Aging reports</span><span class="pill">Reconciliations</span><span class="pill">Tax compliance</span><span class="pill">Stock variance</span></div>
         </div>
       </div>
     </div>
@@ -925,6 +997,9 @@ footer p{font-size:.67rem;color:var(--text3)}
         <div class="cert-card reveal"><span class="cert-ico">&#x1F534;</span><div class="cert-name">CFI Corporate Finance Foundations</div><div class="cert-by">CFI</div><a href="https://drive.google.com/file/d/1vdPIQ9SYvWav41qbjuyWT6iCGaqIQHEk/view?usp=sharing" target="_blank" class="cert-link">View &rarr;</a></div>
       </div>
     </div>
+    <div style="text-align:center;margin-top:2.5rem" class="reveal">
+      <a href="https://calendly.com/monicahmburu/one-on-one" target="_blank" class="btn">Schedule a discovery call &rarr;</a>
+    </div>
   </div></section>
 
   <footer>
@@ -943,6 +1018,7 @@ footer p{font-size:.67rem;color:var(--text3)}
     <span class="eyebrow">What I offer</span>
     <h1>Finance, operations, and<br>direct support for<br><em>founders and CEOs.</em></h1>
     <p class="sub">Three areas of work. One person you talk to directly. Available for permanent remote employment, monthly retainers, and project engagements.</p>
+    <div style="margin-top:1.5rem"><a href="https://calendly.com/monicahmburu/one-on-one" target="_blank" class="btn">Schedule a call &rarr;</a></div>
   </div></div>
 
   <section style="background:var(--cream)"><div class="wrap">
@@ -962,7 +1038,7 @@ footer p{font-size:.67rem;color:var(--text3)}
     <p class="sub reveal" style="max-width:560px">If something is done the same way every week, it should not require a person every time. I document the processes that need to be written down and automate the work that doesn't need a human.</p>
     <div class="svc-cards-grid">
       <div class="svc-card reveal"><div class="svc-ico">&#x1F4CB;</div><h3>SOP writing and process documentation</h3><span class="svc-tag">Systems that hold without you</span><p>Processes written down so any team member can run them without asking. Removes the single point of failure that is one person's memory.</p><ul class="svc-sub-list"><li>Financial process SOPs</li><li>Operational workflow documentation</li><li>Onboarding guides and training materials</li><li>Operating handbooks in Notion</li></ul></div>
-      <div class="svc-card reveal"><div class="svc-ico">&#x26A1;</div><h3>Workflow automation</h3><span class="svc-tag">Manual work that runs itself</span><p>Invoice reminders, expense routing, report scheduling, approval workflows that are built once, run automatically. The manual effort is removed.</p><ul class="svc-sub-list"><li>Zapier and Make workflow builds</li><li>Google Workspace automation</li><li>Excel automation and formula builds</li><li>Tool integration and data flow design</li><li>Accounts payable/receivable and financial workflow automation</li></ul></div>
+      <div class="svc-card reveal"><div class="svc-ico">&#x26A1;</div><h3>Workflow automation</h3><span class="svc-tag">Manual work that runs itself</span><p>Invoice reminders, expense routing, report scheduling, approval workflows built once, run automatically. The manual effort is removed.</p><ul class="svc-sub-list"><li>Zapier and Make workflow builds</li><li>Google Workspace automation</li><li>Excel automation and formula builds</li><li>Tool integration and data flow design</li><li>AP/AR and financial workflow automation</li></ul></div>
       <div class="svc-card reveal"><div class="svc-ico">&#x1F527;</div><h3>Tool setup and integration</h3><span class="svc-tag">Systems that talk to each other</span><p>Disconnected tools create duplicate work and information gaps. I set up and connect the tools your business already uses so data flows where it needs to go.</p><ul class="svc-sub-list"><li>Notion workspace design</li><li>Google Workspace setup and structure</li><li>Project management tool setup (Asana, ClickUp, Trello)</li><li>Integration between financial and operational tools</li></ul></div>
     </div>
   </div></section>
@@ -1022,6 +1098,7 @@ footer p{font-size:.67rem;color:var(--text3)}
     <span class="eyebrow">Work Samples</span>
     <h1>Real engagements.<br>Real deliverables.<br><em>Real outcomes.</em></h1>
     <p class="sub">Five projects across financial operations, systems and automation, and executive support. The problem, what was built, and what changed.</p>
+    <div style="margin-top:1.5rem"><a href="https://calendly.com/monicahmburu/one-on-one" target="_blank" class="btn">Schedule a call &rarr;</a></div>
   </div></div>
 
   <section style="background:var(--cream)"><div class="wrap"><div class="work-list">
@@ -1117,7 +1194,7 @@ footer p{font-size:.67rem;color:var(--text3)}
         <div>
           <span class="we-lbl">What changed</span>
           <div class="we-result-box"><div class="we-result-lbl">Results</div><div class="we-pills"><span class="we-pill">47 meetings structured</span><span class="we-pill">3 tools to 1 calendar</span><span class="we-pill">Focus time protected</span><span class="we-pill">SOPs live</span></div></div>
-          <p class="we-text" style="margin-top:1rem">Reactive scheduling replaced with intentional time ownership. Investor check ins stopped being missed. Co founder bookings now go through an approval workflow.Check out the workflows created by clicking the buttons below 👇</p>
+          <p class="we-text" style="margin-top:1rem">Reactive scheduling replaced with intentional time ownership. Investor check ins stopped being missed. Co founder bookings now go through an approval workflow. Check out the workflows created by clicking the buttons below.</p>
           <div class="we-files">
             <a href="https://drive.google.com/file/d/1ALr8J13AUe46Q5IWChAqfFJ1B09F4LZW/view?usp=sharing" target="_blank" class="we-file-link"><span>📄</span> Calendar Architecture Doc</a>
             <a href="https://docs.google.com/spreadsheets/d/1-J2gBrHHntmp56TEuH-rS0mXqVPFdIUsHTkhU2xnWMg/edit?usp=sharing" target="_blank" class="we-file-link"><span>📊</span> Calendar Preferences</a>
@@ -1237,6 +1314,7 @@ footer p{font-size:.67rem;color:var(--text3)}
     <span class="eyebrow">Contact</span>
     <h1>30 minutes to confirm<br>this is <em>the right fit.</em></h1>
     <p class="sub">Whether you are a founder looking for a Finance and Operations Partner, a recruiter reviewing candidates, or a CEO looking for direct operational support, the call is the same. You describe what needs addressing. I will be direct about whether my background is the right fit.</p>
+    <div style="margin-top:1.5rem"><a href="https://calendly.com/monicahmburu/one-on-one" target="_blank" class="btn">Schedule a call &rarr;</a></div>
   </div></div>
 
   <section style="background:var(--cream)"><div class="wrap"><div class="contact-grid">

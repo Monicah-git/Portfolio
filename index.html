@@ -269,21 +269,15 @@ h3{font-family:var(--serif);font-size:1.1rem;font-weight:500;color:var(--ink)}
 .cred{font-size:.67rem;color:rgba(255,255,255,.2);display:flex;align-items:center;gap:.38rem}
 .cred-dot{width:3px;height:3px;border-radius:50%;background:var(--brown);opacity:.45}
 
-/* ABOUT PAGE */
+/* ABOUT PAGE — HERO GRID (full-width two-column layout) */
 .about-hero{padding:5rem 0 4rem;background:var(--warm)}
-.about-hero-inner{display:grid;grid-template-columns:1fr 300px;gap:4.75rem;align-items:start}
-.about-text p{font-size:.89rem;color:var(--text2);font-weight:300;line-height:1.92;margin-bottom:.95rem}
-.about-text p strong{color:var(--text);font-weight:500}
-.about-text h1{margin-bottom:1.4rem}
-.photo-card{background:var(--ink2);border-radius:var(--r);overflow:hidden;border:1px solid rgba(255,255,255,.06);box-shadow:0 18px 50px rgba(22,18,13,.16)}
-.photo-card img{width:100%;height:auto;display:block;object-fit:cover}
-.photo-meta{padding:.9rem 1.2rem;border-top:1px solid rgba(255,255,255,.06)}
-.photo-meta p{font-size:.69rem;color:rgba(255,255,255,.28)}
-
-/* Intro video on About */
-.about-video-section{background:var(--ink2);padding:3.5rem 0}
-.about-video-section .eyebrow{color:rgba(255,255,255,.28)}
-.about-video-section h2{color:#fff;font-size:clamp(1.4rem,2.5vw,2rem);margin-bottom:1.75rem}
+.about-hero-grid{display:grid;grid-template-columns:1fr 1.45fr;gap:5.5rem;align-items:start}
+.about-hero-left h1{margin-bottom:0;line-height:1.1}
+.about-hero-left .eyebrow{margin-bottom:1rem}
+.about-hero-actions{display:flex;gap:.72rem;margin-top:2.2rem;flex-wrap:wrap}
+.about-hero-right p{font-size:.89rem;color:var(--text2);font-weight:300;line-height:1.92;margin-bottom:.95rem}
+.about-hero-right p:first-child{margin-top:0}
+.about-hero-right p strong{color:var(--text);font-weight:500}
 
 .personality{padding:5rem 0;background:var(--cream)}
 .personality-grid{display:grid;grid-template-columns:1fr 1fr;gap:4.25rem;margin-top:2.75rem;align-items:start}
@@ -439,14 +433,13 @@ footer p{font-size:.67rem;color:var(--text3)}
 /* RESPONSIVE */
 @media(max-width:900px){
   .hero{padding:3.25rem 1.5rem 2.75rem}
-  .hero-grid,.about-hero-inner,.contact-grid,.engage-grid,.fit-grid,.personality-grid,.diff-grid,.edu-tools-grid{grid-template-columns:1fr;gap:2.1rem}
+  .hero-grid,.contact-grid,.engage-grid,.fit-grid,.personality-grid,.diff-grid,.edu-tools-grid{grid-template-columns:1fr;gap:2.1rem}
   .pillars-grid,.testi-grid,.svc-cards-grid{grid-template-columns:1fr 1fr}
   .tools-grid,.certs-grid{grid-template-columns:repeat(3,1fr)}
   .edu-grid{grid-template-columns:1fr}
   .we-cols,.ba-grid,.img-grid.cols-2{grid-template-columns:1fr}
   .nav-links,.nav-avail,.nav-cta{display:none}
   .hamburger{display:flex!important}
-  .photo-card{max-width:300px;margin:0 auto}
   .tl-list::before{left:0}
   .tl-row{grid-template-columns:1fr;padding-left:1.5rem}
   .tl-row::before{left:-4px}
@@ -454,6 +447,7 @@ footer p{font-size:.67rem;color:var(--text3)}
   .tl-body{padding-left:0}
   .role-strip-inner{gap:0}
   .rs-item{padding:.3rem .9rem;font-size:.65rem}
+  .about-hero-grid{grid-template-columns:1fr;gap:2.25rem}
 }
 @media(max-width:580px){
   .pillars-grid,.testi-grid,.tools-grid,.svc-cards-grid{grid-template-columns:1fr}
@@ -840,27 +834,23 @@ footer p{font-size:.67rem;color:var(--text3)}
 <!-- ABOUT ME -->
 <div id="page-about" class="page">
 
-  <!-- Hero: text left, photo right — properly closed -->
+  <!-- Hero: full-width two-column layout — headline left, body text right -->
   <div class="about-hero">
     <div class="wrap">
-      <div class="about-hero-inner">
-        <div class="about-text">
+      <div class="about-hero-grid">
+        <div class="about-hero-left">
           <span class="eyebrow">About me</span>
           <h1>Finance background.<br>Operations instinct.<br><em>Remote ready.</em></h1>
-          <p style="margin-top:1.25rem">I love it when a business goes from "I'm not sure" to "I know exactly where we stand." That moment usually isn't about more effort, it's about better structure. Finance and operations are harder to separate than most businesses realise. A business with accurate books but no documented workflows still loses time to manual processes every week. A business with good processes but unreliable financial records makes decisions on bad data. I work across both areas because the problems usually sit at the intersection.</p>
-          <p>My background is in Economics and Mathematics. I hold a CPA Foundation certification and professional certifications in data analytics, bookkeeping, and corporate finance. I am completing an MSc in Financial Engineering at WorldQuant University. The academic side is not decorative, it shapes how I read financial information and design systems around it.</p>
-          <p>At Pitch Investors, I built financial models and investor packages for 10+ businesses remotely, supporting a US based CEO directly for 8 months. At Aspire Lending, I redesigned a manual reporting process that was consuming 10+ hours of senior staff time every week. At Target Mart, I rebuilt Account Payables and Receivables controls from scratch, cutting payment discrepancies by 60% and bringing tax filings to 100% compliance.</p>
-          <p><strong>I am open to permanent full-time remote employment in finance and operations roles, and available for project based or retainer engagements.</strong> Based in Nairobi, working worldwide.</p>
-          <div style="display:flex;gap:.72rem;margin-top:1.9rem;flex-wrap:wrap">
+          <div class="about-hero-actions">
             <a href="https://calendly.com/monicahmburu/one-on-one" target="_blank" class="btn">Schedule a call</a>
             <a href="https://www.linkedin.com/in/monicahmburu/" target="_blank" class="btn-ghost">View LinkedIn &rarr;</a>
           </div>
         </div>
-        <div>
-          <div class="photo-card">
-            <img src="https://lh3.googleusercontent.com/d/10KcYq3HJd_FPOkHjxR6sH8PXcxGq1NoY" alt="Monicah Mburu">
-            <div class="photo-meta"><p>Monicah Mburu &middot; Finance &amp; Operations Partner &middot; Nairobi</p></div>
-          </div>
+        <div class="about-hero-right">
+          <p>I love it when a business goes from "I'm not sure" to "I know exactly where we stand." That moment usually isn't about more effort, it's about better structure. Finance and operations are harder to separate than most businesses realise. A business with accurate books but no documented workflows still loses time to manual processes every week. A business with good processes but unreliable financial records makes decisions on bad data. I work across both areas because the problems usually sit at the intersection.</p>
+          <p>My background is in Economics and Mathematics. I hold a CPA Foundation certification and professional certifications in data analytics, bookkeeping, and corporate finance. I am completing an MSc in Financial Engineering at WorldQuant University. The academic side is not decorative, it shapes how I read financial information and design systems around it.</p>
+          <p>At Pitch Investors, I built financial models and investor packages for 10+ businesses remotely, supporting a US based CEO directly for 8 months. At Aspire Lending, I redesigned a manual reporting process that was consuming 10+ hours of senior staff time every week. At Target Mart, I rebuilt Account Payables and Receivables controls from scratch, cutting payment discrepancies by 60% and bringing tax filings to 100% compliance.</p>
+          <p><strong>I am open to permanent full-time remote employment in finance and operations roles, and available for project based or retainer engagements.</strong> Based in Nairobi, working worldwide.</p>
         </div>
       </div>
     </div>

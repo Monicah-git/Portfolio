@@ -1,4 +1,4 @@
-<<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -88,7 +88,7 @@ h3{font-family:var(--serif);font-size:1.1rem;font-weight:500;color:var(--ink)}
 .btn-ghost-inv{border:1px solid rgba(255,255,255,.15);color:rgba(255,255,255,.5);font-size:.86rem;padding:.94rem 2.1rem;border-radius:100px;text-decoration:none;display:inline-flex;align-items:center;justify-content:center;transition:all .2s;min-height:50px;letter-spacing:.01em}
 .btn-ghost-inv:hover{border-color:rgba(255,255,255,.36);color:#fff}
 
-/* ══ HOME HERO ══════════════════════════════════════════════════ */
+/* HOME HERO */
 .hero{padding:4.5rem 2.5rem 4rem;max-width:1060px;margin:0 auto}
 .hero-top{animation:fadeUp .6s .05s ease both;margin-bottom:2.2rem}
 .hero-badge{display:inline-flex;align-items:center;gap:.45rem;background:var(--brown-pale);border:1px solid var(--brown-border);color:var(--brown);font-size:.66rem;font-weight:600;padding:.28rem .88rem;border-radius:100px;letter-spacing:.07em;text-transform:uppercase;margin-bottom:1.4rem}
@@ -101,11 +101,8 @@ h3{font-family:var(--serif);font-size:1.1rem;font-weight:500;color:var(--ink)}
 .trust-item{display:flex;align-items:center;gap:.38rem;font-size:.67rem;color:var(--text3)}
 .trust-dot{width:3px;height:3px;border-radius:50%;background:var(--brown);opacity:.5}
 .hero-right{animation:fadeUp .7s .18s ease both;display:flex;flex-direction:column;gap:1rem}
-
-/* Hero photo */
 .hero-photo-wrap{border-radius:var(--r);overflow:hidden;box-shadow:0 20px 52px rgba(22,18,13,.18);border:1px solid rgba(255,255,255,.05);max-height:340px;display:flex;align-items:center;justify-content:center}
 .hero-photo-wrap img{width:100%;display:block;height:auto;max-height:340px;object-fit:contain}
-
 .hero-metrics{display:grid;grid-template-columns:repeat(3,1fr)}
 .metric-box{background:var(--ink);padding:1.2rem;border-right:1px solid rgba(255,255,255,.04)}
 .metric-box:first-child{border-radius:var(--r) 0 0 var(--r)}
@@ -113,7 +110,7 @@ h3{font-family:var(--serif);font-size:1.1rem;font-weight:500;color:var(--ink)}
 .metric-num{font-family:var(--serif);font-size:1.6rem;font-weight:600;color:var(--brown2);line-height:1;margin-bottom:.2rem}
 .metric-lbl{font-size:.61rem;color:rgba(255,255,255,.24);line-height:1.55;font-weight:300}
 
-/* VIDEO WRAP (used on About page) */
+/* VIDEO WRAP */
 .video-wrap{background:var(--ink2);border-radius:var(--r);overflow:hidden;border:1px solid rgba(255,255,255,.05);box-shadow:0 20px 52px rgba(22,18,13,.18)}
 .video-responsive{position:relative;padding-bottom:56.25%;height:0;overflow:hidden}
 .video-responsive iframe{position:absolute;top:0;left:0;width:100%;height:100%;border:0}
@@ -272,9 +269,9 @@ h3{font-family:var(--serif);font-size:1.1rem;font-weight:500;color:var(--ink)}
 .cred{font-size:.67rem;color:rgba(255,255,255,.2);display:flex;align-items:center;gap:.38rem}
 .cred-dot{width:3px;height:3px;border-radius:50%;background:var(--brown);opacity:.45}
 
-/* ══ ABOUT ═════════════════════════════════════════════════════ */
+/* ABOUT PAGE */
 .about-hero{padding:5rem 0 4rem;background:var(--warm)}
-.about-inner{display:grid;grid-template-columns:1fr 300px;gap:4.75rem;align-items:start}
+.about-hero-inner{display:grid;grid-template-columns:1fr 300px;gap:4.75rem;align-items:start}
 .about-text p{font-size:.89rem;color:var(--text2);font-weight:300;line-height:1.92;margin-bottom:.95rem}
 .about-text p strong{color:var(--text);font-weight:500}
 .about-text h1{margin-bottom:1.4rem}
@@ -282,10 +279,6 @@ h3{font-family:var(--serif);font-size:1.1rem;font-weight:500;color:var(--ink)}
 .photo-card img{width:100%;height:auto;display:block;object-fit:cover}
 .photo-meta{padding:.9rem 1.2rem;border-top:1px solid rgba(255,255,255,.06)}
 .photo-meta p{font-size:.69rem;color:rgba(255,255,255,.28)}
-.vv-callout{background:var(--ink2);border:1px solid rgba(122,82,48,.26);border-radius:var(--r);padding:1.4rem 1.65rem;margin-top:1.1rem;display:flex;align-items:flex-start;gap:1rem}
-.vv-callout-icon{font-size:1.15rem;flex-shrink:0;margin-top:.1rem}
-.vv-callout-body strong{display:block;font-size:.85rem;color:#fff;font-weight:500;margin-bottom:.32rem}
-.vv-callout-body p{font-size:.75rem;color:rgba(255,255,255,.34);line-height:1.74;font-weight:300;margin:0}
 
 /* Intro video on About */
 .about-video-section{background:var(--ink2);padding:3.5rem 0}
@@ -342,7 +335,7 @@ h3{font-family:var(--serif);font-size:1.1rem;font-weight:500;color:var(--ink)}
 .cert-link{font-size:.6rem;color:var(--brown);text-decoration:none;border-bottom:1px solid var(--brown-border);padding-bottom:1px;transition:border-color .2s}
 .cert-link:hover{border-color:var(--brown)}
 
-/* ══ SERVICES PAGE ═════════════════════════════════════════════ */
+/* SERVICES PAGE */
 .svc-page-hero{padding:5rem 0 4rem;background:var(--warm)}
 .svc-cards-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.15rem;margin-top:2.4rem}
 .svc-card{background:#fff;border:1px solid var(--border);border-radius:var(--r);padding:1.8rem;transition:all .22s;position:relative;overflow:hidden}
@@ -365,7 +358,7 @@ h3{font-family:var(--serif);font-size:1.1rem;font-weight:500;color:var(--ink)}
 .tool-name{font-size:.71rem;font-weight:500;color:var(--text);margin-bottom:.12rem}
 .tool-cat{font-size:.58rem;color:var(--text3);line-height:1.35}
 
-/* ══ WORK PAGE ═════════════════════════════════════════════════ */
+/* WORK PAGE */
 .ws-hero{padding:5rem 0 4rem;background:var(--warm)}
 .work-list{display:flex;flex-direction:column;gap:2.75rem;margin-top:2.75rem}
 .work-card{background:#fff;border:1px solid var(--border);border-radius:var(--r);overflow:hidden}
@@ -411,7 +404,7 @@ h3{font-family:var(--serif);font-size:1.1rem;font-weight:500;color:var(--ink)}
 .img-caption{font-size:.64rem;color:var(--text3);text-align:center;font-weight:300}
 .practice-notice{background:rgba(80,100,170,.05);border:1px solid rgba(80,100,170,.14);border-radius:var(--r-sm);padding:.7rem 1rem;margin-top:.7rem;font-size:.73rem;color:#4a5fa0;line-height:1.64}
 
-/* ══ CONTACT PAGE ══════════════════════════════════════════════ */
+/* CONTACT PAGE */
 .contact-hero{padding:5rem 0 4rem;background:var(--warm)}
 .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:4.25rem;margin-top:2.75rem}
 .c-method{display:flex;align-items:center;gap:.95rem;background:#fff;border:1px solid var(--border);border-radius:var(--r);padding:1.05rem 1.25rem;text-decoration:none;transition:border-color .2s;margin-bottom:.82rem}
@@ -446,7 +439,7 @@ footer p{font-size:.67rem;color:var(--text3)}
 /* RESPONSIVE */
 @media(max-width:900px){
   .hero{padding:3.25rem 1.5rem 2.75rem}
-  .hero-grid,.about-inner,.contact-grid,.engage-grid,.fit-grid,.personality-grid,.diff-grid,.edu-tools-grid{grid-template-columns:1fr;gap:2.1rem}
+  .hero-grid,.about-hero-inner,.contact-grid,.engage-grid,.fit-grid,.personality-grid,.diff-grid,.edu-tools-grid{grid-template-columns:1fr;gap:2.1rem}
   .pillars-grid,.testi-grid,.svc-cards-grid{grid-template-columns:1fr 1fr}
   .tools-grid,.certs-grid{grid-template-columns:repeat(3,1fr)}
   .edu-grid{grid-template-columns:1fr}
@@ -488,7 +481,7 @@ footer p{font-size:.67rem;color:var(--text3)}
   </a>
   <ul class="nav-links">
     <li><a href="javascript:void(0)" onclick="return show('home')" data-page="home">Home</a></li>
-    <li><a href="javascript:void(0)" onclick="return show('about')" data-page="about">About</a></li>
+    <li><a href="javascript:void(0)" onclick="return show('about')" data-page="about">About Me</a></li>
     <li><a href="javascript:void(0)" onclick="return show('services')" data-page="services">Services</a></li>
     <li><a href="javascript:void(0)" onclick="return show('work')" data-page="work">Work Samples</a></li>
     <li><a href="javascript:void(0)" onclick="return show('contact')" data-page="contact">Contact</a></li>
@@ -500,23 +493,21 @@ footer p{font-size:.67rem;color:var(--text3)}
 
 <div class="mob-menu" id="mob">
   <a href="javascript:void(0)" data-page="home" onclick="return show('home')">Home</a>
-  <a href="javascript:void(0)" data-page="about" onclick="return show('about')">About</a>
+  <a href="javascript:void(0)" data-page="about" onclick="return show('about')">About Me</a>
   <a href="javascript:void(0)" data-page="services" onclick="return show('services')">Services</a>
   <a href="javascript:void(0)" data-page="work" onclick="return show('work')">Work Samples</a>
   <a href="javascript:void(0)" data-page="contact" onclick="return show('contact')">Contact</a>
   <a href="https://calendly.com/monicahmburu/one-on-one" target="_blank" class="mob-cta">Schedule a call</a>
 </div>
 
-<!-- ═══════════════ HOME ═══════════════════════════════════════ -->
+<!-- HOME -->
 <div id="page-home" class="page active">
 
   <div class="hero">
-
     <div class="hero-top">
       <div class="hero-badge"><span class="hero-badge-dot"></span>Finance &amp; Operations Partner &middot; Remote worldwide</div>
       <h1>Clean finances. Automated systems.<br>A partner who works <em>directly with you.</em></h1>
     </div>
-
     <div class="hero-grid">
       <div class="hero-left">
         <p>I work directly with founders to build the financial systems, operational processes, cleaner reporting, clearer workflows and a support structure that should already be in place. Spend less of your time going to work that should not reach you.</p>
@@ -532,8 +523,6 @@ footer p{font-size:.67rem;color:var(--text3)}
           <span class="trust-item"><span class="trust-dot"></span>Virtually Versed &middot; Jun 2026</span>
         </div>
       </div>
-
-      <!-- HERO RIGHT: Professional photo (video moved to About page) -->
       <div class="hero-right">
         <div class="hero-photo-wrap">
           <img src="https://lh3.googleusercontent.com/d/10KcYq3HJd_FPOkHjxR6sH8PXcxGq1NoY" alt="Monicah Mburu — Finance &amp; Operations Partner">
@@ -801,22 +790,7 @@ footer p{font-size:.67rem;color:var(--text3)}
           <span class="eyebrow reveal">Tools</span>
           <h2 class="reveal" style="font-size:clamp(1.35rem,2.4vw,1.9rem);margin-bottom:1.5rem">Tools I work with</h2>
           <div class="reveal" style="display:flex;flex-wrap:wrap;gap:.46rem;margin-bottom:1.25rem">
-            <span class="tool-pill">QuickBooks</span>
-            <span class="tool-pill">Xero</span>
-            <span class="tool-pill">Zoho Books</span>
-            <span class="tool-pill">Excel</span>
-            <span class="tool-pill">Google Sheets</span>
-            <span class="tool-pill">Power BI</span>
-            <span class="tool-pill">Notion</span>
-            <span class="tool-pill">Zapier</span>
-            <span class="tool-pill">Make</span>
-            <span class="tool-pill">Airtable</span>
-            <span class="tool-pill">Asana</span>
-            <span class="tool-pill">ClickUp</span>
-            <span class="tool-pill">Google Workspace</span>
-            <span class="tool-pill">Slack</span>
-            <span class="tool-pill">Zoom</span>
-            <span class="tool-pill">MS Teams</span>
+            <span class="tool-pill">QuickBooks</span><span class="tool-pill">Xero</span><span class="tool-pill">Zoho Books</span><span class="tool-pill">Excel</span><span class="tool-pill">Google Sheets</span><span class="tool-pill">Power BI</span><span class="tool-pill">Notion</span><span class="tool-pill">Zapier</span><span class="tool-pill">Make</span><span class="tool-pill">Airtable</span><span class="tool-pill">Asana</span><span class="tool-pill">ClickUp</span><span class="tool-pill">Google Workspace</span><span class="tool-pill">Slack</span><span class="tool-pill">Zoom</span><span class="tool-pill">MS Teams</span>
           </div>
           <div class="reveal"><a href="javascript:void(0)" onclick="return show('services')" class="btn-ghost">Full tool stack &rarr;</a></div>
         </div>
@@ -834,7 +808,7 @@ footer p{font-size:.67rem;color:var(--text3)}
     <div class="faq-list reveal">
       <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)"><span class="faq-q-text">What is a Finance and Operations Partner?</span><span class="faq-icon"><svg viewBox="0 0 10 6" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><polyline points="1,1 5,5 9,1"/></svg></span></div><div class="faq-a"><div class="faq-a-inner">A Finance and Operations Partner takes ownership of the full operational and financial layer of a business. That means accurate financial records, reporting that surfaces useful information, automated workflows that remove repetitive manual work, documented processes so the business doesn't depend on one person's memory, and direct executive support for the CEO. The role reports directly to the founder not through an operations director or team lead. One person, accountable for the whole layer.</div></div></div>
       <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)"><span class="faq-q-text">How is this different from hiring a bookkeeper, a coordinator, or a virtual assistant?</span><span class="faq-icon"><svg viewBox="0 0 10 6" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><polyline points="1,1 5,5 9,1"/></svg></span></div><div class="faq-a"><div class="faq-a-inner">A bookkeeper maintains records and stops there. A coordinator manages tasks and stops there. A Finance and Operations Partner works across all three areas, financial operations, systems and automation and executive support and owns the outcomes, not just the tasks. My background in Economics, Mathematics, and Financial Engineering means I understand what the numbers imply, not just how to record them. When I see a discrepancy, I investigate why. When I build a process, I design it to run without me. The difference is ownership versus execution.</div></div></div>
-      <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)"><span class="faq-q-text">Are you looking for employment or offering consulting services?</span><span class="faq-icon"><svg viewBox="0 0 10 6" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><polyline points="1,1 5,5 9,1"/></svg></span></div><div class="faq-a"><div class="faq-a-inner">Both, and I am clear about the difference. I am open to permanent full-time remote employment in finance, operations, or executive support roles. I am also available for project based and monthly retainer consulting engagements. The skills and approach are the same either way. If you are a recruiter or employer, the About page has my full background and credentials.</div></div></div>
+      <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)"><span class="faq-q-text">Are you looking for employment or offering consulting services?</span><span class="faq-icon"><svg viewBox="0 0 10 6" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><polyline points="1,1 5,5 9,1"/></svg></span></div><div class="faq-a"><div class="faq-a-inner">Both, and I am clear about the difference. I am open to permanent full-time remote employment in finance, operations, or executive support roles. I am also available for project based and monthly retainer consulting engagements. The skills and approach are the same either way. If you are a recruiter or employer, the About Me page has my full background and credentials.</div></div></div>
       <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)"><span class="faq-q-text">Do you have remote work experience?</span><span class="faq-icon"><svg viewBox="0 0 10 6" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><polyline points="1,1 5,5 9,1"/></svg></span></div><div class="faq-a"><div class="faq-a-inner">Yes. At Pitch Investors I supported a US-based CEO for 8 months remotely delivering financial packages, managing investor communication and coordinating operations across time zones. I operate asynchronously by default, communicate proactively and produce finished work without needing to be checked on.</div></div></div>
       <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)"><span class="faq-q-text">What does a typical engagement look like?</span><span class="faq-icon"><svg viewBox="0 0 10 6" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><polyline points="1,1 5,5 9,1"/></svg></span></div><div class="faq-a"><div class="faq-a-inner">We start with a free 30 minute call. If there is a fit, I recommend a project or retainer depending on your situation. Week one is a review of your books, workflows, tools and calendar I ensure gaps are identified and priorities are confirmed. Work starts against the agreed scope. Project engagements close with full documentation. Retainers continue monthly with a weekly sync.</div></div></div>
       <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)"><span class="faq-q-text">What does this cost?</span><span class="faq-icon"><svg viewBox="0 0 10 6" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><polyline points="1,1 5,5 9,1"/></svg></span></div><div class="faq-a"><div class="faq-a-inner">Scope and investment are discussed on the discovery call, once I understand what actually needs doing. Projects are priced on deliverables and timeline which is confirmed before work begins. Retainers are based on monthly scope agreed at onboarding, billed on actuals. No surprises on either side.</div></div></div>
@@ -863,25 +837,36 @@ footer p{font-size:.67rem;color:var(--text3)}
 
 </div><!-- /home -->
 
-<!-- ═══════════════ ABOUT ══════════════════════════════════════ -->
+<!-- ABOUT ME -->
 <div id="page-about" class="page">
+
+  <!-- Hero: text left, photo right — properly closed -->
   <div class="about-hero">
-    <div class="about-inner wrap">
-      <div class="about-text">
-        <span class="eyebrow">About me</span>
-        <h1>Finance background.<br>Operations instinct.<br><em>Remote ready.</em></h1>
-        <p style="margin-top:1.25rem">I love it when a business goes from "I'm not sure" to "I know exactly where we stand." That moment usually isn't about more effort, it's about better structure. Finance and operations are harder to separate than most businesses realise. A business with accurate books but no documented workflows still loses time to manual processes every week. A business with good processes but unreliable financial records makes decisions on bad data. I work across both areas because the problems usually sit at the intersection.</p>
-        <p>My background is in Economics and Mathematics. I hold a CPA Foundation certification and professional certifications in data analytics, bookkeeping, and corporate finance. I am completing an MSc in Financial Engineering at WorldQuant University. The academic side is not decorative, it shapes how I read financial information and design systems around it.</p>
-        <p>At Pitch Investors, I built financial models and investor packages for 10+ businesses remotely, supporting a US based CEO directly for 8 months. At Aspire Lending, I redesigned a manual reporting process that was consuming 10+ hours of senior staff time every week. At Target Mart, I rebuilt Account Payables and Receivables controls from scratch, cutting payment discrepancies by 60% and bringing tax filings to 100% compliance.</p>
-        <p><strong>I am open to permanent full-time remote employment in finance and operations roles, and available for project based or retainer engagements.</strong> Based in Nairobi, working worldwide.</p>
-        <div style="display:flex;gap:.72rem;margin-top:1.9rem;flex-wrap:wrap">
-          <a href="https://calendly.com/monicahmburu/one-on-one" target="_blank" class="btn">Schedule a call</a>
-          <a href="https://www.linkedin.com/in/monicahmburu/" target="_blank" class="btn-ghost">View LinkedIn &rarr;</a>
+    <div class="wrap">
+      <div class="about-hero-inner">
+        <div class="about-text">
+          <span class="eyebrow">About me</span>
+          <h1>Finance background.<br>Operations instinct.<br><em>Remote ready.</em></h1>
+          <p style="margin-top:1.25rem">I love it when a business goes from "I'm not sure" to "I know exactly where we stand." That moment usually isn't about more effort, it's about better structure. Finance and operations are harder to separate than most businesses realise. A business with accurate books but no documented workflows still loses time to manual processes every week. A business with good processes but unreliable financial records makes decisions on bad data. I work across both areas because the problems usually sit at the intersection.</p>
+          <p>My background is in Economics and Mathematics. I hold a CPA Foundation certification and professional certifications in data analytics, bookkeeping, and corporate finance. I am completing an MSc in Financial Engineering at WorldQuant University. The academic side is not decorative, it shapes how I read financial information and design systems around it.</p>
+          <p>At Pitch Investors, I built financial models and investor packages for 10+ businesses remotely, supporting a US based CEO directly for 8 months. At Aspire Lending, I redesigned a manual reporting process that was consuming 10+ hours of senior staff time every week. At Target Mart, I rebuilt Account Payables and Receivables controls from scratch, cutting payment discrepancies by 60% and bringing tax filings to 100% compliance.</p>
+          <p><strong>I am open to permanent full-time remote employment in finance and operations roles, and available for project based or retainer engagements.</strong> Based in Nairobi, working worldwide.</p>
+          <div style="display:flex;gap:.72rem;margin-top:1.9rem;flex-wrap:wrap">
+            <a href="https://calendly.com/monicahmburu/one-on-one" target="_blank" class="btn">Schedule a call</a>
+            <a href="https://www.linkedin.com/in/monicahmburu/" target="_blank" class="btn-ghost">View LinkedIn &rarr;</a>
+          </div>
+        </div>
+        <div>
+          <div class="photo-card">
+            <img src="https://lh3.googleusercontent.com/d/10KcYq3HJd_FPOkHjxR6sH8PXcxGq1NoY" alt="Monicah Mburu">
+            <div class="photo-meta"><p>Monicah Mburu &middot; Finance &amp; Operations Partner &middot; Nairobi</p></div>
+          </div>
         </div>
       </div>
+    </div>
+  </div><!-- /about-hero -->
 
-
-  <!-- INTRO VIDEO — moved from hero to About page -->
+  <!-- Intro video -->
   <div class="about-video-section">
     <div class="wrap">
       <span class="eyebrow">Introduction</span>
@@ -897,6 +882,7 @@ footer p{font-size:.67rem;color:var(--text3)}
     </div>
   </div>
 
+  <!-- Personality -->
   <div class="personality"><div class="wrap">
     <span class="eyebrow reveal">How I work</span>
     <h2 class="reveal">What it's like to work<br><em>with me directly.</em></h2>
@@ -926,6 +912,7 @@ footer p{font-size:.67rem;color:var(--text3)}
     </div>
   </div></div>
 
+  <!-- Timeline -->
   <div class="timeline"><div class="wrap">
     <span class="eyebrow reveal">Experience</span>
     <h2 class="reveal">Where this background came from</h2>
@@ -977,6 +964,7 @@ footer p{font-size:.67rem;color:var(--text3)}
     </div>
   </div></div>
 
+  <!-- Education -->
   <section style="background:var(--cream)"><div class="wrap">
     <span class="eyebrow reveal">Education</span>
     <h2 class="reveal">Academic background</h2>
@@ -1012,7 +1000,7 @@ footer p{font-size:.67rem;color:var(--text3)}
   </footer>
 </div><!-- /about -->
 
-<!-- ═══════════════ SERVICES ═══════════════════════════════════ -->
+<!-- SERVICES -->
 <div id="page-services" class="page">
   <div class="svc-page-hero"><div class="wrap">
     <span class="eyebrow">What I offer</span>
@@ -1092,7 +1080,7 @@ footer p{font-size:.67rem;color:var(--text3)}
   </footer>
 </div><!-- /services -->
 
-<!-- ═══════════════ WORK ════════════════════════════════════════ -->
+<!-- WORK -->
 <div id="page-work" class="page">
   <div class="ws-hero"><div class="wrap">
     <span class="eyebrow">Work Samples</span>
@@ -1308,7 +1296,7 @@ footer p{font-size:.67rem;color:var(--text3)}
   </footer>
 </div><!-- /work -->
 
-<!-- ═══════════════ CONTACT ════════════════════════════════════ -->
+<!-- CONTACT -->
 <div id="page-contact" class="page">
   <div class="contact-hero"><div class="wrap">
     <span class="eyebrow">Contact</span>

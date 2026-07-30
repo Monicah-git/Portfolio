@@ -410,6 +410,8 @@ h3{font-family:var(--serif);font-size:1.1rem;font-weight:500;color:var(--ink)}
 .img-grid.cols-1{grid-template-columns:1fr;max-width:560px}
 .img-grid.cols-2{grid-template-columns:1fr 1fr}
 .img-item{display:flex;flex-direction:column;gap:.46rem}
+.img-item img{cursor:pointer;transition:transform .2s,box-shadow .2s}
+.img-item img:hover{transform:scale(1.02);box-shadow:0 8px 24px rgba(58,95,130,.2)}
 .img-placeholder{background:var(--warm);border:2px dashed var(--warm2);border-radius:var(--r);min-height:148px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.46rem;padding:1.9rem 1.4rem;text-align:center}
 .img-placeholder span{font-size:1.75rem;opacity:.3;line-height:1}
 .img-placeholder p{font-size:.69rem;color:var(--text3);line-height:1.66;font-weight:300;margin:0}
@@ -560,7 +562,7 @@ footer p{font-size:.67rem;color:var(--text3)}
   <div class="hero">
     <div class="hero-top">
       <div class="hero-badge"><span class="hero-badge-dot"></span>Finance &amp; Operations Partner &middot; Remote worldwide</div>
-      <h1>Clean finances.<br> Systems that run without you.<br>Executive support.<br>A partner who works <em>directly with you.</em></h1>
+      <h1>Clean finances.<br>Systems that run without you.<br>Finance & Operations Partner.<br>A partner who works <em>directly with you.</em></h1>
     </div>
     <div class="hero-grid">
       <div class="hero-left">
@@ -1171,7 +1173,14 @@ footer p{font-size:.67rem;color:var(--text3)}
     <div style="margin-top:1.5rem"><a href="https://calendly.com/monicahmburutheeva/30min" target="_blank" class="btn">Schedule a call &rarr;</a></div>
   </div></div>
 
-  <section style="background:var(--cream)"><div class="wrap"><div class="work-list">
+  <section style="background:var(--cream)"><div class="wrap">
+    <div style="background:rgba(58,95,130,.06);border:1px solid rgba(58,95,130,.14);border-radius:var(--r);padding:1.2rem 1.5rem;margin-bottom:2.5rem;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem">
+      <div style="flex:1;min-width:280px">
+        <p style="font-size:.88rem;color:var(--text);line-height:1.6;margin:0"><strong style="font-weight:500">💡 Tip:</strong> Click any work sample image to expand it. See the full context of each project.</p>
+      </div>
+      <a href="https://calendly.com/monicahmburutheeva/30min" target="_blank" class="btn" style="white-space:nowrap">Let's talk →</a>
+    </div>
+  <div class="work-list">
 
     <!-- REAL CLIENT WORK -->
     <div class="work-card reveal" style="margin-bottom:3rem">
@@ -1205,50 +1214,42 @@ footer p{font-size:.67rem;color:var(--text3)}
       <div class="work-card-images">
         <span class="we-images-label">Work samples — financial model screenshots</span>
         <div class="img-grid cols-2">
-          <div class="img-item"><div style="width:100%;height:280px;border-radius:var(--r-sm);border:1px solid var(--border);overflow:hidden;display:flex;align-items:center;justify-content:center;background:#f7f9fb"><img src="https://lh3.googleusercontent.com/d/1oqWpPHcaNhHCQfH2xMAzaT9ON4OM7e_I" alt="DCF valuation model" style="width:100%;height:100%;object-fit:cover;display:block"></div><div class="img-caption">DCF valuation model</div></div>
-          <div class="img-item"><div style="width:100%;height:280px;border-radius:var(--r-sm);border:1px solid var(--border);overflow:hidden;display:flex;align-items:center;justify-content:center;background:#f7f9fb"><img src="https://lh3.googleusercontent.com/d/1i4r_UChcrJAZ-9qARim_LHzaAK9Phld5" alt="Investor-ready dashboard" style="width:100%;height:100%;object-fit:cover;display:block"></div><div class="img-caption">Investor-ready dashboard</div></div>
+          <div class="img-item"><div style="width:100%;height:280px;border-radius:var(--r-sm);border:1px solid var(--border);overflow:hidden;display:flex;align-items:center;justify-content:center;background:#f7f9fb"><img src="https://lh3.googleusercontent.com/d/1oqWpPHcaNhHCQfH2xMAzaT9ON4OM7e_I" alt="DCF valuation model" style="width:100%;height:100%;object-fit:cover;display:block" onclick="openLightbox(this.src)"></div><div class="img-caption">DCF valuation model</div></div>
+          <div class="img-item"><div style="width:100%;height:280px;border-radius:var(--r-sm);border:1px solid var(--border);overflow:hidden;display:flex;align-items:center;justify-content:center;background:#f7f9fb"><img src="https://lh3.googleusercontent.com/d/1i4r_UChcrJAZ-9qARim_LHzaAK9Phld5" alt="Investor-ready dashboard" style="width:100%;height:100%;object-fit:cover;display:block" onclick="openLightbox(this.src)"></div><div class="img-caption">Investor-ready dashboard</div></div>
         </div>
       </div>
     </div>
-
-    <!-- TRAINING / DEMO PROJECTS -->
-    <div style="margin-bottom:2rem;padding-top:2rem;border-top:2px solid var(--border)">
-      <div style="padding:0;margin-bottom:2rem">
-        <span class="eyebrow" style="margin-bottom:0.5rem">Training Demonstrations</span>
-        <h2 style="font-size:clamp(1.35rem,2.4vw,1.75rem);margin-bottom:1rem">Five additional case studies</h2>
-        <p style="font-size:.9rem;color:var(--text2);line-height:1.7;max-width:580px">These projects are from professional training programs. Same methodology I'd apply to a real engagement. They showcase finance, operations, and executive support working together across different business scenarios.</p>
-      </div>
 
       <!-- FEATURED CASE STUDY -->
       <div class="featured-case reveal" style="margin-top:2rem">
         <div class="featured-header">
           <div class="featured-ribbon"><span>&#9733;</span> Featured case study</div>
           <h3>An executive's inbox goes from a single chaotic stream to an eight-category system that runs itself</h3>
-          <p class="featured-sub">Built during an Athena Institute Virtual Assistant training simulation ("Cindy's Inbox") to demonstrate a complete executive inbox management engagement — audit, redesign, automation, and documentation — the way it would run for a real founder or executive.</p>
+          <p class="featured-sub" style="max-width:none">Built during an Athena Institute Virtual Assistant training simulation ("Cindy's Inbox") to demonstrate a complete executive inbox management engagement — audit, redesign, automation, and documentation — the way it would run for a real founder or executive.</p>
         </div>
-        <div class="featured-body">
+        <div class="featured-body" style="display:grid;grid-template-columns:1fr 1fr;gap:2rem">
           <div>
             <span class="we-lbl">The situation</span>
             <p class="we-text">One inbox, one folder, everything mixed together: newsletters next to client threads, a subscription receipt next to a phishing attempt disguised as an account-compromise alert. Nothing was categorized, nothing was prioritized, and nothing would have caught the phishing email before it did damage.</p>
-            <span class="we-lbl" style="margin-top:1.25rem;display:block">What was built</span>
+          </div>
+          <div>
+            <span class="we-lbl">What was built</span>
             <ul class="we-steps">
               <li>Full inbox audit — every message type identified, including a live phishing attempt flagged and isolated</li>
               <li>An 8-label triage architecture built (Work, Personal, Newsletters, Subscriptions/Receipts, Announcements, Important, Not Important, Defer), colour-coded for instant scanning</li>
               <li>Filters configured so new mail sorts itself on arrival — no manual re-triage required going forward</li>
               <li>A written SOP so anyone taking over the inbox can maintain the same system without relearning it</li>
             </ul>
-            <div class="we-chips"><span class="we-chip">Gmail filters &amp; labels</span><span class="we-chip">Inbox triage</span><span class="we-chip">SOP writing</span><span class="we-chip">Security awareness</span></div>
-            <div class="featured-cta">
-              <a href="https://app.notion.com/p/Executive-Inbox-Management-39cff603f6d0801a8d10caac78d50ed9?source=copy_link" target="_blank" class="btn">View full case study &rarr;</a>
-              <a href="https://app.notion.com/p/SOP-Executive-Inbox-Management-for-Cindy-s-Inbox-39dff603f6d08162ba5fd08ac01b0bfa" target="_blank" class="btn-ghost">Read the SOP</a>
-            </div>
-            <div class="practice-notice" style="margin-top:1.1rem">Training simulation completed through the Athena Institute VA program — "Cindy" and her inbox are a simulated exercise, not a client engagement. The audit findings, label system, and SOP reflect the same method applied to a real executive inbox.</div>
           </div>
-          <div class="featured-media">
-            <div class="featured-shot">
-              <img src="https://drive.google.com/thumbnail?id=1ElndE3J7jPvLV0jjnQh6w0Yj3m4lcTzq&sz=w1200" alt="Cindy's Inbox after rebuild — eight-category triage system">
-            </div>
+        </div>
+        <div style="padding:1.9rem 2.1rem;border-top:1px solid var(--border)">
+          <div class="we-chips" style="margin-bottom:1.2rem"><span class="we-chip">Gmail filters &amp; labels</span><span class="we-chip">Inbox triage</span><span class="we-chip">SOP writing</span><span class="we-chip">Security awareness</span></div>
+          <div class="featured-cta" style="margin-bottom:1.2rem">
+            <a href="https://app.notion.com/p/Executive-Inbox-Management-39cff603f6d0801a8d10caac78d50ed9?source=copy_link" target="_blank" class="btn">View full case study &rarr;</a>
+            <a href="https://app.notion.com/p/SOP-Executive-Inbox-Management-for-Cindy-s-Inbox-39dff603f6d08162ba5fd08ac01b0bfa" target="_blank" class="btn-ghost">Read the SOP</a>
           </div>
+          <div class="practice-notice" style="margin-bottom:1.5rem">Training simulation completed through the Athena Institute VA program — "Cindy" and her inbox are a simulated exercise, not a client engagement. The audit findings, label system, and SOP reflect the same method applied to a real executive inbox.</div>
+          <img src="https://drive.google.com/thumbnail?id=1ElndE3J7jPvLV0jjnQh6w0Yj3m4lcTzq&sz=w1200" alt="Cindy's Inbox after rebuild — eight-category triage system" onclick="openLightbox(this.src)" style="cursor:pointer;width:100%;border-radius:var(--r);border:1px solid var(--border);display:block">
         </div>
       </div>
 
@@ -1259,42 +1260,44 @@ footer p{font-size:.67rem;color:var(--text3)}
           <h3>CEO Calendar Chaos to Structured System</h3>
           <div class="we-outcome-pills"><span class="we-outcome-pill">47 meetings to 1 system</span><span class="we-outcome-pill">3 tools to 1 calendar</span><span class="we-outcome-pill">Focus time protected daily</span><span class="we-outcome-pill">5 SOPs live</span></div>
         </div>
-        <div class="work-card-body"><div class="we-cols">
-          <div>
-            <span class="we-lbl">The situation</span>
-            <p class="we-text">Maya Patel, Founder and CEO of a 15 person B2B SaaS agency, had 47 meetings scattered across Gmail, Slack, and a paper planner. No prep materials, investors frustrated by missed check ins, back to backs with no breathing room, and her cofounder booking her without any approval process. Three calendar tools running simultaneously with nothing connecting them.</p>
-            
-            <span class="we-lbl" style="margin-top:1.3rem;display:block">What was delivered</span>
-            <ul class="we-steps">
-              <li>Full calendar audit with meetings categorised by type, time allocation mapped</li>
-              <li>New architecture with colour coded system, protected focus blocks, and clear scheduling rules</li>
-              <li>Scheduling workflow built with Google Form for requests, authority levels defined</li>
-              <li>Standardised 1 on 1 agenda template for all 5 direct reports</li>
-              <li>Migrated from 3 tools to Google Calendar as the single source of truth</li>
-            </ul>
-            <div class="we-chips"><span class="we-chip">Google Calendar</span><span class="we-chip">Google Forms</span><span class="we-chip">Notion</span><span class="we-chip">Google Sheets</span><span class="we-chip">SOP Writing</span></div>
-          </div>
-          <div>
-            <span class="we-lbl">What changed</span>
-            <div class="we-result-box"><div class="we-result-lbl">Results</div><div class="we-pills"><span class="we-pill">47 meetings to 1 system</span><span class="we-pill">3 tools to 1 calendar</span><span class="we-pill">Focus time protected</span><span class="we-pill">Approval workflow live</span></div></div>
-            <p class="we-text" style="margin-top:1.05rem">Maya went from reactive scheduling to intentional time ownership. Investor check ins stopped being missed. Cofounder bookings now go through an approval workflow. The system runs without daily management.</p>
-            <div class="we-files">
-              <a href="https://drive.google.com/file/d/1ALr8J13AUe46Q5IWChAqfFJ1B09F4LZW/view?usp=sharing" target="_blank" class="we-file-link"><span>📄</span> Calendar Architecture Doc</a>
-              <a href="https://docs.google.com/spreadsheets/d/1-J2gBrHHntmp56TEuH-rS0mXqVPFdIUsHTkhU2xnWMg/edit?usp=sharing" target="_blank" class="we-file-link"><span>📊</span> Calendar Preferences</a>
-              <a href="https://www.notion.so/Calendar-Control-Center-367ff603f6d080bdb1e9c9054528e2fd?source=copy_link" target="_blank" class="we-file-link"><span>📋</span> Calendar Control Center</a>
+        <div class="work-card-body">
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:2rem;margin-bottom:1.5rem">
+            <div>
+              <span class="we-lbl">The situation</span>
+              <p class="we-text">Maya Patel, Founder and CEO of a 15 person B2B SaaS agency, had 47 meetings scattered across Gmail, Slack, and a paper planner. No prep materials, investors frustrated by missed check ins, back to backs with no breathing room, and her cofounder booking her without any approval process. Three calendar tools running simultaneously with nothing connecting them.</p>
+            </div>
+            <div>
+              <span class="we-lbl">What was delivered</span>
+              <ul class="we-steps">
+                <li>Full calendar audit with meetings categorised by type, time allocation mapped</li>
+                <li>New architecture with colour coded system, protected focus blocks, and clear scheduling rules</li>
+                <li>Scheduling workflow built with Google Form for requests, authority levels defined</li>
+                <li>Standardised 1 on 1 agenda template for all 5 direct reports</li>
+                <li>Migrated from 3 tools to Google Calendar as the single source of truth</li>
+              </ul>
             </div>
           </div>
-        </div></div>
+          <div class="we-chips" style="margin-bottom:1.3rem"><span class="we-chip">Google Calendar</span><span class="we-chip">Google Forms</span><span class="we-chip">Notion</span><span class="we-chip">Google Sheets</span><span class="we-chip">SOP Writing</span></div>
+          
+          <span class="we-lbl" style="display:block;margin-bottom:.6rem">Results</span>
+          <p class="we-text" style="margin-bottom:1.1rem">Maya went from reactive scheduling to intentional time ownership. Investor check ins stopped being missed. Cofounder bookings now go through an approval workflow. The system runs without daily management.</p>
+          
+          <div class="we-files">
+            <a href="https://drive.google.com/file/d/1ALr8J13AUe46Q5IWChAqfFJ1B09F4LZW/view?usp=sharing" target="_blank" class="we-file-link"><span>📄</span> Calendar Architecture Doc</a>
+            <a href="https://docs.google.com/spreadsheets/d/1-J2gBrHHntmp56TEuH-rS0mXqVPFdIUsHTkhU2xnWMg/edit?usp=sharing" target="_blank" class="we-file-link"><span>📊</span> Calendar Preferences</a>
+            <a href="https://www.notion.so/Calendar-Control-Center-367ff603f6d080bdb1e9c9054528e2fd?source=copy_link" target="_blank" class="we-file-link"><span>📋</span> Calendar Control Center</a>
+          </div>
+        </div>
         <div class="work-card-images">
           <span class="we-images-label">Before &amp; after — calendar screenshots</span>
-          <div class="ba-grid">
+          <div class="ba-grid" style="grid-template-columns:1fr 1fr">
             <div class="ba-item">
               <div class="ba-label before">⚠ Before — initial calendar</div>
-              <div style="width:100%;height:280px;border-radius:var(--r-sm);border:1px solid var(--border);overflow:hidden;display:flex;align-items:center;justify-content:center;background:#f7f9fb"><img src="https://lh3.googleusercontent.com/d/1-8GQZboN0aDqcFCfGoPaJLXgXP1rWI3x" alt="Maya's Initial Calendar" style="width:100%;height:100%;object-fit:cover"></div>
+              <div style="width:100%;height:280px;border-radius:var(--r-sm);border:1px solid var(--border);overflow:hidden;display:flex;align-items:center;justify-content:center;background:#f7f9fb"><img src="https://lh3.googleusercontent.com/d/1-8GQZboN0aDqcFCfGoPaJLXgXP1rWI3x" alt="Maya's Initial Calendar" style="width:100%;height:100%;object-fit:cover" onclick="openLightbox(this.src)"></div>
             </div>
             <div class="ba-item">
               <div class="ba-label after">✓ After — restructured system</div>
-              <div style="width:100%;height:280px;border-radius:var(--r-sm);border:1px solid var(--border);overflow:hidden;display:flex;align-items:center;justify-content:center;background:#f7f9fb"><img src="https://lh3.googleusercontent.com/d/1aGktkYSbEMNU6YHAMfCCcCN2xp_bb0sz" alt="Maya's Restructured Calendar" style="width:100%;height:100%;object-fit:cover"></div>
+              <div style="width:100%;height:280px;border-radius:var(--r-sm);border:1px solid var(--border);overflow:hidden;display:flex;align-items:center;justify-content:center;background:#f7f9fb"><img src="https://lh3.googleusercontent.com/d/1aGktkYSbEMNU6YHAMfCCcCN2xp_bb0sz" alt="Maya's Restructured Calendar" style="width:100%;height:100%;object-fit:cover" onclick="openLightbox(this.src)"></div>
             </div>
           </div>
         </div>
@@ -1445,11 +1448,11 @@ footer p{font-size:.67rem;color:var(--text3)}
             <div class="ba-grid">
               <div class="ba-item">
                 <div class="ba-label">Business Trip · Berlin</div>
-                <div style="width:100%;height:280px;border-radius:var(--r-sm);border:1px solid var(--border);overflow:hidden;display:flex;align-items:center;justify-content:center;background:#f7f9fb"><img src="https://lh3.googleusercontent.com/d/178qXvQpxKGyLyfliBVG_tHsJ1wXc0uUo" alt="Berlin business trip dashboard" style="width:100%;height:100%;object-fit:cover;display:block"></div>
+                <div style="width:100%;height:280px;border-radius:var(--r-sm);border:1px solid var(--border);overflow:hidden;display:flex;align-items:center;justify-content:center;background:#f7f9fb"><img src="https://lh3.googleusercontent.com/d/178qXvQpxKGyLyfliBVG_tHsJ1wXc0uUo" alt="Berlin business trip dashboard" style="width:100%;height:100%;object-fit:cover;display:block" onclick="openLightbox(this.src)"></div>
               </div>
               <div class="ba-item">
                 <div class="ba-label">Leisure Trip · Paris</div>
-                <div style="width:100%;height:280px;border-radius:var(--r-sm);border:1px solid var(--border);overflow:hidden;display:flex;align-items:center;justify-content:center;background:#f7f9fb"><img src="https://lh3.googleusercontent.com/d/10FQMxvHiCUtRmoLzsFE4c1XsQ6I-BLrl" alt="Paris girls trip coordination" style="width:100%;height:100%;object-fit:cover;display:block"></div>
+                <div style="width:100%;height:280px;border-radius:var(--r-sm);border:1px solid var(--border);overflow:hidden;display:flex;align-items:center;justify-content:center;background:#f7f9fb"><img src="https://lh3.googleusercontent.com/d/10FQMxvHiCUtRmoLzsFE4c1XsQ6I-BLrl" alt="Paris girls trip coordination" style="width:100%;height:100%;object-fit:cover;display:block" onclick="openLightbox(this.src)"></div>
               </div>
             </div>
           </div>
@@ -1508,29 +1511,29 @@ footer p{font-size:.67rem;color:var(--text3)}
           <span class="we-images-label">Operations transformation — Task management, data import, automations, and client metrics</span>
           <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:1rem">
             <div>
-              <div style="width:100%;height:200px;border-radius:var(--r-sm);border:1px solid var(--border);overflow:hidden;display:flex;align-items:center;justify-content:center;background:#f7f9fb"><img src="https://lh3.googleusercontent.com/d/1ISJQjK32fgD4i45U5_qCrjmCBUNJ1pdd" alt="ClickUp leads nurturing" style="width:100%;height:100%;object-fit:cover;display:block"></div>
+              <div style="width:100%;height:200px;border-radius:var(--r-sm);border:1px solid var(--border);overflow:hidden;display:flex;align-items:center;justify-content:center;background:#f7f9fb"><img src="https://lh3.googleusercontent.com/d/1ISJQjK32fgD4i45U5_qCrjmCBUNJ1pdd" alt="ClickUp leads nurturing" style="width:100%;height:100%;object-fit:cover;display:block" onclick="openLightbox(this.src)"></div>
               <p style="font-size:.8rem;color:var(--text2);margin-top:.5rem;text-align:center">ClickUp Leads Nurturing</p>
             </div>
             <div>
-              <div style="width:100%;height:200px;border-radius:var(--r-sm);border:1px solid var(--border);overflow:hidden;display:flex;align-items:center;justify-content:center;background:#f7f9fb"><img src="https://lh3.googleusercontent.com/d/1RCFk_T3S9SdX8804nSFseY6paKI82jW8" alt="Excel to ClickUp data import field mapping" style="width:100%;height:100%;object-fit:cover;display:block"></div>
+              <div style="width:100%;height:200px;border-radius:var(--r-sm);border:1px solid var(--border);overflow:hidden;display:flex;align-items:center;justify-content:center;background:#f7f9fb"><img src="https://lh3.googleusercontent.com/d/1RCFk_T3S9SdX8804nSFseY6paKI82jW8" alt="Excel to ClickUp data import field mapping" style="width:100%;height:100%;object-fit:cover;display:block" onclick="openLightbox(this.src)"></div>
               <p style="font-size:.8rem;color:var(--text2);margin-top:.5rem;text-align:center">Data Import: Field Mapping</p>
             </div>
             <div>
-              <div style="width:100%;height:200px;border-radius:var(--r-sm);border:1px solid var(--border);overflow:hidden;display:flex;align-items:center;justify-content:center;background:#f7f9fb"><img src="https://lh3.googleusercontent.com/d/1rz7dgYuNVg0VXQzYS3NwowCEP1qb_Br4" alt="Client churn and at-risk dashboard" style="width:100%;height:100%;object-fit:cover;display:block"></div>
+              <div style="width:100%;height:200px;border-radius:var(--r-sm);border:1px solid var(--border);overflow:hidden;display:flex;align-items:center;justify-content:center;background:#f7f9fb"><img src="https://lh3.googleusercontent.com/d/1rz7dgYuNVg0VXQzYS3NwowCEP1qb_Br4" alt="Client churn and at-risk dashboard" style="width:100%;height:100%;object-fit:cover;display:block" onclick="openLightbox(this.src)"></div>
               <p style="font-size:.8rem;color:var(--text2);margin-top:.5rem;text-align:center">Client Churn & At-Risk</p>
             </div>
           </div>
           <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:1rem;margin-top:1rem">
             <div>
-              <div style="width:100%;height:200px;border-radius:var(--r-sm);border:1px solid var(--border);overflow:hidden;display:flex;align-items:center;justify-content:center;background:#f7f9fb"><img src="https://lh3.googleusercontent.com/d/10BmdHPkigFWI2hCHAmERrlDisCaMnAdO" alt="Imports processing" style="width:100%;height:100%;object-fit:cover;display:block"></div>
+              <div style="width:100%;height:200px;border-radius:var(--r-sm);border:1px solid var(--border);overflow:hidden;display:flex;align-items:center;justify-content:center;background:#f7f9fb"><img src="https://lh3.googleusercontent.com/d/10BmdHPkigFWI2hCHAmERrlDisCaMnAdO" alt="Imports processing" style="width:100%;height:100%;object-fit:cover;display:block" onclick="openLightbox(this.src)"></div>
               <p style="font-size:.8rem;color:var(--text2);margin-top:.5rem;text-align:center">Imports Processing</p>
             </div>
             <div>
-              <div style="width:100%;height:200px;border-radius:var(--r-sm);border:1px solid var(--border);overflow:hidden;display:flex;align-items:center;justify-content:center;background:#f7f9fb"><img src="https://lh3.googleusercontent.com/d/1P2Ta1QPE_8JGaeksqMzzwGM4R9c3abpr" alt="Make automation flow and chart" style="width:100%;height:100%;object-fit:cover;display:block"></div>
+              <div style="width:100%;height:200px;border-radius:var(--r-sm);border:1px solid var(--border);overflow:hidden;display:flex;align-items:center;justify-content:center;background:#f7f9fb"><img src="https://lh3.googleusercontent.com/d/1P2Ta1QPE_8JGaeksqMzzwGM4R9c3abpr" alt="Make automation flow and chart" style="width:100%;height:100%;object-fit:cover;display:block" onclick="openLightbox(this.src)"></div>
               <p style="font-size:.8rem;color:var(--text2);margin-top:.5rem;text-align:center">Make: Automation Flow</p>
             </div>
             <div>
-              <div style="width:100%;height:200px;border-radius:var(--r-sm);border:1px solid var(--border);overflow:hidden;display:flex;align-items:center;justify-content:center;background:#f7f9fb"><img src="https://lh3.googleusercontent.com/d/12kryHcVgXswxOnMfHJWFTpdNoluvmnmH" alt="Make automation setup" style="width:100%;height:100%;object-fit:cover;display:block"></div>
+              <div style="width:100%;height:200px;border-radius:var(--r-sm);border:1px solid var(--border);overflow:hidden;display:flex;align-items:center;justify-content:center;background:#f7f9fb"><img src="https://lh3.googleusercontent.com/d/12kryHcVgXswxOnMfHJWFTpdNoluvmnmH" alt="Make automation setup" style="width:100%;height:100%;object-fit:cover;display:block" onclick="openLightbox(this.src)"></div>
               <p style="font-size:.8rem;color:var(--text2);margin-top:.5rem;text-align:center">Make: Automation Setup</p>
             </div>
           </div>
@@ -1546,8 +1549,6 @@ footer p{font-size:.67rem;color:var(--text3)}
           </div>
         </div>
       </div>
-
-    </div>
 
   </div></div></section>
 

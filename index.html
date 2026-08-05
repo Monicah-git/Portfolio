@@ -1558,6 +1558,343 @@ footer p{font-size:.67rem;color:var(--text3)}
         </div>
 
       </div>
+<!-- ASPIRE FILING SYSTEM CASE STUDY -->
+<div class="case reveal">
+  <div class="case-header">
+    <span class="eyebrow">Document Lifecycle Management</span>
+    <h2>Aspire <em>Filing System</em></h2>
+    <p class="sub">A scan-to-track workflow managing loan documents across multiple loan officers, with real-time status updates and zero client data exposure.</p>
+  </div>
+
+  <div class="case-intro">
+    <div class="intro-col">
+      <h3>The Challenge</h3>
+      <p>Aspire Lending handles hundreds of active and completed loans. Loan documents—applications, sign-offs, logbooks—needed to be organized, discoverable, and accessible to loan officers in real time. Manual filing was slow. Shared folders were chaotic. There was no single source of truth for loan status or logbook collection.</p>
+    </div>
+    <div class="intro-col">
+      <h3>The Solution</h3>
+      <p>Built an automated document management system: scan → upload to cloud storage → generate shareable link → hyperlink in master database → auto-distribute to officer dashboards. The system tracks active vs. completed loans and flags logbook collection status. Zero client files opened; all work via screenshots and links.</p>
+    </div>
+  </div>
+
+  <div class="case-workflow">
+    <h3>Workflow Architecture</h3>
+    <div class="workflow-steps">
+      <div class="step">
+        <div class="step-num">1</div>
+        <div class="step-text">
+          <strong>Scan & Upload</strong><br>
+          Physical documents scanned as PDFs, uploaded to KLAUD cloud storage.
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">2</div>
+        <div class="step-text">
+          <strong>Generate Link</strong><br>
+          KLAUD auto-generates shareable link for each uploaded file.
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">3</div>
+        <div class="step-text">
+          <strong>Link to Database</strong><br>
+          Hyperlink pasted into File Management Database (master Sheets tracker).
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">4</div>
+        <div class="step-text">
+          <strong>Auto-Distribute</strong><br>
+          Formulas in individual loan officer files pull linked documents in real time.
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">5</div>
+        <div class="step-text">
+          <strong>Track Status</strong><br>
+          Database updated: active loan, cleared loan, logbook collected status.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="case-visuals">
+    <h3>System Components</h3>
+    
+    <div class="visual-block">
+      <div class="visual-label">KLAUD Dashboard</div>
+      <div class="visual-img">
+        <img src="https://drive.google.com/uc?id=1GfWF7bjsMW7j_1wuxn7FQiZ2L9_c13Bg" alt="KLAUD Dashboard showing all uploaded folders" loading="lazy">
+      </div>
+      <p class="visual-caption">Central repository. All client folders and uploaded documents visible at a glance.</p>
+    </div>
+
+    <div class="visual-block">
+      <div class="visual-label">File Management Database</div>
+      <div class="visual-img">
+        <img src="https://drive.google.com/uc?id=1a0dP4dOHQRZwcurDv0ygnJZj0Z4lXUu4" alt="File Management Database schema" loading="lazy">
+      </div>
+      <p class="visual-caption">Master tracker: links to all documents, active/cleared loan status, logbook collection flags. This is the single source of truth.</p>
+    </div>
+
+    <div class="visual-block">
+      <div class="visual-label">Logbooks View</div>
+      <div class="visual-img">
+        <img src="https://drive.google.com/uc?id=1bDit4siE7AAaRJbg3ukdb9zSO1lRnK6o" alt="Logbooks uploaded and organized" loading="lazy">
+      </div>
+      <p class="visual-caption">Sample of uploaded logbooks as PDFs. Named consistently, stored in client folders, linked in database.</p>
+    </div>
+
+    <div class="visual-block">
+      <div class="visual-label">Loan Officer Files (Auto-Updated)</div>
+      <div class="visual-img">
+        <img src="https://drive.google.com/uc?id=11C9P0BVG0OwGiGoljAjGK3_OlxrRyuwS" alt="Individual loan officer files with auto-populated links" loading="lazy">
+      </div>
+      <p class="visual-caption">Each loan officer has their own file. Formulas instantly pull linked documents from the master database. Updates the moment a new file is added.</p>
+    </div>
+
+    <div class="visual-block">
+      <div class="visual-label">Client Folder Structure</div>
+      <div class="visual-img">
+        <img src="https://drive.google.com/uc?id=18UvLqLzSZ7cstXaSAOK7dn8EbHqfcXTP" alt="Client folder structure and file naming" loading="lazy">
+      </div>
+      <p class="visual-caption">Consistent folder naming and file organization. Makes retrieval fast and audit-ready.</p>
+    </div>
+  </div>
+
+  <div class="case-outcomes">
+    <h3>Outcomes & Impact</h3>
+    <div class="outcomes-grid">
+      <div class="outcome">
+        <div class="outcome-metric">Zero Exposure</div>
+        <p>No client files opened. All work done via screenshots and shareable links, protecting client data completely.</p>
+      </div>
+      <div class="outcome">
+        <div class="outcome-metric">Real-Time Access</div>
+        <p>Loan officers see updated documents the moment they're added. No delays, no email chains, no version confusion.</p>
+      </div>
+      <div class="outcome">
+        <div class="outcome-metric">Audit-Ready Records</div>
+        <p>Every document linked, dated, and tracked. Status flags (active, cleared, logbook collected) provide instant compliance view.</p>
+      </div>
+      <div class="outcome">
+        <div class="outcome-metric">Scalable Automation</div>
+        <p>Formula-driven distribution means adding new loan officers or documents requires zero manual re-linking.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="case-tech">
+    <h3>Tools & Stack</h3>
+    <div class="tech-list">
+      <span class="tech-tag">KLAUD (Cloud Storage)</span>
+      <span class="tech-tag">Google Sheets</span>
+      <span class="tech-tag">Hyperlink Formulas</span>
+      <span class="tech-tag">Document Automation</span>
+      <span class="tech-tag">Status Tracking</span>
+    </div>
+  </div>
+
+  <div class="case-cta"><div style="margin-bottom:1.5rem"><a href="https://app.notion.com/p/3b3ff603f6d081c1a7b0ee227659ff07" target="_blank" style="color:var(--brown);font-weight:500;text-decoration:underline">📋 Read the full SOP →</a></div>
+    <p><strong>This system scales.</strong> As Aspire grows, the same architecture handles 10x the documents and 3x the officers. And it's the foundation for broader Finance & Ops work: once documents are organized and tracked, you add AP aging, vendor management, cap table auditing.</p>
+    <a href="#contact" onclick="return show('contact')" class="btn">
+
+Let's talk about your document workflow →</a>
+  </div>
+</div>
+
+<style>
+.case {
+  margin-bottom: 3rem;
+}
+.case-header {
+  margin-bottom: 2.5rem;
+}
+.case-intro {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  margin-bottom: 3rem;
+  padding: 1.5rem;
+  background: var(--warm);
+  border-radius: var(--r);
+  border: 1px solid var(--border);
+}
+.intro-col h3 {
+  margin-bottom: 0.7rem;
+}
+.intro-col p {
+  font-size: 0.88rem;
+  color: var(--text2);
+  line-height: 1.8;
+}
+
+.case-workflow {
+  margin-bottom: 3rem;
+}
+.case-workflow h3 {
+  margin-bottom: 1.5rem;
+}
+.workflow-steps {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 1rem;
+}
+.step {
+  background: var(--ink);
+  color: #fff;
+  padding: 1.2rem;
+  border-radius: var(--r);
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+.step-num {
+  font-family: var(--serif);
+  font-size: 1.8rem;
+  font-weight: 500;
+  opacity: 0.6;
+}
+.step-text {
+  font-size: 0.8rem;
+  line-height: 1.6;
+}
+.step-text strong {
+  display: block;
+  margin-bottom: 0.3rem;
+  color: var(--brown2);
+}
+
+.case-visuals {
+  margin-bottom: 3rem;
+}
+.case-visuals h3 {
+  margin-bottom: 1.5rem;
+}
+.visual-block {
+  margin-bottom: 2.2rem;
+  padding-bottom: 2.2rem;
+  border-bottom: 1px solid var(--border);
+}
+.visual-block:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+.visual-label {
+  display: inline-block;
+  font-size: 0.65rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--brown);
+  margin-bottom: 0.8rem;
+}
+.visual-img {
+  margin-bottom: 1rem;
+  border-radius: var(--r);
+  overflow: hidden;
+  border: 1px solid var(--border);
+  background: #fff;
+}
+.visual-img img {
+  width: 100%;
+  display: block;
+  height: auto;
+  max-height: 380px;
+  object-fit: contain;
+}
+.visual-caption {
+  font-size: 0.82rem;
+  color: var(--text2);
+  line-height: 1.7;
+}
+
+.case-outcomes {
+  margin-bottom: 2.5rem;
+  padding: 2rem;
+  background: var(--ink);
+  color: #fff;
+  border-radius: var(--r);
+}
+.case-outcomes h3 {
+  color: #fff;
+  margin-bottom: 1.5rem;
+}
+.outcomes-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+}
+.outcome {
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: var(--r-sm);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+.outcome-metric {
+  display: block;
+  font-family: var(--serif);
+  font-size: 1.1rem;
+  font-weight: 500;
+  margin-bottom: 0.6rem;
+  color: var(--brown2);
+}
+.outcome p {
+  font-size: 0.82rem;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.case-tech {
+  margin-bottom: 2rem;
+}
+.case-tech h3 {
+  margin-bottom: 1rem;
+}
+.tech-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.7rem;
+}
+.tech-tag {
+  background: var(--warm);
+  color: var(--ink);
+  font-size: 0.75rem;
+  font-weight: 500;
+  padding: 0.4rem 0.9rem;
+  border-radius: 100px;
+  border: 1px solid var(--border);
+}
+
+.case-cta {
+  padding: 1.5rem;
+  background: var(--brown-pale);
+  border: 1px solid var(--brown-border);
+  border-radius: var(--r);
+}
+.case-cta p {
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+  color: var(--text);
+  line-height: 1.8;
+}
+.case-cta .btn {
+  margin-top: 0.5rem;
+}
+
+@media (max-width: 768px) {
+  .case-intro {
+    grid-template-columns: 1fr;
+  }
+  .workflow-steps {
+    grid-template-columns: 1fr;
+  }
+  .outcomes-grid {
+    grid-template-columns: 1fr;
+  }
+}
+</style>
 
   </div></div></section>
 
